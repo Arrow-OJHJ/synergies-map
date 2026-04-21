@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IBM Software Cross-Sell Plays | Arrow ECS UK 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0b1a2e;
+    color: #f4f4f4;
+    font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /* ─── Header ─── */
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #1e3660;
+    background: #0f2244;
+    flex-shrink: 0;
+    gap: 16px;
+  }
+
+  .header-title h1 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #f4f4f4;
+  }
+
+  .header-title p {
+    font-size: 10px;
+    color: #6f6f6f;
+    margin-top: 2px;
+    letter-spacing: 0.02em;
+  }
+
+  #play-legend {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .legend-chip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px 3px 7px;
+    border-radius: 2px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: 1px solid;
+    background: transparent;
+    white-space: nowrap;
+  }
+
+  .legend-chip:hover { opacity: 0.75; }
+
+  .legend-chip .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  /* ─── Main ─── */
+  #main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ─── Map ─── */
+  #map-area {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    background: #0b1a2e;
+  }
+
+  #svg-connections {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+
+  /* Lane strips */
+  .lane-strip {
+    position: absolute;
+    left: 0; right: 0;
+    pointer-events: none;
+  }
+
+  .lane-label {
+    position: absolute;
+    left: 10px;
+    font-size: 8.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8d8d8d;
+    writing-mode: horizontal-tb;
+  }
+
+  /* Product nodes */
+  .pnode {
+    position: absolute;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 10.5px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1.5px solid;
+    background: #1e1e1e;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.22s ease, transform 0.15s ease, background 0.15s ease;
+    letter-spacing: 0.01em;
+    z-index: 5;
+    user-select: none;
+  }
+
+  .pnode:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #162848;
+    z-index: 30;
+  }
+
+  .pnode.dimmed {
+    opacity: 0.09;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+
+  .pnode.highlighted {
+    background: #132244;
+    z-index: 20;
+  }
+
+  .pnode.selected {
+    transform: translate(-50%, -50%) scale(1.13);
+    background: #1e3660;
+    z-index: 40;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.07);
+  }
+
+  /* ─── Sidebar ─── */
+  #sidebar {
+    width: 236px;
+    flex-shrink: 0;
+    border-left: 1px solid #1e3660;
+    background: #0f2244;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #sidebar-inner {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px;
+  }
+
+  #sidebar-inner::-webkit-scrollbar { width: 4px; }
+  #sidebar-inner::-webkit-scrollbar-track { background: transparent; }
+  #sidebar-inner::-webkit-scrollbar-thumb { background: #1e3660; border-radius: 2px; }
+
+  .sidebar-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+    color: #8d8d8d;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .sidebar-empty p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #8d8d8d;
+  }
+
+  .sb-product-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .sb-category {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6f6f6f;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #1e3660;
+  }
+
+  .sb-section-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #525252;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+  .sb-section-label:first-of-type { margin-top: 0; }
+
+  .play-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0 4px 5px 0;
+    border: 1px solid;
+  }
+
+  .play-pill .dot { width: 5px; height: 5px; border-radius: 50%; }
+
+  .conn-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 0;
+    border-bottom: 1px solid #122040;
+    cursor: pointer;
+    transition: background 0.12s;
+    border-radius: 2px;
+  }
+
+  .conn-row:hover { background: #122040; margin: 0 -16px; padding: 7px 16px; }
+
+  .conn-accent {
+    width: 3px;
+    height: 28px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .conn-info { flex: 1; min-width: 0; }
+
+  .conn-name {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #d4d4d4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .conn-play {
+    font-size: 9px;
+    color: #6f6f6f;
+    margin-top: 1px;
+    letter-spacing: 0.02em;
+  }
+
+  .conn-arrow {
+    font-size: 10px;
+    color: #1e3660;
+    flex-shrink: 0;
+  }
+
+  #reset-btn {
+    display: none;
+    width: calc(100% - 32px);
+    margin: 12px 16px 0;
+    padding: 9px;
+    background: transparent;
+    border: 1px solid #1e3660;
+    color: #8d8d8d;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  #reset-btn:hover { background: #1e3660; color: #f4f4f4; }
+
+  /* ─── Footer ─── */
+  #footer {
+    border-top: 1px solid #122040;
+    background: #0b1a2e;
+    padding: 7px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .footer-text { font-size: 9.5px; color: #8d8d8d; letter-spacing: 0.04em; }
+  .footer-hint { font-size: 9.5px; color: #8d8d8d; letter-spacing: 0.02em; }
+
+  /* SVG path animation */
+  @keyframes drawPath {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .path-active {
+    animation: drawPath 0.4s ease forwards;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="header">
+    <div class="header-title">
+      <h1>IBM Software Cross-Sell Plays</h1>
+      <p>Arrow ECS UK · 2026 · Click any product to explore its connections</p>
+    </div>
+    <div id="play-legend"></div>
+  </div>
+
+  <div id="main">
+    <div id="map-area">
+      <svg id="svg-connections" xmlns="http://www.w3.org/2000/svg">
+        <defs id="svg-defs"></defs>
+      </svg>
+    </div>
+
+    <div id="sidebar">
+      <button id="reset-btn">↩ Show all products</button>
+      <div id="sidebar-inner">
+        <div class="sidebar-empty">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
+            <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+            <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+            <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+            <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
+            <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+            <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+          </svg>
+          <p>Select any product node to highlight its cross-sell connections</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <span class="footer-text">5 IBM Software Plays · 31 Products · Arrow ECS UK 2026</span>
+    <span class="footer-hint">Click a product · Click again to deselect · Connections shown by play colour</span>
+  </div>
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════
+
+const PLAYS = {
+  1: { id: 1, name: 'Boost Productivity with AI Agents',         short: 'AI Agents',       color: '#4589ff' },
+  2: { id: 2, name: 'Maximize the Value of Enterprise Data',     short: 'Enterprise Data', color: '#08bdba' },
+  3: { id: 3, name: 'Make Every Technology Investment Work Harder', short: 'Automation',   color: '#a56eff' },
+  4: { id: 4, name: 'Do Hybrid Cloud Right',                     short: 'Hybrid Cloud',    color: '#42be65' },
+  5: { id: 5, name: 'Unlock Innovation with Hybrid Cloud',       short: 'Cloud Innovation',color: '#ff832b' },
+};
+
+const CATEGORIES = [
+  { id: 'ai',          label: 'AI & Productivity' },
+  { id: 'data',        label: 'Data & Analytics' },
+  { id: 'integration', label: 'Integration & Ops' },
+  { id: 'security',    label: 'Security & Cloud Mgmt' },
+  { id: 'infra',       label: 'Infrastructure' },
+];
+
+// xPos: 0–100 (percent within the usable width)
+const PRODUCTS = [
+  // ── AI & Productivity ──────────────────────────────────────
+  { id: 'wxo',       label: 'watsonx Orchestrate',    cat: 'ai',          plays: [1,3], xPos: 18 },
+  { id: 'wxai',      label: 'watsonx.ai',             cat: 'ai',          plays: [1],   xPos: 32 },
+  { id: 'wca',       label: 'Code Assistant for Z',   cat: 'ai',          plays: [1],   xPos: 47 },
+  { id: 'pa',        label: 'Planning Analytics',     cat: 'ai',          plays: [1],   xPos: 63 },
+  { id: 'wxgov',     label: 'watsonx.governance',     cat: 'ai',          plays: [1,2], xPos: 80 },
+
+  // ── Data & Analytics ───────────────────────────────────────
+  { id: 'wxdata',    label: 'watsonx.data',           cat: 'data',        plays: [2,5], xPos: 15 },
+  { id: 'wxdi',      label: 'wx.data Intelligence',   cat: 'data',        plays: [2],   xPos: 31 },
+  { id: 'db2',       label: 'Db2',                    cat: 'data',        plays: [2],   xPos: 46 },
+  { id: 'netezza',   label: 'Netezza',                cat: 'data',        plays: [2],   xPos: 59 },
+  { id: 'guardium',  label: 'Guardium',               cat: 'data',        plays: [2,4], xPos: 74 },
+  { id: 'datagate',  label: 'Data Gate for watsonx',  cat: 'data',        plays: [2],   xPos: 88 },
+
+  // ── Integration & Ops ──────────────────────────────────────
+  { id: 'webmethods',label: 'webMethods',             cat: 'integration', plays: [3],   xPos: 10 },
+  { id: 'apiconnect',label: 'API Connect',            cat: 'integration', plays: [3],   xPos: 22 },
+  { id: 'concert',   label: 'Concert',                cat: 'integration', plays: [3,4,5],xPos:35 },
+  { id: 'instana',   label: 'Instana',                cat: 'integration', plays: [3,4], xPos: 48 },
+  { id: 'turbonomic',label: 'Turbonomic',             cat: 'integration', plays: [3,4], xPos: 60 },
+  { id: 'sevone',    label: 'SevOne',                 cat: 'integration', plays: [3,4], xPos: 71 },
+  { id: 'maximo',    label: 'Maximo',                 cat: 'integration', plays: [3],   xPos: 81 },
+  { id: 'envizi',    label: 'Envizi',                 cat: 'integration', plays: [3],   xPos: 91 },
+
+  // ── Security & Cloud Mgmt ──────────────────────────────────
+  { id: 'vault',        label: 'Vault',              cat: 'security', plays: [4],   xPos: 14 },
+  { id: 'verify',       label: 'Verify',             cat: 'security', plays: [4],   xPos: 26 },
+  { id: 'terraform',    label: 'Terraform',          cat: 'security', plays: [4],   xPos: 39 },
+  { id: 'ansible',      label: 'Ansible',            cat: 'security', plays: [4],   xPos: 52 },
+  { id: 'cloudability', label: 'Cloudability',       cat: 'security', plays: [4],   xPos: 65 },
+  { id: 'apptio',       label: 'Apptio',             cat: 'security', plays: [4],   xPos: 79 },
+
+  // ── Infrastructure ─────────────────────────────────────────
+  { id: 'openshift', label: 'Red Hat OpenShift',     cat: 'infra',    plays: [5,4], xPos: 14 },
+  { id: 'redhatai',  label: 'Red Hat AI',            cat: 'infra',    plays: [5],   xPos: 27 },
+  { id: 'ibmz',      label: 'IBM Z',                 cat: 'infra',    plays: [5],   xPos: 41 },
+  { id: 'linuxone',  label: 'LinuxONE',              cat: 'infra',    plays: [5],   xPos: 54 },
+  { id: 'power',     label: 'Power',                 cat: 'infra',    plays: [5],   xPos: 67 },
+  { id: 'flash',     label: 'FlashSystem',           cat: 'infra',    plays: [5],   xPos: 81 },
+];
+
+// [from, to, play]  — bidirectional
+const CONNECTIONS = [
+  // Play 1 – AI Agents
+  ['wxo',      'wxai',     1],
+  ['wxo',      'wca',      1],
+  ['wxo',      'pa',       1],
+  ['wxo',      'wxgov',    1],
+
+  // Play 2 – Enterprise Data
+  ['wxdata',   'wxdi',     2],
+  ['wxdata',   'db2',      2],
+  ['wxdata',   'netezza',  2],
+  ['wxdi',     'guardium', 2],
+  ['wxdi',     'wxgov',    2],
+  ['wxgov',    'guardium', 2],
+  ['datagate', 'wxdata',   2],
+
+  // Play 3 – Automation / Integration
+  ['webmethods','apiconnect',3],
+  ['concert',  'instana',  3],
+  ['instana',  'turbonomic',3],
+  ['instana',  'sevone',   3],
+  ['maximo',   'envizi',   3],
+  ['concert',  'wxo',      3],
+
+  // Play 4 – Hybrid Cloud Right
+  ['terraform','vault',    4],
+  ['terraform','openshift',5],
+  ['terraform','ansible',  4],
+  ['vault',    'verify',   4],
+  ['vault',    'guardium', 4],
+  ['vault',    'concert',  4],
+  ['cloudability','apptio',4],
+  ['cloudability','turbonomic',4],
+  ['cloudability','instana',4],
+  ['cloudability','concert',4],
+  ['ansible',  'sevone',   4],
+
+  // Play 5 – Cloud Innovation
+  ['openshift','redhatai', 5],
+  ['openshift','linuxone', 5],
+  ['ibmz',     'power',    5],
+  ['ibmz',     'linuxone', 5],
+  ['ibmz',     'openshift',5],
+  ['power',    'concert',  5],
+  ['power',    'wxdata',   5],
+  ['power',    'flash',    5],
+];
+
+// ═══════════════════════════════════════════
+// STATE & LOOKUP
+// ═══════════════════════════════════════════
+
+const productMap = {};
+PRODUCTS.forEach(p => { productMap[p.id] = p; });
+
+const adjacency = {};
+PRODUCTS.forEach(p => { adjacency[p.id] = []; });
+CONNECTIONS.forEach(([from, to, play]) => {
+  adjacency[from].push({ to, play });
+  adjacency[to].push({ to: from, play });
+});
+
+let selectedId = null;
+const nodeEls = {};
+
+// ═══════════════════════════════════════════
+// BUILD LEGEND
+// ═══════════════════════════════════════════
+
+const legendEl = document.getElementById('play-legend');
+Object.values(PLAYS).forEach(play => {
+  const chip = document.createElement('div');
+  chip.className = 'legend-chip';
+  chip.style.borderColor = play.color + '55';
+  chip.style.color = play.color;
+  chip.innerHTML = `<div class="dot" style="background:${play.color}"></div>${play.short}`;
+  chip.title = play.name;
+  legendEl.appendChild(chip);
+});
+
+// ═══════════════════════════════════════════
+// BUILD NODES
+// ═══════════════════════════════════════════
+
+const mapArea = document.getElementById('map-area');
+const svgEl = document.getElementById('svg-connections');
+
+PRODUCTS.forEach(p => {
+  const node = document.createElement('div');
+  node.className = 'pnode';
+  node.dataset.id = p.id;
+  node.textContent = p.label;
+
+  const primaryPlay = PLAYS[p.plays[0]];
+  node.style.borderColor = primaryPlay.color + 'aa';
+  node.style.color = primaryPlay.color;
+
+  node.addEventListener('click', () => handleClick(p.id));
+  mapArea.appendChild(node);
+  nodeEls[p.id] = node;
+});
+
+// ═══════════════════════════════════════════
+// LAYOUT
+// ═══════════════════════════════════════════
+
+function computeLayout() {
+  const rect = mapArea.getBoundingClientRect();
+  const W = rect.width;
+  const H = rect.height;
+
+  const LANE_MARGIN_LEFT = 90;   // space for lane labels
+  const LANE_MARGIN_RIGHT = 14;
+  const LANE_MARGIN_TOP = 16;
+  const LANE_MARGIN_BOTTOM = 16;
+
+  const usableW = W - LANE_MARGIN_LEFT - LANE_MARGIN_RIGHT;
+  const usableH = H - LANE_MARGIN_TOP - LANE_MARGIN_BOTTOM;
+  const catCount = CATEGORIES.length;
+  const laneH = usableH / catCount;
+
+  // Remove old lane overlays
+  mapArea.querySelectorAll('.lane-strip, .lane-label').forEach(el => el.remove());
+
+  CATEGORIES.forEach((cat, catIdx) => {
+    const yTop = LANE_MARGIN_TOP + catIdx * laneH;
+    const yCen = yTop + laneH / 2;
+
+    // Subtle alternating background
+    if (catIdx % 2 === 0) {
+      const strip = document.createElement('div');
+      strip.className = 'lane-strip';
+      strip.style.top = yTop + 'px';
+      strip.style.height = laneH + 'px';
+      strip.style.background = 'rgba(255,255,255,0.012)';
+      mapArea.insertBefore(strip, svgEl);
+    }
+
+    // Lane label
+    const label = document.createElement('div');
+    label.className = 'lane-label';
+    label.textContent = cat.label;
+    label.style.top = yCen + 'px';
+    label.style.left = '10px';
+    mapArea.appendChild(label);
+  });
+
+  // Position each product node
+  PRODUCTS.forEach(p => {
+    const catIdx = CATEGORIES.findIndex(c => c.id === p.cat);
+    const yTop = LANE_MARGIN_TOP + catIdx * laneH;
+    const yCen = yTop + laneH / 2;
+
+    const x = LANE_MARGIN_LEFT + (p.xPos / 100) * usableW;
+    const y = yCen;
+
+    p._px = x;
+    p._py = y;
+
+    const el = nodeEls[p.id];
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+  });
+}
+
+// ═══════════════════════════════════════════
+// DRAW CONNECTIONS
+// ═══════════════════════════════════════════
+
+function drawConnections(activeId = null) {
+  svgEl.innerHTML = '<defs id="svg-defs"></defs>';
+
+  const drawn = new Set();
+
+  // Sort: inactive first (so active ones render on top)
+  const sortedConns = [...CONNECTIONS].sort(([a,b,pa], [c,d,pd]) => {
+    if (!activeId) return 0;
+    const aActive = a === activeId || b === activeId;
+    const bActive = c === activeId || d === activeId;
+    return aActive - bActive;
+  });
+
+  sortedConns.forEach(([from, to, play]) => {
+    const key = [from, to].sort().join('|');
+    if (drawn.has(key)) return;
+    drawn.add(key);
+
+    const p1 = productMap[from];
+    const p2 = productMap[to];
+    if (!p1._px || !p2._px) return;
+
+    const x1 = p1._px, y1 = p1._py;
+    const x2 = p2._px, y2 = p2._py;
+    const color = PLAYS[play].color;
+
+    const isActive = !activeId || activeId === from || activeId === to;
+
+    let d;
+    const sameRow = Math.abs(y1 - y2) < 5;
+    if (sameRow) {
+      // Horizontal arc above the row
+      const mx = (x1 + x2) / 2;
+      const arcH = Math.abs(x2 - x1) * 0.18;
+      d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+    } else {
+      // S-curve between rows
+      const my = (y1 + y2) / 2;
+      const bendX1 = x1 + (x2 - x1) * 0.25;
+      const bendX2 = x1 + (x2 - x1) * 0.75;
+      d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+    }
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', 'none');
+
+    if (!activeId) {
+      // Default state – subtle
+      path.setAttribute('stroke', color);
+      path.setAttribute('stroke-width', '1.4');
+      path.setAttribute('opacity', '0.28');
+    } else if (isActive) {
+      // Highlighted
+      path.setAttribute('stroke', color);
+      path.setAttribute('stroke-width', '2.4');
+      path.setAttribute('opacity', '0.95');
+      path.setAttribute('stroke-dasharray', '1000');
+      path.setAttribute('stroke-dashoffset', '0');
+      path.classList.add('path-active');
+    } else {
+      // Dimmed
+      path.setAttribute('stroke', color);
+      path.setAttribute('stroke-width', '1');
+      path.setAttribute('opacity', '0.04');
+    }
+
+    svgEl.appendChild(path);
+  });
+}
+
+// ═══════════════════════════════════════════
+// INTERACTION
+// ═══════════════════════════════════════════
+
+function handleClick(id) {
+  if (selectedId === id) {
+    resetView();
+    return;
+  }
+
+  selectedId = id;
+  const product = productMap[id];
+  const neighbors = new Set(adjacency[id].map(a => a.to));
+  neighbors.add(id);
+
+  Object.entries(nodeEls).forEach(([pid, el]) => {
+    el.classList.remove('dimmed', 'highlighted', 'selected');
+    if (pid === id) {
+      el.classList.add('selected');
+    } else if (neighbors.has(pid)) {
+      el.classList.add('highlighted');
+    } else {
+      el.classList.add('dimmed');
+    }
+  });
+
+  drawConnections(id);
+  renderSidebar(product);
+  document.getElementById('reset-btn').style.display = 'block';
+}
+
+function resetView() {
+  selectedId = null;
+  Object.values(nodeEls).forEach(el => {
+    el.classList.remove('dimmed', 'highlighted', 'selected');
+  });
+  drawConnections();
+  renderSidebarEmpty();
+  document.getElementById('reset-btn').style.display = 'none';
+}
+
+document.getElementById('reset-btn').addEventListener('click', resetView);
+
+// ═══════════════════════════════════════════
+// SIDEBAR RENDER
+// ═══════════════════════════════════════════
+
+function renderSidebarEmpty() {
+  document.getElementById('sidebar-inner').innerHTML = `
+    <div class="sidebar-empty">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
+        <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+        <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+        <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+        <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
+        <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+        <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+      </svg>
+      <p>Select any product node to highlight its cross-sell connections</p>
+    </div>`;
+}
+
+function renderSidebar(product) {
+  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
+  const conns = adjacency[product.id];
+
+  const playsHtml = product.plays.map(pId => {
+    const play = PLAYS[pId];
+    return `<span class="play-pill" style="color:${play.color};border-color:${play.color}44;background:${play.color}11">
+      <span class="dot" style="background:${play.color}"></span>${play.short}
+    </span>`;
+  }).join('');
+
+  // Group connections by play
+  const connsHtml = conns.map(({ to, play }) => {
+    const target = productMap[to];
+    const playObj = PLAYS[play];
+    return `<div class="conn-row" data-target="${to}">
+      <div class="conn-accent" style="background:${playObj.color}"></div>
+      <div class="conn-info">
+        <div class="conn-name">${target.label}</div>
+        <div class="conn-play">${playObj.short}</div>
+      </div>
+      <div class="conn-arrow">›</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('sidebar-inner').innerHTML = `
+    <div class="sb-product-name">${product.label}</div>
+    <div class="sb-category">${catLabel}</div>
+    
+    <div class="sb-section-label">Featured in plays</div>
+    ${playsHtml}
+    
+    <div class="sb-section-label">${conns.length} connection${conns.length !== 1 ? 's' : ''}</div>
+    ${connsHtml}
+  `;
+
+  // Attach click events to connection rows
+  document.querySelectorAll('.conn-row[data-target]').forEach(row => {
+    row.addEventListener('click', () => handleClick(row.dataset.target));
+  });
+}
+
+// ═══════════════════════════════════════════
+// INIT & RESIZE
+// ═══════════════════════════════════════════
+
+function init() {
+  computeLayout();
+  drawConnections();
+}
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    computeLayout();
+    if (selectedId) drawConnections(selectedId);
+    else drawConnections();
+  }, 80);
+});
+
+// Wait for layout to settle
+requestAnimationFrame(() => requestAnimationFrame(init));
+</script>
+</body>
+</html>
