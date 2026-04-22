@@ -341,8 +341,8 @@
 
   <div id="header">
     <div class="header-title">
-      <h1>IBM Software Cross-Sell Plays</h1>
-      <p>Arrow ECS UK · 2026 · Click any product to explore its connections</p>
+      <h1>IBM Software & Infrastructure Cross-Sell Map</h1>
+      <p>Arrow ECS UK · Click any product to explore its connections</p>
     </div>
     <div id="play-legend"></div>
   </div>
@@ -374,7 +374,7 @@
   </div>
 
   <div id="footer">
-    <span class="footer-text">5 IBM Software Plays · 31 Products · Arrow ECS UK 2026</span>
+    <span class="footer-text">6 Strategic Plays · 34 Products · Arrow ECS UK</span>
     <span class="footer-hint">Click a product · Click again to deselect · Connections shown by play colour</span>
   </div>
 
@@ -386,112 +386,116 @@
 // ═══════════════════════════════════════════
 
 const PLAYS = {
-  1: { id: 1, name: 'Boost Productivity with AI Agents',         short: 'AI Agents',       color: '#4589ff' },
-  2: { id: 2, name: 'Maximize the Value of Enterprise Data',     short: 'Enterprise Data', color: '#08bdba' },
-  3: { id: 3, name: 'Make Every Technology Investment Work Harder', short: 'Automation',   color: '#a56eff' },
-  4: { id: 4, name: 'Do Hybrid Cloud Right',                     short: 'Hybrid Cloud',    color: '#42be65' },
-  5: { id: 5, name: 'Unlock Innovation with Hybrid Cloud',       short: 'Cloud Innovation',color: '#ff832b' },
+  1: { id: 1, name: 'Automation & Integration',            short: 'Automation',       color: '#4589ff' },
+  2: { id: 2, name: 'Data & AI Platform',                  short: 'AI & Data',        color: '#42be65' },
+  3: { id: 3, name: 'Observability & FinOps',              short: 'Cloud Ops',        color: '#a56eff' },
+  4: { id: 4, name: 'Security & Governance',               short: 'Security',         color: '#ff832b' },
+  5: { id: 5, name: 'Infrastructure & Systems',            short: 'Infrastructure',   color: '#08bdba' },
+  6: { id: 6, name: 'Storage Solutions',                   short: 'Storage',          color: '#fa4d56' },
 };
 
 const CATEGORIES = [
-  { id: 'ai',          label: 'AI & Productivity' },
-  { id: 'data',        label: 'Data & Analytics' },
-  { id: 'integration', label: 'Integration & Ops' },
-  { id: 'security',    label: 'Security & Cloud Mgmt' },
-  { id: 'infra',       label: 'Infrastructure' },
+  { id: 'automation',    label: 'Automation & Integration' },
+  { id: 'observability', label: 'Observability & FinOps' },
+  { id: 'security',      label: 'Security & Governance' },
+  { id: 'data_ai',       label: 'Data & AI Platform' },
+  { id: 'infrastructure',label: 'Infrastructure & Systems' },
+  { id: 'storage',       label: 'Storage Solutions' },
 ];
 
 // xPos: 0–100 (percent within the usable width)
 const PRODUCTS = [
-  // ── AI & Productivity ──────────────────────────────────────
-  { id: 'wxo',       label: 'watsonx Orchestrate',    cat: 'ai',          plays: [1,3], xPos: 18 },
-  { id: 'wxai',      label: 'watsonx.ai',             cat: 'ai',          plays: [1],   xPos: 32 },
-  { id: 'wca',       label: 'Code Assistant for Z',   cat: 'ai',          plays: [1],   xPos: 47 },
-  { id: 'pa',        label: 'Planning Analytics',     cat: 'ai',          plays: [1],   xPos: 63 },
-  { id: 'wxgov',     label: 'watsonx.governance',     cat: 'ai',          plays: [1,2], xPos: 80 },
+  // ── Automation & Integration ───────────────────────────────
+  { id: 'api_connect',     label: 'API Connect',           cat: 'automation',    plays: [1],   xPos: 12 },
+  { id: 'event_auto',      label: 'Event Automation',      cat: 'automation',    plays: [1],   xPos: 28 },
+  { id: 'webmethods',      label: 'webMethods',            cat: 'automation',    plays: [1],   xPos: 44 },
+  { id: 'terraform',       label: 'Terraform',             cat: 'automation',    plays: [1],   xPos: 64 },
+  { id: 'concert',         label: 'Concert',               cat: 'automation',    plays: [1],   xPos: 84 },
 
-  // ── Data & Analytics ───────────────────────────────────────
-  { id: 'wxdata',    label: 'watsonx.data',           cat: 'data',        plays: [2,5], xPos: 15 },
-  { id: 'wxdi',      label: 'wx.data Intelligence',   cat: 'data',        plays: [2],   xPos: 31 },
-  { id: 'db2',       label: 'Db2',                    cat: 'data',        plays: [2],   xPos: 46 },
-  { id: 'netezza',   label: 'Netezza',                cat: 'data',        plays: [2],   xPos: 59 },
-  { id: 'guardium',  label: 'Guardium',               cat: 'data',        plays: [2,4], xPos: 74 },
-  { id: 'datagate',  label: 'Data Gate for watsonx',  cat: 'data',        plays: [2],   xPos: 88 },
+  // ── Observability & FinOps ─────────────────────────────────
+  { id: 'instana',         label: 'Instana',               cat: 'observability', plays: [3],   xPos: 12 },
+  { id: 'sevone',          label: 'SevOne',                cat: 'observability', plays: [3],   xPos: 28 },
+  { id: 'turbonomic',      label: 'Turbonomic',            cat: 'observability', plays: [3],   xPos: 44 },
+  { id: 'apptio',          label: 'Apptio',                cat: 'observability', plays: [3],   xPos: 64 },
+  { id: 'cloudability',    label: 'Apptio Cloudability',   cat: 'observability', plays: [3],   xPos: 84 },
 
-  // ── Integration & Ops ──────────────────────────────────────
-  { id: 'webmethods',label: 'webMethods',             cat: 'integration', plays: [3],   xPos: 10 },
-  { id: 'apiconnect',label: 'API Connect',            cat: 'integration', plays: [3],   xPos: 22 },
-  { id: 'concert',   label: 'Concert',                cat: 'integration', plays: [3,4,5],xPos:35 },
-  { id: 'instana',   label: 'Instana',                cat: 'integration', plays: [3,4], xPos: 48 },
-  { id: 'turbonomic',label: 'Turbonomic',             cat: 'integration', plays: [3,4], xPos: 60 },
-  { id: 'sevone',    label: 'SevOne',                 cat: 'integration', plays: [3,4], xPos: 71 },
-  { id: 'maximo',    label: 'Maximo',                 cat: 'integration', plays: [3],   xPos: 81 },
-  { id: 'envizi',    label: 'Envizi',                 cat: 'integration', plays: [3],   xPos: 91 },
+  // ── Security & Governance ──────────────────────────────────
+  { id: 'guardium',        label: 'Guardium',              cat: 'security',      plays: [4],   xPos: 25 },
+  { id: 'verify',          label: 'Verify',                cat: 'security',      plays: [4],   xPos: 50 },
+  { id: 'vault',           label: 'Vault',                 cat: 'security',      plays: [4],   xPos: 75 },
 
-  // ── Security & Cloud Mgmt ──────────────────────────────────
-  { id: 'vault',        label: 'Vault',              cat: 'security', plays: [4],   xPos: 14 },
-  { id: 'verify',       label: 'Verify',             cat: 'security', plays: [4],   xPos: 26 },
-  { id: 'terraform',    label: 'Terraform',          cat: 'security', plays: [4],   xPos: 39 },
-  { id: 'ansible',      label: 'Ansible',            cat: 'security', plays: [4],   xPos: 52 },
-  { id: 'cloudability', label: 'Cloudability',       cat: 'security', plays: [4],   xPos: 65 },
-  { id: 'apptio',       label: 'Apptio',             cat: 'security', plays: [4],   xPos: 79 },
+  // ── Data & AI Platform ─────────────────────────────────────
+  { id: 'wxai',            label: 'watsonx.ai',            cat: 'data_ai',       plays: [2],   xPos: 8 },
+  { id: 'wxdata',          label: 'watsonx.data',          cat: 'data_ai',       plays: [2],   xPos: 20 },
+  { id: 'wxdi',            label: 'watsonx.data intelligence', cat: 'data_ai',   plays: [2],   xPos: 34 },
+  { id: 'wxdint',          label: 'watsonx.data integration',  cat: 'data_ai',   plays: [2],   xPos: 48 },
+  { id: 'wxgov',           label: 'watsonx.governance',    cat: 'data_ai',       plays: [2],   xPos: 62 },
+  { id: 'wxorch',          label: 'watsonx Orchestrate',   cat: 'data_ai',       plays: [2],   xPos: 80 },
+  { id: 'wca_ansible',     label: 'Code Assistant (Ansible)', cat: 'data_ai',    plays: [2],   xPos: 94 },
 
-  // ── Infrastructure ─────────────────────────────────────────
-  { id: 'openshift', label: 'Red Hat OpenShift',     cat: 'infra',    plays: [5,4], xPos: 14 },
-  { id: 'redhatai',  label: 'Red Hat AI',            cat: 'infra',    plays: [5],   xPos: 27 },
-  { id: 'ibmz',      label: 'IBM Z',                 cat: 'infra',    plays: [5],   xPos: 41 },
-  { id: 'linuxone',  label: 'LinuxONE',              cat: 'infra',    plays: [5],   xPos: 54 },
-  { id: 'power',     label: 'Power',                 cat: 'infra',    plays: [5],   xPos: 67 },
-  { id: 'flash',     label: 'FlashSystem',           cat: 'infra',    plays: [5],   xPos: 81 },
+  // ── Infrastructure & Systems ───────────────────────────────
+  { id: 'linuxone',        label: 'LinuxONE',              cat: 'infrastructure', plays: [5],   xPos: 12 },
+  { id: 'power',           label: 'Power Systems',         cat: 'infrastructure', plays: [5],   xPos: 24 },
+  { id: 'aix',             label: 'AIX',                   cat: 'infrastructure', plays: [5],   xPos: 36 },
+  { id: 'ibmi',            label: 'IBM i',                 cat: 'infrastructure', plays: [5],   xPos: 48 },
+  { id: 'linux_power',     label: 'Linux on Power',        cat: 'infrastructure', plays: [5],   xPos: 60 },
+  { id: 'maximo',          label: 'Maximo',                cat: 'infrastructure', plays: [5],   xPos: 72 },
+  { id: 'tls',             label: 'Technology Lifecycle Services', cat: 'infrastructure', plays: [5], xPos: 90 },
+
+  // ── Storage Solutions ──────────────────────────────────────
+  { id: 'flashsystem',     label: 'FlashSystem',           cat: 'storage',       plays: [6],   xPos: 8 },
+  { id: 'storage_control', label: 'Storage Control',       cat: 'storage',       plays: [6],   xPos: 20 },
+  { id: 'storage_insights',label: 'Storage Insights',      cat: 'storage',       plays: [6],   xPos: 32 },
+  { id: 'storage_virt',    label: 'Storage Virtualize',    cat: 'storage',       plays: [6],   xPos: 44 },
+  { id: 'storage_fusion',  label: 'Storage Fusion',        cat: 'storage',       plays: [6],   xPos: 56 },
+  { id: 'storage_ceph',    label: 'Storage Ceph',          cat: 'storage',       plays: [6],   xPos: 78 },
+  { id: 'storage_scale',   label: 'Storage Scale',         cat: 'storage',       plays: [6],   xPos: 92 },
 ];
 
 // [from, to, play]  — bidirectional
 const CONNECTIONS = [
-  // Play 1 – AI Agents
-  ['wxo',      'wxai',     1],
-  ['wxo',      'wca',      1],
-  ['wxo',      'pa',       1],
-  ['wxo',      'wxgov',    1],
+  // Play 1 – Automation & Integration
+  ['concert',      'api_connect',   1],
+  ['concert',      'event_auto',    1],
+  ['concert',      'webmethods',    1],
+  ['concert',      'terraform',     1],
+  ['api_connect',  'event_auto',    1],
+  ['webmethods',   'api_connect',   1],
 
-  // Play 2 – Enterprise Data
-  ['wxdata',   'wxdi',     2],
-  ['wxdata',   'db2',      2],
-  ['wxdata',   'netezza',  2],
-  ['wxdi',     'guardium', 2],
-  ['wxdi',     'wxgov',    2],
-  ['wxgov',    'guardium', 2],
-  ['datagate', 'wxdata',   2],
+  // Play 2 – AI & Data Intelligence
+  ['wxdata',       'wxai',          2],
+  ['wxdata',       'wxdi',          2],
+  ['wxdata',       'wxdint',        2],
+  ['wxdata',       'wxgov',         2],
+  ['wxai',         'wxorch',        2],
+  ['wxgov',        'guardium',      2],
 
-  // Play 3 – Automation / Integration
-  ['webmethods','apiconnect',3],
-  ['concert',  'instana',  3],
-  ['instana',  'turbonomic',3],
-  ['instana',  'sevone',   3],
-  ['maximo',   'envizi',   3],
-  ['concert',  'wxo',      3],
+  // Play 3 – Observability & FinOps
+  ['instana',      'sevone',        3],
+  ['instana',      'turbonomic',    3],
+  ['turbonomic',   'cloudability',  3],
+  ['apptio',       'cloudability',  3],
 
-  // Play 4 – Hybrid Cloud Right
-  ['terraform','vault',    4],
-  ['terraform','openshift',5],
-  ['terraform','ansible',  4],
-  ['vault',    'verify',   4],
-  ['vault',    'guardium', 4],
-  ['vault',    'concert',  4],
-  ['cloudability','apptio',4],
-  ['cloudability','turbonomic',4],
-  ['cloudability','instana',4],
-  ['cloudability','concert',4],
-  ['ansible',  'sevone',   4],
+  // Play 4 – Security & Governance
+  ['vault',        'verify',        4],
+  ['vault',        'guardium',      4],
+  ['wxgov',        'guardium',      4],
 
-  // Play 5 – Cloud Innovation
-  ['openshift','redhatai', 5],
-  ['openshift','linuxone', 5],
-  ['ibmz',     'power',    5],
-  ['ibmz',     'linuxone', 5],
-  ['ibmz',     'openshift',5],
-  ['power',    'concert',  5],
-  ['power',    'wxdata',   5],
-  ['power',    'flash',    5],
+  // Play 5 – Infrastructure & Systems
+  ['power',        'aix',           5],
+  ['power',        'ibmi',          5],
+  ['power',        'linux_power',   5],
+  ['maximo',       'tls',           5],
+  ['maximo',       'power',         5],
+
+  // Play 6 – Storage Solutions
+  ['power',        'flashsystem',   6],
+  ['flashsystem',  'storage_control',6],
+  ['flashsystem',  'storage_virt',  6],
+  ['storage_control','guardium',    6],
+  ['storage_fusion','storage_scale',6],
+  ['linuxone',     'storage_scale', 6],
+  ['linuxone',     'storage_ceph',  6],
 ];
 
 // ═══════════════════════════════════════════

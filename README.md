@@ -1,6 +1,6 @@
 # IBM Synergies Map
 
-An interactive visualisation tool for exploring IBM Software cross-sell opportunities and product connections.
+An interactive visualisation tool for exploring IBM Software & Infrastructure cross-sell opportunities and product connections.
 
 ## Overview
 
@@ -8,8 +8,8 @@ This single-page HTML application helps Arrow ECS UK partners identify synergies
 
 ## Features
 
-- **Interactive Product Map**: 31 IBM products organised across 5 categories
-- **5 Strategic Plays**: AI Agents, Enterprise Data, Automation, Hybrid Cloud, Cloud Innovation
+- **Interactive Product Map**: 34 IBM products organised across 6 categories
+- **5 Strategic Plays**: App Platform, AI & Data, Cloud Ops, Security, Infrastructure
 - **Visual Connections**: Color-coded relationship mapping between products
 - **Product Details**: Click any product to view its play associations and connections
 - **Responsive Layout**: Adapts to different screen sizes
@@ -26,11 +26,12 @@ Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser.
 
 ## Product Categories
 
-- **AI & Productivity**: watsonx Orchestrate, watsonx.ai, Code Assistant, Planning Analytics, watsonx.governance
-- **Data & Analytics**: watsonx.data, Db2, Netezza, Guardium, Data Gate
-- **Integration & Ops**: webMethods, API Connect, Concert, Instana, Turbonomic, SevOne, Maximo, Envizi
-- **Security & Cloud Mgmt**: Vault, Verify, Terraform, Ansible, Cloudability, Apptio
-- **Infrastructure**: Red Hat OpenShift, Red Hat AI, IBM Z, LinuxONE, Power, FlashSystem
+- **Automation & Integration**: API Connect, Event Automation, webMethods, Terraform, Concert
+- **Observability & FinOps**: Instana, SevOne, Turbonomic, Apptio, Apptio Cloudability
+- **Security & Governance**: Guardium, Verify, Vault
+- **Data & AI Platform**: watsonx.ai, watsonx.data, watsonx.data intelligence, watsonx.data integration, watsonx.governance, watsonx Orchestrate, Code Assistant (Ansible)
+- **Infrastructure & Systems**: LinuxONE, Power Systems, AIX, IBM i, Linux on Power, Maximo, Technology Lifecycle Services
+- **Storage Solutions**: FlashSystem, Storage Control, Storage Insights, Storage Virtualize, Storage Fusion, Storage Ceph, Storage Scale
 
 ## Technical Details
 
@@ -41,4 +42,4 @@ Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser.
 
 ---
 
-**Arrow ECS UK · 2026**
+**Arrow ECS UK**
