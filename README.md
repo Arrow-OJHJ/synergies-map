@@ -8,9 +8,9 @@ This single-page HTML application helps Arrow ECS UK partners identify synergies
 
 ## Features
 
-- **Interactive Product Map**: 34 IBM products organised across 6 categories
+- **Interactive Product Map**: 33 IBM products organised across 6 categories
 - **6 Strategic Plays**: Automation, AI & Data, Cloud Ops, Security, Infrastructure, Storage
-- **Visual Connections**: Color-coded relationship mapping between products
+- **Visual Connections**: Color-coded relationship mapping between products (connections inherit the color of the lower category on the map)
 - **Product Details**: Click any product to view its play associations and connections
 - **Responsive Layout**: Adapts to different screen sizes with equal spacing algorithm
 - **Optimised Performance**: Event delegation, error handling, and efficient rendering
@@ -27,11 +27,11 @@ Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser.
 
 ## Product Categories
 
-- **Automation & Integration**: API Connect, Event Automation, webMethods, Terraform, Concert
+- **Automation & Integration**: API Connect, Event Automation, webMethods, Terraform, Concert, Maximo
 - **Observability & FinOps**: Instana, SevOne, Turbonomic, Apptio, Apptio Cloudability
 - **Security & Governance**: Guardium, Verify, Vault
 - **Data & AI Platform**: watsonx.ai, watsonx.data, watsonx.data intelligence, watsonx.data integration, watsonx.governance, watsonx Orchestrate, Code Assistant (Ansible)
-- **Infrastructure & Systems**: LinuxONE, Power Systems, AIX, IBM i, Linux on Power, Maximo, Technology Lifecycle Services
+- **Infrastructure & Systems**: LinuxONE, Power Systems, AIX, IBM i, Linux on Power
 - **Storage Solutions**: FlashSystem, Storage Control, Storage Insights, Storage Virtualize, Storage Fusion, Storage Ceph, Storage Scale
 
 ## Technical Details
