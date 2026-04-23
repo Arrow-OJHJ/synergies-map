@@ -563,8 +563,8 @@ function computeLayout() {
 
   const LANE_MARGIN_LEFT = 90;   // space for lane labels
   const LANE_MARGIN_RIGHT = 14;
-  const LANE_MARGIN_TOP = 16;
-  const LANE_MARGIN_BOTTOM = 16;
+  const LANE_MARGIN_TOP = 75;    // increased for full connection arc visibility
+  const LANE_MARGIN_BOTTOM = 8;  // reduced to minimize bottom empty space
 
   const usableW = W - LANE_MARGIN_LEFT - LANE_MARGIN_RIGHT;
   const usableH = H - LANE_MARGIN_TOP - LANE_MARGIN_BOTTOM;
@@ -597,21 +597,47 @@ function computeLayout() {
     mapArea.appendChild(label);
   });
 
-  // Position each product node
-  PRODUCTS.forEach(p => {
-    const catIdx = CATEGORIES.findIndex(c => c.id === p.cat);
+  // Group products by category and calculate equal spacing
+  CATEGORIES.forEach((cat, catIdx) => {
+    const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
+    if (productsInCat.length === 0) return;
+
     const yTop = LANE_MARGIN_TOP + catIdx * laneH;
     const yCen = yTop + laneH / 2;
 
-    const x = LANE_MARGIN_LEFT + (p.xPos / 100) * usableW;
-    const y = yCen;
+    // Measure actual widths of product nodes
+    const widths = productsInCat.map(p => {
+      const el = nodeEls[p.id];
+      return el.offsetWidth || 0;
+    });
 
-    p._px = x;
-    p._py = y;
+    // Calculate total width of all products
+    const totalProductWidth = widths.reduce((sum, w) => sum + w, 0);
+    
+    // Calculate available space for gaps
+    const availableSpace = usableW - totalProductWidth;
+    
+    // Calculate equal gap size (n products = n+1 gaps for edge spacing)
+    const gapSize = availableSpace / (productsInCat.length + 1);
 
-    const el = nodeEls[p.id];
-    el.style.left = x + 'px';
-    el.style.top = y + 'px';
+    // Position products with equal gaps
+    let currentX = LANE_MARGIN_LEFT + gapSize;
+    
+    productsInCat.forEach((p, idx) => {
+      const width = widths[idx];
+      const x = currentX + width / 2; // Center of the product node
+      const y = yCen;
+
+      p._px = x;
+      p._py = y;
+
+      const el = nodeEls[p.id];
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+
+      // Move to next position
+      currentX += width + gapSize;
+    });
   });
 }
 
