@@ -380,15 +380,15 @@ const CONFIG = {
   LAYOUT: {
     LANE_MARGIN_LEFT: 90,
     LANE_MARGIN_RIGHT: 14,
-    LANE_MARGIN_TOP: 75,
-    LANE_MARGIN_BOTTOM: 8
+    LANE_MARGIN_TOP: 78,
+    LANE_MARGIN_BOTTOM: 10
   },
   ANIMATION: {
     RESIZE_DEBOUNCE_MS: 80,
     PATH_DRAW_DURATION: 0.4
   },
   CURVES: {
-    ARC_HEIGHT_FACTOR: 0.18,
+    ARC_HEIGHT_FACTOR: 0.14,
     BEND_START_FACTOR: 0.25,
     BEND_END_FACTOR: 0.75
   },
@@ -434,6 +434,7 @@ const PRODUCTS = [
   { id: 'webmethods',      label: 'webMethods',                     cat: 'automation',     plays: [1] },
   { id: 'terraform',       label: 'Terraform',                      cat: 'automation',     plays: [1] },
   { id: 'concert',         label: 'Concert',                        cat: 'automation',     plays: [1] },
+  { id: 'maximo',          label: 'Maximo',                         cat: 'automation',     plays: [1] },
 
   // ── Observability & FinOps ─────────────────────────────────
   { id: 'instana',         label: 'Instana',                        cat: 'observability',  plays: [3] },
@@ -462,8 +463,6 @@ const PRODUCTS = [
   { id: 'aix',             label: 'AIX',                            cat: 'infrastructure', plays: [5] },
   { id: 'ibmi',            label: 'IBM i',                          cat: 'infrastructure', plays: [5] },
   { id: 'linux_power',     label: 'Linux on Power',                 cat: 'infrastructure', plays: [5] },
-  { id: 'maximo',          label: 'Maximo',                         cat: 'infrastructure', plays: [5] },
-  { id: 'tls',             label: 'Technology Lifecycle Services',  cat: 'infrastructure', plays: [5] },
 
   // ── Storage Solutions ──────────────────────────────────────
   { id: 'flashsystem',     label: 'FlashSystem',                    cat: 'storage',        plays: [6] },
@@ -491,9 +490,16 @@ const CONNECTIONS = [
   ['wxdata',       'wxdint',        2],
   ['wxdata',       'wxgov',         2],
   ['wxai',         'wxorch',        2],
+  ['wxai',         'wxgov',         2],
+  ['wxai',         'wca_ansible',   2],
+  ['wxgov',        'concert',       2],
   ['wxgov',        'guardium',      2],
+  ['wxorch',       'api_connect',   2],
+  ['wxorch',       'webmethods',    2],
 
   // Play 3 – Observability & FinOps
+  ['concert',      'instana',       3],
+  ['concert',      'turbonomic',    3],
   ['instana',      'sevone',        3],
   ['instana',      'turbonomic',    3],
   ['turbonomic',   'cloudability',  3],
@@ -508,17 +514,22 @@ const CONNECTIONS = [
   ['power',        'aix',           5],
   ['power',        'ibmi',          5],
   ['power',        'linux_power',   5],
-  ['maximo',       'tls',           5],
-  ['maximo',       'power',         5],
+
+  // Maximo connections (now in Automation)
+  ['maximo',       'event_auto',    1],
+  ['maximo',       'api_connect',   1],
+  ['maximo',       'turbonomic',    3],
+  ['maximo',       'wxai',          2],
 
   // Play 6 – Storage Solutions
   ['power',        'flashsystem',   6],
   ['flashsystem',  'storage_control',6],
   ['flashsystem',  'storage_virt',  6],
-  ['storage_control','guardium',    6],
   ['storage_fusion','storage_scale',6],
   ['linuxone',     'storage_scale', 6],
   ['linuxone',     'storage_ceph',  6],
+  ['wxdata',       'storage_scale', 6],
+  ['wxdata',       'storage_ceph',  6],
 ];
 
 // ═══════════════════════════════════════════
