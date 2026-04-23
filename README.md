@@ -4,15 +4,16 @@ An interactive visualisation tool for exploring IBM Software & Infrastructure cr
 
 ## Overview
 
-This single-page HTML application helps Arrow ECS UK partners identify synergies between IBM products across five strategic plays. Click any product to reveal its connections and cross-sell opportunities.
+This single-page HTML application helps Arrow ECS UK partners identify synergies between IBM products across six strategic plays. Click any product to reveal its connections and cross-sell opportunities.
 
 ## Features
 
 - **Interactive Product Map**: 34 IBM products organised across 6 categories
-- **5 Strategic Plays**: App Platform, AI & Data, Cloud Ops, Security, Infrastructure
+- **6 Strategic Plays**: Automation, AI & Data, Cloud Ops, Security, Infrastructure, Storage
 - **Visual Connections**: Color-coded relationship mapping between products
 - **Product Details**: Click any product to view its play associations and connections
-- **Responsive Layout**: Adapts to different screen sizes
+- **Responsive Layout**: Adapts to different screen sizes with equal spacing algorithm
+- **Optimised Performance**: Event delegation, error handling, and efficient rendering
 
 ## Usage
 
@@ -37,8 +38,12 @@ Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser.
 
 - Pure HTML/CSS/JavaScript (no external dependencies)
 - IBM Plex font family
-- SVG-based connection rendering
-- Responsive design with dynamic layout calculation
+- SVG-based connection rendering with animated paths
+- Responsive design with smart equal spacing algorithm
+- Configurable layout and animation parameters
+- Event delegation for optimal performance
+- Comprehensive error handling and validation
+- Production-ready code quality
 
 ---
 

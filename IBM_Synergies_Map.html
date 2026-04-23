@@ -358,16 +358,7 @@
       <button id="reset-btn">↩ Show all products</button>
       <div id="sidebar-inner">
         <div class="sidebar-empty">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
-            <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-            <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-            <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-            <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
-            <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-            <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-          </svg>
-          <p>Select any product node to highlight its cross-sell connections</p>
+          <p style="color: #8d8d8d; font-size: 11px;">Loading...</p>
         </div>
       </div>
     </div>
@@ -381,6 +372,39 @@
 </div>
 
 <script>
+// ═══════════════════════════════════════════
+// CONFIGURATION
+// ═══════════════════════════════════════════
+
+const CONFIG = {
+  LAYOUT: {
+    LANE_MARGIN_LEFT: 90,
+    LANE_MARGIN_RIGHT: 14,
+    LANE_MARGIN_TOP: 75,
+    LANE_MARGIN_BOTTOM: 8
+  },
+  ANIMATION: {
+    RESIZE_DEBOUNCE_MS: 80,
+    PATH_DRAW_DURATION: 0.4
+  },
+  CURVES: {
+    ARC_HEIGHT_FACTOR: 0.18,
+    BEND_START_FACTOR: 0.25,
+    BEND_END_FACTOR: 0.75
+  },
+  SAME_ROW_THRESHOLD: 5
+};
+
+const EMPTY_STATE_SVG = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
+  <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+  <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+  <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
+  <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
+  <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+  <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
+</svg>`;
+
 // ═══════════════════════════════════════════
 // DATA
 // ═══════════════════════════════════════════
@@ -403,53 +427,52 @@ const CATEGORIES = [
   { id: 'storage',       label: 'Storage Solutions' },
 ];
 
-// xPos: 0–100 (percent within the usable width)
 const PRODUCTS = [
   // ── Automation & Integration ───────────────────────────────
-  { id: 'api_connect',     label: 'API Connect',           cat: 'automation',    plays: [1],   xPos: 12 },
-  { id: 'event_auto',      label: 'Event Automation',      cat: 'automation',    plays: [1],   xPos: 28 },
-  { id: 'webmethods',      label: 'webMethods',            cat: 'automation',    plays: [1],   xPos: 44 },
-  { id: 'terraform',       label: 'Terraform',             cat: 'automation',    plays: [1],   xPos: 64 },
-  { id: 'concert',         label: 'Concert',               cat: 'automation',    plays: [1],   xPos: 84 },
+  { id: 'api_connect',     label: 'API Connect',                    cat: 'automation',     plays: [1] },
+  { id: 'event_auto',      label: 'Event Automation',               cat: 'automation',     plays: [1] },
+  { id: 'webmethods',      label: 'webMethods',                     cat: 'automation',     plays: [1] },
+  { id: 'terraform',       label: 'Terraform',                      cat: 'automation',     plays: [1] },
+  { id: 'concert',         label: 'Concert',                        cat: 'automation',     plays: [1] },
 
   // ── Observability & FinOps ─────────────────────────────────
-  { id: 'instana',         label: 'Instana',               cat: 'observability', plays: [3],   xPos: 12 },
-  { id: 'sevone',          label: 'SevOne',                cat: 'observability', plays: [3],   xPos: 28 },
-  { id: 'turbonomic',      label: 'Turbonomic',            cat: 'observability', plays: [3],   xPos: 44 },
-  { id: 'apptio',          label: 'Apptio',                cat: 'observability', plays: [3],   xPos: 64 },
-  { id: 'cloudability',    label: 'Apptio Cloudability',   cat: 'observability', plays: [3],   xPos: 84 },
+  { id: 'instana',         label: 'Instana',                        cat: 'observability',  plays: [3] },
+  { id: 'sevone',          label: 'SevOne',                         cat: 'observability',  plays: [3] },
+  { id: 'turbonomic',      label: 'Turbonomic',                     cat: 'observability',  plays: [3] },
+  { id: 'apptio',          label: 'Apptio',                         cat: 'observability',  plays: [3] },
+  { id: 'cloudability',    label: 'Apptio Cloudability',            cat: 'observability',  plays: [3] },
 
   // ── Security & Governance ──────────────────────────────────
-  { id: 'guardium',        label: 'Guardium',              cat: 'security',      plays: [4],   xPos: 25 },
-  { id: 'verify',          label: 'Verify',                cat: 'security',      plays: [4],   xPos: 50 },
-  { id: 'vault',           label: 'Vault',                 cat: 'security',      plays: [4],   xPos: 75 },
+  { id: 'guardium',        label: 'Guardium',                       cat: 'security',       plays: [4] },
+  { id: 'verify',          label: 'Verify',                         cat: 'security',       plays: [4] },
+  { id: 'vault',           label: 'Vault',                          cat: 'security',       plays: [4] },
 
   // ── Data & AI Platform ─────────────────────────────────────
-  { id: 'wxai',            label: 'watsonx.ai',            cat: 'data_ai',       plays: [2],   xPos: 8 },
-  { id: 'wxdata',          label: 'watsonx.data',          cat: 'data_ai',       plays: [2],   xPos: 20 },
-  { id: 'wxdi',            label: 'watsonx.data intelligence', cat: 'data_ai',   plays: [2],   xPos: 34 },
-  { id: 'wxdint',          label: 'watsonx.data integration',  cat: 'data_ai',   plays: [2],   xPos: 48 },
-  { id: 'wxgov',           label: 'watsonx.governance',    cat: 'data_ai',       plays: [2],   xPos: 62 },
-  { id: 'wxorch',          label: 'watsonx Orchestrate',   cat: 'data_ai',       plays: [2],   xPos: 80 },
-  { id: 'wca_ansible',     label: 'Code Assistant (Ansible)', cat: 'data_ai',    plays: [2],   xPos: 94 },
+  { id: 'wxai',            label: 'watsonx.ai',                     cat: 'data_ai',        plays: [2] },
+  { id: 'wxdata',          label: 'watsonx.data',                   cat: 'data_ai',        plays: [2] },
+  { id: 'wxdi',            label: 'watsonx.data intelligence',      cat: 'data_ai',        plays: [2] },
+  { id: 'wxdint',          label: 'watsonx.data integration',       cat: 'data_ai',        plays: [2] },
+  { id: 'wxgov',           label: 'watsonx.governance',             cat: 'data_ai',        plays: [2] },
+  { id: 'wxorch',          label: 'watsonx Orchestrate',            cat: 'data_ai',        plays: [2] },
+  { id: 'wca_ansible',     label: 'Code Assistant (Ansible)',       cat: 'data_ai',        plays: [2] },
 
   // ── Infrastructure & Systems ───────────────────────────────
-  { id: 'linuxone',        label: 'LinuxONE',              cat: 'infrastructure', plays: [5],   xPos: 12 },
-  { id: 'power',           label: 'Power Systems',         cat: 'infrastructure', plays: [5],   xPos: 24 },
-  { id: 'aix',             label: 'AIX',                   cat: 'infrastructure', plays: [5],   xPos: 36 },
-  { id: 'ibmi',            label: 'IBM i',                 cat: 'infrastructure', plays: [5],   xPos: 48 },
-  { id: 'linux_power',     label: 'Linux on Power',        cat: 'infrastructure', plays: [5],   xPos: 60 },
-  { id: 'maximo',          label: 'Maximo',                cat: 'infrastructure', plays: [5],   xPos: 72 },
-  { id: 'tls',             label: 'Technology Lifecycle Services', cat: 'infrastructure', plays: [5], xPos: 90 },
+  { id: 'linuxone',        label: 'LinuxONE',                       cat: 'infrastructure', plays: [5] },
+  { id: 'power',           label: 'Power Systems',                  cat: 'infrastructure', plays: [5] },
+  { id: 'aix',             label: 'AIX',                            cat: 'infrastructure', plays: [5] },
+  { id: 'ibmi',            label: 'IBM i',                          cat: 'infrastructure', plays: [5] },
+  { id: 'linux_power',     label: 'Linux on Power',                 cat: 'infrastructure', plays: [5] },
+  { id: 'maximo',          label: 'Maximo',                         cat: 'infrastructure', plays: [5] },
+  { id: 'tls',             label: 'Technology Lifecycle Services',  cat: 'infrastructure', plays: [5] },
 
   // ── Storage Solutions ──────────────────────────────────────
-  { id: 'flashsystem',     label: 'FlashSystem',           cat: 'storage',       plays: [6],   xPos: 8 },
-  { id: 'storage_control', label: 'Storage Control',       cat: 'storage',       plays: [6],   xPos: 20 },
-  { id: 'storage_insights',label: 'Storage Insights',      cat: 'storage',       plays: [6],   xPos: 32 },
-  { id: 'storage_virt',    label: 'Storage Virtualize',    cat: 'storage',       plays: [6],   xPos: 44 },
-  { id: 'storage_fusion',  label: 'Storage Fusion',        cat: 'storage',       plays: [6],   xPos: 56 },
-  { id: 'storage_ceph',    label: 'Storage Ceph',          cat: 'storage',       plays: [6],   xPos: 78 },
-  { id: 'storage_scale',   label: 'Storage Scale',         cat: 'storage',       plays: [6],   xPos: 92 },
+  { id: 'flashsystem',     label: 'FlashSystem',                    cat: 'storage',        plays: [6] },
+  { id: 'storage_control', label: 'Storage Control',                cat: 'storage',        plays: [6] },
+  { id: 'storage_insights',label: 'Storage Insights',               cat: 'storage',        plays: [6] },
+  { id: 'storage_virt',    label: 'Storage Virtualize',             cat: 'storage',        plays: [6] },
+  { id: 'storage_fusion',  label: 'Storage Fusion',                 cat: 'storage',        plays: [6] },
+  { id: 'storage_ceph',    label: 'Storage Ceph',                   cat: 'storage',        plays: [6] },
+  { id: 'storage_scale',   label: 'Storage Scale',                  cat: 'storage',        plays: [6] },
 ];
 
 // [from, to, play]  — bidirectional
@@ -512,6 +535,19 @@ CONNECTIONS.forEach(([from, to, play]) => {
   adjacency[to].push({ to: from, play });
 });
 
+// Validate connections reference valid products and plays
+CONNECTIONS.forEach(([from, to, play], idx) => {
+  if (!productMap[from]) {
+    console.error(`[Synergies Map] Invalid connection #${idx}: product "${from}" not found`);
+  }
+  if (!productMap[to]) {
+    console.error(`[Synergies Map] Invalid connection #${idx}: product "${to}" not found`);
+  }
+  if (!PLAYS[play]) {
+    console.error(`[Synergies Map] Invalid connection #${idx}: play ${play} not found`);
+  }
+});
+
 let selectedId = null;
 const nodeEls = {};
 
@@ -520,15 +556,19 @@ const nodeEls = {};
 // ═══════════════════════════════════════════
 
 const legendEl = document.getElementById('play-legend');
-Object.values(PLAYS).forEach(play => {
-  const chip = document.createElement('div');
-  chip.className = 'legend-chip';
-  chip.style.borderColor = play.color + '55';
-  chip.style.color = play.color;
-  chip.innerHTML = `<div class="dot" style="background:${play.color}"></div>${play.short}`;
-  chip.title = play.name;
-  legendEl.appendChild(chip);
-});
+if (!legendEl) {
+  console.error('[Synergies Map] Legend element not found');
+} else {
+  Object.values(PLAYS).forEach(play => {
+    const chip = document.createElement('div');
+    chip.className = 'legend-chip';
+    chip.style.borderColor = play.color + '55';
+    chip.style.color = play.color;
+    chip.innerHTML = `<div class="dot" style="background:${play.color}"></div>${play.short}`;
+    chip.title = play.name;
+    legendEl.appendChild(chip);
+  });
+}
 
 // ═══════════════════════════════════════════
 // BUILD NODES
@@ -536,6 +576,11 @@ Object.values(PLAYS).forEach(play => {
 
 const mapArea = document.getElementById('map-area');
 const svgEl = document.getElementById('svg-connections');
+
+if (!mapArea || !svgEl) {
+  console.error('[Synergies Map] Required DOM elements not found');
+  throw new Error('Map initialization failed: missing required elements');
+}
 
 PRODUCTS.forEach(p => {
   const node = document.createElement('div');
@@ -561,10 +606,7 @@ function computeLayout() {
   const W = rect.width;
   const H = rect.height;
 
-  const LANE_MARGIN_LEFT = 90;   // space for lane labels
-  const LANE_MARGIN_RIGHT = 14;
-  const LANE_MARGIN_TOP = 75;    // increased for full connection arc visibility
-  const LANE_MARGIN_BOTTOM = 8;  // reduced to minimize bottom empty space
+  const { LANE_MARGIN_LEFT, LANE_MARGIN_RIGHT, LANE_MARGIN_TOP, LANE_MARGIN_BOTTOM } = CONFIG.LAYOUT;
 
   const usableW = W - LANE_MARGIN_LEFT - LANE_MARGIN_RIGHT;
   const usableH = H - LANE_MARGIN_TOP - LANE_MARGIN_BOTTOM;
@@ -674,17 +716,17 @@ function drawConnections(activeId = null) {
     const isActive = !activeId || activeId === from || activeId === to;
 
     let d;
-    const sameRow = Math.abs(y1 - y2) < 5;
+    const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
     if (sameRow) {
       // Horizontal arc above the row
       const mx = (x1 + x2) / 2;
-      const arcH = Math.abs(x2 - x1) * 0.18;
+      const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_HEIGHT_FACTOR;
       d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
     } else {
       // S-curve between rows
       const my = (y1 + y2) / 2;
-      const bendX1 = x1 + (x2 - x1) * 0.25;
-      const bendX2 = x1 + (x2 - x1) * 0.75;
+      const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START_FACTOR;
+      const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END_FACTOR;
       d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
     }
 
@@ -721,6 +763,12 @@ function drawConnections(activeId = null) {
 // ═══════════════════════════════════════════
 
 function handleClick(id) {
+  // Validate product exists
+  if (!productMap[id]) {
+    console.warn(`[Synergies Map] Product "${id}" not found`);
+    return;
+  }
+
   if (selectedId === id) {
     resetView();
     return;
@@ -759,6 +807,14 @@ function resetView() {
 
 document.getElementById('reset-btn').addEventListener('click', resetView);
 
+// Event delegation for connection row clicks
+document.getElementById('sidebar-inner').addEventListener('click', (e) => {
+  const connRow = e.target.closest('.conn-row[data-target]');
+  if (connRow) {
+    handleClick(connRow.dataset.target);
+  }
+});
+
 // ═══════════════════════════════════════════
 // SIDEBAR RENDER
 // ═══════════════════════════════════════════
@@ -766,15 +822,7 @@ document.getElementById('reset-btn').addEventListener('click', resetView);
 function renderSidebarEmpty() {
   document.getElementById('sidebar-inner').innerHTML = `
     <div class="sidebar-empty">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
-        <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-        <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-        <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-        <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
-        <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-        <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-      </svg>
+      ${EMPTY_STATE_SVG}
       <p>Select any product node to highlight its cross-sell connections</p>
     </div>`;
 }
@@ -814,11 +862,6 @@ function renderSidebar(product) {
     <div class="sb-section-label">${conns.length} connection${conns.length !== 1 ? 's' : ''}</div>
     ${connsHtml}
   `;
-
-  // Attach click events to connection rows
-  document.querySelectorAll('.conn-row[data-target]').forEach(row => {
-    row.addEventListener('click', () => handleClick(row.dataset.target));
-  });
 }
 
 // ═══════════════════════════════════════════
@@ -826,6 +869,7 @@ function renderSidebar(product) {
 // ═══════════════════════════════════════════
 
 function init() {
+  renderSidebarEmpty();
   computeLayout();
   drawConnections();
 }
@@ -837,7 +881,7 @@ window.addEventListener('resize', () => {
     computeLayout();
     if (selectedId) drawConnections(selectedId);
     else drawConnections();
-  }, 80);
+  }, CONFIG.ANIMATION.RESIZE_DEBOUNCE_MS);
 });
 
 // Wait for layout to settle
