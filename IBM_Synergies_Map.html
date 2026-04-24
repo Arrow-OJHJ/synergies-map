@@ -744,6 +744,8 @@ function drawConnections(activeId = null) {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('d', d);
     path.setAttribute('fill', 'none');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
 
     if (!activeId) {
       // Default state – subtle
@@ -752,12 +754,16 @@ function drawConnections(activeId = null) {
       path.setAttribute('opacity', '0.28');
     } else if (isActive) {
       // Highlighted
+      const pathLength = path.getTotalLength();
       path.setAttribute('stroke', color);
       path.setAttribute('stroke-width', '2.4');
       path.setAttribute('opacity', '0.95');
-      path.setAttribute('stroke-dasharray', '1000');
-      path.setAttribute('stroke-dashoffset', '0');
+      path.setAttribute('stroke-dasharray', pathLength);
+      path.setAttribute('stroke-dashoffset', pathLength);
       path.classList.add('path-active');
+      // Force reflow to ensure animation starts
+      path.getBoundingClientRect();
+      path.setAttribute('stroke-dashoffset', '0');
     } else {
       // Dimmed
       path.setAttribute('stroke', color);
@@ -852,12 +858,13 @@ function renderSidebar(product) {
   // Group connections by play
   const connsHtml = conns.map(({ to, play }) => {
     const target = productMap[to];
-    const playObj = PLAYS[play];
+    const targetPrimaryPlay = PLAYS[target.plays[0]];
+    const targetCategory = CATEGORIES.find(c => c.id === target.cat);
     return `<div class="conn-row" data-target="${to}">
-      <div class="conn-accent" style="background:${playObj.color}"></div>
+      <div class="conn-accent" style="background:${targetPrimaryPlay.color}"></div>
       <div class="conn-info">
         <div class="conn-name">${target.label}</div>
-        <div class="conn-play">${playObj.short}</div>
+        <div class="conn-play">${targetPrimaryPlay.short}</div>
       </div>
       <div class="conn-arrow">›</div>
     </div>`;
