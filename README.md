@@ -10,7 +10,7 @@ This single-page HTML application helps Arrow ECS UK partners identify synergies
 
 - **Interactive Product Map**: 33 IBM products organised across 6 categories
 - **6 Strategic Plays**: Automation, AI & Data, Cloud Ops, Security, Infrastructure, Storage
-- **Visual Connections**: Color-coded relationship mapping between products (connections inherit the color of the lower category on the map)
+- **Visual Connections**: Colour-coded relationship mapping between products (connections inherit the colour of the lower category on the map)
 - **Product Details**: Click any product to view its play associations and connections
 - **Responsive Layout**: Adapts to different screen sizes with equal spacing algorithm
 - **Optimised Performance**: Event delegation, error handling, and efficient rendering
