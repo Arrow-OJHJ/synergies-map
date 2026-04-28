@@ -455,7 +455,7 @@ const PRODUCTS = [
   { id: 'wxdint',          label: 'watsonx.data integration',       cat: 'data_ai',        plays: [2] },
   { id: 'wxgov',           label: 'watsonx.governance',             cat: 'data_ai',        plays: [2] },
   { id: 'wxorch',          label: 'watsonx Orchestrate',            cat: 'data_ai',        plays: [2] },
-  { id: 'wca_ansible',     label: 'Code Assistant (Ansible)',       cat: 'data_ai',        plays: [2] },
+  { id: 'wca_ansible',     label: 'IBM Bob',                        cat: 'data_ai',        plays: [2] },
 
   // ── Infrastructure & Systems ───────────────────────────────
   { id: 'linuxone',        label: 'LinuxONE',                       cat: 'infrastructure', plays: [5] },
@@ -492,6 +492,8 @@ const CONNECTIONS = [
   ['wxai',         'wxorch',        2],
   ['wxai',         'wxgov',         2],
   ['wxai',         'wca_ansible',   2],
+  ['wca_ansible',  'wxorch',        2],
+  ['wca_ansible',  'wxgov',         2],
   ['wxgov',        'concert',       2],
   ['wxgov',        'guardium',      2],
   ['wxorch',       'api_connect',   2],
