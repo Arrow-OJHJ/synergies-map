@@ -494,6 +494,7 @@ const CONNECTIONS = [
   ['wxai',         'wca_ansible',   2],
   ['wca_ansible',  'wxorch',        2],
   ['wca_ansible',  'wxgov',         2],
+  ['wxai',         'instana',       2],
   ['wxgov',        'concert',       2],
   ['wxgov',        'guardium',      2],
   ['wxorch',       'api_connect',   2],
@@ -502,8 +503,10 @@ const CONNECTIONS = [
   // Play 3 – Observability & FinOps
   ['concert',      'instana',       3],
   ['concert',      'turbonomic',    3],
+  ['concert',      'apptio',        3],
   ['instana',      'sevone',        3],
   ['instana',      'turbonomic',    3],
+  ['turbonomic',   'terraform',     3],
   ['turbonomic',   'cloudability',  3],
   ['apptio',       'cloudability',  3],
 
@@ -516,6 +519,7 @@ const CONNECTIONS = [
   ['power',        'aix',           5],
   ['power',        'ibmi',          5],
   ['power',        'linux_power',   5],
+  ['linuxone',     'wxai',          5],
 
   // Maximo connections (now in Automation)
   ['maximo',       'event_auto',    1],
