@@ -430,6 +430,9 @@
     font-family: var(--font-sans);
     font-size: 12px;
     font-weight: 400;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: background-color 0.11s;
     display: none;
@@ -759,7 +762,7 @@
   <footer id="footer">
     <div class="footer-stats">
       <span class="footer-stat"><strong>6</strong>Plays</span>
-      <span class="footer-stat"><strong>34</strong>Products</span>
+      <span class="footer-stat"><strong>33</strong>Products</span>
       <span class="footer-stat"><strong>Arrow ECS UK</strong></span>
     </div>
     <span class="footer-hint">Click a node to highlight connections · Click again to deselect</span>
@@ -929,6 +932,26 @@ CONNECTIONS.forEach(([from, to, play]) => {
   adjacency[from].push({ to, play });
   adjacency[to].push({ to: from, play });
 });
+
+(function validateData() {
+  const catIds = new Set(CATEGORIES.map(c => c.id));
+  const catPlay = Object.fromEntries(CATEGORIES.map(c => [c.id, c.playId]));
+  PRODUCTS.forEach(p => {
+    if (!catIds.has(p.cat)) console.warn(`[data] product "${p.id}" has unknown cat "${p.cat}"`);
+    if (catPlay[p.cat] && p.plays[0] !== catPlay[p.cat]) {
+      console.warn(`[data] product "${p.id}" primary play ${p.plays[0]} doesn't match its category's playId ${catPlay[p.cat]}`);
+    }
+  });
+  const seenPairs = new Map();
+  CONNECTIONS.forEach(([from, to, play]) => {
+    if (!productMap[from]) console.warn(`[data] connection from unknown product "${from}"`);
+    if (!productMap[to])   console.warn(`[data] connection to unknown product "${to}"`);
+    if (!PLAYS[play])      console.warn(`[data] connection has unknown play ${play}`);
+    const key = [from, to].sort().join('|') + `|${play}`;
+    if (seenPairs.has(key)) console.warn(`[data] duplicate connection ${from}↔${to} on play ${play}`);
+    seenPairs.set(key, true);
+  });
+})();
 
 let selectedId = null;
 let activePlayFilter = null;
@@ -1264,16 +1287,21 @@ function renderSidebar(product) {
     </span>`;
   }).join('');
 
-  // Group connections by play
+  // Dedupe connected targets (a target may appear in multiple play synergies)
+  const uniqueTargetIds = [...new Set(conns.map(c => c.to))];
+
+  // Group connections by the target's primary play (its lane on the map)
   const grouped = {};
-  conns.forEach(c => {
-    if (!grouped[c.play]) grouped[c.play] = [];
-    grouped[c.play].push(c);
+  uniqueTargetIds.forEach(tid => {
+    const tp = productMap[tid].plays[0];
+    (grouped[tp] ||= []).push(tid);
   });
 
-  const groupedHtml = Object.keys(grouped).sort((a,b) => Number(a)-Number(b)).map(pId => {
+  // Sort groups by their lane order on the map (top-to-bottom), not numeric play id
+  const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
+  const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
     const play = PLAYS[pId];
-    const rows = grouped[pId].map(({to}) => {
+    const rows = grouped[pId].map(to => {
       const target = productMap[to];
       const targetPlay = PLAYS[target.plays[0]];
       return `<button type="button" class="conn-row" data-target="${to}">
@@ -1298,7 +1326,7 @@ function renderSidebar(product) {
     <div class="sb-section-label">Featured in plays</div>
     <div>${playsHtml}</div>
 
-    <div class="sb-section-label">${conns.length} connection${conns.length !== 1 ? 's' : ''}</div>
+    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
     ${groupedHtml}
   `;
 }
