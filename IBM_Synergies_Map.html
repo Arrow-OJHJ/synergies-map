@@ -3,97 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IBM Software Cross-Sell Plays | Arrow ECS UK 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>IBM Product Synergies Map</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23161616%22/><circle cx=%2235%22 cy=%2250%22 r=%2210%22 fill=%22%230f62fe%22/><circle cx=%2265%22 cy=%2250%22 r=%2210%22 fill=%22%23198038%22/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* ─────────────────────────────────────────────
+     Carbon Design System tokens
+     ───────────────────────────────────────────── */
+  :root {
+    /* White theme */
+    --cds-background: #ffffff;
+    --cds-background-hover: #e8e8e8;
+    --cds-background-active: #c6c6c6;
+    --cds-background-selected: #e0e0e0;
+    --cds-layer-01: #f4f4f4;
+    --cds-layer-02: #ffffff;
+    --cds-layer-accent-01: #e0e0e0;
+    --cds-layer-hover-01: #e8e8e8;
+    --cds-field-01: #f4f4f4;
+    --cds-border-subtle-01: #e0e0e0;
+    --cds-border-subtle-02: #c6c6c6;
+    --cds-border-strong-01: #8d8d8d;
+    --cds-text-primary: #161616;
+    --cds-text-secondary: #525252;
+    --cds-text-placeholder: #a8a8a8;
+    --cds-text-helper: #6f6f6f;
+    --cds-text-on-color: #ffffff;
+    --cds-icon-primary: #161616;
+    --cds-icon-secondary: #525252;
+    --cds-button-primary: #0f62fe;
+    --cds-button-primary-hover: #0050e6;
+    --cds-button-primary-active: #002d9c;
+    --cds-focus: #0f62fe;
+    --cds-interactive: #0f62fe;
+    --cds-link-primary: #0f62fe;
+
+    /* Play colors — Carbon palette, 60-level on light */
+    --play-1: #0043ce; /* Blue 70   — Automation */
+    --play-2: #198038; /* Green 60  — Data & AI */
+    --play-3: #8a3ffc; /* Purple 60 — Observability */
+    --play-4: #da1e28; /* Red 60    — Security */
+    --play-5: #007d79; /* Teal 60   — Infrastructure */
+    --play-6: #d12771; /* Magenta 60 — Storage */
+
+    --font-sans: 'IBM Plex Sans', 'Helvetica Neue', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+  }
+
+  [data-theme="dark"] {
+    /* Gray 100 theme */
+    --cds-background: #161616;
+    --cds-background-hover: #353535;
+    --cds-background-active: #525252;
+    --cds-background-selected: #353535;
+    --cds-layer-01: #262626;
+    --cds-layer-02: #393939;
+    --cds-layer-accent-01: #525252;
+    --cds-layer-hover-01: #333333;
+    --cds-field-01: #262626;
+    --cds-border-subtle-01: #393939;
+    --cds-border-subtle-02: #525252;
+    --cds-border-strong-01: #6f6f6f;
+    --cds-text-primary: #f4f4f4;
+    --cds-text-secondary: #c6c6c6;
+    --cds-text-placeholder: #6f6f6f;
+    --cds-text-helper: #8d8d8d;
+    --cds-icon-primary: #f4f4f4;
+    --cds-icon-secondary: #c6c6c6;
+    --cds-button-primary: #0f62fe;
+    --cds-button-primary-hover: #0353e9;
+    --cds-button-primary-active: #002d9c;
+    --cds-focus: #ffffff;
+    --cds-interactive: #4589ff;
+    --cds-link-primary: #78a9ff;
+
+    /* Play colors — 40-level on dark */
+    --play-1: #4589ff;
+    --play-2: #6fdc8c;
+    --play-3: #be95ff;
+    --play-4: #fa4d56;
+    --play-5: #3ddbd9;
+    --play-6: #ff7eb6;
+  }
+
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html, body { height: 100%; }
   body {
-    background: #0b1a2e;
-    color: #f4f4f4;
-    font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
-    height: 100vh;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--cds-text-primary);
+    background: var(--cds-background);
     overflow: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 
-  #app {
+  /* ─── App shell ─── */
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  /* ── Carbon UI Shell (two bars) ── */
+  .cds-shell { flex-shrink: 0; }
+
+  .cds-shell__bar1 {
+    height: 48px;
+    background: #161616;
+    color: #ffffff;
+    padding: 0 0 0 16px;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    align-items: stretch;
   }
 
-  /* ─── Header ─── */
-  #header {
-    display: flex;
+  .cds-shell__brand {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    border-bottom: 1px solid #1e3660;
-    background: #0f2244;
-    flex-shrink: 0;
-    gap: 16px;
+    gap: 0;
   }
-
-  .header-title h1 {
+  .cds-shell__wordmark {
+    font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: -0.01em;
-    color: #f4f4f4;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+  .cds-shell__divider {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #393939;
+    margin: 0 12px;
+  }
+  .cds-shell__product {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    color: #c6c6c6;
   }
 
-  .header-title p {
-    font-size: 10px;
-    color: #6f6f6f;
-    margin-top: 2px;
-    letter-spacing: 0.02em;
+  .cds-shell__meta {
+    margin-left: auto;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .cds-shell__meta-text {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #8d8d8d;
+  }
+  .cds-shell__meta-text strong {
+    color: #c6c6c6;
+    font-weight: 500;
+  }
+
+  /* Visually hidden — a11y label */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0; padding: 0; margin: -1px;
+  }
+
+  /* Theme toggle button in shell */
+  .cds-shell__theme-btn {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    transition: background-color 0.11s, color 0.11s;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .cds-shell__theme-btn:hover { background: #353535; color: #ffffff; }
+  .cds-shell__theme-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
+  .cds-shell__theme-btn .icon-glyph {
+    display: inline-block;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  [data-theme="dark"] .cds-shell__theme-btn .icon-glyph {
+    transform: rotate(180deg);
+  }
+
+  .cds-shell__bar2 {
+    height: 48px;
+    background: var(--cds-background);
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+    display: flex;
+    align-items: stretch;
+    padding: 0 16px;
   }
 
   #play-legend {
     display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: flex-end;
+    align-items: stretch;
+    gap: 0;
   }
 
   .legend-chip {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 3px 10px 3px 7px;
-    border-radius: 2px;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    border: 1px solid;
+    gap: 8px;
+    padding: 0 12px;
+    height: 48px;
     background: transparent;
+    border: none;
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
     white-space: nowrap;
+    transition: background-color 0.11s, color 0.11s;
+    border-bottom: 2px solid transparent;
   }
-
-  .legend-chip:hover { opacity: 0.75; }
-
+  .legend-chip:hover { background: var(--cds-background-hover); color: var(--cds-text-primary); }
+  .legend-chip:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
   .legend-chip .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    flex-shrink: 0;
   }
+  .legend-chip.is-active {
+    color: var(--cds-text-primary);
+    background: var(--cds-background-hover);
+  }
+  .legend-chip.is-active[data-play-color] { border-bottom-color: var(--legend-color, var(--cds-interactive)); }
 
-  /* ─── Main ─── */
+  /* ─── Main row ─── */
   #main {
     display: flex;
     flex: 1;
     overflow: hidden;
+    background: var(--cds-background);
   }
 
-  /* ─── Map ─── */
+  /* ─── Map area ─── */
   #map-area {
     position: relative;
     flex: 1;
     overflow: hidden;
-    background: #0b1a2e;
+    background: var(--cds-background);
   }
 
   #svg-connections {
@@ -103,445 +268,658 @@
     pointer-events: none;
   }
 
-  /* Lane strips */
+  /* Lane strips & labels */
   .lane-strip {
     position: absolute;
     left: 0; right: 0;
     pointer-events: none;
+    background: var(--cds-layer-01);
   }
-
+  .lane-divider {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--cds-border-subtle-01);
+    pointer-events: none;
+  }
   .lane-label {
     position: absolute;
-    left: 10px;
-    font-size: 8.5px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+    left: 16px;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
     text-transform: uppercase;
-    color: #8d8d8d;
-    writing-mode: horizontal-tb;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    white-space: nowrap;
+    z-index: 2;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .lane-label .lane-dot {
+    width: 8px; height: 8px;
+    background: var(--lane-color, var(--cds-text-secondary));
+    flex-shrink: 0;
   }
 
-  /* Product nodes */
+  /* ─── Product nodes (Carbon tag style) ─── */
   .pnode {
     position: absolute;
-    padding: 5px 12px;
-    border-radius: 14px;
-    font-size: 10.5px;
+    transform: translate(-50%, -50%);
+    padding: 6px 10px 6px 10px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    border-left: 3px solid var(--node-color, var(--cds-border-strong-01));
+    font-family: var(--font-sans);
+    font-size: 12px;
     font-weight: 500;
+    color: var(--cds-text-primary);
     cursor: pointer;
     white-space: nowrap;
-    border: 1.5px solid;
-    background: #1e1e1e;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.22s ease, transform 0.15s ease, background 0.15s ease;
-    letter-spacing: 0.01em;
     z-index: 5;
     user-select: none;
+    transition: opacity 0.18s ease, background-color 0.11s, border-color 0.11s, box-shadow 0.11s;
+    line-height: 1.2;
   }
 
   .pnode:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-    background: #162848;
+    background: var(--cds-background-hover);
     z-index: 30;
   }
-
-  .pnode.dimmed {
-    opacity: 0.09;
-    transform: translate(-50%, -50%) scale(0.96);
+  .pnode:focus-visible {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
   }
-
+  .pnode.dimmed {
+    opacity: 0.22;
+  }
   .pnode.highlighted {
-    background: #132244;
+    background: var(--cds-background-hover);
     z-index: 20;
   }
-
   .pnode.selected {
-    transform: translate(-50%, -50%) scale(1.13);
-    background: #1e3660;
+    background: #161616;
+    color: #ffffff;
+    border-color: #161616;
+    border-left-color: var(--node-color);
     z-index: 40;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.07);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+  }
+  [data-theme="dark"] .pnode.selected {
+    background: #f4f4f4;
+    color: #161616;
+    border-color: #f4f4f4;
+  }
+
+  /* Style variants applied via [data-node-style] on #app */
+  #app[data-node-style="tag"] .pnode {
+    /* default — already set above */
+  }
+  #app[data-node-style="chip"] .pnode {
+    border-left: 1px solid var(--cds-border-subtle-02);
+    padding-left: 10px;
+    position: relative;
+  }
+  #app[data-node-style="chip"] .pnode::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 4px;
+    background: var(--node-color, var(--cds-border-strong-01));
+  }
+  #app[data-node-style="chip"] .pnode { padding-left: 14px; }
+
+  #app[data-node-style="dot"] .pnode {
+    border-left: 1px solid var(--cds-border-subtle-02);
+    padding-left: 26px;
+    position: relative;
+  }
+  #app[data-node-style="dot"] .pnode::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--node-color, var(--cds-border-strong-01));
   }
 
   /* ─── Sidebar ─── */
   #sidebar {
-    width: 236px;
+    width: 320px;
     flex-shrink: 0;
-    border-left: 1px solid #1e3660;
-    background: #0f2244;
+    border-left: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-layer-01);
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
 
+  #sidebar-header {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-layer-01);
+    flex-shrink: 0;
+  }
+  .sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+  }
+
+  #reset-btn {
+    height: 32px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid var(--cds-border-strong-01);
+    border-radius: 0;
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.11s;
+    display: none;
+  }
+  #reset-btn:hover { background: var(--cds-background-hover); }
+  #reset-btn:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
+
   #sidebar-inner {
     flex: 1;
     overflow-y: auto;
-    padding: 18px 16px;
+    padding: 20px 16px;
   }
-
-  #sidebar-inner::-webkit-scrollbar { width: 4px; }
+  #sidebar-inner::-webkit-scrollbar { width: 6px; }
   #sidebar-inner::-webkit-scrollbar-track { background: transparent; }
-  #sidebar-inner::-webkit-scrollbar-thumb { background: #1e3660; border-radius: 2px; }
+  #sidebar-inner::-webkit-scrollbar-thumb { background: var(--cds-border-subtle-02); }
 
   .sidebar-empty {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--cds-text-secondary);
+    padding: 8px 0;
+  }
+  .sidebar-empty .empty-icon {
+    width: 32px; height: 32px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    gap: 10px;
-    color: #8d8d8d;
-    text-align: center;
-    padding: 30px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
   }
-
+  .sidebar-empty .empty-icon svg {
+    width: 18px; height: 18px;
+    color: var(--cds-icon-secondary);
+  }
   .sidebar-empty p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-secondary);
+  }
+  .sidebar-empty .empty-hint {
+    font-family: var(--font-mono);
     font-size: 11px;
-    line-height: 1.5;
-    color: #8d8d8d;
-  }
-
-  .sb-product-name {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 4px;
-  }
-
-  .sb-category {
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #6f6f6f;
-    padding-bottom: 14px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid #1e3660;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-helper);
+    margin-top: 4px;
+  }
+
+  /* Sidebar — product detail */
+  .sb-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 12px;
+  }
+  .sb-product-name {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: var(--cds-text-primary);
+    margin-bottom: 6px;
+  }
+  .sb-category {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--cds-text-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
   }
 
   .sb-section-label {
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
     text-transform: uppercase;
-    color: #525252;
-    margin-bottom: 8px;
-    margin-top: 16px;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 10px;
+    margin-top: 20px;
   }
-
   .sb-section-label:first-of-type { margin-top: 0; }
 
   .play-pill {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 8px;
-    border-radius: 2px;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    margin: 0 4px 5px 0;
-    border: 1px solid;
+    gap: 6px;
+    padding: 4px 8px 4px 6px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cds-text-primary);
+    margin: 0 4px 4px 0;
+  }
+  .play-pill .dot {
+    width: 8px; height: 8px;
+    background: var(--play-color);
   }
 
-  .play-pill .dot { width: 5px; height: 5px; border-radius: 50%; }
-
+  .conn-list {
+    display: flex;
+    flex-direction: column;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
+  }
   .conn-row {
     display: flex;
     align-items: center;
-    gap: 9px;
-    padding: 7px 0;
-    border-bottom: 1px solid #122040;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--cds-background);
+    border: none;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
     cursor: pointer;
-    transition: background 0.12s;
-    border-radius: 2px;
+    text-align: left;
+    transition: background-color 0.11s;
+    width: 100%;
+    font-family: var(--font-sans);
+    color: var(--cds-text-primary);
   }
-
-  .conn-row:hover { background: #122040; margin: 0 -16px; padding: 7px 16px; }
+  .conn-row:last-child { border-bottom: none; }
+  .conn-row:hover { background: var(--cds-background-hover); }
+  .conn-row:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
 
   .conn-accent {
-    width: 3px;
+    width: 4px;
     height: 28px;
-    border-radius: 2px;
+    background: var(--accent-color, var(--cds-text-secondary));
     flex-shrink: 0;
   }
-
   .conn-info { flex: 1; min-width: 0; }
-
   .conn-name {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 1.3;
-    color: #d4d4d4;
+    color: var(--cds-text-primary);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
   .conn-play {
-    font-size: 9px;
-    color: #6f6f6f;
-    margin-top: 1px;
-    letter-spacing: 0.02em;
-  }
-
-  .conn-arrow {
-    font-size: 10px;
-    color: #1e3660;
-    flex-shrink: 0;
-  }
-
-  #reset-btn {
-    display: none;
-    width: calc(100% - 32px);
-    margin: 12px 16px 0;
-    padding: 9px;
-    background: transparent;
-    border: 1px solid #1e3660;
-    color: #8d8d8d;
-    font-family: inherit;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.3;
     text-transform: uppercase;
-    transition: background 0.15s, color 0.15s;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-top: 2px;
   }
-
-  #reset-btn:hover { background: #1e3660; color: #f4f4f4; }
+  .conn-arrow {
+    font-size: 16px;
+    color: var(--cds-icon-secondary);
+    flex-shrink: 0;
+    font-weight: 300;
+  }
 
   /* ─── Footer ─── */
   #footer {
-    border-top: 1px solid #122040;
-    background: #0b1a2e;
-    padding: 7px 20px;
+    border-top: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-background);
+    padding: 0 16px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
   }
-
-  .footer-text { font-size: 9.5px; color: #8d8d8d; letter-spacing: 0.04em; }
-  .footer-hint { font-size: 9.5px; color: #8d8d8d; letter-spacing: 0.02em; }
+  #footer .footer-stats { display: inline-flex; gap: 16px; }
+  #footer .footer-stat strong {
+    color: var(--cds-text-primary);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  #footer .footer-hint { color: var(--cds-text-helper); }
 
   /* SVG path animation */
   @keyframes drawPath {
     from { stroke-dashoffset: 1000; }
-    to { stroke-dashoffset: 0; }
+    to   { stroke-dashoffset: 0; }
   }
+  .path-active { animation: drawPath 0.4s ease forwards; }
 
-  .path-active {
-    animation: drawPath 0.4s ease forwards;
+  /* ─── Tweaks panel ─── */
+  #tweaks-panel {
+    position: fixed;
+    right: 24px;
+    bottom: 56px;
+    width: 280px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+    z-index: 1000;
+    font-family: var(--font-sans);
+    color: var(--cds-text-primary);
+    display: none;
+  }
+  #tweaks-panel.is-open { display: block; }
+  .tweaks-header {
+    height: 40px;
+    background: #161616;
+    color: #ffffff;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tweaks-header h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .tweaks-close {
+    background: transparent;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tweaks-close:hover { background: #353535; color: #fff; }
+  .tweaks-body { padding: 16px; }
+  .tweak-row { margin-bottom: 16px; }
+  .tweak-row:last-child { margin-bottom: 0; }
+  .tweak-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 8px;
+  }
+  .tweak-seg {
+    display: flex;
+    border: 1px solid var(--cds-border-strong-01);
+    background: var(--cds-field-01);
+  }
+  .tweak-seg button {
+    flex: 1;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--cds-border-strong-01);
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.11s;
+  }
+  .tweak-seg button:last-child { border-right: none; }
+  .tweak-seg button:hover { background: var(--cds-background-hover); }
+  .tweak-seg button.is-active {
+    background: #161616;
+    color: #ffffff;
+  }
+  [data-theme="dark"] .tweak-seg button.is-active {
+    background: #f4f4f4;
+    color: #161616;
   }
 </style>
 </head>
 <body>
-<div id="app">
+<div id="app" data-theme="light" data-node-style="tag" data-conn-style="curved">
 
-  <div id="header">
-    <div class="header-title">
-      <h1>IBM Software & Infrastructure Cross-Sell Map</h1>
-      <p>Arrow ECS UK · Click any product to explore its connections</p>
+  <!-- ── Carbon UI Shell ── -->
+  <header class="cds-shell">
+    <div class="cds-shell__bar1">
+      <div class="cds-shell__brand">
+        <span class="cds-shell__wordmark">Arrow ECS UK</span>
+        <span class="cds-shell__divider"></span>
+        <span class="cds-shell__product">IBM Product Synergies Map</span>
+      </div>
+      <div class="cds-shell__meta">
+        <span class="cds-shell__meta-text"><strong>2026</strong></span>
+        <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme">
+          <span id="themeText" class="visually-hidden">Toggle theme</span>
+          <span class="icon-glyph" aria-hidden="true">◐</span>
+        </button>
+      </div>
     </div>
-    <div id="play-legend"></div>
-  </div>
+    <div class="cds-shell__bar2">
+      <nav id="play-legend" aria-label="Play filter"></nav>
+    </div>
+  </header>
 
-  <div id="main">
-    <div id="map-area">
-      <svg id="svg-connections" xmlns="http://www.w3.org/2000/svg">
+  <!-- ── Main content ── -->
+  <main id="main">
+    <section id="map-area" aria-label="Cross-sell map">
+      <svg id="svg-connections" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs id="svg-defs"></defs>
       </svg>
-    </div>
+    </section>
 
-    <div id="sidebar">
-      <button id="reset-btn">↩ Show all products</button>
+    <aside id="sidebar" aria-label="Product detail">
+      <div id="sidebar-header">
+        <span class="sidebar-title">Detail</span>
+        <button id="reset-btn" type="button">Clear selection</button>
+      </div>
       <div id="sidebar-inner">
-        <div class="sidebar-empty">
-          <p style="color: #8d8d8d; font-size: 11px;">Loading...</p>
+        <div class="sidebar-empty"><p>Loading…</p></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer id="footer">
+    <div class="footer-stats">
+      <span class="footer-stat"><strong>6</strong>Plays</span>
+      <span class="footer-stat"><strong>34</strong>Products</span>
+      <span class="footer-stat"><strong>Arrow ECS UK</strong></span>
+    </div>
+    <span class="footer-hint">Click a node to highlight connections · Click again to deselect</span>
+  </footer>
+
+  <!-- ── Tweaks panel ── -->
+  <div id="tweaks-panel" role="dialog" aria-label="Tweaks">
+    <div class="tweaks-header">
+      <h3>Tweaks</h3>
+      <button class="tweaks-close" id="tweaks-close" aria-label="Close">×</button>
+    </div>
+    <div class="tweaks-body">
+      <div class="tweak-row">
+        <span class="tweak-label">Theme</span>
+        <div class="tweak-seg" data-tweak="theme">
+          <button data-value="light">Light</button>
+          <button data-value="dark">Dark</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Node style</span>
+        <div class="tweak-seg" data-tweak="nodeStyle">
+          <button data-value="tag">Tag</button>
+          <button data-value="chip">Chip</button>
+          <button data-value="dot">Dot</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Connections</span>
+        <div class="tweak-seg" data-tweak="connStyle">
+          <button data-value="curved">Curved</button>
+          <button data-value="ortho">Orthogonal</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Lane fill</span>
+        <div class="tweak-seg" data-tweak="laneFill">
+          <button data-value="zebra">Zebra</button>
+          <button data-value="flat">Flat</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="footer">
-    <span class="footer-text">6 Strategic Plays · 34 Products · Arrow ECS UK</span>
-    <span class="footer-hint">Click a product · Click again to deselect · Connections shown by play colour</span>
-  </div>
-
 </div>
 
 <script>
-// ═══════════════════════════════════════════
-// CONFIGURATION
-// ═══════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
+   Tweaks (defaults persisted via host)
+   ════════════════════════════════════════════════════════ */
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "dark",
+  "nodeStyle": "tag",
+  "connStyle": "curved",
+  "laneFill": "zebra"
+}/*EDITMODE-END*/;
 
-const CONFIG = {
-  LAYOUT: {
-    LANE_MARGIN_LEFT: 90,
-    LANE_MARGIN_RIGHT: 14,
-    LANE_MARGIN_TOP: 78,
-    LANE_MARGIN_BOTTOM: 10
-  },
-  ANIMATION: {
-    RESIZE_DEBOUNCE_MS: 80,
-    PATH_DRAW_DURATION: 0.4
-  },
-  CURVES: {
-    ARC_HEIGHT_FACTOR: 0.14,
-    BEND_START_FACTOR: 0.25,
-    BEND_END_FACTOR: 0.75
-  },
-  SAME_ROW_THRESHOLD: 5
-};
+let tweakState = { ...TWEAK_DEFAULTS };
 
-const EMPTY_STATE_SVG = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="18" cy="18" r="16" stroke="#8d8d8d" stroke-width="1.5"/>
-  <circle cx="10" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-  <circle cx="26" cy="14" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-  <circle cx="18" cy="26" r="3" stroke="#8d8d8d" stroke-width="1.2"/>
-  <line x1="13" y1="14" x2="23" y2="14" stroke="#8d8d8d" stroke-width="1.2"/>
-  <line x1="11.5" y1="16.5" x2="16.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-  <line x1="24.5" y1="16.5" x2="19.5" y2="23.5" stroke="#8d8d8d" stroke-width="1.2"/>
-</svg>`;
-
-// ═══════════════════════════════════════════
-// DATA
-// ═══════════════════════════════════════════
-
+/* ════════════════════════════════════════════════════════
+   Data
+   ════════════════════════════════════════════════════════ */
 const PLAYS = {
-  1: { id: 1, name: 'Automation & Integration',            short: 'Automation',       color: '#4589ff' },
-  2: { id: 2, name: 'Data & AI Platform',                  short: 'AI & Data',        color: '#42be65' },
-  3: { id: 3, name: 'Observability & FinOps',              short: 'Cloud Ops',        color: '#a56eff' },
-  4: { id: 4, name: 'Security & Governance',               short: 'Security',         color: '#ff832b' },
-  5: { id: 5, name: 'Infrastructure & Systems',            short: 'Infrastructure',   color: '#08bdba' },
-  6: { id: 6, name: 'Storage Solutions',                   short: 'Storage',          color: '#fa4d56' },
+  1: { id:1, name:'Automation & Integration', short:'Automation',     varName:'--play-1' },
+  2: { id:2, name:'Data & AI Platform',       short:'Data & AI',      varName:'--play-2' },
+  3: { id:3, name:'Observability & FinOps',   short:'Observability',  varName:'--play-3' },
+  4: { id:4, name:'Security & Governance',    short:'Security',       varName:'--play-4' },
+  5: { id:5, name:'Infrastructure & Systems', short:'Infrastructure', varName:'--play-5' },
+  6: { id:6, name:'Storage Solutions',        short:'Storage',        varName:'--play-6' },
 };
+const playColor = (id) => getComputedStyle(document.documentElement).getPropertyValue(PLAYS[id].varName).trim();
 
 const CATEGORIES = [
-  { id: 'automation',    label: 'Automation & Integration' },
-  { id: 'observability', label: 'Observability & FinOps' },
-  { id: 'security',      label: 'Security & Governance' },
-  { id: 'data_ai',       label: 'Data & AI Platform' },
-  { id: 'infrastructure',label: 'Infrastructure & Systems' },
-  { id: 'storage',       label: 'Storage Solutions' },
+  { id: 'automation',     label: 'Automation & Integration', playId: 1 },
+  { id: 'observability',  label: 'Observability & FinOps',   playId: 3 },
+  { id: 'security',       label: 'Security & Governance',    playId: 4 },
+  { id: 'data_ai',        label: 'Data & AI Platform',       playId: 2 },
+  { id: 'infrastructure', label: 'Infrastructure & Systems', playId: 5 },
+  { id: 'storage',        label: 'Storage Solutions',        playId: 6 },
 ];
 
 const PRODUCTS = [
-  // ── Automation & Integration ───────────────────────────────
-  { id: 'api_connect',     label: 'API Connect',                    cat: 'automation',     plays: [1] },
-  { id: 'event_auto',      label: 'Event Automation',               cat: 'automation',     plays: [1] },
-  { id: 'webmethods',      label: 'webMethods',                     cat: 'automation',     plays: [1] },
-  { id: 'terraform',       label: 'Terraform',                      cat: 'automation',     plays: [1] },
-  { id: 'concert',         label: 'Concert',                        cat: 'automation',     plays: [1] },
-  { id: 'maximo',          label: 'Maximo',                         cat: 'automation',     plays: [1] },
+  { id:'api_connect',     label:'API Connect',               cat:'automation',     plays:[1] },
+  { id:'event_auto',      label:'Event Automation',          cat:'automation',     plays:[1] },
+  { id:'webmethods',      label:'webMethods',                cat:'automation',     plays:[1] },
+  { id:'terraform',       label:'Terraform',                 cat:'automation',     plays:[1] },
+  { id:'concert',         label:'Concert',                   cat:'automation',     plays:[1] },
+  { id:'maximo',          label:'Maximo',                    cat:'automation',     plays:[1] },
 
-  // ── Observability & FinOps ─────────────────────────────────
-  { id: 'instana',         label: 'Instana',                        cat: 'observability',  plays: [3] },
-  { id: 'sevone',          label: 'SevOne',                         cat: 'observability',  plays: [3] },
-  { id: 'turbonomic',      label: 'Turbonomic',                     cat: 'observability',  plays: [3] },
-  { id: 'apptio',          label: 'Apptio',                         cat: 'observability',  plays: [3] },
-  { id: 'cloudability',    label: 'Apptio Cloudability',            cat: 'observability',  plays: [3] },
+  { id:'instana',         label:'Instana',                   cat:'observability',  plays:[3] },
+  { id:'sevone',          label:'SevOne',                    cat:'observability',  plays:[3] },
+  { id:'turbonomic',      label:'Turbonomic',                cat:'observability',  plays:[3] },
+  { id:'apptio',          label:'Apptio',                    cat:'observability',  plays:[3] },
+  { id:'cloudability',    label:'Apptio Cloudability',       cat:'observability',  plays:[3] },
 
-  // ── Security & Governance ──────────────────────────────────
-  { id: 'guardium',        label: 'Guardium',                       cat: 'security',       plays: [4] },
-  { id: 'verify',          label: 'Verify',                         cat: 'security',       plays: [4] },
-  { id: 'vault',           label: 'Vault',                          cat: 'security',       plays: [4] },
+  { id:'guardium',        label:'Guardium',                  cat:'security',       plays:[4] },
+  { id:'verify',          label:'Verify',                    cat:'security',       plays:[4] },
+  { id:'vault',           label:'Vault',                     cat:'security',       plays:[4] },
 
-  // ── Data & AI Platform ─────────────────────────────────────
-  { id: 'wxai',            label: 'watsonx.ai',                     cat: 'data_ai',        plays: [2] },
-  { id: 'wxdata',          label: 'watsonx.data',                   cat: 'data_ai',        plays: [2] },
-  { id: 'wxdi',            label: 'watsonx.data intelligence',      cat: 'data_ai',        plays: [2] },
-  { id: 'wxdint',          label: 'watsonx.data integration',       cat: 'data_ai',        plays: [2] },
-  { id: 'wxgov',           label: 'watsonx.governance',             cat: 'data_ai',        plays: [2] },
-  { id: 'wxorch',          label: 'watsonx Orchestrate',            cat: 'data_ai',        plays: [2] },
-  { id: 'wca_ansible',     label: 'IBM Bob',                        cat: 'data_ai',        plays: [2] },
+  { id:'wxai',            label:'watsonx.ai',                cat:'data_ai',        plays:[2] },
+  { id:'wxdata',          label:'watsonx.data',              cat:'data_ai',        plays:[2] },
+  { id:'wxdi',            label:'watsonx.data intelligence', cat:'data_ai',        plays:[2] },
+  { id:'wxdint',          label:'watsonx.data integration',  cat:'data_ai',        plays:[2] },
+  { id:'wxgov',           label:'watsonx.governance',        cat:'data_ai',        plays:[2] },
+  { id:'wxorch',          label:'watsonx Orchestrate',       cat:'data_ai',        plays:[2] },
+  { id:'wca_ansible',     label:'IBM Bob',                   cat:'data_ai',        plays:[2] },
 
-  // ── Infrastructure & Systems ───────────────────────────────
-  { id: 'linuxone',        label: 'LinuxONE',                       cat: 'infrastructure', plays: [5] },
-  { id: 'power',           label: 'Power Systems',                  cat: 'infrastructure', plays: [5] },
-  { id: 'aix',             label: 'AIX',                            cat: 'infrastructure', plays: [5] },
-  { id: 'ibmi',            label: 'IBM i',                          cat: 'infrastructure', plays: [5] },
-  { id: 'linux_power',     label: 'Linux on Power',                 cat: 'infrastructure', plays: [5] },
+  { id:'linuxone',        label:'LinuxONE',                  cat:'infrastructure', plays:[5] },
+  { id:'power',           label:'Power Systems',             cat:'infrastructure', plays:[5] },
+  { id:'aix',             label:'AIX',                       cat:'infrastructure', plays:[5] },
+  { id:'ibmi',            label:'IBM i',                     cat:'infrastructure', plays:[5] },
+  { id:'linux_power',     label:'Linux on Power',            cat:'infrastructure', plays:[5] },
 
-  // ── Storage Solutions ──────────────────────────────────────
-  { id: 'flashsystem',     label: 'FlashSystem',                    cat: 'storage',        plays: [6] },
-  { id: 'storage_control', label: 'Storage Control',                cat: 'storage',        plays: [6] },
-  { id: 'storage_insights',label: 'Storage Insights',               cat: 'storage',        plays: [6] },
-  { id: 'storage_virt',    label: 'Storage Virtualize',             cat: 'storage',        plays: [6] },
-  { id: 'storage_fusion',  label: 'Storage Fusion',                 cat: 'storage',        plays: [6] },
-  { id: 'storage_ceph',    label: 'Storage Ceph',                   cat: 'storage',        plays: [6] },
-  { id: 'storage_scale',   label: 'Storage Scale',                  cat: 'storage',        plays: [6] },
+  { id:'flashsystem',     label:'FlashSystem',               cat:'storage',        plays:[6] },
+  { id:'storage_control', label:'Storage Control',           cat:'storage',        plays:[6] },
+  { id:'storage_insights',label:'Storage Insights',          cat:'storage',        plays:[6] },
+  { id:'storage_virt',    label:'Storage Virtualize',        cat:'storage',        plays:[6] },
+  { id:'storage_fusion',  label:'Storage Fusion',            cat:'storage',        plays:[6] },
+  { id:'storage_ceph',    label:'Storage Ceph',              cat:'storage',        plays:[6] },
+  { id:'storage_scale',   label:'Storage Scale',             cat:'storage',        plays:[6] },
 ];
 
-// [from, to, play]  — bidirectional
 const CONNECTIONS = [
-  // Play 1 – Automation & Integration
-  ['concert',      'api_connect',   1],
-  ['concert',      'event_auto',    1],
-  ['concert',      'webmethods',    1],
-  ['concert',      'terraform',     1],
-  ['api_connect',  'event_auto',    1],
-  ['webmethods',   'api_connect',   1],
+  ['concert','api_connect',1],['concert','event_auto',1],['concert','webmethods',1],
+  ['concert','terraform',1],['api_connect','event_auto',1],['webmethods','api_connect',1],
 
-  // Play 2 – AI & Data Intelligence
-  ['wxdata',       'wxai',          2],
-  ['wxdata',       'wxdi',          2],
-  ['wxdata',       'wxdint',        2],
-  ['wxdata',       'wxgov',         2],
-  ['wxai',         'wxorch',        2],
-  ['wxai',         'wxgov',         2],
-  ['wxai',         'wca_ansible',   2],
-  ['wca_ansible',  'wxorch',        2],
-  ['wca_ansible',  'wxgov',         2],
-  ['wxai',         'instana',       2],
-  ['wxgov',        'concert',       2],
-  ['wxgov',        'guardium',      2],
-  ['wxorch',       'api_connect',   2],
-  ['wxorch',       'webmethods',    2],
+  ['wxdata','wxai',2],['wxdata','wxdi',2],['wxdata','wxdint',2],['wxdata','wxgov',2],
+  ['wxai','wxorch',2],['wxai','wxgov',2],['wxai','wca_ansible',2],
+  ['wca_ansible','wxorch',2],['wca_ansible','wxgov',2],
+  ['wxai','instana',2],['wxgov','concert',2],['wxgov','guardium',2],
+  ['wxorch','api_connect',2],['wxorch','webmethods',2],
 
-  // Play 3 – Observability & FinOps
-  ['concert',      'instana',       3],
-  ['concert',      'turbonomic',    3],
-  ['concert',      'apptio',        3],
-  ['instana',      'sevone',        3],
-  ['instana',      'turbonomic',    3],
-  ['turbonomic',   'terraform',     3],
-  ['turbonomic',   'cloudability',  3],
-  ['apptio',       'cloudability',  3],
+  ['concert','instana',3],['concert','turbonomic',3],['concert','apptio',3],
+  ['instana','sevone',3],['instana','turbonomic',3],
+  ['turbonomic','terraform',3],['turbonomic','cloudability',3],['apptio','cloudability',3],
 
-  // Play 4 – Security & Governance
-  ['vault',        'verify',        4],
-  ['vault',        'guardium',      4],
-  ['wxgov',        'guardium',      4],
+  ['vault','verify',4],['vault','guardium',4],['wxgov','guardium',4],
 
-  // Play 5 – Infrastructure & Systems
-  ['power',        'aix',           5],
-  ['power',        'ibmi',          5],
-  ['power',        'linux_power',   5],
-  ['linuxone',     'wxai',          5],
+  ['power','aix',5],['power','ibmi',5],['power','linux_power',5],['linuxone','wxai',5],
 
-  // Maximo connections (now in Automation)
-  ['maximo',       'event_auto',    1],
-  ['maximo',       'api_connect',   1],
-  ['maximo',       'turbonomic',    3],
-  ['maximo',       'wxai',          2],
+  ['maximo','event_auto',1],['maximo','api_connect',1],
+  ['maximo','turbonomic',3],['maximo','wxai',2],
 
-  // Play 6 – Storage Solutions
-  ['power',        'flashsystem',   6],
-  ['flashsystem',  'storage_control',6],
-  ['flashsystem',  'storage_virt',  6],
-  ['storage_fusion','storage_scale',6],
-  ['linuxone',     'storage_scale', 6],
-  ['linuxone',     'storage_ceph',  6],
-  ['wxdata',       'storage_scale', 6],
-  ['wxdata',       'storage_ceph',  6],
+  ['power','flashsystem',6],['flashsystem','storage_control',6],['flashsystem','storage_virt',6],
+  ['storage_fusion','storage_scale',6],['linuxone','storage_scale',6],
+  ['linuxone','storage_ceph',6],['wxdata','storage_scale',6],['wxdata','storage_ceph',6],
 ];
 
-// ═══════════════════════════════════════════
-// STATE & LOOKUP
-// ═══════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
+   Layout config
+   ════════════════════════════════════════════════════════ */
+const CONFIG = {
+  LAYOUT: { LEFT: 200, RIGHT: 24, TOP: 24, BOTTOM: 24 },
+  CURVES: { ARC_FACTOR: 0.14, BEND_START: 0.25, BEND_END: 0.75 },
+  SAME_ROW_THRESHOLD: 5,
+};
 
+/* ════════════════════════════════════════════════════════
+   State & lookup
+   ════════════════════════════════════════════════════════ */
 const productMap = {};
 PRODUCTS.forEach(p => { productMap[p.id] = p; });
 
@@ -552,199 +930,226 @@ CONNECTIONS.forEach(([from, to, play]) => {
   adjacency[to].push({ to: from, play });
 });
 
-// Validate connections reference valid products and plays
-CONNECTIONS.forEach(([from, to, play], idx) => {
-  if (!productMap[from]) {
-    console.error(`[Synergies Map] Invalid connection #${idx}: product "${from}" not found`);
-  }
-  if (!productMap[to]) {
-    console.error(`[Synergies Map] Invalid connection #${idx}: product "${to}" not found`);
-  }
-  if (!PLAYS[play]) {
-    console.error(`[Synergies Map] Invalid connection #${idx}: play ${play} not found`);
-  }
-});
-
 let selectedId = null;
+let activePlayFilter = null;
 const nodeEls = {};
 
-// ═══════════════════════════════════════════
-// BUILD LEGEND
-// ═══════════════════════════════════════════
-
+/* ════════════════════════════════════════════════════════
+   Build legend
+   ════════════════════════════════════════════════════════ */
 const legendEl = document.getElementById('play-legend');
-if (!legendEl) {
-  console.error('[Synergies Map] Legend element not found');
-} else {
-  Object.values(PLAYS).forEach(play => {
-    const chip = document.createElement('div');
-    chip.className = 'legend-chip';
-    chip.style.borderColor = play.color + '55';
-    chip.style.color = play.color;
-    chip.innerHTML = `<div class="dot" style="background:${play.color}"></div>${play.short}`;
-    chip.title = play.name;
-    legendEl.appendChild(chip);
+Object.values(PLAYS).forEach(play => {
+  const chip = document.createElement('button');
+  chip.type = 'button';
+  chip.className = 'legend-chip';
+  chip.dataset.play = play.id;
+  chip.dataset.playColor = play.varName;
+  chip.style.setProperty('--legend-color', `var(${play.varName})`);
+  chip.innerHTML = `<span class="dot" style="background: var(${play.varName})"></span>${play.short}`;
+  chip.title = play.name;
+  chip.addEventListener('click', () => togglePlayFilter(play.id));
+  legendEl.appendChild(chip);
+});
+
+function togglePlayFilter(playId) {
+  activePlayFilter = (activePlayFilter === playId) ? null : playId;
+  document.querySelectorAll('.legend-chip').forEach(c => {
+    c.classList.toggle('is-active', Number(c.dataset.play) === activePlayFilter);
+  });
+  // Reset any selected node and redraw with filter
+  if (selectedId) resetSelection(false);
+  applyPlayFilter();
+  drawConnections();
+}
+
+function applyPlayFilter() {
+  if (!activePlayFilter) {
+    Object.values(nodeEls).forEach(el => el.classList.remove('dimmed', 'highlighted'));
+    return;
+  }
+  // Highlight products that participate in connections of this play (via any of their connections)
+  const involved = new Set();
+  CONNECTIONS.forEach(([a, b, p]) => {
+    if (p === activePlayFilter) { involved.add(a); involved.add(b); }
+  });
+  Object.entries(nodeEls).forEach(([id, el]) => {
+    if (involved.has(id)) el.classList.add('highlighted');
+    else el.classList.add('dimmed');
+    el.classList.remove('selected');
   });
 }
 
-// ═══════════════════════════════════════════
-// BUILD NODES
-// ═══════════════════════════════════════════
-
+/* ════════════════════════════════════════════════════════
+   Build nodes
+   ════════════════════════════════════════════════════════ */
 const mapArea = document.getElementById('map-area');
 const svgEl = document.getElementById('svg-connections');
 
-if (!mapArea || !svgEl) {
-  console.error('[Synergies Map] Required DOM elements not found');
-  throw new Error('Map initialization failed: missing required elements');
-}
-
 PRODUCTS.forEach(p => {
-  const node = document.createElement('div');
+  const node = document.createElement('button');
+  node.type = 'button';
   node.className = 'pnode';
   node.dataset.id = p.id;
   node.textContent = p.label;
-
   const primaryPlay = PLAYS[p.plays[0]];
-  node.style.borderColor = primaryPlay.color + 'aa';
-  node.style.color = primaryPlay.color;
-
+  node.style.setProperty('--node-color', `var(${primaryPlay.varName})`);
   node.addEventListener('click', () => handleClick(p.id));
   mapArea.appendChild(node);
   nodeEls[p.id] = node;
 });
 
-// ═══════════════════════════════════════════
-// LAYOUT
-// ═══════════════════════════════════════════
-
+/* ════════════════════════════════════════════════════════
+   Layout
+   ════════════════════════════════════════════════════════ */
 function computeLayout() {
   const rect = mapArea.getBoundingClientRect();
   const W = rect.width;
   const H = rect.height;
+  const { LEFT, RIGHT, TOP, BOTTOM } = CONFIG.LAYOUT;
 
-  const { LANE_MARGIN_LEFT, LANE_MARGIN_RIGHT, LANE_MARGIN_TOP, LANE_MARGIN_BOTTOM } = CONFIG.LAYOUT;
-
-  const usableW = W - LANE_MARGIN_LEFT - LANE_MARGIN_RIGHT;
-  const usableH = H - LANE_MARGIN_TOP - LANE_MARGIN_BOTTOM;
+  const usableW = W - LEFT - RIGHT;
+  const usableH = H - TOP - BOTTOM;
   const catCount = CATEGORIES.length;
   const laneH = usableH / catCount;
 
-  // Remove old lane overlays
-  mapArea.querySelectorAll('.lane-strip, .lane-label').forEach(el => el.remove());
+  // Clear lane overlays
+  mapArea.querySelectorAll('.lane-strip, .lane-label, .lane-divider').forEach(el => el.remove());
 
   CATEGORIES.forEach((cat, catIdx) => {
-    const yTop = LANE_MARGIN_TOP + catIdx * laneH;
+    const yTop = TOP + catIdx * laneH;
     const yCen = yTop + laneH / 2;
 
-    // Subtle alternating background
-    if (catIdx % 2 === 0) {
+    if (tweakState.laneFill === 'zebra' && catIdx % 2 === 1) {
       const strip = document.createElement('div');
       strip.className = 'lane-strip';
       strip.style.top = yTop + 'px';
       strip.style.height = laneH + 'px';
-      strip.style.background = 'rgba(255,255,255,0.012)';
       mapArea.insertBefore(strip, svgEl);
     }
 
-    // Lane label
+    if (catIdx > 0) {
+      const div = document.createElement('div');
+      div.className = 'lane-divider';
+      div.style.top = yTop + 'px';
+      mapArea.insertBefore(div, svgEl);
+    }
+
     const label = document.createElement('div');
     label.className = 'lane-label';
-    label.textContent = cat.label;
+    label.style.setProperty('--lane-color', `var(${PLAYS[cat.playId].varName})`);
     label.style.top = yCen + 'px';
-    label.style.left = '10px';
+    label.innerHTML = `<span class="lane-dot"></span>${cat.label}`;
     mapArea.appendChild(label);
   });
 
-  // Group products by category and calculate equal spacing
+  // Position products
   CATEGORIES.forEach((cat, catIdx) => {
     const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
     if (productsInCat.length === 0) return;
 
-    const yTop = LANE_MARGIN_TOP + catIdx * laneH;
+    const yTop = TOP + catIdx * laneH;
     const yCen = yTop + laneH / 2;
 
-    // Measure actual widths of product nodes
-    const widths = productsInCat.map(p => {
-      const el = nodeEls[p.id];
-      return el.offsetWidth || 0;
-    });
-
-    // Calculate total width of all products
+    const widths = productsInCat.map(p => nodeEls[p.id].offsetWidth || 0);
     const totalProductWidth = widths.reduce((sum, w) => sum + w, 0);
-    
-    // Calculate available space for gaps
     const availableSpace = usableW - totalProductWidth;
-    
-    // Calculate equal gap size (n products = n+1 gaps for edge spacing)
     const gapSize = availableSpace / (productsInCat.length + 1);
 
-    // Position products with equal gaps
-    let currentX = LANE_MARGIN_LEFT + gapSize;
-    
+    let currentX = LEFT + gapSize;
     productsInCat.forEach((p, idx) => {
       const width = widths[idx];
-      const x = currentX + width / 2; // Center of the product node
+      const x = currentX + width / 2;
       const y = yCen;
-
-      p._px = x;
-      p._py = y;
-
+      p._px = x; p._py = y;
       const el = nodeEls[p.id];
       el.style.left = x + 'px';
       el.style.top = y + 'px';
-
-      // Move to next position
       currentX += width + gapSize;
     });
   });
 }
 
-// ═══════════════════════════════════════════
-// DRAW CONNECTIONS
-// ═══════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
+   Connection color rule
+   - Same lane: that lane's play color
+   - Cross-lane: lower-on-screen (larger index) lane's color
+   ════════════════════════════════════════════════════════ */
+const catIndexById = {};
+CATEGORIES.forEach((c, i) => { catIndexById[c.id] = i; });
 
+function connectionPlayId(fromId, toId) {
+  const fromIdx = catIndexById[productMap[fromId].cat];
+  const toIdx   = catIndexById[productMap[toId].cat];
+  const lowerIdx = Math.max(fromIdx, toIdx); // larger idx == lower on screen
+  return CATEGORIES[lowerIdx].playId;
+}
+
+/* Build unique edge list (deduped by from↔to pair). Each edge tracks
+   the set of strategic plays it appears in, used for filtering. */
+const uniqueEdges = (() => {
+  const map = new Map();
+  CONNECTIONS.forEach(([from, to, play]) => {
+    const [a, b] = [from, to].sort();
+    const key = `${a}|${b}`;
+    if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set() });
+    map.get(key).plays.add(play);
+  });
+  return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays] }));
+})();
+
+/* ════════════════════════════════════════════════════════
+   Draw connections
+   ════════════════════════════════════════════════════════ */
 function drawConnections(activeId = null) {
   svgEl.innerHTML = '<defs id="svg-defs"></defs>';
 
-  const drawn = new Set();
-
-  // Sort: inactive first (so active ones render on top)
-  const sortedConns = [...CONNECTIONS].sort(([a,b,pa], [c,d,pd]) => {
+  // Sort so active edges render last (on top)
+  const sorted = [...uniqueEdges].sort((e1, e2) => {
     if (!activeId) return 0;
-    const aActive = a === activeId || b === activeId;
-    const bActive = c === activeId || d === activeId;
-    return aActive - bActive;
+    const a = (e1.from === activeId || e1.to === activeId) ? 1 : 0;
+    const b = (e2.from === activeId || e2.to === activeId) ? 1 : 0;
+    return a - b;
   });
 
-  sortedConns.forEach(([from, to, play]) => {
-    const key = [from, to].sort().join('|');
-    if (drawn.has(key)) return;
-    drawn.add(key);
-
+  sorted.forEach(edge => {
+    const { from, to, plays } = edge;
     const p1 = productMap[from];
     const p2 = productMap[to];
     if (!p1._px || !p2._px) return;
 
     const x1 = p1._px, y1 = p1._py;
     const x2 = p2._px, y2 = p2._py;
-    const color = PLAYS[play].color;
 
-    const isActive = !activeId || activeId === from || activeId === to;
+    // Line color is derived from lane positions, not strategic play
+    const colorPlayId = connectionPlayId(from, to);
+    const color = playColor(colorPlayId);
+
+    const isActive = activeId
+      ? (activeId === from || activeId === to)
+      : (activePlayFilter ? plays.includes(activePlayFilter) : true);
+    const isFiltered = activePlayFilter && !plays.includes(activePlayFilter);
 
     let d;
     const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
-    if (sameRow) {
-      // Horizontal arc above the row
-      const mx = (x1 + x2) / 2;
-      const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_HEIGHT_FACTOR;
-      d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+
+    if (tweakState.connStyle === 'ortho') {
+      if (sameRow) {
+        const arcH = Math.abs(x2 - x1) * 0.18 + 12;
+        d = `M ${x1} ${y1} L ${x1} ${y1 - arcH} L ${x2} ${y2 - arcH} L ${x2} ${y2}`;
+      } else {
+        const my = (y1 + y2) / 2;
+        d = `M ${x1} ${y1} L ${x1} ${my} L ${x2} ${my} L ${x2} ${y2}`;
+      }
     } else {
-      // S-curve between rows
-      const my = (y1 + y2) / 2;
-      const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START_FACTOR;
-      const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END_FACTOR;
-      d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+      if (sameRow) {
+        const mx = (x1 + x2) / 2;
+        const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_FACTOR;
+        d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+      } else {
+        const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START;
+        const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END;
+        d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+      }
     }
 
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -753,100 +1158,98 @@ function drawConnections(activeId = null) {
     path.setAttribute('stroke-linecap', 'round');
     path.setAttribute('stroke-linejoin', 'round');
 
-    if (!activeId) {
-      // Default state – subtle
+    if (!activeId && !activePlayFilter) {
       path.setAttribute('stroke', color);
-      path.setAttribute('stroke-width', '1.4');
-      path.setAttribute('opacity', '0.28');
-    } else if (isActive) {
-      // Highlighted
-      const pathLength = path.getTotalLength();
+      path.setAttribute('stroke-width', '1');
+      path.setAttribute('opacity', '0.35');
+    } else if (isActive && !isFiltered) {
+      const pathLength = path.getTotalLength?.() || 1000;
       path.setAttribute('stroke', color);
-      path.setAttribute('stroke-width', '2.4');
+      path.setAttribute('stroke-width', '2');
       path.setAttribute('opacity', '0.95');
       path.setAttribute('stroke-dasharray', pathLength);
       path.setAttribute('stroke-dashoffset', pathLength);
       path.classList.add('path-active');
-      // Force reflow to ensure animation starts
       path.getBoundingClientRect();
       path.setAttribute('stroke-dashoffset', '0');
     } else {
-      // Dimmed
       path.setAttribute('stroke', color);
       path.setAttribute('stroke-width', '1');
-      path.setAttribute('opacity', '0.04');
+      path.setAttribute('opacity', '0.05');
     }
 
     svgEl.appendChild(path);
   });
 }
 
-// ═══════════════════════════════════════════
-// INTERACTION
-// ═══════════════════════════════════════════
-
+/* ════════════════════════════════════════════════════════
+   Interaction
+   ════════════════════════════════════════════════════════ */
 function handleClick(id) {
-  // Validate product exists
-  if (!productMap[id]) {
-    console.warn(`[Synergies Map] Product "${id}" not found`);
-    return;
-  }
+  if (!productMap[id]) return;
 
   if (selectedId === id) {
-    resetView();
+    resetSelection();
     return;
   }
 
   selectedId = id;
+  // Clear any active play filter
+  if (activePlayFilter) {
+    activePlayFilter = null;
+    document.querySelectorAll('.legend-chip').forEach(c => c.classList.remove('is-active'));
+  }
+
   const product = productMap[id];
   const neighbors = new Set(adjacency[id].map(a => a.to));
   neighbors.add(id);
 
   Object.entries(nodeEls).forEach(([pid, el]) => {
     el.classList.remove('dimmed', 'highlighted', 'selected');
-    if (pid === id) {
-      el.classList.add('selected');
-    } else if (neighbors.has(pid)) {
-      el.classList.add('highlighted');
-    } else {
-      el.classList.add('dimmed');
-    }
+    if (pid === id) el.classList.add('selected');
+    else if (neighbors.has(pid)) el.classList.add('highlighted');
+    else el.classList.add('dimmed');
   });
 
   drawConnections(id);
   renderSidebar(product);
-  document.getElementById('reset-btn').style.display = 'block';
+  document.getElementById('reset-btn').style.display = 'inline-flex';
 }
 
-function resetView() {
+function resetSelection(redraw = true) {
   selectedId = null;
-  Object.values(nodeEls).forEach(el => {
-    el.classList.remove('dimmed', 'highlighted', 'selected');
-  });
-  drawConnections();
-  renderSidebarEmpty();
+  Object.values(nodeEls).forEach(el => el.classList.remove('dimmed', 'highlighted', 'selected'));
+  if (redraw) {
+    drawConnections();
+    renderSidebarEmpty();
+  }
   document.getElementById('reset-btn').style.display = 'none';
 }
 
-document.getElementById('reset-btn').addEventListener('click', resetView);
+document.getElementById('reset-btn').addEventListener('click', () => resetSelection());
 
-// Event delegation for connection row clicks
 document.getElementById('sidebar-inner').addEventListener('click', (e) => {
   const connRow = e.target.closest('.conn-row[data-target]');
-  if (connRow) {
-    handleClick(connRow.dataset.target);
-  }
+  if (connRow) handleClick(connRow.dataset.target);
 });
 
-// ═══════════════════════════════════════════
-// SIDEBAR RENDER
-// ═══════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
+   Sidebar render
+   ════════════════════════════════════════════════════════ */
+const EMPTY_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <circle cx="12" cy="12" r="9"/>
+  <circle cx="7" cy="9" r="1.6" fill="currentColor"/>
+  <circle cx="17" cy="9" r="1.6" fill="currentColor"/>
+  <circle cx="12" cy="17" r="1.6" fill="currentColor"/>
+  <path d="M8.5 9.5 L15.5 9.5 M8 10.5 L11 16 M16 10.5 L13 16"/>
+</svg>`;
 
 function renderSidebarEmpty() {
   document.getElementById('sidebar-inner').innerHTML = `
     <div class="sidebar-empty">
-      ${EMPTY_STATE_SVG}
-      <p>Select any product node to highlight its cross-sell connections</p>
+      <div class="empty-icon">${EMPTY_ICON}</div>
+      <p>Select a product to highlight its cross-sell connections across the six plays.</p>
+      <span class="empty-hint">No selection</span>
     </div>`;
 }
 
@@ -856,46 +1259,119 @@ function renderSidebar(product) {
 
   const playsHtml = product.plays.map(pId => {
     const play = PLAYS[pId];
-    return `<span class="play-pill" style="color:${play.color};border-color:${play.color}44;background:${play.color}11">
-      <span class="dot" style="background:${play.color}"></span>${play.short}
+    return `<span class="play-pill" style="--play-color: var(${play.varName})">
+      <span class="dot"></span>${play.short}
     </span>`;
   }).join('');
 
   // Group connections by play
-  const connsHtml = conns.map(({ to, play }) => {
-    const target = productMap[to];
-    const targetPrimaryPlay = PLAYS[target.plays[0]];
-    const targetCategory = CATEGORIES.find(c => c.id === target.cat);
-    return `<div class="conn-row" data-target="${to}">
-      <div class="conn-accent" style="background:${targetPrimaryPlay.color}"></div>
-      <div class="conn-info">
-        <div class="conn-name">${target.label}</div>
-        <div class="conn-play">${targetPrimaryPlay.short}</div>
-      </div>
-      <div class="conn-arrow">›</div>
-    </div>`;
+  const grouped = {};
+  conns.forEach(c => {
+    if (!grouped[c.play]) grouped[c.play] = [];
+    grouped[c.play].push(c);
+  });
+
+  const groupedHtml = Object.keys(grouped).sort((a,b) => Number(a)-Number(b)).map(pId => {
+    const play = PLAYS[pId];
+    const rows = grouped[pId].map(({to}) => {
+      const target = productMap[to];
+      const targetPlay = PLAYS[target.plays[0]];
+      return `<button type="button" class="conn-row" data-target="${to}">
+        <div class="conn-accent" style="--accent-color: var(${targetPlay.varName})"></div>
+        <div class="conn-info">
+          <div class="conn-name">${target.label}</div>
+          <div class="conn-play">${targetPlay.short}</div>
+        </div>
+        <div class="conn-arrow">›</div>
+      </button>`;
+    }).join('');
+    return `
+      <div class="sb-section-label">${play.short} · ${grouped[pId].length}</div>
+      <div class="conn-list">${rows}</div>`;
   }).join('');
 
   document.getElementById('sidebar-inner').innerHTML = `
+    <span class="sb-tag">Product</span>
     <div class="sb-product-name">${product.label}</div>
     <div class="sb-category">${catLabel}</div>
-    
+
     <div class="sb-section-label">Featured in plays</div>
-    ${playsHtml}
-    
+    <div>${playsHtml}</div>
+
     <div class="sb-section-label">${conns.length} connection${conns.length !== 1 ? 's' : ''}</div>
-    ${connsHtml}
+    ${groupedHtml}
   `;
 }
 
-// ═══════════════════════════════════════════
-// INIT & RESIZE
-// ═══════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
+   Tweaks (vanilla; host protocol)
+   ════════════════════════════════════════════════════════ */
+const tweaksPanel = document.getElementById('tweaks-panel');
+const appRoot = document.getElementById('app');
 
+function applyTweaks() {
+  appRoot.dataset.theme = tweakState.theme;
+  appRoot.dataset.nodeStyle = tweakState.nodeStyle;
+  appRoot.dataset.connStyle = tweakState.connStyle;
+  // refresh visible state
+  document.querySelectorAll('.tweak-seg').forEach(seg => {
+    const key = seg.dataset.tweak;
+    seg.querySelectorAll('button').forEach(btn => {
+      btn.classList.toggle('is-active', btn.dataset.value === String(tweakState[key]));
+    });
+  });
+  // Lane fill change requires recompute
+  computeLayout();
+  if (selectedId) drawConnections(selectedId);
+  else drawConnections();
+}
+
+document.querySelectorAll('.tweak-seg button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.parentElement.dataset.tweak;
+    const value = btn.dataset.value;
+    tweakState = { ...tweakState, [key]: value };
+    applyTweaks();
+    try {
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: value } }, '*');
+    } catch (e) { /* host may not be present */ }
+  });
+});
+
+// Host protocol — listener BEFORE announce
+window.addEventListener('message', (e) => {
+  const msg = e.data;
+  if (!msg || typeof msg !== 'object') return;
+  if (msg.type === '__activate_edit_mode') {
+    tweaksPanel.classList.add('is-open');
+  } else if (msg.type === '__deactivate_edit_mode') {
+    tweaksPanel.classList.remove('is-open');
+  }
+});
+
+document.getElementById('tweaks-close').addEventListener('click', () => {
+  tweaksPanel.classList.remove('is-open');
+  try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+});
+
+try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+
+// Header theme toggle button
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const next = tweakState.theme === 'dark' ? 'light' : 'dark';
+  tweakState = { ...tweakState, theme: next };
+  applyTweaks();
+  try {
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: next } }, '*');
+  } catch (e) {}
+});
+
+/* ════════════════════════════════════════════════════════
+   Init & resize
+   ════════════════════════════════════════════════════════ */
 function init() {
   renderSidebarEmpty();
-  computeLayout();
-  drawConnections();
+  applyTweaks(); // sets data-theme etc. + first computeLayout/drawConnections
 }
 
 let resizeTimer;
@@ -905,10 +1381,9 @@ window.addEventListener('resize', () => {
     computeLayout();
     if (selectedId) drawConnections(selectedId);
     else drawConnections();
-  }, CONFIG.ANIMATION.RESIZE_DEBOUNCE_MS);
+  }, 80);
 });
 
-// Wait for layout to settle
 requestAnimationFrame(() => requestAnimationFrame(init));
 </script>
 </body>
