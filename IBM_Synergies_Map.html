@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IBM Product Synergies Map</title>
+<title>IBM Product Synergies Map v3.0</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23161616%22/><circle cx=%2235%22 cy=%2250%22 r=%2210%22 fill=%22%230f62fe%22/><circle cx=%2265%22 cy=%2250%22 r=%2210%22 fill=%22%23198038%22/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -206,12 +206,83 @@
     display: flex;
     align-items: stretch;
     padding: 0 16px;
+    gap: 16px;
+  }
+
+  /* Search box */
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: 280px;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 32px;
+    padding: 0 32px 0 12px;
+    background: var(--cds-field-01);
+    border: 1px solid var(--cds-border-subtle-01);
+    border-bottom: 1px solid var(--cds-border-strong-01);
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.11s, background-color 0.11s;
+  }
+  
+  .search-input:hover {
+    background: var(--cds-background-hover);
+  }
+  
+  .search-input:focus {
+    border-color: var(--cds-focus);
+    border-bottom-color: var(--cds-focus);
+  }
+  
+  .search-input::placeholder {
+    color: var(--cds-text-placeholder);
+  }
+  
+  .search-clear {
+    position: absolute;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    color: var(--cds-icon-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.11s;
+  }
+  
+  .search-clear:hover {
+    background: var(--cds-background-hover);
+    color: var(--cds-icon-primary);
+  }
+  
+  .search-clear.is-visible {
+    display: flex;
+  }
+  
+  .search-results-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--cds-text-secondary);
+    white-space: nowrap;
+    padding: 0 8px;
   }
 
   #play-legend {
     display: flex;
     align-items: stretch;
     gap: 0;
+    flex: 1;
   }
 
   .legend-chip {
@@ -599,6 +670,137 @@
     font-weight: 300;
   }
 
+  .conn-explanation {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--cds-text-secondary);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Competitive positioning */
+  .sb-competitors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .competitor-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    white-space: nowrap;
+  }
+
+  .sb-differentiators {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .differentiator-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  .differentiator-item:first-child {
+    padding-top: 0;
+  }
+
+  .diff-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    margin-top: 1px;
+  }
+
+  .diff-text {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-primary);
+  }
+
+  /* Product details in sidebar */
+  .sb-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--cds-text-secondary);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .sb-value {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--cds-text-primary);
+    background: var(--cds-background);
+    padding: 12px;
+    border-left: 3px solid var(--cds-interactive);
+    margin-bottom: 16px;
+  }
+
+  .sb-questions {
+    margin-top: 20px;
+  }
+
+  .sb-question-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-primary);
+    transition: background-color 0.11s;
+  }
+
+  .sb-question-item:hover {
+    background: var(--cds-background-hover);
+  }
+
+  .sb-question-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    margin-top: 1px;
+  }
+
+  .sb-question-text {
+    flex: 1;
+  }
+
   /* ─── Footer ─── */
   #footer {
     border-top: 1px solid var(--cds-border-subtle-01);
@@ -735,6 +937,23 @@
       </div>
     </div>
     <div class="cds-shell__bar2">
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search products, descriptions, questions..."
+          aria-label="Search products"
+        />
+        <button
+          type="button"
+          id="search-clear"
+          class="search-clear"
+          aria-label="Clear search"
+          title="Clear search"
+        >×</button>
+      </div>
+      <span id="search-results" class="search-results-count"></span>
       <nav id="play-legend" aria-label="Play filter"></nav>
     </div>
   </header>
@@ -762,10 +981,10 @@
   <footer id="footer">
     <div class="footer-stats">
       <span class="footer-stat"><strong>6</strong>Plays</span>
-      <span class="footer-stat"><strong>33</strong>Products</span>
+      <span class="footer-stat"><strong>34</strong>Products</span>
       <span class="footer-stat"><strong>Arrow ECS UK</strong></span>
     </div>
-    <span class="footer-hint">Click a node to highlight connections · Click again to deselect</span>
+    <span class="footer-hint">Search products · Click category to filter · Click product to view details</span>
   </footer>
 
   <!-- ── Tweaks panel ── -->
@@ -845,70 +1064,367 @@ const CATEGORIES = [
 ];
 
 const PRODUCTS = [
-  { id:'api_connect',     label:'API Connect',               cat:'automation',     plays:[1] },
-  { id:'event_auto',      label:'Event Automation',          cat:'automation',     plays:[1] },
-  { id:'webmethods',      label:'webMethods',                cat:'automation',     plays:[1] },
-  { id:'terraform',       label:'Terraform',                 cat:'automation',     plays:[1] },
-  { id:'concert',         label:'Concert',                   cat:'automation',     plays:[1] },
-  { id:'maximo',          label:'Maximo',                    cat:'automation',     plays:[1] },
+  { id:'api_connect',     label:'API Connect',               cat:'automation',     plays:[1],
+    desc:'Enterprise API management platform for creating, securing, and managing APIs across hybrid cloud environments.',
+    value:'Enables digital transformation through API-led integration, reducing integration time by 50% and improving developer productivity.',
+    questions:['Do you have multiple applications that need to share data?','Are you building mobile or web apps that need backend services?','Do you need to monetize your data or services through APIs?','Are you struggling with point-to-point integrations?'],
+    competitors:['MuleSoft Anypoint','Apigee (Google Cloud)','Kong','AWS API Gateway'],
+    differentiators:['Built-in DataPower security','Hybrid cloud deployment flexibility','Native Kubernetes support','Integrated with IBM Cloud Pak']
+  },
+  { id:'event_auto',      label:'Event Automation',          cat:'automation',     plays:[1],
+    desc:'Event-driven automation platform for real-time business process automation and decision-making.',
+    value:'Reduces manual intervention by 70%, enables real-time response to business events, and improves operational efficiency.',
+    questions:['Do you have business processes that require real-time responses?','Are you manually monitoring systems for events?','Do you need to automate workflows across multiple systems?','Are you looking to reduce operational costs through automation?'],
+    competitors:['Apache Kafka','AWS EventBridge','Azure Event Grid','Google Cloud Pub/Sub'],
+    differentiators:['Built-in business rules engine','Low-code workflow designer','Enterprise-grade governance','Integrated with IBM automation suite']
+  },
+  { id:'webmethods',      label:'webMethods',                cat:'automation',     plays:[1],
+    desc:'Comprehensive integration platform for connecting applications, data, and devices across hybrid environments.',
+    value:'Accelerates integration projects by 60%, reduces maintenance costs, and provides unified visibility across all integrations.',
+    questions:['Do you have legacy systems that need to integrate with modern applications?','Are you managing multiple integration tools?','Do you need B2B integration capabilities?','Are you struggling with data synchronization across systems?'],
+    competitors:['MuleSoft','Dell Boomi','Informatica','TIBCO'],
+    differentiators:['30+ years of integration expertise','Strong B2B/EDI capabilities','Hybrid integration platform','Pre-built connectors for 300+ applications']
+  },
+  { id:'terraform',       label:'Terraform',                 cat:'automation',     plays:[1],
+    desc:'Infrastructure as Code tool for provisioning and managing cloud infrastructure across multiple providers.',
+    value:'Reduces infrastructure deployment time by 80%, ensures consistency, and enables version control for infrastructure.',
+    questions:['Are you manually provisioning cloud infrastructure?','Do you need to manage infrastructure across multiple cloud providers?','Are you looking to standardize infrastructure deployments?','Do you need to track infrastructure changes over time?'],
+    competitors:['AWS CloudFormation','Azure Resource Manager','Pulumi','Ansible'],
+    differentiators:['Multi-cloud support','Declarative syntax','Large provider ecosystem','State management capabilities']
+  },
+  { id:'concert',         label:'Concert',                   cat:'automation',     plays:[1],
+    desc:'AI-powered application management platform that provides unified visibility and control across hybrid cloud environments.',
+    value:'Reduces MTTR by 40%, provides 360-degree application visibility, and automates remediation of common issues.',
+    questions:['Do you struggle with visibility across your application landscape?','Are you managing applications across multiple clouds?','Do you need to reduce mean time to resolution?','Are you looking to automate application management tasks?'],
+    competitors:['ServiceNow','BMC Helix','Micro Focus Operations Bridge','Splunk'],
+    differentiators:['AI-powered insights','Unified hybrid cloud view','Automated remediation','Integration with IBM observability tools']
+  },
+  { id:'maximo',          label:'Maximo',                    cat:'automation',     plays:[1],
+    desc:'Enterprise asset management platform for managing physical assets, maintenance, and operations.',
+    value:'Increases asset uptime by 20%, reduces maintenance costs by 25%, and extends asset lifecycle.',
+    questions:['Do you manage physical assets or facilities?','Are you tracking maintenance manually?','Do you need to optimize asset performance?','Are you looking to implement predictive maintenance?'],
+    competitors:['SAP EAM','Oracle EAM','Infor EAM','IFS Applications'],
+    differentiators:['AI-powered predictive maintenance','Mobile-first design','IoT integration','Industry-specific templates']
+  },
 
-  { id:'instana',         label:'Instana',                   cat:'observability',  plays:[3] },
-  { id:'sevone',          label:'SevOne',                    cat:'observability',  plays:[3] },
-  { id:'turbonomic',      label:'Turbonomic',                cat:'observability',  plays:[3] },
-  { id:'apptio',          label:'Apptio',                    cat:'observability',  plays:[3] },
-  { id:'cloudability',    label:'Apptio Cloudability',       cat:'observability',  plays:[3] },
+  { id:'instana',         label:'Instana',                   cat:'observability',  plays:[3],
+    desc:'Automated application performance monitoring with AI-powered insights for cloud-native and microservices architectures.',
+    value:'Reduces MTTD by 90%, provides automatic discovery and monitoring, and delivers 1-second granularity for troubleshooting.',
+    questions:['Do you have microservices or containerized applications?','Are you struggling to identify performance bottlenecks?','Do you need real-time application monitoring?','Are you experiencing frequent application issues?'],
+    competitors:['Datadog','New Relic','Dynatrace','AppDynamics'],
+    differentiators:['1-second granularity','Automatic discovery','No manual instrumentation','Built for Kubernetes']
+  },
+  { id:'sevone',          label:'SevOne',                    cat:'observability',  plays:[3],
+    desc:'Network performance monitoring and analytics platform for managing complex network infrastructures.',
+    value:'Improves network visibility by 95%, reduces network incidents by 40%, and enables proactive capacity planning.',
+    questions:['Do you manage complex network infrastructure?','Are you experiencing network performance issues?','Do you need better visibility into network traffic?','Are you planning network capacity upgrades?'],
+    competitors:['SolarWinds','PRTG','Cisco ThousandEyes','NetScout'],
+    differentiators:['Scalable to millions of metrics','Real-time analytics','Multi-vendor support','Predictive capacity planning']
+  },
+  { id:'turbonomic',      label:'Turbonomic',                cat:'observability',  plays:[3],
+    desc:'Application resource management platform that continuously optimises resource allocation in real-time.',
+    value:'Reduces cloud costs by 30-50%, improves application performance by 30%, and automates resource optimisation.',
+    questions:['Are your cloud costs higher than expected?','Do you have performance issues due to resource constraints?','Are you manually sizing VMs or containers?','Do you need to optimise resource utilisation?'],
+    competitors:['CloudHealth','Densify','Spot.io','Harness'],
+    differentiators:['Real-time automated actions','Application-aware decisions','Full-stack optimisation','Proven ROI in 30 days']
+  },
+  { id:'apptio',          label:'Apptio',                    cat:'observability',  plays:[3],
+    desc:'Technology business management platform for managing and optimising IT spending and investments.',
+    value:'Provides complete IT cost transparency, enables data-driven decisions, and optimises IT portfolio investments.',
+    questions:['Do you know your true IT costs per service or application?','Are you struggling to justify IT spending to the business?','Do you need to optimise your IT budget?','Are you planning IT investments without clear ROI visibility?'],
+    competitors:['ServiceNow ITBM','Planview','Changepoint','Upland Software'],
+    differentiators:['Industry-leading TBM platform','Pre-built cost models','Executive dashboards','Proven methodology']
+  },
+  { id:'cloudability',    label:'Apptio Cloudability',       cat:'observability',  plays:[3],
+    desc:'Cloud cost management and optimisation platform for multi-cloud environments.',
+    value:'Reduces cloud waste by 30%, provides cost allocation and chargeback, and enables cloud cost forecasting.',
+    questions:['Are your cloud bills increasing unexpectedly?','Do you need to allocate cloud costs to business units?','Are you using multiple cloud providers?','Do you have unused or underutilised cloud resources?'],
+    competitors:['CloudHealth','Flexera','Spot.io','Vantage'],
+    differentiators:['Multi-cloud support','Automated recommendations','Chargeback capabilities','Integration with Apptio TBM']
+  },
 
-  { id:'guardium',        label:'Guardium',                  cat:'security',       plays:[4] },
-  { id:'verify',          label:'Verify',                    cat:'security',       plays:[4] },
-  { id:'vault',           label:'Vault',                     cat:'security',       plays:[4] },
+  { id:'guardium',        label:'Guardium',                  cat:'security',       plays:[4],
+    desc:'Data security and protection platform for discovering, classifying, and protecting sensitive data.',
+    value:'Ensures compliance with data regulations, prevents data breaches, and provides complete data activity monitoring.',
+    questions:['Do you store sensitive customer or financial data?','Are you subject to data privacy regulations (GDPR, CCPA)?','Have you experienced data security incidents?','Do you need to monitor database access and activity?'],
+    competitors:['Imperva','Oracle Data Safe','Varonis','McAfee Database Security'],
+    differentiators:['Real-time monitoring','Automated compliance reporting','Data discovery and classification','Support for 25+ database types']
+  },
+  { id:'verify',          label:'Verify',                    cat:'security',       plays:[4],
+    desc:'Identity and access management platform for securing user authentication and authorization.',
+    value:'Reduces security risks by 60%, improves user experience with SSO, and ensures compliance with access policies.',
+    questions:['Do users access multiple applications with different passwords?','Are you concerned about unauthorized access?','Do you need multi-factor authentication?','Are you managing user access manually?'],
+    competitors:['Okta','Ping Identity','Microsoft Entra ID','ForgeRock'],
+    differentiators:['Risk-based authentication','Adaptive access control','Hybrid cloud support','FIDO2 certification']
+  },
+  { id:'vault',           label:'Vault',                     cat:'security',       plays:[4],
+    desc:'Secrets management platform for securing, storing, and controlling access to tokens, passwords, and certificates.',
+    value:'Eliminates hardcoded secrets, provides centralized secrets management, and enables automated secret rotation.',
+    questions:['Are credentials stored in code or configuration files?','Do you need to manage API keys and certificates?','Are you concerned about secrets sprawl?','Do you need to rotate secrets regularly?'],
+    competitors:['HashiCorp Vault','AWS Secrets Manager','Azure Key Vault','CyberArk'],
+    differentiators:['Dynamic secrets generation','Automated rotation','Audit logging','Multi-cloud support']
+  },
 
-  { id:'wxai',            label:'watsonx.ai',                cat:'data_ai',        plays:[2] },
-  { id:'wxdata',          label:'watsonx.data',              cat:'data_ai',        plays:[2] },
-  { id:'wxdi',            label:'watsonx.data intelligence', cat:'data_ai',        plays:[2] },
-  { id:'wxdint',          label:'watsonx.data integration',  cat:'data_ai',        plays:[2] },
-  { id:'wxgov',           label:'watsonx.governance',        cat:'data_ai',        plays:[2] },
-  { id:'wxorch',          label:'watsonx Orchestrate',       cat:'data_ai',        plays:[2] },
-  { id:'wca_ansible',     label:'IBM Bob',                   cat:'data_ai',        plays:[2] },
+  { id:'wxai',            label:'watsonx.ai',                cat:'data_ai',        plays:[2],
+    desc:'Enterprise AI studio for training, validating, and deploying foundation models and machine learning models.',
+    value:'Accelerates AI development by 70%, reduces model training costs, and enables responsible AI governance.',
+    questions:['Are you looking to build AI applications?','Do you need to train custom AI models?','Are you concerned about AI bias and explainability?','Do you want to leverage foundation models for your use cases?'],
+    competitors:['Azure AI','AWS SageMaker','Google Vertex AI','Databricks'],
+    differentiators:['Enterprise foundation models','Built-in AI governance','Hybrid deployment','Open source compatibility']
+  },
+  { id:'wxdata',          label:'watsonx.data',              cat:'data_ai',        plays:[2],
+    desc:'Open lakehouse platform for accessing and sharing data across hybrid cloud environments.',
+    value:'Reduces data warehouse costs by 50%, enables query across multiple data sources, and provides open data architecture.',
+    questions:['Are you managing data in multiple silos?','Are data warehouse costs too high?','Do you need to query data across different storage systems?','Are you looking to modernise your data architecture?'],
+    competitors:['Databricks Lakehouse','Snowflake','AWS Lake Formation','Azure Synapse'],
+    differentiators:['Open lakehouse architecture','Query multiple sources','Hybrid cloud support','Cost-effective storage']
+  },
+  { id:'wxdi',            label:'watsonx.data intelligence', cat:'data_ai',        plays:[2],
+    desc:'AI-powered data catalog and governance platform for discovering, understanding, and managing enterprise data.',
+    value:'Reduces time to find data by 80%, improves data quality, and ensures data compliance and lineage.',
+    questions:['Do users struggle to find the data they need?','Is data quality a concern?','Do you need to track data lineage?','Are you subject to data governance regulations?'],
+    competitors:['Collibra','Alation','Informatica','Azure Purview'],
+    differentiators:['AI-powered discovery','Automated data quality','End-to-end lineage','Integrated governance']
+  },
+  { id:'wxdint',          label:'watsonx.data integration',  cat:'data_ai',        plays:[2],
+    desc:'Data integration platform for moving and transforming data across hybrid cloud environments.',
+    value:'Accelerates data integration by 60%, supports real-time and batch processing, and provides data quality capabilities.',
+    questions:['Do you need to move data between systems regularly?','Are you performing manual data transformations?','Do you need real-time data integration?','Are data quality issues impacting your business?'],
+    competitors:['Informatica','Talend','Fivetran','AWS Glue'],
+    differentiators:['Hybrid cloud integration','Real-time and batch','Built-in data quality','Low-code interface']
+  },
+  { id:'wxgov',           label:'watsonx.governance',        cat:'data_ai',        plays:[2],
+    desc:'AI governance platform for managing AI model lifecycle, ensuring compliance, and monitoring model performance.',
+    value:'Ensures AI compliance and ethics, reduces AI risks, and provides complete AI model transparency.',
+    questions:['Are you deploying AI models in production?','Do you need to ensure AI fairness and explainability?','Are you concerned about AI model drift?','Do you need to comply with AI regulations?'],
+    competitors:['DataRobot','Fiddler AI','Arthur AI','Azure ML Responsible AI'],
+    differentiators:['Complete AI lifecycle','Bias detection','Model monitoring','Regulatory compliance']
+  },
+  { id:'wxorch',          label:'watsonx Orchestrate',       cat:'data_ai',        plays:[2],
+    desc:'AI-powered automation platform for building and deploying intelligent workflows and digital assistants.',
+    value:'Automates repetitive tasks by 80%, improves employee productivity, and provides conversational AI interfaces.',
+    questions:['Do employees spend time on repetitive tasks?','Are you looking to build chatbots or virtual assistants?','Do you need to automate business processes with AI?','Are you looking to improve employee productivity?'],
+    competitors:['UiPath','Automation Anywhere','Microsoft Power Automate','ServiceNow'],
+    differentiators:['AI-powered automation','Natural language interface','Pre-built skills','Enterprise integration']
+  },
+  { id:'wca_ansible',     label:'IBM Bob',    cat:'data_ai',        plays:[2],
+    desc:'AI-powered code generation assistant for accelerating application development and automation.',
+    value:'Increases developer productivity by 50%, reduces coding errors, and accelerates time to market.',
+    questions:['Do developers spend too much time writing boilerplate code?','Are you looking to accelerate application development?','Do you need to modernise legacy applications?','Are you struggling with developer productivity?'],
+    competitors:['GitHub Copilot','Amazon CodeWhisperer','Tabnine','Replit Ghostwriter'],
+    differentiators:['Enterprise-trained models','Multi-language support','Security-focused','Ansible integration']
+  },
+  { id:'confluent',       label:'Confluent',                 cat:'data_ai',        plays:[2],
+    desc:'Enterprise-grade streaming platform built on Apache Kafka for real-time data pipelines and streaming applications.',
+    value:'Enables real-time data processing, reduces data latency to milliseconds, and provides scalable event streaming infrastructure.',
+    questions:['Do you need to process data in real-time?','Are you building event-driven architectures?','Do you have multiple systems that need to share data continuously?','Are you experiencing data pipeline bottlenecks?'],
+    competitors:['Apache Kafka','AWS Kinesis','Azure Event Hubs','Google Pub/Sub'],
+    differentiators:['Fully managed Kafka','Stream processing','Enterprise support','Cloud-native architecture']
+  },
 
-  { id:'linuxone',        label:'LinuxONE',                  cat:'infrastructure', plays:[5] },
-  { id:'power',           label:'Power Systems',             cat:'infrastructure', plays:[5] },
-  { id:'aix',             label:'AIX',                       cat:'infrastructure', plays:[5] },
-  { id:'ibmi',            label:'IBM i',                     cat:'infrastructure', plays:[5] },
-  { id:'linux_power',     label:'Linux on Power',            cat:'infrastructure', plays:[5] },
+  { id:'linuxone',        label:'LinuxONE',                  cat:'infrastructure', plays:[5],
+    desc:'Enterprise Linux server platform delivering security, scalability, and reliability for mission-critical workloads.',
+    value:'Reduces infrastructure footprint by 75%, provides 99.999% availability, and delivers industry-leading security.',
+    questions:['Do you have mission-critical Linux workloads?','Are you concerned about security and compliance?','Do you need to consolidate Linux servers?','Are you looking to reduce data center footprint?'],
+    competitors:['HPE Superdome','Oracle Exadata','Cisco UCS','Dell PowerEdge'],
+    differentiators:['Highest security certification','Massive consolidation ratio','Pervasive encryption','99.999% availability']
+  },
+  { id:'power',           label:'Power Systems',             cat:'infrastructure', plays:[5],
+    desc:'Enterprise server platform optimised for data-intensive workloads, AI, and hybrid cloud.',
+    value:'Delivers 2-3x better performance per core, reduces TCO by 40%, and provides built-in virtualisation.',
+    questions:['Do you run SAP, Oracle, or other enterprise applications?','Are you looking for better performance for AI workloads?','Do you need high availability for critical applications?','Are you concerned about licensing costs on x86?'],
+    competitors:['Oracle SPARC','HPE Superdome','Fujitsu PRIMEQUEST','x86 servers'],
+    differentiators:['Superior per-core performance','Built-in AI acceleration','Live partition mobility','Lower software licensing costs']
+  },
+  { id:'aix',             label:'AIX',                       cat:'infrastructure', plays:[5],
+    desc:'Enterprise Unix operating system for Power Systems with advanced virtualisation and security features.',
+    value:'Provides 99.999% uptime, enables live partition mobility, and delivers superior workload management.',
+    questions:['Do you run Unix workloads?','Do you need advanced virtualisation capabilities?','Are you looking for a stable, secure OS for critical workloads?','Do you need to minimise planned downtime?'],
+    competitors:['Oracle Solaris','HP-UX','Red Hat Enterprise Linux','SUSE Linux'],
+    differentiators:['40+ years of stability','Live partition mobility','Workload partitions','Binary compatibility']
+  },
+  { id:'ibmi',            label:'IBM i',                     cat:'infrastructure', plays:[5],
+    desc:'Integrated operating system for Power Systems with built-in database and security for business applications.',
+    value:'Reduces administrative overhead by 60%, provides integrated security, and ensures business continuity.',
+    questions:['Do you run business-critical applications?','Are you looking to modernise legacy applications?','Do you need integrated database capabilities?','Are you concerned about security and compliance?'],
+    competitors:['Windows Server','Linux','Oracle Database','SAP HANA'],
+    differentiators:['Integrated database','Object-based architecture','Automatic security','Zero downtime upgrades']
+  },
+  { id:'linux_power',     label:'Linux on Power',            cat:'infrastructure', plays:[5],
+    desc:'Enterprise Linux distributions optimised for Power Systems architecture.',
+    value:'Delivers superior performance for Linux workloads, enables seamless cloud integration, and provides enterprise support.',
+    questions:['Do you run Linux workloads that need better performance?','Are you looking to consolidate Linux infrastructure?','Do you need enterprise-grade Linux support?','Are you running containerised workloads?'],
+    competitors:['x86 Linux servers','ARM-based servers','Oracle Linux','SUSE Linux'],
+    differentiators:['Superior performance','Better consolidation','Enterprise support','Optimised for containers']
+  },
 
-  { id:'flashsystem',     label:'FlashSystem',               cat:'storage',        plays:[6] },
-  { id:'storage_control', label:'Storage Control',           cat:'storage',        plays:[6] },
-  { id:'storage_insights',label:'Storage Insights',          cat:'storage',        plays:[6] },
-  { id:'storage_virt',    label:'Storage Virtualize',        cat:'storage',        plays:[6] },
-  { id:'storage_fusion',  label:'Storage Fusion',            cat:'storage',        plays:[6] },
-  { id:'storage_ceph',    label:'Storage Ceph',              cat:'storage',        plays:[6] },
-  { id:'storage_scale',   label:'Storage Scale',             cat:'storage',        plays:[6] },
+  { id:'flashsystem',     label:'FlashSystem',               cat:'storage',        plays:[6],
+    desc:'All-flash storage array delivering high performance, reliability, and efficiency for enterprise workloads.',
+    value:'Delivers sub-millisecond latency, reduces storage footprint by 80%, and provides 99.9999% availability.',
+    questions:['Do you have performance-sensitive applications?','Are you running out of storage capacity?','Do you need to reduce storage costs?','Are you concerned about storage reliability?'],
+    competitors:['Pure Storage','NetApp AFF','Dell PowerStore','HPE Nimble'],
+    differentiators:['Sub-millisecond latency','99.9999% availability','Data reduction guarantee','Cyber resilience']
+  },
+  { id:'storage_control', label:'Storage Control',           cat:'storage',        plays:[6],
+    desc:'Storage management software for monitoring, managing, and optimizing storage infrastructure.',
+    value:'Provides unified storage management, reduces storage admin time by 50%, and enables proactive issue resolution.',
+    questions:['Do you manage multiple storage systems?','Are you spending too much time on storage administration?','Do you need better visibility into storage performance?','Are you experiencing storage-related issues?'],
+    competitors:['VMware vRealize','Dell CloudIQ','NetApp Cloud Insights','Pure1'],
+    differentiators:['Multi-vendor support','Unified management','Proactive monitoring','Automated provisioning']
+  },
+  { id:'storage_insights',label:'Storage Insights',          cat:'storage',        plays:[6],
+    desc:'Cloud-based storage monitoring and analytics platform for optimising storage infrastructure.',
+    value:'Provides predictive analytics, reduces storage incidents by 40%, and enables capacity planning.',
+    questions:['Do you need better insights into storage utilisation?','Are you planning storage capacity upgrades?','Do you want to predict storage issues before they occur?','Do you manage storage across multiple locations?'],
+    competitors:['NetApp Cloud Insights','Pure1','Dell CloudIQ','Datadog'],
+    differentiators:['Predictive analytics','Cloud-based SaaS','Multi-site visibility','Capacity forecasting']
+  },
+  { id:'storage_virt',    label:'Storage Virtualize',        cat:'storage',        plays:[6],
+    desc:'Storage virtualisation software for pooling and managing heterogeneous storage resources.',
+    value:'Reduces storage costs by 30%, enables non-disruptive data migration, and provides unified management.',
+    questions:['Do you have multiple storage vendors?','Do you need to migrate data without downtime?','Are you looking to optimise storage utilisation?','Do you need to tier data across different storage types?'],
+    competitors:['DataCore SANsymphony','VMware vSAN','NetApp ONTAP','HPE StoreVirtual'],
+    differentiators:['Multi-vendor support','Non-disruptive migration','Automated tiering','Block and file support']
+  },
+  { id:'storage_fusion',  label:'Storage Fusion',            cat:'storage',        plays:[6],
+    desc:'Container-native storage solution for Red Hat OpenShift and Kubernetes environments.',
+    value:'Simplifies container storage, provides persistent storage for containers, and enables data mobility.',
+    questions:['Are you running containerized applications?','Do you need persistent storage for Kubernetes?','Are you using Red Hat OpenShift?','Do you need to move data between container environments?'],
+    competitors:['Portworx','NetApp Trident','Pure Service Orchestrator','Dell CSI'],
+    differentiators:['OpenShift native','Data mobility','Simplified management','Enterprise support']
+  },
+  { id:'storage_ceph',    label:'Storage Ceph',              cat:'storage',        plays:[6],
+    desc:'Open-source software-defined storage platform for object, block, and file storage.',
+    value:'Reduces storage costs by 50%, provides scalable storage, and eliminates vendor lock-in.',
+    questions:['Are you looking for cost-effective storage?','Do you need object storage capabilities?','Are you building a private cloud?','Do you want to avoid vendor lock-in?'],
+    competitors:['MinIO','AWS S3','Azure Blob','Google Cloud Storage'],
+    differentiators:['Open source','No vendor lock-in','Unified storage','Self-healing']
+  },
+  { id:'storage_scale',   label:'Storage Scale',             cat:'storage',        plays:[6],
+    desc:'High-performance parallel file system for data-intensive workloads and AI applications.',
+    value:'Delivers 10x faster data access, enables global data sharing, and supports massive scale.',
+    questions:['Do you have data-intensive workloads?','Are you running AI/ML training jobs?','Do you need to share data across multiple sites?','Are you experiencing file system performance issues?'],
+    competitors:['Lustre','BeeGFS','WekaFS','DDN EXAScaler'],
+    differentiators:['Proven at exascale','Global namespace','Active file management','AI optimised']
+  },
 ];
 
 const CONNECTIONS = [
-  ['concert','api_connect',1],['concert','event_auto',1],['concert','webmethods',1],
-  ['concert','terraform',1],['api_connect','event_auto',1],['webmethods','api_connect',1],
-
-  ['wxdata','wxai',2],['wxdata','wxdi',2],['wxdata','wxdint',2],['wxdata','wxgov',2],
-  ['wxai','wxorch',2],['wxai','wxgov',2],['wxai','wca_ansible',2],
-  ['wca_ansible','wxorch',2],['wca_ansible','wxgov',2],
-  ['wxai','instana',2],['wxgov','concert',2],['wxgov','guardium',2],
-  ['wxorch','api_connect',2],['wxorch','webmethods',2],
-
-  ['concert','instana',3],['concert','turbonomic',3],['concert','apptio',3],
-  ['instana','sevone',3],['instana','turbonomic',3],
-  ['turbonomic','terraform',3],['turbonomic','cloudability',3],['apptio','cloudability',3],
-
-  ['vault','verify',4],['vault','guardium',4],['wxgov','guardium',4],
-
-  ['power','aix',5],['power','ibmi',5],['power','linux_power',5],['linuxone','wxai',5],
-
-  ['maximo','event_auto',1],['maximo','api_connect',1],
-  ['maximo','turbonomic',3],['maximo','wxai',2],
-
-  ['power','flashsystem',6],['flashsystem','storage_control',6],['flashsystem','storage_virt',6],
-  ['storage_fusion','storage_scale',6],['linuxone','storage_scale',6],
-  ['linuxone','storage_ceph',6],['wxdata','storage_scale',6],['wxdata','storage_ceph',6],
+  // Automation & Integration synergies
+  ['concert','api_connect',1,'Concert orchestrates API management for unified application visibility'],
+  ['concert','event_auto',1,'Concert automates event-driven workflows across applications'],
+  ['concert','webmethods',1,'Concert integrates with webMethods for hybrid integration management'],
+  ['concert','terraform',1,'Concert uses Terraform for infrastructure provisioning automation'],
+  ['concert','maximo',1,'Concert monitors and manages Maximo asset management operations'],
+  ['api_connect','event_auto',1,'API Connect exposes event automation capabilities as managed APIs'],
+  ['api_connect','webmethods',1,'API Connect and webMethods provide complementary integration patterns'],
+  ['webmethods','event_auto',1,'webMethods triggers event automation for real-time integration'],
+  ['maximo','event_auto',1,'Maximo uses event automation for asset maintenance workflows'],
+  ['maximo','api_connect',1,'Maximo exposes asset data through API Connect'],
+  
+  // Data & AI Platform synergies
+  ['wxdata','wxai',2,'watsonx.data provides the data foundation for watsonx.ai models'],
+  ['wxdata','wxdi',2,'watsonx.data integrates with data intelligence for cataloguing'],
+  ['wxdata','wxdint',2,'watsonx.data uses data integration for ingestion pipelines'],
+  ['wxdata','wxgov',2,'watsonx.data enforces governance policies on data assets'],
+  ['wxdata','confluent',2,'watsonx.data ingests real-time streaming data from Confluent'],
+  ['wxai','wxorch',2,'watsonx.ai powers intelligent agents in watsonx Orchestrate'],
+  ['wxai','wxgov',2,'watsonx.ai models are governed by watsonx.governance'],
+  ['wxai','wxdi',2,'watsonx.ai uses data intelligence for model training data discovery'],
+  ['wxdi','wxdint',2,'Data intelligence catalogues assets from data integration pipelines'],
+  ['wxdi','wxgov',2,'Data intelligence enforces governance policies on catalogued data'],
+  ['wxdint','confluent',2,'Data integration connects to Confluent for streaming data pipelines'],
+  ['wxorch','wca_ansible',2,'Orchestrate uses IBM Bob for automated code generation in workflows'],
+  ['wxorch','wxgov',2,'Orchestrate enforces governance on AI agents and workflows'],
+  ['confluent','event_auto',1,'Confluent streams events to Event Automation for real-time processing'],
+  ['confluent','api_connect',1,'API Connect exposes Confluent streaming data through managed APIs'],
+  
+  // Observability & FinOps synergies
+  ['concert','instana',3,'Concert uses Instana for application performance monitoring'],
+  ['concert','turbonomic',3,'Concert leverages Turbonomic for resource optimisation'],
+  ['concert','apptio',3,'Concert provides cost data to Apptio for financial management'],
+  ['concert','sevone',3,'Concert integrates with SevOne for network performance monitoring'],
+  ['instana','turbonomic',3,'Instana metrics drive Turbonomic optimisation decisions'],
+  ['instana','sevone',3,'Instana application data complements SevOne network monitoring'],
+  ['turbonomic','apptio',3,'Turbonomic optimisation data feeds Apptio cost analysis'],
+  ['turbonomic','cloudability',3,'Turbonomic actions inform Cloudability cost recommendations'],
+  ['apptio','cloudability',3,'Apptio and Cloudability provide unified FinOps visibility'],
+  
+  // Security & Governance synergies
+  ['guardium','verify',4,'Guardium protects data accessed through Verify identity management'],
+  ['guardium','vault',4,'Guardium monitors secrets managed by Vault'],
+  ['verify','vault',4,'Verify authenticates access to Vault secrets'],
+  
+  // Infrastructure & Systems synergies
+  ['power','aix',5,'AIX is the enterprise Unix OS for Power Systems'],
+  ['power','ibmi',5,'IBM i runs natively on Power Systems architecture'],
+  ['power','linux_power',5,'Linux distributions optimised for Power Systems'],
+  ['linuxone','linux_power',5,'LinuxONE and Power share Linux optimisation strategies'],
+  
+  // Storage Solutions synergies
+  ['flashsystem','storage_control',6,'Storage Control manages FlashSystem arrays'],
+  ['flashsystem','storage_insights',6,'Storage Insights monitors FlashSystem performance'],
+  ['flashsystem','storage_virt',6,'Storage Virtualize pools FlashSystem with other storage'],
+  ['storage_control','storage_insights',6,'Storage Control uses Insights for predictive analytics'],
+  ['storage_control','storage_virt',6,'Storage Control manages virtualised storage pools'],
+  ['storage_insights','storage_virt',6,'Storage Insights monitors virtualised storage performance'],
+  ['storage_scale','storage_ceph',6,'Storage Scale and Ceph provide complementary file/object storage'],
+  ['storage_scale','storage_fusion',6,'Storage Fusion uses Storage Scale for container storage'],
+  ['storage_ceph','storage_fusion',6,'Storage Fusion leverages Ceph for object storage'],
+  
+  // Cross-play synergies: Automation + Data/AI
+  ['wxorch','api_connect',2,'Orchestrate agents call APIs managed by API Connect'],
+  ['wxorch','event_auto',2,'Orchestrate triggers event automation workflows'],
+  ['wxorch','webmethods',2,'Orchestrate integrates with webMethods for enterprise connectivity'],
+  ['wxai','maximo',2,'watsonx.ai enables predictive maintenance in Maximo'],
+  ['wca_ansible','terraform',2,'IBM Bob generates Terraform infrastructure code'],
+  
+  // Cross-play synergies: Automation + Observability
+  ['maximo','instana',3,'Instana monitors Maximo application performance'],
+  ['terraform','turbonomic',3,'Turbonomic recommends infrastructure changes via Terraform'],
+  
+  // Cross-play synergies: Data/AI + Observability
+  ['wxai','instana',2,'Instana monitors watsonx.ai model inference performance'],
+  
+  // Cross-play synergies: Data/AI + Security
+  ['wxgov','guardium',2,'watsonx.governance uses Guardium for data protection policies'],
+  ['wxdi','guardium',2,'Data intelligence integrates Guardium security classifications'],
+  
+  // Cross-play synergies: Automation + Security
+  ['concert','guardium',1,'Concert monitors Guardium for security compliance'],
+  ['concert','verify',1,'Concert uses Verify for identity and access management'],
+  
+  // Cross-play synergies: Observability + Security
+  ['instana','guardium',3,'Instana monitors Guardium database activity'],
+  
+  // Cross-play synergies: Data/AI + Infrastructure
+  ['wxai','power',2,'watsonx.ai leverages Power Systems for AI acceleration'],
+  ['wxai','linuxone',2,'watsonx.ai runs on LinuxONE for secure AI workloads'],
+  ['wxdata','power',2,'watsonx.data uses Power Systems for data-intensive queries'],
+  ['wxdata','linuxone',2,'watsonx.data on LinuxONE provides secure data lakehouse'],
+  
+  // Cross-play synergies: Infrastructure + Storage
+  ['power','flashsystem',5,'Power Systems use FlashSystem for high-performance storage'],
+  ['power','storage_scale',5,'Power Systems leverage Storage Scale for parallel file access'],
+  ['linuxone','flashsystem',5,'LinuxONE uses FlashSystem for enterprise storage'],
+  ['linuxone','storage_scale',5,'LinuxONE leverages Storage Scale for scalable file storage'],
+  ['linuxone','storage_ceph',5,'LinuxONE uses Storage Ceph for cloud-native object storage'],
+  ['aix','flashsystem',5,'AIX systems use FlashSystem for enterprise storage'],
+  ['ibmi','flashsystem',5,'IBM i systems use FlashSystem for business-critical data'],
+  
+  // Cross-play synergies: Data/AI + Storage
+  ['wxdata','storage_scale',2,'watsonx.data uses Storage Scale for AI training data'],
+  ['wxdata','storage_ceph',2,'watsonx.data leverages Storage Ceph for object storage'],
+  ['wxdata','storage_fusion',2,'watsonx.data uses Storage Fusion for container-native storage'],
+  
+  // Cross-play synergies: Observability + Infrastructure
+  ['instana','power',3,'Instana monitors applications on Power Systems'],
+  ['instana','linuxone',3,'Instana monitors applications on LinuxONE'],
+  ['turbonomic','power',3,'Turbonomic optimises Power Systems resource allocation'],
+  ['turbonomic','linuxone',3,'Turbonomic optimises LinuxONE resource utilisation'],
+  ['turbonomic','aix',3,'Turbonomic optimises AIX workload resource allocation'],
+  ['turbonomic','ibmi',3,'Turbonomic optimises IBM i resource utilisation'],
+  ['turbonomic','linux_power',3,'Turbonomic optimises Linux on Power resource allocation'],
 ];
 
 /* ════════════════════════════════════════════════════════
@@ -928,34 +1444,155 @@ PRODUCTS.forEach(p => { productMap[p.id] = p; });
 
 const adjacency = {};
 PRODUCTS.forEach(p => { adjacency[p.id] = []; });
-CONNECTIONS.forEach(([from, to, play]) => {
-  adjacency[from].push({ to, play });
-  adjacency[to].push({ to: from, play });
+CONNECTIONS.forEach(([from, to, play, explanation]) => {
+  adjacency[from].push({ to, play, explanation });
+  adjacency[to].push({ to: from, play, explanation });
 });
 
-(function validateData() {
-  const catIds = new Set(CATEGORIES.map(c => c.id));
-  const catPlay = Object.fromEntries(CATEGORIES.map(c => [c.id, c.playId]));
-  PRODUCTS.forEach(p => {
-    if (!catIds.has(p.cat)) console.warn(`[data] product "${p.id}" has unknown cat "${p.cat}"`);
-    if (catPlay[p.cat] && p.plays[0] !== catPlay[p.cat]) {
-      console.warn(`[data] product "${p.id}" primary play ${p.plays[0]} doesn't match its category's playId ${catPlay[p.cat]}`);
-    }
-  });
-  const seenPairs = new Map();
-  CONNECTIONS.forEach(([from, to, play]) => {
-    if (!productMap[from]) console.warn(`[data] connection from unknown product "${from}"`);
-    if (!productMap[to])   console.warn(`[data] connection to unknown product "${to}"`);
-    if (!PLAYS[play])      console.warn(`[data] connection has unknown play ${play}`);
-    const key = [from, to].sort().join('|') + `|${play}`;
-    if (seenPairs.has(key)) console.warn(`[data] duplicate connection ${from}↔${to} on play ${play}`);
-    seenPairs.set(key, true);
-  });
-})();
+// Data validation removed for production
 
 let selectedId = null;
 let activePlayFilter = null;
+let searchQuery = '';
 const nodeEls = {};
+
+/* ════════════════════════════════════════════════════════
+   Search functionality
+   ════════════════════════════════════════════════════════ */
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+const searchResults = document.getElementById('search-results');
+
+function performSearch(query) {
+  searchQuery = query.toLowerCase().trim();
+  
+  // Show/hide clear button
+  searchClear.classList.toggle('is-visible', searchQuery.length > 0);
+  
+  if (!searchQuery) {
+    // Clear search - reset all highlighting
+    Object.values(nodeEls).forEach(el => {
+      el.classList.remove('dimmed', 'highlighted');
+    });
+    searchResults.textContent = '';
+    drawConnections();
+    return;
+  }
+  
+  // Search across product names, descriptions, value props, and questions
+  const matches = new Set();
+  PRODUCTS.forEach(p => {
+    const searchableText = [
+      p.label,
+      p.desc,
+      p.value,
+      ...p.questions
+    ].join(' ').toLowerCase();
+    
+    if (searchableText.includes(searchQuery)) {
+      matches.add(p.id);
+    }
+  });
+  
+  // Also include products connected to matches
+  const involved = new Set(matches);
+  CONNECTIONS.forEach(([a, b, play, explanation]) => {
+    if (matches.has(a)) involved.add(b);
+    if (matches.has(b)) involved.add(a);
+  });
+  
+  // Update display
+  Object.entries(nodeEls).forEach(([id, el]) => {
+    if (involved.has(id)) {
+      el.classList.add('highlighted');
+      el.classList.remove('dimmed');
+    } else {
+      el.classList.add('dimmed');
+      el.classList.remove('highlighted');
+    }
+  });
+  
+  // Update results count
+  searchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+  
+  // Redraw connections to show only relevant ones
+  drawConnectionsForSearch(involved);
+}
+
+function drawConnectionsForSearch(involvedProducts) {
+  svgEl.innerHTML = '<defs id="svg-defs"></defs>';
+  
+  const sorted = [...uniqueEdges];
+  
+  sorted.forEach(edge => {
+    const { from, to } = edge;
+    const p1 = productMap[from];
+    const p2 = productMap[to];
+    if (!p1._px || !p2._px) return;
+    
+    // Only draw if both products are involved
+    const isActive = involvedProducts.has(from) && involvedProducts.has(to);
+    if (!isActive) return;
+    
+    const x1 = p1._px, y1 = p1._py;
+    const x2 = p2._px, y2 = p2._py;
+    
+    const colorPlayId = connectionPlayId(from, to);
+    const color = playColor(colorPlayId);
+    
+    let d;
+    const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
+    
+    if (tweakState.connStyle === 'ortho') {
+      if (sameRow) {
+        const arcH = Math.abs(x2 - x1) * 0.18 + 12;
+        d = `M ${x1} ${y1} L ${x1} ${y1 - arcH} L ${x2} ${y2 - arcH} L ${x2} ${y2}`;
+      } else {
+        const my = (y1 + y2) / 2;
+        d = `M ${x1} ${y1} L ${x1} ${my} L ${x2} ${my} L ${x2} ${y2}`;
+      }
+    } else {
+      if (sameRow) {
+        const mx = (x1 + x2) / 2;
+        const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_FACTOR;
+        d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+      } else {
+        const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START;
+        const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END;
+        d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+      }
+    }
+    
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('opacity', '0.7');
+    
+    svgEl.appendChild(path);
+  });
+}
+
+searchInput.addEventListener('input', (e) => {
+  performSearch(e.target.value);
+});
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    performSearch('');
+    searchInput.blur();
+  }
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  performSearch('');
+  searchInput.focus();
+});
 
 /* ════════════════════════════════════════════════════════
    Build legend
@@ -975,6 +1612,14 @@ Object.values(PLAYS).forEach(play => {
 });
 
 function togglePlayFilter(playId) {
+  // Clear search when using play filter
+  if (searchQuery) {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.classList.remove('is-visible');
+    searchResults.textContent = '';
+  }
+  
   activePlayFilter = (activePlayFilter === playId) ? null : playId;
   document.querySelectorAll('.legend-chip').forEach(c => {
     c.classList.toggle('is-active', Number(c.dataset.play) === activePlayFilter);
@@ -990,11 +1635,22 @@ function applyPlayFilter() {
     Object.values(nodeEls).forEach(el => el.classList.remove('dimmed', 'highlighted'));
     return;
   }
-  // Highlight products that participate in connections of this play (via any of their connections)
-  const involved = new Set();
-  CONNECTIONS.forEach(([a, b, p]) => {
-    if (p === activePlayFilter) { involved.add(a); involved.add(b); }
+  // Find the category associated with this play
+  const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
+  if (!playCategory) return;
+  
+  // Get all products in this category
+  const categoryProducts = new Set(
+    PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
+  );
+  
+  // Highlight products in this category AND any products connected to them (regardless of play)
+  const involved = new Set(categoryProducts);
+  CONNECTIONS.forEach(([a, b, p, explanation]) => {
+    if (categoryProducts.has(a)) involved.add(b);
+    if (categoryProducts.has(b)) involved.add(a);
   });
+  
   Object.entries(nodeEls).forEach(([id, el]) => {
     if (involved.has(id)) el.classList.add('highlighted');
     else el.classList.add('dimmed');
@@ -1111,13 +1767,14 @@ function connectionPlayId(fromId, toId) {
    the set of strategic plays it appears in, used for filtering. */
 const uniqueEdges = (() => {
   const map = new Map();
-  CONNECTIONS.forEach(([from, to, play]) => {
+  CONNECTIONS.forEach(([from, to, play, explanation]) => {
     const [a, b] = [from, to].sort();
     const key = `${a}|${b}`;
-    if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set() });
+    if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set(), explanations: {} });
     map.get(key).plays.add(play);
+    map.get(key).explanations[`${from}→${to}`] = explanation;
   });
-  return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays] }));
+  return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays], explanations: e.explanations }));
 })();
 
 /* ════════════════════════════════════════════════════════
@@ -1125,6 +1782,22 @@ const uniqueEdges = (() => {
    ════════════════════════════════════════════════════════ */
 function drawConnections(activeId = null) {
   svgEl.innerHTML = '<defs id="svg-defs"></defs>';
+
+  // When play filter is active, determine which products are involved
+  let involvedProducts = null;
+  if (activePlayFilter && !activeId) {
+    const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
+    if (playCategory) {
+      const categoryProducts = new Set(
+        PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
+      );
+      involvedProducts = new Set(categoryProducts);
+      CONNECTIONS.forEach(([a, b, p, explanation]) => {
+        if (categoryProducts.has(a)) involvedProducts.add(b);
+        if (categoryProducts.has(b)) involvedProducts.add(a);
+      });
+    }
+  }
 
   // Sort so active edges render last (on top)
   const sorted = [...uniqueEdges].sort((e1, e2) => {
@@ -1147,10 +1820,21 @@ function drawConnections(activeId = null) {
     const colorPlayId = connectionPlayId(from, to);
     const color = playColor(colorPlayId);
 
-    const isActive = activeId
-      ? (activeId === from || activeId === to)
-      : (activePlayFilter ? plays.includes(activePlayFilter) : true);
-    const isFiltered = activePlayFilter && !plays.includes(activePlayFilter);
+    // Determine if this connection should be active/visible
+    let isActive, isFiltered;
+    if (activeId) {
+      // When a product is selected, show its connections
+      isActive = (activeId === from || activeId === to);
+      isFiltered = false;
+    } else if (activePlayFilter && involvedProducts) {
+      // When a play filter is active, show connections between involved products
+      isActive = involvedProducts.has(from) && involvedProducts.has(to);
+      isFiltered = !isActive;
+    } else {
+      // No filter active, show all connections
+      isActive = true;
+      isFiltered = false;
+    }
 
     let d;
     const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
@@ -1304,11 +1988,15 @@ function renderSidebar(product) {
     const rows = grouped[pId].map(to => {
       const target = productMap[to];
       const targetPlay = PLAYS[target.plays[0]];
+      // Find the explanation for this connection
+      const conn = conns.find(c => c.to === to);
+      const explanation = conn?.explanation || '';
       return `<button type="button" class="conn-row" data-target="${to}">
         <div class="conn-accent" style="--accent-color: var(${targetPlay.varName})"></div>
         <div class="conn-info">
           <div class="conn-name">${target.label}</div>
           <div class="conn-play">${targetPlay.short}</div>
+          ${explanation ? `<div class="conn-explanation">${explanation}</div>` : ''}
         </div>
         <div class="conn-arrow">›</div>
       </button>`;
@@ -1318,6 +2006,34 @@ function renderSidebar(product) {
       <div class="conn-list">${rows}</div>`;
   }).join('');
 
+  // Build discovery questions HTML
+  const questionsHtml = product.questions ? product.questions.map((q, idx) => `
+    <div class="sb-question-item">
+      <div class="sb-question-icon">?</div>
+      <div class="sb-question-text">${q}</div>
+    </div>
+  `).join('') : '';
+
+  // Build competitive positioning HTML
+  const competitorsHtml = product.competitors ? `
+    <div class="sb-section-label">Competes With</div>
+    <div class="sb-competitors">
+      ${product.competitors.map(comp => `<span class="competitor-tag">${comp}</span>`).join('')}
+    </div>
+  ` : '';
+
+  const differentiatorsHtml = product.differentiators ? `
+    <div class="sb-section-label">Key Differentiators</div>
+    <div class="sb-differentiators">
+      ${product.differentiators.map(diff => `
+        <div class="differentiator-item">
+          <span class="diff-icon">✓</span>
+          <span class="diff-text">${diff}</span>
+        </div>
+      `).join('')}
+    </div>
+  ` : '';
+
   document.getElementById('sidebar-inner').innerHTML = `
     <span class="sb-tag">Product</span>
     <div class="sb-product-name">${product.label}</div>
@@ -1325,6 +2041,25 @@ function renderSidebar(product) {
 
     <div class="sb-section-label">Featured in plays</div>
     <div>${playsHtml}</div>
+
+    ${product.desc ? `
+      <div class="sb-section-label">Description</div>
+      <div class="sb-description">${product.desc}</div>
+    ` : ''}
+
+    ${product.value ? `
+      <div class="sb-section-label">Value Proposition</div>
+      <div class="sb-value">${product.value}</div>
+    ` : ''}
+
+    ${competitorsHtml}
+
+    ${differentiatorsHtml}
+
+    ${questionsHtml ? `
+      <div class="sb-section-label">Discovery Questions</div>
+      <div class="sb-questions">${questionsHtml}</div>
+    ` : ''}
 
     <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
     ${groupedHtml}
