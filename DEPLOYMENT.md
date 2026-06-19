@@ -2,327 +2,484 @@
 
 ## Overview
 
-This guide walks you through deploying the IBM Synergies Map to IBM Cloud Object Storage with automated CI/CD via GitHub Actions.
+This guide provides complete step-by-step instructions for deploying the IBM Synergies Map to IBM Cloud Object Storage with automated CI/CD via GitHub Actions. This is designed for new team members who need to set up or maintain the deployment infrastructure.
 
-## Architecture
+### What This Guide Covers
+
+- Setting up IBM Cloud Object Storage for static website hosting
+- Configuring GitHub Actions for automatic deployments
+- Troubleshooting common issues
+- Ongoing maintenance and updates
+
+### What You'll Need
+
+- **IBM Cloud account** (free tier available at https://cloud.ibm.com)
+- **GitHub repository access** (admin permissions to add secrets)
+- **Basic familiarity** with web browsers and command line (optional)
+- **Time required**: ~30 minutes for initial setup
+
+---
+
+## Why IBM Cloud Object Storage?
+
+We use IBM Cloud Object Storage because:
+- **IBM-aligned**: Demonstrates our commitment as an IBM distributor
+- **Cost-effective**: ~$1/month for typical usage (vs $5-20+ for compute services)
+- **Simple**: No servers to manage, just upload files
+- **Fast**: Global CDN capabilities for quick loading
+- **Reliable**: Enterprise-grade availability and durability
+
+---
+
+## Architecture Overview
 
 ```
-GitHub Repository (main branch)
-    ↓ (push trigger)
-GitHub Actions Workflow
-    ↓ (deploy)
-IBM Cloud Object Storage Bucket
-    ↓ (serve)
-Public URL: https://[bucket-name].s3.[region].cloud-object-storage.appdomain.cloud
+Developer makes changes to IBM_Synergies_Map.html
+    ↓
+Commits and pushes to GitHub (main branch)
+    ↓
+GitHub Actions workflow automatically triggers
+    ↓
+Deploys HTML file to IBM Cloud Object Storage
+    ↓
+Live website updates within 2-3 minutes
 ```
 
-## Prerequisites
+**Live URL**: https://arrow-ibm-synergies-map.s3-web.eu-gb.cloud-object-storage.appdomain.cloud
 
-- IBM Cloud account (https://cloud.ibm.com)
-- GitHub repository with admin access
-- IBM Cloud CLI (for local testing - optional)
+---
 
-## Part 1: IBM Cloud Object Storage Setup
+## Part 1: IBM Cloud Setup
 
-### Step 1: Create Object Storage Instance
+### Step 1: Create IBM Cloud Account (if needed)
 
-1. Log in to IBM Cloud Console: https://cloud.ibm.com
-2. Navigate to **Catalog** → **Storage** → **Object Storage**
-3. Click **Create**
-4. Configure:
+1. Go to https://cloud.ibm.com
+2. Click **"Create an account"** (or log in if you already have one)
+3. Follow the registration process
+4. Verify your email address
+5. Log in to IBM Cloud Console
+
+### Step 2: Create Object Storage Instance
+
+1. In IBM Cloud Console, click **"Catalog"** in the top navigation
+2. Search for **"Object Storage"**
+3. Click on **"Object Storage"** service
+4. Click **"Create"**
+5. Configure the instance:
    - **Service name**: `synergies-map-storage` (or your preference)
-   - **Resource group**: Default or create new
+   - **Resource group**: Default (or select your preferred group)
    - **Pricing plan**: Standard (pay-as-you-go)
-   - **Location**: 
-     - **Regional**: `eu-gb` (London) - recommended for UK
-     - **Cross Region**: `eu-geo` (Europe) - for higher availability
-5. Click **Create**
-6. Wait for provisioning (30-60 seconds)
+   - **Location**: Select your region (e.g., London for UK)
+6. Click **"Create"**
+7. Wait 30-60 seconds for provisioning to complete
 
-### Step 2: Create Storage Bucket
+### Step 3: Create Storage Bucket
 
-1. In your Object Storage instance, click **Create bucket**
-2. Choose **Quickly get started** → **Custom bucket**
-3. Configure:
-   - **Bucket name**: `ibm-synergies-map` (must be globally unique)
-     - If taken, try: `arrow-ibm-synergies-map` or `synergies-map-[your-initials]`
-   - **Resiliency**: Regional (eu-gb) or Cross Region (eu-geo)
-   - **Location**: eu-gb (London) or eu-geo (Europe)
-   - **Storage class**: Standard
-4. Click **Create bucket**
+1. Once the Object Storage instance is created, click **"Create bucket"**
+2. Select **"Quickly get started"** → **"Custom bucket"**
+3. Configure the bucket:
+   - **Bucket name**: `arrow-ibm-synergies-map` (must be globally unique)
+     - If taken, try: `synergies-map-[your-company]` or `synergies-map-[your-initials]`
+   - **Resiliency**: Regional
+   - **Location**: London (eu-gb) or your preferred region
+   - **Storage class**: Smart Tier (free-tier enabled) - recommended
+4. Leave other options as default
+5. Click **"Create bucket"**
 
-### Step 3: Configure Public Access
+**Important**: Note your bucket name and region - you'll need these later!
 
-1. In your bucket, go to **Access policies** tab
-2. Click **Public access**
-3. Enable **Public access** toggle
-4. Confirm the warning (this is intentional for website hosting)
+### Step 4: Enable Public Access
 
-### Step 4: Enable Static Website Hosting
+1. Click on your bucket name to open it
+2. Go to the **"Permissions"** tab
+3. Find the **"Public access"** section
+4. Click **"Create access policy"**
+5. Keep **"Content Reader"** role selected
+6. Click **"Create"**
+7. Confirm the warning (this is intentional for website hosting)
 
-1. In your bucket, go to **Configuration** tab
-2. Scroll to **Static website hosting**
-3. Click **Edit**
-4. Enable static website hosting
-5. Configure:
+### Step 5: Enable Static Website Hosting
+
+1. Go to the **"Data management"** tab
+2. Find the **"Static website hosting"** section
+3. Click **"Create"**
+4. Configure:
    - **Index document**: `index.html`
-   - **Error document**: `index.html` (SPA fallback)
-6. Click **Save**
-7. **Note the public endpoint URL** - it will look like:
-   ```
-   https://ibm-synergies-map.s3.eu-gb.cloud-object-storage.appdomain.cloud
-   ```
+   - **Error document**: `index.html` (for single-page app fallback)
+5. Click **"Save"**
 
-### Step 5: Create Service Credentials
+**Your public endpoint URL will appear** - it looks like:
+```
+https://[bucket-name].s3-web.[region].cloud-object-storage.appdomain.cloud
+```
 
-1. Go back to your Object Storage instance (not the bucket)
-2. Click **Service credentials** in left menu
-3. Click **New credential**
+**Save this URL** - this is your live website address!
+
+### Step 6: Create Service Credentials
+
+These credentials allow GitHub Actions to deploy files automatically.
+
+1. Go back to your Object Storage instance (click "Cloud Object Storage" in left sidebar)
+2. Click **"Service credentials"** in the left menu
+3. Click **"New credential"**
 4. Configure:
    - **Name**: `github-actions-deploy`
    - **Role**: Writer
-   - **Include HMAC Credential**: ✓ (checked)
-5. Click **Add**
-6. Click **View credentials** and copy the entire JSON
-7. **Save these credentials securely** - you'll need:
+   - **Control by Secrets Manager**: Toggle OFF (turn it off)
+   - **Include HMAC Credential**: Toggle ON (turn it on)
+5. Click **"Add"**
+6. Click on the credential name to view it
+7. **Copy the entire JSON** - you'll need these values:
    - `apikey`
-   - `resource_instance_id` (this is your CRN)
+   - `resource_instance_id` (this is the CRN)
 
-## Part 2: GitHub Repository Setup
+**Keep these credentials secure** - treat them like passwords!
 
-### Step 6: Add GitHub Secrets
+---
 
-1. Go to your GitHub repository
-2. Navigate to **Settings** → **Secrets and variables** → **Actions**
-3. Click **New repository secret**
-4. Add the following secrets:
+## Part 2: GitHub Configuration
 
-**Secret 1: IBM_CLOUD_API_KEY**
-- Name: `IBM_CLOUD_API_KEY`
-- Value: The `apikey` from your service credentials JSON
+### Step 7: Add GitHub Secrets
 
-**Secret 2: COS_INSTANCE_CRN**
-- Name: `COS_INSTANCE_CRN`
-- Value: The `resource_instance_id` from your service credentials JSON
+GitHub Secrets store sensitive information securely for use in automated workflows.
 
-**Secret 3: COS_BUCKET_NAME**
-- Name: `COS_BUCKET_NAME`
-- Value: Your bucket name (e.g., `ibm-synergies-map`)
+1. Go to your GitHub repository: https://github.com/[your-org]/synergies-map
+2. Click **"Settings"** (top right)
+3. In left sidebar: **"Secrets and variables"** → **"Actions"**
+4. Click **"New repository secret"**
 
-**Secret 4: COS_REGION**
-- Name: `COS_REGION`
-- Value: Your region (e.g., `eu-gb` or `eu-geo`)
+**Add these 4 secrets one at a time:**
 
-### Step 7: Verify GitHub Actions Workflow
+#### Secret 1: IBM_CLOUD_API_KEY
+- **Name**: `IBM_CLOUD_API_KEY`
+- **Value**: The `apikey` value from your service credentials JSON
+- Click **"Add secret"**
 
-The workflow file `.github/workflows/deploy.yml` should already be in your repository. If not, it will be created in the next steps.
+#### Secret 2: COS_INSTANCE_CRN
+- Click **"New repository secret"**
+- **Name**: `COS_INSTANCE_CRN`
+- **Value**: The `resource_instance_id` value from your service credentials JSON
+- Click **"Add secret"**
 
-## Part 3: First Deployment
+#### Secret 3: COS_BUCKET_NAME
+- Click **"New repository secret"**
+- **Name**: `COS_BUCKET_NAME`
+- **Value**: Your bucket name (e.g., `arrow-ibm-synergies-map`)
+- Click **"Add secret"**
 
-### Step 8: Trigger Deployment
+#### Secret 4: COS_REGION
+- Click **"New repository secret"**
+- **Name**: `COS_REGION`
+- **Value**: Your region code (e.g., `eu-gb` for London)
+- Click **"Add secret"**
 
-1. Commit and push any change to the `main` branch, or
-2. Go to **Actions** tab in GitHub
-3. Select **Deploy to IBM Cloud Object Storage** workflow
-4. Click **Run workflow** → **Run workflow**
+**Verify**: You should now see 4 secrets listed in the Actions secrets page.
+
+---
+
+## Part 3: Deploy and Verify
+
+### Step 8: Trigger First Deployment
+
+The GitHub Actions workflow file (`.github/workflows/deploy.yml`) is already in the repository. Any push to the main branch will trigger automatic deployment.
+
+**Option A: Make a small change**
+```bash
+# Edit any file (e.g., add a comment to README.md)
+git add .
+git commit -m "test: trigger initial deployment"
+git push origin main
+```
+
+**Option B: Manual trigger**
+1. Go to **"Actions"** tab in GitHub
+2. Click **"Deploy to IBM Cloud Object Storage"**
+3. Click **"Run workflow"** → **"Run workflow"**
 
 ### Step 9: Monitor Deployment
 
-1. Click on the running workflow
-2. Watch the deployment steps:
-   - ✓ Checkout code
+1. Go to **"Actions"** tab in your GitHub repository
+2. Click on the running workflow
+3. Watch the deployment steps:
+   - ✓ Checkout repository
    - ✓ Install IBM Cloud CLI
    - ✓ Authenticate to IBM Cloud
-   - ✓ Deploy HTML file
-   - ✓ Deployment complete
+   - ✓ Deploy HTML file to Object Storage
+   - ✓ Display public URL
 
-### Step 10: Verify Deployment
+**Deployment takes ~20-30 seconds**
+
+### Step 10: Verify Live Site
 
 1. Open your public endpoint URL in a browser:
    ```
-   https://[your-bucket-name].s3.[region].cloud-object-storage.appdomain.cloud
+   https://[your-bucket-name].s3-web.[region].cloud-object-storage.appdomain.cloud
    ```
-2. The IBM Synergies Map should load and function correctly
-3. Test:
-   - Click products to see connections
+2. The IBM Synergies Map should load completely
+3. Test functionality:
+   - Click product nodes to see connections
    - Toggle light/dark mode
-   - Search functionality
-   - Responsive layout
+   - Use search functionality
+   - Test responsive layout (resize browser)
 
-## Part 4: Custom Domain (Optional)
+**If everything works: Congratulations! 🎉 Your deployment is complete!**
 
-### Step 11: Set Up Custom Domain with IBM Cloud Internet Services
-
-If you want a custom domain like `synergies.arrow-ecs.co.uk`:
-
-1. Create IBM Cloud Internet Services (CIS) instance
-2. Add your domain to CIS
-3. Update DNS nameservers at your registrar
-4. Create CNAME record pointing to Object Storage endpoint
-5. Enable SSL/TLS (automatic with CIS)
-
-**Detailed CIS setup guide**: https://cloud.ibm.com/docs/cis
+---
 
 ## Ongoing Operations
 
-### Automatic Deployments
+### Making Updates
 
-Every push to the `main` branch automatically triggers deployment:
+Every time you push changes to the main branch, the site automatically updates:
 
 ```bash
+# 1. Edit IBM_Synergies_Map.html locally
+# 2. Test by opening the file in your browser
+# 3. Commit and push
 git add IBM_Synergies_Map.html
 git commit -m "feat: add new product connection"
 git push origin main
-# Deployment happens automatically within 2-3 minutes
+
+# 4. GitHub Actions automatically deploys
+# 5. Live site updates in 2-3 minutes
 ```
 
-### Manual Deployment
+### Viewing Deployment History
 
-Trigger manually via GitHub Actions UI:
-1. Go to **Actions** tab
-2. Select workflow
-3. Click **Run workflow**
+- Go to **"Actions"** tab in GitHub
+- See all past deployments with timestamps
+- Click any deployment to see detailed logs
 
-### Rollback
+### Rolling Back Changes
 
-To rollback to a previous version:
-
-1. In Object Storage bucket, go to **Objects** tab
-2. Find `IBM_Synergies_Map.html`
-3. Click **⋮** → **View versions**
-4. Select previous version → **Restore**
-
-Or via Git:
+**Method 1: Git Revert**
 ```bash
 git revert HEAD
 git push origin main
 # Automatically deploys previous version
 ```
 
-### Monitoring
+**Method 2: Object Storage Console**
+1. Go to IBM Cloud → Object Storage → Your bucket
+2. Find `IBM_Synergies_Map.html`
+3. Click **"⋮"** → **"View versions"**
+4. Select previous version → **"Restore"**
 
-**View deployment history:**
-- GitHub: **Actions** tab shows all deployments
-
-**View access logs:**
-- IBM Cloud: Object Storage → Bucket → **Activity Tracker**
-
-**Check costs:**
-- IBM Cloud: **Manage** → **Billing and usage**
+---
 
 ## Troubleshooting
 
 ### Deployment Fails: Authentication Error
 
-**Problem**: `Error: Unable to authenticate`
+**Symptom**: Workflow fails at "Authenticate to IBM Cloud" step
 
-**Solution**:
-1. Verify `IBM_CLOUD_API_KEY` secret is correct
-2. Check API key hasn't expired
-3. Ensure service credentials have Writer role
+**Solutions**:
+1. Verify `IBM_CLOUD_API_KEY` secret is correct (no extra spaces)
+2. Check API key hasn't expired (regenerate if needed)
+3. Ensure service credentials have "Writer" role
 
 ### Deployment Fails: Bucket Not Found
 
-**Problem**: `Error: Bucket not found`
+**Symptom**: Error message "Bucket not found"
 
-**Solution**:
-1. Verify `COS_BUCKET_NAME` secret matches actual bucket name
-2. Check `COS_REGION` is correct
-3. Ensure bucket exists in Object Storage
+**Solutions**:
+1. Verify `COS_BUCKET_NAME` secret matches actual bucket name exactly
+2. Check `COS_REGION` is correct (e.g., `eu-gb` not `eu-gb-1`)
+3. Ensure bucket exists in Object Storage console
 
-### Website Shows 404
+### Website Shows 404 Not Found
 
-**Problem**: URL returns 404 Not Found
+**Symptom**: URL returns "404 Not Found"
 
-**Solution**:
-1. Verify static website hosting is enabled
+**Solutions**:
+1. Verify static website hosting is enabled in bucket settings
 2. Check public access is enabled
-3. Ensure `index.html` exists in bucket
+3. Ensure `index.html` exists in bucket (check Objects tab)
 4. Wait 2-3 minutes for DNS propagation
+5. Try the direct file URL: `[bucket-url]/IBM_Synergies_Map.html`
 
-### Website Shows Access Denied
+### Website Shows 403 Forbidden
 
-**Problem**: URL returns 403 Forbidden
+**Symptom**: URL returns "403 Forbidden" or "Access Denied"
 
-**Solution**:
-1. Enable public access on bucket
-2. Check bucket policy allows public read
-3. Verify object ACL is public-read
+**Solutions**:
+1. Enable public access on bucket (Permissions tab)
+2. Verify access policy includes "Content Reader" role
+3. Check bucket policy allows public read access
 
-### Changes Not Appearing
+### Changes Not Appearing on Live Site
 
-**Problem**: Pushed changes but website unchanged
+**Symptom**: Pushed changes but website looks the same
 
-**Solution**:
-1. Check GitHub Actions completed successfully
-2. Clear browser cache (Ctrl+Shift+R / Cmd+Shift+R)
-3. Check cache-control headers (may need to wait up to 1 hour)
-4. Verify correct file was uploaded in Object Storage
+**Solutions**:
+1. Check GitHub Actions completed successfully (green checkmark)
+2. Hard refresh browser: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
+3. Clear browser cache completely
+4. Wait up to 1 hour for cache expiration
+5. Verify correct file was uploaded in Object Storage console
 
-## Cost Optimization
+### Workflow Runs But Nothing Happens
 
-### Expected Costs (Low Usage)
+**Symptom**: Green checkmark but site doesn't update
 
-- **Storage**: 0.5MB × $0.023/GB/month = **$0.00001/month**
-- **Bandwidth**: First 5GB free, then $0.09/GB
-- **Requests**: $0.004/1000 requests
-- **Total**: **< $1/month** for typical usage
+**Solutions**:
+1. Check the workflow logs for the actual URL being deployed to
+2. Verify you're checking the correct URL (not a cached version)
+3. Check Object Storage console to see if file was actually uploaded
+4. Look at file modification timestamp in Object Storage
 
-### Cost Reduction Tips
+---
 
-1. **Use Smart Tier storage class** - automatically moves to cheaper storage
-2. **Enable compression** - reduces bandwidth costs
-3. **Set cache headers** - reduces request count (already configured)
-4. **Monitor usage** - set up billing alerts in IBM Cloud
+## Cost Management
+
+### Expected Costs
+
+For typical usage (internal tool, low traffic):
+
+| Component | Cost | Notes |
+|-----------|------|-------|
+| Storage | ~$0.00001/month | 0.5MB file is negligible |
+| Bandwidth (first 5GB) | Free | Likely covers all usage |
+| Bandwidth (additional) | $0.09/GB | Only if high traffic |
+| API Requests | $0.004/1000 | Minimal for static hosting |
+
+**Total expected cost: < $1/month**
+
+### Monitoring Costs
+
+1. Go to IBM Cloud Console
+2. Click **"Manage"** → **"Billing and usage"**
+3. View current month's charges
+4. Set up billing alerts (recommended):
+   - Go to **"Manage"** → **"Billing and usage"** → **"Spending notifications"**
+   - Set alert threshold (e.g., $5/month)
+
+### Cost Optimization Tips
+
+1. **Use Smart Tier storage** (already configured) - automatically optimizes costs
+2. **Cache headers** (already configured) - reduces request count
+3. **Monitor usage** - check monthly to ensure no unexpected traffic
+4. **Delete old versions** - if you enable versioning, clean up old files periodically
+
+---
 
 ## Security Best Practices
 
-1. **Rotate API keys** every 90 days
-2. **Use least privilege** - Writer role only for deployment
-3. **Enable versioning** - allows rollback if needed
-4. **Monitor access logs** - detect unusual activity
-5. **Keep secrets secure** - never commit to Git
+1. **Rotate API keys every 90 days**
+   - Create new service credentials
+   - Update GitHub secrets
+   - Delete old credentials
 
-## Support Resources
+2. **Use least privilege**
+   - Service credentials only have "Writer" role (not Manager)
+   - Only necessary team members have GitHub admin access
 
-- **IBM Cloud Docs**: https://cloud.ibm.com/docs/cloud-object-storage
-- **GitHub Actions Docs**: https://docs.github.com/actions
-- **IBM Cloud Support**: https://cloud.ibm.com/unifiedsupport/supportcenter
+3. **Monitor access logs**
+   - Enable Activity Tracker in IBM Cloud (optional)
+   - Review for unusual activity
 
-## Quick Reference
+4. **Keep secrets secure**
+   - Never commit credentials to Git
+   - Don't share API keys via email or chat
+   - Use GitHub secrets for all sensitive data
 
-### Useful Commands (Local Testing)
+5. **Enable versioning** (optional)
+   - Allows rollback if files are accidentally overwritten
+   - Go to bucket → Configuration → Object versioning
 
-```bash
-# Install IBM Cloud CLI
-curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+---
 
-# Login
-ibmcloud login --apikey YOUR_API_KEY -r eu-gb
+## Advanced: Custom Domain (Optional)
 
-# Configure COS
-ibmcloud plugin install cloud-object-storage
-ibmcloud cos config crn --crn YOUR_COS_CRN
+If you want a custom domain like `synergies.arrow-ecs.co.uk`:
 
-# Upload file manually
-ibmcloud cos upload \
-  --bucket ibm-synergies-map \
-  --key index.html \
-  --file IBM_Synergies_Map.html \
-  --content-type "text/html"
+### Requirements
+- Domain name (owned by your organization)
+- IBM Cloud Internet Services (CIS) instance
 
-# List bucket contents
-ibmcloud cos list-objects --bucket ibm-synergies-map
-```
+### Setup Steps
+1. Create IBM Cloud Internet Services instance
+2. Add your domain to CIS
+3. Update DNS nameservers at your domain registrar
+4. Create CNAME record pointing to Object Storage endpoint
+5. Enable SSL/TLS (automatic with CIS)
+
+**Detailed guide**: https://cloud.ibm.com/docs/cis
+
+---
+
+## Reference Information
 
 ### Important URLs
 
 - **IBM Cloud Console**: https://cloud.ibm.com
 - **Object Storage Docs**: https://cloud.ibm.com/docs/cloud-object-storage
-- **Your Bucket URL**: `https://[bucket-name].s3.[region].cloud-object-storage.appdomain.cloud`
+- **GitHub Actions Docs**: https://docs.github.com/actions
+- **Live Site**: https://arrow-ibm-synergies-map.s3-web.eu-gb.cloud-object-storage.appdomain.cloud
+
+### Useful Commands (Local Testing)
+
+```bash
+# Install IBM Cloud CLI (one-time)
+curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+
+# Login to IBM Cloud
+ibmcloud login --apikey YOUR_API_KEY
+
+# Install Object Storage plugin
+ibmcloud plugin install cloud-object-storage
+
+# Configure COS
+ibmcloud cos config crn --crn YOUR_COS_CRN
+ibmcloud cos config region --region eu-gb
+
+# Upload file manually
+ibmcloud cos upload \
+  --bucket arrow-ibm-synergies-map \
+  --key index.html \
+  --file IBM_Synergies_Map.html \
+  --content-type "text/html"
+
+# List bucket contents
+ibmcloud cos list-objects --bucket arrow-ibm-synergies-map
+```
+
+### GitHub Actions Workflow Location
+
+The deployment workflow is defined in:
+```
+.github/workflows/deploy.yml
+```
+
+This file controls:
+- When deployments trigger (push to main, manual trigger)
+- What steps are executed (install CLI, authenticate, deploy)
+- What secrets are used (API key, CRN, bucket name, region)
+
+---
+
+## Getting Help
+
+### Internal Support
+- Check this guide first for common issues
+- Review GitHub Actions logs for specific error messages
+- Ask team members who have deployed before
+
+### External Resources
+- **IBM Cloud Support**: https://cloud.ibm.com/unifiedsupport/supportcenter
+- **IBM Cloud Docs**: https://cloud.ibm.com/docs
+- **GitHub Community**: https://github.community
+
+### Reporting Issues
+
+If you encounter problems not covered in this guide:
+1. Document the exact error message
+2. Note which step you were on
+3. Take screenshots if helpful
+4. Create an issue in the GitHub repository
 
 ---
 
 **Last Updated**: 2026-06-19  
-**Version**: 1.0  
-**Maintained by**: Arrow ECS UK
+**Maintained by**: Arrow ECS UK  
+**Questions?** Contact the repository maintainers
