@@ -22,10 +22,10 @@ jobs:
       - name: Authenticate to IBM Cloud
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
-          COS_REGION: ${{ secrets.COS_REGION }}
         run: |
-          ibmcloud login --apikey "$IBM_CLOUD_API_KEY" -r "$COS_REGION" --no-region
+          ibmcloud login --apikey "$IBM_CLOUD_API_KEY" --no-region
           ibmcloud cos config crn --crn "${{ secrets.COS_INSTANCE_CRN }}" --force
+          ibmcloud cos config region --region "${{ secrets.COS_REGION }}"
       
       - name: Deploy HTML file to Object Storage
         env:
