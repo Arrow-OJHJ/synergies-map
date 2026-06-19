@@ -26,9 +26,13 @@ This single-page HTML application helps Arrow ECS UK partners identify synergies
 - **Connection Justifications**: Detailed explanations of why and how products integrate together
 - **Enhanced Search**: Search across product names, descriptions, questions, and metadata
 
-## Usage
+## Live Application
 
-Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser. No installation or dependencies required.
+🌐 **Access the live application**: [IBM Synergies Map](https://your-bucket-name.s3.your-region.cloud-object-storage.appdomain.cloud)
+
+The application is hosted on IBM Cloud Object Storage and automatically updates when changes are pushed to the main branch.
+
+## Usage
 
 **Interaction:**
 - Click any product node to highlight its connections and view detailed information
@@ -37,6 +41,9 @@ Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser.
 - Use the search bar to find products by name, description, or discovery questions
 - Click play categories to filter products by strategic play
 - Use the "Clear selection" button to reset the view
+
+**Local Development:**
+Simply open [`IBM_Synergies_Map.html`](IBM_Synergies_Map.html) in a web browser. No installation or dependencies required.
 
 ## Product Categories
 
@@ -83,3 +90,40 @@ This version represents a major enhancement developed in collaboration with IBM 
 **Version**: 3.0
 **Maintained by**: Arrow ECS UK
 **Last Updated**: 2026
+
+## Deployment & Development
+
+### Hosting
+This application is hosted on **IBM Cloud Object Storage** with automatic CI/CD deployment via GitHub Actions.
+
+- **Deployment Guide**: See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup instructions
+- **Development Workflow**: See [DEVELOPMENT.md](DEVELOPMENT.md) for development best practices
+- **CI/CD Pipeline**: Automatic deployment on push to `main` branch
+
+### Quick Start for Developers
+
+```bash
+# Clone repository
+git clone https://github.com/your-org/synergies-map.git
+cd synergies-map
+
+# Open HTML file in browser for local testing
+open IBM_Synergies_Map.html
+
+# Make changes, commit, and push to trigger deployment
+git add .
+git commit -m "feat: your changes"
+git push origin main
+```
+
+### Repository Structure
+
+```
+synergies-map/
+├── .github/workflows/deploy.yml  # CI/CD pipeline
+├── IBM_Synergies_Map.html        # Main application
+├── README.md                     # This file
+├── DEPLOYMENT.md                 # Deployment guide
+├── DEVELOPMENT.md                # Development workflow
+└── .gitignore                    # Git exclusions
+```
