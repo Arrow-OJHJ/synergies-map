@@ -1445,11 +1445,53 @@ PRODUCTS.forEach(p => { productMap[p.id] = p; });
 const adjacency = {};
 PRODUCTS.forEach(p => { adjacency[p.id] = []; });
 CONNECTIONS.forEach(([from, to, play, explanation]) => {
-  adjacency[from].push({ to, play, explanation });
-  adjacency[to].push({ to: from, play, explanation });
+  adjacency[from].push({ from, to, play, explanation });
+  adjacency[to].push({ from: to, to: from, play, explanation });
 });
 
-// Data validation removed for production
+// Data validation
+function validateData() {
+  const errors = [];
+  
+  // Validate products have required fields
+  PRODUCTS.forEach(p => {
+    if (!p.id || !p.label || !p.cat || !p.plays || !Array.isArray(p.plays)) {
+      errors.push(`Product missing required fields: ${p.id || 'unknown'}`);
+    }
+  });
+  
+  // Validate connections reference valid products
+  CONNECTIONS.forEach(([from, to, play, explanation], idx) => {
+    if (!productMap[from]) {
+      errors.push(`Connection ${idx}: invalid 'from' ID: ${from}`);
+    }
+    if (!productMap[to]) {
+      errors.push(`Connection ${idx}: invalid 'to' ID: ${to}`);
+    }
+    if (!PLAYS[play]) {
+      errors.push(`Connection ${idx}: invalid play ID: ${play}`);
+    }
+  });
+  
+  // Validate categories reference valid plays
+  CATEGORIES.forEach(cat => {
+    if (!PLAYS[cat.playId]) {
+      errors.push(`Category ${cat.id}: invalid playId: ${cat.playId}`);
+    }
+  });
+  
+  if (errors.length > 0) {
+    console.error('Data validation errors:', errors);
+    return false;
+  }
+  
+  return true;
+}
+
+// Run validation
+if (!validateData()) {
+  console.warn('Data validation failed - some features may not work correctly');
+}
 
 let selectedId = null;
 let activePlayFilter = null;
@@ -1870,7 +1912,12 @@ function drawConnections(activeId = null) {
       path.setAttribute('stroke-width', '1');
       path.setAttribute('opacity', '0.35');
     } else if (isActive && !isFiltered) {
-      const pathLength = path.getTotalLength?.() || 1000;
+      let pathLength = 1000;
+      try {
+        pathLength = path.getTotalLength() || 1000;
+      } catch (e) {
+        console.warn('Could not calculate path length:', e);
+      }
       path.setAttribute('stroke', color);
       path.setAttribute('stroke-width', '2');
       path.setAttribute('opacity', '0.95');
@@ -1901,10 +1948,19 @@ function handleClick(id) {
   }
 
   selectedId = id;
+  
   // Clear any active play filter
   if (activePlayFilter) {
     activePlayFilter = null;
     document.querySelectorAll('.legend-chip').forEach(c => c.classList.remove('is-active'));
+  }
+  
+  // Clear any active search state
+  if (searchQuery) {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.classList.remove('is-visible');
+    searchResults.textContent = '';
   }
 
   const product = productMap[id];
@@ -2083,9 +2139,11 @@ function applyTweaks() {
       btn.classList.toggle('is-active', btn.dataset.value === String(tweakState[key]));
     });
   });
-  // Lane fill change requires recompute
+  // Lane fill change requires recompute - cancel any pending resize
+  clearTimeout(resizeTimer);
   computeLayout();
   if (selectedId) drawConnections(selectedId);
+  else if (activePlayFilter) drawConnections();
   else drawConnections();
 }
 
@@ -2138,14 +2196,18 @@ function init() {
 }
 
 let resizeTimer;
-window.addEventListener('resize', () => {
+
+function scheduleLayoutUpdate() {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     computeLayout();
     if (selectedId) drawConnections(selectedId);
+    else if (activePlayFilter) drawConnections();
     else drawConnections();
   }, 80);
-});
+}
+
+window.addEventListener('resize', scheduleLayoutUpdate);
 
 requestAnimationFrame(() => requestAnimationFrame(init));
 </script>
