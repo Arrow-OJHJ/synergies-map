@@ -150,11 +150,6 @@ The dashboard shows:
 - Browser and device statistics
 - Geographic distribution
 
-### Tracking Started
-
-- **Date**: 2026-06-22
-- **Service**: GoatCounter (https://www.goatcounter.com)
-
 ### Setup Instructions
 
 **To enable tracking, you need to create a free GoatCounter account:**
@@ -211,5 +206,4 @@ synergies-map/
 
 ---
 
-**Maintained by**: Arrow ECS UK  
-**Last Updated**: 2026-06-19
+**Maintained by**: Arrow ECS UK
