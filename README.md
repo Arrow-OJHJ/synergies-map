@@ -117,6 +117,57 @@ Every push to the `main` branch triggers automatic deployment:
 - **Cost**: < $1/month for typical usage
 - **Region**: London (eu-gb)
 
+## Analytics & Usage Tracking
+
+### Overview
+
+This project uses **CountAPI** for simple, privacy-friendly page view tracking. The tracking is:
+- **Anonymous**: No cookies, no personal data, GDPR compliant
+- **Lightweight**: Single line of code, no external dependencies
+- **Free**: No cost, no signup required
+
+### What is Tracked
+
+- **Total page views** since tracking began (2026-06-22)
+- No user identification, no geographic data, no session tracking
+- Simply counts each time the page is loaded
+
+### Viewing Page View Count
+
+**Current page views**: Visit this URL in your browser:
+```
+https://api.countapi.xyz/get/arrow-synergies-map/pageviews
+```
+
+This will display a JSON response like: `{"value": 42}` where the number is your total page views.
+
+**Bookmark this URL** for quick access to check your site's traffic.
+
+### Tracking Started
+
+- **Date**: 2026-06-22
+- **Initial count**: 0
+
+### For New Deployments
+
+If you're setting up your own version of this project and want to add tracking:
+
+1. **Choose a unique namespace** for your counter (replace `arrow-synergies-map` with your own identifier)
+2. **Add the tracking code** to your HTML file before the closing `</body>` tag:
+   ```html
+   <script>fetch('https://api.countapi.xyz/hit/your-namespace/pageviews');</script>
+   ```
+3. **View your count** at: `https://api.countapi.xyz/get/your-namespace/pageviews`
+
+### Privacy & Compliance
+
+✅ **No cookies** - No data stored on user devices
+✅ **No personal data** - No IP addresses, no user identification
+✅ **GDPR compliant** - Anonymous counting only
+✅ **No consent required** - Operational analytics exemption applies
+
+---
+
 ## Repository Structure
 
 ```
