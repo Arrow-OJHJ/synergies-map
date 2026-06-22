@@ -121,7 +121,7 @@ Every push to the `main` branch triggers automatic deployment:
 
 ### Overview
 
-This project uses **CountAPI** for simple, privacy-friendly page view tracking. The tracking is:
+This project uses **CounterAPI** for simple, privacy-friendly page view tracking. The tracking is:
 - **Anonymous**: No cookies, no personal data, GDPR compliant
 - **Lightweight**: Single line of code, no external dependencies
 - **Free**: No cost, no signup required
@@ -136,7 +136,7 @@ This project uses **CountAPI** for simple, privacy-friendly page view tracking. 
 
 **Current page views**: Visit this URL in your browser:
 ```
-https://api.countapi.xyz/get/arrow-synergies-map/pageviews
+https://counterapi.dev/api/get/arrow-synergies-map/pageviews
 ```
 
 This will display a JSON response like: `{"value": 42}` where the number is your total page views.
@@ -155,9 +155,9 @@ If you're setting up your own version of this project and want to add tracking:
 1. **Choose a unique namespace** for your counter (replace `arrow-synergies-map` with your own identifier)
 2. **Add the tracking code** to your HTML file before the closing `</body>` tag:
    ```html
-   <script>fetch('https://api.countapi.xyz/hit/your-namespace/pageviews');</script>
+   <script>fetch('https://counterapi.dev/api/hit/your-namespace/pageviews');</script>
    ```
-3. **View your count** at: `https://api.countapi.xyz/get/your-namespace/pageviews`
+3. **View your count** at: `https://counterapi.dev/api/get/your-namespace/pageviews`
 
 ### Privacy & Compliance
 
