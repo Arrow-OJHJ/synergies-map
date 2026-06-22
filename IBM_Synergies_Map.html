@@ -822,12 +822,14 @@
   }
   #footer .footer-hint { color: var(--cds-text-helper); }
 
-  /* SVG path animation */
+  /* SVG path animation - slower, smoother animation */
   @keyframes drawPath {
-    from { stroke-dashoffset: 1000; }
+    from { stroke-dashoffset: var(--path-length, 1000); }
     to   { stroke-dashoffset: 0; }
   }
-  .path-active { animation: drawPath 0.4s ease forwards; }
+  .path-active {
+    animation: drawPath 1.2s ease-out forwards;
+  }
 
   /* ─── Tweaks panel ─── */
   #tweaks-panel {
@@ -1839,12 +1841,37 @@ function drawConnections(activeId = null) {
   }
 
   // Sort so active edges render last (on top)
+  // When activeId is set, also sort by distance from the clicked product for sequential animation
   const sorted = [...uniqueEdges].sort((e1, e2) => {
     if (!activeId) return 0;
     const a = (e1.from === activeId || e1.to === activeId) ? 1 : 0;
     const b = (e2.from === activeId || e2.to === activeId) ? 1 : 0;
-    return a - b;
+    if (a !== b) return a - b;
+    
+    // If both are active connections, sort by distance from origin for staggered animation
+    if (a === 1 && b === 1) {
+      const originProduct = productMap[activeId];
+      if (!originProduct || !originProduct._px) return 0;
+      
+      // Calculate distance to the "other" end of each connection
+      const getOtherEnd = (edge) => edge.from === activeId ? edge.to : edge.from;
+      const target1 = productMap[getOtherEnd(e1)];
+      const target2 = productMap[getOtherEnd(e2)];
+      
+      if (!target1 || !target2 || !target1._px || !target2._px) return 0;
+      
+      const dist1 = Math.hypot(target1._px - originProduct._px, target1._py - originProduct._py);
+      const dist2 = Math.hypot(target2._px - originProduct._px, target2._py - originProduct._py);
+      
+      return dist1 - dist2; // Closer connections animate first
+    }
+    
+    return 0;
   });
+
+  // Track active connections for staggered animation
+  let activeConnectionIndex = 0;
+  const activeConnections = activeId ? sorted.filter(e => e.from === activeId || e.to === activeId) : [];
 
   sorted.forEach(edge => {
     const { from, to, plays } = edge;
@@ -1875,26 +1902,40 @@ function drawConnections(activeId = null) {
       isFiltered = false;
     }
 
+    // Determine if we need to reverse the path direction for animation
+    // We want the animation to always flow FROM the clicked product
+    let shouldReversePath = false;
+    if (activeId && isActive) {
+      // If the path is drawn from 'to' to 'from', but activeId is 'to', we need to reverse
+      shouldReversePath = (from !== activeId);
+    }
+
     let d;
     const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
 
+    // Swap coordinates if we need to reverse the path direction
+    let startX = shouldReversePath ? x2 : x1;
+    let startY = shouldReversePath ? y2 : y1;
+    let endX = shouldReversePath ? x1 : x2;
+    let endY = shouldReversePath ? y1 : y2;
+
     if (tweakState.connStyle === 'ortho') {
       if (sameRow) {
-        const arcH = Math.abs(x2 - x1) * 0.18 + 12;
-        d = `M ${x1} ${y1} L ${x1} ${y1 - arcH} L ${x2} ${y2 - arcH} L ${x2} ${y2}`;
+        const arcH = Math.abs(endX - startX) * 0.18 + 12;
+        d = `M ${startX} ${startY} L ${startX} ${startY - arcH} L ${endX} ${endY - arcH} L ${endX} ${endY}`;
       } else {
-        const my = (y1 + y2) / 2;
-        d = `M ${x1} ${y1} L ${x1} ${my} L ${x2} ${my} L ${x2} ${y2}`;
+        const my = (startY + endY) / 2;
+        d = `M ${startX} ${startY} L ${startX} ${my} L ${endX} ${my} L ${endX} ${endY}`;
       }
     } else {
       if (sameRow) {
-        const mx = (x1 + x2) / 2;
-        const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_FACTOR;
-        d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+        const mx = (startX + endX) / 2;
+        const arcH = Math.abs(endX - startX) * CONFIG.CURVES.ARC_FACTOR;
+        d = `M ${startX} ${startY} C ${mx} ${startY - arcH}, ${mx} ${endY - arcH}, ${endX} ${endY}`;
       } else {
-        const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START;
-        const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END;
-        d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+        const bendX1 = startX + (endX - startX) * CONFIG.CURVES.BEND_START;
+        const bendX2 = startX + (endX - startX) * CONFIG.CURVES.BEND_END;
+        d = `M ${startX} ${startY} C ${bendX1} ${startY}, ${bendX2} ${endY}, ${endX} ${endY}`;
       }
     }
 
@@ -1920,9 +1961,19 @@ function drawConnections(activeId = null) {
       path.setAttribute('opacity', '0.95');
       path.setAttribute('stroke-dasharray', pathLength);
       path.setAttribute('stroke-dashoffset', pathLength);
+      path.style.setProperty('--path-length', pathLength);
+      
+      // Calculate staggered animation delay based on connection order
+      const connectionDelay = activeId ? activeConnectionIndex * 0.15 : 0; // 150ms between each line
+      path.style.animationDelay = `${connectionDelay}s`;
+      
       path.classList.add('path-active');
-      path.getBoundingClientRect();
-      path.setAttribute('stroke-dashoffset', '0');
+      path.getBoundingClientRect(); // Force reflow
+      
+      // Increment counter for next active connection
+      if (activeId && isActive) {
+        activeConnectionIndex++;
+      }
     } else {
       path.setAttribute('stroke', color);
       path.setAttribute('stroke-width', '1');
