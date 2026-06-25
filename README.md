@@ -26,6 +26,3 @@ Every push to `main` triggers automatic deployment; the live site updates in ~2 
 
 For initial setup or re-configuration see [DEPLOYMENT.md](DEPLOYMENT.md).
 
-## Analytics
-
-See [ANALYTICS.md](ANALYTICS.md).

@@ -9,16 +9,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Install IBM Cloud CLI
         run: |
           curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
           ibmcloud plugin install cloud-object-storage -f
-      
+
       - name: Authenticate to IBM Cloud
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
@@ -26,58 +26,21 @@ jobs:
           ibmcloud login --apikey "$IBM_CLOUD_API_KEY" --no-region
           ibmcloud cos config crn --crn "${{ secrets.COS_INSTANCE_CRN }}" --force
           ibmcloud cos config region --region "${{ secrets.COS_REGION }}"
-      
-      - name: Deploy HTML file to Object Storage
+
+      - name: Deploy to Object Storage
         env:
           COS_BUCKET_NAME: ${{ secrets.COS_BUCKET_NAME }}
         run: |
-          echo "📦 Deploying IBM_Synergies_Map.html to bucket: $COS_BUCKET_NAME"
-          
-          # Upload main HTML file as index.html (default document)
           ibmcloud cos upload \
             --bucket "$COS_BUCKET_NAME" \
             --key index.html \
             --file IBM_Synergies_Map.html \
             --content-type "text/html; charset=utf-8" \
             --cache-control "public, max-age=3600, must-revalidate"
-          
-          # Also upload with original filename for direct access
+
           ibmcloud cos upload \
             --bucket "$COS_BUCKET_NAME" \
             --key IBM_Synergies_Map.html \
             --file IBM_Synergies_Map.html \
             --content-type "text/html; charset=utf-8" \
             --cache-control "public, max-age=3600, must-revalidate"
-          
-          echo "✅ Deployment successful!"
-      
-      - name: Display public URL
-        env:
-          COS_BUCKET_NAME: ${{ secrets.COS_BUCKET_NAME }}
-          COS_REGION: ${{ secrets.COS_REGION }}
-        run: |
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "🌐 Your site is now live at:"
-          echo ""
-          echo "   https://$COS_BUCKET_NAME.s3.$COS_REGION.cloud-object-storage.appdomain.cloud"
-          echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo ""
-          echo "📝 Note: Changes may take 1-2 minutes to propagate due to caching."
-          echo "    Clear your browser cache (Ctrl+Shift+R) if you don't see updates."
-      
-      - name: Deployment summary
-        run: |
-          echo "### 🚀 Deployment Complete" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Status**: ✅ Success" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Files deployed**:" >> $GITHUB_STEP_SUMMARY
-          echo "- \`index.html\` (default document)" >> $GITHUB_STEP_SUMMARY
-          echo "- \`IBM_Synergies_Map.html\` (direct access)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Public URL**: https://${{ secrets.COS_BUCKET_NAME }}.s3.${{ secrets.COS_REGION }}.cloud-object-storage.appdomain.cloud" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Deployed at**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-
-# Made with Bob
