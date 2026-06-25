@@ -914,6 +914,327 @@
     background: #f4f4f4;
     color: #161616;
   }
+  /* ═══════════════════════════════════════════════════════
+     MOBILE STYLES  (≤ 768px)
+     All rules below are additive — zero impact on desktop.
+     ═══════════════════════════════════════════════════════ */
+
+  /* ── On mobile: hide the desktop chrome ── */
+  @media (max-width: 768px) {
+    body { overflow: auto; }
+
+    /* Hide desktop-only elements */
+    .cds-shell__bar2,
+    #main,
+    #footer { display: none !important; }
+
+    /* Tighten the top bar */
+    .cds-shell__bar1 {
+      padding: 0 12px;
+      height: 48px;
+    }
+    .cds-shell__product {
+      font-size: 12px;
+    }
+    .cds-shell__meta-text { display: none; }
+
+    /* ── Mobile layout wrapper ── */
+    #mobile-view {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 48px);
+      background: var(--cds-background);
+    }
+
+    /* ── Mobile search bar ── */
+    #mobile-search-bar {
+      padding: 8px 12px;
+      background: var(--cds-background);
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #mobile-search-bar .search-container {
+      flex: 1;
+      min-width: 0;
+    }
+    #mobile-search-bar .search-input {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* ── Mobile legend (horizontal scroll) ── */
+    #mobile-legend {
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 12px;
+      gap: 6px;
+      background: var(--cds-background);
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      scrollbar-width: none;
+    }
+    #mobile-legend::-webkit-scrollbar { display: none; }
+
+    .mobile-legend-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--cds-layer-01);
+      border: 1px solid var(--cds-border-subtle-02);
+      color: var(--cds-text-secondary);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background-color 0.11s, color 0.11s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-legend-chip .dot {
+      width: 8px; height: 8px;
+      flex-shrink: 0;
+    }
+    .mobile-legend-chip.is-active {
+      background: var(--cds-background-selected);
+      color: var(--cds-text-primary);
+      border-bottom-color: var(--legend-color, var(--cds-interactive));
+      border-bottom-width: 2px;
+    }
+
+    /* ── Mobile search results count ── */
+    #mobile-search-results {
+      padding: 4px 12px 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      min-height: 18px;
+    }
+
+    /* ── Accordion list ── */
+    #mobile-accordion {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mob-lane {
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+    }
+
+    .mob-lane-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 16px;
+      height: 52px;
+      background: var(--cds-layer-01);
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.11s;
+    }
+    .mob-lane-header:active { background: var(--cds-background-active); }
+
+    .mob-lane-dot {
+      width: 10px; height: 10px;
+      flex-shrink: 0;
+    }
+
+    .mob-lane-title {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cds-text-primary);
+      letter-spacing: 0.01em;
+    }
+
+    .mob-lane-count {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      background: var(--cds-background);
+      border: 1px solid var(--cds-border-subtle-02);
+      padding: 2px 7px;
+      flex-shrink: 0;
+    }
+
+    .mob-lane-chevron {
+      font-size: 14px;
+      color: var(--cds-icon-secondary);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+    .mob-lane.is-open .mob-lane-chevron { transform: rotate(90deg); }
+
+    .mob-lane-body {
+      display: none;
+      background: var(--cds-background);
+      border-top: 1px solid var(--cds-border-subtle-01);
+    }
+    .mob-lane.is-open .mob-lane-body { display: block; }
+
+    /* Product cards inside accordion */
+    .mob-product-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: none;
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      background: var(--cds-background);
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      min-height: 52px;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.11s;
+    }
+    .mob-product-card:last-child { border-bottom: none; }
+    .mob-product-card:active { background: var(--cds-background-active); }
+    .mob-product-card.dimmed { opacity: 0.25; }
+    .mob-product-card.highlighted { background: var(--cds-background-hover); }
+
+    .mob-product-accent {
+      width: 3px;
+      align-self: stretch;
+      flex-shrink: 0;
+      background: var(--node-color, var(--cds-border-strong-01));
+      min-height: 24px;
+    }
+
+    .mob-product-label {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cds-text-primary);
+      line-height: 1.3;
+    }
+
+    .mob-product-conns {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .mob-product-arrow {
+      font-size: 16px;
+      color: var(--cds-icon-secondary);
+      flex-shrink: 0;
+    }
+
+    /* ── Bottom drawer ── */
+    #mob-drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+    }
+    #mob-drawer-overlay.is-open { display: block; }
+
+    #mob-drawer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-height: 88vh;
+      background: var(--cds-layer-01);
+      border-top: 1px solid var(--cds-border-subtle-02);
+      z-index: 201;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    #mob-drawer.is-open { transform: translateY(0); }
+
+    #mob-drawer-handle-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0 6px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    #mob-drawer-handle-bar::before {
+      content: '';
+      display: block;
+      width: 36px; height: 4px;
+      background: var(--cds-border-subtle-02);
+      border-radius: 2px;
+    }
+
+    #mob-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 12px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+    }
+    #mob-drawer-title {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--cds-text-primary);
+    }
+    #mob-drawer-close {
+      width: 36px; height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid var(--cds-border-subtle-02);
+      color: var(--cds-icon-secondary);
+      font-size: 20px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #mob-drawer-close:active { background: var(--cds-background-active); }
+
+    #mob-drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 16px;
+    }
+    #mob-drawer-body::-webkit-scrollbar { width: 4px; }
+    #mob-drawer-body::-webkit-scrollbar-thumb { background: var(--cds-border-subtle-02); }
+
+    /* Reuse sidebar styles inside drawer, but tweak a few things for mobile */
+    #mob-drawer-body .sb-product-name { font-size: 18px; }
+    #mob-drawer-body .conn-row { min-height: 52px; }
+
+    /* ── Mobile footer hint ── */
+    #mobile-footer {
+      padding: 10px 16px;
+      background: var(--cds-background);
+      border-top: 1px solid var(--cds-border-subtle-01);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cds-text-helper);
+      text-align: center;
+      flex-shrink: 0;
+    }
+  }
+
+  /* ── On desktop: ensure mobile view is hidden ── */
+  @media (min-width: 769px) {
+    #mobile-view { display: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -985,6 +1306,53 @@
     </div>
     <span class="footer-hint">Search products · Click category to filter · Click product to view details</span>
   </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       MOBILE VIEW  (hidden on desktop via media query)
+       ══════════════════════════════════════════════════ -->
+  <div id="mobile-view">
+
+    <!-- Mobile search -->
+    <div id="mobile-search-bar">
+      <div class="search-container">
+        <input
+          type="text"
+          id="mob-search-input"
+          class="search-input"
+          placeholder="Search products…"
+          aria-label="Search products"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <button type="button" id="mob-search-clear" class="search-clear" aria-label="Clear search">×</button>
+      </div>
+    </div>
+    <div id="mobile-search-results"></div>
+
+    <!-- Mobile legend chips (horizontal scroll) -->
+    <nav id="mobile-legend" aria-label="Play filter"></nav>
+
+    <!-- Accordion lane list -->
+    <div id="mobile-accordion" role="list"></div>
+
+    <!-- Mobile footer -->
+    <div id="mobile-footer">6 plays · 34 products · Tap a product to explore connections</div>
+  </div>
+
+  <!-- Bottom drawer overlay -->
+  <div id="mob-drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Bottom drawer -->
+  <div id="mob-drawer" role="dialog" aria-modal="true" aria-label="Product detail">
+    <div id="mob-drawer-handle-bar" role="button" aria-label="Close drawer" tabindex="0"></div>
+    <div id="mob-drawer-header">
+      <span id="mob-drawer-title"></span>
+      <button type="button" id="mob-drawer-close" aria-label="Close">×</button>
+    </div>
+    <div id="mob-drawer-body"></div>
+  </div>
 
   <!-- ── Tweaks panel ── -->
   <div id="tweaks-panel" role="dialog" aria-label="Tweaks">
@@ -2241,6 +2609,7 @@ document.getElementById('themeBtn').addEventListener('click', () => {
 function init() {
   renderSidebarEmpty();
   applyTweaks(); // sets data-theme etc. + first computeLayout/drawConnections
+  mobileInit();  // build mobile UI (no-op on desktop — guarded inside)
 }
 
 let resizeTimer;
@@ -2258,6 +2627,401 @@ function scheduleLayoutUpdate() {
 window.addEventListener('resize', scheduleLayoutUpdate);
 
 requestAnimationFrame(() => requestAnimationFrame(init));
+
+/* ════════════════════════════════════════════════════════
+   MOBILE UI
+   Builds and manages the accordion + bottom-drawer view.
+   All code here is guarded by an isMobile() check so it
+   never runs (or interferes) on desktop.
+   ════════════════════════════════════════════════════════ */
+
+function isMobile() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+/* ── State ── */
+let mobActivePlayFilter = null;
+let mobSearchQuery = '';
+let mobSelectedId = null;
+
+/* ── Element refs (assigned in mobileInit) ── */
+let mobAccordion, mobLegendEl, mobSearchInput, mobSearchClear, mobSearchResults;
+let mobDrawer, mobDrawerOverlay, mobDrawerBody, mobDrawerTitle, mobDrawerClose, mobDrawerHandleBar;
+
+/* ────────────────────────────────────────────────────────
+   mobileInit — entry point called from init()
+   ──────────────────────────────────────────────────────── */
+function mobileInit() {
+  // Assign refs
+  mobAccordion      = document.getElementById('mobile-accordion');
+  mobLegendEl       = document.getElementById('mobile-legend');
+  mobSearchInput    = document.getElementById('mob-search-input');
+  mobSearchClear    = document.getElementById('mob-search-clear');
+  mobSearchResults  = document.getElementById('mobile-search-results');
+  mobDrawer         = document.getElementById('mob-drawer');
+  mobDrawerOverlay  = document.getElementById('mob-drawer-overlay');
+  mobDrawerBody     = document.getElementById('mob-drawer-body');
+  mobDrawerTitle    = document.getElementById('mob-drawer-title');
+  mobDrawerClose    = document.getElementById('mob-drawer-close');
+  mobDrawerHandleBar= document.getElementById('mob-drawer-handle-bar');
+
+  // Build legend chips
+  Object.values(PLAYS).forEach(play => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'mobile-legend-chip';
+    chip.dataset.play = play.id;
+    chip.style.setProperty('--legend-color', `var(${play.varName})`);
+    chip.innerHTML = `<span class="dot" style="background:var(${play.varName})"></span>${play.short}`;
+    chip.title = play.name;
+    chip.addEventListener('click', () => mobTogglePlayFilter(play.id));
+    mobLegendEl.appendChild(chip);
+  });
+
+  // Build accordion
+  mobBuildAccordion();
+
+  // Apply current theme immediately so drawer inherits it
+  mobSyncTheme();
+
+  // Search events
+  mobSearchInput.addEventListener('input', e => mobPerformSearch(e.target.value));
+  mobSearchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { mobSearchInput.value = ''; mobPerformSearch(''); mobSearchInput.blur(); }
+  });
+  mobSearchClear.addEventListener('click', () => {
+    mobSearchInput.value = ''; mobPerformSearch(''); mobSearchInput.focus();
+  });
+
+  // Drawer close events
+  mobDrawerClose.addEventListener('click', mobCloseDrawer);
+  mobDrawerOverlay.addEventListener('click', mobCloseDrawer);
+  mobDrawerHandleBar.addEventListener('click', mobCloseDrawer);
+  mobDrawerHandleBar.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') mobCloseDrawer(); });
+
+  // Drawer body: tapping a connection row opens that product
+  mobDrawerBody.addEventListener('click', e => {
+    const row = e.target.closest('.conn-row[data-target]');
+    if (row) mobOpenDrawer(row.dataset.target);
+  });
+
+  // Sync theme when tweaks change (theme toggle on header also fires applyTweaks)
+  const origApplyTweaks = applyTweaks;
+  // We patched applyTweaks at the bottom of mobileInit
+}
+
+/* ────────────────────────────────────────────────────────
+   Patch applyTweaks so theme changes propagate to mobile
+   ──────────────────────────────────────────────────────── */
+const _origApplyTweaks = applyTweaks;
+applyTweaks = function() {
+  _origApplyTweaks.apply(this, arguments);
+  mobSyncTheme();
+};
+
+function mobSyncTheme() {
+  // The #app data-theme attribute drives CSS variables. The drawer and
+  // mobile-view are inside #app so they automatically inherit. Nothing extra needed.
+}
+
+/* ────────────────────────────────────────────────────────
+   Build accordion
+   ──────────────────────────────────────────────────────── */
+function mobBuildAccordion() {
+  mobAccordion.innerHTML = '';
+
+  CATEGORIES.forEach((cat, catIdx) => {
+    const play        = PLAYS[cat.playId];
+    const products    = PRODUCTS.filter(p => p.cat === cat.id);
+    const connCount   = id => adjacency[id].length;
+
+    const lane = document.createElement('div');
+    lane.className = 'mob-lane';
+    lane.dataset.cat = cat.id;
+    // First lane open by default
+    if (catIdx === 0) lane.classList.add('is-open');
+
+    // Header button
+    const header = document.createElement('button');
+    header.type = 'button';
+    header.className = 'mob-lane-header';
+    header.setAttribute('aria-expanded', catIdx === 0 ? 'true' : 'false');
+    header.innerHTML = `
+      <span class="mob-lane-dot" style="background:var(${play.varName})"></span>
+      <span class="mob-lane-title">${cat.label}</span>
+      <span class="mob-lane-count">${products.length}</span>
+      <span class="mob-lane-chevron" aria-hidden="true">›</span>`;
+    header.addEventListener('click', () => {
+      const isOpen = lane.classList.toggle('is-open');
+      header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Body with product cards
+    const body = document.createElement('div');
+    body.className = 'mob-lane-body';
+    body.setAttribute('role', 'list');
+
+    products.forEach(p => {
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'mob-product-card';
+      card.dataset.id = p.id;
+      card.setAttribute('role', 'listitem');
+      const nc = connCount(p.id);
+      const primaryPlay = PLAYS[p.plays[0]];
+      card.innerHTML = `
+        <span class="mob-product-accent" style="--node-color:var(${primaryPlay.varName})"></span>
+        <span class="mob-product-label">${p.label}</span>
+        <span class="mob-product-conns">${nc} link${nc !== 1 ? 's' : ''}</span>
+        <span class="mob-product-arrow" aria-hidden="true">›</span>`;
+      card.addEventListener('click', () => mobOpenDrawer(p.id));
+      body.appendChild(card);
+    });
+
+    lane.appendChild(header);
+    lane.appendChild(body);
+    mobAccordion.appendChild(lane);
+  });
+}
+
+/* ────────────────────────────────────────────────────────
+   Open / close drawer
+   ──────────────────────────────────────────────────────── */
+function mobOpenDrawer(productId) {
+  if (!productMap[productId]) return;
+  mobSelectedId = productId;
+  const product = productMap[productId];
+
+  // Set drawer title
+  mobDrawerTitle.textContent = product.label;
+
+  // Render full sidebar content into drawer body
+  // renderSidebar writes to #sidebar-inner — we replicate its output here
+  mobDrawerBody.innerHTML = mobRenderProductDetail(product);
+
+  // Show drawer
+  mobDrawer.classList.add('is-open');
+  mobDrawerOverlay.classList.add('is-open');
+  mobDrawerOverlay.removeAttribute('aria-hidden');
+  document.body.style.overflow = 'hidden'; // prevent background scroll
+
+  // Focus management
+  requestAnimationFrame(() => mobDrawerClose.focus());
+}
+
+function mobCloseDrawer() {
+  mobDrawer.classList.remove('is-open');
+  mobDrawerOverlay.classList.remove('is-open');
+  mobDrawerOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  mobSelectedId = null;
+}
+
+/* ────────────────────────────────────────────────────────
+   Render product detail HTML for the drawer
+   (mirrors renderSidebar but returns a string instead of
+    writing to #sidebar-inner)
+   ──────────────────────────────────────────────────────── */
+function mobRenderProductDetail(product) {
+  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
+  const conns = adjacency[product.id];
+
+  const playsHtml = product.plays.map(pId => {
+    const play = PLAYS[pId];
+    return `<span class="play-pill" style="--play-color:var(${play.varName})">
+      <span class="dot"></span>${play.short}
+    </span>`;
+  }).join('');
+
+  // Dedupe connected targets
+  const uniqueTargetIds = [...new Set(conns.map(c => c.to))];
+
+  // Group by target's primary play lane
+  const grouped = {};
+  uniqueTargetIds.forEach(tid => {
+    const tp = productMap[tid].plays[0];
+    (grouped[tp] ||= []).push(tid);
+  });
+
+  const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
+  const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
+    const play = PLAYS[pId];
+    const rows = grouped[pId].map(to => {
+      const target = productMap[to];
+      const targetPlay = PLAYS[target.plays[0]];
+      const conn = conns.find(c => c.to === to);
+      const explanation = conn?.explanation || '';
+      return `<button type="button" class="conn-row" data-target="${to}">
+        <div class="conn-accent" style="--accent-color:var(${targetPlay.varName})"></div>
+        <div class="conn-info">
+          <div class="conn-name">${target.label}</div>
+          <div class="conn-play">${targetPlay.short}</div>
+          ${explanation ? `<div class="conn-explanation">${explanation}</div>` : ''}
+        </div>
+        <div class="conn-arrow">›</div>
+      </button>`;
+    }).join('');
+    return `
+      <div class="sb-section-label">${play.short} · ${grouped[pId].length}</div>
+      <div class="conn-list">${rows}</div>`;
+  }).join('');
+
+  const questionsHtml = product.questions ? product.questions.map(q => `
+    <div class="sb-question-item">
+      <div class="sb-question-icon">?</div>
+      <div class="sb-question-text">${q}</div>
+    </div>`).join('') : '';
+
+  const competitorsHtml = product.competitors ? `
+    <div class="sb-section-label">Competes With</div>
+    <div class="sb-competitors">
+      ${product.competitors.map(comp => `<span class="competitor-tag">${comp}</span>`).join('')}
+    </div>` : '';
+
+  const differentiatorsHtml = product.differentiators ? `
+    <div class="sb-section-label">Key Differentiators</div>
+    <div class="sb-differentiators">
+      ${product.differentiators.map(diff => `
+        <div class="differentiator-item">
+          <span class="diff-icon">✓</span>
+          <span class="diff-text">${diff}</span>
+        </div>`).join('')}
+    </div>` : '';
+
+  return `
+    <span class="sb-tag">${catLabel}</span>
+
+    <div class="sb-section-label">Featured in plays</div>
+    <div>${playsHtml}</div>
+
+    ${product.desc ? `
+      <div class="sb-section-label">Description</div>
+      <div class="sb-description">${product.desc}</div>
+    ` : ''}
+
+    ${product.value ? `
+      <div class="sb-section-label">Value Proposition</div>
+      <div class="sb-value">${product.value}</div>
+    ` : ''}
+
+    ${competitorsHtml}
+    ${differentiatorsHtml}
+
+    ${questionsHtml ? `
+      <div class="sb-section-label">Discovery Questions</div>
+      <div class="sb-questions">${questionsHtml}</div>
+    ` : ''}
+
+    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
+    ${groupedHtml}
+  `;
+}
+
+/* ────────────────────────────────────────────────────────
+   Play filter on mobile
+   ──────────────────────────────────────────────────────── */
+function mobTogglePlayFilter(playId) {
+  // Clear search
+  if (mobSearchQuery) {
+    mobSearchInput.value = '';
+    mobSearchQuery = '';
+    mobSearchClear.classList.remove('is-visible');
+    mobSearchResults.textContent = '';
+  }
+
+  mobActivePlayFilter = (mobActivePlayFilter === playId) ? null : playId;
+
+  document.querySelectorAll('#mobile-legend .mobile-legend-chip').forEach(c => {
+    c.classList.toggle('is-active', Number(c.dataset.play) === mobActivePlayFilter);
+  });
+
+  mobApplyFilters();
+}
+
+/* ────────────────────────────────────────────────────────
+   Search on mobile
+   ──────────────────────────────────────────────────────── */
+function mobPerformSearch(raw) {
+  mobSearchQuery = raw.toLowerCase().trim();
+  mobSearchClear.classList.toggle('is-visible', mobSearchQuery.length > 0);
+
+  // Clear play filter when searching
+  if (mobSearchQuery && mobActivePlayFilter) {
+    mobActivePlayFilter = null;
+    document.querySelectorAll('#mobile-legend .mobile-legend-chip').forEach(c => c.classList.remove('is-active'));
+  }
+
+  mobApplyFilters();
+}
+
+/* ────────────────────────────────────────────────────────
+   Apply filters (search OR play) to the accordion
+   ──────────────────────────────────────────────────────── */
+function mobApplyFilters() {
+  // Determine which product IDs pass the current filter
+  let involvedIds = null; // null = show all
+
+  if (mobSearchQuery) {
+    const matches = new Set();
+    PRODUCTS.forEach(p => {
+      const text = [p.label, p.desc || '', p.value || '', ...(p.questions || [])].join(' ').toLowerCase();
+      if (text.includes(mobSearchQuery)) matches.add(p.id);
+    });
+    // Also include connected products
+    involvedIds = new Set(matches);
+    CONNECTIONS.forEach(([a, b]) => {
+      if (matches.has(a)) involvedIds.add(b);
+      if (matches.has(b)) involvedIds.add(a);
+    });
+    // Update results count
+    mobSearchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+  } else if (mobActivePlayFilter) {
+    const playCategory = CATEGORIES.find(cat => cat.playId === mobActivePlayFilter);
+    if (playCategory) {
+      const catProducts = new Set(PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id));
+      involvedIds = new Set(catProducts);
+      CONNECTIONS.forEach(([a, b]) => {
+        if (catProducts.has(a)) involvedIds.add(b);
+        if (catProducts.has(b)) involvedIds.add(a);
+      });
+    }
+    mobSearchResults.textContent = '';
+  } else {
+    mobSearchResults.textContent = '';
+  }
+
+  // Apply dim/highlight classes to product cards and auto-expand matching lanes
+  document.querySelectorAll('.mob-lane').forEach(lane => {
+    const catId = lane.dataset.cat;
+    const cards = lane.querySelectorAll('.mob-product-card');
+    let laneHasMatch = false;
+
+    cards.forEach(card => {
+      const id = card.dataset.id;
+      card.classList.remove('dimmed', 'highlighted');
+      if (involvedIds === null) {
+        // No filter — show all
+      } else if (involvedIds.has(id)) {
+        card.classList.add('highlighted');
+        laneHasMatch = true;
+      } else {
+        card.classList.add('dimmed');
+      }
+    });
+
+    // Auto-expand lanes that have matching products; collapse lanes with none
+    if (involvedIds !== null) {
+      const laneHeader = lane.querySelector('.mob-lane-header');
+      if (laneHasMatch) {
+        lane.classList.add('is-open');
+        laneHeader.setAttribute('aria-expanded', 'true');
+      } else {
+        lane.classList.remove('is-open');
+        laneHeader.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+}
 </script>
 
 <!-- GoatCounter Analytics - Privacy-friendly, GDPR compliant -->
