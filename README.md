@@ -12,13 +12,6 @@ Single-page application covering 34 IBM products across Automation & Integration
 
 On desktop the products are laid out as an interactive node map with animated SVG connection lines. On mobile (≤768px) the same data is presented as a collapsible accordion with a slide-up bottom drawer for product detail.
 
-## Technical Details
-
-- **Single file** — `IBM_Synergies_Map.html`, no build step or external dependencies
-- **IBM Carbon Design System** tokens with light/dark theming (IBM Plex Sans + Mono)
-- **SVG-based connections** with animated draw-on and sequential stagger
-- **Responsive** — desktop map view and mobile accordion/drawer view share the same data and logic
-
 ## Deployment
 
 ```
