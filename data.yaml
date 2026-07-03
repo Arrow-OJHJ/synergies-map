@@ -95,7 +95,7 @@ products:
     questions:
       - Do you have multiple applications that need to share data?
       - Are you building mobile or web apps that need backend services?
-      - Do you need to monetize your data or services through APIs?
+      - Do you need to monetise your data or services through APIs?
       - Are you struggling with point-to-point integrations?
     competitors:
       - MuleSoft Anypoint
@@ -146,7 +146,7 @@ products:
       - Do you have legacy systems that need to integrate with modern applications?
       - Are you managing multiple integration tools?
       - Do you need B2B integration capabilities?
-      - Are you struggling with data synchronization across systems?
+      - Are you struggling with data synchronisation across systems?
     competitors:
       - MuleSoft
       - Dell Boomi
@@ -170,7 +170,7 @@ products:
     questions:
       - Are you manually provisioning cloud infrastructure?
       - Do you need to manage infrastructure across multiple cloud providers?
-      - Are you looking to standardize infrastructure deployments?
+      - Are you looking to standardise infrastructure deployments?
       - Do you need to track infrastructure changes over time?
     competitors:
       - AWS CloudFormation
@@ -220,7 +220,7 @@ products:
     questions:
       - Do you manage physical assets or facilities?
       - Are you tracking maintenance manually?
-      - Do you need to optimize asset performance?
+      - Do you need to optimise asset performance?
       - Are you looking to implement predictive maintenance?
     competitors:
       - SAP EAM
@@ -245,7 +245,7 @@ products:
       Reduces MTTD by 90%, provides automatic discovery and monitoring, and delivers
       1-second granularity for troubleshooting.
     questions:
-      - Do you have microservices or containerized applications?
+      - Do you have microservices or containerised applications?
       - Are you struggling to identify performance bottlenecks?
       - Do you need real-time application monitoring?
       - Are you experiencing frequent application issues?
@@ -391,13 +391,13 @@ products:
     plays: [4]
     description: >-
       Identity and access management platform for securing user authentication and
-      authorization.
+      authorisation.
     value: >-
       Reduces security risks by 60%, improves user experience with SSO, and ensures
       compliance with access policies.
     questions:
       - Do users access multiple applications with different passwords?
-      - Are you concerned about unauthorized access?
+      - Are you concerned about unauthorised access?
       - Do you need multi-factor authentication?
       - Are you managing user access manually?
     competitors:
@@ -418,7 +418,7 @@ products:
       Secrets management platform for securing, storing, and controlling access to
       tokens, passwords, and certificates.
     value: >-
-      Eliminates hardcoded secrets, provides centralized secrets management, and
+      Eliminates hardcoded secrets, provides centralised secrets management, and
       enables automated secret rotation.
     questions:
       - Are credentials stored in code or configuration files?
@@ -492,7 +492,7 @@ products:
     category: data_ai
     plays: [2]
     description: >-
-      AI-powered data catalog and governance platform for discovering,
+      AI-powered data catalogue and governance platform for discovering,
       understanding, and managing enterprise data.
     value: >-
       Reduces time to find data by 80%, improves data quality, and ensures data
@@ -653,7 +653,7 @@ products:
       - Do you have mission-critical Linux workloads?
       - Are you concerned about security and compliance?
       - Do you need to consolidate Linux servers?
-      - Are you looking to reduce data center footprint?
+      - Are you looking to reduce data centre footprint?
     competitors:
       - HPE Superdome
       - Oracle Exadata
@@ -795,7 +795,7 @@ products:
     category: storage
     plays: [6]
     description: >-
-      Storage management software for monitoring, managing, and optimizing storage
+      Storage management software for monitoring, managing, and optimising storage
       infrastructure.
     value: >-
       Provides unified storage management, reduces storage admin time by 50%, and
@@ -876,7 +876,7 @@ products:
       Simplifies container storage, provides persistent storage for containers, and
       enables data mobility.
     questions:
-      - Are you running containerized applications?
+      - Are you running containerised applications?
       - Do you need persistent storage for Kubernetes?
       - Are you using Red Hat OpenShift?
       - Do you need to move data between container environments?
