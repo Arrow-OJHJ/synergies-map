@@ -3,10 +3,14 @@
 ## Architecture
 
 ```
-GitHub (main) → GitHub Actions → IBM Cloud Object Storage → Live Site
+GitHub (main) → GitHub Actions → build.py (data.yaml + template.html → dist/index.html) → IBM Cloud Object Storage → Live Site
 ```
 
 **Live URL**: https://arrow-ibm-synergies-map.s3-web.eu-gb.cloud-object-storage.appdomain.cloud
+
+The deploy workflow first builds the site from `data.yaml` and `template.html` using `build.py`. The build validates the content and fails on any error, so an invalid `data.yaml` aborts the deploy before anything is uploaded — the previous version stays live. A second workflow (`validate.yml`) runs the same build on pull requests and non-main branches, giving editors a green tick / red X before merging. See [CONTENT-EDITING.md](CONTENT-EDITING.md) for the editing workflow.
+
+**Recommended**: protect the `main` branch (repository → Settings → Branches → Add rule) requiring pull requests and the "Validate content" status check, so content edits can't land on `main` unvalidated.
 
 ---
 
@@ -104,6 +108,10 @@ git push origin main
 
 ## Troubleshooting
 
+**Red X on "Validate content" or deploy fails at "Build site from data.yaml"**
+- `data.yaml` has a content error — open the failed step's log; each problem is listed as `ERROR data.yaml:LINE description`
+- Fix the listed line(s) in `data.yaml` and push again; nothing was uploaded, the live site is unaffected
+
 **Authentication error** (fails at "Authenticate to IBM Cloud")
 - Verify `IBM_CLOUD_API_KEY` is correct with no extra spaces
 - Check the API key hasn't expired — regenerate in IBM Cloud if needed
@@ -133,6 +141,10 @@ git push origin main
 ## Manual Deploy (CLI)
 
 ```bash
+# Build the site first
+pip install pyyaml
+python build.py
+
 # Install IBM Cloud CLI
 curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 
@@ -148,6 +160,6 @@ ibmcloud cos config region --region eu-gb
 ibmcloud cos upload \
   --bucket arrow-ibm-synergies-map \
   --key index.html \
-  --file IBM_Synergies_Map.html \
+  --file dist/index.html \
   --content-type "text/html"
 ```

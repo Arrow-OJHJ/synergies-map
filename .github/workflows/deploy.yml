@@ -14,6 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build site from data.yaml
+        run: |
+          pip install pyyaml
+          python build.py
+
       - name: Install IBM Cloud CLI
         run: |
           curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
@@ -34,13 +44,13 @@ jobs:
           ibmcloud cos upload \
             --bucket "$COS_BUCKET_NAME" \
             --key index.html \
-            --file IBM_Synergies_Map.html \
+            --file dist/index.html \
             --content-type "text/html; charset=utf-8" \
             --cache-control "public, max-age=3600, must-revalidate"
 
           ibmcloud cos upload \
             --bucket "$COS_BUCKET_NAME" \
             --key IBM_Synergies_Map.html \
-            --file IBM_Synergies_Map.html \
+            --file dist/index.html \
             --content-type "text/html; charset=utf-8" \
             --cache-control "public, max-age=3600, must-revalidate"
