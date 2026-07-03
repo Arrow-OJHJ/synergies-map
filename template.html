@@ -46,6 +46,9 @@
     --play-5: #007d79; /* Teal 60   — Infrastructure */
     --play-6: #d12771; /* Magenta 60 — Storage */
 
+    /* Resting/dimmed connection lines — neutral, near-black on light */
+    --conn-neutral: #393939; /* Gray 80 */
+
     --font-sans: 'IBM Plex Sans', 'Helvetica Neue', system-ui, sans-serif;
     --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
   }
@@ -84,6 +87,9 @@
     --play-4: #fa4d56;
     --play-5: #3ddbd9;
     --play-6: #ff7eb6;
+
+    /* Resting/dimmed connection lines — neutral, near-white on dark */
+    --conn-neutral: #e0e0e0; /* Gray 20 */
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1426,7 +1432,9 @@ setTimeout(() => {
 });
 throw new Error('template.html is not runnable - build dist/index.html from data.yaml');
 /*DATA-END*/
-const playColor = (id) => getComputedStyle(document.documentElement).getPropertyValue(PLAYS[id].varName).trim();
+// Resolve from #app, not documentElement: the theme attribute lives on #app,
+// so the dark-theme variable overrides are only visible from there down.
+const playColor = (id) => getComputedStyle(document.getElementById('app')).getPropertyValue(PLAYS[id].varName).trim();
 
 /* ════════════════════════════════════════════════════════
    Layout config
@@ -1559,10 +1567,10 @@ function performSearch(query) {
   searchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
   
   // Redraw connections to show only relevant ones
-  drawConnectionsForSearch(involved);
+  drawConnectionsForSearch(involved, matches);
 }
 
-function drawConnectionsForSearch(involvedProducts) {
+function drawConnectionsForSearch(involvedProducts, matchedProducts) {
   svgEl.innerHTML = '<defs id="svg-defs"></defs>';
   
   const sorted = [...uniqueEdges];
@@ -1579,13 +1587,21 @@ function drawConnectionsForSearch(involvedProducts) {
     
     const x1 = p1._px, y1 = p1._py;
     const x2 = p2._px, y2 = p2._py;
-    
-    const colorPlayId = connectionPlayId(from, to);
-    const color = playColor(colorPlayId);
-    
+
+    // Colour by the end that wasn't itself a match, so the line indicates
+    // the group of the connected product (mirrors selection/filter rules)
+    let color;
+    const fromMatched = matchedProducts && matchedProducts.has(from);
+    const toMatched = matchedProducts && matchedProducts.has(to);
+    if (fromMatched !== toMatched) {
+      color = playColor(productMap[fromMatched ? to : from].plays[0]);
+    } else {
+      color = playColor(connectionPlayId(from, to));
+    }
+
     let d;
     const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
-    
+
     if (tweakState.connStyle === 'ortho') {
       if (sameRow) {
         const arcH = Math.abs(x2 - x1) * 0.18 + 12;
@@ -1840,10 +1856,11 @@ function drawConnections(activeId = null) {
 
   // When play filter is active, determine which products are involved
   let involvedProducts = null;
+  let categoryProducts = null;
   if (activePlayFilter && !activeId) {
     const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
     if (playCategory) {
-      const categoryProducts = new Set(
+      categoryProducts = new Set(
         PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
       );
       involvedProducts = new Set(categoryProducts);
@@ -1896,10 +1913,6 @@ function drawConnections(activeId = null) {
     const x1 = p1._px, y1 = p1._py;
     const x2 = p2._px, y2 = p2._py;
 
-    // Line color is derived from lane positions, not strategic play
-    const colorPlayId = connectionPlayId(from, to);
-    const color = playColor(colorPlayId);
-
     // Determine if this connection should be active/visible
     let isActive, isFiltered;
     if (activeId) {
@@ -1914,6 +1927,24 @@ function drawConnections(activeId = null) {
       // No filter active, show all connections
       isActive = true;
       isFiltered = false;
+    }
+
+    // Line colour indicates the product group the connection leads to:
+    //  - product selected: colour of the product at the OTHER end
+    //  - play filter: colour of the end outside the filtered lane
+    //  - resting/dimmed lines are drawn with the neutral token below
+    let color;
+    if (activeId && isActive) {
+      const otherEnd = from === activeId ? to : from;
+      color = playColor(productMap[otherEnd].plays[0]);
+    } else if (activePlayFilter && categoryProducts && isActive) {
+      const fromIn = categoryProducts.has(from);
+      const toIn = categoryProducts.has(to);
+      if (fromIn && toIn) color = playColor(activePlayFilter);
+      else if (fromIn !== toIn) color = playColor(productMap[fromIn ? to : from].plays[0]);
+      else color = playColor(connectionPlayId(from, to));
+    } else {
+      color = playColor(connectionPlayId(from, to));
     }
 
     // Determine if we need to reverse the path direction for animation
@@ -1960,7 +1991,9 @@ function drawConnections(activeId = null) {
     path.setAttribute('stroke-linejoin', 'round');
 
     if (!activeId && !activePlayFilter) {
-      path.setAttribute('stroke', color);
+      // Resting map: neutral lines; colour appears only on selection/filter.
+      // var() resolves against #app so it tracks the theme live.
+      path.style.stroke = 'var(--conn-neutral)';
       path.setAttribute('stroke-width', '1');
       path.setAttribute('opacity', '0.35');
     } else if (isActive && !isFiltered) {
@@ -1977,6 +2010,11 @@ function drawConnections(activeId = null) {
       path.setAttribute('stroke-dashoffset', pathLength);
       path.style.setProperty('--path-length', pathLength);
       
+      // Draw at a constant speed (~1200 px/s) so short and long lines fill
+      // consistently; clamp so nothing feels instant or sluggish.
+      const drawSeconds = Math.min(Math.max(pathLength / 1200, 0.3), 1.0);
+      path.style.animationDuration = `${drawSeconds}s`;
+
       // Calculate staggered animation delay based on connection order
       const connectionDelay = activeId ? activeConnectionIndex * 0.15 : 0; // 150ms between each line
       path.style.animationDelay = `${connectionDelay}s`;
@@ -1989,7 +2027,8 @@ function drawConnections(activeId = null) {
         activeConnectionIndex++;
       }
     } else {
-      path.setAttribute('stroke', color);
+      // Dimmed lines: neutral, like the resting map
+      path.style.stroke = 'var(--conn-neutral)';
       path.setAttribute('stroke-width', '1');
       path.setAttribute('opacity', '0.05');
     }
