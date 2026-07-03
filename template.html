@@ -1901,10 +1901,10 @@ function drawConnections(activeId = null) {
       path.setAttribute('stroke-dashoffset', pathLength);
       path.style.setProperty('--path-length', pathLength);
       
-      // All lines draw together at a constant speed (~500 px/s), so short
+      // All lines draw together at a constant speed (~400 px/s), so short
       // and long lines fill consistently; clamp so nothing feels instant
       // or sluggish.
-      const drawSeconds = Math.min(Math.max(pathLength / 500, 0.6), 2.0);
+      const drawSeconds = Math.min(Math.max(pathLength / 400, 0.7), 2.5);
       path.style.animationDuration = `${drawSeconds}s`;
 
       path.classList.add('path-active');
