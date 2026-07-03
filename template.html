@@ -1882,11 +1882,12 @@ function drawConnections(activeId = null) {
     path.setAttribute('stroke-linejoin', 'round');
 
     if (!activeId && !activePlayFilter) {
-      // Resting map: neutral lines; colour appears only on selection/filter.
+      // Resting map: a faint neutral mesh — just enough to signal the
+      // products are connected; the real lines reveal on click.
       // var() resolves against #app so it tracks the theme live.
       path.style.stroke = 'var(--conn-neutral)';
       path.setAttribute('stroke-width', '1');
-      path.setAttribute('opacity', '0.35');
+      path.setAttribute('opacity', '0.12');
     } else if (isActive && !isFiltered) {
       let pathLength = 1000;
       try {
