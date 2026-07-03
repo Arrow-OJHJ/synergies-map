@@ -220,7 +220,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    min-width: 360px;
+    min-width: 300px;
   }
   
   .search-input {
@@ -289,7 +289,13 @@
     align-items: stretch;
     gap: 0;
     flex: 1;
+    min-width: 0;
+    justify-content: space-between;
+    /* Full play names can outgrow narrow windows — scroll, don't clip */
+    overflow-x: auto;
+    scrollbar-width: none;
   }
+  #play-legend::-webkit-scrollbar { display: none; }
 
   .legend-chip {
     display: inline-flex;
@@ -303,24 +309,14 @@
     font-family: var(--font-sans);
     font-size: 13px;
     font-weight: 400;
-    cursor: pointer;
     white-space: nowrap;
-    transition: background-color 0.11s, color 0.11s;
-    border-bottom: 2px solid transparent;
   }
-  .legend-chip:hover { background: var(--cds-background-hover); color: var(--cds-text-primary); }
-  .legend-chip:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
   .legend-chip .dot {
     width: 10px;
     height: 10px;
     border-radius: 0;
     flex-shrink: 0;
   }
-  .legend-chip.is-active {
-    color: var(--cds-text-primary);
-    background: var(--cds-background-hover);
-  }
-  .legend-chip.is-active[data-play-color] { border-bottom-color: var(--legend-color, var(--cds-interactive)); }
 
   /* ─── Main row ─── */
   #main {
@@ -359,29 +355,6 @@
     background: var(--cds-border-subtle-01);
     pointer-events: none;
   }
-  .lane-label {
-    position: absolute;
-    left: 16px;
-    transform: translateY(-50%);
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--cds-text-secondary);
-    white-space: nowrap;
-    z-index: 2;
-    pointer-events: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .lane-label .lane-dot {
-    width: 8px; height: 8px;
-    background: var(--lane-color, var(--cds-text-secondary));
-    flex-shrink: 0;
-  }
-
   /* ─── Product nodes (Carbon tag style) ─── */
   .pnode {
     position: absolute;
@@ -1440,7 +1413,7 @@ const playColor = (id) => getComputedStyle(document.getElementById('app')).getPr
    Layout config
    ════════════════════════════════════════════════════════ */
 const CONFIG = {
-  LAYOUT: { LEFT: 200, RIGHT: 24, TOP: 24, BOTTOM: 24 },
+  LAYOUT: { LEFT: 32, RIGHT: 32, TOP: 24, BOTTOM: 24 },
   CURVES: { ARC_FACTOR: 0.14, BEND_START: 0.25, BEND_END: 0.75 },
   SAME_ROW_THRESHOLD: 5,
 };
@@ -1668,66 +1641,15 @@ document.getElementById('mobile-footer').textContent =
 /* ════════════════════════════════════════════════════════
    Build legend
    ════════════════════════════════════════════════════════ */
+/* Legend chips are non-interactive titles: they name the play groups
+   (full names) and show each group's colour. */
 const legendEl = document.getElementById('play-legend');
 Object.values(PLAYS).forEach(play => {
-  const chip = document.createElement('button');
-  chip.type = 'button';
+  const chip = document.createElement('span');
   chip.className = 'legend-chip';
-  chip.dataset.play = play.id;
-  chip.dataset.playColor = play.varName;
-  chip.style.setProperty('--legend-color', `var(${play.varName})`);
-  chip.innerHTML = `<span class="dot" style="background: var(${play.varName})"></span>${play.short}`;
-  chip.title = play.name;
-  chip.addEventListener('click', () => togglePlayFilter(play.id));
+  chip.innerHTML = `<span class="dot" style="background: var(${play.varName})"></span>${play.name}`;
   legendEl.appendChild(chip);
 });
-
-function togglePlayFilter(playId) {
-  // Clear search when using play filter
-  if (searchQuery) {
-    searchInput.value = '';
-    searchQuery = '';
-    searchClear.classList.remove('is-visible');
-    searchResults.textContent = '';
-  }
-  
-  activePlayFilter = (activePlayFilter === playId) ? null : playId;
-  document.querySelectorAll('.legend-chip').forEach(c => {
-    c.classList.toggle('is-active', Number(c.dataset.play) === activePlayFilter);
-  });
-  // Reset any selected node and redraw with filter
-  if (selectedId) resetSelection(false);
-  applyPlayFilter();
-  drawConnections();
-}
-
-function applyPlayFilter() {
-  if (!activePlayFilter) {
-    Object.values(nodeEls).forEach(el => el.classList.remove('dimmed', 'highlighted'));
-    return;
-  }
-  // Find the category associated with this play
-  const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
-  if (!playCategory) return;
-  
-  // Get all products in this category
-  const categoryProducts = new Set(
-    PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
-  );
-  
-  // Highlight products in this category AND any products connected to them (regardless of play)
-  const involved = new Set(categoryProducts);
-  CONNECTIONS.forEach(([a, b, p, explanation]) => {
-    if (categoryProducts.has(a)) involved.add(b);
-    if (categoryProducts.has(b)) involved.add(a);
-  });
-  
-  Object.entries(nodeEls).forEach(([id, el]) => {
-    if (involved.has(id)) el.classList.add('highlighted');
-    else el.classList.add('dimmed');
-    el.classList.remove('selected');
-  });
-}
 
 /* ════════════════════════════════════════════════════════
    Build nodes
@@ -1784,12 +1706,6 @@ function computeLayout() {
       mapArea.insertBefore(div, svgEl);
     }
 
-    const label = document.createElement('div');
-    label.className = 'lane-label';
-    label.style.setProperty('--lane-color', `var(${PLAYS[cat.playId].varName})`);
-    label.style.top = yCen + 'px';
-    label.innerHTML = `<span class="lane-dot"></span>${cat.label}`;
-    mapArea.appendChild(label);
   });
 
   // Position products
@@ -1872,37 +1788,12 @@ function drawConnections(activeId = null) {
   }
 
   // Sort so active edges render last (on top)
-  // When activeId is set, also sort by distance from the clicked product for sequential animation
   const sorted = [...uniqueEdges].sort((e1, e2) => {
     if (!activeId) return 0;
     const a = (e1.from === activeId || e1.to === activeId) ? 1 : 0;
     const b = (e2.from === activeId || e2.to === activeId) ? 1 : 0;
-    if (a !== b) return a - b;
-    
-    // If both are active connections, sort by distance from origin for staggered animation
-    if (a === 1 && b === 1) {
-      const originProduct = productMap[activeId];
-      if (!originProduct || !originProduct._px) return 0;
-      
-      // Calculate distance to the "other" end of each connection
-      const getOtherEnd = (edge) => edge.from === activeId ? edge.to : edge.from;
-      const target1 = productMap[getOtherEnd(e1)];
-      const target2 = productMap[getOtherEnd(e2)];
-      
-      if (!target1 || !target2 || !target1._px || !target2._px) return 0;
-      
-      const dist1 = Math.hypot(target1._px - originProduct._px, target1._py - originProduct._py);
-      const dist2 = Math.hypot(target2._px - originProduct._px, target2._py - originProduct._py);
-      
-      return dist1 - dist2; // Closer connections animate first
-    }
-    
-    return 0;
+    return a - b;
   });
-
-  // Track active connections for staggered animation
-  let activeConnectionIndex = 0;
-  const activeConnections = activeId ? sorted.filter(e => e.from === activeId || e.to === activeId) : [];
 
   sorted.forEach(edge => {
     const { from, to, plays } = edge;
@@ -2010,22 +1901,14 @@ function drawConnections(activeId = null) {
       path.setAttribute('stroke-dashoffset', pathLength);
       path.style.setProperty('--path-length', pathLength);
       
-      // Draw at a constant speed (~1200 px/s) so short and long lines fill
-      // consistently; clamp so nothing feels instant or sluggish.
-      const drawSeconds = Math.min(Math.max(pathLength / 1200, 0.3), 1.0);
+      // All lines draw together at a constant speed (~500 px/s), so short
+      // and long lines fill consistently; clamp so nothing feels instant
+      // or sluggish.
+      const drawSeconds = Math.min(Math.max(pathLength / 500, 0.6), 2.0);
       path.style.animationDuration = `${drawSeconds}s`;
 
-      // Calculate staggered animation delay based on connection order
-      const connectionDelay = activeId ? activeConnectionIndex * 0.15 : 0; // 150ms between each line
-      path.style.animationDelay = `${connectionDelay}s`;
-      
       path.classList.add('path-active');
       path.getBoundingClientRect(); // Force reflow
-      
-      // Increment counter for next active connection
-      if (activeId && isActive) {
-        activeConnectionIndex++;
-      }
     } else {
       // Dimmed lines: neutral, like the resting map
       path.style.stroke = 'var(--conn-neutral)';

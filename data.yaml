@@ -27,7 +27,7 @@ site:
   title: IBM Product Synergies Map
   brand: Arrow ECS UK
   year: 2026
-  footer_hint: Search products · Click category to filter · Click product to view details
+  footer_hint: Search products · Click product to view details
   mobile_footer_hint: Tap a product to explore connections
   analytics_url: https://arrow-ollie.goatcounter.com/count   # blank = no analytics
 
