@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers config — deploys the built static site (dist/) as an
+  // assets-only Worker. This is a second, parallel launch method; the IBM COS
+  // deploy (.github/workflows/deploy.yml) is unaffected and keeps running.
+  "name": "arrow-synergies-map",
+  "compatibility_date": "2025-05-01",
+  "assets": {
+    "directory": "./dist",
+    // Single-page app: serve index.html for any unknown path (mirrors the COS
+    // setup, where the error document was also index.html).
+    "not_found_handling": "single-page-application"
+  }
+}
