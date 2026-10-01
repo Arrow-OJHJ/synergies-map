@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>IBM Product Synergies Map has moved</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23161616%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%230f62fe%22/></svg>">
+<style>
+  :root {
+    --cds-background: #ffffff;
+    --cds-layer-01: #f4f4f4;
+    --cds-border-subtle: #e0e0e0;
+    --cds-text-primary: #161616;
+    --cds-text-secondary: #525252;
+    --cds-interactive: #0f62fe;
+    --cds-interactive-hover: #0050e6;
+    --cds-text-on-color: #ffffff;
+    --cds-support-success: #24a148;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cds-background: #161616;
+      --cds-layer-01: #262626;
+      --cds-border-subtle: #393939;
+      --cds-text-primary: #f4f4f4;
+      --cds-text-secondary: #c6c6c6;
+      --cds-interactive: #4589ff;
+      --cds-interactive-hover: #78a9ff;
+      --cds-text-on-color: #161616;
+      --cds-support-success: #42be65;
+    }
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    background: var(--cds-background);
+    color: var(--cds-text-primary);
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  .card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--cds-layer-01);
+    border-top: 4px solid var(--cds-interactive);
+    padding: 32px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    color: var(--cds-text-secondary);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  p { color: var(--cds-text-secondary); margin-bottom: 16px; }
+  p strong { color: var(--cds-text-primary); font-weight: 600; }
+  .url {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+  }
+  .url a {
+    flex: 1 1 260px;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 1px solid var(--cds-border-subtle);
+    background: var(--cds-background);
+    color: var(--cds-interactive);
+    font-family: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+    font-size: 14px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .url a:hover { text-decoration: underline; }
+  button {
+    flex: 0 0 auto;
+    padding: 12px 20px;
+    border: 0;
+    background: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--cds-interactive-hover); }
+  button:focus-visible, .url a:focus-visible {
+    outline: 2px solid var(--cds-interactive);
+    outline-offset: 2px;
+  }
+  button.copied { background: var(--cds-support-success); }
+  .small { font-size: 14px; margin-bottom: 0; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">IBM Product Synergies Map</div>
+    <h1>This map has moved</h1>
+    <p>The IBM Product Synergies Map now lives at a new address.
+       <strong>Please save the new link and update your bookmarks.</strong></p>
+    <div class="url">
+      <a id="new-url" href="https://arrow-ojhj.github.io/synergies-map/">https://arrow-ojhj.github.io/synergies-map/</a>
+      <button id="copy" type="button">Copy link</button>
+    </div>
+    <p class="small">This address will stop working soon, so links to it will no longer open the map.</p>
+  </main>
+<script>
+  (function () {
+    var btn = document.getElementById('copy');
+    var url = document.getElementById('new-url').href;
+    btn.addEventListener('click', function () {
+      function done() {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Copy link'; btn.classList.remove('copied'); }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); });
+      } else {
+        window.prompt('Copy this link:', url);
+      }
+    });
+  })();
+</script>
+</body>
+</html>

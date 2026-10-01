@@ -1,14 +1,14 @@
 {
-  // Cloudflare Workers config — deploys the static site (index.html + fonts/)
-  // as an assets-only Worker from the repo root.
+  // Cloudflare Workers config for the old domain (arrow-synergies-map.com).
+  // The map itself now lives on GitHub Pages; this Worker serves only the
+  // "this map has moved" notice in moved/, for every path on the old domain.
   "name": "arrow-synergies-map",
   "compatibility_date": "2025-05-01",
-  // Serve the site only via the custom domain (arrow-synergies-map.com); the
-  // free *.workers.dev URL is disabled.
+  // Serve only via the custom domain; the free *.workers.dev URL is disabled.
   "workers_dev": false,
   "assets": {
-    "directory": ".",
-    // Single-page app: serve index.html for any unknown path.
+    "directory": "./moved",
+    // Any path on the old domain returns the moved notice.
     "not_found_handling": "single-page-application"
   }
 }
