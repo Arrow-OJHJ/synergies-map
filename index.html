@@ -1,0 +1,5057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src 'self'; img-src data:; frame-ancestors 'none'">
+<title>IBM Product Synergies Map</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23161616%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%230f62fe%22/></svg>">
+<style>
+  /* Self-hosted IBM Plex (OFL, latin subset) — no external font requests. */
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexSans-400.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexSans-500.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexSans-600.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/IBMPlexSans-700.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexMono-400.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexMono-500.woff2') format('woff2'); }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexMono-600.woff2') format('woff2'); }
+  /* ─────────────────────────────────────────────
+     Carbon Design System tokens
+     ───────────────────────────────────────────── */
+  :root {
+    /* White theme */
+    --cds-background: #ffffff;
+    --cds-background-hover: #e8e8e8;
+    --cds-background-active: #c6c6c6;
+    --cds-background-selected: #e0e0e0;
+    --cds-layer-01: #f4f4f4;
+    --cds-layer-02: #ffffff;
+    --cds-layer-accent-01: #e0e0e0;
+    --cds-layer-hover-01: #e8e8e8;
+    --cds-field-01: #f4f4f4;
+    --cds-border-subtle-01: #e0e0e0;
+    --cds-border-subtle-02: #c6c6c6;
+    --cds-border-strong-01: #8d8d8d;
+    --cds-text-primary: #161616;
+    --cds-text-secondary: #525252;
+    --cds-text-placeholder: #a8a8a8;
+    --cds-text-helper: #6f6f6f;
+    --cds-text-on-color: #ffffff;
+    --cds-icon-primary: #161616;
+    --cds-icon-secondary: #525252;
+    --cds-button-primary: #0f62fe;
+    --cds-button-primary-hover: #0050e6;
+    --cds-button-primary-active: #002d9c;
+    --cds-focus: #0f62fe;
+    --cds-interactive: #0f62fe;
+    --cds-link-primary: #0f62fe;
+
+    /* Play colors — Carbon palette, 60-level on light */
+    --play-1: #0043ce; /* Blue 70   — Automation */
+    --play-2: #198038; /* Green 60  — Data & AI */
+    --play-3: #8a3ffc; /* Purple 60 — Observability */
+    --play-4: #da1e28; /* Red 60    — Security */
+    --play-5: #007d79; /* Teal 60   — Infrastructure */
+    --play-6: #d12771; /* Magenta 60 — Storage */
+
+    /* Resting/dimmed connection lines — neutral, near-black on light */
+    --conn-neutral: #393939; /* Gray 80 */
+
+    --font-sans: 'IBM Plex Sans', 'Helvetica Neue', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+  }
+
+  [data-theme="dark"] {
+    /* Gray 100 theme */
+    --cds-background: #161616;
+    --cds-background-hover: #353535;
+    --cds-background-active: #525252;
+    --cds-background-selected: #353535;
+    --cds-layer-01: #262626;
+    --cds-layer-02: #393939;
+    --cds-layer-accent-01: #525252;
+    --cds-layer-hover-01: #333333;
+    --cds-field-01: #262626;
+    --cds-border-subtle-01: #393939;
+    --cds-border-subtle-02: #525252;
+    --cds-border-strong-01: #6f6f6f;
+    --cds-text-primary: #f4f4f4;
+    --cds-text-secondary: #c6c6c6;
+    --cds-text-placeholder: #6f6f6f;
+    --cds-text-helper: #8d8d8d;
+    --cds-icon-primary: #f4f4f4;
+    --cds-icon-secondary: #c6c6c6;
+    --cds-button-primary: #0f62fe;
+    --cds-button-primary-hover: #0353e9;
+    --cds-button-primary-active: #002d9c;
+    --cds-focus: #ffffff;
+    --cds-interactive: #4589ff;
+    --cds-link-primary: #78a9ff;
+
+    /* Play colors — 40-level on dark */
+    --play-1: #4589ff;
+    --play-2: #6fdc8c;
+    --play-3: #be95ff;
+    --play-4: #fa4d56;
+    --play-5: #3ddbd9;
+    --play-6: #ff7eb6;
+
+    /* Resting/dimmed connection lines — neutral, near-white on dark */
+    --conn-neutral: #e0e0e0; /* Gray 20 */
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+  body {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--cds-text-primary);
+    background: var(--cds-background);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── App shell ─── */
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  /* ── Carbon UI Shell (two bars) ── */
+  .cds-shell { flex-shrink: 0; }
+
+  .cds-shell__bar1 {
+    height: 48px;
+    background: #161616;
+    color: #ffffff;
+    padding: 0 0 0 16px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .cds-shell__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+  }
+  .cds-shell__wordmark {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.01em;
+  }
+  .cds-shell__divider {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #393939;
+    margin: 0 12px;
+  }
+  .cds-shell__product {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    color: #c6c6c6;
+  }
+
+  .cds-shell__meta {
+    margin-left: auto;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .cds-shell__meta-text {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #8d8d8d;
+  }
+  .cds-shell__meta-text strong {
+    color: #c6c6c6;
+    font-weight: 500;
+  }
+
+  /* Visually hidden — a11y label */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0; padding: 0; margin: -1px;
+  }
+
+  /* Theme toggle button in shell */
+  .cds-shell__theme-btn {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    transition: background-color 0.11s, color 0.11s;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .cds-shell__theme-btn:hover { background: #353535; color: #ffffff; }
+  .cds-shell__theme-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
+  .cds-shell__theme-btn .icon-glyph {
+    display: inline-block;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  [data-theme="dark"] .cds-shell__theme-btn .icon-glyph {
+    transform: rotate(180deg);
+  }
+
+  .cds-shell__bar2 {
+    height: 48px;
+    background: var(--cds-background);
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+    display: flex;
+    align-items: stretch;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  /* Search box */
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    flex-shrink: 0;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 32px;
+    padding: 0 32px 0 12px;
+    background: var(--cds-field-01);
+    border: 1px solid var(--cds-border-subtle-01);
+    border-bottom: 1px solid var(--cds-border-strong-01);
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.11s, background-color 0.11s;
+  }
+  
+  .search-input:hover {
+    background: var(--cds-background-hover);
+  }
+  
+  .search-input:focus {
+    border-color: var(--cds-focus);
+    border-bottom-color: var(--cds-focus);
+  }
+  
+  .search-input::placeholder {
+    color: var(--cds-text-placeholder);
+  }
+  
+  .search-clear {
+    position: absolute;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    color: var(--cds-icon-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.11s;
+  }
+  
+  .search-clear:hover {
+    background: var(--cds-background-hover);
+    color: var(--cds-icon-primary);
+  }
+  
+  .search-clear.is-visible {
+    display: flex;
+  }
+  
+  .search-results-count {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--cds-text-secondary);
+    white-space: nowrap;
+  }
+
+  #play-legend {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    flex: 1;
+    min-width: 0;
+    justify-content: space-between;
+    /* Full play names can outgrow narrow windows — scroll, don't clip */
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  #play-legend::-webkit-scrollbar { display: none; }
+
+  .legend-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .legend-chip .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    flex-shrink: 0;
+  }
+
+  /* ─── Main row ─── */
+  #main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background: var(--cds-background);
+  }
+
+  /* ─── Map area ─── */
+  #map-area {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    background: var(--cds-background);
+  }
+
+  #svg-connections {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+
+  /* Lane strips & labels */
+  .lane-strip {
+    position: absolute;
+    left: 0; right: 0;
+    pointer-events: none;
+    background: var(--cds-layer-01);
+  }
+  .lane-divider {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--cds-border-subtle-01);
+    pointer-events: none;
+  }
+  /* ─── Product nodes (Carbon tag style) ─── */
+  .pnode {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 6px 10px 6px 10px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    border-left: 3px solid var(--node-color, var(--cds-border-strong-01));
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cds-text-primary);
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 5;
+    user-select: none;
+    transition: opacity 0.18s ease, background-color 0.11s, border-color 0.11s, box-shadow 0.11s;
+    line-height: 1.2;
+  }
+
+  .pnode:hover {
+    background: var(--cds-background-hover);
+    z-index: 30;
+  }
+  .pnode:focus-visible {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+  }
+  .pnode.dimmed {
+    opacity: 0.22;
+  }
+  .pnode.highlighted {
+    background: var(--cds-background-hover);
+    z-index: 20;
+  }
+  .pnode.selected {
+    background: #161616;
+    color: #ffffff;
+    border-color: #161616;
+    border-left-color: var(--node-color);
+    z-index: 40;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+  }
+  [data-theme="dark"] .pnode.selected {
+    background: #f4f4f4;
+    color: #161616;
+    border-color: #f4f4f4;
+  }
+
+  /* Style variants applied via [data-node-style] on #app */
+  #app[data-node-style="chip"] .pnode {
+    border-left: 1px solid var(--cds-border-subtle-02);
+    padding-left: 10px;
+    position: relative;
+  }
+  #app[data-node-style="chip"] .pnode::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 4px;
+    background: var(--node-color, var(--cds-border-strong-01));
+  }
+  #app[data-node-style="chip"] .pnode { padding-left: 14px; }
+
+  #app[data-node-style="dot"] .pnode {
+    border-left: 1px solid var(--cds-border-subtle-02);
+    padding-left: 26px;
+    position: relative;
+  }
+  #app[data-node-style="dot"] .pnode::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--node-color, var(--cds-border-strong-01));
+  }
+
+  /* ─── Sidebar ─── */
+  #sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-layer-01);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #sidebar-header {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-layer-01);
+    flex-shrink: 0;
+  }
+  .sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+  }
+
+  #reset-btn {
+    height: 32px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid var(--cds-border-strong-01);
+    border-radius: 0;
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.11s;
+    display: none;
+  }
+  #reset-btn:hover { background: var(--cds-background-hover); }
+  #reset-btn:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
+
+  #sidebar-inner {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+  }
+  #sidebar-inner::-webkit-scrollbar { width: 6px; }
+  #sidebar-inner::-webkit-scrollbar-track { background: transparent; }
+  #sidebar-inner::-webkit-scrollbar-thumb { background: var(--cds-border-subtle-02); }
+
+  .sidebar-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--cds-text-secondary);
+    padding: 8px 0;
+  }
+  .sidebar-empty .empty-icon {
+    width: 32px; height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
+  }
+  .sidebar-empty .empty-icon svg {
+    width: 18px; height: 18px;
+    color: var(--cds-icon-secondary);
+  }
+  .sidebar-empty p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-secondary);
+  }
+  .sidebar-empty .empty-hint {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-helper);
+    margin-top: 4px;
+  }
+
+  /* Sidebar — product detail */
+  .sb-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 12px;
+  }
+  .sb-product-name {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: var(--cds-text-primary);
+    margin-bottom: 6px;
+  }
+  .sb-category {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--cds-text-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .sb-section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .sb-section-label:first-of-type { margin-top: 0; }
+
+  .play-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px 4px 6px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cds-text-primary);
+    margin: 0 4px 4px 0;
+  }
+  .play-pill .dot {
+    width: 8px; height: 8px;
+    background: var(--play-color);
+  }
+
+  .conn-list {
+    display: flex;
+    flex-direction: column;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
+  }
+  .conn-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--cds-background);
+    border: none;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.11s;
+    width: 100%;
+    font-family: var(--font-sans);
+    color: var(--cds-text-primary);
+  }
+  .conn-row:last-child { border-bottom: none; }
+  .conn-row:hover { background: var(--cds-background-hover); }
+  .conn-row:focus-visible { outline: 2px solid var(--cds-focus); outline-offset: -2px; }
+
+  .conn-accent {
+    width: 4px;
+    height: 28px;
+    background: var(--accent-color, var(--cds-text-secondary));
+    flex-shrink: 0;
+  }
+  .conn-info { flex: 1; min-width: 0; }
+  .conn-name {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--cds-text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .conn-play {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-top: 2px;
+  }
+  .conn-arrow {
+    font-size: 16px;
+    color: var(--cds-icon-secondary);
+    flex-shrink: 0;
+    font-weight: 400;
+  }
+
+  .conn-explanation {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--cds-text-secondary);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Competitive positioning */
+  .sb-competitors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .competitor-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    white-space: nowrap;
+  }
+
+  .sb-differentiators {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .differentiator-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  .differentiator-item:first-child {
+    padding-top: 0;
+  }
+
+  .diff-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 50%;
+    margin-top: 1px;
+  }
+
+  .diff-text {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-primary);
+  }
+
+  /* Product details in sidebar */
+  .sb-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--cds-text-secondary);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cds-border-subtle-01);
+  }
+
+  .sb-value {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--cds-text-primary);
+    background: var(--cds-background);
+    padding: 12px;
+    border-left: 3px solid var(--cds-interactive);
+    margin-bottom: 16px;
+  }
+
+  .sb-questions {
+    margin-top: 20px;
+  }
+
+  .sb-question-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-01);
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--cds-text-primary);
+    transition: background-color 0.11s;
+  }
+
+  .sb-question-item:hover {
+    background: var(--cds-background-hover);
+  }
+
+  .sb-question-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    font-size: 11px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    margin-top: 1px;
+  }
+
+  .sb-question-text {
+    flex: 1;
+  }
+
+  /* ─── Footer ─── */
+  #footer {
+    border-top: 1px solid var(--cds-border-subtle-01);
+    background: var(--cds-background);
+    padding: 0 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+  }
+  #footer .footer-stats { display: inline-flex; gap: 16px; }
+  #footer .footer-stat strong {
+    color: var(--cds-text-primary);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  #footer .footer-hint { color: var(--cds-text-helper); }
+
+  /* SVG path animation - slower, smoother animation */
+  @keyframes drawPath {
+    from { stroke-dashoffset: var(--path-length, 1000); }
+    to   { stroke-dashoffset: 0; }
+  }
+  .path-active {
+    animation: drawPath 1.2s ease-out forwards;
+  }
+
+  /* ─── Tweaks panel ─── */
+  #tweaks-panel {
+    position: fixed;
+    right: 24px;
+    bottom: 56px;
+    width: 280px;
+    background: var(--cds-background);
+    border: 1px solid var(--cds-border-subtle-02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+    z-index: 1000;
+    font-family: var(--font-sans);
+    color: var(--cds-text-primary);
+    display: none;
+  }
+  #tweaks-panel.is-open { display: block; }
+  .tweaks-header {
+    height: 40px;
+    background: #161616;
+    color: #ffffff;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tweaks-header h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .tweaks-close {
+    background: transparent;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tweaks-close:hover { background: #353535; color: #fff; }
+  .tweaks-body { padding: 16px; }
+  .tweak-row { margin-bottom: 16px; }
+  .tweak-row:last-child { margin-bottom: 0; }
+  .tweak-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cds-text-secondary);
+    margin-bottom: 8px;
+  }
+  .tweak-seg {
+    display: flex;
+    border: 1px solid var(--cds-border-strong-01);
+    background: var(--cds-field-01);
+  }
+  .tweak-seg button {
+    flex: 1;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--cds-border-strong-01);
+    color: var(--cds-text-primary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.11s;
+  }
+  .tweak-seg button:last-child { border-right: none; }
+  .tweak-seg button:hover { background: var(--cds-background-hover); }
+  .tweak-seg button.is-active {
+    background: #161616;
+    color: #ffffff;
+  }
+  [data-theme="dark"] .tweak-seg button.is-active {
+    background: #f4f4f4;
+    color: #161616;
+  }
+  /* ═══════════════════════════════════════════════════════
+     MOBILE STYLES  (≤ 768px)
+     All rules below are additive — zero impact on desktop.
+     ═══════════════════════════════════════════════════════ */
+
+  /* ── On mobile: hide the desktop chrome ── */
+  @media (max-width: 768px) {
+    body { overflow: auto; }
+
+    /* Hide desktop-only elements */
+    .cds-shell__bar2,
+    #main,
+    #footer { display: none !important; }
+
+    /* Tighten the top bar */
+    .cds-shell__bar1 {
+      padding: 0 12px;
+      height: 48px;
+    }
+    .cds-shell__product {
+      font-size: 12px;
+    }
+    .cds-shell__meta-text { display: none; }
+
+    /* ── Mobile layout wrapper ── */
+    #mobile-view {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 48px);
+      background: var(--cds-background);
+    }
+
+    /* ── Mobile search bar ── */
+    #mobile-search-bar {
+      padding: 8px 12px;
+      background: var(--cds-background);
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #mobile-search-bar .search-container {
+      flex: 1;
+      min-width: 0;
+    }
+    #mobile-search-bar .search-input {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* ── Mobile legend (horizontal scroll) ── */
+    #mobile-legend {
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 12px;
+      gap: 6px;
+      background: var(--cds-background);
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      scrollbar-width: none;
+    }
+    #mobile-legend::-webkit-scrollbar { display: none; }
+
+    .mobile-legend-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--cds-layer-01);
+      border: 1px solid var(--cds-border-subtle-02);
+      color: var(--cds-text-secondary);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background-color 0.11s, color 0.11s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-legend-chip .dot {
+      width: 8px; height: 8px;
+      flex-shrink: 0;
+    }
+    .mobile-legend-chip.is-active {
+      background: var(--cds-background-selected);
+      color: var(--cds-text-primary);
+      border-bottom-color: var(--legend-color, var(--cds-interactive));
+      border-bottom-width: 2px;
+    }
+
+    /* ── Mobile search results count ── */
+    #mobile-search-results {
+      padding: 4px 12px 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      min-height: 18px;
+    }
+
+    /* ── Accordion list ── */
+    #mobile-accordion {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mob-lane {
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+    }
+
+    .mob-lane-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 16px;
+      height: 52px;
+      background: var(--cds-layer-01);
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.11s;
+    }
+    .mob-lane-header:active { background: var(--cds-background-active); }
+
+    .mob-lane-dot {
+      width: 10px; height: 10px;
+      flex-shrink: 0;
+    }
+
+    .mob-lane-title {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cds-text-primary);
+      letter-spacing: 0.01em;
+    }
+
+    .mob-lane-count {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      background: var(--cds-background);
+      border: 1px solid var(--cds-border-subtle-02);
+      padding: 2px 7px;
+      flex-shrink: 0;
+    }
+
+    .mob-lane-chevron {
+      font-size: 14px;
+      color: var(--cds-icon-secondary);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+    .mob-lane.is-open .mob-lane-chevron { transform: rotate(90deg); }
+
+    .mob-lane-body {
+      display: none;
+      background: var(--cds-background);
+      border-top: 1px solid var(--cds-border-subtle-01);
+    }
+    .mob-lane.is-open .mob-lane-body { display: block; }
+
+    /* Product cards inside accordion */
+    .mob-product-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: none;
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+      background: var(--cds-background);
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      min-height: 52px;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.11s;
+    }
+    .mob-product-card:last-child { border-bottom: none; }
+    .mob-product-card:active { background: var(--cds-background-active); }
+    .mob-product-card.dimmed { opacity: 0.25; }
+    .mob-product-card.highlighted { background: var(--cds-background-hover); }
+
+    .mob-product-accent {
+      width: 3px;
+      align-self: stretch;
+      flex-shrink: 0;
+      background: var(--node-color, var(--cds-border-strong-01));
+      min-height: 24px;
+    }
+
+    .mob-product-label {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cds-text-primary);
+      line-height: 1.3;
+    }
+
+    .mob-product-conns {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cds-text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .mob-product-arrow {
+      font-size: 16px;
+      color: var(--cds-icon-secondary);
+      flex-shrink: 0;
+    }
+
+    /* ── Bottom drawer ── */
+    #mob-drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+    }
+    #mob-drawer-overlay.is-open { display: block; }
+
+    #mob-drawer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-height: 88vh;
+      background: var(--cds-layer-01);
+      border-top: 1px solid var(--cds-border-subtle-02);
+      z-index: 201;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    #mob-drawer.is-open { transform: translateY(0); }
+
+    #mob-drawer-handle-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0 6px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    #mob-drawer-handle-bar::before {
+      content: '';
+      display: block;
+      width: 36px; height: 4px;
+      background: var(--cds-border-subtle-02);
+      border-radius: 2px;
+    }
+
+    #mob-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 12px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--cds-border-subtle-01);
+    }
+    #mob-drawer-title {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--cds-text-primary);
+    }
+    #mob-drawer-close {
+      width: 36px; height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid var(--cds-border-subtle-02);
+      color: var(--cds-icon-secondary);
+      font-size: 20px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #mob-drawer-close:active { background: var(--cds-background-active); }
+
+    #mob-drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 16px;
+    }
+    #mob-drawer-body::-webkit-scrollbar { width: 4px; }
+    #mob-drawer-body::-webkit-scrollbar-thumb { background: var(--cds-border-subtle-02); }
+
+    /* Reuse sidebar styles inside drawer, but tweak a few things for mobile */
+    #mob-drawer-body .sb-product-name { font-size: 18px; }
+    #mob-drawer-body .conn-row { min-height: 52px; }
+
+    /* ── Mobile footer hint ── */
+    #mobile-footer {
+      padding: 10px 16px;
+      background: var(--cds-background);
+      border-top: 1px solid var(--cds-border-subtle-01);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--cds-text-helper);
+      text-align: center;
+      flex-shrink: 0;
+    }
+  }
+
+  /* ── On desktop: ensure mobile view is hidden ── */
+  @media (min-width: 769px) {
+    #mobile-view,
+    #mob-drawer,
+    #mob-drawer-overlay { display: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="app" data-theme="light" data-node-style="tag" data-conn-style="curved">
+
+  <!-- ── Carbon UI Shell ── -->
+  <header class="cds-shell">
+    <div class="cds-shell__bar1">
+      <div class="cds-shell__brand">
+        <span class="cds-shell__wordmark">Arrow ECS UKI</span>
+        <span class="cds-shell__divider"></span>
+        <span class="cds-shell__product">IBM Product Synergies Map</span>
+      </div>
+      <div class="cds-shell__meta">
+        <span class="cds-shell__meta-text"><strong>2026</strong></span>
+        <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme">
+          <span id="themeText" class="visually-hidden">Toggle theme</span>
+          <span class="icon-glyph" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </div>
+    <div class="cds-shell__bar2">
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search products, descriptions, questions..."
+          aria-label="Search products"
+        />
+        <button
+          type="button"
+          id="search-clear"
+          class="search-clear"
+          aria-label="Clear search"
+          title="Clear search"
+        >×</button>
+      </div>
+      <span id="search-results" class="search-results-count"></span>
+      <nav id="play-legend" aria-label="Play filter"></nav>
+    </div>
+  </header>
+
+  <!-- ── Main content ── -->
+  <main id="main">
+    <section id="map-area" aria-label="Cross-sell map">
+      <svg id="svg-connections" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs id="svg-defs"></defs>
+      </svg>
+    </section>
+
+    <aside id="sidebar" aria-label="Product detail">
+      <div id="sidebar-header">
+        <span class="sidebar-title">Detail</span>
+        <button id="reset-btn" type="button">Clear selection</button>
+      </div>
+      <div id="sidebar-inner">
+        <div class="sidebar-empty"><p>Loading…</p></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer id="footer">
+    <div class="footer-stats">
+      <span class="footer-stat"><strong id="stat-plays"></strong>Plays</span>
+      <span class="footer-stat"><strong id="stat-products"></strong>Products</span>
+      <span class="footer-stat"><strong>Arrow ECS UKI</strong></span>
+    </div>
+    <span class="footer-hint">Search products · Click product to view details</span>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       MOBILE VIEW  (hidden on desktop via media query)
+       ══════════════════════════════════════════════════ -->
+  <div id="mobile-view">
+
+    <!-- Mobile search -->
+    <div id="mobile-search-bar">
+      <div class="search-container">
+        <input
+          type="text"
+          id="mob-search-input"
+          class="search-input"
+          placeholder="Search products…"
+          aria-label="Search products"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <button type="button" id="mob-search-clear" class="search-clear" aria-label="Clear search">×</button>
+      </div>
+    </div>
+    <div id="mobile-search-results"></div>
+
+    <!-- Mobile legend chips (horizontal scroll) -->
+    <nav id="mobile-legend" aria-label="Play filter"></nav>
+
+    <!-- Accordion lane list -->
+    <div id="mobile-accordion" role="list"></div>
+
+    <!-- Mobile footer -->
+    <div id="mobile-footer"></div>
+  </div>
+
+  <!-- Bottom drawer overlay -->
+  <div id="mob-drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Bottom drawer -->
+  <div id="mob-drawer" role="dialog" aria-modal="true" aria-label="Product detail">
+    <div id="mob-drawer-handle-bar" role="button" aria-label="Close drawer" tabindex="0"></div>
+    <div id="mob-drawer-header">
+      <span id="mob-drawer-title"></span>
+      <button type="button" id="mob-drawer-close" aria-label="Close">×</button>
+    </div>
+    <div id="mob-drawer-body"></div>
+  </div>
+
+  <!-- ── Tweaks panel ── -->
+  <div id="tweaks-panel" role="dialog" aria-label="Tweaks">
+    <div class="tweaks-header">
+      <h3>Tweaks</h3>
+      <button class="tweaks-close" id="tweaks-close" aria-label="Close">×</button>
+    </div>
+    <div class="tweaks-body">
+      <div class="tweak-row">
+        <span class="tweak-label">Theme</span>
+        <div class="tweak-seg" data-tweak="theme">
+          <button data-value="light">Light</button>
+          <button data-value="dark">Dark</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Node style</span>
+        <div class="tweak-seg" data-tweak="nodeStyle">
+          <button data-value="tag">Tag</button>
+          <button data-value="chip">Chip</button>
+          <button data-value="dot">Dot</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Connections</span>
+        <div class="tweak-seg" data-tweak="connStyle">
+          <button data-value="curved">Curved</button>
+          <button data-value="ortho">Orthogonal</button>
+        </div>
+      </div>
+      <div class="tweak-row">
+        <span class="tweak-label">Lane fill</span>
+        <div class="tweak-seg" data-tweak="laneFill">
+          <button data-value="zebra">Zebra</button>
+          <button data-value="flat">Flat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ════════════════════════════════════════════════════════
+   Tweaks (defaults persisted via host)
+   ════════════════════════════════════════════════════════ */
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "dark",
+  "nodeStyle": "tag",
+  "connStyle": "curved",
+  "laneFill": "zebra"
+}/*EDITMODE-END*/;
+
+let tweakState = { ...TWEAK_DEFAULTS };
+
+/* ════════════════════════════════════════════════════════
+   Data — GENERATED from data.yaml by build.py
+   Do not edit content here: edit data.yaml, then run
+       python build.py
+   and open dist/index.html.
+   ════════════════════════════════════════════════════════ */
+/*DATA-BEGIN*/
+const SITE = {
+ "title": "IBM Product Synergies Map",
+ "mobileFooterHint": "Tap a product to explore connections"
+};
+const PLAYS = {
+ "1": {
+  "id": 1,
+  "name": "Automation & Integration",
+  "short": "Automation",
+  "varName": "--play-1"
+ },
+ "3": {
+  "id": 3,
+  "name": "Observability & FinOps",
+  "short": "Observability",
+  "varName": "--play-3"
+ },
+ "4": {
+  "id": 4,
+  "name": "Security & Governance",
+  "short": "Security",
+  "varName": "--play-4"
+ },
+ "2": {
+  "id": 2,
+  "name": "Data & AI Platform",
+  "short": "Data & AI",
+  "varName": "--play-2"
+ },
+ "5": {
+  "id": 5,
+  "name": "Infrastructure & Systems",
+  "short": "Infrastructure",
+  "varName": "--play-5"
+ },
+ "6": {
+  "id": 6,
+  "name": "Storage Solutions",
+  "short": "Storage",
+  "varName": "--play-6"
+ }
+};
+const PLAY_ORDER = [
+ 1,
+ 3,
+ 4,
+ 2,
+ 5,
+ 6
+];
+const CATEGORIES = [
+ {
+  "id": "automation",
+  "label": "Automation & Integration",
+  "playId": 1
+ },
+ {
+  "id": "observability",
+  "label": "Observability & FinOps",
+  "playId": 3
+ },
+ {
+  "id": "security",
+  "label": "Security & Governance",
+  "playId": 4
+ },
+ {
+  "id": "data_ai",
+  "label": "Data & AI Platform",
+  "playId": 2
+ },
+ {
+  "id": "infrastructure",
+  "label": "Infrastructure & Systems",
+  "playId": 5
+ },
+ {
+  "id": "storage",
+  "label": "Storage Solutions",
+  "playId": 6
+ }
+];
+const PRODUCTS = [
+ {
+  "id": "api_connect",
+  "label": "API Connect",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "Enterprise API management platform for creating, securing, and managing APIs across hybrid cloud environments.",
+  "value": "Enables digital transformation through API-led integration, reducing integration time by 50% and improving developer productivity.",
+  "questions": [
+   "Do you have multiple applications that need to share data?",
+   "Are you building mobile or web apps that need backend services?",
+   "Do you need to monetise your data or services through APIs?",
+   "Are you struggling with point-to-point integrations?"
+  ],
+  "competitors": [
+   "MuleSoft Anypoint",
+   "Apigee (Google Cloud)",
+   "Kong",
+   "AWS API Gateway"
+  ],
+  "differentiators": [
+   "Built-in DataPower security",
+   "Hybrid cloud deployment flexibility",
+   "Native Kubernetes support",
+   "Integrated with IBM Cloud Pak"
+  ]
+ },
+ {
+  "id": "event_auto",
+  "label": "Event Automation",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "Event-driven automation platform for real-time business process automation and decision-making.",
+  "value": "Reduces manual intervention by 70%, enables real-time response to business events, and improves operational efficiency.",
+  "questions": [
+   "Do you have business processes that require real-time responses?",
+   "Are you manually monitoring systems for events?",
+   "Do you need to automate workflows across multiple systems?",
+   "Are you looking to reduce operational costs through automation?"
+  ],
+  "competitors": [
+   "Apache Kafka",
+   "AWS EventBridge",
+   "Azure Event Grid",
+   "Google Cloud Pub/Sub"
+  ],
+  "differentiators": [
+   "Built-in business rules engine",
+   "Low-code workflow designer",
+   "Enterprise-grade governance",
+   "Integrated with IBM automation suite"
+  ]
+ },
+ {
+  "id": "webmethods",
+  "label": "webMethods",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "Comprehensive integration platform for connecting applications, data, and devices across hybrid environments.",
+  "value": "Accelerates integration projects by 60%, reduces maintenance costs, and provides unified visibility across all integrations.",
+  "questions": [
+   "Do you have legacy systems that need to integrate with modern applications?",
+   "Are you managing multiple integration tools?",
+   "Do you need B2B integration capabilities?",
+   "Are you struggling with data synchronisation across systems?"
+  ],
+  "competitors": [
+   "MuleSoft",
+   "Dell Boomi",
+   "Informatica",
+   "TIBCO"
+  ],
+  "differentiators": [
+   "30+ years of integration expertise",
+   "Strong B2B/EDI capabilities",
+   "Hybrid integration platform",
+   "Pre-built connectors for 300+ applications"
+  ]
+ },
+ {
+  "id": "terraform",
+  "label": "Terraform",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "Infrastructure as Code tool for provisioning and managing cloud infrastructure across multiple providers.",
+  "value": "Reduces infrastructure deployment time by 80%, ensures consistency, and enables version control for infrastructure.",
+  "questions": [
+   "Are you manually provisioning cloud infrastructure?",
+   "Do you need to manage infrastructure across multiple cloud providers?",
+   "Are you looking to standardise infrastructure deployments?",
+   "Do you need to track infrastructure changes over time?"
+  ],
+  "competitors": [
+   "AWS CloudFormation",
+   "Azure Resource Manager",
+   "Pulumi",
+   "Ansible"
+  ],
+  "differentiators": [
+   "Multi-cloud support",
+   "Declarative syntax",
+   "Large provider ecosystem",
+   "State management capabilities"
+  ]
+ },
+ {
+  "id": "concert",
+  "label": "Concert",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "AI-powered application management platform that provides unified visibility and control across hybrid cloud environments.",
+  "value": "Reduces MTTR by 40%, provides 360-degree application visibility, and automates remediation of common issues.",
+  "questions": [
+   "Do you struggle with visibility across your application landscape?",
+   "Are you managing applications across multiple clouds?",
+   "Do you need to reduce mean time to resolution?",
+   "Are you looking to automate application management tasks?"
+  ],
+  "competitors": [
+   "ServiceNow",
+   "BMC Helix",
+   "Micro Focus Operations Bridge",
+   "Splunk"
+  ],
+  "differentiators": [
+   "AI-powered insights",
+   "Unified hybrid cloud view",
+   "Automated remediation",
+   "Integration with IBM observability tools"
+  ]
+ },
+ {
+  "id": "maximo",
+  "label": "Maximo",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "Enterprise asset management platform for managing physical assets, maintenance, and operations.",
+  "value": "Increases asset uptime by 20%, reduces maintenance costs by 25%, and extends asset lifecycle.",
+  "questions": [
+   "Do you manage physical assets or facilities?",
+   "Are you tracking maintenance manually?",
+   "Do you need to optimise asset performance?",
+   "Are you looking to implement predictive maintenance?"
+  ],
+  "competitors": [
+   "SAP EAM",
+   "Oracle EAM",
+   "Infor EAM",
+   "IFS Applications"
+  ],
+  "differentiators": [
+   "AI-powered predictive maintenance",
+   "Mobile-first design",
+   "IoT integration",
+   "Industry-specific templates"
+  ]
+ },
+ {
+  "id": "ibm_mq",
+  "label": "MQ",
+  "cat": "automation",
+  "plays": [
+   1,
+   2
+  ],
+  "desc": "Enterprise message-oriented middleware for reliable, asynchronous messaging across hybrid environments. Guarantees message delivery for mission-critical applications including mainframe, cloud, and on-premises systems.",
+  "value": "Ensures 99.99% message delivery reliability, reduces application coupling, and enables real-time integration across platforms including mainframe and cloud with built-in transaction support.",
+  "questions": [
+   "Do you have applications that need guaranteed, reliable messaging?",
+   "Are you integrating systems across mainframe and cloud environments?",
+   "Do you need transactional messaging with delivery guarantees?",
+   "Are you building event-driven architectures that demand reliability?"
+  ],
+  "competitors": [
+   "RabbitMQ",
+   "AWS SQS",
+   "Azure Service Bus",
+   "Solace PubSub+"
+  ],
+  "differentiators": [
+   "Guaranteed delivery with full transaction support",
+   "Mainframe-native integration across IBM Z, Power, and LinuxONE",
+   "40+ years of enterprise messaging reliability",
+   "Native bridge to Confluent Kafka via IBM MQ Kafka Connector"
+  ]
+ },
+ {
+  "id": "ibm_sterling",
+  "label": "Sterling",
+  "cat": "automation",
+  "plays": [
+   1,
+   2
+  ],
+  "desc": "Comprehensive supply chain and B2B integration portfolio for managing order fulfilment, supply chain visibility, and partner connectivity. Combines order management, supply chain intelligence, B2B integration, and secure data exchange across trading partner networks.",
+  "value": "Accelerates B2B integration by 70%, reduces order cycle time by 40%, and provides end-to-end supply chain visibility with real-time partner collaboration and AI-powered demand forecasting.",
+  "questions": [
+   "Do you need to integrate with multiple B2B trading partners or suppliers?",
+   "Are you looking to optimise order-to-cash or procure-to-pay processes?",
+   "Do you need real-time supply chain visibility across partners?",
+   "Are you managing complex multi-channel order fulfilment?"
+  ],
+  "competitors": [
+   "SAP Ariba",
+   "Oracle SCM Cloud",
+   "Coupa",
+   "Kinaxis RapidResponse"
+  ],
+  "differentiators": [
+   "Purpose-built for B2B integration and EDI with 50,000+ partner connections",
+   "AI-powered supply chain intelligence and demand forecasting",
+   "Secure proxy for partner data exchange with end-to-end encryption",
+   "Deep integration with IBM automation and data ecosystem"
+  ]
+ },
+ {
+  "id": "instana",
+  "label": "Instana",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "Automated application performance monitoring with AI-powered insights for cloud-native and microservices architectures.",
+  "value": "Reduces MTTD by 90%, provides automatic discovery and monitoring, and delivers 1-second granularity for troubleshooting.",
+  "questions": [
+   "Do you have microservices or containerised applications?",
+   "Are you struggling to identify performance bottlenecks?",
+   "Do you need real-time application monitoring?",
+   "Are you experiencing frequent application issues?"
+  ],
+  "competitors": [
+   "Datadog",
+   "New Relic",
+   "Dynatrace",
+   "AppDynamics"
+  ],
+  "differentiators": [
+   "1-second granularity",
+   "Automatic discovery",
+   "No manual instrumentation",
+   "Built for Kubernetes"
+  ]
+ },
+ {
+  "id": "sevone",
+  "label": "SevOne",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "Network performance monitoring and analytics platform for managing complex network infrastructures.",
+  "value": "Improves network visibility by 95%, reduces network incidents by 40%, and enables proactive capacity planning.",
+  "questions": [
+   "Do you manage complex network infrastructure?",
+   "Are you experiencing network performance issues?",
+   "Do you need better visibility into network traffic?",
+   "Are you planning network capacity upgrades?"
+  ],
+  "competitors": [
+   "SolarWinds",
+   "PRTG",
+   "Cisco ThousandEyes",
+   "NetScout"
+  ],
+  "differentiators": [
+   "Scalable to millions of metrics",
+   "Real-time analytics",
+   "Multi-vendor support",
+   "Predictive capacity planning"
+  ]
+ },
+ {
+  "id": "turbonomic",
+  "label": "Turbonomic",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "Application resource management platform that continuously optimises resource allocation in real-time.",
+  "value": "Reduces cloud costs by 30-50%, improves application performance by 30%, and automates resource optimisation.",
+  "questions": [
+   "Are your cloud costs higher than expected?",
+   "Do you have performance issues due to resource constraints?",
+   "Are you manually sizing VMs or containers?",
+   "Do you need to optimise resource utilisation?"
+  ],
+  "competitors": [
+   "CloudHealth",
+   "Densify",
+   "Spot.io",
+   "Harness"
+  ],
+  "differentiators": [
+   "Real-time automated actions",
+   "Application-aware decisions",
+   "Full-stack optimisation",
+   "Proven ROI in 30 days"
+  ]
+ },
+ {
+  "id": "apptio",
+  "label": "Apptio",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "Technology business management platform for managing and optimising IT spending and investments.",
+  "value": "Provides complete IT cost transparency, enables data-driven decisions, and optimises IT portfolio investments.",
+  "questions": [
+   "Do you know your true IT costs per service or application?",
+   "Are you struggling to justify IT spending to the business?",
+   "Do you need to optimise your IT budget?",
+   "Are you planning IT investments without clear ROI visibility?"
+  ],
+  "competitors": [
+   "ServiceNow ITBM",
+   "Planview",
+   "Changepoint",
+   "Upland Software"
+  ],
+  "differentiators": [
+   "Industry-leading TBM platform",
+   "Pre-built cost models",
+   "Executive dashboards",
+   "Proven methodology"
+  ]
+ },
+ {
+  "id": "cloudability",
+  "label": "Apptio Cloudability",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "Cloud cost management and optimisation platform for multi-cloud environments.",
+  "value": "Reduces cloud waste by 30%, provides cost allocation and chargeback, and enables cloud cost forecasting.",
+  "questions": [
+   "Are your cloud bills increasing unexpectedly?",
+   "Do you need to allocate cloud costs to business units?",
+   "Are you using multiple cloud providers?",
+   "Do you have unused or underutilised cloud resources?"
+  ],
+  "competitors": [
+   "CloudHealth",
+   "Flexera",
+   "Spot.io",
+   "Vantage"
+  ],
+  "differentiators": [
+   "Multi-cloud support",
+   "Automated recommendations",
+   "Chargeback capabilities",
+   "Integration with Apptio TBM"
+  ]
+ },
+ {
+  "id": "guardium",
+  "label": "Guardium",
+  "cat": "security",
+  "plays": [
+   4
+  ],
+  "desc": "Data security and protection platform for discovering, classifying, and protecting sensitive data.",
+  "value": "Ensures compliance with data regulations, prevents data breaches, and provides complete data activity monitoring.",
+  "questions": [
+   "Do you store sensitive customer or financial data?",
+   "Are you subject to data privacy regulations (GDPR, CCPA)?",
+   "Have you experienced data security incidents?",
+   "Do you need to monitor database access and activity?"
+  ],
+  "competitors": [
+   "Imperva",
+   "Oracle Data Safe",
+   "Varonis",
+   "McAfee Database Security"
+  ],
+  "differentiators": [
+   "Real-time monitoring",
+   "Automated compliance reporting",
+   "Data discovery and classification",
+   "Support for 25+ database types"
+  ]
+ },
+ {
+  "id": "verify",
+  "label": "Verify",
+  "cat": "security",
+  "plays": [
+   4
+  ],
+  "desc": "Identity and access management platform for securing user authentication and authorisation.",
+  "value": "Reduces security risks by 60%, improves user experience with SSO, and ensures compliance with access policies.",
+  "questions": [
+   "Do users access multiple applications with different passwords?",
+   "Are you concerned about unauthorised access?",
+   "Do you need multi-factor authentication?",
+   "Are you managing user access manually?"
+  ],
+  "competitors": [
+   "Okta",
+   "Ping Identity",
+   "Microsoft Entra ID",
+   "ForgeRock"
+  ],
+  "differentiators": [
+   "Risk-based authentication",
+   "Adaptive access control",
+   "Hybrid cloud support",
+   "FIDO2 certification"
+  ]
+ },
+ {
+  "id": "vault",
+  "label": "Vault",
+  "cat": "security",
+  "plays": [
+   4
+  ],
+  "desc": "Secrets management platform for securing, storing, and controlling access to tokens, passwords, and certificates.",
+  "value": "Eliminates hardcoded secrets, provides centralised secrets management, and enables automated secret rotation.",
+  "questions": [
+   "Are credentials stored in code or configuration files?",
+   "Do you need to manage API keys and certificates?",
+   "Are you concerned about secrets sprawl?",
+   "Do you need to rotate secrets regularly?"
+  ],
+  "competitors": [
+   "HashiCorp Vault",
+   "AWS Secrets Manager",
+   "Azure Key Vault",
+   "CyberArk"
+  ],
+  "differentiators": [
+   "Dynamic secrets generation",
+   "Automated rotation",
+   "Audit logging",
+   "Multi-cloud support"
+  ]
+ },
+ {
+  "id": "wxai",
+  "label": "watsonx.ai",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "Enterprise AI studio for training, validating, and deploying foundation models and machine learning models.",
+  "value": "Accelerates AI development by 70%, reduces model training costs, and enables responsible AI governance.",
+  "questions": [
+   "Are you looking to build AI applications?",
+   "Do you need to train custom AI models?",
+   "Are you concerned about AI bias and explainability?",
+   "Do you want to leverage foundation models for your use cases?"
+  ],
+  "competitors": [
+   "Azure AI",
+   "AWS SageMaker",
+   "Google Vertex AI",
+   "Databricks"
+  ],
+  "differentiators": [
+   "Enterprise foundation models",
+   "Built-in AI governance",
+   "Hybrid deployment",
+   "Open source compatibility"
+  ]
+ },
+ {
+  "id": "wxdata",
+  "label": "watsonx.data",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "Open lakehouse platform for accessing and sharing data across hybrid cloud environments.",
+  "value": "Reduces data warehouse costs by 50%, enables query across multiple data sources, and provides open data architecture.",
+  "questions": [
+   "Are you managing data in multiple silos?",
+   "Are data warehouse costs too high?",
+   "Do you need to query data across different storage systems?",
+   "Are you looking to modernise your data architecture?"
+  ],
+  "competitors": [
+   "Databricks Lakehouse",
+   "Snowflake",
+   "AWS Lake Formation",
+   "Azure Synapse"
+  ],
+  "differentiators": [
+   "Open lakehouse architecture",
+   "Query multiple sources",
+   "Hybrid cloud support",
+   "Cost-effective storage"
+  ]
+ },
+ {
+  "id": "wxdi",
+  "label": "watsonx.data intelligence",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "AI-powered data catalogue and governance platform for discovering, understanding, and managing enterprise data.",
+  "value": "Reduces time to find data by 80%, improves data quality, and ensures data compliance and lineage.",
+  "questions": [
+   "Do users struggle to find the data they need?",
+   "Is data quality a concern?",
+   "Do you need to track data lineage?",
+   "Are you subject to data governance regulations?"
+  ],
+  "competitors": [
+   "Collibra",
+   "Alation",
+   "Informatica",
+   "Azure Purview"
+  ],
+  "differentiators": [
+   "AI-powered discovery",
+   "Automated data quality",
+   "End-to-end lineage",
+   "Integrated governance"
+  ]
+ },
+ {
+  "id": "wxdint",
+  "label": "watsonx.data integration",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "Data integration platform for moving and transforming data across hybrid cloud environments.",
+  "value": "Accelerates data integration by 60%, supports real-time and batch processing, and provides data quality capabilities.",
+  "questions": [
+   "Do you need to move data between systems regularly?",
+   "Are you performing manual data transformations?",
+   "Do you need real-time data integration?",
+   "Are data quality issues impacting your business?"
+  ],
+  "competitors": [
+   "Informatica",
+   "Talend",
+   "Fivetran",
+   "AWS Glue"
+  ],
+  "differentiators": [
+   "Hybrid cloud integration",
+   "Real-time and batch",
+   "Built-in data quality",
+   "Low-code interface"
+  ]
+ },
+ {
+  "id": "wxgov",
+  "label": "watsonx.governance",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "AI governance platform for managing AI model lifecycle, ensuring compliance, and monitoring model performance.",
+  "value": "Ensures AI compliance and ethics, reduces AI risks, and provides complete AI model transparency.",
+  "questions": [
+   "Are you deploying AI models in production?",
+   "Do you need to ensure AI fairness and explainability?",
+   "Are you concerned about AI model drift?",
+   "Do you need to comply with AI regulations?"
+  ],
+  "competitors": [
+   "DataRobot",
+   "Fiddler AI",
+   "Arthur AI",
+   "Azure ML Responsible AI"
+  ],
+  "differentiators": [
+   "Complete AI lifecycle",
+   "Bias detection",
+   "Model monitoring",
+   "Regulatory compliance"
+  ]
+ },
+ {
+  "id": "wxorch",
+  "label": "watsonx Orchestrate",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "AI-powered automation platform for building and deploying intelligent workflows and digital assistants.",
+  "value": "Automates repetitive tasks by 80%, improves employee productivity, and provides conversational AI interfaces.",
+  "questions": [
+   "Do employees spend time on repetitive tasks?",
+   "Are you looking to build chatbots or virtual assistants?",
+   "Do you need to automate business processes with AI?",
+   "Are you looking to improve employee productivity?"
+  ],
+  "competitors": [
+   "UiPath",
+   "Automation Anywhere",
+   "Microsoft Power Automate",
+   "ServiceNow"
+  ],
+  "differentiators": [
+   "AI-powered automation",
+   "Natural language interface",
+   "Pre-built skills",
+   "Enterprise integration"
+  ]
+ },
+ {
+  "id": "wca_ansible",
+  "label": "IBM Bob",
+  "cat": "data_ai",
+  "plays": [
+   2,
+   1,
+   4
+  ],
+  "desc": "AI pair programmer that accelerates software development, application modernisation, and automation scripting across modern and legacy languages including Java, Python, RPG, COBOL, and PL/SQL — with agentic capabilities that take code from design to production.",
+  "value": "Compresses development tasks from weeks to hours, with Premium Packages delivering deep specialisation for IBM i, Z, and Java modernisation — and built-in secret scanning to shift security left from day one.",
+  "questions": [
+   "Do developers spend too much time writing boilerplate code?",
+   "Are you looking to accelerate application development?",
+   "Are you running legacy RPG, COBOL, or PL/SQL applications that need modernising?",
+   "Do you need to accelerate agent and tool development for watsonx Orchestrate?"
+  ],
+  "competitors": [
+   "GitHub Copilot",
+   "Cursor",
+   "Claude Code"
+  ],
+  "differentiators": [
+   "Agentic SDLC from design to production",
+   "Premium Packages for IBM i, Z, and Java modernisation",
+   "Built-in secret scanning and security-left coding",
+   "Legacy language depth including RPG, COBOL, and PL/SQL"
+  ]
+ },
+ {
+  "id": "confluent",
+  "label": "Confluent",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "Enterprise-grade Kafka-based streaming platform, available as Confluent Cloud or self-managed, that serves as the real-time data backbone for IBM's hybrid integration, Data & AI, and mainframe modernisation solutions.",
+  "value": "Acts as the universal streaming backbone connecting IBM's integration, infrastructure, and AI platforms — bridging MQ-based legacy messaging to real-time Kafka event streams, feeding watsonx pipelines, and enabling event-driven automation at enterprise scale.",
+  "questions": [
+   "Do you need to process data in real-time?",
+   "Are you building event-driven architectures?",
+   "Do you have multiple systems that need to share data continuously?",
+   "Are you experiencing data pipeline bottlenecks?",
+   "Are you running IBM MQ and looking to bridge into real-time streaming architectures?",
+   "Do you need to stream data from IBM Z or mainframe systems into cloud-native applications?"
+  ],
+  "competitors": [
+   "Amazon MSK",
+   "AWS Kinesis",
+   "Azure Event Hubs",
+   "Google Pub/Sub",
+   "Red Hat AMQ Streams"
+  ],
+  "differentiators": [
+   "Strategic IBM partnership — certified for hybrid cloud and IBM integration stack",
+   "MQ bridge — connects IBM MQ legacy messaging to Kafka event streams natively",
+   "Feeds watsonx.ai and watsonx.data pipelines with real-time streaming data",
+   "Full Kafka ecosystem with enterprise support, RBAC, and Schema Registry"
+  ]
+ },
+ {
+  "id": "ibm_pa",
+  "label": "Planning Analytics",
+  "cat": "data_ai",
+  "plays": [
+   2,
+   3
+  ],
+  "desc": "AI-powered financial planning and analysis platform for self-service budgeting, forecasting, and scenario modelling. Enables finance teams to consolidate data, build dynamic models, and collaborate on financial planning across the enterprise using an in-memory calculation engine.",
+  "value": "Reduces planning cycle time by 60%, improves forecast accuracy by 30%, and empowers finance teams with self-service analytics and AI-driven scenario modelling — eliminating spreadsheet dependency at enterprise scale.",
+  "questions": [
+   "Are your budgeting and forecasting processes manually intensive or spreadsheet-based?",
+   "Do you need better collaboration between finance and business unit teams?",
+   "Are you struggling with forecast accuracy or scenario planning speed?",
+   "Do you need to consolidate financial data from multiple source systems?"
+  ],
+  "competitors": [
+   "Anaplan",
+   "Workday Adaptive Planning",
+   "Oracle Hyperion",
+   "Vena Solutions"
+  ],
+  "differentiators": [
+   "In-memory TM1 calculation engine for instant multi-dimensional modelling",
+   "AI-powered forecasting and anomaly detection",
+   "Self-service for finance teams with no-code model building",
+   "Deep integration with IBM watsonx data and analytics ecosystem"
+  ]
+ },
+ {
+  "id": "linuxone",
+  "label": "LinuxONE",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Enterprise Linux server platform delivering security, scalability, and reliability for mission-critical workloads.",
+  "value": "Reduces infrastructure footprint by 75%, provides 99.999% availability, and delivers industry-leading security.",
+  "questions": [
+   "Do you have mission-critical Linux workloads?",
+   "Are you concerned about security and compliance?",
+   "Do you need to consolidate Linux servers?",
+   "Are you looking to reduce data centre footprint?"
+  ],
+  "competitors": [
+   "HPE Superdome",
+   "Oracle Exadata",
+   "Cisco UCS",
+   "Dell PowerEdge"
+  ],
+  "differentiators": [
+   "Highest security certification",
+   "Massive consolidation ratio",
+   "Pervasive encryption",
+   "99.999% availability"
+  ]
+ },
+ {
+  "id": "power",
+  "label": "Power Systems",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Enterprise server platform optimised for data-intensive workloads, AI, and hybrid cloud.",
+  "value": "Delivers 2-3x better performance per core, reduces TCO by 40%, and provides built-in virtualisation.",
+  "questions": [
+   "Do you run SAP, Oracle, or other enterprise applications?",
+   "Are you looking for better performance for AI workloads?",
+   "Do you need high availability for critical applications?",
+   "Are you concerned about licensing costs on x86?"
+  ],
+  "competitors": [
+   "Oracle SPARC",
+   "HPE Superdome",
+   "Fujitsu PRIMEQUEST",
+   "x86 servers"
+  ],
+  "differentiators": [
+   "Superior per-core performance",
+   "Built-in AI acceleration",
+   "Live partition mobility",
+   "Lower software licensing costs"
+  ]
+ },
+ {
+  "id": "aix",
+  "label": "AIX",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Enterprise Unix operating system for Power Systems with advanced virtualisation and security features.",
+  "value": "Provides 99.999% uptime, enables live partition mobility, and delivers superior workload management.",
+  "questions": [
+   "Do you run Unix workloads?",
+   "Do you need advanced virtualisation capabilities?",
+   "Are you looking for a stable, secure OS for critical workloads?",
+   "Do you need to minimise planned downtime?"
+  ],
+  "competitors": [
+   "Oracle Solaris",
+   "HP-UX",
+   "Red Hat Enterprise Linux",
+   "SUSE Linux"
+  ],
+  "differentiators": [
+   "40+ years of stability",
+   "Live partition mobility",
+   "Workload partitions",
+   "Binary compatibility"
+  ]
+ },
+ {
+  "id": "ibmi",
+  "label": "IBM i",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Integrated operating system for Power Systems with built-in database and security for business applications.",
+  "value": "Reduces administrative overhead by 60%, provides integrated security, and ensures business continuity.",
+  "questions": [
+   "Do you run business-critical applications?",
+   "Are you looking to modernise legacy applications?",
+   "Do you need integrated database capabilities?",
+   "Are you concerned about security and compliance?"
+  ],
+  "competitors": [
+   "Windows Server",
+   "Linux",
+   "Oracle Database",
+   "SAP HANA"
+  ],
+  "differentiators": [
+   "Integrated database",
+   "Object-based architecture",
+   "Automatic security",
+   "Zero downtime upgrades"
+  ]
+ },
+ {
+  "id": "linux_power",
+  "label": "Linux on Power",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Enterprise Linux distributions optimised for Power Systems architecture.",
+  "value": "Delivers superior performance for Linux workloads, enables seamless cloud integration, and provides enterprise support.",
+  "questions": [
+   "Do you run Linux workloads that need better performance?",
+   "Are you looking to consolidate Linux infrastructure?",
+   "Do you need enterprise-grade Linux support?",
+   "Are you running containerised workloads?"
+  ],
+  "competitors": [
+   "x86 Linux servers",
+   "ARM-based servers",
+   "Oracle Linux",
+   "SUSE Linux"
+  ],
+  "differentiators": [
+   "Superior performance",
+   "Better consolidation",
+   "Enterprise support",
+   "Optimised for containers"
+  ]
+ },
+ {
+  "id": "ibm_tls",
+  "label": "Technology Lifecycle Services",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "Comprehensive hardware and software maintenance, support, and end-of-life migration service. Manages the full lifecycle of IBM and multi-vendor systems from deployment through retirement — including proactive support, patch management, upgrades, and planned technology transitions.",
+  "value": "Reduces unplanned downtime by 95%, delivers predictable infrastructure lifecycle costs, and ensures smooth technology transitions with zero operational disruption — backed by industry-leading SLAs and proactive diagnostic capabilities.",
+  "questions": [
+   "Are you concerned about end-of-life support for critical IBM systems?",
+   "Do you need predictable, fixed-cost lifecycle management for your infrastructure?",
+   "Are you planning hardware or software upgrades and need migration support?",
+   "Do you manage multi-vendor environments that need a single support provider?"
+  ],
+  "competitors": [
+   "HPE Pointnext Services",
+   "Dell Technologies Services",
+   "Oracle Premier Support",
+   "Lenovo Infrastructure Solutions Support"
+  ],
+  "differentiators": [
+   "Proactive diagnostics and predictive issue prevention",
+   "Single point of contact for multi-vendor IBM and third-party environments",
+   "Seamless end-of-life migration planning with zero operational disruption",
+   "Arrow-delivered with local UKI expertise and IBM-certified engineers"
+  ]
+ },
+ {
+  "id": "flashsystem",
+  "label": "FlashSystem",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "All-flash storage array delivering high performance, reliability, and efficiency for enterprise workloads.",
+  "value": "Delivers sub-millisecond latency, reduces storage footprint by 80%, and provides 99.9999% availability.",
+  "questions": [
+   "Do you have performance-sensitive applications?",
+   "Are you running out of storage capacity?",
+   "Do you need to reduce storage costs?",
+   "Are you concerned about storage reliability?"
+  ],
+  "competitors": [
+   "Pure Storage",
+   "NetApp AFF",
+   "Dell PowerStore",
+   "HPE Nimble"
+  ],
+  "differentiators": [
+   "Sub-millisecond latency",
+   "99.9999% availability",
+   "Data reduction guarantee",
+   "Cyber resilience"
+  ]
+ },
+ {
+  "id": "storage_control",
+  "label": "Storage Control",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "Storage management software for monitoring, managing, and optimising storage infrastructure.",
+  "value": "Provides unified storage management, reduces storage admin time by 50%, and enables proactive issue resolution.",
+  "questions": [
+   "Do you manage multiple storage systems?",
+   "Are you spending too much time on storage administration?",
+   "Do you need better visibility into storage performance?",
+   "Are you experiencing storage-related issues?"
+  ],
+  "competitors": [
+   "VMware vRealize",
+   "Dell CloudIQ",
+   "NetApp Cloud Insights",
+   "Pure1"
+  ],
+  "differentiators": [
+   "Multi-vendor support",
+   "Unified management",
+   "Proactive monitoring",
+   "Automated provisioning"
+  ]
+ },
+ {
+  "id": "storage_insights",
+  "label": "Storage Insights",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "Cloud-based storage monitoring and analytics platform for optimising storage infrastructure.",
+  "value": "Provides predictive analytics, reduces storage incidents by 40%, and enables capacity planning.",
+  "questions": [
+   "Do you need better insights into storage utilisation?",
+   "Are you planning storage capacity upgrades?",
+   "Do you want to predict storage issues before they occur?",
+   "Do you manage storage across multiple locations?"
+  ],
+  "competitors": [
+   "NetApp Cloud Insights",
+   "Pure1",
+   "Dell CloudIQ",
+   "Datadog"
+  ],
+  "differentiators": [
+   "Predictive analytics",
+   "Cloud-based SaaS",
+   "Multi-site visibility",
+   "Capacity forecasting"
+  ]
+ },
+ {
+  "id": "storage_virt",
+  "label": "Storage Virtualize",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "Storage virtualisation software for pooling and managing heterogeneous storage resources.",
+  "value": "Reduces storage costs by 30%, enables non-disruptive data migration, and provides unified management.",
+  "questions": [
+   "Do you have multiple storage vendors?",
+   "Do you need to migrate data without downtime?",
+   "Are you looking to optimise storage utilisation?",
+   "Do you need to tier data across different storage types?"
+  ],
+  "competitors": [
+   "DataCore SANsymphony",
+   "VMware vSAN",
+   "NetApp ONTAP",
+   "HPE StoreVirtual"
+  ],
+  "differentiators": [
+   "Multi-vendor support",
+   "Non-disruptive migration",
+   "Automated tiering",
+   "Block and file support"
+  ]
+ },
+ {
+  "id": "storage_fusion",
+  "label": "Storage Fusion",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "IBM Storage Fusion — container-native persistent storage layer for Red Hat OpenShift and Kubernetes environments. Note: this is the storage software product, distinct from IBM Fusion HCI which is the separate hyperconverged infrastructure platform that uses Storage Fusion as its storage component.",
+  "value": "Simplifies persistent storage for containerised workloads, provides data mobility across OpenShift clusters, and integrates natively with IBM Fusion HCI for a complete converged infrastructure stack.",
+  "questions": [
+   "Are you running containerised applications?",
+   "Do you need persistent storage for Kubernetes?",
+   "Are you using Red Hat OpenShift?",
+   "Do you need to move data between container environments?"
+  ],
+  "competitors": [
+   "Portworx",
+   "NetApp Trident",
+   "Pure Service Orchestrator",
+   "Dell CSI"
+  ],
+  "differentiators": [
+   "OpenShift native",
+   "Data mobility",
+   "Simplified management",
+   "Enterprise support"
+  ]
+ },
+ {
+  "id": "storage_ceph",
+  "label": "Storage Ceph",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "Open-source software-defined storage platform for object, block, and file storage.",
+  "value": "Reduces storage costs by 50%, provides scalable storage, and eliminates vendor lock-in.",
+  "questions": [
+   "Are you looking for cost-effective storage?",
+   "Do you need object storage capabilities?",
+   "Are you building a private cloud?",
+   "Do you want to avoid vendor lock-in?"
+  ],
+  "competitors": [
+   "MinIO",
+   "AWS S3",
+   "Azure Blob",
+   "Google Cloud Storage"
+  ],
+  "differentiators": [
+   "Open source",
+   "No vendor lock-in",
+   "Unified storage",
+   "Self-healing"
+  ]
+ },
+ {
+  "id": "storage_scale",
+  "label": "Storage Scale",
+  "cat": "storage",
+  "plays": [
+   6
+  ],
+  "desc": "High-performance parallel file system for data-intensive workloads and AI applications.",
+  "value": "Delivers 10x faster data access, enables global data sharing, and supports massive scale.",
+  "questions": [
+   "Do you have data-intensive workloads?",
+   "Are you running AI/ML training jobs?",
+   "Do you need to share data across multiple sites?",
+   "Are you experiencing file system performance issues?"
+  ],
+  "competitors": [
+   "Lustre",
+   "BeeGFS",
+   "WekaFS",
+   "DDN EXAScaler"
+  ],
+  "differentiators": [
+   "Proven at exascale",
+   "Global namespace",
+   "Active file management",
+   "AI optimised"
+  ]
+ },
+ {
+  "id": "envizi",
+  "label": "Envizi",
+  "cat": "automation",
+  "plays": [
+   1,
+   2
+  ],
+  "desc": "IBM Envizi ESG Suite — sustainability and ESG performance management platform for tracking energy, carbon, water, and waste data and producing regulatory sustainability reports.",
+  "value": "Automates ESG data collection across facilities and supply chains, reduces sustainability reporting effort by ~70%, and enables compliance with GRI, SASB, TCFD, and CSRD frameworks.",
+  "questions": [
+   "Are you struggling to collect and consolidate ESG data across your sites and supply chain?",
+   "Do you need to produce sustainability reports for regulatory frameworks like CSRD or TCFD?",
+   "Are you trying to track and reduce carbon emissions across your operations?",
+   "Do you have sustainability targets but lack the data visibility to measure progress?"
+  ],
+  "competitors": [
+   "Sphera",
+   "Watershed",
+   "Salesforce Net Zero Cloud",
+   "SAP Sustainability Footprint Management"
+  ],
+  "differentiators": [
+   "Pre-built integration with Maximo for operational and asset data",
+   "Regulatory reporting frameworks built in — GRI, SASB, TCFD, CSRD",
+   "AI-assisted data quality and anomaly detection",
+   "Cloud-native SaaS with rapid time-to-value"
+  ]
+ },
+ {
+  "id": "elm_suite",
+  "label": "ELM Suite",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "IBM Engineering Lifecycle Management Suite — covers requirements management (DOORS Next), engineering workflow management (EWM), test management (ETM), and model-based engineering (Rhapsody) for safety-critical and regulated industries.",
+  "value": "Provides end-to-end engineering traceability from requirements through design, development, and test — reducing rework in regulated programmes and supporting compliance with ISO 26262, DO-178C, and IEC 61508.",
+  "questions": [
+   "Do you need full traceability from requirements through to test in safety-critical programmes?",
+   "Are you developing products that must comply with aerospace, automotive, or medical device regulations?",
+   "Are engineering change requests causing rework and schedule overruns?",
+   "Do you manage requirements across multiple teams or organisations?"
+  ],
+  "competitors": [
+   "PTC Integrity",
+   "Siemens Polarion",
+   "Jama Connect",
+   "Atlassian Jira"
+  ],
+  "differentiators": [
+   "Full ALM suite from a single vendor — requirements, workflow, test, and modelling",
+   "Deep compliance support for ISO 26262, DO-178C, IEC 61508, and FDA 21 CFR Part 11",
+   "Native AI integration with IBM Bob for AI-assisted requirements and code generation",
+   "IBM's longest-standing engineering platform with 30+ years of regulated industry deployments"
+  ]
+ },
+ {
+  "id": "app_connect",
+  "label": "App Connect",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "IBM App Connect — low-code/no-code integration platform for connecting applications and automating workflows using 200+ pre-built connectors, available as App Connect Professional and App Connect Enterprise.",
+  "value": "Enables business users and developers to build integrations in hours rather than weeks — accelerating digital transformation without deep integration expertise.",
+  "questions": [
+   "Do business teams need to connect SaaS applications without writing code?",
+   "Are you looking to reduce reliance on specialist integration developers?",
+   "Do you need rapid integration delivery across cloud and on-premises applications?",
+   "Are you managing too many point-to-point connections between systems?"
+  ],
+  "competitors": [
+   "MuleSoft",
+   "Zapier",
+   "Microsoft Power Automate",
+   "Boomi"
+  ],
+  "differentiators": [
+   "200+ pre-built connectors for SaaS, cloud, and on-prem applications",
+   "Both low-code and full-code paths — App Connect Professional and Enterprise",
+   "Enterprise-grade security, governance, and audit trail",
+   "Native IBM Cloud and on-premises deployment options"
+  ]
+ },
+ {
+  "id": "aspera",
+  "label": "Aspera",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "desc": "IBM Aspera — high-speed, large-file and data set transfer platform using the patented FASP protocol, designed to move massive files over long distances at near line-speed regardless of network conditions.",
+  "value": "Transfers files up to 100x faster than standard TCP/FTP over high-latency or lossy networks — critical for media, genomics, life sciences, and any workflow involving multi-gigabyte file movement.",
+  "questions": [
+   "Are large file transfers over WAN taking hours or days that should take minutes?",
+   "Do you distribute large media, genomic, or data files to global partners or sites?",
+   "Are slow uploads blocking your data ingest or migration pipelines?",
+   "Do you need secure, auditable large file transfers with delivery guarantees?"
+  ],
+  "competitors": [
+   "Signiant Media Shuttle",
+   "FileCatalyst",
+   "AWS DataSync",
+   "GlobalSCAPE EFT"
+  ],
+  "differentiators": [
+   "Patented FASP protocol delivers near line-speed transfers regardless of network latency or packet loss",
+   "End-to-end AES-256 encryption with full transfer audit trail",
+   "Strong vertical presence in media & entertainment, life sciences, and genomics",
+   "Native IBM Cloud integration and hybrid on-prem/cloud deployment"
+  ]
+ },
+ {
+  "id": "kubecost",
+  "label": "Kubecost",
+  "cat": "observability",
+  "plays": [
+   3
+  ],
+  "desc": "IBM Kubecost — Kubernetes cost monitoring and optimisation platform that provides real-time visibility into spend per namespace, deployment, label, and team across multi-cluster environments.",
+  "value": "Gives engineering and finance teams precise Kubernetes cost allocation and rightsizing recommendations — reducing cloud waste by identifying idle and oversized workloads at the container level.",
+  "questions": [
+   "Do you have visibility into exactly what each Kubernetes workload or team is costing you?",
+   "Are your cloud bills growing faster than your Kubernetes footprint?",
+   "Can you allocate container costs accurately to business units for chargeback?",
+   "Are you confident your Kubernetes workloads are right-sized?"
+  ],
+  "competitors": [
+   "Datadog Cost Management",
+   "CloudHealth",
+   "Harness Cloud Cost Management",
+   "Cast AI"
+  ],
+  "differentiators": [
+   "Native Kubernetes cost model with per-pod and per-namespace granularity",
+   "Open source foundation with IBM enterprise support",
+   "Integrates with Prometheus for performance-correlated cost data",
+   "IBM-acquired with full integration into IBM Observability portfolio"
+  ]
+ },
+ {
+  "id": "ns1",
+  "label": "NS1 Connect",
+  "cat": "security",
+  "plays": [
+   4
+  ],
+  "desc": "IBM NS1 Connect — intelligent DNS, traffic management, and network connectivity platform providing authoritative DNS with advanced routing, traffic steering, and DDoS-resilient infrastructure.",
+  "value": "Delivers sub-10ms global DNS response times with intelligent traffic steering — reducing application downtime, improving performance for globally distributed users, and providing a resilient first line of network defence.",
+  "questions": [
+   "Are DNS failures or slow resolution causing application availability issues?",
+   "Do you need to route users intelligently across multiple data centres or cloud regions?",
+   "Are you concerned about DDoS attacks targeting your DNS infrastructure?",
+   "Do you need fine-grained control over global traffic distribution?"
+  ],
+  "competitors": [
+   "Cloudflare DNS",
+   "AWS Route 53",
+   "Akamai Edge DNS",
+   "Infoblox"
+  ],
+  "differentiators": [
+   "Programmable DNS with filter chain routing logic for advanced traffic steering",
+   "Traffic steering by latency, geography, and ASN",
+   "Built-in DDoS mitigation and anycast network",
+   "IBM-acquired with enterprise support and hybrid cloud integration"
+  ]
+ },
+ {
+  "id": "powervs",
+  "label": "Power Virtual Server",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "IBM Power Virtual Server (PowerVS) — cloud-hosted Power infrastructure on IBM Cloud, providing the same Power performance and IBM i / AIX compatibility as on-premises Power Systems, delivered as a fully managed cloud service.",
+  "value": "Enables organisations to extend or migrate Power workloads to cloud without re-platforming — maintaining AIX and IBM i application compatibility while gaining cloud elasticity and pay-as-you-go economics.",
+  "questions": [
+   "Are you looking to reduce your on-premises Power footprint without re-platforming your AIX or IBM i applications?",
+   "Do you need a cloud-based disaster recovery solution for your Power Systems estate?",
+   "Are you exploring hybrid cloud options for your IBM i or AIX workloads?",
+   "Do you want to scale Power capacity on demand without capital investment?"
+  ],
+  "competitors": [
+   "AWS EC2 with migration services",
+   "Azure Virtual Machines",
+   "Oracle Cloud Infrastructure",
+   "On-premises retention"
+  ],
+  "differentiators": [
+   "Only cloud service offering native Power performance with AIX and IBM i compatibility",
+   "Low-latency connection to IBM Cloud services and watsonx",
+   "IBM-managed infrastructure with SLA-backed availability",
+   "No application re-platforming required — lift and shift Power workloads to cloud"
+  ]
+ },
+ {
+  "id": "fusion_hci",
+  "label": "IBM Fusion HCI",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "desc": "IBM Fusion HCI (Hyperconverged Infrastructure) — software-defined compute, storage, and networking platform that runs Red Hat OpenShift and IBM workloads on a converged hardware stack, simplifying data centre operations for AI and hybrid cloud.",
+  "value": "Reduces data centre complexity by converging compute, storage, and networking into a single managed platform — cutting deployment time and providing a validated, IBM-supported foundation for OpenShift and AI workloads on-premises.",
+  "questions": [
+   "Are you looking to simplify your on-premises infrastructure for OpenShift or AI workloads?",
+   "Do you need a validated, single-vendor platform for Red Hat OpenShift?",
+   "Is infrastructure management overhead slowing your application deployments?",
+   "Do you need a scalable on-premises AI infrastructure platform?"
+  ],
+  "competitors": [
+   "VMware vSAN / VxRail",
+   "Nutanix",
+   "HPE SimpliVity",
+   "Dell VxRail"
+  ],
+  "differentiators": [
+   "Purpose-built and validated for Red Hat OpenShift and IBM workloads",
+   "Integrates with IBM Storage Fusion for container-native persistent storage",
+   "Single IBM vendor for compute, storage, software stack, and support",
+   "Optimised for on-premises AI infrastructure deployments"
+  ]
+ },
+ {
+  "id": "db2",
+  "label": "Db2",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "IBM Db2 — enterprise relational database management system available on-premises and on cloud, with high-performance OLTP and analytics, built-in AI capabilities, and native compatibility with IBM Z, Power Systems, and IBM i.",
+  "value": "Provides a trusted, high-performance transactional data foundation for enterprise applications — with built-in AI query optimisation, native watsonx.data integration, and decades of reliability on IBM platforms.",
+  "questions": [
+   "Are you looking to reduce Oracle or SQL Server licensing costs without re-architecting applications?",
+   "Do you need a database with proven performance on IBM Power or Z platforms?",
+   "Are data residency or sovereignty requirements driving your database platform decisions?",
+   "Do you need a transactional database that integrates natively with your AI and analytics stack?"
+  ],
+  "competitors": [
+   "Oracle Database",
+   "Microsoft SQL Server",
+   "PostgreSQL",
+   "AWS Aurora"
+  ],
+  "differentiators": [
+   "Native IBM Z and Power Systems integration with highest performance on IBM platforms",
+   "Built-in AI query acceleration and autonomous optimisation",
+   "Seamless federation into watsonx.data for hybrid analytics",
+   "Strong Oracle migration tooling and SQL compatibility"
+  ]
+ },
+ {
+  "id": "cognos",
+  "label": "Cognos Analytics",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "desc": "IBM Cognos Analytics — AI-powered business intelligence and analytics platform for self-service reporting, dashboards, and data exploration, with built-in governance and enterprise data security.",
+  "value": "Empowers business users to create accurate, governed reports and dashboards without IT dependency — with AI-assisted data preparation, natural language query, and enterprise-grade governance built in.",
+  "questions": [
+   "Are business users relying on IT for every report or dashboard they need?",
+   "Is your organisation still running critical reports from spreadsheets?",
+   "Do you need governed self-service analytics that maintains data accuracy and security?",
+   "Are you looking for BI tooling with strong IBM data source integration?"
+  ],
+  "competitors": [
+   "Microsoft Power BI",
+   "Tableau",
+   "Qlik Sense",
+   "SAP Analytics Cloud"
+  ],
+  "differentiators": [
+   "AI-assisted report authoring and natural language query built in",
+   "Enterprise governance with role-based access and data lineage",
+   "Deep IBM data source integration including Db2, Planning Analytics, and watsonx.data",
+   "Strong regulated industry presence — financial services, healthcare, public sector"
+  ]
+ }
+];
+const CONNECTIONS = [
+ [
+  "concert",
+  "api_connect",
+  1,
+  "Concert orchestrates API management for unified application visibility"
+ ],
+ [
+  "concert",
+  "event_auto",
+  1,
+  "Concert automates event-driven workflows across applications"
+ ],
+ [
+  "concert",
+  "webmethods",
+  1,
+  "Concert integrates with webMethods for hybrid integration management"
+ ],
+ [
+  "concert",
+  "maximo",
+  1,
+  "Concert monitors and manages Maximo asset management operations"
+ ],
+ [
+  "api_connect",
+  "event_auto",
+  1,
+  "API Connect exposes event automation capabilities as managed APIs"
+ ],
+ [
+  "api_connect",
+  "webmethods",
+  1,
+  "API Connect and webMethods provide complementary integration patterns"
+ ],
+ [
+  "webmethods",
+  "event_auto",
+  1,
+  "webMethods triggers event automation for real-time integration"
+ ],
+ [
+  "maximo",
+  "event_auto",
+  1,
+  "Maximo uses event automation for asset maintenance workflows"
+ ],
+ [
+  "maximo",
+  "api_connect",
+  1,
+  "Maximo exposes asset data through API Connect"
+ ],
+ [
+  "wxdata",
+  "wxai",
+  2,
+  "watsonx.data provides the data foundation for watsonx.ai models"
+ ],
+ [
+  "wxdata",
+  "wxdi",
+  2,
+  "watsonx.data integrates with data intelligence for cataloguing"
+ ],
+ [
+  "wxdata",
+  "wxdint",
+  2,
+  "watsonx.data uses data integration for ingestion pipelines"
+ ],
+ [
+  "wxdata",
+  "wxgov",
+  2,
+  "watsonx.data enforces governance policies on data assets"
+ ],
+ [
+  "wxdata",
+  "confluent",
+  2,
+  "watsonx.data ingests real-time streaming data from Confluent"
+ ],
+ [
+  "wxai",
+  "wxorch",
+  2,
+  "watsonx.ai powers intelligent agents in watsonx Orchestrate"
+ ],
+ [
+  "wxai",
+  "wxgov",
+  2,
+  "watsonx.ai models are governed by watsonx.governance"
+ ],
+ [
+  "wxai",
+  "wxdi",
+  2,
+  "watsonx.ai uses data intelligence for model training data discovery"
+ ],
+ [
+  "wxdi",
+  "wxdint",
+  2,
+  "Data intelligence catalogues assets from data integration pipelines"
+ ],
+ [
+  "wxdi",
+  "wxgov",
+  2,
+  "Data intelligence enforces governance policies on catalogued data"
+ ],
+ [
+  "wxdint",
+  "confluent",
+  2,
+  "Data integration connects to Confluent for streaming data pipelines"
+ ],
+ [
+  "wxorch",
+  "wca_ansible",
+  2,
+  "Orchestrate uses IBM Bob for automated code generation in workflows"
+ ],
+ [
+  "wxorch",
+  "wxgov",
+  2,
+  "Orchestrate enforces governance on AI agents and workflows"
+ ],
+ [
+  "confluent",
+  "event_auto",
+  1,
+  "Confluent streams events to Event Automation for real-time processing"
+ ],
+ [
+  "confluent",
+  "api_connect",
+  1,
+  "API Connect exposes Confluent streaming data through managed APIs"
+ ],
+ [
+  "confluent",
+  "wxorch",
+  2,
+  "Confluent Kafka topics trigger watsonx Orchestrate agents for real-time event-driven AI workflows"
+ ],
+ [
+  "confluent",
+  "webmethods",
+  1,
+  "webMethods bridges Confluent Kafka streams into hybrid integration workflows connecting legacy and cloud-native systems"
+ ],
+ [
+  "concert",
+  "instana",
+  3,
+  "Concert uses Instana for application performance monitoring"
+ ],
+ [
+  "concert",
+  "turbonomic",
+  3,
+  "Concert leverages Turbonomic for resource optimisation"
+ ],
+ [
+  "concert",
+  "apptio",
+  3,
+  "Concert provides cost data to Apptio for financial management"
+ ],
+ [
+  "concert",
+  "sevone",
+  3,
+  "Concert integrates with SevOne for network performance monitoring"
+ ],
+ [
+  "instana",
+  "turbonomic",
+  3,
+  "Instana metrics drive Turbonomic optimisation decisions"
+ ],
+ [
+  "turbonomic",
+  "apptio",
+  3,
+  "Turbonomic optimisation data feeds Apptio cost analysis"
+ ],
+ [
+  "turbonomic",
+  "cloudability",
+  3,
+  "Turbonomic actions inform Cloudability cost recommendations"
+ ],
+ [
+  "apptio",
+  "cloudability",
+  3,
+  "Apptio and Cloudability provide unified FinOps visibility"
+ ],
+ [
+  "guardium",
+  "verify",
+  4,
+  "Guardium protects data accessed through Verify identity management"
+ ],
+ [
+  "guardium",
+  "vault",
+  4,
+  "Guardium monitors secrets managed by Vault"
+ ],
+ [
+  "verify",
+  "vault",
+  4,
+  "Verify authenticates access to Vault secrets"
+ ],
+ [
+  "power",
+  "aix",
+  5,
+  "AIX is the enterprise Unix OS for Power Systems"
+ ],
+ [
+  "power",
+  "ibmi",
+  5,
+  "IBM i runs natively on Power Systems architecture"
+ ],
+ [
+  "power",
+  "linux_power",
+  5,
+  "Linux distributions optimised for Power Systems"
+ ],
+ [
+  "linuxone",
+  "linux_power",
+  5,
+  "LinuxONE and Power share Linux optimisation strategies"
+ ],
+ [
+  "flashsystem",
+  "storage_control",
+  6,
+  "Storage Control manages FlashSystem arrays"
+ ],
+ [
+  "flashsystem",
+  "storage_insights",
+  6,
+  "Storage Insights monitors FlashSystem performance"
+ ],
+ [
+  "flashsystem",
+  "storage_virt",
+  6,
+  "Storage Virtualize pools FlashSystem with other storage"
+ ],
+ [
+  "storage_control",
+  "storage_insights",
+  6,
+  "Storage Control uses Insights for predictive analytics"
+ ],
+ [
+  "storage_control",
+  "storage_virt",
+  6,
+  "Storage Control manages virtualised storage pools"
+ ],
+ [
+  "storage_insights",
+  "storage_virt",
+  6,
+  "Storage Insights monitors virtualised storage performance"
+ ],
+ [
+  "storage_scale",
+  "storage_ceph",
+  6,
+  "Storage Scale and Ceph provide complementary file/object storage"
+ ],
+ [
+  "storage_scale",
+  "storage_fusion",
+  6,
+  "Storage Fusion uses Storage Scale for container storage"
+ ],
+ [
+  "storage_ceph",
+  "storage_fusion",
+  6,
+  "Storage Fusion leverages Ceph for object storage"
+ ],
+ [
+  "wxorch",
+  "api_connect",
+  2,
+  "Orchestrate agents call APIs managed by API Connect"
+ ],
+ [
+  "wxorch",
+  "event_auto",
+  2,
+  "Orchestrate triggers event automation workflows"
+ ],
+ [
+  "wxorch",
+  "webmethods",
+  2,
+  "Orchestrate integrates with webMethods for enterprise connectivity"
+ ],
+ [
+  "wxai",
+  "maximo",
+  2,
+  "watsonx.ai enables predictive maintenance in Maximo"
+ ],
+ [
+  "wca_ansible",
+  "terraform",
+  2,
+  "IBM Bob generates Terraform infrastructure code"
+ ],
+ [
+  "wca_ansible",
+  "ibmi",
+  2,
+  "IBM Bob Premium Package for IBM i modernises RPG and legacy IBM i applications"
+ ],
+ [
+  "wca_ansible",
+  "linuxone",
+  2,
+  "IBM Bob Premium Package for Z accelerates mainframe code modernisation on LinuxONE"
+ ],
+ [
+  "wca_ansible",
+  "aix",
+  2,
+  "IBM Bob accelerates modernisation of legacy C and C++ applications running on AIX Unix workloads"
+ ],
+ [
+  "wca_ansible",
+  "wxgov",
+  2,
+  "IBM Bob-generated code is audited and governed through watsonx.governance"
+ ],
+ [
+  "wca_ansible",
+  "vault",
+  4,
+  "IBM Bob scans codebases for hardcoded secrets and refactors code to use Vault"
+ ],
+ [
+  "wca_ansible",
+  "verify",
+  4,
+  "IBM Bob generates secure authentication, SSO, and MFA integration code for applications protected by Verify"
+ ],
+ [
+  "wca_ansible",
+  "instana",
+  3,
+  "IBM Bob connects to observability tooling to query metrics and logs from within the IDE"
+ ],
+ [
+  "wca_ansible",
+  "maximo",
+  1,
+  "IBM Bob accelerates Maximo application and integration development with AI-assisted coding"
+ ],
+ [
+  "wca_ansible",
+  "concert",
+  1,
+  "IBM Bob generates automation scripts and application code that Concert monitors and manages"
+ ],
+ [
+  "wca_ansible",
+  "confluent",
+  2,
+  "IBM Bob accelerates development of Confluent producers, consumers, and Kafka streaming application code"
+ ],
+ [
+  "ibm_mq",
+  "event_auto",
+  1,
+  "IBM MQ provides reliable message transport for Event Automation workflows"
+ ],
+ [
+  "ibm_mq",
+  "api_connect",
+  1,
+  "API Connect exposes IBM MQ messaging endpoints through managed APIs"
+ ],
+ [
+  "ibm_mq",
+  "webmethods",
+  1,
+  "IBM MQ and webMethods provide complementary transactional and B2B messaging patterns"
+ ],
+ [
+  "ibm_mq",
+  "confluent",
+  2,
+  "IBM MQ bridges legacy transactional messaging to Confluent Kafka event streams"
+ ],
+ [
+  "ibm_mq",
+  "wxorch",
+  2,
+  "IBM MQ delivers reliable asynchronous messaging for watsonx Orchestrate workflows"
+ ],
+ [
+  "ibm_mq",
+  "linuxone",
+  5,
+  "IBM MQ runs on LinuxONE for secure high-volume enterprise messaging"
+ ],
+ [
+  "ibm_mq",
+  "power",
+  5,
+  "IBM MQ on Power Systems delivers high-throughput messaging for enterprise applications"
+ ],
+ [
+  "ibm_mq",
+  "ibmi",
+  5,
+  "IBM MQ is a core messaging backbone for IBM i applications, with native MQ support built into the IBM i platform"
+ ],
+ [
+  "ibm_sterling",
+  "webmethods",
+  1,
+  "IBM Sterling and webMethods provide complementary B2B connectivity and enterprise integration"
+ ],
+ [
+  "ibm_sterling",
+  "event_auto",
+  1,
+  "IBM Sterling triggers Event Automation for real-time supply chain workflow execution"
+ ],
+ [
+  "ibm_sterling",
+  "api_connect",
+  1,
+  "API Connect exposes Sterling supply chain data and partner APIs through managed gateways"
+ ],
+ [
+  "ibm_sterling",
+  "maximo",
+  1,
+  "IBM Sterling integrates with Maximo for supply chain asset procurement and management"
+ ],
+ [
+  "ibm_sterling",
+  "wxdi",
+  2,
+  "watsonx.data intelligence catalogues supply chain data assets from IBM Sterling"
+ ],
+ [
+  "ibm_sterling",
+  "wxdint",
+  2,
+  "Data integration keeps Sterling supply chain data flowing into analytics and AI pipelines"
+ ],
+ [
+  "ibm_sterling",
+  "wxorch",
+  2,
+  "watsonx Orchestrate automates supply chain decision workflows powered by Sterling data"
+ ],
+ [
+  "ibm_pa",
+  "wxdata",
+  2,
+  "watsonx.data provides the data lakehouse foundation for Planning Analytics models"
+ ],
+ [
+  "ibm_pa",
+  "wxdi",
+  2,
+  "watsonx.data intelligence catalogues financial data sources for Planning Analytics"
+ ],
+ [
+  "ibm_pa",
+  "wxdint",
+  2,
+  "Data integration keeps Planning Analytics models refreshed with real-time financial data"
+ ],
+ [
+  "ibm_pa",
+  "wxai",
+  2,
+  "watsonx.ai enhances Planning Analytics with predictive forecasting and AI-driven insights"
+ ],
+ [
+  "ibm_pa",
+  "apptio",
+  3,
+  "Planning Analytics feeds financial models to Apptio for technology business management and cost allocation"
+ ],
+ [
+  "ibm_pa",
+  "turbonomic",
+  3,
+  "Turbonomic resource optimisation data informs IT cost projections in Planning Analytics"
+ ],
+ [
+  "ibm_pa",
+  "cloudability",
+  3,
+  "Planning Analytics integrates Cloudability cloud cost data for financial scenario modelling"
+ ],
+ [
+  "ibm_pa",
+  "wca_ansible",
+  2,
+  "IBM Bob accelerates development of Planning Analytics integrations and custom model scripts"
+ ],
+ [
+  "maximo",
+  "instana",
+  3,
+  "Instana monitors Maximo application performance"
+ ],
+ [
+  "terraform",
+  "turbonomic",
+  3,
+  "Turbonomic recommends infrastructure changes via Terraform"
+ ],
+ [
+  "wxai",
+  "instana",
+  2,
+  "Instana monitors watsonx.ai model inference performance"
+ ],
+ [
+  "wxgov",
+  "guardium",
+  2,
+  "watsonx.governance uses Guardium for data protection policies"
+ ],
+ [
+  "wxdi",
+  "guardium",
+  2,
+  "Data intelligence integrates Guardium security classifications"
+ ],
+ [
+  "confluent",
+  "guardium",
+  4,
+  "Guardium monitors and protects sensitive data flowing through Confluent Kafka streams for compliance and data security"
+ ],
+ [
+  "wxai",
+  "power",
+  2,
+  "watsonx.ai leverages Power Systems for AI acceleration"
+ ],
+ [
+  "wxai",
+  "linuxone",
+  2,
+  "watsonx.ai runs on LinuxONE for secure AI workloads"
+ ],
+ [
+  "wxdata",
+  "power",
+  2,
+  "watsonx.data uses Power Systems for data-intensive queries"
+ ],
+ [
+  "wxdata",
+  "linuxone",
+  2,
+  "watsonx.data on LinuxONE provides secure data lakehouse"
+ ],
+ [
+  "confluent",
+  "linuxone",
+  5,
+  "Confluent runs natively on LinuxONE providing enterprise Kafka streaming with LinuxONE security and compliance guarantees"
+ ],
+ [
+  "power",
+  "flashsystem",
+  5,
+  "Power Systems use FlashSystem for high-performance storage"
+ ],
+ [
+  "power",
+  "storage_scale",
+  5,
+  "Power Systems leverage Storage Scale for parallel file access"
+ ],
+ [
+  "linuxone",
+  "flashsystem",
+  5,
+  "LinuxONE uses FlashSystem for enterprise storage"
+ ],
+ [
+  "linuxone",
+  "storage_scale",
+  5,
+  "LinuxONE leverages Storage Scale for scalable file storage"
+ ],
+ [
+  "linuxone",
+  "storage_ceph",
+  5,
+  "LinuxONE uses Storage Ceph for cloud-native object storage"
+ ],
+ [
+  "aix",
+  "flashsystem",
+  5,
+  "AIX systems use FlashSystem for enterprise storage"
+ ],
+ [
+  "ibmi",
+  "flashsystem",
+  5,
+  "IBM i systems use FlashSystem for business-critical data"
+ ],
+ [
+  "wxdata",
+  "storage_scale",
+  2,
+  "watsonx.data uses Storage Scale for AI training data"
+ ],
+ [
+  "wxdata",
+  "storage_ceph",
+  2,
+  "watsonx.data leverages Storage Ceph for object storage"
+ ],
+ [
+  "wxdata",
+  "storage_fusion",
+  2,
+  "watsonx.data uses Storage Fusion for container-native storage"
+ ],
+ [
+  "instana",
+  "power",
+  3,
+  "Instana monitors applications on Power Systems"
+ ],
+ [
+  "instana",
+  "linuxone",
+  3,
+  "Instana monitors applications on LinuxONE"
+ ],
+ [
+  "turbonomic",
+  "power",
+  3,
+  "Turbonomic optimises Power Systems resource allocation"
+ ],
+ [
+  "turbonomic",
+  "linuxone",
+  3,
+  "Turbonomic optimises LinuxONE resource utilisation"
+ ],
+ [
+  "turbonomic",
+  "aix",
+  3,
+  "Turbonomic optimises AIX workload resource allocation"
+ ],
+ [
+  "turbonomic",
+  "ibmi",
+  3,
+  "Turbonomic optimises IBM i resource utilisation"
+ ],
+ [
+  "turbonomic",
+  "linux_power",
+  3,
+  "Turbonomic optimises Linux on Power resource allocation"
+ ],
+ [
+  "ibm_tls",
+  "power",
+  5,
+  "IBM TLS manages the complete maintenance and lifecycle of Power Systems infrastructure"
+ ],
+ [
+  "ibm_tls",
+  "linuxone",
+  5,
+  "IBM TLS provides proactive support and lifecycle management for LinuxONE systems"
+ ],
+ [
+  "ibm_tls",
+  "aix",
+  5,
+  "IBM TLS handles AIX system maintenance, patching, and technology lifecycle transitions"
+ ],
+ [
+  "ibm_tls",
+  "ibmi",
+  5,
+  "IBM TLS manages IBM i system maintenance and planned technology transition support"
+ ],
+ [
+  "ibm_tls",
+  "flashsystem",
+  6,
+  "IBM TLS manages FlashSystem deployment, firmware upgrades, and end-of-life transitions"
+ ],
+ [
+  "ibm_tls",
+  "storage_scale",
+  6,
+  "IBM TLS supports Storage Scale system upgrades and technology lifecycle planning"
+ ],
+ [
+  "ibm_tls",
+  "linux_power",
+  5,
+  "Technology Lifecycle Services covers Linux on Power OS support and platform lifecycle management"
+ ],
+ [
+  "ibm_tls",
+  "storage_control",
+  6,
+  "Technology Lifecycle Services supports the underlying storage hardware managed by Storage Control"
+ ],
+ [
+  "ibm_tls",
+  "storage_virt",
+  6,
+  "IBM TLS services the IBM storage hardware that Storage Virtualize runs on, covering firmware, maintenance, and lifecycle transitions"
+ ],
+ [
+  "envizi",
+  "maximo",
+  1,
+  "Maximo operational and asset data feeds Envizi for facility-level ESG and carbon reporting"
+ ],
+ [
+  "envizi",
+  "ibm_sterling",
+  1,
+  "Sterling supply chain data feeds Envizi for Scope 3 emissions tracking across partner networks"
+ ],
+ [
+  "envizi",
+  "wxdata",
+  2,
+  "Envizi ESG datasets flow into watsonx.data for sustainability analytics and AI modelling"
+ ],
+ [
+  "envizi",
+  "ibm_pa",
+  2,
+  "Planning Analytics integrates Envizi carbon cost data for sustainability financial planning and scenario modelling"
+ ],
+ [
+  "envizi",
+  "wxai",
+  2,
+  "watsonx.ai analyses Envizi ESG data to generate predictive sustainability insights and anomaly detection"
+ ],
+ [
+  "elm_suite",
+  "wca_ansible",
+  2,
+  "IBM Bob generates code directly from ELM requirements, closing the loop from specification to implementation"
+ ],
+ [
+  "elm_suite",
+  "concert",
+  1,
+  "Concert provides operational visibility into ELM-managed application deployments"
+ ],
+ [
+  "elm_suite",
+  "api_connect",
+  1,
+  "ELM exposes engineering artefacts and requirements data through API Connect for toolchain integration"
+ ],
+ [
+  "elm_suite",
+  "webmethods",
+  1,
+  "webMethods integrates ELM with enterprise systems for end-to-end engineering workflow automation"
+ ],
+ [
+  "app_connect",
+  "api_connect",
+  1,
+  "App Connect builds integrations that API Connect then exposes as governed, secured APIs"
+ ],
+ [
+  "app_connect",
+  "webmethods",
+  1,
+  "App Connect handles SaaS and cloud integrations while webMethods handles complex B2B and on-prem patterns — complementary integration tiers"
+ ],
+ [
+  "app_connect",
+  "event_auto",
+  1,
+  "App Connect workflows trigger Event Automation for real-time event-driven processing"
+ ],
+ [
+  "app_connect",
+  "wxorch",
+  2,
+  "watsonx Orchestrate uses App Connect to connect AI agents to enterprise SaaS applications"
+ ],
+ [
+  "aspera",
+  "wxdata",
+  2,
+  "Aspera provides high-speed ingest of large datasets into watsonx.data for AI training pipelines"
+ ],
+ [
+  "aspera",
+  "ibm_sterling",
+  1,
+  "Aspera accelerates large file and dataset transfers within Sterling supply chain partner networks"
+ ],
+ [
+  "aspera",
+  "storage_scale",
+  6,
+  "Aspera transfers large files directly into Storage Scale parallel file systems for HPC and AI workloads"
+ ],
+ [
+  "kubecost",
+  "cloudability",
+  3,
+  "Kubecost provides Kubernetes-level cost data that feeds into Cloudability for unified multi-cloud FinOps reporting"
+ ],
+ [
+  "kubecost",
+  "turbonomic",
+  3,
+  "Turbonomic uses Kubecost cost data alongside performance metrics to drive right-sizing actions across Kubernetes workloads"
+ ],
+ [
+  "kubecost",
+  "instana",
+  3,
+  "Instana provides application performance context that Kubecost uses to correlate cost with actual resource consumption"
+ ],
+ [
+  "kubecost",
+  "apptio",
+  3,
+  "Kubecost Kubernetes cost data feeds Apptio TBM models for full IT cost transparency including container workloads"
+ ],
+ [
+  "ns1",
+  "verify",
+  4,
+  "NS1 intelligent routing directs users to the nearest authentication endpoint, improving Verify SSO performance and resilience"
+ ],
+ [
+  "ns1",
+  "sevone",
+  3,
+  "SevOne network performance data informs NS1 traffic steering decisions for optimal routing"
+ ],
+ [
+  "ns1",
+  "concert",
+  1,
+  "Concert uses NS1 DNS health data as part of application availability monitoring"
+ ],
+ [
+  "powervs",
+  "power",
+  5,
+  "PowerVS is the cloud extension of Power Systems — enabling hybrid Power deployments spanning on-prem and IBM Cloud"
+ ],
+ [
+  "powervs",
+  "aix",
+  5,
+  "AIX workloads run natively on PowerVS, enabling cloud migration without OS or application changes"
+ ],
+ [
+  "powervs",
+  "ibmi",
+  5,
+  "IBM i applications run natively on PowerVS, providing a cloud path for legacy IBM i estates"
+ ],
+ [
+  "powervs",
+  "ibm_tls",
+  5,
+  "IBM TLS supports the transition planning and lifecycle management for migrations from on-prem Power to PowerVS"
+ ],
+ [
+  "powervs",
+  "wca_ansible",
+  2,
+  "IBM Bob accelerates modernisation of AIX and IBM i applications being migrated to PowerVS cloud environments"
+ ],
+ [
+  "fusion_hci",
+  "storage_fusion",
+  6,
+  "IBM Fusion HCI uses Storage Fusion to provide container-native persistent storage for OpenShift workloads running on the converged platform"
+ ],
+ [
+  "fusion_hci",
+  "power",
+  5,
+  "IBM Fusion HCI can run alongside Power Systems in IBM-managed hybrid infrastructure environments"
+ ],
+ [
+  "fusion_hci",
+  "linuxone",
+  5,
+  "Fusion HCI and LinuxONE provide complementary on-premises infrastructure options for security-sensitive enterprise workloads"
+ ],
+ [
+  "fusion_hci",
+  "ibm_tls",
+  5,
+  "IBM TLS manages Fusion HCI hardware lifecycle, firmware, and support"
+ ],
+ [
+  "db2",
+  "wxdata",
+  2,
+  "Db2 is a primary transactional data source federated into watsonx.data for unified analytics and AI model training"
+ ],
+ [
+  "db2",
+  "wxdint",
+  2,
+  "watsonx.data integration ingests and transforms Db2 data for downstream AI and analytics pipelines"
+ ],
+ [
+  "db2",
+  "guardium",
+  4,
+  "Guardium monitors and audits all Db2 data access activity for regulatory compliance and data security"
+ ],
+ [
+  "db2",
+  "ibmi",
+  5,
+  "Db2 for IBM i is the integrated database at the core of the IBM i platform — a native, built-in relationship"
+ ],
+ [
+  "db2",
+  "wca_ansible",
+  2,
+  "IBM Bob assists with Db2 query optimisation, schema modernisation, and PL/SQL migration to Db2"
+ ],
+ [
+  "cognos",
+  "wxdata",
+  2,
+  "Cognos queries watsonx.data as a unified data source for governed enterprise reporting across the data lakehouse"
+ ],
+ [
+  "cognos",
+  "ibm_pa",
+  2,
+  "Cognos Analytics provides operational and management reporting on top of Planning Analytics financial models"
+ ],
+ [
+  "cognos",
+  "db2",
+  2,
+  "Cognos is a primary BI consumer of Db2 transactional data for enterprise dashboards and reports"
+ ],
+ [
+  "cognos",
+  "wxai",
+  2,
+  "watsonx.ai enhances Cognos with predictive analytics and AI-generated insights surfaced within dashboards"
+ ],
+ [
+  "cognos",
+  "guardium",
+  4,
+  "Guardium enforces data access policies on the data sources Cognos queries, ensuring compliant reporting"
+ ]
+];
+/*DATA-END*/
+// Resolve from #app, not documentElement: the theme attribute lives on #app,
+// so the dark-theme variable overrides are only visible from there down.
+const playColor = (id) => getComputedStyle(document.getElementById('app')).getPropertyValue(PLAYS[id].varName).trim();
+
+/* ════════════════════════════════════════════════════════
+   HTML escaping helper — MUST wrap every YAML string that
+   is interpolated into an innerHTML template literal.
+   Prevents DOM-based XSS if data.yaml ever contains HTML.
+   ════════════════════════════════════════════════════════ */
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/* ════════════════════════════════════════════════════════
+   Layout config
+   ════════════════════════════════════════════════════════ */
+const CONFIG = {
+  LAYOUT: { LEFT: 32, RIGHT: 32, TOP: 24, BOTTOM: 24 },
+  CURVES: { ARC_FACTOR: 0.14, BEND_START: 0.25, BEND_END: 0.75 },
+  SAME_ROW_THRESHOLD: 5,
+};
+
+/* ════════════════════════════════════════════════════════
+   State & lookup
+   ════════════════════════════════════════════════════════ */
+const productMap = {};
+PRODUCTS.forEach(p => { productMap[p.id] = p; });
+
+const adjacency = {};
+PRODUCTS.forEach(p => { adjacency[p.id] = []; });
+CONNECTIONS.forEach(([from, to, play, explanation]) => {
+  adjacency[from].push({ from, to, play, explanation });
+  adjacency[to].push({ from: to, to: from, play, explanation });
+});
+
+// Data validation
+function validateData() {
+  const errors = [];
+  
+  // Validate products have required fields
+  PRODUCTS.forEach(p => {
+    if (!p.id || !p.label || !p.cat || !p.plays || !Array.isArray(p.plays)) {
+      errors.push(`Product missing required fields: ${p.id || 'unknown'}`);
+    }
+  });
+  
+  // Validate connections reference valid products
+  CONNECTIONS.forEach(([from, to, play, explanation], idx) => {
+    if (!productMap[from]) {
+      errors.push(`Connection ${idx}: invalid 'from' ID: ${from}`);
+    }
+    if (!productMap[to]) {
+      errors.push(`Connection ${idx}: invalid 'to' ID: ${to}`);
+    }
+    if (!PLAYS[play]) {
+      errors.push(`Connection ${idx}: invalid play ID: ${play}`);
+    }
+  });
+  
+  // Validate categories reference valid plays
+  CATEGORIES.forEach(cat => {
+    if (!PLAYS[cat.playId]) {
+      errors.push(`Category ${cat.id}: invalid playId: ${cat.playId}`);
+    }
+  });
+  
+  if (errors.length > 0) {
+    console.error('Data validation errors:', errors);
+    return false;
+  }
+  
+  return true;
+}
+
+// Run validation
+if (!validateData()) {
+  console.warn('Data validation failed - some features may not work correctly');
+}
+
+let selectedId = null;
+let activePlayFilter = null;
+let searchQuery = '';
+const nodeEls = {};
+
+/* ════════════════════════════════════════════════════════
+   Search functionality
+   ════════════════════════════════════════════════════════ */
+const searchInput = document.getElementById('search-input');
+const searchClear = document.getElementById('search-clear');
+const searchResults = document.getElementById('search-results');
+
+function performSearch(query) {
+  searchQuery = query.toLowerCase().trim();
+  
+  // Show/hide clear button
+  searchClear.classList.toggle('is-visible', searchQuery.length > 0);
+  
+  if (!searchQuery) {
+    // Clear search - reset all highlighting
+    Object.values(nodeEls).forEach(el => {
+      el.classList.remove('dimmed', 'highlighted');
+    });
+    searchResults.textContent = '';
+    drawConnections();
+    return;
+  }
+  
+  // Search across product names, descriptions, value props, and questions
+  const matches = new Set();
+  PRODUCTS.forEach(p => {
+    const searchableText = [
+      p.label,
+      p.desc,
+      p.value,
+      ...p.questions
+    ].join(' ').toLowerCase();
+    
+    if (searchableText.includes(searchQuery)) {
+      matches.add(p.id);
+    }
+  });
+  
+  // Also include products connected to matches
+  const involved = new Set(matches);
+  CONNECTIONS.forEach(([a, b, play, explanation]) => {
+    if (matches.has(a)) involved.add(b);
+    if (matches.has(b)) involved.add(a);
+  });
+  
+  // Update display
+  Object.entries(nodeEls).forEach(([id, el]) => {
+    if (involved.has(id)) {
+      el.classList.add('highlighted');
+      el.classList.remove('dimmed');
+    } else {
+      el.classList.add('dimmed');
+      el.classList.remove('highlighted');
+    }
+  });
+  
+  // Update results count
+  searchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+  
+  // Redraw connections to show only relevant ones
+  drawConnectionsForSearch(involved, matches);
+}
+
+function drawConnectionsForSearch(involvedProducts, matchedProducts) {
+  svgEl.innerHTML = '<defs id="svg-defs"></defs>';
+  
+  const sorted = [...uniqueEdges];
+  
+  sorted.forEach(edge => {
+    const { from, to } = edge;
+    const p1 = productMap[from];
+    const p2 = productMap[to];
+    if (!p1._px || !p2._px) return;
+    
+    // Only draw if both products are involved
+    const isActive = involvedProducts.has(from) && involvedProducts.has(to);
+    if (!isActive) return;
+    
+    const x1 = p1._px, y1 = p1._py;
+    const x2 = p2._px, y2 = p2._py;
+
+    // Colour by the end that wasn't itself a match, so the line indicates
+    // the group of the connected product (mirrors selection/filter rules)
+    let color;
+    const fromMatched = matchedProducts && matchedProducts.has(from);
+    const toMatched = matchedProducts && matchedProducts.has(to);
+    if (fromMatched !== toMatched) {
+      color = playColor(productMap[fromMatched ? to : from].plays[0]);
+    } else {
+      color = playColor(connectionPlayId(from, to));
+    }
+
+    let d;
+    const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
+
+    if (tweakState.connStyle === 'ortho') {
+      if (sameRow) {
+        const arcH = Math.abs(x2 - x1) * 0.18 + 12;
+        d = `M ${x1} ${y1} L ${x1} ${y1 - arcH} L ${x2} ${y2 - arcH} L ${x2} ${y2}`;
+      } else {
+        const my = (y1 + y2) / 2;
+        d = `M ${x1} ${y1} L ${x1} ${my} L ${x2} ${my} L ${x2} ${y2}`;
+      }
+    } else {
+      if (sameRow) {
+        const mx = (x1 + x2) / 2;
+        const arcH = Math.abs(x2 - x1) * CONFIG.CURVES.ARC_FACTOR;
+        d = `M ${x1} ${y1} C ${mx} ${y1 - arcH}, ${mx} ${y2 - arcH}, ${x2} ${y2}`;
+      } else {
+        const bendX1 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_START;
+        const bendX2 = x1 + (x2 - x1) * CONFIG.CURVES.BEND_END;
+        d = `M ${x1} ${y1} C ${bendX1} ${y1}, ${bendX2} ${y2}, ${x2} ${y2}`;
+      }
+    }
+    
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('opacity', '0.7');
+    
+    svgEl.appendChild(path);
+  });
+}
+
+searchInput.addEventListener('input', (e) => {
+  performSearch(e.target.value);
+});
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    performSearch('');
+    searchInput.blur();
+  }
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  performSearch('');
+  searchInput.focus();
+});
+
+/* ════════════════════════════════════════════════════════
+   Data-driven counts (footer stats, mobile footer, empty-state copy)
+   ════════════════════════════════════════════════════════ */
+const NUM_WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'];
+const numberWord = (n) => NUM_WORDS[n] || String(n);
+const nPlays = Object.keys(PLAYS).length;
+const nProducts = PRODUCTS.length;
+document.getElementById('stat-plays').textContent = nPlays;
+document.getElementById('stat-products').textContent = nProducts;
+document.getElementById('mobile-footer').textContent =
+  `${nPlays} plays · ${nProducts} products · ${SITE.mobileFooterHint}`;
+
+/* ════════════════════════════════════════════════════════
+   Build legend
+   ════════════════════════════════════════════════════════ */
+/* Legend chips are non-interactive titles: they name the play groups
+   (full names) and show each group's colour. */
+const legendEl = document.getElementById('play-legend');
+PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
+  const chip = document.createElement('span');
+  chip.className = 'legend-chip';
+  chip.innerHTML = `<span class="dot" style="background: var(${play.varName})"></span>${esc(play.name)}`;
+  legendEl.appendChild(chip);
+});
+
+/* ════════════════════════════════════════════════════════
+   Build nodes
+   ════════════════════════════════════════════════════════ */
+const mapArea = document.getElementById('map-area');
+const svgEl = document.getElementById('svg-connections');
+
+PRODUCTS.forEach(p => {
+  const node = document.createElement('button');
+  node.type = 'button';
+  node.className = 'pnode';
+  node.dataset.id = p.id;
+  node.textContent = p.label;
+  const primaryPlay = PLAYS[p.plays[0]];
+  node.style.setProperty('--node-color', `var(${primaryPlay.varName})`);
+  node.addEventListener('click', () => handleClick(p.id));
+  mapArea.appendChild(node);
+  nodeEls[p.id] = node;
+});
+
+/* ════════════════════════════════════════════════════════
+   Layout
+   ════════════════════════════════════════════════════════ */
+function computeLayout() {
+  const rect = mapArea.getBoundingClientRect();
+  const W = rect.width;
+  const H = rect.height;
+  const { LEFT, RIGHT, TOP, BOTTOM } = CONFIG.LAYOUT;
+
+  const usableW = W - LEFT - RIGHT;
+  const usableH = H - TOP - BOTTOM;
+  const catCount = CATEGORIES.length;
+  const laneH = usableH / catCount;
+
+  // Clear lane overlays
+  mapArea.querySelectorAll('.lane-strip, .lane-label, .lane-divider').forEach(el => el.remove());
+
+  CATEGORIES.forEach((cat, catIdx) => {
+    const yTop = TOP + catIdx * laneH;
+    const yCen = yTop + laneH / 2;
+
+    if (tweakState.laneFill === 'zebra' && catIdx % 2 === 1) {
+      const strip = document.createElement('div');
+      strip.className = 'lane-strip';
+      strip.style.top = yTop + 'px';
+      strip.style.height = laneH + 'px';
+      mapArea.insertBefore(strip, svgEl);
+    }
+
+    if (catIdx > 0) {
+      const div = document.createElement('div');
+      div.className = 'lane-divider';
+      div.style.top = yTop + 'px';
+      mapArea.insertBefore(div, svgEl);
+    }
+
+  });
+
+  // Position products
+  CATEGORIES.forEach((cat, catIdx) => {
+    const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
+    if (productsInCat.length === 0) return;
+
+    const yTop = TOP + catIdx * laneH;
+    const yCen = yTop + laneH / 2;
+
+    const widths = productsInCat.map(p => nodeEls[p.id].offsetWidth || 0);
+    const totalProductWidth = widths.reduce((sum, w) => sum + w, 0);
+    const availableSpace = usableW - totalProductWidth;
+    const gapSize = availableSpace / (productsInCat.length + 1);
+
+    let currentX = LEFT + gapSize;
+    productsInCat.forEach((p, idx) => {
+      const width = widths[idx];
+      const x = currentX + width / 2;
+      const y = yCen;
+      p._px = x; p._py = y;
+      const el = nodeEls[p.id];
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+      currentX += width + gapSize;
+    });
+  });
+}
+
+/* ════════════════════════════════════════════════════════
+   Connection color rule
+   - Same lane: that lane's play color
+   - Cross-lane: lower-on-screen (larger index) lane's color
+   ════════════════════════════════════════════════════════ */
+const catIndexById = {};
+CATEGORIES.forEach((c, i) => { catIndexById[c.id] = i; });
+
+function connectionPlayId(fromId, toId) {
+  const fromIdx = catIndexById[productMap[fromId].cat];
+  const toIdx   = catIndexById[productMap[toId].cat];
+  const lowerIdx = Math.max(fromIdx, toIdx); // larger idx == lower on screen
+  return CATEGORIES[lowerIdx].playId;
+}
+
+/* Build unique edge list (deduped by from↔to pair). Each edge tracks
+   the set of strategic plays it appears in, used for filtering. */
+const uniqueEdges = (() => {
+  const map = new Map();
+  CONNECTIONS.forEach(([from, to, play, explanation]) => {
+    const [a, b] = [from, to].sort();
+    const key = `${a}|${b}`;
+    if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set(), explanations: {} });
+    map.get(key).plays.add(play);
+    map.get(key).explanations[`${from}→${to}`] = explanation;
+  });
+  return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays], explanations: e.explanations }));
+})();
+
+/* ════════════════════════════════════════════════════════
+   Draw connections
+   ════════════════════════════════════════════════════════ */
+function drawConnections(activeId = null) {
+  svgEl.innerHTML = '<defs id="svg-defs"></defs>';
+
+  // When play filter is active, determine which products are involved
+  let involvedProducts = null;
+  let categoryProducts = null;
+  if (activePlayFilter && !activeId) {
+    const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
+    if (playCategory) {
+      categoryProducts = new Set(
+        PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
+      );
+      involvedProducts = new Set(categoryProducts);
+      CONNECTIONS.forEach(([a, b, p, explanation]) => {
+        if (categoryProducts.has(a)) involvedProducts.add(b);
+        if (categoryProducts.has(b)) involvedProducts.add(a);
+      });
+    }
+  }
+
+  // Sort so active edges render last (on top)
+  const sorted = [...uniqueEdges].sort((e1, e2) => {
+    if (!activeId) return 0;
+    const a = (e1.from === activeId || e1.to === activeId) ? 1 : 0;
+    const b = (e2.from === activeId || e2.to === activeId) ? 1 : 0;
+    return a - b;
+  });
+
+  sorted.forEach(edge => {
+    const { from, to, plays } = edge;
+    const p1 = productMap[from];
+    const p2 = productMap[to];
+    if (!p1._px || !p2._px) return;
+
+    const x1 = p1._px, y1 = p1._py;
+    const x2 = p2._px, y2 = p2._py;
+
+    // Determine if this connection should be active/visible
+    let isActive, isFiltered;
+    if (activeId) {
+      // When a product is selected, show its connections
+      isActive = (activeId === from || activeId === to);
+      isFiltered = false;
+    } else if (activePlayFilter && involvedProducts) {
+      // When a play filter is active, show connections between involved products
+      isActive = involvedProducts.has(from) && involvedProducts.has(to);
+      isFiltered = !isActive;
+    } else {
+      // No filter active, show all connections
+      isActive = true;
+      isFiltered = false;
+    }
+
+    // Line colour indicates the product group the connection leads to:
+    //  - product selected: colour of the product at the OTHER end
+    //  - play filter: colour of the end outside the filtered lane
+    //  - resting/dimmed lines are drawn with the neutral token below
+    let color;
+    if (activeId && isActive) {
+      const otherEnd = from === activeId ? to : from;
+      color = playColor(productMap[otherEnd].plays[0]);
+    } else if (activePlayFilter && categoryProducts && isActive) {
+      const fromIn = categoryProducts.has(from);
+      const toIn = categoryProducts.has(to);
+      if (fromIn && toIn) color = playColor(activePlayFilter);
+      else if (fromIn !== toIn) color = playColor(productMap[fromIn ? to : from].plays[0]);
+      else color = playColor(connectionPlayId(from, to));
+    } else {
+      color = playColor(connectionPlayId(from, to));
+    }
+
+    // Determine if we need to reverse the path direction for animation
+    // We want the animation to always flow FROM the clicked product
+    let shouldReversePath = false;
+    if (activeId && isActive) {
+      // If the path is drawn from 'to' to 'from', but activeId is 'to', we need to reverse
+      shouldReversePath = (from !== activeId);
+    }
+
+    let d;
+    const sameRow = Math.abs(y1 - y2) < CONFIG.SAME_ROW_THRESHOLD;
+
+    // Swap coordinates if we need to reverse the path direction
+    let startX = shouldReversePath ? x2 : x1;
+    let startY = shouldReversePath ? y2 : y1;
+    let endX = shouldReversePath ? x1 : x2;
+    let endY = shouldReversePath ? y1 : y2;
+
+    if (tweakState.connStyle === 'ortho') {
+      if (sameRow) {
+        const arcH = Math.abs(endX - startX) * 0.18 + 12;
+        d = `M ${startX} ${startY} L ${startX} ${startY - arcH} L ${endX} ${endY - arcH} L ${endX} ${endY}`;
+      } else {
+        const my = (startY + endY) / 2;
+        d = `M ${startX} ${startY} L ${startX} ${my} L ${endX} ${my} L ${endX} ${endY}`;
+      }
+    } else {
+      if (sameRow) {
+        const mx = (startX + endX) / 2;
+        const arcH = Math.abs(endX - startX) * CONFIG.CURVES.ARC_FACTOR;
+        d = `M ${startX} ${startY} C ${mx} ${startY - arcH}, ${mx} ${endY - arcH}, ${endX} ${endY}`;
+      } else {
+        const bendX1 = startX + (endX - startX) * CONFIG.CURVES.BEND_START;
+        const bendX2 = startX + (endX - startX) * CONFIG.CURVES.BEND_END;
+        d = `M ${startX} ${startY} C ${bendX1} ${startY}, ${bendX2} ${endY}, ${endX} ${endY}`;
+      }
+    }
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+
+    if (!activeId && !activePlayFilter) {
+      // Resting map: a faint neutral mesh — just enough to signal the
+      // products are connected; the real lines reveal on click.
+      // var() resolves against #app so it tracks the theme live.
+      path.style.stroke = 'var(--conn-neutral)';
+      path.setAttribute('stroke-width', '1');
+      path.setAttribute('opacity', '0.12');
+    } else if (isActive && !isFiltered) {
+      let pathLength = 1000;
+      try {
+        pathLength = path.getTotalLength() || 1000;
+      } catch (e) {
+        console.warn('Could not calculate path length:', e);
+      }
+      path.setAttribute('stroke', color);
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('opacity', '0.95');
+      path.setAttribute('stroke-dasharray', pathLength);
+      path.setAttribute('stroke-dashoffset', pathLength);
+      path.style.setProperty('--path-length', pathLength);
+      
+      // All lines draw together at a constant speed (~400 px/s), so short
+      // and long lines fill consistently; clamp so nothing feels instant
+      // or sluggish.
+      const drawSeconds = Math.min(Math.max(pathLength / 400, 0.7), 2.5);
+      path.style.animationDuration = `${drawSeconds}s`;
+
+      path.classList.add('path-active');
+      path.getBoundingClientRect(); // Force reflow
+    } else {
+      // Dimmed lines: neutral, like the resting map
+      path.style.stroke = 'var(--conn-neutral)';
+      path.setAttribute('stroke-width', '1');
+      path.setAttribute('opacity', '0.05');
+    }
+
+    svgEl.appendChild(path);
+  });
+}
+
+/* ════════════════════════════════════════════════════════
+   Interaction
+   ════════════════════════════════════════════════════════ */
+function handleClick(id) {
+  if (!productMap[id]) return;
+
+  if (selectedId === id) {
+    resetSelection();
+    return;
+  }
+
+  selectedId = id;
+  
+  // Clear any active play filter
+  if (activePlayFilter) {
+    activePlayFilter = null;
+    document.querySelectorAll('.legend-chip').forEach(c => c.classList.remove('is-active'));
+  }
+  
+  // Clear any active search state
+  if (searchQuery) {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.classList.remove('is-visible');
+    searchResults.textContent = '';
+  }
+
+  const product = productMap[id];
+  const neighbors = new Set(adjacency[id].map(a => a.to));
+  neighbors.add(id);
+
+  Object.entries(nodeEls).forEach(([pid, el]) => {
+    el.classList.remove('dimmed', 'highlighted', 'selected');
+    if (pid === id) el.classList.add('selected');
+    else if (neighbors.has(pid)) el.classList.add('highlighted');
+    else el.classList.add('dimmed');
+  });
+
+  drawConnections(id);
+  renderSidebar(product);
+  document.getElementById('reset-btn').style.display = 'inline-flex';
+}
+
+function resetSelection(redraw = true) {
+  selectedId = null;
+  Object.values(nodeEls).forEach(el => el.classList.remove('dimmed', 'highlighted', 'selected'));
+  if (redraw) {
+    drawConnections();
+    renderSidebarEmpty();
+  }
+  document.getElementById('reset-btn').style.display = 'none';
+}
+
+document.getElementById('reset-btn').addEventListener('click', () => resetSelection());
+
+document.getElementById('sidebar-inner').addEventListener('click', (e) => {
+  const connRow = e.target.closest('.conn-row[data-target]');
+  if (connRow) handleClick(connRow.dataset.target);
+});
+
+/* ════════════════════════════════════════════════════════
+   Sidebar render
+   ════════════════════════════════════════════════════════ */
+const EMPTY_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <circle cx="12" cy="12" r="9"/>
+  <circle cx="7" cy="9" r="1.6" fill="currentColor"/>
+  <circle cx="17" cy="9" r="1.6" fill="currentColor"/>
+  <circle cx="12" cy="17" r="1.6" fill="currentColor"/>
+  <path d="M8.5 9.5 L15.5 9.5 M8 10.5 L11 16 M16 10.5 L13 16"/>
+</svg>`;
+
+function renderSidebarEmpty() {
+  document.getElementById('sidebar-inner').innerHTML = `
+    <div class="sidebar-empty">
+      <div class="empty-icon">${EMPTY_ICON}</div>
+      <p>Select a product to highlight its cross-sell connections across the ${numberWord(nPlays)} plays.</p>
+      <span class="empty-hint">No selection</span>
+    </div>`;
+}
+
+function renderSidebar(product) {
+  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
+  const conns = adjacency[product.id];
+
+  const playsHtml = product.plays.map(pId => {
+    const play = PLAYS[pId];
+    return `<span class="play-pill" style="--play-color: var(${play.varName})">
+      <span class="dot"></span>${esc(play.short)}
+    </span>`;
+  }).join('');
+
+  // Dedupe connected targets (a target may appear in multiple play synergies)
+  const uniqueTargetIds = [...new Set(conns.map(c => c.to))];
+
+  // Group connections by the target's primary play (its lane on the map)
+  const grouped = {};
+  uniqueTargetIds.forEach(tid => {
+    const tp = productMap[tid].plays[0];
+    (grouped[tp] ||= []).push(tid);
+  });
+
+  // Sort groups by their lane order on the map (top-to-bottom), not numeric play id
+  const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
+  const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
+    const play = PLAYS[pId];
+    const rows = grouped[pId].map(to => {
+      const target = productMap[to];
+      const targetPlay = PLAYS[target.plays[0]];
+      // Find the explanation for this connection
+      const conn = conns.find(c => c.to === to);
+      const explanation = conn?.explanation || '';
+      return `<button type="button" class="conn-row" data-target="${esc(to)}">
+        <div class="conn-accent" style="--accent-color: var(${targetPlay.varName})"></div>
+        <div class="conn-info">
+          <div class="conn-name">${esc(target.label)}</div>
+          <div class="conn-play">${esc(targetPlay.short)}</div>
+          ${explanation ? `<div class="conn-explanation">${esc(explanation)}</div>` : ''}
+        </div>
+        <div class="conn-arrow">›</div>
+      </button>`;
+    }).join('');
+    return `
+      <div class="sb-section-label">${esc(play.short)} · ${grouped[pId].length}</div>
+      <div class="conn-list">${rows}</div>`;
+  }).join('');
+
+  // Build discovery questions HTML
+  const questionsHtml = product.questions ? product.questions.map((q, idx) => `
+    <div class="sb-question-item">
+      <div class="sb-question-icon">?</div>
+      <div class="sb-question-text">${esc(q)}</div>
+    </div>
+  `).join('') : '';
+
+  // Build competitive positioning HTML
+  const competitorsHtml = product.competitors ? `
+    <div class="sb-section-label">Competes With</div>
+    <div class="sb-competitors">
+      ${product.competitors.map(comp => `<span class="competitor-tag">${esc(comp)}</span>`).join('')}
+    </div>
+  ` : '';
+
+  const differentiatorsHtml = product.differentiators ? `
+    <div class="sb-section-label">Key Differentiators</div>
+    <div class="sb-differentiators">
+      ${product.differentiators.map(diff => `
+        <div class="differentiator-item">
+          <span class="diff-icon">✓</span>
+          <span class="diff-text">${esc(diff)}</span>
+        </div>
+      `).join('')}
+    </div>
+  ` : '';
+
+  document.getElementById('sidebar-inner').innerHTML = `
+    <span class="sb-tag">Product</span>
+    <div class="sb-product-name">${esc(product.label)}</div>
+    <div class="sb-category">${esc(catLabel)}</div>
+
+    <div class="sb-section-label">Featured in plays</div>
+    <div>${playsHtml}</div>
+
+    ${product.desc ? `
+      <div class="sb-section-label">Description</div>
+      <div class="sb-description">${esc(product.desc)}</div>
+    ` : ''}
+
+    ${product.value ? `
+      <div class="sb-section-label">Value Proposition</div>
+      <div class="sb-value">${esc(product.value)}</div>
+    ` : ''}
+
+    ${competitorsHtml}
+
+    ${differentiatorsHtml}
+
+    ${questionsHtml ? `
+      <div class="sb-section-label">Discovery Questions</div>
+      <div class="sb-questions">${questionsHtml}</div>
+    ` : ''}
+
+    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
+    ${groupedHtml}
+  `;
+}
+
+/* ════════════════════════════════════════════════════════
+   Tweaks (vanilla; host protocol)
+   ════════════════════════════════════════════════════════ */
+const tweaksPanel = document.getElementById('tweaks-panel');
+const appRoot = document.getElementById('app');
+
+function applyTweaks() {
+  appRoot.dataset.theme = tweakState.theme;
+  appRoot.dataset.nodeStyle = tweakState.nodeStyle;
+  appRoot.dataset.connStyle = tweakState.connStyle;
+  // refresh visible state
+  document.querySelectorAll('.tweak-seg').forEach(seg => {
+    const key = seg.dataset.tweak;
+    seg.querySelectorAll('button').forEach(btn => {
+      btn.classList.toggle('is-active', btn.dataset.value === String(tweakState[key]));
+    });
+  });
+  // Lane fill change requires recompute - cancel any pending resize
+  clearTimeout(resizeTimer);
+  computeLayout();
+  if (selectedId) drawConnections(selectedId);
+  else if (activePlayFilter) drawConnections();
+  else drawConnections();
+}
+
+document.querySelectorAll('.tweak-seg button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.parentElement.dataset.tweak;
+    const value = btn.dataset.value;
+    tweakState = { ...tweakState, [key]: value };
+    applyTweaks();
+    try {
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: value } }, window.location.origin);
+    } catch (e) { /* host may not be present */ }
+  });
+});
+
+// Host protocol — listener BEFORE announce
+// Only accept messages from the same origin to prevent a malicious parent
+// frame from toggling the tweaks panel.
+window.addEventListener('message', (e) => {
+  if (e.origin !== window.location.origin) return;
+  const msg = e.data;
+  if (!msg || typeof msg !== 'object') return;
+  if (msg.type === '__activate_edit_mode') {
+    tweaksPanel.classList.add('is-open');
+  } else if (msg.type === '__deactivate_edit_mode') {
+    tweaksPanel.classList.remove('is-open');
+  }
+});
+
+document.getElementById('tweaks-close').addEventListener('click', () => {
+  tweaksPanel.classList.remove('is-open');
+  try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, window.location.origin); } catch (e) {}
+});
+
+try { window.parent.postMessage({ type: '__edit_mode_available' }, window.location.origin); } catch (e) {}
+
+// Header theme toggle button
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const next = tweakState.theme === 'dark' ? 'light' : 'dark';
+  tweakState = { ...tweakState, theme: next };
+  applyTweaks();
+  try {
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: next } }, window.location.origin);
+  } catch (e) {}
+});
+
+/* ════════════════════════════════════════════════════════
+   Init & resize
+   ════════════════════════════════════════════════════════ */
+function init() {
+  renderSidebarEmpty();
+  applyTweaks(); // sets data-theme etc. + first computeLayout/drawConnections
+  mobileInit();  // build mobile UI (no-op on desktop — guarded inside)
+}
+
+let resizeTimer;
+
+function scheduleLayoutUpdate() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    computeLayout();
+    if (selectedId) drawConnections(selectedId);
+    else if (activePlayFilter) drawConnections();
+    else drawConnections();
+  }, 80);
+}
+
+window.addEventListener('resize', scheduleLayoutUpdate);
+
+requestAnimationFrame(() => requestAnimationFrame(init));
+
+/* ════════════════════════════════════════════════════════
+   MOBILE UI
+   Builds and manages the accordion + bottom-drawer view.
+   All code here is guarded by an isMobile() check so it
+   never runs (or interferes) on desktop.
+   ════════════════════════════════════════════════════════ */
+
+function isMobile() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+/* ── State ── */
+let mobActivePlayFilter = null;
+let mobSearchQuery = '';
+let mobSelectedId = null;
+
+/* ── Element refs (assigned in mobileInit) ── */
+let mobAccordion, mobLegendEl, mobSearchInput, mobSearchClear, mobSearchResults;
+let mobDrawer, mobDrawerOverlay, mobDrawerBody, mobDrawerTitle, mobDrawerClose, mobDrawerHandleBar;
+
+/* ────────────────────────────────────────────────────────
+   mobileInit — entry point called from init()
+   ──────────────────────────────────────────────────────── */
+function mobileInit() {
+  // Assign refs
+  mobAccordion      = document.getElementById('mobile-accordion');
+  mobLegendEl       = document.getElementById('mobile-legend');
+  mobSearchInput    = document.getElementById('mob-search-input');
+  mobSearchClear    = document.getElementById('mob-search-clear');
+  mobSearchResults  = document.getElementById('mobile-search-results');
+  mobDrawer         = document.getElementById('mob-drawer');
+  mobDrawerOverlay  = document.getElementById('mob-drawer-overlay');
+  mobDrawerBody     = document.getElementById('mob-drawer-body');
+  mobDrawerTitle    = document.getElementById('mob-drawer-title');
+  mobDrawerClose    = document.getElementById('mob-drawer-close');
+  mobDrawerHandleBar= document.getElementById('mob-drawer-handle-bar');
+
+  // Build legend chips
+  PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'mobile-legend-chip';
+    chip.dataset.play = play.id;
+    chip.style.setProperty('--legend-color', `var(${play.varName})`);
+    chip.innerHTML = `<span class="dot" style="background:var(${play.varName})"></span>${esc(play.short)}`;
+    chip.title = play.name;
+    chip.addEventListener('click', () => mobTogglePlayFilter(play.id));
+    mobLegendEl.appendChild(chip);
+  });
+
+  // Build accordion
+  mobBuildAccordion();
+
+  // Apply current theme immediately so drawer inherits it
+  mobSyncTheme();
+
+  // Search events
+  mobSearchInput.addEventListener('input', e => mobPerformSearch(e.target.value));
+  mobSearchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { mobSearchInput.value = ''; mobPerformSearch(''); mobSearchInput.blur(); }
+  });
+  mobSearchClear.addEventListener('click', () => {
+    mobSearchInput.value = ''; mobPerformSearch(''); mobSearchInput.focus();
+  });
+
+  // Drawer close events
+  mobDrawerClose.addEventListener('click', mobCloseDrawer);
+  mobDrawerOverlay.addEventListener('click', mobCloseDrawer);
+  mobDrawerHandleBar.addEventListener('click', mobCloseDrawer);
+  mobDrawerHandleBar.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') mobCloseDrawer(); });
+
+  // Drawer body: tapping a connection row opens that product
+  mobDrawerBody.addEventListener('click', e => {
+    const row = e.target.closest('.conn-row[data-target]');
+    if (row) mobOpenDrawer(row.dataset.target);
+  });
+
+  // Sync theme when tweaks change (theme toggle on header also fires applyTweaks)
+  const origApplyTweaks = applyTweaks;
+  // We patched applyTweaks at the bottom of mobileInit
+}
+
+/* ────────────────────────────────────────────────────────
+   Patch applyTweaks so theme changes propagate to mobile
+   ──────────────────────────────────────────────────────── */
+const _origApplyTweaks = applyTweaks;
+applyTweaks = function() {
+  _origApplyTweaks.apply(this, arguments);
+  mobSyncTheme();
+};
+
+function mobSyncTheme() {
+  // The #app data-theme attribute drives CSS variables. The drawer and
+  // mobile-view are inside #app so they automatically inherit. Nothing extra needed.
+}
+
+/* ────────────────────────────────────────────────────────
+   Build accordion
+   ──────────────────────────────────────────────────────── */
+function mobBuildAccordion() {
+  mobAccordion.innerHTML = '';
+
+  CATEGORIES.forEach((cat, catIdx) => {
+    const play        = PLAYS[cat.playId];
+    const products    = PRODUCTS.filter(p => p.cat === cat.id);
+    const connCount   = id => adjacency[id].length;
+
+    const lane = document.createElement('div');
+    lane.className = 'mob-lane';
+    lane.dataset.cat = cat.id;
+    // First lane open by default
+    if (catIdx === 0) lane.classList.add('is-open');
+
+    // Header button
+    const header = document.createElement('button');
+    header.type = 'button';
+    header.className = 'mob-lane-header';
+    header.setAttribute('aria-expanded', catIdx === 0 ? 'true' : 'false');
+    header.innerHTML = `
+      <span class="mob-lane-dot" style="background:var(${play.varName})"></span>
+      <span class="mob-lane-title">${esc(cat.label)}</span>
+      <span class="mob-lane-count">${products.length}</span>
+      <span class="mob-lane-chevron" aria-hidden="true">›</span>`;
+    header.addEventListener('click', () => {
+      const isOpen = lane.classList.toggle('is-open');
+      header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Body with product cards
+    const body = document.createElement('div');
+    body.className = 'mob-lane-body';
+    body.setAttribute('role', 'list');
+
+    products.forEach(p => {
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'mob-product-card';
+      card.dataset.id = p.id;
+      card.setAttribute('role', 'listitem');
+      const nc = connCount(p.id);
+      const primaryPlay = PLAYS[p.plays[0]];
+      card.innerHTML = `
+        <span class="mob-product-accent" style="--node-color:var(${primaryPlay.varName})"></span>
+        <span class="mob-product-label">${esc(p.label)}</span>
+        <span class="mob-product-conns">${nc} link${nc !== 1 ? 's' : ''}</span>
+        <span class="mob-product-arrow" aria-hidden="true">›</span>`;
+      card.addEventListener('click', () => mobOpenDrawer(p.id));
+      body.appendChild(card);
+    });
+
+    lane.appendChild(header);
+    lane.appendChild(body);
+    mobAccordion.appendChild(lane);
+  });
+}
+
+/* ────────────────────────────────────────────────────────
+   Open / close drawer
+   ──────────────────────────────────────────────────────── */
+function mobOpenDrawer(productId) {
+  if (!productMap[productId]) return;
+  mobSelectedId = productId;
+  const product = productMap[productId];
+
+  // Set drawer title
+  mobDrawerTitle.textContent = product.label;
+
+  // Render full sidebar content into drawer body
+  // renderSidebar writes to #sidebar-inner — we replicate its output here
+  mobDrawerBody.innerHTML = mobRenderProductDetail(product);
+
+  // Show drawer
+  mobDrawer.classList.add('is-open');
+  mobDrawerOverlay.classList.add('is-open');
+  mobDrawerOverlay.removeAttribute('aria-hidden');
+  document.body.style.overflow = 'hidden'; // prevent background scroll
+
+  // Focus management
+  requestAnimationFrame(() => mobDrawerClose.focus());
+}
+
+function mobCloseDrawer() {
+  mobDrawer.classList.remove('is-open');
+  mobDrawerOverlay.classList.remove('is-open');
+  mobDrawerOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  mobSelectedId = null;
+}
+
+/* ────────────────────────────────────────────────────────
+   Render product detail HTML for the drawer
+   (mirrors renderSidebar but returns a string instead of
+    writing to #sidebar-inner)
+   ──────────────────────────────────────────────────────── */
+function mobRenderProductDetail(product) {
+  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
+  const conns = adjacency[product.id];
+
+  const playsHtml = product.plays.map(pId => {
+    const play = PLAYS[pId];
+    return `<span class="play-pill" style="--play-color:var(${play.varName})">
+      <span class="dot"></span>${esc(play.short)}
+    </span>`;
+  }).join('');
+
+  // Dedupe connected targets
+  const uniqueTargetIds = [...new Set(conns.map(c => c.to))];
+
+  // Group by target's primary play lane
+  const grouped = {};
+  uniqueTargetIds.forEach(tid => {
+    const tp = productMap[tid].plays[0];
+    (grouped[tp] ||= []).push(tid);
+  });
+
+  const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
+  const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
+    const play = PLAYS[pId];
+    const rows = grouped[pId].map(to => {
+      const target = productMap[to];
+      const targetPlay = PLAYS[target.plays[0]];
+      const conn = conns.find(c => c.to === to);
+      const explanation = conn?.explanation || '';
+      return `<button type="button" class="conn-row" data-target="${esc(to)}">
+        <div class="conn-accent" style="--accent-color:var(${targetPlay.varName})"></div>
+        <div class="conn-info">
+          <div class="conn-name">${esc(target.label)}</div>
+          <div class="conn-play">${esc(targetPlay.short)}</div>
+          ${explanation ? `<div class="conn-explanation">${esc(explanation)}</div>` : ''}
+        </div>
+        <div class="conn-arrow">›</div>
+      </button>`;
+    }).join('');
+    return `
+      <div class="sb-section-label">${esc(play.short)} · ${grouped[pId].length}</div>
+      <div class="conn-list">${rows}</div>`;
+  }).join('');
+
+  const questionsHtml = product.questions ? product.questions.map(q => `
+    <div class="sb-question-item">
+      <div class="sb-question-icon">?</div>
+      <div class="sb-question-text">${esc(q)}</div>
+    </div>`).join('') : '';
+
+  const competitorsHtml = product.competitors ? `
+    <div class="sb-section-label">Competes With</div>
+    <div class="sb-competitors">
+      ${product.competitors.map(comp => `<span class="competitor-tag">${esc(comp)}</span>`).join('')}
+    </div>` : '';
+
+  const differentiatorsHtml = product.differentiators ? `
+    <div class="sb-section-label">Key Differentiators</div>
+    <div class="sb-differentiators">
+      ${product.differentiators.map(diff => `
+        <div class="differentiator-item">
+          <span class="diff-icon">✓</span>
+          <span class="diff-text">${esc(diff)}</span>
+        </div>`).join('')}
+    </div>` : '';
+
+  return `
+    <span class="sb-tag">${esc(catLabel)}</span>
+
+    <div class="sb-section-label">Featured in plays</div>
+    <div>${playsHtml}</div>
+
+    ${product.desc ? `
+      <div class="sb-section-label">Description</div>
+      <div class="sb-description">${esc(product.desc)}</div>
+    ` : ''}
+
+    ${product.value ? `
+      <div class="sb-section-label">Value Proposition</div>
+      <div class="sb-value">${esc(product.value)}</div>
+    ` : ''}
+
+    ${competitorsHtml}
+    ${differentiatorsHtml}
+
+    ${questionsHtml ? `
+      <div class="sb-section-label">Discovery Questions</div>
+      <div class="sb-questions">${questionsHtml}</div>
+    ` : ''}
+
+    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
+    ${groupedHtml}
+  `;
+}
+
+/* ────────────────────────────────────────────────────────
+   Play filter on mobile
+   ──────────────────────────────────────────────────────── */
+function mobTogglePlayFilter(playId) {
+  // Clear search
+  if (mobSearchQuery) {
+    mobSearchInput.value = '';
+    mobSearchQuery = '';
+    mobSearchClear.classList.remove('is-visible');
+    mobSearchResults.textContent = '';
+  }
+
+  mobActivePlayFilter = (mobActivePlayFilter === playId) ? null : playId;
+
+  document.querySelectorAll('#mobile-legend .mobile-legend-chip').forEach(c => {
+    c.classList.toggle('is-active', Number(c.dataset.play) === mobActivePlayFilter);
+  });
+
+  mobApplyFilters();
+}
+
+/* ────────────────────────────────────────────────────────
+   Search on mobile
+   ──────────────────────────────────────────────────────── */
+function mobPerformSearch(raw) {
+  mobSearchQuery = raw.toLowerCase().trim();
+  mobSearchClear.classList.toggle('is-visible', mobSearchQuery.length > 0);
+
+  // Clear play filter when searching
+  if (mobSearchQuery && mobActivePlayFilter) {
+    mobActivePlayFilter = null;
+    document.querySelectorAll('#mobile-legend .mobile-legend-chip').forEach(c => c.classList.remove('is-active'));
+  }
+
+  mobApplyFilters();
+}
+
+/* ────────────────────────────────────────────────────────
+   Apply filters (search OR play) to the accordion
+   ──────────────────────────────────────────────────────── */
+function mobApplyFilters() {
+  // Determine which product IDs pass the current filter
+  let involvedIds = null; // null = show all
+
+  if (mobSearchQuery) {
+    const matches = new Set();
+    PRODUCTS.forEach(p => {
+      const text = [p.label, p.desc || '', p.value || '', ...(p.questions || [])].join(' ').toLowerCase();
+      if (text.includes(mobSearchQuery)) matches.add(p.id);
+    });
+    // Also include connected products
+    involvedIds = new Set(matches);
+    CONNECTIONS.forEach(([a, b]) => {
+      if (matches.has(a)) involvedIds.add(b);
+      if (matches.has(b)) involvedIds.add(a);
+    });
+    // Update results count
+    mobSearchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+  } else if (mobActivePlayFilter) {
+    const playCategory = CATEGORIES.find(cat => cat.playId === mobActivePlayFilter);
+    if (playCategory) {
+      const catProducts = new Set(PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id));
+      involvedIds = new Set(catProducts);
+      CONNECTIONS.forEach(([a, b]) => {
+        if (catProducts.has(a)) involvedIds.add(b);
+        if (catProducts.has(b)) involvedIds.add(a);
+      });
+    }
+    mobSearchResults.textContent = '';
+  } else {
+    mobSearchResults.textContent = '';
+  }
+
+  // Apply dim/highlight classes to product cards and auto-expand matching lanes
+  document.querySelectorAll('.mob-lane').forEach(lane => {
+    const catId = lane.dataset.cat;
+    const cards = lane.querySelectorAll('.mob-product-card');
+    let laneHasMatch = false;
+
+    cards.forEach(card => {
+      const id = card.dataset.id;
+      card.classList.remove('dimmed', 'highlighted');
+      if (involvedIds === null) {
+        // No filter — show all
+      } else if (involvedIds.has(id)) {
+        card.classList.add('highlighted');
+        laneHasMatch = true;
+      } else {
+        card.classList.add('dimmed');
+      }
+    });
+
+    // Auto-expand lanes that have matching products; collapse lanes with none
+    if (involvedIds !== null) {
+      const laneHeader = lane.querySelector('.mob-lane-header');
+      if (laneHasMatch) {
+        lane.classList.add('is-open');
+        laneHeader.setAttribute('aria-expanded', 'true');
+      } else {
+        lane.classList.remove('is-open');
+        laneHeader.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>

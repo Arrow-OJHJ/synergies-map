@@ -1,0 +1,14 @@
+{
+  // Cloudflare Workers config — deploys the static site (index.html + fonts/)
+  // as an assets-only Worker from the repo root.
+  "name": "arrow-synergies-map",
+  "compatibility_date": "2025-05-01",
+  // Serve the site only via the custom domain (arrow-synergies-map.com); the
+  // free *.workers.dev URL is disabled.
+  "workers_dev": false,
+  "assets": {
+    "directory": ".",
+    // Single-page app: serve index.html for any unknown path.
+    "not_found_handling": "single-page-application"
+  }
+}
