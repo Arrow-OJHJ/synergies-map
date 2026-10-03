@@ -1,6 +1,6 @@
 # IBM Product Synergies Map
 
-An interactive map of IBM product cross-sell opportunities across six strategic plays. Available at
+An interactive map of IBM product cross-sell opportunities across six product groups. Available at
 **https://arrow-ojhj.github.io/synergies-map/** (GitHub Pages, deployed from `main`).
 
 The old address, arrow-synergies-map.com, now shows only a notice pointing to the new one and will
@@ -26,7 +26,7 @@ section of `index.html`.
 | --- | --- |
 | `const SITE` | Page title |
 | `const UI_EN` | Every interface label (buttons, headings, counts) |
-| `const PLAYS` | Strategic play names, short names, and display order |
+| `const PLAYS` | Product group names, short names, and display order (called plays in the code) |
 | `const CATEGORIES` | Horizontal lane labels and their associated play |
 | `const PRODUCTS` | All 48 products — descriptions, questions, competitors, differentiators |
 | `const CONNECTIONS` | Cross-sell connection relationships between products |

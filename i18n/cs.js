@@ -10,7 +10,7 @@ window.I18N.cs = {
   "mobSearchPlaceholder": "Hledat produkty…",
   "searchAria": "Hledat produkty",
   "clearSearch": "Vymazat hledání",
-  "playFilter": "Filtr oblastí řešení",
+  "playFilter": "Filtr produktových skupin",
   "mapAria": "Mapa cross-sellingu",
   "productDetail": "Detail produktu",
   "detail": "Detail",
@@ -22,18 +22,13 @@ window.I18N.cs = {
   "closeDrawer": "Zavřít panel",
   "noSelection": "Nic není vybráno",
   "product": "Produkt",
-  "featuredInPlays": "Zařazeno v oblastech",
+  "featuredInPlays": "Produktové skupiny",
   "description": "Popis",
   "valueProposition": "Hodnotová nabídka",
   "competesWith": "Konkuruje s",
   "keyDifferentiators": "Klíčové odlišnosti",
   "discoveryQuestions": "Otázky ke zjištění potřeb",
-  "emptyPrompt": {
-   "one": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v {n} oblasti řešení.",
-   "few": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v {n} oblastech řešení.",
-   "many": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v {n} oblasti řešení.",
-   "other": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v {n} oblastech řešení."
-  },
+  "emptyPrompt": {"one": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "few": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktových skupin.", "many": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "other": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktových skupin."},
   "productsFound": {
    "one": "Nalezen {n} produkt",
    "few": "Nalezeny {n} produkty",
@@ -47,12 +42,7 @@ window.I18N.cs = {
    "other": "{n} vazeb"
   },
   "links": {"one": "{n} vazba", "few": "{n} vazby", "many": "{n} vazby", "other": "{n} vazeb"},
-  "playsCount": {
-   "one": "{n} oblast",
-   "few": "{n} oblasti",
-   "many": "{n} oblasti",
-   "other": "{n} oblastí"
-  },
+  "playsCount": {"one": "{n} produktová skupina", "few": "{n} produktové skupiny", "many": "{n} produktové skupiny", "other": "{n} produktových skupin"},
   "productsCount": {
    "one": "{n} produkt",
    "few": "{n} produkty",

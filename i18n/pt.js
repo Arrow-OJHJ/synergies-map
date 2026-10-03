@@ -10,7 +10,7 @@ window.I18N.pt = {
   "mobSearchPlaceholder": "Pesquisar produtos…",
   "searchAria": "Pesquisar produtos",
   "clearSearch": "Limpar pesquisa",
-  "playFilter": "Filtro de área de solução",
+  "playFilter": "Filtro por grupo de produtos",
   "mapAria": "Mapa de venda cruzada",
   "productDetail": "Detalhe do produto",
   "detail": "Detalhe",
@@ -22,17 +22,13 @@ window.I18N.pt = {
   "closeDrawer": "Fechar painel",
   "noSelection": "Nenhuma seleção",
   "product": "Produto",
-  "featuredInPlays": "Presente nas áreas de solução",
+  "featuredInPlays": "Grupos de produtos",
   "description": "Descrição",
   "valueProposition": "Proposta de valor",
   "competesWith": "Concorre com",
   "keyDifferentiators": "Principais diferenciadores",
   "discoveryQuestions": "Perguntas de descoberta",
-  "emptyPrompt": {
-   "one": "Selecione um produto para destacar as suas ligações de venda cruzada na {n} área de solução.",
-   "many": "Selecione um produto para destacar as suas ligações de venda cruzada nas {n} áreas de solução.",
-   "other": "Selecione um produto para destacar as suas ligações de venda cruzada nas {n} áreas de solução."
-  },
+  "emptyPrompt": {"one": "Selecione um produto para destacar as suas ligações de venda cruzada em {n} grupo de produtos.", "many": "Selecione um produto para destacar as suas ligações de venda cruzada nos {n} grupos de produtos.", "other": "Selecione um produto para destacar as suas ligações de venda cruzada nos {n} grupos de produtos."},
   "productsFound": {
    "one": "{n} produto encontrado",
    "many": "{n} produtos encontrados",
@@ -44,11 +40,7 @@ window.I18N.pt = {
    "other": "{n} ligações"
   },
   "links": {"one": "{n} ligação", "many": "{n} ligações", "other": "{n} ligações"},
-  "playsCount": {
-   "one": "{n} área de solução",
-   "many": "{n} áreas de solução",
-   "other": "{n} áreas de solução"
-  },
+  "playsCount": {"one": "{n} grupo de produtos", "many": "{n} grupos de produtos", "other": "{n} grupos de produtos"},
   "productsCount": {
    "one": "{n} produto",
    "many": "{n} produtos",

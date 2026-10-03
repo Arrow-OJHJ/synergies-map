@@ -10,7 +10,7 @@ window.I18N.sv = {
   "mobSearchPlaceholder": "Sök produkter…",
   "searchAria": "Sök produkter",
   "clearSearch": "Rensa sökning",
-  "playFilter": "Filtrera lösningsområde",
+  "playFilter": "Filtrera produktgrupp",
   "mapAria": "Karta för korsförsäljning",
   "productDetail": "Produktdetaljer",
   "detail": "Detaljer",
@@ -22,16 +22,13 @@ window.I18N.sv = {
   "closeDrawer": "Stäng panelen",
   "noSelection": "Inget valt",
   "product": "Produkt",
-  "featuredInPlays": "Ingår i lösningsområden",
+  "featuredInPlays": "Produktgrupper",
   "description": "Beskrivning",
   "valueProposition": "Värdeerbjudande",
   "competesWith": "Konkurrerar med",
   "keyDifferentiators": "Viktiga särdrag",
   "discoveryQuestions": "Behovsfrågor",
-  "emptyPrompt": {
-   "one": "Välj en produkt för att markera dess korsförsäljningskopplingar inom {n} lösningsområde.",
-   "other": "Välj en produkt för att markera dess korsförsäljningskopplingar över de {n} lösningsområdena."
-  },
+  "emptyPrompt": {"one": "Välj en produkt för att markera dess korsförsäljningskopplingar inom {n} produktgrupp.", "other": "Välj en produkt för att markera dess korsförsäljningskopplingar över de {n} produktgrupperna."},
   "productsFound": {
    "one": "{n} produkt hittades",
    "other": "{n} produkter hittades"
@@ -41,10 +38,7 @@ window.I18N.sv = {
    "other": "{n} kopplingar"
   },
   "links": {"one": "{n} koppling", "other": "{n} kopplingar"},
-  "playsCount": {
-   "one": "{n} lösningsområde",
-   "other": "{n} lösningsområden"
-  },
+  "playsCount": {"one": "{n} produktgrupp", "other": "{n} produktgrupper"},
   "productsCount": {
    "one": "{n} produkt",
    "other": "{n} produkter"

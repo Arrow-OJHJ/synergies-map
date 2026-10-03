@@ -10,7 +10,7 @@ window.I18N.de = {
   "mobSearchPlaceholder": "Produkte suchen…",
   "searchAria": "Produkte suchen",
   "clearSearch": "Suche löschen",
-  "playFilter": "Filter Lösungsbereich",
+  "playFilter": "Filter Produktgruppe",
   "mapAria": "Cross-Selling-Karte",
   "productDetail": "Produktdetails",
   "detail": "Details",
@@ -22,16 +22,13 @@ window.I18N.de = {
   "closeDrawer": "Seitenleiste schließen",
   "noSelection": "Keine Auswahl",
   "product": "Produkt",
-  "featuredInPlays": "Enthalten in Lösungsbereichen",
+  "featuredInPlays": "Produktgruppen",
   "description": "Beschreibung",
   "valueProposition": "Nutzenversprechen",
   "competesWith": "Wettbewerber",
   "keyDifferentiators": "Alleinstellungsmerkmale",
   "discoveryQuestions": "Bedarfsfragen",
-  "emptyPrompt": {
-   "one": "Wählen Sie ein Produkt, um seine Cross-Selling-Verbindungen in {n} Lösungsbereich hervorzuheben.",
-   "other": "Wählen Sie ein Produkt, um seine Cross-Selling-Verbindungen über die {n} Lösungsbereiche hervorzuheben."
-  },
+  "emptyPrompt": {"one": "Wählen Sie ein Produkt, um seine Cross-Selling-Verbindungen in {n} Produktgruppe hervorzuheben.", "other": "Wählen Sie ein Produkt, um seine Cross-Selling-Verbindungen über die {n} Produktgruppen hervorzuheben."},
   "productsFound": {
    "one": "{n} Produkt gefunden",
    "other": "{n} Produkte gefunden"
@@ -41,10 +38,7 @@ window.I18N.de = {
    "other": "{n} Verbindungen"
   },
   "links": {"one": "{n} Verbindung", "other": "{n} Verbindungen"},
-  "playsCount": {
-   "one": "{n} Lösungsbereich",
-   "other": "{n} Lösungsbereiche"
-  },
+  "playsCount": {"one": "{n} Produktgruppe", "other": "{n} Produktgruppen"},
   "productsCount": {
    "one": "{n} Produkt",
    "other": "{n} Produkte"

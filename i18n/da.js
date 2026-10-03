@@ -10,7 +10,7 @@ window.I18N.da = {
   "mobSearchPlaceholder": "Søg i produkter…",
   "searchAria": "Søg i produkter",
   "clearSearch": "Ryd søgning",
-  "playFilter": "Filter for løsningsområde",
+  "playFilter": "Filter for produktgruppe",
   "mapAria": "Krydssalgskort",
   "productDetail": "Produktdetaljer",
   "detail": "Detaljer",
@@ -22,16 +22,13 @@ window.I18N.da = {
   "closeDrawer": "Luk panel",
   "noSelection": "Intet valgt",
   "product": "Produkt",
-  "featuredInPlays": "Indgår i løsningsområder",
+  "featuredInPlays": "Produktgrupper",
   "description": "Beskrivelse",
   "valueProposition": "Værditilbud",
   "competesWith": "Konkurrerer med",
   "keyDifferentiators": "Vigtigste differentiatorer",
   "discoveryQuestions": "Afdækningsspørgsmål",
-  "emptyPrompt": {
-   "one": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af {n} løsningsområde.",
-   "other": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af de {n} løsningsområder."
-  },
+  "emptyPrompt": {"one": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af {n} produktgruppe.", "other": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af de {n} produktgrupper."},
   "productsFound": {
    "one": "{n} produkt fundet",
    "other": "{n} produkter fundet"
@@ -41,10 +38,7 @@ window.I18N.da = {
    "other": "{n} forbindelser"
   },
   "links": {"one": "{n} forbindelse", "other": "{n} forbindelser"},
-  "playsCount": {
-   "one": "{n} løsningsområde",
-   "other": "{n} løsningsområder"
-  },
+  "playsCount": {"one": "{n} produktgruppe", "other": "{n} produktgrupper"},
   "productsCount": {
    "one": "{n} produkt",
    "other": "{n} produkter"

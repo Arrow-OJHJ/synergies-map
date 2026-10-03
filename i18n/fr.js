@@ -10,7 +10,7 @@ window.I18N.fr = {
   "mobSearchPlaceholder": "Rechercher des produits…",
   "searchAria": "Rechercher des produits",
   "clearSearch": "Effacer la recherche",
-  "playFilter": "Filtre par domaine",
+  "playFilter": "Filtre par groupe de produits",
   "mapAria": "Carte de vente croisée",
   "productDetail": "Fiche produit",
   "detail": "Détail",
@@ -22,17 +22,13 @@ window.I18N.fr = {
   "closeDrawer": "Fermer le panneau",
   "noSelection": "Aucune sélection",
   "product": "Produit",
-  "featuredInPlays": "Présent dans les domaines",
+  "featuredInPlays": "Groupes de produits",
   "description": "Description",
   "valueProposition": "Proposition de valeur",
   "competesWith": "Concurrents",
   "keyDifferentiators": "Différenciateurs clés",
   "discoveryQuestions": "Questions de découverte",
-  "emptyPrompt": {
-   "one": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans le {n} domaine.",
-   "many": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans les {n} domaines.",
-   "other": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans les {n} domaines."
-  },
+  "emptyPrompt": {"one": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans {n} groupe de produits.", "many": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans les {n} groupes de produits.", "other": "Sélectionnez un produit pour mettre en évidence ses connexions de vente croisée dans les {n} groupes de produits."},
   "productsFound": {
    "one": "{n} produit trouvé",
    "many": "{n} produits trouvés",
@@ -44,11 +40,7 @@ window.I18N.fr = {
    "other": "{n} connexions"
   },
   "links": {"one": "{n} connexion", "many": "{n} connexions", "other": "{n} connexions"},
-  "playsCount": {
-   "one": "{n} domaine",
-   "many": "{n} domaines",
-   "other": "{n} domaines"
-  },
+  "playsCount": {"one": "{n} groupe de produits", "many": "{n} groupes de produits", "other": "{n} groupes de produits"},
   "productsCount": {
    "one": "{n} produit",
    "many": "{n} produits",

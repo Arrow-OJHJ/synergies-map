@@ -10,7 +10,7 @@ window.I18N.hr = {
   "mobSearchPlaceholder": "Pretražite proizvode…",
   "searchAria": "Pretraživanje proizvoda",
   "clearSearch": "Očisti pretragu",
-  "playFilter": "Filtar područja rješenja",
+  "playFilter": "Filtar grupa proizvoda",
   "mapAria": "Karta unakrsne prodaje",
   "productDetail": "Detalji proizvoda",
   "detail": "Detalji",
@@ -22,17 +22,13 @@ window.I18N.hr = {
   "closeDrawer": "Zatvori ploču",
   "noSelection": "Ništa nije odabrano",
   "product": "Proizvod",
-  "featuredInPlays": "Zastupljen u područjima rješenja",
+  "featuredInPlays": "Grupe proizvoda",
   "description": "Opis",
   "valueProposition": "Vrijednosna ponuda",
   "competesWith": "Konkurenti",
   "keyDifferentiators": "Ključne prednosti",
   "discoveryQuestions": "Pitanja za otkrivanje potreba",
-  "emptyPrompt": {
-   "one": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} područje rješenja.",
-   "few": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} područja rješenja.",
-   "other": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} područja rješenja."
-  },
+  "emptyPrompt": {"one": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupu proizvoda.", "few": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupe proizvoda.", "other": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupa proizvoda."},
   "productsFound": {
    "one": "Pronađen {n} proizvod",
    "few": "Pronađena {n} proizvoda",
@@ -44,11 +40,7 @@ window.I18N.hr = {
    "other": "{n} veza"
   },
   "links": {"one": "{n} veza", "few": "{n} veze", "other": "{n} veza"},
-  "playsCount": {
-   "one": "{n} područje rješenja",
-   "few": "{n} područja rješenja",
-   "other": "{n} područja rješenja"
-  },
+  "playsCount": {"one": "{n} grupa proizvoda", "few": "{n} grupe proizvoda", "other": "{n} grupa proizvoda"},
   "productsCount": {
    "one": "{n} proizvod",
    "few": "{n} proizvoda",

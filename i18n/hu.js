@@ -10,7 +10,7 @@ window.I18N.hu = {
   "mobSearchPlaceholder": "Termékek keresése…",
   "searchAria": "Termékek keresése",
   "clearSearch": "Keresés törlése",
-  "playFilter": "Szűrés megoldási területre",
+  "playFilter": "Szűrés termékcsoportra",
   "mapAria": "Keresztértékesítési térkép",
   "productDetail": "Termékadatok",
   "detail": "Részletek",
@@ -22,16 +22,13 @@ window.I18N.hu = {
   "closeDrawer": "Panel bezárása",
   "noSelection": "Nincs kijelölés",
   "product": "Termék",
-  "featuredInPlays": "Megoldási területek, amelyekben szerepel",
+  "featuredInPlays": "Termékcsoportok",
   "description": "Leírás",
   "valueProposition": "Értékajánlat",
   "competesWith": "Versenytársak",
   "keyDifferentiators": "Fő megkülönböztető előnyök",
   "discoveryQuestions": "Igényfelmérő kérdések",
-  "emptyPrompt": {
-   "one": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} megoldási területen.",
-   "other": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} megoldási területen."
-  },
+  "emptyPrompt": {"one": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} termékcsoportban.", "other": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} termékcsoportban."},
   "productsFound": {
    "one": "{n} termék található",
    "other": "{n} termék található"
@@ -41,10 +38,7 @@ window.I18N.hu = {
    "other": "{n} kapcsolat"
   },
   "links": {"one": "{n} kapcsolat", "other": "{n} kapcsolat"},
-  "playsCount": {
-   "one": "{n} megoldási terület",
-   "other": "{n} megoldási terület"
-  },
+  "playsCount": {"one": "{n} termékcsoport", "other": "{n} termékcsoport"},
   "productsCount": {
    "one": "{n} termék",
    "other": "{n} termék"

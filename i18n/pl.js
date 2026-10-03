@@ -10,7 +10,7 @@ window.I18N.pl = {
   "mobSearchPlaceholder": "Szukaj produktów…",
   "searchAria": "Wyszukaj produkty",
   "clearSearch": "Wyczyść wyszukiwanie",
-  "playFilter": "Filtr obszarów rozwiązań",
+  "playFilter": "Filtr grup produktów",
   "mapAria": "Mapa cross-sellingu",
   "productDetail": "Szczegóły produktu",
   "detail": "Szczegóły",
@@ -22,18 +22,13 @@ window.I18N.pl = {
   "closeDrawer": "Zamknij panel",
   "noSelection": "Brak wyboru",
   "product": "Produkt",
-  "featuredInPlays": "Występuje w obszarach",
+  "featuredInPlays": "Grupy produktów",
   "description": "Opis",
   "valueProposition": "Propozycja wartości",
   "competesWith": "Konkuruje z",
   "keyDifferentiators": "Kluczowe wyróżniki",
   "discoveryQuestions": "Pytania diagnostyczne",
-  "emptyPrompt": {
-   "one": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} obszarze rozwiązań.",
-   "few": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} obszarach rozwiązań.",
-   "many": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} obszarach rozwiązań.",
-   "other": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} obszaru rozwiązań."
-  },
+  "emptyPrompt": {"one": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} grupie produktów.", "few": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} grupach produktów.", "many": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} grupach produktów.", "other": "Wybierz produkt, aby wyróżnić jego powiązania cross-sellingowe w {n} grupy produktów."},
   "productsFound": {
    "one": "Znaleziono {n} produkt",
    "few": "Znaleziono {n} produkty",
@@ -47,12 +42,7 @@ window.I18N.pl = {
    "other": "{n} powiązania"
   },
   "links": {"one": "{n} powiązanie", "few": "{n} powiązania", "many": "{n} powiązań", "other": "{n} powiązania"},
-  "playsCount": {
-   "one": "{n} obszar",
-   "few": "{n} obszary",
-   "many": "{n} obszarów",
-   "other": "{n} obszaru"
-  },
+  "playsCount": {"one": "{n} grupa produktów", "few": "{n} grupy produktów", "many": "{n} grup produktów", "other": "{n} grupy produktów"},
   "productsCount": {
    "one": "{n} produkt",
    "few": "{n} produkty",

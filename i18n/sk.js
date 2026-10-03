@@ -10,7 +10,7 @@ window.I18N.sk = {
   "mobSearchPlaceholder": "Hľadať produkty…",
   "searchAria": "Hľadať produkty",
   "clearSearch": "Vymazať vyhľadávanie",
-  "playFilter": "Filter oblastí riešení",
+  "playFilter": "Filter produktových skupín",
   "mapAria": "Mapa krížového predaja",
   "productDetail": "Detail produktu",
   "detail": "Detail",
@@ -22,18 +22,13 @@ window.I18N.sk = {
   "closeDrawer": "Zavrieť panel",
   "noSelection": "Nič nie je vybraté",
   "product": "Produkt",
-  "featuredInPlays": "Zaradený v oblastiach riešení",
+  "featuredInPlays": "Produktové skupiny",
   "description": "Popis",
   "valueProposition": "Hodnotová ponuka",
   "competesWith": "Konkuruje",
   "keyDifferentiators": "Kľúčové odlišnosti",
   "discoveryQuestions": "Otázky na zistenie potrieb",
-  "emptyPrompt": {
-   "one": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} oblasti riešení.",
-   "few": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} oblastí riešení.",
-   "many": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} oblasti riešení.",
-   "other": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} oblastí riešení."
-  },
+  "emptyPrompt": {"one": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktovej skupiny.", "few": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktových skupín.", "many": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktovej skupiny.", "other": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktových skupín."},
   "productsFound": {
    "one": "Nájdený {n} produkt",
    "few": "Nájdené {n} produkty",
@@ -47,12 +42,7 @@ window.I18N.sk = {
    "other": "{n} prepojení"
   },
   "links": {"one": "{n} prepojenie", "few": "{n} prepojenia", "many": "{n} prepojenia", "other": "{n} prepojení"},
-  "playsCount": {
-   "one": "{n} oblasť",
-   "few": "{n} oblasti",
-   "many": "{n} oblasti",
-   "other": "{n} oblastí"
-  },
+  "playsCount": {"one": "{n} produktová skupina", "few": "{n} produktové skupiny", "many": "{n} produktovej skupiny", "other": "{n} produktových skupín"},
   "productsCount": {
    "one": "{n} produkt",
    "few": "{n} produkty",

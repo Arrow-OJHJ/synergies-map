@@ -10,7 +10,7 @@ window.I18N.es = {
   "mobSearchPlaceholder": "Buscar productos…",
   "searchAria": "Buscar productos",
   "clearSearch": "Borrar búsqueda",
-  "playFilter": "Filtro por área",
+  "playFilter": "Filtro por grupo de productos",
   "mapAria": "Mapa de venta cruzada",
   "productDetail": "Ficha de producto",
   "detail": "Detalle",
@@ -22,17 +22,13 @@ window.I18N.es = {
   "closeDrawer": "Cerrar panel",
   "noSelection": "Sin selección",
   "product": "Producto",
-  "featuredInPlays": "Presente en las áreas",
+  "featuredInPlays": "Grupos de productos",
   "description": "Descripción",
   "valueProposition": "Propuesta de valor",
   "competesWith": "Compite con",
   "keyDifferentiators": "Diferenciadores clave",
   "discoveryQuestions": "Preguntas de descubrimiento",
-  "emptyPrompt": {
-   "one": "Seleccione un producto para resaltar sus conexiones de venta cruzada en {n} área de solución.",
-   "many": "Seleccione un producto para resaltar sus conexiones de venta cruzada en las {n} áreas de solución.",
-   "other": "Seleccione un producto para resaltar sus conexiones de venta cruzada en las {n} áreas de solución."
-  },
+  "emptyPrompt": {"one": "Seleccione un producto para resaltar sus conexiones de venta cruzada en {n} grupo de productos.", "many": "Seleccione un producto para resaltar sus conexiones de venta cruzada en los {n} grupos de productos.", "other": "Seleccione un producto para resaltar sus conexiones de venta cruzada en los {n} grupos de productos."},
   "productsFound": {
    "one": "{n} producto encontrado",
    "many": "{n} productos encontrados",
@@ -44,11 +40,7 @@ window.I18N.es = {
    "other": "{n} conexiones"
   },
   "links": {"one": "{n} conexión", "many": "{n} conexiones", "other": "{n} conexiones"},
-  "playsCount": {
-   "one": "{n} área",
-   "many": "{n} áreas",
-   "other": "{n} áreas"
-  },
+  "playsCount": {"one": "{n} grupo de productos", "many": "{n} grupos de productos", "other": "{n} grupos de productos"},
   "productsCount": {
    "one": "{n} producto",
    "many": "{n} productos",

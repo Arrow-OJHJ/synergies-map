@@ -10,7 +10,7 @@ window.I18N.sl = {
   "mobSearchPlaceholder": "Iščite izdelke…",
   "searchAria": "Iskanje izdelkov",
   "clearSearch": "Počisti iskanje",
-  "playFilter": "Filter področij rešitev",
+  "playFilter": "Filter skupin izdelkov",
   "mapAria": "Zemljevid navzkrižne prodaje",
   "productDetail": "Podrobnosti izdelka",
   "detail": "Podrobnosti",
@@ -22,18 +22,13 @@ window.I18N.sl = {
   "closeDrawer": "Zapri ploščo",
   "noSelection": "Ni izbire",
   "product": "Izdelek",
-  "featuredInPlays": "Vključen v področja rešitev",
+  "featuredInPlays": "Skupine izdelkov",
   "description": "Opis",
   "valueProposition": "Vrednostna ponudba",
   "competesWith": "Konkurenca",
   "keyDifferentiators": "Ključne prednosti",
   "discoveryQuestions": "Vprašanja za odkrivanje potreb",
-  "emptyPrompt": {
-   "one": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo na {n} področju rešitev.",
-   "two": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo na {n} področjih rešitev.",
-   "few": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo na {n} področjih rešitev.",
-   "other": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo na {n} področjih rešitev."
-  },
+  "emptyPrompt": {"one": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo v {n} skupini izdelkov.", "two": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo v {n} skupinah izdelkov.", "few": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo v {n} skupinah izdelkov.", "other": "Izberite izdelek, da označite njegove povezave za navzkrižno prodajo v {n} skupinah izdelkov."},
   "productsFound": {
    "one": "Najden {n} izdelek",
    "two": "Najdena {n} izdelka",
@@ -47,12 +42,7 @@ window.I18N.sl = {
    "other": "{n} povezav"
   },
   "links": {"one": "{n} povezava", "two": "{n} povezavi", "few": "{n} povezave", "other": "{n} povezav"},
-  "playsCount": {
-   "one": "{n} področje",
-   "two": "{n} področji",
-   "few": "{n} področja",
-   "other": "{n} področij"
-  },
+  "playsCount": {"one": "{n} skupina izdelkov", "two": "{n} skupini izdelkov", "few": "{n} skupine izdelkov", "other": "{n} skupin izdelkov"},
   "productsCount": {
    "one": "{n} izdelek",
    "two": "{n} izdelka",
