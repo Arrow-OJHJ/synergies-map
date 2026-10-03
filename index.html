@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src 'self'; img-src data:; frame-ancestors 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; font-src 'self'; img-src data:; frame-ancestors 'none'">
 <title>IBM Product Synergies Map</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23161616%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%230f62fe%22/></svg>">
 <style>
@@ -15,6 +15,23 @@
   @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexMono-400.woff2') format('woff2'); }
   @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexMono-500.woff2') format('woff2'); }
   @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexMono-600.woff2') format('woff2'); }
+  /* Extra character sets for the translations (Central European accents, Cyrillic). Declared
+     after the latin faces so they take precedence inside their unicode-range; the browser only
+     downloads one when the page actually shows a character from it. */
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexSans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexSans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexSans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/IBMPlexSans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexSans-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexSans-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexSans-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/IBMPlexSans-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexMono-400-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexMono-500-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexMono-600-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/IBMPlexMono-400-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('./fonts/IBMPlexMono-500-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+  @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('./fonts/IBMPlexMono-600-cyrillic.woff2') format('woff2'); unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
   /* ─────────────────────────────────────────────
      Carbon Design System tokens
      ───────────────────────────────────────────── */
@@ -212,6 +229,29 @@
   [data-theme="dark"] .cds-shell__theme-btn .icon-glyph {
     transform: rotate(180deg);
   }
+
+  /* Language picker in shell (the shell bar is dark in both themes) */
+  .cds-shell__lang {
+    height: 48px;
+    max-width: 160px;
+    padding: 0 32px 0 16px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23c6c6c6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;
+    border: none;
+    color: #c6c6c6;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    text-overflow: ellipsis;
+    transition: background-color 0.11s, color 0.11s;
+  }
+  .cds-shell__lang:hover { background-color: #353535; color: #ffffff; }
+  .cds-shell__lang:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
+  .cds-shell__lang option { background: #262626; color: #f4f4f4; }
+  .cds-shell__brand { min-width: 0; }
+  .cds-shell__wordmark { white-space: nowrap; flex-shrink: 0; }
+  .cds-shell__product { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   .cds-shell__bar2 {
     height: 48px;
@@ -809,7 +849,6 @@
   #footer .footer-stat strong {
     color: var(--cds-text-primary);
     font-weight: 500;
-    margin-right: 4px;
   }
   #footer .footer-hint { color: var(--cds-text-helper); }
 
@@ -928,6 +967,7 @@
       font-size: 12px;
     }
     .cds-shell__meta-text { display: none; }
+    .cds-shell__lang { max-width: 112px; padding: 0 28px 0 10px; background-position: right 10px center; }
 
     /* ── Mobile layout wrapper ── */
     #mobile-view {
@@ -1239,12 +1279,13 @@
       <div class="cds-shell__brand">
         <span class="cds-shell__wordmark">Arrow ECS UKI</span>
         <span class="cds-shell__divider"></span>
-        <span class="cds-shell__product">IBM Product Synergies Map</span>
+        <span class="cds-shell__product" data-i18n="title">IBM Product Synergies Map</span>
       </div>
       <div class="cds-shell__meta">
         <span class="cds-shell__meta-text"><strong>2026</strong></span>
-        <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme">
-          <span id="themeText" class="visually-hidden">Toggle theme</span>
+        <select id="lang-select" class="cds-shell__lang" aria-label="Language" data-i18n-aria="language" data-i18n-title="language" title="Language"></select>
+        <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme" data-i18n-title="toggleThemeTitle" data-i18n-aria="toggleTheme">
+          <span id="themeText" class="visually-hidden" data-i18n="toggleTheme">Toggle theme</span>
           <span class="icon-glyph" aria-hidden="true">◐</span>
         </button>
       </div>
@@ -1257,6 +1298,8 @@
           class="search-input"
           placeholder="Search products, descriptions, questions..."
           aria-label="Search products"
+          data-i18n-placeholder="searchPlaceholder"
+          data-i18n-aria="searchAria"
         />
         <button
           type="button"
@@ -1264,28 +1307,30 @@
           class="search-clear"
           aria-label="Clear search"
           title="Clear search"
+          data-i18n-aria="clearSearch"
+          data-i18n-title="clearSearch"
         >×</button>
       </div>
       <span id="search-results" class="search-results-count"></span>
-      <nav id="play-legend" aria-label="Play filter"></nav>
+      <nav id="play-legend" aria-label="Play filter" data-i18n-aria="playFilter"></nav>
     </div>
   </header>
 
   <!-- ── Main content ── -->
   <main id="main">
-    <section id="map-area" aria-label="Cross-sell map">
+    <section id="map-area" aria-label="Cross-sell map" data-i18n-aria="mapAria">
       <svg id="svg-connections" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs id="svg-defs"></defs>
       </svg>
     </section>
 
-    <aside id="sidebar" aria-label="Product detail">
+    <aside id="sidebar" aria-label="Product detail" data-i18n-aria="productDetail">
       <div id="sidebar-header">
-        <span class="sidebar-title">Detail</span>
-        <button id="reset-btn" type="button">Clear selection</button>
+        <span class="sidebar-title" data-i18n="detail">Detail</span>
+        <button id="reset-btn" type="button" data-i18n="clearSelection">Clear selection</button>
       </div>
       <div id="sidebar-inner">
-        <div class="sidebar-empty"><p>Loading…</p></div>
+        <div class="sidebar-empty"><p data-i18n="loading">Loading…</p></div>
       </div>
     </aside>
   </main>
@@ -1293,11 +1338,11 @@
   <!-- ── Footer ── -->
   <footer id="footer">
     <div class="footer-stats">
-      <span class="footer-stat"><strong id="stat-plays"></strong>Plays</span>
-      <span class="footer-stat"><strong id="stat-products"></strong>Products</span>
+      <span class="footer-stat" id="stat-plays"></span>
+      <span class="footer-stat" id="stat-products"></span>
       <span class="footer-stat"><strong>Arrow ECS UKI</strong></span>
     </div>
-    <span class="footer-hint">Search products · Click product to view details</span>
+    <span class="footer-hint" data-i18n="footerHint">Search products · Click product to view details</span>
   </footer>
 
   <!-- ══════════════════════════════════════════════════
@@ -1314,18 +1359,20 @@
           class="search-input"
           placeholder="Search products…"
           aria-label="Search products"
+          data-i18n-placeholder="mobSearchPlaceholder"
+          data-i18n-aria="searchAria"
           autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
           spellcheck="false"
         />
-        <button type="button" id="mob-search-clear" class="search-clear" aria-label="Clear search">×</button>
+        <button type="button" id="mob-search-clear" class="search-clear" aria-label="Clear search" data-i18n-aria="clearSearch">×</button>
       </div>
     </div>
     <div id="mobile-search-results"></div>
 
     <!-- Mobile legend chips (horizontal scroll) -->
-    <nav id="mobile-legend" aria-label="Play filter"></nav>
+    <nav id="mobile-legend" aria-label="Play filter" data-i18n-aria="playFilter"></nav>
 
     <!-- Accordion lane list -->
     <div id="mobile-accordion" role="list"></div>
@@ -1338,11 +1385,11 @@
   <div id="mob-drawer-overlay" aria-hidden="true"></div>
 
   <!-- Bottom drawer -->
-  <div id="mob-drawer" role="dialog" aria-modal="true" aria-label="Product detail">
-    <div id="mob-drawer-handle-bar" role="button" aria-label="Close drawer" tabindex="0"></div>
+  <div id="mob-drawer" role="dialog" aria-modal="true" aria-label="Product detail" data-i18n-aria="productDetail">
+    <div id="mob-drawer-handle-bar" role="button" aria-label="Close drawer" data-i18n-aria="closeDrawer" tabindex="0"></div>
     <div id="mob-drawer-header">
       <span id="mob-drawer-title"></span>
-      <button type="button" id="mob-drawer-close" aria-label="Close">×</button>
+      <button type="button" id="mob-drawer-close" aria-label="Close" data-i18n-aria="close">×</button>
     </div>
     <div id="mob-drawer-body"></div>
   </div>
@@ -1402,16 +1449,63 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 let tweakState = { ...TWEAK_DEFAULTS };
 
 /* ════════════════════════════════════════════════════════
-   Data — GENERATED from data.yaml by build.py
-   Do not edit content here: edit data.yaml, then run
-       python build.py
-   and open dist/index.html.
+   Data — the English master copy. Edit content here directly.
+   Every other language lives in i18n/<code>.js and must be
+   kept in step: after any change, run
+       python tools/check_i18n.py
    ════════════════════════════════════════════════════════ */
 /*DATA-BEGIN*/
 const SITE = {
- "title": "IBM Product Synergies Map",
- "mobileFooterHint": "Tap a product to explore connections"
+ "title": "IBM Product Synergies Map"
 };
+/* Interface strings. Plural entries are keyed by Intl.PluralRules
+   category (one, few, many, other...); {n} is the count. */
+const UI_EN = {
+ "title": "IBM Product Synergies Map",
+ "language": "Language",
+ "toggleTheme": "Toggle theme",
+ "toggleThemeTitle": "Toggle between light and dark theme",
+ "searchPlaceholder": "Search products, descriptions, questions...",
+ "mobSearchPlaceholder": "Search products…",
+ "searchAria": "Search products",
+ "clearSearch": "Clear search",
+ "playFilter": "Play filter",
+ "mapAria": "Cross-sell map",
+ "productDetail": "Product detail",
+ "detail": "Detail",
+ "clearSelection": "Clear selection",
+ "loading": "Loading…",
+ "footerHint": "Search products · Click product to view details",
+ "mobileFooterHint": "Tap a product to explore connections",
+ "close": "Close",
+ "closeDrawer": "Close drawer",
+ "noSelection": "No selection",
+ "product": "Product",
+ "featuredInPlays": "Featured in plays",
+ "description": "Description",
+ "valueProposition": "Value Proposition",
+ "competesWith": "Competes With",
+ "keyDifferentiators": "Key Differentiators",
+ "discoveryQuestions": "Discovery Questions",
+ "emptyPrompt": {
+  "one": "Select a product to highlight its cross-sell connections across the {n} play.",
+  "other": "Select a product to highlight its cross-sell connections across the {n} plays."
+ },
+ "productsFound": { "one": "{n} product found", "other": "{n} products found" },
+ "connections": { "one": "{n} connection", "other": "{n} connections" },
+ "links": { "one": "{n} link", "other": "{n} links" },
+ "playsCount": { "one": "{n} play", "other": "{n} plays" },
+ "productsCount": { "one": "{n} product", "other": "{n} products" }
+};
+/* Generic competitor entries that are descriptions, not brand
+   names, so they are translated. All other competitors are names. */
+const GENERIC_COMPETITORS = [
+ "ARM-based servers",
+ "AWS EC2 with migration services",
+ "On-premises retention",
+ "x86 Linux servers",
+ "x86 servers"
+];
 const PLAYS = {
  "1": {
   "id": 1,
@@ -3856,7 +3950,8 @@ const playColor = (id) => getComputedStyle(document.getElementById('app')).getPr
 /* ════════════════════════════════════════════════════════
    HTML escaping helper — MUST wrap every YAML string that
    is interpolated into an innerHTML template literal.
-   Prevents DOM-based XSS if data.yaml ever contains HTML.
+   Prevents DOM-based XSS if the data or a language pack ever
+   contains HTML.
    ════════════════════════════════════════════════════════ */
 function esc(str) {
   return String(str)
@@ -3866,6 +3961,125 @@ function esc(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 }
+
+/* ════════════════════════════════════════════════════════
+   Languages
+   English is built in (the data above plus UI_EN). Every
+   other language is a pack in i18n/<code>.js, loaded with a
+   script tag on first use (works from file:// too). Product
+   and competitor brand names are never translated. Anything
+   missing from a pack falls back to English.
+   ════════════════════════════════════════════════════════ */
+const LANGS = [
+  ['en', 'English'],
+  ['bg', 'Български'],
+  ['cs', 'Čeština'],
+  ['da', 'Dansk'],
+  ['de', 'Deutsch'],
+  ['es', 'Español'],
+  ['fr', 'Français'],
+  ['hr', 'Hrvatski'],
+  ['hu', 'Magyar'],
+  ['pl', 'Polski'],
+  ['pt', 'Português'],
+  ['sk', 'Slovenčina'],
+  ['sl', 'Slovenščina'],
+  ['sv', 'Svenska'],
+  ['uk', 'Українська'],
+];
+const LANG_STORAGE_KEY = 'synergiesMapLang';
+window.I18N = window.I18N || {};
+
+let lang = 'en';
+let L = null;                               // current pack; null while English
+let pluralRules = new Intl.PluralRules('en');
+
+// Interface string. Plural entries pick a form by Intl.PluralRules;
+// {name} placeholders are filled from vars.
+function t(key, vars) {
+  const fromPack = L && L.ui && L.ui[key];
+  let s = fromPack ?? UI_EN[key];
+  if (s && typeof s === 'object') {
+    const rules = fromPack ? pluralRules : new Intl.PluralRules('en');
+    s = s[rules.select(vars?.n ?? 0)] ?? s.other;
+  }
+  if (vars) s = s.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+  return s;
+}
+
+// Content accessors, each falling back to the English master.
+const packed = (section, id) => (L && L[section] ? L[section][id] : undefined);
+const pDesc = (p) => packed('products', p.id)?.desc ?? p.desc;
+const pValue = (p) => packed('products', p.id)?.value ?? p.value;
+const pQuestions = (p) => packed('products', p.id)?.questions ?? p.questions;
+const pDiffs = (p) => packed('products', p.id)?.differentiators ?? p.differentiators;
+const competitorName = (name) => packed('competitors', name) ?? name;
+const playName = (id) => packed('plays', id)?.name ?? PLAYS[id].name;
+const playShort = (id) => packed('plays', id)?.short ?? PLAYS[id].short;
+const categoryLabel = (id) => packed('categories', id) ?? CATEGORIES.find(c => c.id === id)?.label ?? '';
+const connText = (key, english) => packed('connections', key) ?? english;
+
+const langLoads = {};
+function loadLang(code) {
+  if (code === 'en' || window.I18N[code]) return Promise.resolve();
+  return (langLoads[code] ||= new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = `i18n/${code}.js`;
+    s.onload = () => (window.I18N[code] ? resolve() : reject(new Error(`i18n/${code}.js did not register`)));
+    s.onerror = () => { delete langLoads[code]; reject(new Error(`could not load i18n/${code}.js`)); };
+    document.head.appendChild(s);
+  }));
+}
+
+// URL (?lang=xx) first, then the last choice, then English.
+function initialLang() {
+  const known = (c) => LANGS.some(([code]) => code === c);
+  const fromUrl = new URLSearchParams(location.search).get('lang');
+  if (known(fromUrl)) return fromUrl;
+  try {
+    const saved = localStorage.getItem(LANG_STORAGE_KEY);
+    if (known(saved)) return saved;
+  } catch (e) { /* storage blocked */ }
+  return 'en';
+}
+
+// Switch to a language whose pack is already loaded (or English).
+function activateLang(code) {
+  if (code !== 'en' && !window.I18N[code]) code = 'en';
+  lang = code;
+  L = code === 'en' ? null : window.I18N[code];
+  pluralRules = new Intl.PluralRules(code);
+  document.documentElement.lang = L?.meta?.htmlLang || code;
+  langSelect.value = code;
+}
+
+async function setLanguage(code) {
+  try {
+    await loadLang(code);
+  } catch (e) {
+    console.error(e);
+    code = 'en';
+  }
+  activateLang(code);
+  try { localStorage.setItem(LANG_STORAGE_KEY, code); } catch (e) { /* storage blocked */ }
+  try {
+    const url = new URL(location.href);
+    if (code === 'en') url.searchParams.delete('lang');
+    else url.searchParams.set('lang', code);
+    history.replaceState(history.state, '', url);
+  } catch (e) { /* some file:// contexts refuse */ }
+  applyLanguage();
+}
+
+const langSelect = document.getElementById('lang-select');
+LANGS.forEach(([code, name]) => {
+  const opt = document.createElement('option');
+  opt.value = code;
+  opt.textContent = name;
+  opt.lang = code;
+  langSelect.appendChild(opt);
+});
+langSelect.addEventListener('change', () => setLanguage(langSelect.value));
 
 /* ════════════════════════════════════════════════════════
    Layout config
@@ -3884,9 +4098,11 @@ PRODUCTS.forEach(p => { productMap[p.id] = p; });
 
 const adjacency = {};
 PRODUCTS.forEach(p => { adjacency[p.id] = []; });
+// key identifies the connection in language packs ("from>to" as written in CONNECTIONS)
 CONNECTIONS.forEach(([from, to, play, explanation]) => {
-  adjacency[from].push({ from, to, play, explanation });
-  adjacency[to].push({ from: to, to: from, play, explanation });
+  const key = `${from}>${to}`;
+  adjacency[from].push({ from, to, play, explanation, key });
+  adjacency[to].push({ from: to, to: from, play, explanation, key });
 });
 
 // Data validation
@@ -3966,9 +4182,9 @@ function performSearch(query) {
   PRODUCTS.forEach(p => {
     const searchableText = [
       p.label,
-      p.desc,
-      p.value,
-      ...p.questions
+      pDesc(p),
+      pValue(p),
+      ...pQuestions(p)
     ].join(' ').toLowerCase();
     
     if (searchableText.includes(searchQuery)) {
@@ -3995,7 +4211,7 @@ function performSearch(query) {
   });
   
   // Update results count
-  searchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+  searchResults.textContent = t('productsFound', { n: matches.size });
   
   // Redraw connections to show only relevant ones
   drawConnectionsForSearch(involved, matches);
@@ -4087,14 +4303,8 @@ searchClear.addEventListener('click', () => {
 /* ════════════════════════════════════════════════════════
    Data-driven counts (footer stats, mobile footer, empty-state copy)
    ════════════════════════════════════════════════════════ */
-const NUM_WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve'];
-const numberWord = (n) => NUM_WORDS[n] || String(n);
 const nPlays = Object.keys(PLAYS).length;
 const nProducts = PRODUCTS.length;
-document.getElementById('stat-plays').textContent = nPlays;
-document.getElementById('stat-products').textContent = nProducts;
-document.getElementById('mobile-footer').textContent =
-  `${nPlays} plays · ${nProducts} products · ${SITE.mobileFooterHint}`;
 
 /* ════════════════════════════════════════════════════════
    Build legend
@@ -4102,12 +4312,59 @@ document.getElementById('mobile-footer').textContent =
 /* Legend chips are non-interactive titles: they name the play groups
    (full names) and show each group's colour. */
 const legendEl = document.getElementById('play-legend');
-PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
-  const chip = document.createElement('span');
-  chip.className = 'legend-chip';
-  chip.innerHTML = `<span class="dot" style="background: var(${play.varName})"></span>${esc(play.name)}`;
-  legendEl.appendChild(chip);
-});
+function buildLegend() {
+  legendEl.innerHTML = '';
+  PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
+    const chip = document.createElement('span');
+    chip.className = 'legend-chip';
+    chip.dataset.play = play.id;
+    legendEl.appendChild(chip);
+  });
+  fitLegend();
+}
+
+/* Full play names when they fit the bar, short names (full name on
+   hover) when they do not - narrower screens and longer languages. */
+function fitLegend() {
+  const label = (useShort) => legendEl.querySelectorAll('.legend-chip').forEach(chip => {
+    const id = chip.dataset.play;
+    chip.innerHTML = `<span class="dot" style="background: var(${PLAYS[id].varName})"></span>${esc(useShort ? playShort(id) : playName(id))}`;
+    chip.title = useShort ? playName(id) : '';
+  });
+  label(false);
+  if (legendEl.scrollWidth > legendEl.clientWidth) label(true);
+}
+
+/* ════════════════════════════════════════════════════════
+   Apply the current language to everything already on screen
+   ════════════════════════════════════════════════════════ */
+function applyLanguage() {
+  document.title = t('title');
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => { el.title = t(el.dataset.i18nTitle); });
+  // Footer counts: the plural-aware phrase with its number in bold
+  const countHtml = (key, n) => esc(t(key, { n })).replace(String(n), `<strong>${n}</strong>`);
+  document.getElementById('stat-plays').innerHTML = countHtml('playsCount', nPlays);
+  document.getElementById('stat-products').innerHTML = countHtml('productsCount', nProducts);
+  document.getElementById('mobile-footer').textContent =
+    `${t('playsCount', { n: nPlays })} · ${t('productsCount', { n: nProducts })} · ${t('mobileFooterHint')}`;
+
+  buildLegend();
+  if (selectedId) renderSidebar(productMap[selectedId]);
+  else renderSidebarEmpty();
+  if (searchQuery) performSearch(searchInput.value);
+
+  if (mobAccordion) {
+    mobBuildLegend();
+    mobBuildAccordion();
+    mobApplyFilters();
+    if (mobSelectedId) mobDrawerBody.innerHTML = mobRenderProductDetail(productMap[mobSelectedId]);
+  }
+  // Legend chips change width with the language, which can change the map's size
+  scheduleLayoutUpdate();
+}
 
 /* ════════════════════════════════════════════════════════
    Build nodes
@@ -4454,19 +4711,20 @@ function renderSidebarEmpty() {
   document.getElementById('sidebar-inner').innerHTML = `
     <div class="sidebar-empty">
       <div class="empty-icon">${EMPTY_ICON}</div>
-      <p>Select a product to highlight its cross-sell connections across the ${numberWord(nPlays)} plays.</p>
-      <span class="empty-hint">No selection</span>
+      <p>${esc(t('emptyPrompt', { n: nPlays }))}</p>
+      <span class="empty-hint">${esc(t('noSelection'))}</span>
     </div>`;
 }
 
-function renderSidebar(product) {
-  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
+/* Product detail shared by the desktop sidebar and the mobile drawer:
+   everything below each view's own heading. */
+function productDetailBody(product) {
   const conns = adjacency[product.id];
 
   const playsHtml = product.plays.map(pId => {
     const play = PLAYS[pId];
     return `<span class="play-pill" style="--play-color: var(${play.varName})">
-      <span class="dot"></span>${esc(play.short)}
+      <span class="dot"></span>${esc(playShort(pId))}
     </span>`;
   }).join('');
 
@@ -4483,30 +4741,30 @@ function renderSidebar(product) {
   // Sort groups by their lane order on the map (top-to-bottom), not numeric play id
   const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
   const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
-    const play = PLAYS[pId];
     const rows = grouped[pId].map(to => {
       const target = productMap[to];
       const targetPlay = PLAYS[target.plays[0]];
       // Find the explanation for this connection
       const conn = conns.find(c => c.to === to);
-      const explanation = conn?.explanation || '';
+      const explanation = conn ? connText(conn.key, conn.explanation || '') : '';
       return `<button type="button" class="conn-row" data-target="${esc(to)}">
         <div class="conn-accent" style="--accent-color: var(${targetPlay.varName})"></div>
         <div class="conn-info">
           <div class="conn-name">${esc(target.label)}</div>
-          <div class="conn-play">${esc(targetPlay.short)}</div>
+          <div class="conn-play">${esc(playShort(targetPlay.id))}</div>
           ${explanation ? `<div class="conn-explanation">${esc(explanation)}</div>` : ''}
         </div>
         <div class="conn-arrow">›</div>
       </button>`;
     }).join('');
     return `
-      <div class="sb-section-label">${esc(play.short)} · ${grouped[pId].length}</div>
+      <div class="sb-section-label">${esc(playShort(pId))} · ${grouped[pId].length}</div>
       <div class="conn-list">${rows}</div>`;
   }).join('');
 
   // Build discovery questions HTML
-  const questionsHtml = product.questions ? product.questions.map((q, idx) => `
+  const questions = pQuestions(product);
+  const questionsHtml = questions ? questions.map(q => `
     <div class="sb-question-item">
       <div class="sb-question-icon">?</div>
       <div class="sb-question-text">${esc(q)}</div>
@@ -4515,16 +4773,17 @@ function renderSidebar(product) {
 
   // Build competitive positioning HTML
   const competitorsHtml = product.competitors ? `
-    <div class="sb-section-label">Competes With</div>
+    <div class="sb-section-label">${esc(t('competesWith'))}</div>
     <div class="sb-competitors">
-      ${product.competitors.map(comp => `<span class="competitor-tag">${esc(comp)}</span>`).join('')}
+      ${product.competitors.map(comp => `<span class="competitor-tag">${esc(competitorName(comp))}</span>`).join('')}
     </div>
   ` : '';
 
-  const differentiatorsHtml = product.differentiators ? `
-    <div class="sb-section-label">Key Differentiators</div>
+  const diffs = pDiffs(product);
+  const differentiatorsHtml = diffs ? `
+    <div class="sb-section-label">${esc(t('keyDifferentiators'))}</div>
     <div class="sb-differentiators">
-      ${product.differentiators.map(diff => `
+      ${diffs.map(diff => `
         <div class="differentiator-item">
           <span class="diff-icon">✓</span>
           <span class="diff-text">${esc(diff)}</span>
@@ -4533,22 +4792,20 @@ function renderSidebar(product) {
     </div>
   ` : '';
 
-  document.getElementById('sidebar-inner').innerHTML = `
-    <span class="sb-tag">Product</span>
-    <div class="sb-product-name">${esc(product.label)}</div>
-    <div class="sb-category">${esc(catLabel)}</div>
-
-    <div class="sb-section-label">Featured in plays</div>
+  const desc = pDesc(product);
+  const value = pValue(product);
+  return `
+    <div class="sb-section-label">${esc(t('featuredInPlays'))}</div>
     <div>${playsHtml}</div>
 
-    ${product.desc ? `
-      <div class="sb-section-label">Description</div>
-      <div class="sb-description">${esc(product.desc)}</div>
+    ${desc ? `
+      <div class="sb-section-label">${esc(t('description'))}</div>
+      <div class="sb-description">${esc(desc)}</div>
     ` : ''}
 
-    ${product.value ? `
-      <div class="sb-section-label">Value Proposition</div>
-      <div class="sb-value">${esc(product.value)}</div>
+    ${value ? `
+      <div class="sb-section-label">${esc(t('valueProposition'))}</div>
+      <div class="sb-value">${esc(value)}</div>
     ` : ''}
 
     ${competitorsHtml}
@@ -4556,12 +4813,21 @@ function renderSidebar(product) {
     ${differentiatorsHtml}
 
     ${questionsHtml ? `
-      <div class="sb-section-label">Discovery Questions</div>
+      <div class="sb-section-label">${esc(t('discoveryQuestions'))}</div>
       <div class="sb-questions">${questionsHtml}</div>
     ` : ''}
 
-    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
+    <div class="sb-section-label">${esc(t('connections', { n: uniqueTargetIds.length }))}</div>
     ${groupedHtml}
+  `;
+}
+
+function renderSidebar(product) {
+  document.getElementById('sidebar-inner').innerHTML = `
+    <span class="sb-tag">${esc(t('product'))}</span>
+    <div class="sb-product-name">${esc(product.label)}</div>
+    <div class="sb-category">${esc(categoryLabel(product.cat))}</div>
+    ${productDetailBody(product)}
   `;
 }
 
@@ -4637,9 +4903,13 @@ document.getElementById('themeBtn').addEventListener('click', () => {
    Init & resize
    ════════════════════════════════════════════════════════ */
 function init() {
-  renderSidebarEmpty();
-  applyTweaks(); // sets data-theme etc. + first computeLayout/drawConnections
-  mobileInit();  // build mobile UI (no-op on desktop — guarded inside)
+  applyLanguage(); // all text, legend and the empty sidebar, in the starting language
+  applyTweaks();   // sets data-theme etc. + first computeLayout/drawConnections
+  mobileInit();    // build mobile UI (hidden on desktop by CSS)
+  // Web fonts change text widths once loaded (a new language can pull in a
+  // new character set), so refit the legend and nodes when they are ready.
+  document.fonts.ready.then(scheduleLayoutUpdate);
+  document.fonts.addEventListener('loadingdone', scheduleLayoutUpdate);
 }
 
 let resizeTimer;
@@ -4647,6 +4917,7 @@ let resizeTimer;
 function scheduleLayoutUpdate() {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
+    fitLegend();
     computeLayout();
     if (selectedId) drawConnections(selectedId);
     else if (activePlayFilter) drawConnections();
@@ -4656,7 +4927,15 @@ function scheduleLayoutUpdate() {
 
 window.addEventListener('resize', scheduleLayoutUpdate);
 
-requestAnimationFrame(() => requestAnimationFrame(init));
+// Load the starting language's pack before the first render, so the
+// page never flashes English first. A failed load falls back to English.
+const startLang = initialLang();
+loadLang(startLang)
+  .catch(e => console.error(e))
+  .finally(() => {
+    activateLang(startLang);
+    requestAnimationFrame(() => requestAnimationFrame(init));
+  });
 
 /* ════════════════════════════════════════════════════════
    MOBILE UI
@@ -4696,17 +4975,7 @@ function mobileInit() {
   mobDrawerHandleBar= document.getElementById('mob-drawer-handle-bar');
 
   // Build legend chips
-  PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.className = 'mobile-legend-chip';
-    chip.dataset.play = play.id;
-    chip.style.setProperty('--legend-color', `var(${play.varName})`);
-    chip.innerHTML = `<span class="dot" style="background:var(${play.varName})"></span>${esc(play.short)}`;
-    chip.title = play.name;
-    chip.addEventListener('click', () => mobTogglePlayFilter(play.id));
-    mobLegendEl.appendChild(chip);
-  });
+  mobBuildLegend();
 
   // Build accordion
   mobBuildAccordion();
@@ -4755,9 +5024,31 @@ function mobSyncTheme() {
 }
 
 /* ────────────────────────────────────────────────────────
-   Build accordion
+   Build legend chips (rebuilt when the language changes)
+   ──────────────────────────────────────────────────────── */
+function mobBuildLegend() {
+  mobLegendEl.innerHTML = '';
+  PLAY_ORDER.map(id => PLAYS[id]).forEach(play => {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'mobile-legend-chip';
+    chip.classList.toggle('is-active', play.id === mobActivePlayFilter);
+    chip.dataset.play = play.id;
+    chip.style.setProperty('--legend-color', `var(${play.varName})`);
+    chip.innerHTML = `<span class="dot" style="background:var(${play.varName})"></span>${esc(playShort(play.id))}`;
+    chip.title = playName(play.id);
+    chip.addEventListener('click', () => mobTogglePlayFilter(play.id));
+    mobLegendEl.appendChild(chip);
+  });
+}
+
+/* ────────────────────────────────────────────────────────
+   Build accordion (keeps open lanes open when rebuilt for
+   a language change; on first build only the first is open)
    ──────────────────────────────────────────────────────── */
 function mobBuildAccordion() {
+  const wasOpen = new Set([...mobAccordion.querySelectorAll('.mob-lane.is-open')].map(l => l.dataset.cat));
+  const firstBuild = !mobAccordion.children.length;
   mobAccordion.innerHTML = '';
 
   CATEGORIES.forEach((cat, catIdx) => {
@@ -4768,17 +5059,17 @@ function mobBuildAccordion() {
     const lane = document.createElement('div');
     lane.className = 'mob-lane';
     lane.dataset.cat = cat.id;
-    // First lane open by default
-    if (catIdx === 0) lane.classList.add('is-open');
+    const open = firstBuild ? catIdx === 0 : wasOpen.has(cat.id);
+    if (open) lane.classList.add('is-open');
 
     // Header button
     const header = document.createElement('button');
     header.type = 'button';
     header.className = 'mob-lane-header';
-    header.setAttribute('aria-expanded', catIdx === 0 ? 'true' : 'false');
+    header.setAttribute('aria-expanded', open ? 'true' : 'false');
     header.innerHTML = `
       <span class="mob-lane-dot" style="background:var(${play.varName})"></span>
-      <span class="mob-lane-title">${esc(cat.label)}</span>
+      <span class="mob-lane-title">${esc(categoryLabel(cat.id))}</span>
       <span class="mob-lane-count">${products.length}</span>
       <span class="mob-lane-chevron" aria-hidden="true">›</span>`;
     header.addEventListener('click', () => {
@@ -4802,7 +5093,7 @@ function mobBuildAccordion() {
       card.innerHTML = `
         <span class="mob-product-accent" style="--node-color:var(${primaryPlay.varName})"></span>
         <span class="mob-product-label">${esc(p.label)}</span>
-        <span class="mob-product-conns">${nc} link${nc !== 1 ? 's' : ''}</span>
+        <span class="mob-product-conns">${esc(t('links', { n: nc }))}</span>
         <span class="mob-product-arrow" aria-hidden="true">›</span>`;
       card.addEventListener('click', () => mobOpenDrawer(p.id));
       body.appendChild(card);
@@ -4848,102 +5139,13 @@ function mobCloseDrawer() {
 }
 
 /* ────────────────────────────────────────────────────────
-   Render product detail HTML for the drawer
-   (mirrors renderSidebar but returns a string instead of
-    writing to #sidebar-inner)
+   Render product detail HTML for the drawer (the drawer
+   header already shows the product name)
    ──────────────────────────────────────────────────────── */
 function mobRenderProductDetail(product) {
-  const catLabel = CATEGORIES.find(c => c.id === product.cat)?.label || '';
-  const conns = adjacency[product.id];
-
-  const playsHtml = product.plays.map(pId => {
-    const play = PLAYS[pId];
-    return `<span class="play-pill" style="--play-color:var(${play.varName})">
-      <span class="dot"></span>${esc(play.short)}
-    </span>`;
-  }).join('');
-
-  // Dedupe connected targets
-  const uniqueTargetIds = [...new Set(conns.map(c => c.to))];
-
-  // Group by target's primary play lane
-  const grouped = {};
-  uniqueTargetIds.forEach(tid => {
-    const tp = productMap[tid].plays[0];
-    (grouped[tp] ||= []).push(tid);
-  });
-
-  const laneOrder = Object.fromEntries(CATEGORIES.map((c, i) => [c.playId, i]));
-  const groupedHtml = Object.keys(grouped).sort((a,b) => laneOrder[a] - laneOrder[b]).map(pId => {
-    const play = PLAYS[pId];
-    const rows = grouped[pId].map(to => {
-      const target = productMap[to];
-      const targetPlay = PLAYS[target.plays[0]];
-      const conn = conns.find(c => c.to === to);
-      const explanation = conn?.explanation || '';
-      return `<button type="button" class="conn-row" data-target="${esc(to)}">
-        <div class="conn-accent" style="--accent-color:var(${targetPlay.varName})"></div>
-        <div class="conn-info">
-          <div class="conn-name">${esc(target.label)}</div>
-          <div class="conn-play">${esc(targetPlay.short)}</div>
-          ${explanation ? `<div class="conn-explanation">${esc(explanation)}</div>` : ''}
-        </div>
-        <div class="conn-arrow">›</div>
-      </button>`;
-    }).join('');
-    return `
-      <div class="sb-section-label">${esc(play.short)} · ${grouped[pId].length}</div>
-      <div class="conn-list">${rows}</div>`;
-  }).join('');
-
-  const questionsHtml = product.questions ? product.questions.map(q => `
-    <div class="sb-question-item">
-      <div class="sb-question-icon">?</div>
-      <div class="sb-question-text">${esc(q)}</div>
-    </div>`).join('') : '';
-
-  const competitorsHtml = product.competitors ? `
-    <div class="sb-section-label">Competes With</div>
-    <div class="sb-competitors">
-      ${product.competitors.map(comp => `<span class="competitor-tag">${esc(comp)}</span>`).join('')}
-    </div>` : '';
-
-  const differentiatorsHtml = product.differentiators ? `
-    <div class="sb-section-label">Key Differentiators</div>
-    <div class="sb-differentiators">
-      ${product.differentiators.map(diff => `
-        <div class="differentiator-item">
-          <span class="diff-icon">✓</span>
-          <span class="diff-text">${esc(diff)}</span>
-        </div>`).join('')}
-    </div>` : '';
-
   return `
-    <span class="sb-tag">${esc(catLabel)}</span>
-
-    <div class="sb-section-label">Featured in plays</div>
-    <div>${playsHtml}</div>
-
-    ${product.desc ? `
-      <div class="sb-section-label">Description</div>
-      <div class="sb-description">${esc(product.desc)}</div>
-    ` : ''}
-
-    ${product.value ? `
-      <div class="sb-section-label">Value Proposition</div>
-      <div class="sb-value">${esc(product.value)}</div>
-    ` : ''}
-
-    ${competitorsHtml}
-    ${differentiatorsHtml}
-
-    ${questionsHtml ? `
-      <div class="sb-section-label">Discovery Questions</div>
-      <div class="sb-questions">${questionsHtml}</div>
-    ` : ''}
-
-    <div class="sb-section-label">${uniqueTargetIds.length} connection${uniqueTargetIds.length !== 1 ? 's' : ''}</div>
-    ${groupedHtml}
+    <span class="sb-tag">${esc(categoryLabel(product.cat))}</span>
+    ${productDetailBody(product)}
   `;
 }
 
@@ -4994,7 +5196,7 @@ function mobApplyFilters() {
   if (mobSearchQuery) {
     const matches = new Set();
     PRODUCTS.forEach(p => {
-      const text = [p.label, p.desc || '', p.value || '', ...(p.questions || [])].join(' ').toLowerCase();
+      const text = [p.label, pDesc(p) || '', pValue(p) || '', ...(pQuestions(p) || [])].join(' ').toLowerCase();
       if (text.includes(mobSearchQuery)) matches.add(p.id);
     });
     // Also include connected products
@@ -5004,7 +5206,7 @@ function mobApplyFilters() {
       if (matches.has(b)) involvedIds.add(a);
     });
     // Update results count
-    mobSearchResults.textContent = `${matches.size} product${matches.size !== 1 ? 's' : ''} found`;
+    mobSearchResults.textContent = t('productsFound', { n: matches.size });
   } else if (mobActivePlayFilter) {
     const playCategory = CATEGORIES.find(cat => cat.playId === mobActivePlayFilter);
     if (playCategory) {
