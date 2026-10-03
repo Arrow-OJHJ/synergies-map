@@ -164,7 +164,7 @@ window.I18N.sl = {
    ]
   },
   "ibm_mq": {
-   "desc": "Poslovna vmesna programska oprema za sporočanje, ki zagotavlja zanesljivo asinhrono sporočanje v hibridnih okoljih. Jamči dostavo sporočil za ključne aplikacije, vključno z velikimi računalniki, oblakom in lokalnimi sistemi.",
+   "desc": "Poslovna vmesna programska oprema za sporočanje, ki zagotavlja zanesljivo asinhrono sporočanje v hibridnih okoljih. Jamči dostavo sporočil za ključne aplikacije, vključno z velikimi računalniki (mainframe), oblakom in lokalnimi sistemi.",
    "value": "Zagotavlja 99,99 % zanesljivost dostave sporočil, zmanjša medsebojno odvisnost aplikacij in omogoča integracijo v realnem času med platformami, vključno z velikimi računalniki in oblakom, z vgrajeno podporo za transakcije.",
    "questions": [
     "Ali imate aplikacije, ki potrebujejo zajamčeno in zanesljivo sporočanje?",
@@ -436,7 +436,7 @@ window.I18N.sl = {
    ]
   },
   "confluent": {
-   "desc": "Platforma za pretakanje podatkov na ravni podjetja, zasnovana na tehnologiji Kafka, na voljo kot Confluent Cloud ali v samoupravljani različici, ki služi kot hrbtenica podatkov v realnem času za IBM-ove rešitve za hibridno integracijo, podatke in UI ter posodabljanje velikih računalnikov.",
+   "desc": "Platforma za pretakanje podatkov na ravni podjetja, zasnovana na tehnologiji Kafka, na voljo kot Confluent Cloud ali v samoupravljani različici, ki služi kot hrbtenica podatkov v realnem času za IBM-ove rešitve za hibridno integracijo, podatke in UI ter posodabljanje velikih računalnikov (mainframe).",
    "value": "Deluje kot univerzalna hrbtenica za pretakanje, ki povezuje IBM-ove platforme za integracijo, infrastrukturo in UI – povezuje starejše sporočanje na osnovi MQ s tokovi dogodkov Kafka v realnem času, napaja cevovode watsonx in omogoča avtomatizacijo na podlagi dogodkov na ravni podjetja.",
    "questions": [
     "Ali morate podatke obdelovati v realnem času?",
