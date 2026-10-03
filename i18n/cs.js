@@ -6,7 +6,7 @@ window.I18N.cs = {
   "language": "Jazyk",
   "toggleTheme": "Přepnout motiv",
   "toggleThemeTitle": "Přepnout mezi světlým a tmavým motivem",
-  "searchPlaceholder": "Hledat produkty, popisy, otázky...",
+  "searchPlaceholder": "Hledat produkty, popisy, otázky…",
   "mobSearchPlaceholder": "Hledat produkty…",
   "searchAria": "Hledat produkty",
   "clearSearch": "Vymazat hledání",
@@ -25,10 +25,10 @@ window.I18N.cs = {
   "featuredInPlays": "Produktové skupiny",
   "description": "Popis",
   "valueProposition": "Hodnotová nabídka",
-  "competesWith": "Konkuruje s",
-  "keyDifferentiators": "Klíčové odlišnosti",
+  "competesWith": "Konkurence",
+  "keyDifferentiators": "Klíčové přednosti",
   "discoveryQuestions": "Otázky ke zjištění potřeb",
-  "emptyPrompt": {"one": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "few": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktových skupin.", "many": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "other": "Vyberte produkt a zvýrazněte jeho cross-sellové vazby v rámci {n} produktových skupin."},
+  "emptyPrompt": {"one": "Výběrem produktu zvýrazníte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "few": "Výběrem produktu zvýrazníte jeho cross-sellové vazby v rámci {n} produktových skupin.", "many": "Výběrem produktu zvýrazníte jeho cross-sellové vazby v rámci {n} produktové skupiny.", "other": "Výběrem produktu zvýrazníte jeho cross-sellové vazby v rámci {n} produktových skupin."},
   "productsFound": {
    "one": "Nalezen {n} produkt",
    "few": "Nalezeny {n} produkty",
@@ -158,7 +158,7 @@ window.I18N.cs = {
    ],
    "differentiators": [
     "Prediktivní údržba založená na AI",
-    "Návrh mobile-first",
+    "Koncepce mobile-first",
     "Integrace IoT",
     "Oborové šablony"
    ]
@@ -180,8 +180,8 @@ window.I18N.cs = {
    ]
   },
   "ibm_sterling": {
-   "desc": "Komplexní portfolio pro integraci dodavatelského řetězce a B2B, určené ke správě vyřizování objednávek, přehledu o dodavatelském řetězci a konektivity s partnery. Kombinuje správu objednávek, analytiku dodavatelského řetězce, B2B integraci a bezpečnou výměnu dat v sítích obchodních partnerů.",
-   "value": "Zrychluje B2B integraci o 70 %, zkracuje cyklus objednávek o 40 % a poskytuje úplný přehled o dodavatelském řetězci se spoluprací s partnery v reálném čase a prognózováním poptávky pomocí AI.",
+   "desc": "Komplexní portfolio pro integraci dodavatelského řetězce a B2B, určené pro vyřizování objednávek, přehled o dodavatelském řetězci a konektivitu s partnery. Kombinuje správu objednávek, analytiku dodavatelského řetězce, B2B integraci a bezpečnou výměnu dat v sítích obchodních partnerů.",
+   "value": "Zrychluje B2B integraci o 70 %, zkracuje cyklus objednávek o 40 % a poskytuje úplný přehled o dodavatelském řetězci, spolupráci s partnery v reálném čase a prognózování poptávky pomocí AI.",
    "questions": [
     "Potřebujete se integrovat s mnoha obchodními partnery B2B nebo dodavateli?",
     "Chcete optimalizovat procesy order-to-cash nebo procure-to-pay?",
@@ -191,7 +191,7 @@ window.I18N.cs = {
    "differentiators": [
     "Navrženo pro B2B integraci a EDI s více než 50 000 partnerskými připojeními",
     "Analytika dodavatelského řetězce a prognózování poptávky založené na AI",
-    "Zabezpečená proxy pro výměnu dat s partnery s end-to-end šifrováním",
+    "Zabezpečený proxy server pro výměnu dat s partnery s end-to-end šifrováním",
     "Hluboká integrace s ekosystémem automatizace a dat IBM"
    ]
   },
@@ -308,7 +308,7 @@ window.I18N.cs = {
    ]
   },
   "vault": {
-   "desc": "Platforma pro správu tajných klíčů (secrets), která zabezpečuje a uchovává tokeny, hesla a certifikáty a řídí přístup k nim.",
+   "desc": "Platforma pro správu tajných údajů (secrets), která zabezpečuje a uchovává tokeny, hesla a certifikáty a řídí přístup k nim.",
    "value": "Odstraňuje tajné údaje napevno zapsané v kódu, zajišťuje centralizovanou správu secrets a umožňuje jejich automatickou rotaci.",
    "questions": [
     "Jsou přihlašovací údaje uloženy v kódu nebo konfiguračních souborech?",
@@ -345,7 +345,7 @@ window.I18N.cs = {
    "questions": [
     "Máte data roztříštěná v mnoha silech?",
     "Jsou náklady na datový sklad příliš vysoké?",
-    "Potřebujete dotazovat data napříč různými úložnými systémy?",
+    "Potřebujete se dotazovat na data napříč různými úložnými systémy?",
     "Chcete modernizovat svou datovou architekturu?"
    ],
    "differentiators": [
@@ -421,7 +421,7 @@ window.I18N.cs = {
   },
   "wca_ansible": {
    "desc": "AI asistent pro programování, který zrychluje vývoj softwaru, modernizaci aplikací a tvorbu automatizačních skriptů v moderních i starších jazycích včetně Java, Python, RPG, COBOL a PL/SQL, s agentními funkcemi, které provedou kód od návrhu až do produkce.",
-   "value": "Zkracuje vývojové úlohy z týdnů na hodiny; balíčky Premium Packages přinášejí hlubokou specializaci na modernizaci IBM i, Z a Java a vestavěné skenování secrets posouvá bezpečnost doleva hned od prvního dne.",
+   "value": "Zkracuje vývojové úlohy z týdnů na hodiny; balíčky Premium Packages přinášejí hlubokou specializaci na modernizaci IBM i, Z a Java a vestavěné skenování secrets uplatňuje v bezpečnosti princip shift-left hned od prvního dne.",
    "questions": [
     "Tráví vaši vývojáři příliš mnoho času psaním rutinního kódu?",
     "Chcete zrychlit vývoj aplikací?",
@@ -436,7 +436,7 @@ window.I18N.cs = {
    ]
   },
   "confluent": {
-   "desc": "Streamovací platforma podnikové třídy postavená na Kafka, dostupná jako Confluent Cloud nebo v samostatně spravované verzi, která slouží jako páteř dat v reálném čase pro řešení IBM v oblasti hybridní integrace, Data & AI a modernizace mainframu.",
+   "desc": "Streamovací platforma podnikové třídy postavená na technologii Kafka, dostupná jako Confluent Cloud nebo v samostatně spravované verzi, která slouží jako páteř dat v reálném čase pro řešení IBM v oblasti hybridní integrace, Data & AI a modernizace mainframu.",
    "value": "Funguje jako univerzální streamovací páteř propojující integrační, infrastrukturní a AI platformy IBM: propojuje starší zasílání zpráv založené na MQ se streamy událostí Kafka v reálném čase, zásobuje datové pipeline watsonx a umožňuje automatizaci řízenou událostmi v podnikovém měřítku.",
    "questions": [
     "Potřebujete zpracovávat data v reálném čase?",
@@ -480,7 +480,7 @@ window.I18N.cs = {
    ],
    "differentiators": [
     "Nejvyšší bezpečnostní certifikace",
-    "Masivní poměr konsolidace",
+    "Vysoký poměr konsolidace",
     "Všudypřítomné šifrování",
     "Dostupnost 99,999 %"
    ]
@@ -663,7 +663,7 @@ window.I18N.cs = {
   },
   "storage_scale": {
    "desc": "Vysoce výkonný paralelní souborový systém pro datově náročné úlohy a AI aplikace.",
-   "value": "Poskytuje 10x rychlejší přístup k datům, umožňuje globální sdílení dat a podporuje obrovské měřítko.",
+   "value": "Poskytuje 10x rychlejší přístup k datům, umožňuje globální sdílení dat a zvládá masivní škálování.",
    "questions": [
     "Máte datově náročné úlohy?",
     "Provozujete trénovací úlohy AI/ML?",
@@ -679,7 +679,7 @@ window.I18N.cs = {
   },
   "envizi": {
    "desc": "IBM Envizi ESG Suite je platforma pro řízení udržitelnosti a výkonnosti ESG, která sleduje data o energii, uhlíku, vodě a odpadech a vytváří regulatorní reporty o udržitelnosti.",
-   "value": "Automatizuje sběr dat ESG napříč provozovnami a dodavatelskými řetězci, snižuje pracnost reportingu udržitelnosti o přibližně 70 % a umožňuje soulad s rámci GRI, SASB, TCFD a CSRD.",
+   "value": "Automatizuje sběr dat ESG napříč provozovnami a dodavatelskými řetězci, snižuje pracnost reportingu udržitelnosti přibližně o 70 % a umožňuje soulad s rámci GRI, SASB, TCFD a CSRD.",
    "questions": [
     "Máte potíže se sběrem a konsolidací dat ESG z vašich lokalit a dodavatelského řetězce?",
     "Potřebujete vytvářet reporty o udržitelnosti podle regulatorních rámců, jako jsou CSRD nebo TCFD?",
@@ -690,11 +690,11 @@ window.I18N.cs = {
     "Předpřipravená integrace s Maximo pro provozní data a data o aktivech",
     "Vestavěné regulatorní reportovací rámce: GRI, SASB, TCFD, CSRD",
     "Kvalita dat a detekce anomálií s podporou AI",
-    "Cloud-native SaaS s rychlou návratností hodnoty"
+    "Cloud-native SaaS s rychlým dosažením přínosů"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite pokrývá správu požadavků (DOORS Next), správu inženýrských pracovních postupů (EWM), správu testování (ETM) a modelově orientované inženýrství (Rhapsody) pro odvětví kritická z hlediska bezpečnosti a regulovaná odvětví.",
+   "desc": "IBM Engineering Lifecycle Management Suite pokrývá správu požadavků (DOORS Next), správu inženýrských pracovních postupů (EWM), správu testování (ETM) a modelově orientované inženýrství (Rhapsody) pro regulovaná odvětví a odvětví s kritickými požadavky na bezpečnost.",
    "value": "Poskytuje úplnou inženýrskou sledovatelnost od požadavků přes návrh a vývoj až po testování, snižuje přepracování v regulovaných programech a podporuje soulad s ISO 26262, DO-178C a IEC 61508.",
    "questions": [
     "Potřebujete úplnou sledovatelnost od požadavků po testování v programech kritických z hlediska bezpečnosti?",
@@ -727,7 +727,7 @@ window.I18N.cs = {
   },
   "aspera": {
    "desc": "IBM Aspera je platforma pro vysokorychlostní přenos velkých souborů a datových sad s patentovaným protokolem FASP, navržená k přesunu obrovských souborů na velké vzdálenosti rychlostí blízkou kapacitě linky bez ohledu na podmínky v síti.",
-   "value": "Přenáší soubory až 100x rychleji než standardní TCP/FTP v sítích s vysokou latencí nebo ztrátovostí, což je zásadní pro média, genomiku, vědy o živé přírodě a jakýkoli proces zahrnující přesun souborů o velikosti mnoha gigabajtů.",
+   "value": "Přenáší soubory až 100x rychleji než standardní TCP/FTP v sítích s vysokou latencí nebo ztrátovostí, což je zásadní pro média, genomiku, life sciences a jakýkoli proces zahrnující přesun souborů o velikosti mnoha gigabajtů.",
    "questions": [
     "Trvají přenosy velkých souborů přes WAN hodiny nebo dny místo minut?",
     "Distribuujete velké mediální, genomické nebo datové soubory globálním partnerům či lokalitám?",
@@ -737,7 +737,7 @@ window.I18N.cs = {
    "differentiators": [
     "Patentovaný protokol FASP zajišťuje přenosy rychlostí blízkou kapacitě linky bez ohledu na latenci sítě nebo ztrátu paketů",
     "End-to-end šifrování AES-256 s úplnou auditní stopou přenosů",
-    "Silné postavení v odvětvích médií a zábavy, věd o živé přírodě a genomiky",
+    "Silné postavení v odvětvích médií a zábavy, life sciences a genomiky",
     "Nativní integrace s IBM Cloud a hybridní nasazení on-premise/cloud"
    ]
   },
@@ -754,7 +754,7 @@ window.I18N.cs = {
     "Nativní nákladový model Kubernetes s granularitou na úrovni podů a jmenných prostorů",
     "Open-source základ s podnikovou podporou IBM",
     "Integrace s Prometheus pro nákladová data korelovaná s výkonem",
-    "Akvizice IBM s plnou integrací do portfolia IBM Observability"
+    "Součást IBM po akvizici, plně integrováno do portfolia IBM Observability"
    ]
   },
   "ns1": {
@@ -770,12 +770,12 @@ window.I18N.cs = {
     "Programovatelné DNS s logikou směrování pomocí řetězce filtrů pro pokročilé řízení provozu",
     "Řízení provozu podle latence, geografie a ASN",
     "Vestavěná ochrana proti DDoS a síť anycast",
-    "Akvizice IBM s podnikovou podporou a integrací s hybridním cloudem"
+    "Součást IBM po akvizici, s podnikovou podporou a integrací s hybridním cloudem"
    ]
   },
   "powervs": {
    "desc": "IBM Power Virtual Server (PowerVS) je cloudově hostovaná infrastruktura Power v IBM Cloud, která poskytuje stejný výkon Power a kompatibilitu s IBM i / AIX jako on-premise Power Systems, dodávaná jako plně spravovaná cloudová služba.",
-   "value": "Umožňuje organizacím rozšířit nebo migrovat úlohy Power do cloudu bez změny platformy, se zachováním kompatibility aplikací AIX a IBM i a se získáním cloudové elasticity a modelu plateb podle využití.",
+   "value": "Umožňuje organizacím rozšířit nebo migrovat úlohy Power do cloudu bez změny platformy, při zachování kompatibility aplikací AIX a IBM i a s cloudovou elasticitou a modelem plateb podle využití.",
    "questions": [
     "Chcete zmenšit své on-premise prostředí Power bez změny platformy aplikací AIX nebo IBM i?",
     "Potřebujete cloudové řešení obnovy po havárii pro své prostředí Power Systems?",
@@ -801,7 +801,7 @@ window.I18N.cs = {
    "differentiators": [
     "Navrženo a ověřeno pro Red Hat OpenShift a úlohy IBM",
     "Integrace s IBM Storage Fusion pro kontejnerově nativní perzistentní úložiště",
-    "Jediný dodavatel IBM pro výpočetní výkon, úložiště, softwarový stack i podporu",
+    "IBM jako jediný dodavatel výpočetního výkonu, úložiště, softwarového stacku i podpory",
     "Optimalizováno pro on-premise nasazení AI infrastruktury"
    ]
   },
@@ -870,7 +870,7 @@ window.I18N.cs = {
   "wxorch>wxgov": "Orchestrate uplatňuje governance na AI agenty a pracovní postupy",
   "confluent>event_auto": "Confluent streamuje události do řešení Event Automation ke zpracování v reálném čase",
   "confluent>api_connect": "API Connect zpřístupňuje streamovaná data z platformy Confluent prostřednictvím spravovaných API",
-  "confluent>wxorch": "Témata Confluent Kafka spouštějí agenty watsonx Orchestrate v AI pracovních postupech řízených událostmi v reálném čase",
+  "confluent>wxorch": "Topiky Confluent Kafka spouštějí agenty watsonx Orchestrate v AI pracovních postupech řízených událostmi v reálném čase",
   "confluent>webmethods": "webMethods propojuje streamy Confluent Kafka s pracovními postupy hybridní integrace, které spojují starší a cloud-native systémy",
   "concert>instana": "Concert využívá Instana k monitorování výkonu aplikací",
   "concert>turbonomic": "Concert využívá Turbonomic k optimalizaci zdrojů",
@@ -907,7 +907,7 @@ window.I18N.cs = {
   "wca_ansible>wxgov": "Kód vygenerovaný pomocí IBM Bob je auditován a řízen prostřednictvím watsonx.governance",
   "wca_ansible>vault": "IBM Bob prohledává kód kvůli napevno zapsaným secrets a refaktoruje ho tak, aby používal Vault",
   "wca_ansible>verify": "IBM Bob generuje kód pro bezpečnou autentizaci, SSO a integraci MFA pro aplikace chráněné řešením Verify",
-  "wca_ansible>instana": "IBM Bob se připojuje k nástrojům observability a dotazuje metriky a logy přímo z IDE",
+  "wca_ansible>instana": "IBM Bob se připojuje k nástrojům observability a přímo z IDE se dotazuje na metriky a logy",
   "wca_ansible>maximo": "IBM Bob zrychluje vývoj aplikací a integrací pro Maximo pomocí programování s podporou AI",
   "wca_ansible>concert": "IBM Bob generuje automatizační skripty a aplikační kód, které Concert monitoruje a spravuje",
   "wca_ansible>confluent": "IBM Bob zrychluje vývoj producentů a konzumentů pro Confluent a kódu streamovacích aplikací Kafka",
@@ -996,7 +996,7 @@ window.I18N.cs = {
   "ns1>concert": "Concert využívá data o stavu DNS z NS1 jako součást monitorování dostupnosti aplikací",
   "powervs>power": "PowerVS je cloudovým rozšířením Power Systems a umožňuje hybridní nasazení Power napříč on-premise prostředím a IBM Cloud",
   "powervs>aix": "Úlohy AIX běží nativně na PowerVS, což umožňuje migraci do cloudu beze změn operačního systému či aplikací",
-  "powervs>ibmi": "Aplikace IBM i běží nativně na PowerVS a nabízejí cestu do cloudu pro starší prostředí IBM i",
+  "powervs>ibmi": "Aplikace IBM i běží nativně na PowerVS, což starším prostředím IBM i otevírá cestu do cloudu",
   "powervs>ibm_tls": "IBM TLS podporuje plánování přechodu a správu životního cyklu při migracích z on-premise Power na PowerVS",
   "powervs>wca_ansible": "IBM Bob zrychluje modernizaci aplikací AIX a IBM i migrovaných do cloudových prostředí PowerVS",
   "fusion_hci>storage_fusion": "IBM Fusion HCI využívá Storage Fusion k zajištění kontejnerově nativního perzistentního úložiště pro úlohy OpenShift běžící na konvergované platformě",
@@ -1008,10 +1008,10 @@ window.I18N.cs = {
   "db2>guardium": "Guardium monitoruje a audituje veškerý přístup k datům v Db2 kvůli souladu s předpisy a bezpečnosti dat",
   "db2>ibmi": "Db2 for IBM i je integrovaná databáze v samém jádru platformy IBM i: nativní, vestavěná vazba",
   "db2>wca_ansible": "IBM Bob pomáhá s optimalizací dotazů Db2, modernizací schémat a migrací PL/SQL na Db2",
-  "cognos>wxdata": "Cognos dotazuje watsonx.data jako jednotný zdroj dat pro řízený podnikový reporting napříč datovým lakehouse",
+  "cognos>wxdata": "Cognos se dotazuje na watsonx.data jako na jednotný zdroj dat pro řízený podnikový reporting napříč datovým lakehouse",
   "cognos>ibm_pa": "Cognos Analytics poskytuje provozní a manažerský reporting nad finančními modely Planning Analytics",
   "cognos>db2": "Cognos je hlavním BI konzumentem transakčních dat z Db2 pro podnikové dashboardy a reporty",
   "cognos>wxai": "watsonx.ai rozšiřuje Cognos o prediktivní analytiku a poznatky generované AI, zobrazované přímo v dashboardech",
-  "cognos>guardium": "Guardium vynucuje zásady přístupu k datům u zdrojů, které Cognos dotazuje, a zajišťuje tak reporting v souladu s předpisy"
+  "cognos>guardium": "Guardium vynucuje zásady přístupu k datům u zdrojů, na které se Cognos dotazuje, a zajišťuje tak reporting v souladu s předpisy"
  }
 };

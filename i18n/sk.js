@@ -26,7 +26,7 @@ window.I18N.sk = {
   "description": "Popis",
   "valueProposition": "Hodnotová ponuka",
   "competesWith": "Konkuruje",
-  "keyDifferentiators": "Kľúčové odlišnosti",
+  "keyDifferentiators": "Kľúčové konkurenčné výhody",
   "discoveryQuestions": "Otázky na zistenie potrieb",
   "emptyPrompt": {"one": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktovej skupiny.", "few": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktových skupín.", "many": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktovej skupiny.", "other": "Vyberte produkt a zvýraznite jeho prepojenia pre krížový predaj v rámci {n} produktových skupín."},
   "productsFound": {
@@ -84,7 +84,7 @@ window.I18N.sk = {
    ]
   },
   "event_auto": {
-   "desc": "Platforma na automatizáciu riadenú udalosťami, ktorá slúži na automatizáciu obchodných procesov a rozhodovanie v reálnom čase.",
+   "desc": "Platforma na automatizáciu riadenú udalosťami, ktorá v reálnom čase automatizuje obchodné procesy a rozhodovanie.",
    "value": "Znižuje potrebu manuálnych zásahov o 70 %, umožňuje reagovať na obchodné udalosti v reálnom čase a zvyšuje prevádzkovú efektivitu.",
    "questions": [
     "Máte obchodné procesy, ktoré vyžadujú reakciu v reálnom čase?",
@@ -95,7 +95,7 @@ window.I18N.sk = {
    "differentiators": [
     "Zabudovaný nástroj na obchodné pravidlá",
     "Low-code návrhár pracovných postupov",
-    "Riadenie na podnikovej úrovni",
+    "Správa podnikovej triedy",
     "Integrácia s automatizačným balíkom IBM"
    ]
   },
@@ -137,7 +137,7 @@ window.I18N.sk = {
    "questions": [
     "Máte problém s prehľadom o celom portfóliu aplikácií?",
     "Spravujete aplikácie vo viacerých cloudoch?",
-    "Potrebujete skrátiť priemerný čas do vyriešenia?",
+    "Potrebujete skrátiť priemerný čas na vyriešenie incidentov?",
     "Chcete automatizovať úlohy správy aplikácií?"
    ],
    "differentiators": [
@@ -158,14 +158,14 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "Prediktívna údržba s podporou AI",
-    "Návrh s prioritou mobilných zariadení",
+    "Navrhnuté primárne pre mobilné zariadenia",
     "Integrácia IoT",
     "Šablóny pre konkrétne odvetvia"
    ]
   },
   "ibm_mq": {
    "desc": "Podnikový middleware orientovaný na správy pre spoľahlivý asynchrónny prenos správ v hybridných prostrediach. Garantuje doručenie správ pre kritické aplikácie vrátane mainframových, cloudových a lokálnych systémov.",
-   "value": "Zaisťuje 99,99 % spoľahlivosť doručenia správ, znižuje vzájomnú previazanosť aplikácií a umožňuje integráciu v reálnom čase naprieč platformami vrátane mainframu a cloudu so zabudovanou podporou transakcií.",
+   "value": "Zaisťuje spoľahlivosť doručenia správ na úrovni 99,99 %, znižuje vzájomnú previazanosť aplikácií a umožňuje integráciu v reálnom čase naprieč platformami vrátane mainframu a cloudu so zabudovanou podporou transakcií.",
    "questions": [
     "Máte aplikácie, ktoré potrebujú garantovaný a spoľahlivý prenos správ?",
     "Integrujete systémy naprieč mainframovými a cloudovými prostrediami?",
@@ -174,14 +174,14 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "Garantované doručenie s plnou podporou transakcií",
-    "Natívna integrácia s mainframom naprieč IBM Z, Power a LinuxONE",
+    "Natívna integrácia s mainframom na platformách IBM Z, Power a LinuxONE",
     "40+ rokov spoľahlivého podnikového prenosu správ",
     "Natívny most do Confluent Kafka cez IBM MQ Kafka Connector"
    ]
   },
   "ibm_sterling": {
    "desc": "Komplexné portfólio pre dodávateľský reťazec a B2B integráciu na riadenie vybavovania objednávok, prehľad o dodávateľskom reťazci a prepojenie s partnermi. Spája správu objednávok, inteligenciu dodávateľského reťazca, B2B integráciu a bezpečnú výmenu dát v sieťach obchodných partnerov.",
-   "value": "Urýchľuje B2B integráciu o 70 %, skracuje cyklus objednávok o 40 % a poskytuje úplný prehľad o dodávateľskom reťazci so spoluprácou s partnermi v reálnom čase a prognózovaním dopytu s podporou AI.",
+   "value": "Urýchľuje B2B integráciu o 70 %, skracuje cyklus objednávok o 40 % a poskytuje úplný prehľad o dodávateľskom reťazci vrátane spolupráce s partnermi v reálnom čase a prognózovania dopytu s podporou AI.",
    "questions": [
     "Potrebujete sa integrovať s viacerými obchodnými partnermi alebo dodávateľmi v rámci B2B?",
     "Chcete optimalizovať procesy order-to-cash alebo procure-to-pay?",
@@ -196,13 +196,13 @@ window.I18N.sk = {
    ]
   },
   "instana": {
-   "desc": "Automatizované monitorovanie výkonu aplikácií s prehľadmi s podporou AI pre cloud-native architektúry a architektúry mikroslužieb.",
+   "desc": "Automatizované monitorovanie výkonu aplikácií pre cloud-native a mikroslužbové architektúry, doplnené o prehľady s podporou AI.",
    "value": "Skracuje MTTD o 90 %, poskytuje automatické zisťovanie a monitorovanie a pri riešení problémov ponúka 1-sekundovú granularitu.",
    "questions": [
     "Máte mikroslužby alebo kontajnerizované aplikácie?",
     "Máte problém identifikovať úzke miesta výkonu?",
     "Potrebujete monitorovanie aplikácií v reálnom čase?",
-    "Stretávate sa s častými problémami aplikácií?"
+    "Máte časté problémy s aplikáciami?"
    ],
    "differentiators": [
     "1-sekundová granularita",
@@ -261,7 +261,7 @@ window.I18N.sk = {
   },
   "cloudability": {
    "desc": "Platforma na správu a optimalizáciu nákladov na cloud pre multicloudové prostredia.",
-   "value": "Znižuje plytvanie v cloude o 30 %, umožňuje alokáciu nákladov a chargeback a prognózovanie nákladov na cloud.",
+   "value": "Znižuje plytvanie v cloude o 30 %, umožňuje alokáciu nákladov, chargeback a prognózovanie nákladov na cloud.",
    "questions": [
     "Rastú vaše účty za cloud neočakávane?",
     "Potrebujete rozúčtovať náklady na cloud na jednotlivé obchodné útvary?",
@@ -277,7 +277,7 @@ window.I18N.sk = {
   },
   "guardium": {
    "desc": "Platforma na zabezpečenie a ochranu dát, ktorá vyhľadáva, klasifikuje a chráni citlivé dáta.",
-   "value": "Zaisťuje súlad s predpismi o dátach, predchádza únikom dát a poskytuje úplné monitorovanie aktivít s dátami.",
+   "value": "Zaisťuje súlad s predpismi o dátach, predchádza únikom dát a poskytuje úplné monitorovanie aktivít nad dátami.",
    "questions": [
     "Uchovávate citlivé zákaznícke alebo finančné dáta?",
     "Vzťahujú sa na vás predpisy o ochrane osobných údajov (GDPR, CCPA)?",
@@ -373,7 +373,7 @@ window.I18N.sk = {
   },
   "wxdint": {
    "desc": "Platforma na integráciu dát, ktorá slúži na presun a transformáciu dát v prostrediach hybridného cloudu.",
-   "value": "Urýchľuje integráciu dát o 60 %, podporuje spracovanie v reálnom čase aj dávkové spracovanie a poskytuje funkcie na kvalitu dát.",
+   "value": "Urýchľuje integráciu dát o 60 %, podporuje spracovanie v reálnom čase aj dávkové spracovanie a poskytuje funkcie na zabezpečenie kvality dát.",
    "questions": [
     "Potrebujete pravidelne presúvať dáta medzi systémami?",
     "Transformujete dáta manuálne?",
@@ -382,7 +382,7 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "Integrácia v hybridnom cloude",
-    "Reálny čas aj dávky",
+    "Spracovanie v reálnom čase aj dávkové",
     "Zabudovaná kvalita dát",
     "Low-code rozhranie"
    ]
@@ -420,8 +420,8 @@ window.I18N.sk = {
    ]
   },
   "wca_ansible": {
-   "desc": "AI programátorský partner, ktorý urýchľuje vývoj softvéru, modernizáciu aplikácií a tvorbu automatizačných skriptov v moderných aj starších jazykoch vrátane Java, Python, RPG, COBOL a PL/SQL — s agentickými schopnosťami, ktoré prevedú kód od návrhu až do produkcie.",
-   "value": "Skracuje vývojové úlohy z týždňov na hodiny, pričom balíky Premium Packages prinášajú hlbokú špecializáciu na modernizáciu IBM i, Z a Java — a zabudované skenovanie tajomstiev presúva bezpečnosť na začiatok vývoja už od prvého dňa.",
+   "desc": "Programátorský partner s AI, ktorý urýchľuje vývoj softvéru, modernizáciu aplikácií a tvorbu automatizačných skriptov v moderných aj starších jazykoch vrátane jazykov Java, Python, RPG, COBOL a PL/SQL – s agentickými schopnosťami, ktoré prevedú kód od návrhu až do produkcie.",
+   "value": "Skracuje trvanie vývojových úloh z týždňov na hodiny, pričom balíky Premium Packages prinášajú hlbokú špecializáciu na modernizáciu IBM i, Z a Java – a zabudované skenovanie tajomstiev presúva bezpečnosť na začiatok vývoja už od prvého dňa.",
    "questions": [
     "Trávia vaši vývojári príliš veľa času písaním šablónovitého kódu?",
     "Chcete urýchliť vývoj aplikácií?",
@@ -436,8 +436,8 @@ window.I18N.sk = {
    ]
   },
   "confluent": {
-   "desc": "Streamingová platforma podnikovej triedy založená na Kafka, dostupná ako Confluent Cloud alebo v samostatne spravovanej verzii, ktorá slúži ako dátová chrbtica v reálnom čase pre riešenia IBM v oblasti hybridnej integrácie, dát a AI a modernizácie mainframu.",
-   "value": "Funguje ako univerzálna streamingová chrbtica, ktorá prepája integračné, infraštruktúrne a AI platformy IBM — premosťuje starší prenos správ založený na MQ so streamami udalostí Kafka v reálnom čase, napája pipeline watsonx a umožňuje automatizáciu riadenú udalosťami v podnikovom rozsahu.",
+   "desc": "Streamingová platforma podnikovej triedy založená na technológii Kafka, dostupná ako Confluent Cloud alebo v samostatne spravovanej verzii, ktorá slúži ako dátová chrbtica v reálnom čase pre riešenia IBM v oblasti hybridnej integrácie, dát a AI a modernizácie mainframu.",
+   "value": "Funguje ako univerzálna streamingová chrbtica, ktorá prepája integračné, infraštruktúrne a AI platformy IBM – premosťuje starší prenos správ založený na MQ so streamami udalostí Kafka v reálnom čase, napája pipeline watsonx a umožňuje automatizáciu riadenú udalosťami v podnikovom rozsahu.",
    "questions": [
     "Potrebujete spracúvať dáta v reálnom čase?",
     "Budujete architektúry riadené udalosťami?",
@@ -447,18 +447,18 @@ window.I18N.sk = {
     "Potrebujete streamovať dáta zo systémov IBM Z alebo mainframu do cloud-native aplikácií?"
    ],
    "differentiators": [
-    "Strategické partnerstvo s IBM — certifikácia pre hybridný cloud a integračný stack IBM",
-    "Most MQ — natívne prepája starší prenos správ IBM MQ so streamami udalostí Kafka",
+    "Strategické partnerstvo s IBM – certifikácia pre hybridný cloud a integračný stack IBM",
+    "Most MQ – natívne prepája starší prenos správ IBM MQ so streamami udalostí Kafka",
     "Napája pipeline watsonx.ai a watsonx.data streamingovými dátami v reálnom čase",
     "Úplný ekosystém Kafka s podnikovou podporou, RBAC a Schema Registry"
    ]
   },
   "ibm_pa": {
    "desc": "Platforma na finančné plánovanie a analýzu s podporou AI pre samoobslužné rozpočtovanie, prognózovanie a modelovanie scenárov. Umožňuje finančným tímom konsolidovať dáta, vytvárať dynamické modely a spolupracovať na finančnom plánovaní v rámci celého podniku pomocou výpočtového jadra in-memory.",
-   "value": "Skracuje plánovací cyklus o 60 %, zvyšuje presnosť prognóz o 30 % a dáva finančným tímom samoobslužnú analytiku a modelovanie scenárov riadené AI — bez závislosti od tabuľkových procesorov v podnikovom rozsahu.",
+   "value": "Skracuje plánovací cyklus o 60 %, zvyšuje presnosť prognóz o 30 % a dáva finančným tímom samoobslužnú analytiku a modelovanie scenárov riadené AI – v podnikovom rozsahu a bez závislosti od tabuľkových procesorov.",
    "questions": [
     "Sú vaše procesy rozpočtovania a prognózovania náročné na manuálnu prácu alebo založené na tabuľkách?",
-    "Potrebujete lepšiu spoluprácu medzi financiami a tímami obchodných útvarov?",
+    "Potrebujete lepšiu spoluprácu medzi finančným oddelením a obchodnými útvarmi?",
     "Máte problém s presnosťou prognóz alebo rýchlosťou plánovania scenárov?",
     "Potrebujete konsolidovať finančné dáta z viacerých zdrojových systémov?"
    ],
@@ -471,7 +471,7 @@ window.I18N.sk = {
   },
   "linuxone": {
    "desc": "Podniková serverová platforma pre Linux, ktorá poskytuje bezpečnosť, škálovateľnosť a spoľahlivosť pre kritické pracovné záťaže.",
-   "value": "Zmenšuje priestorové nároky infraštruktúry o 75 %, poskytuje 99,999 % dostupnosť a prináša špičkovú bezpečnosť v odvetví.",
+   "value": "Zmenšuje priestorové nároky infraštruktúry o 75 %, poskytuje dostupnosť 99,999 % a prináša bezpečnosť, ktorá patrí v odvetví k špičke.",
    "questions": [
     "Prevádzkujete kritické záťaže v prostredí Linux?",
     "Obávate sa o bezpečnosť a súlad s predpismi?",
@@ -482,7 +482,7 @@ window.I18N.sk = {
     "Najvyššia bezpečnostná certifikácia",
     "Mimoriadne vysoký pomer konsolidácie",
     "Všadeprítomné šifrovanie",
-    "99,999 % dostupnosť"
+    "Dostupnosť 99,999 %"
    ]
   },
   "power": {
@@ -503,7 +503,7 @@ window.I18N.sk = {
   },
   "aix": {
    "desc": "Podnikový operačný systém Unix pre Power Systems s pokročilými funkciami virtualizácie a zabezpečenia.",
-   "value": "Poskytuje 99,999 % dostupnosť, umožňuje živú migráciu partícií a zaisťuje špičkovú správu záťaží.",
+   "value": "Poskytuje dostupnosť 99,999 %, umožňuje živú migráciu partícií a zaisťuje špičkovú správu záťaží.",
    "questions": [
     "Prevádzkujete unixové záťaže?",
     "Potrebujete pokročilé možnosti virtualizácie?",
@@ -550,8 +550,8 @@ window.I18N.sk = {
    ]
   },
   "ibm_tls": {
-   "desc": "Komplexná služba údržby a podpory hardvéru a softvéru vrátane migrácie po skončení životnosti. Riadi celý životný cyklus systémov IBM aj systémov iných dodávateľov od nasadenia až po vyradenie — vrátane proaktívnej podpory, správy záplat, upgradov a plánovaných technologických prechodov.",
-   "value": "Znižuje neplánované odstávky o 95 %, zaisťuje predvídateľné náklady na životný cyklus infraštruktúry a hladké technologické prechody bez prerušenia prevádzky — s oporou v špičkových SLA a proaktívnej diagnostike.",
+   "desc": "Komplexná služba údržby a podpory hardvéru a softvéru vrátane migrácie po skončení životnosti. Riadi celý životný cyklus systémov IBM aj systémov iných dodávateľov od nasadenia až po vyradenie – vrátane proaktívnej podpory, správy záplat, upgradov a plánovaných technologických prechodov.",
+   "value": "Znižuje neplánované odstávky o 95 %, zaisťuje predvídateľné náklady na životný cyklus infraštruktúry a hladké technologické prechody bez prerušenia prevádzky – s oporou v špičkových SLA a proaktívnej diagnostike.",
    "questions": [
     "Obávate sa konca podpory pre kritické systémy IBM?",
     "Potrebujete predvídateľnú správu životného cyklu infraštruktúry za fixnú cenu?",
@@ -567,7 +567,7 @@ window.I18N.sk = {
   },
   "flashsystem": {
    "desc": "All-flash diskové pole, ktoré poskytuje vysoký výkon, spoľahlivosť a efektivitu pre podnikové záťaže.",
-   "value": "Poskytuje submilisekundovú latenciu, zmenšuje priestorové nároky úložiska o 80 % a zaisťuje 99,9999 % dostupnosť.",
+   "value": "Poskytuje submilisekundovú latenciu, zmenšuje priestorové nároky úložiska o 80 % a zaisťuje dostupnosť 99,9999 %.",
    "questions": [
     "Máte aplikácie citlivé na výkon?",
     "Dochádza vám kapacita úložiska?",
@@ -576,7 +576,7 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "Submilisekundová latencia",
-    "99,9999 % dostupnosť",
+    "Dostupnosť 99,9999 %",
     "Garancia redukcie dát",
     "Kybernetická odolnosť"
    ]
@@ -630,7 +630,7 @@ window.I18N.sk = {
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion — kontajnerovo natívna vrstva perzistentného úložiska pre prostredia Red Hat OpenShift a Kubernetes. Poznámka: ide o softvérový produkt pre úložiská, ktorý sa líši od IBM Fusion HCI, samostatnej platformy hyperkonvergovanej infraštruktúry, ktorá využíva Storage Fusion ako svoj úložný komponent.",
+   "desc": "IBM Storage Fusion – kontajnerovo natívna vrstva perzistentného úložiska pre prostredia Red Hat OpenShift a Kubernetes. Poznámka: ide o softvérový produkt pre úložiská, ktorý sa líši od IBM Fusion HCI, samostatnej platformy hyperkonvergovanej infraštruktúry, ktorá využíva Storage Fusion ako svoj úložný komponent.",
    "value": "Zjednodušuje perzistentné úložisko pre kontajnerizované záťaže, poskytuje mobilitu dát medzi klastrami OpenShift a natívne sa integruje s IBM Fusion HCI do kompletného stacku konvergovanej infraštruktúry.",
    "questions": [
     "Prevádzkujete kontajnerizované aplikácie?",
@@ -663,10 +663,10 @@ window.I18N.sk = {
   },
   "storage_scale": {
    "desc": "Vysokovýkonný paralelný súborový systém pre dátovo náročné záťaže a aplikácie AI.",
-   "value": "Poskytuje 10-krát rýchlejší prístup k dátam, umožňuje globálne zdieľanie dát a podporuje obrovský rozsah.",
+   "value": "Poskytuje 10-krát rýchlejší prístup k dátam, umožňuje globálne zdieľanie dát a podporuje nasadenia obrovského rozsahu.",
    "questions": [
     "Máte dátovo náročné záťaže?",
-    "Prevádzkujete trénovanie AI/ML?",
+    "Trénujete modely AI/ML?",
     "Potrebujete zdieľať dáta medzi viacerými lokalitami?",
     "Stretávate sa s problémami s výkonom súborového systému?"
    ],
@@ -678,7 +678,7 @@ window.I18N.sk = {
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite — platforma na riadenie udržateľnosti a výkonnosti ESG, ktorá sleduje dáta o energii, uhlíku, vode a odpade a vytvára regulačné správy o udržateľnosti.",
+   "desc": "IBM Envizi ESG Suite – platforma na riadenie udržateľnosti a výkonnosti ESG, ktorá sleduje dáta o energii, uhlíku, vode a odpade a vytvára regulačné správy o udržateľnosti.",
    "value": "Automatizuje zber dát ESG naprieč prevádzkami a dodávateľskými reťazcami, znižuje úsilie na reporting udržateľnosti približne o 70 % a umožňuje súlad s rámcami GRI, SASB, TCFD a CSRD.",
    "questions": [
     "Máte problém zbierať a konsolidovať dáta ESG naprieč lokalitami a dodávateľským reťazcom?",
@@ -688,30 +688,30 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "Predpripravená integrácia s riešením Maximo pre prevádzkové dáta a dáta o aktívach",
-    "Zabudované regulačné rámce reportingu — GRI, SASB, TCFD, CSRD",
+    "Zabudované regulačné rámce reportingu – GRI, SASB, TCFD, CSRD",
     "Kvalita dát a detekcia anomálií s pomocou AI",
     "Cloud-native SaaS s rýchlym prínosom hodnoty"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite — pokrýva správu požiadaviek (DOORS Next), riadenie inžinierskych pracovných postupov (EWM), správu testovania (ETM) a modelovo orientované inžinierstvo (Rhapsody) pre odvetvia kritické z hľadiska bezpečnosti a regulované odvetvia.",
-   "value": "Poskytuje úplnú inžiniersku vysledovateľnosť od požiadaviek cez návrh a vývoj až po testovanie — znižuje prepracovanie v regulovaných programoch a podporuje súlad s ISO 26262, DO-178C a IEC 61508.",
+   "desc": "IBM Engineering Lifecycle Management Suite – pokrýva správu požiadaviek (DOORS Next), riadenie inžinierskych pracovných postupov (EWM), správu testovania (ETM) a modelovo orientované inžinierstvo (Rhapsody) pre regulované odvetvia a odvetvia, v ktorých je bezpečnosť kritická.",
+   "value": "Poskytuje úplnú inžiniersku vysledovateľnosť od požiadaviek cez návrh a vývoj až po testovanie – znižuje potrebu prepracovania v regulovaných programoch a podporuje súlad s ISO 26262, DO-178C a IEC 61508.",
    "questions": [
     "Potrebujete úplnú vysledovateľnosť od požiadaviek až po testovanie v programoch kritických z hľadiska bezpečnosti?",
     "Vyvíjate produkty, ktoré musia spĺňať predpisy pre letectvo, automobilový priemysel alebo zdravotnícke pomôcky?",
-    "Spôsobujú inžinierske žiadosti o zmenu prepracovanie a sklz harmonogramu?",
+    "Spôsobujú inžinierske požiadavky na zmeny prepracovanie a sklz v harmonograme?",
     "Spravujete požiadavky naprieč viacerými tímami alebo organizáciami?"
    ],
    "differentiators": [
-    "Kompletný balík ALM od jedného dodávateľa — požiadavky, pracovné postupy, testovanie a modelovanie",
+    "Kompletný balík ALM od jedného dodávateľa – požiadavky, pracovné postupy, testovanie a modelovanie",
     "Hlboká podpora súladu s ISO 26262, DO-178C, IEC 61508 a FDA 21 CFR Part 11",
     "Natívna integrácia AI s IBM Bob pre požiadavky a generovanie kódu s pomocou AI",
     "Najdlhšie pôsobiaca inžinierska platforma IBM s 30+ rokmi nasadení v regulovaných odvetviach"
    ]
   },
   "app_connect": {
-   "desc": "IBM App Connect — low-code/no-code integračná platforma na prepájanie aplikácií a automatizáciu pracovných postupov pomocou 200+ predpripravených konektorov, dostupná ako App Connect Professional a App Connect Enterprise.",
-   "value": "Umožňuje biznis používateľom aj vývojárom vytvárať integrácie za hodiny namiesto týždňov — a urýchľovať tak digitálnu transformáciu bez hlbokých znalostí integrácie.",
+   "desc": "IBM App Connect – low-code/no-code integračná platforma na prepájanie aplikácií a automatizáciu pracovných postupov pomocou 200+ predpripravených konektorov, dostupná ako App Connect Professional a App Connect Enterprise.",
+   "value": "Umožňuje biznis používateľom aj vývojárom vytvárať integrácie za hodiny namiesto týždňov – a urýchľovať tak digitálnu transformáciu bez hlbokých znalostí integrácie.",
    "questions": [
     "Potrebujú vaše biznis tímy prepájať SaaS aplikácie bez písania kódu?",
     "Chcete znížiť závislosť od špecializovaných integračných vývojárov?",
@@ -720,14 +720,14 @@ window.I18N.sk = {
    ],
    "differentiators": [
     "200+ predpripravených konektorov pre SaaS, cloudové a lokálne aplikácie",
-    "Low-code aj full-code prístup — App Connect Professional a Enterprise",
+    "Low-code aj full-code prístup – App Connect Professional a Enterprise",
     "Zabezpečenie, správa a auditná stopa podnikovej triedy",
     "Natívne možnosti nasadenia v IBM Cloud aj lokálne"
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera — platforma na vysokorýchlostný prenos veľkých súborov a dátových sád s využitím patentovaného protokolu FASP, navrhnutá na presun obrovských súborov na veľké vzdialenosti takmer rýchlosťou linky bez ohľadu na podmienky v sieti.",
-   "value": "Prenáša súbory až 100-krát rýchlejšie ako štandardné TCP/FTP v sieťach s vysokou latenciou alebo stratovosťou — kľúčové pre médiá, genomiku, vedy o živote a akýkoľvek pracovný postup s presunom viacgigabajtových súborov.",
+   "desc": "IBM Aspera – platforma na vysokorýchlostný prenos veľkých súborov a dátových sád s využitím patentovaného protokolu FASP, navrhnutá na presun obrovských súborov na veľké vzdialenosti takmer rýchlosťou linky bez ohľadu na podmienky v sieti.",
+   "value": "Prenáša súbory až 100-krát rýchlejšie ako štandardné TCP/FTP v sieťach s vysokou latenciou alebo stratovosťou – kľúčové pre médiá, genomiku, vedy o živote a akýkoľvek pracovný postup s presunom viacgigabajtových súborov.",
    "questions": [
     "Trvajú prenosy veľkých súborov cez WAN hodiny alebo dni, hoci by mali trvať minúty?",
     "Distribuujete veľké mediálne, genomické alebo dátové súbory globálnym partnerom alebo lokalitám?",
@@ -737,13 +737,13 @@ window.I18N.sk = {
    "differentiators": [
     "Patentovaný protokol FASP zaisťuje prenosy takmer rýchlosťou linky bez ohľadu na latenciu siete alebo stratu paketov",
     "End-to-end šifrovanie AES-256 s úplnou auditnou stopou prenosov",
-    "Silné postavenie vo vertikálach médiá a zábava, vedy o živote a genomika",
+    "Silné postavenie v segmentoch médií a zábavy, vied o živote a genomiky",
     "Natívna integrácia s IBM Cloud a hybridné nasadenie lokálne aj v cloude"
    ]
   },
   "kubecost": {
-   "desc": "IBM Kubecost — platforma na monitorovanie a optimalizáciu nákladov na Kubernetes, ktorá poskytuje prehľad o výdavkoch v reálnom čase podľa namespace, nasadenia, štítku a tímu v prostrediach s viacerými klastrami.",
-   "value": "Poskytuje inžinierskym a finančným tímom presnú alokáciu nákladov na Kubernetes a odporúčania na správne dimenzovanie — znižuje plytvanie v cloude identifikáciou nečinných a predimenzovaných záťaží na úrovni kontajnerov.",
+   "desc": "IBM Kubecost – platforma na monitorovanie a optimalizáciu nákladov na Kubernetes, ktorá poskytuje prehľad o výdavkoch v reálnom čase podľa namespace, nasadenia, štítku a tímu v prostrediach s viacerými klastrami.",
+   "value": "Poskytuje inžinierskym a finančným tímom presnú alokáciu nákladov na Kubernetes a odporúčania na správne dimenzovanie – znižuje plytvanie v cloude identifikáciou nečinných a predimenzovaných záťaží na úrovni kontajnerov.",
    "questions": [
     "Máte prehľad o tom, koľko presne vás stojí každá záťaž alebo tím v Kubernetes?",
     "Rastú vaše účty za cloud rýchlejšie ako vaše prostredie Kubernetes?",
@@ -758,8 +758,8 @@ window.I18N.sk = {
    ]
   },
   "ns1": {
-   "desc": "IBM NS1 Connect — platforma pre inteligentné DNS, riadenie prevádzky a sieťovú konektivitu, ktorá poskytuje autoritatívne DNS s pokročilým smerovaním, riadením toku prevádzky a infraštruktúrou odolnou voči DDoS.",
-   "value": "Zaisťuje globálne časy odozvy DNS pod 10 ms s inteligentným riadením prevádzky — znižuje výpadky aplikácií, zlepšuje výkon pre globálne rozptýlených používateľov a poskytuje odolnú prvú líniu ochrany siete.",
+   "desc": "IBM NS1 Connect – platforma pre inteligentné DNS, riadenie prevádzky a sieťovú konektivitu, ktorá poskytuje autoritatívne DNS s pokročilým smerovaním, riadením toku prevádzky a infraštruktúrou odolnou voči DDoS.",
+   "value": "Zaisťuje globálne časy odozvy DNS pod 10 ms s inteligentným riadením prevádzky – znižuje výpadky aplikácií, zlepšuje výkon pre globálne rozptýlených používateľov a poskytuje odolnú prvú líniu ochrany siete.",
    "questions": [
     "Spôsobujú zlyhania DNS alebo pomalé preklady problémy s dostupnosťou aplikácií?",
     "Potrebujete inteligentne smerovať používateľov medzi viacerými dátovými centrami alebo cloudovými regiónmi?",
@@ -774,8 +774,8 @@ window.I18N.sk = {
    ]
   },
   "powervs": {
-   "desc": "IBM Power Virtual Server (PowerVS) — infraštruktúra Power hostovaná v IBM Cloud, ktorá poskytuje rovnaký výkon Power a kompatibilitu s IBM i / AIX ako lokálne Power Systems, dodávaná ako plne spravovaná cloudová služba.",
-   "value": "Umožňuje organizáciám rozšíriť alebo migrovať záťaže Power do cloudu bez zmeny platformy — so zachovaním kompatibility aplikácií AIX a IBM i a so získaním elasticity cloudu a ekonomiky platby podľa využitia.",
+   "desc": "IBM Power Virtual Server (PowerVS) – infraštruktúra Power hostovaná v IBM Cloud, ktorá poskytuje rovnaký výkon Power a kompatibilitu s IBM i / AIX ako lokálne Power Systems, dodávaná ako plne spravovaná cloudová služba.",
+   "value": "Umožňuje organizáciám rozšíriť alebo migrovať záťaže Power do cloudu bez zmeny platformy – pri zachovaní kompatibility aplikácií AIX a IBM i a s elasticitou cloudu a ekonomikou platby podľa využitia.",
    "questions": [
     "Chcete zmenšiť lokálnu infraštruktúru Power bez zmeny platformy aplikácií AIX alebo IBM i?",
     "Potrebujete cloudové riešenie obnovy po havárii pre svoje prostredie Power Systems?",
@@ -786,12 +786,12 @@ window.I18N.sk = {
     "Jediná cloudová služba s natívnym výkonom Power a kompatibilitou s AIX a IBM i",
     "Pripojenie s nízkou latenciou k službám IBM Cloud a watsonx",
     "Infraštruktúra spravovaná IBM s dostupnosťou garantovanou SLA",
-    "Bez potreby zmeny platformy aplikácií — presun záťaží Power do cloudu metódou lift and shift"
+    "Bez potreby zmeny platformy aplikácií – presun záťaží Power do cloudu metódou lift and shift"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (hyperkonvergovaná infraštruktúra) — softvérovo definovaná platforma pre výpočtový výkon, úložisko a sieť, ktorá prevádzkuje Red Hat OpenShift a záťaže IBM na konvergovanom hardvérovom stacku a zjednodušuje prevádzku dátového centra pre AI a hybridný cloud.",
-   "value": "Znižuje zložitosť dátového centra zlúčením výpočtového výkonu, úložiska a siete do jednej spravovanej platformy — skracuje čas nasadenia a poskytuje overený základ s podporou IBM pre OpenShift a záťaže AI v lokálnom prostredí.",
+   "desc": "IBM Fusion HCI (hyperkonvergovaná infraštruktúra) – softvérovo definovaná platforma pre výpočtový výkon, úložisko a sieť, ktorá prevádzkuje Red Hat OpenShift a záťaže IBM na konvergovanom hardvérovom stacku a zjednodušuje prevádzku dátového centra pre AI a hybridný cloud.",
+   "value": "Znižuje zložitosť dátového centra zlúčením výpočtového výkonu, úložiska a siete do jednej spravovanej platformy – skracuje čas nasadenia a poskytuje overený základ s podporou IBM pre OpenShift a záťaže AI v lokálnom prostredí.",
    "questions": [
     "Chcete zjednodušiť svoju lokálnu infraštruktúru pre OpenShift alebo záťaže AI?",
     "Potrebujete overenú platformu od jedného dodávateľa pre Red Hat OpenShift?",
@@ -806,12 +806,12 @@ window.I18N.sk = {
    ]
   },
   "db2": {
-   "desc": "IBM Db2 — podnikový systém na správu relačných databáz dostupný lokálne aj v cloude, s vysokovýkonným OLTP a analytikou, zabudovanými funkciami AI a natívnou kompatibilitou s IBM Z, Power Systems a IBM i.",
-   "value": "Poskytuje dôveryhodný a vysokovýkonný základ transakčných dát pre podnikové aplikácie — so zabudovanou optimalizáciou dopytov pomocou AI, natívnou integráciou s watsonx.data a desaťročiami spoľahlivosti na platformách IBM.",
+   "desc": "IBM Db2 – podnikový systém na správu relačných databáz dostupný lokálne aj v cloude, s vysokovýkonným OLTP a analytikou, zabudovanými funkciami AI a natívnou kompatibilitou s IBM Z, Power Systems a IBM i.",
+   "value": "Poskytuje dôveryhodný a vysokovýkonný základ transakčných dát pre podnikové aplikácie – so zabudovanou optimalizáciou dopytov pomocou AI, natívnou integráciou s watsonx.data a desaťročiami spoľahlivosti na platformách IBM.",
    "questions": [
     "Chcete znížiť náklady na licencie Oracle alebo SQL Server bez zmeny architektúry aplikácií?",
     "Potrebujete databázu s overeným výkonom na platformách IBM Power alebo Z?",
-    "Ovplyvňujú vaše rozhodnutia o databázovej platforme požiadavky na rezidenciu alebo suverenitu dát?",
+    "Ovplyvňujú vaše rozhodnutia o databázovej platforme požiadavky na umiestnenie dát alebo dátovú suverenitu?",
     "Potrebujete transakčnú databázu, ktorá sa natívne integruje s vaším stackom pre AI a analytiku?"
    ],
    "differentiators": [
@@ -822,8 +822,8 @@ window.I18N.sk = {
    ]
   },
   "cognos": {
-   "desc": "IBM Cognos Analytics — platforma business intelligence a analytiky s podporou AI pre samoobslužný reporting, dashboardy a skúmanie dát, so zabudovanou správou a podnikovým zabezpečením dát.",
-   "value": "Umožňuje biznis používateľom vytvárať presné a riadené reporty a dashboardy bez závislosti od IT — s prípravou dát s pomocou AI, dopytmi v prirodzenom jazyku a zabudovanou správou podnikovej triedy.",
+   "desc": "IBM Cognos Analytics – platforma business intelligence a analytiky s podporou AI pre samoobslužný reporting, dashboardy a skúmanie dát, so zabudovanou správou a podnikovým zabezpečením dát.",
+   "value": "Umožňuje biznis používateľom vytvárať presné a riadené reporty a dashboardy bez závislosti od IT – s prípravou dát s pomocou AI, dopytmi v prirodzenom jazyku a zabudovanou správou podnikovej triedy.",
    "questions": [
     "Spoliehajú sa biznis používatelia na IT pri každom reporte alebo dashboarde, ktorý potrebujú?",
     "Vytvára vaša organizácia stále kritické reporty v tabuľkových procesoroch?",
@@ -834,7 +834,7 @@ window.I18N.sk = {
     "Zabudovaná tvorba reportov s pomocou AI a dopyty v prirodzenom jazyku",
     "Podniková správa s prístupom na základe rolí a sledovaním pôvodu dát",
     "Hlboká integrácia so zdrojmi dát IBM vrátane Db2, Planning Analytics a watsonx.data",
-    "Silné postavenie v regulovaných odvetviach — finančné služby, zdravotníctvo, verejný sektor"
+    "Silné postavenie v regulovaných odvetviach – finančné služby, zdravotníctvo, verejný sektor"
    ]
   }
  },
@@ -971,7 +971,7 @@ window.I18N.sk = {
   "ibm_tls>linux_power": "Technology Lifecycle Services pokrýva podporu OS Linux on Power a správu životného cyklu platformy",
   "ibm_tls>storage_control": "Technology Lifecycle Services podporuje úložný hardvér, ktorý spravuje Storage Control",
   "ibm_tls>storage_virt": "IBM TLS zabezpečuje servis úložného hardvéru IBM, na ktorom beží Storage Virtualize, vrátane firmvéru, údržby a prechodov v rámci životného cyklu",
-  "envizi>maximo": "Prevádzkové dáta a dáta o aktívach z riešenia Maximo napájajú platformu Envizi pre reporting ESG a uhlíka na úrovni prevádzok",
+  "envizi>maximo": "Prevádzkové dáta a dáta o aktívach z riešenia Maximo napájajú platformu Envizi pre reporting ESG a uhlíkovej stopy na úrovni prevádzok",
   "envizi>ibm_sterling": "Dáta dodávateľského reťazca z riešenia Sterling napájajú platformu Envizi na sledovanie emisií Scope 3 v partnerských sieťach",
   "envizi>wxdata": "Dátové sady ESG z platformy Envizi prúdia do watsonx.data na analytiku udržateľnosti a modelovanie AI",
   "envizi>ibm_pa": "Planning Analytics integruje dáta o uhlíkových nákladoch z platformy Envizi na finančné plánovanie udržateľnosti a modelovanie scenárov",
@@ -981,7 +981,7 @@ window.I18N.sk = {
   "elm_suite>api_connect": "ELM sprístupňuje inžinierske artefakty a dáta o požiadavkách prostredníctvom API Connect na integráciu nástrojového reťazca",
   "elm_suite>webmethods": "webMethods integruje ELM s podnikovými systémami pre komplexnú automatizáciu inžinierskych pracovných postupov",
   "app_connect>api_connect": "App Connect vytvára integrácie, ktoré potom API Connect sprístupňuje ako riadené a zabezpečené API",
-  "app_connect>webmethods": "App Connect rieši SaaS a cloudové integrácie, zatiaľ čo webMethods rieši zložité B2B a lokálne vzory — vzájomne sa dopĺňajúce úrovne integrácie",
+  "app_connect>webmethods": "App Connect rieši SaaS a cloudové integrácie, zatiaľ čo webMethods rieši zložité B2B a lokálne vzory – vzájomne sa dopĺňajúce úrovne integrácie",
   "app_connect>event_auto": "Pracovné postupy App Connect spúšťajú Event Automation na spracovanie riadené udalosťami v reálnom čase",
   "app_connect>wxorch": "watsonx Orchestrate využíva App Connect na prepojenie AI agentov s podnikovými SaaS aplikáciami",
   "aspera>wxdata": "Aspera zaisťuje vysokorýchlostný príjem veľkých dátových sád do watsonx.data pre trénovacie pipeline AI",
@@ -991,10 +991,10 @@ window.I18N.sk = {
   "kubecost>turbonomic": "Turbonomic využíva nákladové dáta z nástroja Kubecost spolu s metrikami výkonu na správne dimenzovanie záťaží Kubernetes",
   "kubecost>instana": "Instana poskytuje kontext výkonu aplikácií, ktorý Kubecost využíva na koreláciu nákladov so skutočnou spotrebou zdrojov",
   "kubecost>apptio": "Nákladové dáta Kubernetes z nástroja Kubecost napájajú modely Apptio TBM pre úplnú transparentnosť nákladov na IT vrátane kontajnerových záťaží",
-  "ns1>verify": "Inteligentné smerovanie NS1 nasmeruje používateľov na najbližší autentifikačný koncový bod, čím zlepšuje výkon a odolnosť SSO v riešení Verify",
+  "ns1>verify": "Inteligentné smerovanie NS1 smeruje používateľov na najbližší autentifikačný koncový bod, čím zlepšuje výkon a odolnosť SSO v riešení Verify",
   "ns1>sevone": "Dáta o výkone siete z riešenia SevOne slúžia ako podklad pre rozhodnutia NS1 o riadení prevádzky na optimálne smerovanie",
   "ns1>concert": "Concert využíva dáta o stave DNS z NS1 ako súčasť monitorovania dostupnosti aplikácií",
-  "powervs>power": "PowerVS je cloudovým rozšírením Power Systems — umožňuje hybridné nasadenia Power, ktoré pokrývajú lokálne prostredie aj IBM Cloud",
+  "powervs>power": "PowerVS je cloudovým rozšírením Power Systems – umožňuje hybridné nasadenia Power, ktoré pokrývajú lokálne prostredie aj IBM Cloud",
   "powervs>aix": "Záťaže AIX bežia natívne na PowerVS, čo umožňuje migráciu do cloudu bez zmien OS alebo aplikácií",
   "powervs>ibmi": "Aplikácie IBM i bežia natívne na PowerVS, čo otvára cestu do cloudu pre staršie prostredia IBM i",
   "powervs>ibm_tls": "IBM TLS podporuje plánovanie prechodu a správu životného cyklu pri migráciách z lokálnej platformy Power do PowerVS",
@@ -1006,7 +1006,7 @@ window.I18N.sk = {
   "db2>wxdata": "Db2 je primárnym zdrojom transakčných dát federovaných do watsonx.data pre jednotnú analytiku a trénovanie modelov AI",
   "db2>wxdint": "watsonx.data integration prijíma a transformuje dáta z Db2 pre nadväzujúce pipeline AI a analytiky",
   "db2>guardium": "Guardium monitoruje a audituje všetky prístupy k dátam v Db2 v záujme súladu s predpismi a bezpečnosti dát",
-  "db2>ibmi": "Db2 for IBM i je integrovaná databáza v jadre platformy IBM i — natívny, zabudovaný vzťah",
+  "db2>ibmi": "Db2 for IBM i je integrovaná databáza v jadre platformy IBM i – natívny, zabudovaný vzťah",
   "db2>wca_ansible": "IBM Bob pomáha s optimalizáciou dopytov v Db2, modernizáciou schém a migráciou z PL/SQL do Db2",
   "cognos>wxdata": "Cognos dopytuje watsonx.data ako jednotný zdroj dát pre riadený podnikový reporting naprieč dátovým lakehouse",
   "cognos>ibm_pa": "Cognos Analytics poskytuje prevádzkový a manažérsky reporting nad finančnými modelmi Planning Analytics",

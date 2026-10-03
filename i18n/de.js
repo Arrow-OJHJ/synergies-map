@@ -6,17 +6,17 @@ window.I18N.de = {
   "language": "Sprache",
   "toggleTheme": "Design wechseln",
   "toggleThemeTitle": "Zwischen hellem und dunklem Design wechseln",
-  "searchPlaceholder": "Produkte, Beschreibungen, Fragen suchen...",
+  "searchPlaceholder": "Produkte, Beschreibungen, Fragen suchen…",
   "mobSearchPlaceholder": "Produkte suchen…",
   "searchAria": "Produkte suchen",
   "clearSearch": "Suche löschen",
-  "playFilter": "Filter Produktgruppe",
+  "playFilter": "Produktgruppenfilter",
   "mapAria": "Cross-Selling-Karte",
   "productDetail": "Produktdetails",
   "detail": "Details",
   "clearSelection": "Auswahl aufheben",
   "loading": "Wird geladen…",
-  "footerHint": "Produkte suchen · Produkt anklicken für Details",
+  "footerHint": "Produkte suchen · Für Details auf ein Produkt klicken",
   "mobileFooterHint": "Produkt antippen, um Verbindungen zu sehen",
   "close": "Schließen",
   "closeDrawer": "Seitenleiste schließen",
@@ -68,7 +68,7 @@ window.I18N.de = {
     "Haben Sie mehrere Anwendungen, die Daten gemeinsam nutzen müssen?",
     "Entwickeln Sie mobile oder Web-Apps, die Backend-Services benötigen?",
     "Möchten Sie Ihre Daten oder Services über APIs monetarisieren?",
-    "Kämpfen Sie mit Punkt-zu-Punkt-Integrationen?"
+    "Machen Ihnen Punkt-zu-Punkt-Integrationen zu schaffen?"
    ],
    "differentiators": [
     "Integrierte DataPower-Sicherheit",
@@ -78,7 +78,7 @@ window.I18N.de = {
    ]
   },
   "event_auto": {
-   "desc": "Ereignisgesteuerte Automatisierungsplattform für die Automatisierung von Geschäftsprozessen und Entscheidungen in Echtzeit.",
+   "desc": "Ereignisgesteuerte Plattform zur Automatisierung von Geschäftsprozessen und Entscheidungen in Echtzeit.",
    "value": "Reduziert manuelle Eingriffe um 70 %, ermöglicht Echtzeitreaktionen auf Geschäftsereignisse und steigert die operative Effizienz.",
    "questions": [
     "Haben Sie Geschäftsprozesse, die Reaktionen in Echtzeit erfordern?",
@@ -100,7 +100,7 @@ window.I18N.de = {
     "Haben Sie Altsysteme, die mit modernen Anwendungen integriert werden müssen?",
     "Verwalten Sie mehrere Integrationstools?",
     "Benötigen Sie B2B-Integrationsfunktionen?",
-    "Kämpfen Sie mit der Datensynchronisation zwischen Systemen?"
+    "Bereitet Ihnen die Datensynchronisation zwischen Systemen Probleme?"
    ],
    "differentiators": [
     "Über 30 Jahre Integrationserfahrung",
@@ -116,7 +116,7 @@ window.I18N.de = {
     "Stellen Sie Cloud-Infrastruktur manuell bereit?",
     "Müssen Sie Infrastruktur bei mehreren Cloud-Anbietern verwalten?",
     "Möchten Sie Infrastruktur-Deployments standardisieren?",
-    "Müssen Sie Infrastrukturänderungen über die Zeit nachverfolgen?"
+    "Müssen Sie Infrastrukturänderungen im Zeitverlauf nachverfolgen?"
    ],
    "differentiators": [
     "Multi-Cloud-Unterstützung",
@@ -142,11 +142,11 @@ window.I18N.de = {
    ]
   },
   "maximo": {
-   "desc": "Enterprise-Asset-Management-Plattform zur Verwaltung physischer Anlagen, Instandhaltung und Betrieb.",
+   "desc": "Enterprise-Asset-Management-Plattform zur Verwaltung physischer Anlagen, der Instandhaltung und des Betriebs.",
    "value": "Erhöht die Anlagenverfügbarkeit um 20 %, senkt Instandhaltungskosten um 25 % und verlängert den Lebenszyklus von Anlagen.",
    "questions": [
     "Verwalten Sie physische Anlagen oder Gebäude?",
-    "Erfassen Sie Instandhaltung manuell?",
+    "Erfassen Sie Instandhaltungsarbeiten manuell?",
     "Müssen Sie die Leistung Ihrer Anlagen optimieren?",
     "Möchten Sie vorausschauende Instandhaltung einführen?"
    ],
@@ -159,7 +159,7 @@ window.I18N.de = {
   },
   "ibm_mq": {
    "desc": "Nachrichtenorientierte Enterprise-Middleware für zuverlässiges, asynchrones Messaging in hybriden Umgebungen. Garantiert die Nachrichtenzustellung für geschäftskritische Anwendungen auf Mainframe-, Cloud- und On-Premises-Systemen.",
-   "value": "Sichert 99,99 % Zuverlässigkeit bei der Nachrichtenzustellung, reduziert die Kopplung von Anwendungen und ermöglicht Echtzeitintegration über Plattformen wie Mainframe und Cloud hinweg, mit integrierter Transaktionsunterstützung.",
+   "value": "Gewährleistet eine Zustellzuverlässigkeit von 99,99 %, reduziert die Kopplung von Anwendungen und ermöglicht Echtzeitintegration über Plattformen wie Mainframe und Cloud hinweg, mit integrierter Transaktionsunterstützung.",
    "questions": [
     "Haben Sie Anwendungen, die garantiertes, zuverlässiges Messaging benötigen?",
     "Integrieren Sie Systeme über Mainframe- und Cloud-Umgebungen hinweg?",
@@ -175,7 +175,7 @@ window.I18N.de = {
   },
   "ibm_sterling": {
    "desc": "Umfassendes Portfolio für Supply Chain und B2B-Integration zur Steuerung von Auftragsabwicklung, Lieferkettentransparenz und Partneranbindung. Vereint Order Management, Supply-Chain-Intelligence, B2B-Integration und sicheren Datenaustausch in Handelspartnernetzwerken.",
-   "value": "Beschleunigt die B2B-Integration um 70 %, verkürzt die Auftragszykluszeit um 40 % und bietet durchgängige Transparenz in der Lieferkette mit Echtzeit-Zusammenarbeit mit Partnern und KI-gestützter Bedarfsprognose.",
+   "value": "Beschleunigt die B2B-Integration um 70 %, verkürzt die Auftragszykluszeit um 40 % und bietet durchgängige Transparenz in der Lieferkette – mit Zusammenarbeit mit Partnern in Echtzeit und KI-gestützter Bedarfsprognose.",
    "questions": [
     "Müssen Sie mehrere B2B-Handelspartner oder Lieferanten anbinden?",
     "Möchten Sie Order-to-Cash- oder Procure-to-Pay-Prozesse optimieren?",
@@ -185,7 +185,7 @@ window.I18N.de = {
    "differentiators": [
     "Speziell für B2B-Integration und EDI entwickelt, mit über 50.000 Partnerverbindungen",
     "KI-gestützte Supply-Chain-Intelligence und Bedarfsprognose",
-    "Sicherer Proxy für den Datenaustausch mit Partnern mit Ende-zu-Ende-Verschlüsselung",
+    "Sicherer Proxy mit Ende-zu-Ende-Verschlüsselung für den Datenaustausch mit Partnern",
     "Tiefe Integration in das IBM Automatisierungs- und Datenökosystem"
    ]
   },
@@ -232,7 +232,7 @@ window.I18N.de = {
    ],
    "differentiators": [
     "Automatisierte Aktionen in Echtzeit",
-    "Anwendungsbewusste Entscheidungen",
+    "Anwendungsorientierte Entscheidungen",
     "Full-Stack-Optimierung",
     "Nachgewiesener ROI in 30 Tagen"
    ]
@@ -242,7 +242,7 @@ window.I18N.de = {
    "value": "Schafft vollständige Transparenz über IT-Kosten, ermöglicht datengestützte Entscheidungen und optimiert Investitionen im IT-Portfolio.",
    "questions": [
     "Kennen Sie Ihre tatsächlichen IT-Kosten pro Service oder Anwendung?",
-    "Fällt es Ihnen schwer, IT-Ausgaben gegenüber dem Business zu begründen?",
+    "Fällt es Ihnen schwer, IT-Ausgaben gegenüber den Fachbereichen zu begründen?",
     "Müssen Sie Ihr IT-Budget optimieren?",
     "Planen Sie IT-Investitionen ohne klare Sicht auf den ROI?"
    ],
@@ -275,7 +275,7 @@ window.I18N.de = {
    "questions": [
     "Speichern Sie sensible Kunden- oder Finanzdaten?",
     "Unterliegen Sie Datenschutzvorschriften (DSGVO, CCPA)?",
-    "Hatten Sie bereits Sicherheitsvorfälle mit Daten?",
+    "Hatten Sie bereits Vorfälle im Bereich Datensicherheit?",
     "Müssen Sie Datenbankzugriffe und -aktivitäten überwachen?"
    ],
    "differentiators": [
@@ -290,7 +290,7 @@ window.I18N.de = {
    "value": "Senkt Sicherheitsrisiken um 60 %, verbessert die Benutzererfahrung mit SSO und sichert die Einhaltung von Zugriffsrichtlinien.",
    "questions": [
     "Greifen Ihre Benutzer mit unterschiedlichen Passwörtern auf mehrere Anwendungen zu?",
-    "Sind Sie wegen unbefugter Zugriffe besorgt?",
+    "Befürchten Sie unbefugte Zugriffe?",
     "Benötigen Sie Multi-Faktor-Authentifizierung?",
     "Verwalten Sie Benutzerzugriffe manuell?"
    ],
@@ -307,7 +307,7 @@ window.I18N.de = {
    "questions": [
     "Sind Zugangsdaten in Code oder Konfigurationsdateien gespeichert?",
     "Müssen Sie API-Schlüssel und Zertifikate verwalten?",
-    "Sind Sie über den Wildwuchs von Secrets besorgt?",
+    "Macht Ihnen der Wildwuchs an Secrets Sorgen?",
     "Müssen Sie Secrets regelmäßig rotieren?"
    ],
    "differentiators": [
@@ -323,7 +323,7 @@ window.I18N.de = {
    "questions": [
     "Möchten Sie KI-Anwendungen entwickeln?",
     "Müssen Sie eigene KI-Modelle trainieren?",
-    "Sind Sie wegen KI-Bias und Erklärbarkeit besorgt?",
+    "Beschäftigen Sie Themen wie KI-Bias und Erklärbarkeit?",
     "Möchten Sie Foundation Models für Ihre Anwendungsfälle nutzen?"
    ],
    "differentiators": [
@@ -344,14 +344,14 @@ window.I18N.de = {
    ],
    "differentiators": [
     "Offene Lakehouse-Architektur",
-    "Abfrage mehrerer Quellen",
+    "Abfragen über mehrere Quellen",
     "Hybrid-Cloud-Unterstützung",
     "Kosteneffizienter Speicher"
    ]
   },
   "wxdi": {
    "desc": "KI-gestützte Plattform für Datenkatalog und Data Governance, um Unternehmensdaten zu finden, zu verstehen und zu verwalten.",
-   "value": "Verkürzt die Suche nach Daten um 80 %, verbessert die Datenqualität und sichert Daten-Compliance und Data Lineage.",
+   "value": "Verkürzt die Suche nach Daten um 80 %, verbessert die Datenqualität und stellt Daten-Compliance und lückenlose Data Lineage sicher.",
    "questions": [
     "Fällt es Ihren Benutzern schwer, die benötigten Daten zu finden?",
     "Ist Datenqualität ein Thema für Sie?",
@@ -387,7 +387,7 @@ window.I18N.de = {
    "questions": [
     "Setzen Sie KI-Modelle in der Produktion ein?",
     "Müssen Sie Fairness und Erklärbarkeit von KI sicherstellen?",
-    "Sind Sie wegen Model Drift bei KI besorgt?",
+    "Bereitet Ihnen Model Drift bei KI-Modellen Sorgen?",
     "Müssen Sie KI-Vorschriften einhalten?"
    ],
    "differentiators": [
@@ -399,7 +399,7 @@ window.I18N.de = {
   },
   "wxorch": {
    "desc": "KI-gestützte Automatisierungsplattform zum Erstellen und Bereitstellen intelligenter Workflows und digitaler Assistenten.",
-   "value": "Automatisiert wiederkehrende Aufgaben um 80 %, steigert die Produktivität der Mitarbeitenden und bietet dialogorientierte KI-Schnittstellen.",
+   "value": "Automatisiert wiederkehrende Aufgaben zu 80 %, steigert die Produktivität der Mitarbeitenden und bietet dialogorientierte KI-Schnittstellen.",
    "questions": [
     "Verbringen Ihre Mitarbeitenden Zeit mit wiederkehrenden Aufgaben?",
     "Möchten Sie Chatbots oder virtuelle Assistenten aufbauen?",
@@ -415,7 +415,7 @@ window.I18N.de = {
   },
   "wca_ansible": {
    "desc": "KI-Pair-Programmer, der Softwareentwicklung, Anwendungsmodernisierung und Automatisierungsskripte in modernen und älteren Sprachen wie Java, Python, RPG, COBOL und PL/SQL beschleunigt – mit agentischen Funktionen, die Code vom Design bis in die Produktion bringen.",
-   "value": "Verkürzt Entwicklungsaufgaben von Wochen auf Stunden; Premium Packages bieten tiefe Spezialisierung für die Modernisierung von IBM i, Z und Java – mit integriertem Secret Scanning, das Sicherheit vom ersten Tag an nach links verlagert.",
+   "value": "Verkürzt Entwicklungsaufgaben von Wochen auf Stunden; Premium Packages bieten tiefe Spezialisierung für die Modernisierung von IBM i, Z und Java – mit integriertem Secret Scanning für Shift-Left-Security vom ersten Tag an.",
    "questions": [
     "Verbringen Ihre Entwickler zu viel Zeit mit Boilerplate-Code?",
     "Möchten Sie die Anwendungsentwicklung beschleunigen?",
@@ -426,12 +426,12 @@ window.I18N.de = {
     "Agentischer SDLC vom Design bis zur Produktion",
     "Premium Packages für die Modernisierung von IBM i, Z und Java",
     "Integriertes Secret Scanning und Security-Left-Coding",
-    "Tiefe bei Legacy-Sprachen wie RPG, COBOL und PL/SQL"
+    "Fundierte Unterstützung für Legacy-Sprachen wie RPG, COBOL und PL/SQL"
    ]
   },
   "confluent": {
    "desc": "Kafka-basierte Streaming-Plattform auf Enterprise-Niveau, verfügbar als Confluent Cloud oder selbst verwaltet, die als Echtzeit-Daten-Backbone für die IBM Lösungen zu hybrider Integration, Daten & KI sowie Mainframe-Modernisierung dient.",
-   "value": "Dient als universelles Streaming-Backbone, das die Integrations-, Infrastruktur- und KI-Plattformen von IBM verbindet – es überbrückt MQ-basiertes Legacy-Messaging zu Kafka-Event-Streams in Echtzeit, speist watsonx-Pipelines und ermöglicht ereignisgesteuerte Automatisierung im Unternehmensmaßstab.",
+   "value": "Dient als universelles Streaming-Backbone, das die Integrations-, Infrastruktur- und KI-Plattformen von IBM verbindet – es bindet MQ-basiertes Legacy-Messaging in Echtzeit an Kafka-Event-Streams an, speist watsonx-Pipelines und ermöglicht ereignisgesteuerte Automatisierung im Unternehmensmaßstab.",
    "questions": [
     "Müssen Sie Daten in Echtzeit verarbeiten?",
     "Bauen Sie ereignisgesteuerte Architekturen auf?",
@@ -453,7 +453,7 @@ window.I18N.de = {
    "questions": [
     "Sind Ihre Budgetierungs- und Forecasting-Prozesse aufwendig oder Excel-basiert?",
     "Benötigen Sie eine bessere Zusammenarbeit zwischen Finance und den Geschäftsbereichen?",
-    "Kämpfen Sie mit der Prognosegenauigkeit oder der Geschwindigkeit der Szenarioplanung?",
+    "Haben Sie Probleme mit der Prognosegenauigkeit oder dem Tempo Ihrer Szenarioplanung?",
     "Müssen Sie Finanzdaten aus mehreren Quellsystemen konsolidieren?"
    ],
    "differentiators": [
@@ -486,7 +486,7 @@ window.I18N.de = {
     "Betreiben Sie SAP, Oracle oder andere Unternehmensanwendungen?",
     "Suchen Sie mehr Leistung für KI-Workloads?",
     "Benötigen Sie Hochverfügbarkeit für kritische Anwendungen?",
-    "Sind Sie wegen der Lizenzkosten auf x86 besorgt?"
+    "Bereiten Ihnen die Lizenzkosten auf x86 Sorgen?"
    ],
    "differentiators": [
     "Überlegene Leistung pro Core",
@@ -547,16 +547,16 @@ window.I18N.de = {
    "desc": "Umfassender Service für Hardware- und Softwarewartung, Support und End-of-Life-Migration. Steuert den gesamten Lebenszyklus von IBM und Multi-Vendor-Systemen von der Bereitstellung bis zur Außerbetriebnahme – inklusive proaktivem Support, Patch-Management, Upgrades und geplanten Technologiewechseln.",
    "value": "Reduziert ungeplante Ausfallzeiten um 95 %, sorgt für planbare Lebenszykluskosten der Infrastruktur und gewährleistet reibungslose Technologiewechsel ohne Betriebsunterbrechung – abgesichert durch branchenführende SLAs und proaktive Diagnosefunktionen.",
    "questions": [
-    "Sind Sie wegen des End-of-Life-Supports für kritische IBM Systeme besorgt?",
+    "Machen Sie sich Sorgen um den Support kritischer IBM Systeme nach dem End-of-Life?",
     "Benötigen Sie planbares Lebenszyklusmanagement zu festen Kosten für Ihre Infrastruktur?",
     "Planen Sie Hardware- oder Software-Upgrades und benötigen Unterstützung bei der Migration?",
-    "Verwalten Sie Multi-Vendor-Umgebungen, die einen einzigen Supportanbieter benötigen?"
+    "Betreiben Sie Multi-Vendor-Umgebungen und benötigen einen einzigen Supportanbieter?"
    ],
    "differentiators": [
     "Proaktive Diagnose und vorausschauende Problemvermeidung",
     "Ein Ansprechpartner für Multi-Vendor-Umgebungen mit IBM und Drittanbietern",
     "Nahtlose End-of-Life-Migrationsplanung ohne Betriebsunterbrechung",
-    "Bereitgestellt von Arrow mit lokaler UKI-Expertise und IBM-zertifizierten Technikern"
+    "Erbracht von Arrow – mit lokaler UKI-Expertise und IBM-zertifizierten Technikern"
    ]
   },
   "flashsystem": {
@@ -566,7 +566,7 @@ window.I18N.de = {
     "Haben Sie performancekritische Anwendungen?",
     "Geht Ihnen die Speicherkapazität aus?",
     "Müssen Sie Speicherkosten senken?",
-    "Sind Sie wegen der Zuverlässigkeit Ihres Speichers besorgt?"
+    "Haben Sie Bedenken hinsichtlich der Zuverlässigkeit Ihres Speichers?"
    ],
    "differentiators": [
     "Latenz unter einer Millisekunde",
@@ -577,12 +577,12 @@ window.I18N.de = {
   },
   "storage_control": {
    "desc": "Speicherverwaltungssoftware zur Überwachung, Verwaltung und Optimierung der Speicherinfrastruktur.",
-   "value": "Bietet einheitliches Speichermanagement, verkürzt den Administrationsaufwand für Speicher um 50 % und ermöglicht proaktive Problemlösung.",
+   "value": "Bietet einheitliches Speichermanagement, reduziert den Administrationsaufwand für Speicher um 50 % und ermöglicht proaktive Problemlösung.",
    "questions": [
     "Verwalten Sie mehrere Speichersysteme?",
     "Verbringen Sie zu viel Zeit mit der Speicheradministration?",
     "Benötigen Sie mehr Einblick in die Speicherperformance?",
-    "Haben Sie Probleme im Zusammenhang mit Speicher?"
+    "Haben Sie Probleme mit Ihrem Speicher?"
    ],
    "differentiators": [
     "Multi-Vendor-Unterstützung",
@@ -614,7 +614,7 @@ window.I18N.de = {
     "Setzen Sie Speicher mehrerer Hersteller ein?",
     "Müssen Sie Daten ohne Ausfallzeit migrieren?",
     "Möchten Sie die Speicherauslastung optimieren?",
-    "Müssen Sie Daten über verschiedene Speichertypen hinweg tieren?"
+    "Benötigen Sie Tiering über verschiedene Speichertypen hinweg?"
    ],
    "differentiators": [
     "Multi-Vendor-Unterstützung",
@@ -678,7 +678,7 @@ window.I18N.de = {
     "Fällt es Ihnen schwer, ESG-Daten über Ihre Standorte und Lieferkette hinweg zu erfassen und zu konsolidieren?",
     "Müssen Sie Nachhaltigkeitsberichte für regulatorische Frameworks wie CSRD oder TCFD erstellen?",
     "Möchten Sie CO2-Emissionen in Ihrem Betrieb erfassen und senken?",
-    "Haben Sie Nachhaltigkeitsziele, aber nicht die Datentransparenz, um Fortschritte zu messen?"
+    "Haben Sie Nachhaltigkeitsziele, aber es fehlt die Datentransparenz, um Fortschritte zu messen?"
    ],
    "differentiators": [
     "Vorgefertigte Integration mit Maximo für Betriebs- und Anlagendaten",
@@ -700,7 +700,7 @@ window.I18N.de = {
     "Vollständige ALM-Suite aus einer Hand – Anforderungen, Workflow, Test und Modellierung",
     "Umfassende Compliance-Unterstützung für ISO 26262, DO-178C, IEC 61508 und FDA 21 CFR Part 11",
     "Native KI-Integration mit IBM Bob für KI-gestützte Anforderungen und Codegenerierung",
-    "Die langjährigste Engineering-Plattform von IBM mit über 30 Jahren Einsatz in regulierten Branchen"
+    "Die am längsten etablierte Engineering-Plattform von IBM mit über 30 Jahren Einsatz in regulierten Branchen"
    ]
   },
   "app_connect": {
@@ -757,7 +757,7 @@ window.I18N.de = {
    "questions": [
     "Verursachen DNS-Ausfälle oder langsame Auflösung Probleme mit der Verfügbarkeit Ihrer Anwendungen?",
     "Müssen Sie Benutzer intelligent über mehrere Rechenzentren oder Cloud-Regionen leiten?",
-    "Sind Sie wegen DDoS-Angriffen auf Ihre DNS-Infrastruktur besorgt?",
+    "Befürchten Sie DDoS-Angriffe auf Ihre DNS-Infrastruktur?",
     "Benötigen Sie fein abgestufte Kontrolle über die globale Verkehrsverteilung?"
    ],
    "differentiators": [
@@ -771,7 +771,7 @@ window.I18N.de = {
    "desc": "IBM Power Virtual Server (PowerVS) – in der IBM Cloud gehostete Power-Infrastruktur mit derselben Power-Leistung und IBM i / AIX-Kompatibilität wie On-Premises-Power Systems, bereitgestellt als vollständig verwalteter Cloud-Service.",
    "value": "Ermöglicht Unternehmen, Power-Workloads ohne Re-Platforming in die Cloud zu erweitern oder zu migrieren – bei voller Anwendungskompatibilität für AIX und IBM i, mit Cloud-Elastizität und Pay-as-you-go-Abrechnung.",
    "questions": [
-    "Möchten Sie Ihren On-Premises-Power-Footprint verkleinern, ohne Ihre AIX- oder IBM i-Anwendungen neu zu plattformieren?",
+    "Möchten Sie Ihren On-Premises-Power-Footprint verkleinern, ohne Re-Platforming Ihrer AIX- oder IBM i-Anwendungen?",
     "Benötigen Sie eine cloudbasierte Disaster-Recovery-Lösung für Ihre Power Systems-Landschaft?",
     "Prüfen Sie Hybrid-Cloud-Optionen für Ihre IBM i- oder AIX-Workloads?",
     "Möchten Sie Power-Kapazität bei Bedarf skalieren, ohne Investitionen zu tätigen?"
@@ -803,7 +803,7 @@ window.I18N.de = {
    "desc": "IBM Db2 – relationales Enterprise-Datenbankmanagementsystem On-Premises und in der Cloud, mit leistungsstarkem OLTP und Analytics, integrierten KI-Funktionen und nativer Kompatibilität mit IBM Z, Power Systems und IBM i.",
    "value": "Bietet eine vertrauenswürdige, leistungsstarke Transaktionsdatenbasis für Unternehmensanwendungen – mit integrierter KI-Abfrageoptimierung, nativer Anbindung an watsonx.data und jahrzehntelanger Zuverlässigkeit auf IBM Plattformen.",
    "questions": [
-    "Möchten Sie Lizenzkosten für Oracle oder SQL Server senken, ohne Anwendungen neu zu architekturieren?",
+    "Möchten Sie Lizenzkosten für Oracle oder SQL Server senken, ohne die Architektur Ihrer Anwendungen umzubauen?",
     "Benötigen Sie eine Datenbank mit nachgewiesener Leistung auf IBM Power- oder Z-Plattformen?",
     "Bestimmen Anforderungen an Datenresidenz oder Datensouveränität Ihre Wahl der Datenbankplattform?",
     "Benötigen Sie eine Transaktionsdatenbank, die sich nativ in Ihren KI- und Analytics-Stack integriert?"
@@ -817,11 +817,11 @@ window.I18N.de = {
   },
   "cognos": {
    "desc": "IBM Cognos Analytics – KI-gestützte Plattform für Business Intelligence und Analytics mit Self-Service-Reporting, Dashboards und Datenexploration, mit integrierter Governance und Datensicherheit auf Enterprise-Niveau.",
-   "value": "Befähigt Fachanwender, präzise, governte Berichte und Dashboards ohne Abhängigkeit von der IT zu erstellen – mit KI-gestützter Datenaufbereitung, Abfragen in natürlicher Sprache und integrierter Governance auf Enterprise-Niveau.",
+   "value": "Befähigt Fachanwender, präzise, Governance-konforme Berichte und Dashboards ohne Abhängigkeit von der IT zu erstellen – mit KI-gestützter Datenaufbereitung, Abfragen in natürlicher Sprache und integrierter Governance auf Enterprise-Niveau.",
    "questions": [
     "Sind Ihre Fachanwender bei jedem Bericht oder Dashboard auf die IT angewiesen?",
-    "Erstellt Ihr Unternehmen kritische Berichte noch aus Tabellenkalkulationen?",
-    "Benötigen Sie governte Self-Service-Analysen, die Datengenauigkeit und -sicherheit wahren?",
+    "Erstellt Ihr Unternehmen kritische Berichte noch mit Tabellenkalkulationen?",
+    "Benötigen Sie Self-Service-Analysen mit Governance, die Datengenauigkeit und -sicherheit wahren?",
     "Suchen Sie BI-Tools mit starker Integration von IBM Datenquellen?"
    ],
    "differentiators": [
@@ -835,14 +835,14 @@ window.I18N.de = {
  "competitors": {
   "ARM-based servers": "ARM-basierte Server",
   "AWS EC2 with migration services": "AWS EC2 mit Migrationsservices",
-  "On-premises retention": "Verbleib On-Premises",
+  "On-premises retention": "Weiterbetrieb On-Premises",
   "x86 Linux servers": "x86-Linux-Server",
   "x86 servers": "x86-Server"
  },
  "connections": {
   "concert>api_connect": "Concert orchestriert das API-Management für eine einheitliche Sicht auf alle Anwendungen",
   "concert>event_auto": "Concert automatisiert ereignisgesteuerte Workflows über Anwendungen hinweg",
-  "concert>webmethods": "Concert integriert sich mit webMethods für das Management hybrider Integration",
+  "concert>webmethods": "Concert ist für das Management hybrider Integrationen an webMethods angebunden",
   "concert>maximo": "Concert überwacht und steuert den Betrieb des Asset Managements mit Maximo",
   "api_connect>event_auto": "API Connect stellt Funktionen der Event-Automatisierung als verwaltete APIs bereit",
   "api_connect>webmethods": "API Connect und webMethods bieten sich ergänzende Integrationsmuster",
@@ -850,7 +850,7 @@ window.I18N.de = {
   "maximo>event_auto": "Maximo nutzt Event-Automatisierung für Instandhaltungs-Workflows",
   "maximo>api_connect": "Maximo stellt Anlagendaten über API Connect bereit",
   "wxdata>wxai": "watsonx.data liefert die Datenbasis für Modelle in watsonx.ai",
-  "wxdata>wxdi": "watsonx.data integriert sich zur Katalogisierung mit Data Intelligence",
+  "wxdata>wxdi": "watsonx.data ist zur Katalogisierung an Data Intelligence angebunden",
   "wxdata>wxdint": "watsonx.data nutzt Datenintegration für Ingestion-Pipelines",
   "wxdata>wxgov": "watsonx.data setzt Governance-Richtlinien für Datenbestände durch",
   "wxdata>confluent": "watsonx.data nimmt Streaming-Daten in Echtzeit von Confluent auf",
@@ -869,7 +869,7 @@ window.I18N.de = {
   "concert>instana": "Concert nutzt Instana für das Application Performance Monitoring",
   "concert>turbonomic": "Concert nutzt Turbonomic zur Ressourcenoptimierung",
   "concert>apptio": "Concert liefert Kostendaten an Apptio für das Finanzmanagement",
-  "concert>sevone": "Concert integriert sich mit SevOne für das Netzwerk-Performance-Monitoring",
+  "concert>sevone": "Concert ist für das Netzwerk-Performance-Monitoring an SevOne angebunden",
   "instana>turbonomic": "Metriken aus Instana steuern die Optimierungsentscheidungen von Turbonomic",
   "turbonomic>apptio": "Optimierungsdaten aus Turbonomic fließen in die Kostenanalyse von Apptio ein",
   "turbonomic>cloudability": "Aktionen von Turbonomic fließen in die Kostenempfehlungen von Cloudability ein",
@@ -892,14 +892,14 @@ window.I18N.de = {
   "storage_ceph>storage_fusion": "Storage Fusion nutzt Ceph für Object Storage",
   "wxorch>api_connect": "Agenten in Orchestrate rufen APIs auf, die von API Connect verwaltet werden",
   "wxorch>event_auto": "Orchestrate löst Workflows der Event-Automatisierung aus",
-  "wxorch>webmethods": "Orchestrate integriert sich mit webMethods für Konnektivität im Unternehmen",
+  "wxorch>webmethods": "Orchestrate ist für die unternehmensweite Konnektivität an webMethods angebunden",
   "wxai>maximo": "watsonx.ai ermöglicht vorausschauende Instandhaltung in Maximo",
   "wca_ansible>terraform": "IBM Bob generiert Infrastrukturcode für Terraform",
   "wca_ansible>ibmi": "Das IBM Bob Premium Package für IBM i modernisiert RPG- und ältere IBM i-Anwendungen",
   "wca_ansible>linuxone": "Das IBM Bob Premium Package für Z beschleunigt die Modernisierung von Mainframe-Code auf LinuxONE",
-  "wca_ansible>aix": "IBM Bob beschleunigt die Modernisierung älterer C- und C++-Anwendungen in AIX-Unix-Workloads",
+  "wca_ansible>aix": "IBM Bob beschleunigt die Modernisierung älterer C- und C++-Anwendungen, die als Unix-Workloads auf AIX laufen",
   "wca_ansible>wxgov": "Von IBM Bob generierter Code wird über watsonx.governance geprüft und gesteuert",
-  "wca_ansible>vault": "IBM Bob durchsucht Codebasen nach fest codierten Secrets und refaktoriert den Code für die Nutzung von Vault",
+  "wca_ansible>vault": "IBM Bob durchsucht Codebasen nach fest codierten Secrets und refaktoriert den Code so, dass er Vault nutzt",
   "wca_ansible>verify": "IBM Bob generiert sicheren Integrationscode für Authentifizierung, SSO und MFA für Anwendungen, die durch Verify geschützt sind",
   "wca_ansible>instana": "IBM Bob bindet Observability-Tools an, um Metriken und Logs direkt aus der IDE abzufragen",
   "wca_ansible>maximo": "IBM Bob beschleunigt die Anwendungs- und Integrationsentwicklung für Maximo mit KI-gestütztem Coding",
@@ -912,11 +912,11 @@ window.I18N.de = {
   "ibm_mq>wxorch": "IBM MQ liefert zuverlässiges asynchrones Messaging für Workflows in watsonx Orchestrate",
   "ibm_mq>linuxone": "IBM MQ läuft auf LinuxONE für sicheres Enterprise Messaging mit hohem Volumen",
   "ibm_mq>power": "IBM MQ auf Power Systems liefert Messaging mit hohem Durchsatz für Unternehmensanwendungen",
-  "ibm_mq>ibmi": "IBM MQ ist ein zentrales Messaging-Backbone für IBM i-Anwendungen, mit nativer MQ-Unterstützung in der Plattform IBM i",
+  "ibm_mq>ibmi": "IBM MQ ist ein zentrales Messaging-Backbone für IBM i-Anwendungen, mit nativer, direkt in IBM i integrierter MQ-Unterstützung",
   "ibm_sterling>webmethods": "IBM Sterling und webMethods bieten sich ergänzende B2B-Konnektivität und Enterprise-Integration",
   "ibm_sterling>event_auto": "IBM Sterling löst Event Automation aus, um Supply-Chain-Workflows in Echtzeit auszuführen",
   "ibm_sterling>api_connect": "API Connect stellt Supply-Chain-Daten und Partner-APIs aus Sterling über verwaltete Gateways bereit",
-  "ibm_sterling>maximo": "IBM Sterling integriert sich mit Maximo für Beschaffung und Verwaltung von Anlagen in der Lieferkette",
+  "ibm_sterling>maximo": "IBM Sterling ist für Beschaffung und Verwaltung von Anlagen in der Lieferkette an Maximo angebunden",
   "ibm_sterling>wxdi": "watsonx.data intelligence katalogisiert Supply-Chain-Datenbestände aus IBM Sterling",
   "ibm_sterling>wxdint": "Die Datenintegration leitet Supply-Chain-Daten aus Sterling laufend in Analytics- und KI-Pipelines",
   "ibm_sterling>wxorch": "watsonx Orchestrate automatisiert Entscheidungs-Workflows in der Lieferkette auf Basis von Daten aus Sterling",
@@ -968,13 +968,13 @@ window.I18N.de = {
   "envizi>maximo": "Betriebs- und Anlagendaten aus Maximo fließen in Envizi für ESG- und CO2-Berichte auf Standortebene",
   "envizi>ibm_sterling": "Supply-Chain-Daten aus Sterling fließen in Envizi, um Scope-3-Emissionen in Partnernetzwerken zu erfassen",
   "envizi>wxdata": "ESG-Datensätze aus Envizi fließen in watsonx.data für Nachhaltigkeitsanalysen und KI-Modellierung",
-  "envizi>ibm_pa": "Planning Analytics integriert CO2-Kostendaten aus Envizi für nachhaltige Finanzplanung und Szenariomodellierung",
-  "envizi>wxai": "watsonx.ai analysiert ESG-Daten aus Envizi für vorausschauende Nachhaltigkeitserkenntnisse und Anomalieerkennung",
+  "envizi>ibm_pa": "Planning Analytics integriert CO2-Kostendaten aus Envizi für Finanzplanung und Szenariomodellierung im Bereich Nachhaltigkeit",
+  "envizi>wxai": "watsonx.ai analysiert ESG-Daten aus Envizi für vorausschauende Erkenntnisse zur Nachhaltigkeit und Anomalieerkennung",
   "elm_suite>wca_ansible": "IBM Bob generiert Code direkt aus ELM-Anforderungen und schließt den Kreis von der Spezifikation bis zur Implementierung",
   "elm_suite>concert": "Concert bietet operative Transparenz über Anwendungs-Deployments, die mit ELM verwaltet werden",
   "elm_suite>api_connect": "ELM stellt Engineering-Artefakte und Anforderungsdaten über API Connect für die Toolchain-Integration bereit",
   "elm_suite>webmethods": "webMethods integriert ELM mit Unternehmenssystemen für durchgängig automatisierte Engineering-Workflows",
-  "app_connect>api_connect": "App Connect erstellt Integrationen, die API Connect anschließend als gesteuerte, gesicherte APIs bereitstellt",
+  "app_connect>api_connect": "App Connect erstellt Integrationen, die API Connect anschließend als kontrollierte, abgesicherte APIs bereitstellt",
   "app_connect>webmethods": "App Connect übernimmt SaaS- und Cloud-Integrationen, webMethods komplexe B2B- und On-Premises-Szenarien – sich ergänzende Integrationsebenen",
   "app_connect>event_auto": "Workflows in App Connect lösen Event Automation für ereignisgesteuerte Verarbeitung in Echtzeit aus",
   "app_connect>wxorch": "watsonx Orchestrate nutzt App Connect, um KI-Agenten mit SaaS-Unternehmensanwendungen zu verbinden",
@@ -997,12 +997,12 @@ window.I18N.de = {
   "fusion_hci>power": "IBM Fusion HCI kann in von IBM verwalteten hybriden Infrastrukturumgebungen neben Power Systems betrieben werden",
   "fusion_hci>linuxone": "Fusion HCI und LinuxONE bieten sich ergänzende On-Premises-Infrastrukturoptionen für sicherheitskritische Unternehmens-Workloads",
   "fusion_hci>ibm_tls": "IBM TLS verwaltet Hardware-Lebenszyklus, Firmware und Support von Fusion HCI",
-  "db2>wxdata": "Db2 ist eine primäre Transaktionsdatenquelle, die in watsonx.data föderiert wird, für einheitliche Analysen und KI-Modelltraining",
+  "db2>wxdata": "Db2 ist eine primäre Transaktionsdatenquelle, die für einheitliche Analysen und KI-Modelltraining in watsonx.data föderiert wird",
   "db2>wxdint": "watsonx.data integration nimmt Daten aus Db2 auf und transformiert sie für nachgelagerte KI- und Analytics-Pipelines",
   "db2>guardium": "Guardium überwacht und protokolliert alle Datenzugriffe auf Db2 für regulatorische Compliance und Datensicherheit",
   "db2>ibmi": "Db2 for IBM i ist die integrierte Datenbank im Kern der Plattform IBM i – eine native, eingebaute Verbindung",
   "db2>wca_ansible": "IBM Bob unterstützt bei der Abfrageoptimierung in Db2, der Schemamodernisierung und der PL/SQL-Migration zu Db2",
-  "cognos>wxdata": "Cognos fragt watsonx.data als einheitliche Datenquelle für governtes Enterprise-Reporting über das Data Lakehouse ab",
+  "cognos>wxdata": "Cognos fragt watsonx.data als einheitliche Datenquelle für Governance-konformes Enterprise-Reporting über das Data Lakehouse ab",
   "cognos>ibm_pa": "Cognos Analytics liefert operatives und Management-Reporting auf Basis der Finanzmodelle in Planning Analytics",
   "cognos>db2": "Cognos ist ein zentraler BI-Nutzer von Transaktionsdaten aus Db2 für Dashboards und Berichte im Unternehmen",
   "cognos>wxai": "watsonx.ai erweitert Cognos um vorausschauende Analysen und KI-generierte Erkenntnisse direkt in Dashboards",

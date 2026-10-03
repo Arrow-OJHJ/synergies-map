@@ -81,7 +81,7 @@ window.I18N.es = {
    ]
   },
   "event_auto": {
-   "desc": "Plataforma de automatización basada en eventos para automatizar procesos de negocio y tomar decisiones en tiempo real.",
+   "desc": "Plataforma de automatización basada en eventos para procesos de negocio y toma de decisiones en tiempo real.",
    "value": "Reduce la intervención manual en un 70 %, permite responder en tiempo real a los eventos de negocio y mejora la eficiencia operativa.",
    "questions": [
     "¿Tiene procesos de negocio que requieren respuestas en tiempo real?",
@@ -132,7 +132,7 @@ window.I18N.es = {
    "desc": "Plataforma de gestión de aplicaciones impulsada por IA que ofrece visibilidad y control unificados en entornos de nube híbrida.",
    "value": "Reduce el MTTR en un 40 %, ofrece una visibilidad de 360 grados de las aplicaciones y automatiza la resolución de incidencias habituales.",
    "questions": [
-    "¿Le cuesta tener visibilidad de todo su panorama de aplicaciones?",
+    "¿Le cuesta tener visibilidad de todo su parque de aplicaciones?",
     "¿Gestiona aplicaciones en varias nubes?",
     "¿Necesita reducir el tiempo medio de resolución?",
     "¿Busca automatizar las tareas de gestión de aplicaciones?"
@@ -145,7 +145,7 @@ window.I18N.es = {
    ]
   },
   "maximo": {
-   "desc": "Plataforma empresarial de gestión de activos para gestionar activos físicos, mantenimiento y operaciones.",
+   "desc": "Plataforma empresarial de gestión de activos físicos, mantenimiento y operaciones.",
    "value": "Aumenta la disponibilidad de los activos en un 20 %, reduce los costes de mantenimiento en un 25 % y prolonga el ciclo de vida de los activos.",
    "questions": [
     "¿Gestiona activos físicos o instalaciones?",
@@ -177,18 +177,18 @@ window.I18N.es = {
    ]
   },
   "ibm_sterling": {
-   "desc": "Cartera completa de cadena de suministro e integración B2B para gestionar el cumplimiento de pedidos, la visibilidad de la cadena de suministro y la conectividad con socios. Combina gestión de pedidos, inteligencia de la cadena de suministro, integración B2B e intercambio seguro de datos en las redes de socios comerciales.",
-   "value": "Acelera la integración B2B en un 70 %, reduce el ciclo de pedidos en un 40 % y ofrece visibilidad integral de la cadena de suministro, con colaboración en tiempo real con los socios y previsión de la demanda impulsada por IA.",
+   "desc": "Cartera completa de soluciones de cadena de suministro e integración B2B para gestionar la ejecución de pedidos, la visibilidad de la cadena de suministro y la conectividad con socios. Combina gestión de pedidos, inteligencia de la cadena de suministro, integración B2B e intercambio seguro de datos en las redes de socios comerciales.",
+   "value": "Acelera la integración B2B en un 70 %, reduce el tiempo del ciclo de pedidos en un 40 % y ofrece visibilidad integral de la cadena de suministro, con colaboración en tiempo real con los socios y previsión de la demanda impulsada por IA.",
    "questions": [
     "¿Necesita integrarse con múltiples socios comerciales o proveedores B2B?",
     "¿Busca optimizar sus procesos order-to-cash o procure-to-pay?",
     "¿Necesita visibilidad en tiempo real de la cadena de suministro con sus socios?",
-    "¿Gestiona un cumplimiento de pedidos multicanal complejo?"
+    "¿Gestiona procesos complejos de ejecución de pedidos multicanal?"
    ],
    "differentiators": [
     "Diseñado específicamente para integración B2B y EDI, con más de 50.000 conexiones con socios",
     "Inteligencia de la cadena de suministro y previsión de la demanda impulsadas por IA",
-    "Proxy seguro para el intercambio de datos con socios con cifrado de extremo a extremo",
+    "Proxy seguro para el intercambio de datos con socios, con cifrado de extremo a extremo",
     "Integración profunda con el ecosistema de automatización y datos de IBM"
    ]
   },
@@ -235,7 +235,7 @@ window.I18N.es = {
    ],
    "differentiators": [
     "Acciones automatizadas en tiempo real",
-    "Decisiones conscientes de las aplicaciones",
+    "Decisiones que tienen en cuenta las aplicaciones",
     "Optimización full-stack",
     "ROI demostrado en 30 días"
    ]
@@ -258,7 +258,7 @@ window.I18N.es = {
   },
   "cloudability": {
    "desc": "Plataforma de gestión y optimización de costes de nube para entornos multinube.",
-   "value": "Reduce el desperdicio en la nube en un 30 %, permite la asignación y repercusión de costes, y la previsión de costes de nube.",
+   "value": "Reduce el desperdicio en la nube en un 30 %, ofrece asignación y repercusión de costes y permite prever los costes de nube.",
    "questions": [
     "¿Sus facturas de nube aumentan de forma inesperada?",
     "¿Necesita asignar los costes de nube a las unidades de negocio?",
@@ -306,7 +306,7 @@ window.I18N.es = {
   },
   "vault": {
    "desc": "Plataforma de gestión de secretos para proteger, almacenar y controlar el acceso a tokens, contraseñas y certificados.",
-   "value": "Elimina los secretos codificados en el código, centraliza la gestión de secretos y permite su rotación automatizada.",
+   "value": "Elimina los secretos incrustados en el código, centraliza la gestión de secretos y permite su rotación automatizada.",
    "questions": [
     "¿Hay credenciales almacenadas en el código o en archivos de configuración?",
     "¿Necesita gestionar claves de API y certificados?",
@@ -417,8 +417,8 @@ window.I18N.es = {
    ]
   },
   "wca_ansible": {
-   "desc": "Programador en pareja con IA que acelera el desarrollo de software, la modernización de aplicaciones y la creación de scripts de automatización en lenguajes modernos y heredados como Java, Python, RPG, COBOL y PL/SQL — con capacidades agénticas que llevan el código del diseño a producción.",
-   "value": "Reduce las tareas de desarrollo de semanas a horas, con Premium Packages que aportan una especialización profunda para la modernización de IBM i, Z y Java — y escaneo de secretos integrado para llevar la seguridad al inicio del ciclo (shift left) desde el primer día.",
+   "desc": "Asistente de programación con IA que acelera el desarrollo de software, la modernización de aplicaciones y la creación de scripts de automatización en lenguajes modernos y heredados como Java, Python, RPG, COBOL y PL/SQL, con capacidades agénticas que llevan el código desde el diseño hasta producción.",
+   "value": "Reduce las tareas de desarrollo de semanas a horas, con Premium Packages que aportan una especialización profunda en la modernización de IBM i, Z y Java, y escaneo de secretos integrado para llevar la seguridad al inicio del ciclo (shift left) desde el primer día.",
    "questions": [
     "¿Dedican sus desarrolladores demasiado tiempo a escribir código repetitivo?",
     "¿Busca acelerar el desarrollo de aplicaciones?",
@@ -434,7 +434,7 @@ window.I18N.es = {
   },
   "confluent": {
    "desc": "Plataforma de streaming de nivel empresarial basada en Kafka, disponible como Confluent Cloud o autogestionada, que actúa como columna vertebral de datos en tiempo real de las soluciones de IBM de integración híbrida, datos e IA y modernización de mainframe.",
-   "value": "Actúa como columna vertebral universal de streaming que conecta las plataformas de integración, infraestructura e IA de IBM — tendiendo un puente entre la mensajería heredada basada en MQ y los flujos de eventos Kafka en tiempo real, alimentando los pipelines de watsonx y haciendo posible la automatización basada en eventos a escala empresarial.",
+   "value": "Actúa como columna vertebral universal de streaming que conecta las plataformas de integración, infraestructura e IA de IBM: tiende un puente entre la mensajería heredada basada en MQ y los flujos de eventos Kafka en tiempo real, alimenta los pipelines de watsonx y hace posible la automatización basada en eventos a escala empresarial.",
    "questions": [
     "¿Necesita procesar datos en tiempo real?",
     "¿Está creando arquitecturas basadas en eventos?",
@@ -444,15 +444,15 @@ window.I18N.es = {
     "¿Necesita transmitir datos desde IBM Z o sistemas mainframe a aplicaciones cloud-native?"
    ],
    "differentiators": [
-    "Alianza estratégica con IBM — certificado para nube híbrida y la pila de integración de IBM",
-    "Puente MQ — conecta de forma nativa la mensajería heredada de IBM MQ con los flujos de eventos Kafka",
+    "Alianza estratégica con IBM: certificado para la nube híbrida y la pila de integración de IBM",
+    "Puente MQ: conecta de forma nativa la mensajería heredada de IBM MQ con los flujos de eventos Kafka",
     "Alimenta los pipelines de watsonx.ai y watsonx.data con datos de streaming en tiempo real",
     "Ecosistema Kafka completo con soporte empresarial, RBAC y Schema Registry"
    ]
   },
   "ibm_pa": {
    "desc": "Plataforma de planificación y análisis financiero impulsada por IA para presupuestación, previsión y modelado de escenarios en autoservicio. Permite a los equipos financieros consolidar datos, crear modelos dinámicos y colaborar en la planificación financiera en toda la empresa con un motor de cálculo en memoria.",
-   "value": "Reduce la duración del ciclo de planificación en un 60 %, mejora la precisión de las previsiones en un 30 % y dota a los equipos financieros de análisis en autoservicio y modelado de escenarios impulsado por IA — eliminando la dependencia de las hojas de cálculo a escala empresarial.",
+   "value": "Reduce la duración del ciclo de planificación en un 60 %, mejora la precisión de las previsiones en un 30 % y dota a los equipos financieros de análisis en autoservicio y modelado de escenarios impulsado por IA, lo que elimina la dependencia de las hojas de cálculo a escala empresarial.",
    "questions": [
     "¿Sus procesos de presupuestación y previsión son muy manuales o se basan en hojas de cálculo?",
     "¿Necesita una mejor colaboración entre finanzas y los equipos de las unidades de negocio?",
@@ -477,7 +477,7 @@ window.I18N.es = {
    ],
    "differentiators": [
     "La certificación de seguridad más alta",
-    "Ratio de consolidación masivo",
+    "Ratio de consolidación muy elevado",
     "Cifrado generalizado",
     "Disponibilidad del 99,999 %"
    ]
@@ -547,8 +547,8 @@ window.I18N.es = {
    ]
   },
   "ibm_tls": {
-   "desc": "Servicio integral de mantenimiento de hardware y software, soporte y migración al final de la vida útil. Gestiona todo el ciclo de vida de los sistemas IBM y multifabricante, desde el despliegue hasta la retirada — incluido el soporte proactivo, la gestión de parches, las actualizaciones y las transiciones tecnológicas planificadas.",
-   "value": "Reduce las paradas no planificadas en un 95 %, ofrece costes predecibles del ciclo de vida de la infraestructura y garantiza transiciones tecnológicas fluidas sin ninguna interrupción operativa — respaldado por SLA líderes del sector y capacidades de diagnóstico proactivo.",
+   "desc": "Servicio integral de mantenimiento de hardware y software, soporte y migración al final de la vida útil. Gestiona todo el ciclo de vida de los sistemas IBM y multifabricante, desde el despliegue hasta la retirada, incluidos el soporte proactivo, la gestión de parches, las actualizaciones y las transiciones tecnológicas planificadas.",
+   "value": "Reduce las paradas no planificadas en un 95 %, ofrece costes predecibles del ciclo de vida de la infraestructura y garantiza transiciones tecnológicas fluidas sin ninguna interrupción operativa, todo ello respaldado por SLA líderes del sector y capacidades de diagnóstico proactivo.",
    "questions": [
     "¿Le preocupa el fin del soporte de sistemas IBM críticos?",
     "¿Necesita una gestión del ciclo de vida predecible y de coste fijo para su infraestructura?",
@@ -660,7 +660,7 @@ window.I18N.es = {
   },
   "storage_scale": {
    "desc": "Sistema de archivos paralelo de alto rendimiento para cargas de trabajo intensivas en datos y aplicaciones de IA.",
-   "value": "Ofrece un acceso a los datos 10 veces más rápido, permite compartir datos a escala global y admite una escala masiva.",
+   "value": "Ofrece un acceso a los datos 10 veces más rápido, permite compartir datos a escala global y admite despliegues a gran escala.",
    "questions": [
     "¿Tiene cargas de trabajo intensivas en datos?",
     "¿Ejecuta trabajos de entrenamiento de IA/ML?",
@@ -676,7 +676,7 @@ window.I18N.es = {
   },
   "envizi": {
    "desc": "IBM Envizi ESG Suite — plataforma de gestión del desempeño en sostenibilidad y ESG para hacer el seguimiento de datos de energía, carbono, agua y residuos y elaborar informes regulatorios de sostenibilidad.",
-   "value": "Automatiza la recopilación de datos ESG en instalaciones y cadenas de suministro, reduce el esfuerzo de elaboración de informes de sostenibilidad en ~70 % y facilita el cumplimiento de los marcos GRI, SASB, TCFD y CSRD.",
+   "value": "Automatiza la recopilación de datos ESG en instalaciones y cadenas de suministro, reduce el esfuerzo de elaboración de informes de sostenibilidad en torno a un 70 % y facilita el cumplimiento de los marcos GRI, SASB, TCFD y CSRD.",
    "questions": [
     "¿Le cuesta recopilar y consolidar los datos ESG de sus centros y su cadena de suministro?",
     "¿Necesita elaborar informes de sostenibilidad para marcos regulatorios como CSRD o TCFD?",
@@ -685,22 +685,22 @@ window.I18N.es = {
    ],
    "differentiators": [
     "Integración predefinida con Maximo para datos operativos y de activos",
-    "Marcos de informes regulatorios integrados — GRI, SASB, TCFD, CSRD",
+    "Marcos de informes regulatorios integrados: GRI, SASB, TCFD, CSRD",
     "Calidad de datos y detección de anomalías asistidas por IA",
     "SaaS cloud-native con rápida obtención de valor"
    ]
   },
   "elm_suite": {
    "desc": "IBM Engineering Lifecycle Management Suite — abarca la gestión de requisitos (DOORS Next), la gestión de flujos de trabajo de ingeniería (EWM), la gestión de pruebas (ETM) y la ingeniería basada en modelos (Rhapsody) para sectores regulados y críticos para la seguridad.",
-   "value": "Ofrece trazabilidad de ingeniería de extremo a extremo, desde los requisitos hasta el diseño, el desarrollo y las pruebas — reduciendo la repetición de trabajo en programas regulados y facilitando el cumplimiento de ISO 26262, DO-178C e IEC 61508.",
+   "value": "Ofrece trazabilidad de ingeniería de extremo a extremo, desde los requisitos hasta el diseño, el desarrollo y las pruebas, lo que reduce los retrabajos en programas regulados y facilita el cumplimiento de ISO 26262, DO-178C e IEC 61508.",
    "questions": [
     "¿Necesita trazabilidad completa desde los requisitos hasta las pruebas en programas críticos para la seguridad?",
     "¿Desarrolla productos que deben cumplir la normativa aeroespacial, de automoción o de dispositivos médicos?",
-    "¿Las solicitudes de cambio de ingeniería provocan repeticiones de trabajo y retrasos en los plazos?",
+    "¿Las solicitudes de cambio de ingeniería provocan retrabajos y retrasos en los plazos?",
     "¿Gestiona requisitos entre varios equipos u organizaciones?"
    ],
    "differentiators": [
-    "Suite ALM completa de un único proveedor — requisitos, flujos de trabajo, pruebas y modelado",
+    "Suite ALM completa de un único proveedor: requisitos, flujos de trabajo, pruebas y modelado",
     "Amplio soporte de cumplimiento de ISO 26262, DO-178C, IEC 61508 y FDA 21 CFR Part 11",
     "Integración nativa de IA con IBM Bob para requisitos y generación de código asistidos por IA",
     "La plataforma de ingeniería más veterana de IBM, con más de 30 años de implantaciones en sectores regulados"
@@ -708,7 +708,7 @@ window.I18N.es = {
   },
   "app_connect": {
    "desc": "IBM App Connect — plataforma de integración low-code/no-code para conectar aplicaciones y automatizar flujos de trabajo con más de 200 conectores predefinidos, disponible como App Connect Professional y App Connect Enterprise.",
-   "value": "Permite a usuarios de negocio y desarrolladores crear integraciones en horas en lugar de semanas — acelerando la transformación digital sin necesidad de un profundo conocimiento de integración.",
+   "value": "Permite a usuarios de negocio y desarrolladores crear integraciones en horas en lugar de semanas, lo que acelera la transformación digital sin necesidad de grandes conocimientos de integración.",
    "questions": [
     "¿Sus equipos de negocio necesitan conectar aplicaciones SaaS sin escribir código?",
     "¿Busca reducir la dependencia de desarrolladores especializados en integración?",
@@ -717,14 +717,14 @@ window.I18N.es = {
    ],
    "differentiators": [
     "Más de 200 conectores predefinidos para aplicaciones SaaS, en la nube y on-premises",
-    "Opciones low-code y full-code — App Connect Professional y Enterprise",
+    "Opciones low-code y full-code: App Connect Professional y Enterprise",
     "Seguridad, gobierno y registro de auditoría de nivel empresarial",
     "Opciones de despliegue nativas en IBM Cloud y on-premises"
    ]
   },
   "aspera": {
    "desc": "IBM Aspera — plataforma de transferencia a alta velocidad de archivos grandes y conjuntos de datos basada en el protocolo patentado FASP, diseñada para mover archivos masivos a larga distancia a una velocidad cercana a la de la línea, independientemente de las condiciones de la red.",
-   "value": "Transfiere archivos hasta 100 veces más rápido que TCP/FTP estándar en redes con alta latencia o pérdidas — fundamental para medios, genómica, ciencias de la vida y cualquier flujo de trabajo que mueva archivos de varios gigabytes.",
+   "value": "Transfiere archivos hasta 100 veces más rápido que TCP/FTP estándar en redes con alta latencia o pérdidas, algo fundamental para medios, genómica, ciencias de la vida y cualquier flujo de trabajo que mueva archivos de varios gigabytes.",
    "questions": [
     "¿Las transferencias de archivos grandes por la WAN tardan horas o días cuando deberían tardar minutos?",
     "¿Distribuye archivos grandes de medios, genómicos o de datos a socios o sedes de todo el mundo?",
@@ -740,7 +740,7 @@ window.I18N.es = {
   },
   "kubecost": {
    "desc": "IBM Kubecost — plataforma de supervisión y optimización de costes de Kubernetes que ofrece visibilidad en tiempo real del gasto por namespace, despliegue, etiqueta y equipo en entornos multiclúster.",
-   "value": "Proporciona a los equipos de ingeniería y finanzas una asignación precisa de los costes de Kubernetes y recomendaciones de dimensionamiento — reduciendo el desperdicio en la nube al identificar cargas de trabajo inactivas y sobredimensionadas a nivel de contenedor.",
+   "value": "Proporciona a los equipos de ingeniería y finanzas una asignación precisa de los costes de Kubernetes y recomendaciones de dimensionamiento, y reduce el desperdicio en la nube al identificar cargas de trabajo inactivas y sobredimensionadas a nivel de contenedor.",
    "questions": [
     "¿Sabe exactamente cuánto le cuesta cada carga de trabajo o equipo de Kubernetes?",
     "¿Sus facturas de nube crecen más rápido que su huella de Kubernetes?",
@@ -756,7 +756,7 @@ window.I18N.es = {
   },
   "ns1": {
    "desc": "IBM NS1 Connect — plataforma de DNS inteligente, gestión del tráfico y conectividad de red que ofrece DNS autoritativo con enrutamiento avanzado, direccionamiento del tráfico e infraestructura resistente a ataques DDoS.",
-   "value": "Ofrece tiempos de respuesta DNS globales inferiores a 10 ms con direccionamiento inteligente del tráfico — reduciendo la inactividad de las aplicaciones, mejorando el rendimiento para usuarios distribuidos por todo el mundo y proporcionando una primera línea de defensa de red resiliente.",
+   "value": "Ofrece tiempos de respuesta DNS globales inferiores a 10 ms con direccionamiento inteligente del tráfico: reduce la inactividad de las aplicaciones, mejora el rendimiento para usuarios distribuidos por todo el mundo y proporciona una primera línea de defensa de red resiliente.",
    "questions": [
     "¿Los fallos de DNS o una resolución lenta afectan a la disponibilidad de sus aplicaciones?",
     "¿Necesita dirigir a los usuarios de forma inteligente entre varios centros de datos o regiones de nube?",
@@ -772,7 +772,7 @@ window.I18N.es = {
   },
   "powervs": {
    "desc": "IBM Power Virtual Server (PowerVS) — infraestructura Power alojada en IBM Cloud, que ofrece el mismo rendimiento Power y la misma compatibilidad con IBM i / AIX que los Power Systems on-premises, como servicio en la nube totalmente gestionado.",
-   "value": "Permite a las organizaciones ampliar o migrar cargas de trabajo Power a la nube sin cambiar de plataforma — manteniendo la compatibilidad de las aplicaciones AIX e IBM i y obteniendo a la vez la elasticidad de la nube y un modelo de pago por uso.",
+   "value": "Permite a las organizaciones ampliar o migrar cargas de trabajo Power a la nube sin cambiar de plataforma, manteniendo la compatibilidad de las aplicaciones AIX e IBM i y obteniendo a la vez la elasticidad de la nube y un modelo de pago por uso.",
    "questions": [
     "¿Busca reducir su huella Power on-premises sin cambiar de plataforma sus aplicaciones AIX o IBM i?",
     "¿Necesita una solución de recuperación ante desastres en la nube para su parque de Power Systems?",
@@ -783,12 +783,12 @@ window.I18N.es = {
     "El único servicio en la nube que ofrece rendimiento Power nativo con compatibilidad AIX e IBM i",
     "Conexión de baja latencia con los servicios de IBM Cloud y watsonx",
     "Infraestructura gestionada por IBM con disponibilidad respaldada por SLA",
-    "Sin necesidad de cambiar de plataforma las aplicaciones — lift and shift de cargas de trabajo Power a la nube"
+    "Sin necesidad de cambiar de plataforma las aplicaciones: lift and shift de cargas de trabajo Power a la nube"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (infraestructura hiperconvergente) — plataforma definida por software de cómputo, almacenamiento y red que ejecuta Red Hat OpenShift y cargas de trabajo de IBM sobre una pila de hardware convergente, simplificando las operaciones del centro de datos para IA y nube híbrida.",
-   "value": "Reduce la complejidad del centro de datos al unificar cómputo, almacenamiento y red en una única plataforma gestionada — acortando los plazos de despliegue y ofreciendo una base validada y con soporte de IBM para cargas de trabajo OpenShift y de IA on-premises.",
+   "desc": "IBM Fusion HCI (infraestructura hiperconvergente) — plataforma definida por software de cómputo, almacenamiento y red que ejecuta Red Hat OpenShift y cargas de trabajo de IBM sobre una pila de hardware convergente, que simplifica las operaciones del centro de datos para IA y nube híbrida.",
+   "value": "Reduce la complejidad del centro de datos al unificar cómputo, almacenamiento y red en una única plataforma gestionada, lo que acorta los plazos de despliegue y ofrece una base validada y con soporte de IBM para cargas de trabajo OpenShift y de IA on-premises.",
    "questions": [
     "¿Busca simplificar su infraestructura on-premises para cargas de trabajo OpenShift o de IA?",
     "¿Necesita una plataforma validada y de un único proveedor para Red Hat OpenShift?",
@@ -804,7 +804,7 @@ window.I18N.es = {
   },
   "db2": {
    "desc": "IBM Db2 — sistema de gestión de bases de datos relacionales empresariales disponible on-premises y en la nube, con OLTP y analítica de alto rendimiento, capacidades de IA integradas y compatibilidad nativa con IBM Z, Power Systems e IBM i.",
-   "value": "Proporciona una base de datos transaccional fiable y de alto rendimiento para aplicaciones empresariales — con optimización de consultas por IA integrada, integración nativa con watsonx.data y décadas de fiabilidad en plataformas IBM.",
+   "value": "Proporciona una base de datos transaccional fiable y de alto rendimiento para aplicaciones empresariales, con optimización de consultas por IA integrada, integración nativa con watsonx.data y décadas de fiabilidad en plataformas IBM.",
    "questions": [
     "¿Busca reducir los costes de licencias de Oracle o SQL Server sin rediseñar sus aplicaciones?",
     "¿Necesita una base de datos con rendimiento probado en plataformas IBM Power o Z?",
@@ -820,7 +820,7 @@ window.I18N.es = {
   },
   "cognos": {
    "desc": "IBM Cognos Analytics — plataforma de business intelligence y analítica impulsada por IA para informes en autoservicio, cuadros de mando y exploración de datos, con gobierno y seguridad de datos empresariales integrados.",
-   "value": "Permite a los usuarios de negocio crear informes y cuadros de mando precisos y gobernados sin depender de TI — con preparación de datos asistida por IA, consultas en lenguaje natural y gobierno de nivel empresarial integrado.",
+   "value": "Permite a los usuarios de negocio crear informes y cuadros de mando precisos y gobernados sin depender de TI, con preparación de datos asistida por IA, consultas en lenguaje natural y gobierno de nivel empresarial integrado.",
    "questions": [
     "¿Sus usuarios de negocio dependen de TI para cada informe o cuadro de mando que necesitan?",
     "¿Su organización sigue generando informes críticos a partir de hojas de cálculo?",
@@ -831,7 +831,7 @@ window.I18N.es = {
     "Creación de informes asistida por IA y consultas en lenguaje natural integradas",
     "Gobierno empresarial con acceso basado en roles y linaje de datos",
     "Integración profunda con fuentes de datos de IBM como Db2, Planning Analytics y watsonx.data",
-    "Fuerte presencia en sectores regulados — servicios financieros, sanidad, sector público"
+    "Fuerte presencia en sectores regulados: servicios financieros, sanidad, sector público"
    ]
   }
  },
@@ -852,7 +852,7 @@ window.I18N.es = {
   "webmethods>event_auto": "webMethods activa la automatización de eventos para la integración en tiempo real",
   "maximo>event_auto": "Maximo utiliza la automatización de eventos para los flujos de trabajo de mantenimiento de activos",
   "maximo>api_connect": "Maximo expone los datos de activos a través de API Connect",
-  "wxdata>wxai": "watsonx.data proporciona la base de datos para los modelos de watsonx.ai",
+  "wxdata>wxai": "watsonx.data proporciona los cimientos de datos para los modelos de watsonx.ai",
   "wxdata>wxdi": "watsonx.data se integra con data intelligence para la catalogación",
   "wxdata>wxdint": "watsonx.data utiliza data integration para los pipelines de ingesta",
   "wxdata>wxgov": "watsonx.data aplica políticas de gobierno a los activos de datos",
@@ -902,7 +902,7 @@ window.I18N.es = {
   "wca_ansible>linuxone": "El Premium Package de IBM Bob para Z acelera la modernización del código mainframe en LinuxONE",
   "wca_ansible>aix": "IBM Bob acelera la modernización de aplicaciones heredadas en C y C++ que se ejecutan en cargas de trabajo Unix AIX",
   "wca_ansible>wxgov": "El código generado por IBM Bob se audita y gobierna mediante watsonx.governance",
-  "wca_ansible>vault": "IBM Bob analiza el código en busca de secretos codificados en él y lo refactoriza para utilizar Vault",
+  "wca_ansible>vault": "IBM Bob analiza el código en busca de secretos incrustados y lo refactoriza para utilizar Vault",
   "wca_ansible>verify": "IBM Bob genera código de integración seguro de autenticación, SSO y MFA para aplicaciones protegidas por Verify",
   "wca_ansible>instana": "IBM Bob se conecta a las herramientas de observabilidad para consultar métricas y registros desde el propio IDE",
   "wca_ansible>maximo": "IBM Bob acelera el desarrollo de aplicaciones e integraciones de Maximo con codificación asistida por IA",
@@ -973,12 +973,12 @@ window.I18N.es = {
   "envizi>wxdata": "Los conjuntos de datos ESG de Envizi fluyen hacia watsonx.data para la analítica de sostenibilidad y el modelado con IA",
   "envizi>ibm_pa": "Planning Analytics integra los datos de costes de carbono de Envizi para la planificación financiera de la sostenibilidad y el modelado de escenarios",
   "envizi>wxai": "watsonx.ai analiza los datos ESG de Envizi para generar información predictiva de sostenibilidad y detectar anomalías",
-  "elm_suite>wca_ansible": "IBM Bob genera código directamente a partir de los requisitos de ELM, cerrando el ciclo de la especificación a la implementación",
+  "elm_suite>wca_ansible": "IBM Bob genera código directamente a partir de los requisitos de ELM, lo que cierra el ciclo entre la especificación y la implementación",
   "elm_suite>concert": "Concert ofrece visibilidad operativa de los despliegues de aplicaciones gestionados con ELM",
   "elm_suite>api_connect": "ELM expone los artefactos de ingeniería y los datos de requisitos a través de API Connect para integrar la cadena de herramientas",
   "elm_suite>webmethods": "webMethods integra ELM con los sistemas empresariales para automatizar de extremo a extremo los flujos de trabajo de ingeniería",
   "app_connect>api_connect": "App Connect crea integraciones que API Connect expone después como API gobernadas y seguras",
-  "app_connect>webmethods": "App Connect gestiona las integraciones SaaS y en la nube, mientras webMethods cubre los patrones B2B y on-premises complejos — niveles de integración complementarios",
+  "app_connect>webmethods": "App Connect gestiona las integraciones SaaS y en la nube, mientras que webMethods cubre los patrones B2B y on-premises complejos: niveles de integración complementarios",
   "app_connect>event_auto": "Los flujos de trabajo de App Connect activan Event Automation para el procesamiento basado en eventos en tiempo real",
   "app_connect>wxorch": "watsonx Orchestrate utiliza App Connect para conectar agentes de IA con las aplicaciones SaaS de la empresa",
   "aspera>wxdata": "Aspera ofrece una ingesta a alta velocidad de grandes conjuntos de datos en watsonx.data para los pipelines de entrenamiento de IA",
@@ -991,7 +991,7 @@ window.I18N.es = {
   "ns1>verify": "El enrutamiento inteligente de NS1 dirige a los usuarios al punto de autenticación más cercano, mejorando el rendimiento y la resiliencia del SSO de Verify",
   "ns1>sevone": "Los datos de rendimiento de red de SevOne orientan las decisiones de direccionamiento del tráfico de NS1 para un enrutamiento óptimo",
   "ns1>concert": "Concert utiliza los datos de estado DNS de NS1 como parte de la supervisión de la disponibilidad de las aplicaciones",
-  "powervs>power": "PowerVS es la extensión en la nube de Power Systems — permite despliegues Power híbridos que abarcan on-premises e IBM Cloud",
+  "powervs>power": "PowerVS es la extensión en la nube de Power Systems: permite despliegues Power híbridos que abarcan on-premises e IBM Cloud",
   "powervs>aix": "Las cargas de trabajo AIX se ejecutan de forma nativa en PowerVS, lo que permite migrar a la nube sin cambios en el sistema operativo ni en las aplicaciones",
   "powervs>ibmi": "Las aplicaciones IBM i se ejecutan de forma nativa en PowerVS, lo que ofrece una vía hacia la nube para los parques IBM i heredados",
   "powervs>ibm_tls": "IBM TLS da soporte a la planificación de la transición y a la gestión del ciclo de vida en las migraciones de Power on-premises a PowerVS",
@@ -1003,12 +1003,12 @@ window.I18N.es = {
   "db2>wxdata": "Db2 es una fuente principal de datos transaccionales federada en watsonx.data para la analítica unificada y el entrenamiento de modelos de IA",
   "db2>wxdint": "watsonx.data integration ingiere y transforma los datos de Db2 para los pipelines posteriores de IA y analítica",
   "db2>guardium": "Guardium supervisa y audita toda la actividad de acceso a los datos de Db2 para el cumplimiento normativo y la seguridad de los datos",
-  "db2>ibmi": "Db2 for IBM i es la base de datos integrada en el núcleo de la plataforma IBM i — una relación nativa e integrada",
+  "db2>ibmi": "Db2 for IBM i es la base de datos integrada en el núcleo de la plataforma IBM i: una relación nativa e integrada",
   "db2>wca_ansible": "IBM Bob ayuda en la optimización de consultas de Db2, la modernización de esquemas y la migración de PL/SQL a Db2",
   "cognos>wxdata": "Cognos consulta watsonx.data como fuente de datos unificada para informes empresariales gobernados en todo el data lakehouse",
   "cognos>ibm_pa": "Cognos Analytics proporciona informes operativos y de gestión sobre los modelos financieros de Planning Analytics",
   "cognos>db2": "Cognos es uno de los principales consumidores de BI de los datos transaccionales de Db2 para cuadros de mando e informes empresariales",
   "cognos>wxai": "watsonx.ai enriquece Cognos con analítica predictiva e información generada por IA que se muestra en los cuadros de mando",
-  "cognos>guardium": "Guardium aplica políticas de acceso a los datos en las fuentes que consulta Cognos, garantizando informes conformes a la normativa"
+  "cognos>guardium": "Guardium aplica políticas de acceso a los datos en las fuentes que consulta Cognos para garantizar informes conformes a la normativa"
  }
 };

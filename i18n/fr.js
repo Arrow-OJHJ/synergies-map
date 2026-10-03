@@ -6,7 +6,7 @@ window.I18N.fr = {
   "language": "Langue",
   "toggleTheme": "Changer de thème",
   "toggleThemeTitle": "Basculer entre le thème clair et le thème sombre",
-  "searchPlaceholder": "Rechercher produits, descriptions, questions...",
+  "searchPlaceholder": "Rechercher des produits, descriptions, questions…",
   "mobSearchPlaceholder": "Rechercher des produits…",
   "searchAria": "Rechercher des produits",
   "clearSearch": "Effacer la recherche",
@@ -16,7 +16,7 @@ window.I18N.fr = {
   "detail": "Détail",
   "clearSelection": "Effacer la sélection",
   "loading": "Chargement…",
-  "footerHint": "Rechercher des produits · Cliquez sur un produit pour voir le détail",
+  "footerHint": "Recherchez des produits · Cliquez sur un produit pour voir le détail",
   "mobileFooterHint": "Touchez un produit pour explorer ses connexions",
   "close": "Fermer",
   "closeDrawer": "Fermer le panneau",
@@ -66,12 +66,12 @@ window.I18N.fr = {
  "products": {
   "api_connect": {
    "desc": "Plateforme de gestion des API d'entreprise pour créer, sécuriser et gérer des API dans des environnements cloud hybrides.",
-   "value": "Accélère la transformation numérique grâce à une intégration pilotée par les API, réduit de 50 % le temps d'intégration et améliore la productivité des développeurs.",
+   "value": "Accélère la transformation numérique grâce à une intégration pilotée par les API, réduit de 50 % le temps d'intégration et améliore la productivité des développeurs.",
    "questions": [
-    "Avez-vous plusieurs applications qui doivent partager des données ?",
-    "Développez-vous des applications mobiles ou web qui nécessitent des services back-end ?",
-    "Avez-vous besoin de monétiser vos données ou vos services via des API ?",
-    "Rencontrez-vous des difficultés avec des intégrations point à point ?"
+    "Avez-vous plusieurs applications qui doivent partager des données ?",
+    "Développez-vous des applications mobiles ou web qui nécessitent des services back-end ?",
+    "Avez-vous besoin de monétiser vos données ou vos services via des API ?",
+    "Rencontrez-vous des difficultés avec des intégrations point à point ?"
    ],
    "differentiators": [
     "Sécurité DataPower intégrée",
@@ -81,13 +81,13 @@ window.I18N.fr = {
    ]
   },
   "event_auto": {
-   "desc": "Plateforme d'automatisation événementielle pour l'automatisation des processus métier et la prise de décision en temps réel.",
-   "value": "Réduit de 70 % les interventions manuelles, permet de réagir en temps réel aux événements métier et améliore l'efficacité opérationnelle.",
+   "desc": "Plateforme d'automatisation pilotée par les événements pour automatiser les processus métier et prendre des décisions en temps réel.",
+   "value": "Réduit de 70 % les interventions manuelles, permet de réagir en temps réel aux événements métier et améliore l'efficacité opérationnelle.",
    "questions": [
-    "Avez-vous des processus métier qui exigent des réponses en temps réel ?",
-    "Surveillez-vous manuellement vos systèmes pour détecter des événements ?",
-    "Avez-vous besoin d'automatiser des workflows entre plusieurs systèmes ?",
-    "Cherchez-vous à réduire vos coûts opérationnels grâce à l'automatisation ?"
+    "Avez-vous des processus métier qui exigent des réponses en temps réel ?",
+    "Surveillez-vous manuellement vos systèmes pour détecter des événements ?",
+    "Avez-vous besoin d'automatiser des workflows entre plusieurs systèmes ?",
+    "Cherchez-vous à réduire vos coûts opérationnels grâce à l'automatisation ?"
    ],
    "differentiators": [
     "Moteur de règles métier intégré",
@@ -98,12 +98,12 @@ window.I18N.fr = {
   },
   "webmethods": {
    "desc": "Plateforme d'intégration complète pour connecter applications, données et terminaux dans des environnements hybrides.",
-   "value": "Accélère de 60 % les projets d'intégration, réduit les coûts de maintenance et offre une visibilité unifiée sur l'ensemble des intégrations.",
+   "value": "Accélère de 60 % les projets d'intégration, réduit les coûts de maintenance et offre une visibilité unifiée sur l'ensemble des intégrations.",
    "questions": [
-    "Avez-vous des systèmes historiques qui doivent s'intégrer à des applications modernes ?",
-    "Gérez-vous plusieurs outils d'intégration ?",
-    "Avez-vous besoin de capacités d'intégration B2B ?",
-    "Rencontrez-vous des difficultés de synchronisation des données entre systèmes ?"
+    "Avez-vous des systèmes historiques qui doivent s'intégrer à des applications modernes ?",
+    "Gérez-vous plusieurs outils d'intégration ?",
+    "Avez-vous besoin de capacités d'intégration B2B ?",
+    "Rencontrez-vous des difficultés de synchronisation des données entre systèmes ?"
    ],
    "differentiators": [
     "Plus de 30 ans d'expertise en intégration",
@@ -114,12 +114,12 @@ window.I18N.fr = {
   },
   "terraform": {
    "desc": "Outil d'Infrastructure as Code pour provisionner et gérer l'infrastructure cloud chez plusieurs fournisseurs.",
-   "value": "Réduit de 80 % le temps de déploiement de l'infrastructure, garantit la cohérence et permet le contrôle de version de l'infrastructure.",
+   "value": "Réduit de 80 % le temps de déploiement de l'infrastructure, garantit la cohérence et permet de versionner l'infrastructure.",
    "questions": [
-    "Provisionnez-vous manuellement votre infrastructure cloud ?",
-    "Avez-vous besoin de gérer une infrastructure chez plusieurs fournisseurs cloud ?",
-    "Cherchez-vous à standardiser vos déploiements d'infrastructure ?",
-    "Avez-vous besoin de suivre les évolutions de votre infrastructure dans le temps ?"
+    "Provisionnez-vous manuellement votre infrastructure cloud ?",
+    "Avez-vous besoin de gérer une infrastructure chez plusieurs fournisseurs cloud ?",
+    "Cherchez-vous à standardiser vos déploiements d'infrastructure ?",
+    "Avez-vous besoin de suivre les évolutions de votre infrastructure dans le temps ?"
    ],
    "differentiators": [
     "Prise en charge multicloud",
@@ -130,12 +130,12 @@ window.I18N.fr = {
   },
   "concert": {
    "desc": "Plateforme de gestion des applications pilotée par l'IA, offrant une visibilité et un contrôle unifiés dans les environnements cloud hybrides.",
-   "value": "Réduit le MTTR de 40 %, offre une visibilité à 360 degrés sur les applications et automatise la résolution des incidents courants.",
+   "value": "Réduit le MTTR de 40 %, offre une visibilité à 360 degrés sur les applications et automatise la résolution des incidents courants.",
    "questions": [
-    "Manquez-vous de visibilité sur votre parc applicatif ?",
-    "Gérez-vous des applications sur plusieurs clouds ?",
-    "Avez-vous besoin de réduire le temps moyen de résolution ?",
-    "Cherchez-vous à automatiser les tâches de gestion des applications ?"
+    "Manquez-vous de visibilité sur votre parc applicatif ?",
+    "Gérez-vous des applications sur plusieurs clouds ?",
+    "Avez-vous besoin de réduire le temps moyen de résolution ?",
+    "Cherchez-vous à automatiser les tâches de gestion des applications ?"
    ],
    "differentiators": [
     "Analyses pilotées par l'IA",
@@ -146,28 +146,28 @@ window.I18N.fr = {
   },
   "maximo": {
    "desc": "Plateforme de gestion des actifs d'entreprise pour gérer les actifs physiques, la maintenance et les opérations.",
-   "value": "Augmente de 20 % la disponibilité des actifs, réduit de 25 % les coûts de maintenance et prolonge le cycle de vie des actifs.",
+   "value": "Augmente de 20 % la disponibilité des actifs, réduit de 25 % les coûts de maintenance et prolonge le cycle de vie des actifs.",
    "questions": [
-    "Gérez-vous des actifs physiques ou des installations ?",
-    "Suivez-vous la maintenance manuellement ?",
-    "Avez-vous besoin d'optimiser la performance de vos actifs ?",
-    "Cherchez-vous à mettre en place la maintenance prédictive ?"
+    "Gérez-vous des actifs physiques ou des installations ?",
+    "Suivez-vous la maintenance manuellement ?",
+    "Avez-vous besoin d'optimiser la performance de vos actifs ?",
+    "Cherchez-vous à mettre en place la maintenance prédictive ?"
    ],
    "differentiators": [
     "Maintenance prédictive pilotée par l'IA",
     "Conception mobile-first",
     "Intégration IoT",
-    "Modèles spécifiques par secteur"
+    "Modèles sectoriels"
    ]
   },
   "ibm_mq": {
    "desc": "Middleware orienté messages d'entreprise pour une messagerie asynchrone fiable dans les environnements hybrides. Garantit la livraison des messages pour les applications critiques, y compris sur mainframe, dans le cloud et sur site.",
-   "value": "Garantit une fiabilité de livraison des messages de 99,99 %, réduit le couplage entre applications et permet une intégration en temps réel entre plateformes, mainframe et cloud compris, avec prise en charge native des transactions.",
+   "value": "Garantit une fiabilité de livraison des messages de 99,99 %, réduit le couplage entre applications et permet une intégration en temps réel entre plateformes, mainframe et cloud compris, avec prise en charge native des transactions.",
    "questions": [
-    "Avez-vous des applications qui nécessitent une messagerie fiable et garantie ?",
-    "Intégrez-vous des systèmes entre environnements mainframe et cloud ?",
-    "Avez-vous besoin d'une messagerie transactionnelle avec garantie de livraison ?",
-    "Construisez-vous des architectures événementielles qui exigent de la fiabilité ?"
+    "Avez-vous des applications qui nécessitent une messagerie fiable et garantie ?",
+    "Intégrez-vous des systèmes entre environnements mainframe et cloud ?",
+    "Avez-vous besoin d'une messagerie transactionnelle avec garantie de livraison ?",
+    "Construisez-vous des architectures événementielles qui exigent de la fiabilité ?"
    ],
    "differentiators": [
     "Livraison garantie avec prise en charge transactionnelle complète",
@@ -177,13 +177,13 @@ window.I18N.fr = {
    ]
   },
   "ibm_sterling": {
-   "desc": "Portefeuille complet de supply chain et d'intégration B2B pour gérer l'exécution des commandes, la visibilité de la supply chain et la connectivité avec les partenaires. Combine gestion des commandes, intelligence supply chain, intégration B2B et échange de données sécurisé au sein des réseaux de partenaires commerciaux.",
-   "value": "Accélère de 70 % l'intégration B2B, réduit de 40 % le cycle de traitement des commandes et offre une visibilité de bout en bout sur la supply chain, avec collaboration en temps réel avec les partenaires et prévision de la demande pilotée par l'IA.",
+   "desc": "Portefeuille complet de solutions de supply chain et d'intégration B2B pour gérer l'exécution des commandes, la visibilité de la supply chain et la connectivité avec les partenaires. Combine gestion des commandes, intelligence supply chain, intégration B2B et échange de données sécurisé au sein des réseaux de partenaires commerciaux.",
+   "value": "Accélère de 70 % l'intégration B2B, réduit de 40 % le cycle de traitement des commandes et offre une visibilité de bout en bout sur la supply chain, avec collaboration en temps réel avec les partenaires et prévision de la demande pilotée par l'IA.",
    "questions": [
-    "Avez-vous besoin de vous intégrer à de multiples partenaires commerciaux ou fournisseurs B2B ?",
-    "Cherchez-vous à optimiser vos processus order-to-cash ou procure-to-pay ?",
-    "Avez-vous besoin d'une visibilité en temps réel sur la supply chain avec vos partenaires ?",
-    "Gérez-vous une exécution des commandes multicanale complexe ?"
+    "Avez-vous besoin de vous intégrer à de multiples partenaires commerciaux ou fournisseurs B2B ?",
+    "Cherchez-vous à optimiser vos processus order-to-cash ou procure-to-pay ?",
+    "Avez-vous besoin d'une visibilité en temps réel sur la supply chain avec vos partenaires ?",
+    "Devez-vous gérer une exécution des commandes multicanale complexe ?"
    ],
    "differentiators": [
     "Conçu pour l'intégration B2B et l'EDI, avec plus de 50 000 connexions partenaires",
@@ -194,12 +194,12 @@ window.I18N.fr = {
   },
   "instana": {
    "desc": "Supervision automatisée des performances applicatives, avec analyses pilotées par l'IA, pour les architectures cloud-native et microservices.",
-   "value": "Réduit le MTTD de 90 %, assure la découverte et la supervision automatiques, et offre une granularité d'une seconde pour le dépannage.",
+   "value": "Réduit le MTTD de 90 %, assure la découverte et la supervision automatiques, et offre une granularité d'une seconde pour le dépannage.",
    "questions": [
-    "Avez-vous des applications en microservices ou conteneurisées ?",
-    "Avez-vous du mal à identifier les goulets d'étranglement de performance ?",
-    "Avez-vous besoin d'une supervision applicative en temps réel ?",
-    "Rencontrez-vous fréquemment des incidents applicatifs ?"
+    "Vos applications reposent-elles sur des microservices ou des conteneurs ?",
+    "Avez-vous du mal à identifier les goulets d'étranglement de performance ?",
+    "Avez-vous besoin d'une supervision applicative en temps réel ?",
+    "Rencontrez-vous fréquemment des incidents applicatifs ?"
    ],
    "differentiators": [
     "Granularité d'une seconde",
@@ -210,12 +210,12 @@ window.I18N.fr = {
   },
   "sevone": {
    "desc": "Plateforme de supervision et d'analyse des performances réseau pour gérer des infrastructures réseau complexes.",
-   "value": "Améliore de 95 % la visibilité réseau, réduit de 40 % les incidents réseau et permet une planification proactive des capacités.",
+   "value": "Améliore de 95 % la visibilité réseau, réduit de 40 % les incidents réseau et permet une planification proactive des capacités.",
    "questions": [
-    "Gérez-vous une infrastructure réseau complexe ?",
-    "Rencontrez-vous des problèmes de performance réseau ?",
-    "Avez-vous besoin d'une meilleure visibilité sur le trafic réseau ?",
-    "Prévoyez-vous des extensions de capacité réseau ?"
+    "Gérez-vous une infrastructure réseau complexe ?",
+    "Rencontrez-vous des problèmes de performance réseau ?",
+    "Avez-vous besoin d'une meilleure visibilité sur le trafic réseau ?",
+    "Prévoyez-vous des extensions de capacité réseau ?"
    ],
    "differentiators": [
     "Évolutif jusqu'à des millions de métriques",
@@ -226,12 +226,12 @@ window.I18N.fr = {
   },
   "turbonomic": {
    "desc": "Plateforme de gestion des ressources applicatives qui optimise en continu l'allocation des ressources en temps réel.",
-   "value": "Réduit les coûts cloud de 30 à 50 %, améliore de 30 % les performances applicatives et automatise l'optimisation des ressources.",
+   "value": "Réduit les coûts cloud de 30 à 50 %, améliore de 30 % les performances applicatives et automatise l'optimisation des ressources.",
    "questions": [
-    "Vos coûts cloud sont-ils plus élevés que prévu ?",
-    "Rencontrez-vous des problèmes de performance liés à des contraintes de ressources ?",
-    "Dimensionnez-vous manuellement vos VM ou vos conteneurs ?",
-    "Avez-vous besoin d'optimiser l'utilisation de vos ressources ?"
+    "Vos coûts cloud sont-ils plus élevés que prévu ?",
+    "Rencontrez-vous des problèmes de performance liés à des contraintes de ressources ?",
+    "Dimensionnez-vous manuellement vos VM ou vos conteneurs ?",
+    "Avez-vous besoin d'optimiser l'utilisation de vos ressources ?"
    ],
    "differentiators": [
     "Actions automatisées en temps réel",
@@ -244,10 +244,10 @@ window.I18N.fr = {
    "desc": "Plateforme de Technology Business Management pour gérer et optimiser les dépenses et les investissements IT.",
    "value": "Offre une transparence totale sur les coûts IT, favorise des décisions fondées sur les données et optimise les investissements du portefeuille IT.",
    "questions": [
-    "Connaissez-vous le coût réel de votre IT par service ou par application ?",
-    "Avez-vous du mal à justifier les dépenses IT auprès des métiers ?",
-    "Avez-vous besoin d'optimiser votre budget IT ?",
-    "Planifiez-vous vos investissements IT sans visibilité claire sur le ROI ?"
+    "Connaissez-vous le coût réel de votre IT par service ou par application ?",
+    "Avez-vous du mal à justifier les dépenses IT auprès des métiers ?",
+    "Avez-vous besoin d'optimiser votre budget IT ?",
+    "Planifiez-vous vos investissements IT sans visibilité claire sur le ROI ?"
    ],
    "differentiators": [
     "Plateforme TBM leader du marché",
@@ -258,12 +258,12 @@ window.I18N.fr = {
   },
   "cloudability": {
    "desc": "Plateforme de gestion et d'optimisation des coûts cloud pour les environnements multicloud.",
-   "value": "Réduit de 30 % le gaspillage cloud, permet l'allocation et la refacturation des coûts, et la prévision des coûts cloud.",
+   "value": "Réduit de 30 % le gaspillage cloud et permet l'allocation, la refacturation et la prévision des coûts cloud.",
    "questions": [
-    "Vos factures cloud augmentent-elles de façon inattendue ?",
-    "Avez-vous besoin de répartir les coûts cloud entre les entités métier ?",
-    "Utilisez-vous plusieurs fournisseurs cloud ?",
-    "Avez-vous des ressources cloud inutilisées ou sous-utilisées ?"
+    "Vos factures cloud augmentent-elles de façon inattendue ?",
+    "Avez-vous besoin de répartir les coûts cloud entre les entités métier ?",
+    "Utilisez-vous plusieurs fournisseurs cloud ?",
+    "Avez-vous des ressources cloud inutilisées ou sous-utilisées ?"
    ],
    "differentiators": [
     "Prise en charge multicloud",
@@ -276,10 +276,10 @@ window.I18N.fr = {
    "desc": "Plateforme de sécurité et de protection des données pour découvrir, classer et protéger les données sensibles.",
    "value": "Garantit la conformité aux réglementations sur les données, prévient les violations de données et assure une surveillance complète de l'activité sur les données.",
    "questions": [
-    "Stockez-vous des données clients ou financières sensibles ?",
-    "Êtes-vous soumis à des réglementations sur la protection des données (RGPD, CCPA) ?",
-    "Avez-vous déjà subi des incidents de sécurité des données ?",
-    "Avez-vous besoin de surveiller l'accès et l'activité sur vos bases de données ?"
+    "Stockez-vous des données clients ou financières sensibles ?",
+    "Êtes-vous soumis à des réglementations sur la protection des données (RGPD, CCPA) ?",
+    "Avez-vous déjà subi des incidents de sécurité des données ?",
+    "Avez-vous besoin de surveiller l'accès et l'activité sur vos bases de données ?"
    ],
    "differentiators": [
     "Surveillance en temps réel",
@@ -290,12 +290,12 @@ window.I18N.fr = {
   },
   "verify": {
    "desc": "Plateforme de gestion des identités et des accès pour sécuriser l'authentification et les autorisations des utilisateurs.",
-   "value": "Réduit de 60 % les risques de sécurité, améliore l'expérience utilisateur grâce au SSO et garantit le respect des politiques d'accès.",
+   "value": "Réduit de 60 % les risques de sécurité, améliore l'expérience utilisateur grâce au SSO et garantit le respect des politiques d'accès.",
    "questions": [
-    "Vos utilisateurs accèdent-ils à plusieurs applications avec des mots de passe différents ?",
-    "Craignez-vous les accès non autorisés ?",
-    "Avez-vous besoin d'une authentification multifacteur ?",
-    "Gérez-vous les accès utilisateurs manuellement ?"
+    "Vos utilisateurs accèdent-ils à plusieurs applications avec des mots de passe différents ?",
+    "Craignez-vous les accès non autorisés ?",
+    "Avez-vous besoin d'une authentification multifacteur ?",
+    "Gérez-vous les accès utilisateurs manuellement ?"
    ],
    "differentiators": [
     "Authentification basée sur le risque",
@@ -308,10 +308,10 @@ window.I18N.fr = {
    "desc": "Plateforme de gestion des secrets pour sécuriser, stocker et contrôler l'accès aux jetons, mots de passe et certificats.",
    "value": "Élimine les secrets codés en dur, centralise la gestion des secrets et permet la rotation automatisée des secrets.",
    "questions": [
-    "Des identifiants sont-ils stockés dans le code ou dans des fichiers de configuration ?",
-    "Avez-vous besoin de gérer des clés API et des certificats ?",
-    "Craignez-vous la prolifération des secrets ?",
-    "Avez-vous besoin de faire tourner régulièrement vos secrets ?"
+    "Des identifiants sont-ils stockés dans le code ou dans des fichiers de configuration ?",
+    "Avez-vous besoin de gérer des clés API et des certificats ?",
+    "Craignez-vous la prolifération des secrets ?",
+    "Avez-vous besoin d'effectuer une rotation régulière de vos secrets ?"
    ],
    "differentiators": [
     "Génération dynamique de secrets",
@@ -322,12 +322,12 @@ window.I18N.fr = {
   },
   "wxai": {
    "desc": "Studio d'IA d'entreprise pour entraîner, valider et déployer des modèles de fondation et des modèles de machine learning.",
-   "value": "Accélère de 70 % le développement de l'IA, réduit les coûts d'entraînement des modèles et permet une gouvernance responsable de l'IA.",
+   "value": "Accélère de 70 % le développement de l'IA, réduit les coûts d'entraînement des modèles et permet une gouvernance responsable de l'IA.",
    "questions": [
-    "Cherchez-vous à développer des applications d'IA ?",
-    "Avez-vous besoin d'entraîner des modèles d'IA personnalisés ?",
-    "Les biais et l'explicabilité de l'IA vous préoccupent-ils ?",
-    "Souhaitez-vous tirer parti de modèles de fondation pour vos cas d'usage ?"
+    "Cherchez-vous à développer des applications d'IA ?",
+    "Avez-vous besoin d'entraîner des modèles d'IA personnalisés ?",
+    "Les biais et l'explicabilité de l'IA vous préoccupent-ils ?",
+    "Souhaitez-vous tirer parti de modèles de fondation pour vos cas d'usage ?"
    ],
    "differentiators": [
     "Modèles de fondation d'entreprise",
@@ -338,12 +338,12 @@ window.I18N.fr = {
   },
   "wxdata": {
    "desc": "Plateforme lakehouse ouverte pour accéder aux données et les partager dans des environnements cloud hybrides.",
-   "value": "Réduit de 50 % les coûts d'entrepôt de données, permet d'interroger plusieurs sources de données et offre une architecture de données ouverte.",
+   "value": "Réduit de 50 % les coûts d'entrepôt de données, permet d'interroger plusieurs sources de données et offre une architecture de données ouverte.",
    "questions": [
-    "Vos données sont-elles réparties dans de multiples silos ?",
-    "Vos coûts d'entrepôt de données sont-ils trop élevés ?",
-    "Avez-vous besoin d'interroger des données réparties sur différents systèmes de stockage ?",
-    "Cherchez-vous à moderniser votre architecture de données ?"
+    "Vos données sont-elles réparties dans de multiples silos ?",
+    "Vos coûts d'entrepôt de données sont-ils trop élevés ?",
+    "Avez-vous besoin d'interroger des données réparties sur différents systèmes de stockage ?",
+    "Cherchez-vous à moderniser votre architecture de données ?"
    ],
    "differentiators": [
     "Architecture lakehouse ouverte",
@@ -354,12 +354,12 @@ window.I18N.fr = {
   },
   "wxdi": {
    "desc": "Plateforme de catalogue et de gouvernance des données pilotée par l'IA pour découvrir, comprendre et gérer les données de l'entreprise.",
-   "value": "Réduit de 80 % le temps de recherche des données, améliore leur qualité et garantit la conformité et le lignage des données.",
+   "value": "Réduit de 80 % le temps de recherche des données, améliore leur qualité et garantit la conformité et le lignage des données.",
    "questions": [
-    "Vos utilisateurs ont-ils du mal à trouver les données dont ils ont besoin ?",
-    "La qualité des données est-elle un sujet de préoccupation ?",
-    "Avez-vous besoin de suivre le lignage des données ?",
-    "Êtes-vous soumis à des réglementations sur la gouvernance des données ?"
+    "Vos utilisateurs ont-ils du mal à trouver les données dont ils ont besoin ?",
+    "La qualité des données est-elle un sujet de préoccupation ?",
+    "Avez-vous besoin de suivre le lignage des données ?",
+    "Êtes-vous soumis à des réglementations sur la gouvernance des données ?"
    ],
    "differentiators": [
     "Découverte pilotée par l'IA",
@@ -370,12 +370,12 @@ window.I18N.fr = {
   },
   "wxdint": {
    "desc": "Plateforme d'intégration de données pour déplacer et transformer les données dans des environnements cloud hybrides.",
-   "value": "Accélère de 60 % l'intégration des données, prend en charge le traitement en temps réel et par lots, et fournit des fonctions de qualité des données.",
+   "value": "Accélère de 60 % l'intégration des données, prend en charge le traitement en temps réel et par lots, et fournit des fonctions de qualité des données.",
    "questions": [
-    "Avez-vous régulièrement besoin de déplacer des données entre systèmes ?",
-    "Effectuez-vous des transformations de données manuelles ?",
-    "Avez-vous besoin d'une intégration de données en temps réel ?",
-    "Des problèmes de qualité des données affectent-ils votre activité ?"
+    "Avez-vous régulièrement besoin de déplacer des données entre systèmes ?",
+    "Effectuez-vous des transformations de données manuelles ?",
+    "Avez-vous besoin d'une intégration de données en temps réel ?",
+    "Des problèmes de qualité des données affectent-ils votre activité ?"
    ],
    "differentiators": [
     "Intégration en cloud hybride",
@@ -388,10 +388,10 @@ window.I18N.fr = {
    "desc": "Plateforme de gouvernance de l'IA pour gérer le cycle de vie des modèles d'IA, garantir la conformité et surveiller la performance des modèles.",
    "value": "Garantit la conformité et l'éthique de l'IA, réduit les risques liés à l'IA et offre une transparence complète sur les modèles d'IA.",
    "questions": [
-    "Déployez-vous des modèles d'IA en production ?",
-    "Avez-vous besoin de garantir l'équité et l'explicabilité de l'IA ?",
-    "La dérive des modèles d'IA vous préoccupe-t-elle ?",
-    "Devez-vous vous conformer à des réglementations sur l'IA ?"
+    "Déployez-vous des modèles d'IA en production ?",
+    "Avez-vous besoin de garantir l'équité et l'explicabilité de l'IA ?",
+    "La dérive des modèles d'IA vous préoccupe-t-elle ?",
+    "Devez-vous vous conformer à des réglementations sur l'IA ?"
    ],
    "differentiators": [
     "Cycle de vie complet de l'IA",
@@ -402,12 +402,12 @@ window.I18N.fr = {
   },
   "wxorch": {
    "desc": "Plateforme d'automatisation pilotée par l'IA pour concevoir et déployer des workflows intelligents et des assistants numériques.",
-   "value": "Automatise 80 % des tâches répétitives, améliore la productivité des collaborateurs et fournit des interfaces d'IA conversationnelle.",
+   "value": "Automatise 80 % des tâches répétitives, améliore la productivité des collaborateurs et fournit des interfaces d'IA conversationnelle.",
    "questions": [
-    "Vos collaborateurs consacrent-ils du temps à des tâches répétitives ?",
-    "Cherchez-vous à créer des chatbots ou des assistants virtuels ?",
-    "Avez-vous besoin d'automatiser des processus métier avec l'IA ?",
-    "Cherchez-vous à améliorer la productivité de vos collaborateurs ?"
+    "Vos collaborateurs consacrent-ils du temps à des tâches répétitives ?",
+    "Cherchez-vous à créer des chatbots ou des assistants virtuels ?",
+    "Avez-vous besoin d'automatiser des processus métier avec l'IA ?",
+    "Cherchez-vous à améliorer la productivité de vos collaborateurs ?"
    ],
    "differentiators": [
     "Automatisation pilotée par l'IA",
@@ -418,12 +418,12 @@ window.I18N.fr = {
   },
   "wca_ansible": {
    "desc": "Binôme de programmation IA qui accélère le développement logiciel, la modernisation des applications et l'écriture de scripts d'automatisation dans des langages modernes et historiques, dont Java, Python, RPG, COBOL et PL/SQL — avec des capacités agentiques qui mènent le code de la conception à la production.",
-   "value": "Ramène des tâches de développement de plusieurs semaines à quelques heures, avec des Premium Packages offrant une spécialisation poussée pour la modernisation IBM i, Z et Java — et une détection des secrets intégrée pour intégrer la sécurité dès le premier jour (shift left).",
+   "value": "Ramène des tâches de développement de plusieurs semaines à quelques heures, avec des Premium Packages offrant une spécialisation poussée pour la modernisation IBM i, Z et Java — et une détection des secrets intégrée pour prendre en compte la sécurité dès le premier jour (shift left).",
    "questions": [
-    "Vos développeurs passent-ils trop de temps à écrire du code répétitif ?",
-    "Cherchez-vous à accélérer le développement d'applications ?",
-    "Exploitez-vous des applications RPG, COBOL ou PL/SQL historiques à moderniser ?",
-    "Avez-vous besoin d'accélérer le développement d'agents et d'outils pour watsonx Orchestrate ?"
+    "Vos développeurs passent-ils trop de temps à écrire du code répétitif ?",
+    "Cherchez-vous à accélérer le développement d'applications ?",
+    "Exploitez-vous des applications RPG, COBOL ou PL/SQL historiques à moderniser ?",
+    "Avez-vous besoin d'accélérer le développement d'agents et d'outils pour watsonx Orchestrate ?"
    ],
    "differentiators": [
     "SDLC agentique de la conception à la production",
@@ -436,12 +436,12 @@ window.I18N.fr = {
    "desc": "Plateforme de streaming de niveau entreprise basée sur Kafka, disponible en Confluent Cloud ou en version autogérée, qui constitue la colonne vertébrale de données en temps réel des solutions IBM d'intégration hybride, de Données & IA et de modernisation mainframe.",
    "value": "Joue le rôle de colonne vertébrale universelle de streaming reliant les plateformes IBM d'intégration, d'infrastructure et d'IA — en faisant le pont entre la messagerie historique basée sur MQ et les flux d'événements Kafka en temps réel, en alimentant les pipelines watsonx et en permettant l'automatisation événementielle à l'échelle de l'entreprise.",
    "questions": [
-    "Avez-vous besoin de traiter des données en temps réel ?",
-    "Construisez-vous des architectures événementielles ?",
-    "Avez-vous plusieurs systèmes qui doivent partager des données en continu ?",
-    "Rencontrez-vous des goulets d'étranglement dans vos pipelines de données ?",
-    "Utilisez-vous IBM MQ et souhaitez-vous évoluer vers des architectures de streaming en temps réel ?",
-    "Avez-vous besoin de diffuser des données depuis IBM Z ou des systèmes mainframe vers des applications cloud-native ?"
+    "Avez-vous besoin de traiter des données en temps réel ?",
+    "Construisez-vous des architectures événementielles ?",
+    "Avez-vous plusieurs systèmes qui doivent partager des données en continu ?",
+    "Rencontrez-vous des goulets d'étranglement dans vos pipelines de données ?",
+    "Utilisez-vous IBM MQ et souhaitez-vous évoluer vers des architectures de streaming en temps réel ?",
+    "Avez-vous besoin de diffuser des données depuis IBM Z ou des systèmes mainframe vers des applications cloud-native ?"
    ],
    "differentiators": [
     "Partenariat stratégique avec IBM — certifié pour le cloud hybride et la pile d'intégration IBM",
@@ -452,12 +452,12 @@ window.I18N.fr = {
   },
   "ibm_pa": {
    "desc": "Plateforme de planification et d'analyse financières pilotée par l'IA pour la budgétisation, les prévisions et la modélisation de scénarios en libre-service. Permet aux équipes financières de consolider les données, de construire des modèles dynamiques et de collaborer sur la planification financière à l'échelle de l'entreprise grâce à un moteur de calcul en mémoire.",
-   "value": "Réduit de 60 % la durée des cycles de planification, améliore de 30 % la précision des prévisions et donne aux équipes financières l'autonomie de l'analyse en libre-service et de la modélisation de scénarios pilotée par l'IA — en éliminant la dépendance aux tableurs à l'échelle de l'entreprise.",
+   "value": "Réduit de 60 % la durée des cycles de planification, améliore de 30 % la précision des prévisions et rend les équipes financières autonomes grâce à l'analyse en libre-service et à la modélisation de scénarios pilotée par l'IA — en éliminant la dépendance aux tableurs à l'échelle de l'entreprise.",
    "questions": [
-    "Vos processus de budgétisation et de prévision sont-ils très manuels ou basés sur des tableurs ?",
-    "Avez-vous besoin d'une meilleure collaboration entre la finance et les équipes métier ?",
-    "Rencontrez-vous des difficultés de précision des prévisions ou de rapidité de planification de scénarios ?",
-    "Avez-vous besoin de consolider des données financières issues de plusieurs systèmes sources ?"
+    "Vos processus de budgétisation et de prévision sont-ils très manuels ou basés sur des tableurs ?",
+    "Avez-vous besoin d'une meilleure collaboration entre la finance et les équipes métier ?",
+    "Avez-vous du mal à fiabiliser vos prévisions ou à planifier rapidement vos scénarios ?",
+    "Avez-vous besoin de consolider des données financières issues de plusieurs systèmes sources ?"
    ],
    "differentiators": [
     "Moteur de calcul en mémoire TM1 pour une modélisation multidimensionnelle instantanée",
@@ -468,28 +468,28 @@ window.I18N.fr = {
   },
   "linuxone": {
    "desc": "Plateforme de serveurs Linux d'entreprise offrant sécurité, évolutivité et fiabilité pour les charges de travail critiques.",
-   "value": "Réduit de 75 % l'empreinte de l'infrastructure, offre une disponibilité de 99,999 % et une sécurité de premier plan.",
+   "value": "Réduit de 75 % l'empreinte de l'infrastructure, offre une disponibilité de 99,999 % et une sécurité de premier plan.",
    "questions": [
-    "Avez-vous des charges de travail Linux critiques ?",
-    "La sécurité et la conformité vous préoccupent-elles ?",
-    "Avez-vous besoin de consolider vos serveurs Linux ?",
-    "Cherchez-vous à réduire l'empreinte de votre datacenter ?"
+    "Avez-vous des charges de travail Linux critiques ?",
+    "La sécurité et la conformité vous préoccupent-elles ?",
+    "Avez-vous besoin de consolider vos serveurs Linux ?",
+    "Cherchez-vous à réduire l'empreinte de votre datacenter ?"
    ],
    "differentiators": [
     "Certification de sécurité la plus élevée",
-    "Ratio de consolidation massif",
+    "Taux de consolidation très élevé",
     "Chiffrement généralisé",
-    "Disponibilité de 99,999 %"
+    "Disponibilité de 99,999 %"
    ]
   },
   "power": {
    "desc": "Plateforme de serveurs d'entreprise optimisée pour les charges de travail intensives en données, l'IA et le cloud hybride.",
-   "value": "Offre des performances par cœur 2 à 3 fois supérieures, réduit le TCO de 40 % et intègre la virtualisation.",
+   "value": "Offre des performances par cœur 2 à 3 fois supérieures, réduit le TCO de 40 % et intègre la virtualisation.",
    "questions": [
-    "Exploitez-vous SAP, Oracle ou d'autres applications d'entreprise ?",
-    "Recherchez-vous de meilleures performances pour vos charges de travail d'IA ?",
-    "Avez-vous besoin de haute disponibilité pour vos applications critiques ?",
-    "Les coûts de licences sur x86 vous préoccupent-ils ?"
+    "Exploitez-vous SAP, Oracle ou d'autres applications d'entreprise ?",
+    "Recherchez-vous de meilleures performances pour vos charges de travail d'IA ?",
+    "Avez-vous besoin de haute disponibilité pour vos applications critiques ?",
+    "Les coûts de licences sur x86 vous préoccupent-ils ?"
    ],
    "differentiators": [
     "Performances par cœur supérieures",
@@ -500,12 +500,12 @@ window.I18N.fr = {
   },
   "aix": {
    "desc": "Système d'exploitation Unix d'entreprise pour Power Systems, doté de fonctions avancées de virtualisation et de sécurité.",
-   "value": "Offre une disponibilité de 99,999 %, permet la mobilité des partitions à chaud (Live Partition Mobility) et assure une gestion supérieure des charges de travail.",
+   "value": "Offre une disponibilité de 99,999 %, permet la mobilité des partitions à chaud (Live Partition Mobility) et assure une gestion supérieure des charges de travail.",
    "questions": [
-    "Exploitez-vous des charges de travail Unix ?",
-    "Avez-vous besoin de capacités de virtualisation avancées ?",
-    "Recherchez-vous un OS stable et sécurisé pour vos charges de travail critiques ?",
-    "Avez-vous besoin de réduire au minimum les arrêts planifiés ?"
+    "Exploitez-vous des charges de travail Unix ?",
+    "Avez-vous besoin de capacités de virtualisation avancées ?",
+    "Recherchez-vous un OS stable et sécurisé pour vos charges de travail critiques ?",
+    "Avez-vous besoin de réduire au minimum les arrêts planifiés ?"
    ],
    "differentiators": [
     "Plus de 40 ans de stabilité",
@@ -516,12 +516,12 @@ window.I18N.fr = {
   },
   "ibmi": {
    "desc": "Système d'exploitation intégré pour Power Systems, avec base de données et sécurité intégrées pour les applications métier.",
-   "value": "Réduit de 60 % la charge d'administration, offre une sécurité intégrée et garantit la continuité d'activité.",
+   "value": "Réduit de 60 % la charge d'administration, offre une sécurité intégrée et garantit la continuité d'activité.",
    "questions": [
-    "Exploitez-vous des applications critiques pour l'activité ?",
-    "Cherchez-vous à moderniser des applications historiques ?",
-    "Avez-vous besoin de capacités de base de données intégrées ?",
-    "La sécurité et la conformité vous préoccupent-elles ?"
+    "Exploitez-vous des applications métier critiques ?",
+    "Cherchez-vous à moderniser des applications historiques ?",
+    "Avez-vous besoin de capacités de base de données intégrées ?",
+    "La sécurité et la conformité vous préoccupent-elles ?"
    ],
    "differentiators": [
     "Base de données intégrée",
@@ -534,10 +534,10 @@ window.I18N.fr = {
    "desc": "Distributions Linux d'entreprise optimisées pour l'architecture Power Systems.",
    "value": "Offre des performances supérieures pour les charges de travail Linux, facilite l'intégration au cloud et fournit un support de niveau entreprise.",
    "questions": [
-    "Exploitez-vous des charges de travail Linux qui nécessitent de meilleures performances ?",
-    "Cherchez-vous à consolider votre infrastructure Linux ?",
-    "Avez-vous besoin d'un support Linux de niveau entreprise ?",
-    "Exploitez-vous des charges de travail conteneurisées ?"
+    "Exploitez-vous des charges de travail Linux qui nécessitent de meilleures performances ?",
+    "Cherchez-vous à consolider votre infrastructure Linux ?",
+    "Avez-vous besoin d'un support Linux de niveau entreprise ?",
+    "Exploitez-vous des charges de travail conteneurisées ?"
    ],
    "differentiators": [
     "Performances supérieures",
@@ -548,44 +548,44 @@ window.I18N.fr = {
   },
   "ibm_tls": {
    "desc": "Service complet de maintenance matérielle et logicielle, de support et de migration en fin de vie. Gère l'ensemble du cycle de vie des systèmes IBM et multi-constructeurs, du déploiement au retrait — y compris le support proactif, la gestion des correctifs, les mises à niveau et les transitions technologiques planifiées.",
-   "value": "Réduit de 95 % les arrêts non planifiés, rend prévisibles les coûts du cycle de vie de l'infrastructure et garantit des transitions technologiques fluides sans aucune perturbation opérationnelle — avec des SLA de premier plan et des capacités de diagnostic proactif.",
+   "value": "Réduit de 95 % les arrêts non planifiés, rend prévisibles les coûts du cycle de vie de l'infrastructure et garantit des transitions technologiques fluides sans aucune perturbation opérationnelle — avec des SLA de premier plan et des capacités de diagnostic proactif.",
    "questions": [
-    "La fin de support de systèmes IBM critiques vous préoccupe-t-elle ?",
-    "Avez-vous besoin d'une gestion du cycle de vie prévisible et à coût fixe pour votre infrastructure ?",
-    "Prévoyez-vous des mises à niveau matérielles ou logicielles nécessitant un accompagnement à la migration ?",
-    "Gérez-vous des environnements multi-constructeurs qui nécessitent un fournisseur de support unique ?"
+    "La fin de support de systèmes IBM critiques vous préoccupe-t-elle ?",
+    "Avez-vous besoin d'une gestion du cycle de vie prévisible et à coût fixe pour votre infrastructure ?",
+    "Prévoyez-vous des mises à niveau matérielles ou logicielles nécessitant un accompagnement à la migration ?",
+    "Gérez-vous des environnements multi-constructeurs qui nécessitent un fournisseur de support unique ?"
    ],
    "differentiators": [
     "Diagnostic proactif et prévention prédictive des incidents",
     "Interlocuteur unique pour les environnements multi-constructeurs IBM et tiers",
     "Planification fluide des migrations de fin de vie sans perturbation opérationnelle",
-    "Délivré par Arrow avec une expertise locale UKI et des ingénieurs certifiés IBM"
+    "Fourni par Arrow avec une expertise locale UKI et des ingénieurs certifiés IBM"
    ]
   },
   "flashsystem": {
-   "desc": "Baie de stockage 100 % flash offrant performance, fiabilité et efficacité pour les charges de travail d'entreprise.",
-   "value": "Offre une latence inférieure à la milliseconde, réduit de 80 % l'empreinte du stockage et assure une disponibilité de 99,9999 %.",
+   "desc": "Baie de stockage 100 % flash offrant performance, fiabilité et efficacité pour les charges de travail d'entreprise.",
+   "value": "Offre une latence inférieure à la milliseconde, réduit de 80 % l'empreinte du stockage et assure une disponibilité de 99,9999 %.",
    "questions": [
-    "Avez-vous des applications sensibles aux performances ?",
-    "Arrivez-vous à court de capacité de stockage ?",
-    "Avez-vous besoin de réduire vos coûts de stockage ?",
-    "La fiabilité du stockage vous préoccupe-t-elle ?"
+    "Avez-vous des applications sensibles aux performances ?",
+    "Commencez-vous à manquer de capacité de stockage ?",
+    "Avez-vous besoin de réduire vos coûts de stockage ?",
+    "La fiabilité du stockage vous préoccupe-t-elle ?"
    ],
    "differentiators": [
     "Latence inférieure à la milliseconde",
-    "Disponibilité de 99,9999 %",
+    "Disponibilité de 99,9999 %",
     "Garantie de réduction des données",
     "Cyber-résilience"
    ]
   },
   "storage_control": {
    "desc": "Logiciel de gestion du stockage pour surveiller, gérer et optimiser l'infrastructure de stockage.",
-   "value": "Offre une gestion unifiée du stockage, réduit de 50 % le temps d'administration du stockage et permet de résoudre les problèmes de manière proactive.",
+   "value": "Offre une gestion unifiée du stockage, réduit de 50 % le temps d'administration du stockage et permet de résoudre les problèmes de manière proactive.",
    "questions": [
-    "Gérez-vous plusieurs systèmes de stockage ?",
-    "Consacrez-vous trop de temps à l'administration du stockage ?",
-    "Avez-vous besoin d'une meilleure visibilité sur les performances du stockage ?",
-    "Rencontrez-vous des problèmes liés au stockage ?"
+    "Gérez-vous plusieurs systèmes de stockage ?",
+    "Consacrez-vous trop de temps à l'administration du stockage ?",
+    "Avez-vous besoin d'une meilleure visibilité sur les performances du stockage ?",
+    "Rencontrez-vous des problèmes liés au stockage ?"
    ],
    "differentiators": [
     "Prise en charge multi-constructeurs",
@@ -596,12 +596,12 @@ window.I18N.fr = {
   },
   "storage_insights": {
    "desc": "Plateforme cloud de surveillance et d'analyse du stockage pour optimiser l'infrastructure de stockage.",
-   "value": "Fournit des analyses prédictives, réduit de 40 % les incidents de stockage et permet la planification des capacités.",
+   "value": "Fournit des analyses prédictives, réduit de 40 % les incidents de stockage et permet la planification des capacités.",
    "questions": [
-    "Avez-vous besoin d'une meilleure vision de l'utilisation de votre stockage ?",
-    "Prévoyez-vous des extensions de capacité de stockage ?",
-    "Souhaitez-vous anticiper les problèmes de stockage avant qu'ils ne surviennent ?",
-    "Gérez-vous du stockage sur plusieurs sites ?"
+    "Avez-vous besoin d'une meilleure vision de l'utilisation de votre stockage ?",
+    "Prévoyez-vous des extensions de capacité de stockage ?",
+    "Souhaitez-vous anticiper les problèmes de stockage avant qu'ils ne surviennent ?",
+    "Gérez-vous du stockage sur plusieurs sites ?"
    ],
    "differentiators": [
     "Analyses prédictives",
@@ -612,12 +612,12 @@ window.I18N.fr = {
   },
   "storage_virt": {
    "desc": "Logiciel de virtualisation du stockage pour mutualiser et gérer des ressources de stockage hétérogènes.",
-   "value": "Réduit de 30 % les coûts de stockage, permet la migration des données sans interruption et offre une gestion unifiée.",
+   "value": "Réduit de 30 % les coûts de stockage, permet la migration des données sans interruption et offre une gestion unifiée.",
    "questions": [
-    "Avez-vous plusieurs fournisseurs de stockage ?",
-    "Avez-vous besoin de migrer des données sans interruption de service ?",
-    "Cherchez-vous à optimiser l'utilisation de votre stockage ?",
-    "Avez-vous besoin de hiérarchiser les données entre différents types de stockage ?"
+    "Avez-vous plusieurs fournisseurs de stockage ?",
+    "Avez-vous besoin de migrer des données sans interruption de service ?",
+    "Cherchez-vous à optimiser l'utilisation de votre stockage ?",
+    "Avez-vous besoin de hiérarchiser les données entre différents types de stockage ?"
    ],
    "differentiators": [
     "Prise en charge multi-constructeurs",
@@ -627,13 +627,13 @@ window.I18N.fr = {
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion — couche de stockage persistant native pour conteneurs, destinée aux environnements Red Hat OpenShift et Kubernetes. Remarque : il s'agit du produit logiciel de stockage, distinct d'IBM Fusion HCI, la plateforme d'infrastructure hyperconvergée qui utilise Storage Fusion comme composant de stockage.",
+   "desc": "IBM Storage Fusion — couche de stockage persistant native pour conteneurs, destinée aux environnements Red Hat OpenShift et Kubernetes. Remarque : il s'agit du produit logiciel de stockage, distinct d'IBM Fusion HCI, la plateforme d'infrastructure hyperconvergée qui utilise Storage Fusion comme composant de stockage.",
    "value": "Simplifie le stockage persistant des charges de travail conteneurisées, assure la mobilité des données entre clusters OpenShift et s'intègre nativement à IBM Fusion HCI pour une pile d'infrastructure convergée complète.",
    "questions": [
-    "Exploitez-vous des applications conteneurisées ?",
-    "Avez-vous besoin de stockage persistant pour Kubernetes ?",
-    "Utilisez-vous Red Hat OpenShift ?",
-    "Avez-vous besoin de déplacer des données entre environnements de conteneurs ?"
+    "Exploitez-vous des applications conteneurisées ?",
+    "Avez-vous besoin de stockage persistant pour Kubernetes ?",
+    "Utilisez-vous Red Hat OpenShift ?",
+    "Avez-vous besoin de déplacer des données entre environnements de conteneurs ?"
    ],
    "differentiators": [
     "Natif OpenShift",
@@ -644,12 +644,12 @@ window.I18N.fr = {
   },
   "storage_ceph": {
    "desc": "Plateforme de stockage software-defined open source pour le stockage objet, bloc et fichier.",
-   "value": "Réduit de 50 % les coûts de stockage, offre un stockage évolutif et élimine la dépendance vis-à-vis d'un fournisseur.",
+   "value": "Réduit de 50 % les coûts de stockage, offre un stockage évolutif et élimine la dépendance vis-à-vis d'un fournisseur.",
    "questions": [
-    "Recherchez-vous un stockage économique ?",
-    "Avez-vous besoin de capacités de stockage objet ?",
-    "Construisez-vous un cloud privé ?",
-    "Souhaitez-vous éviter la dépendance vis-à-vis d'un fournisseur ?"
+    "Recherchez-vous un stockage économique ?",
+    "Avez-vous besoin de capacités de stockage objet ?",
+    "Construisez-vous un cloud privé ?",
+    "Souhaitez-vous éviter la dépendance vis-à-vis d'un fournisseur ?"
    ],
    "differentiators": [
     "Open source",
@@ -660,12 +660,12 @@ window.I18N.fr = {
   },
   "storage_scale": {
    "desc": "Système de fichiers parallèle haute performance pour les charges de travail intensives en données et les applications d'IA.",
-   "value": "Offre un accès aux données 10 fois plus rapide, permet le partage mondial des données et prend en charge une échelle massive.",
+   "value": "Offre un accès aux données 10 fois plus rapide, permet le partage des données à l'échelle mondiale et s'adapte à des volumes massifs.",
    "questions": [
-    "Avez-vous des charges de travail intensives en données ?",
-    "Exécutez-vous des tâches d'entraînement IA/ML ?",
-    "Avez-vous besoin de partager des données entre plusieurs sites ?",
-    "Rencontrez-vous des problèmes de performance de votre système de fichiers ?"
+    "Avez-vous des charges de travail intensives en données ?",
+    "Exécutez-vous des tâches d'entraînement IA/ML ?",
+    "Avez-vous besoin de partager des données entre plusieurs sites ?",
+    "Rencontrez-vous des problèmes de performance de votre système de fichiers ?"
    ],
    "differentiators": [
     "Éprouvé à l'échelle exascale",
@@ -675,29 +675,29 @@ window.I18N.fr = {
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite — plateforme de gestion de la performance durable et ESG pour suivre les données d'énergie, de carbone, d'eau et de déchets et produire les rapports réglementaires de durabilité.",
-   "value": "Automatise la collecte des données ESG sur les sites et dans les chaînes d'approvisionnement, réduit d'environ 70 % l'effort de reporting de durabilité et permet la conformité aux référentiels GRI, SASB, TCFD et CSRD.",
+   "desc": "IBM Envizi ESG Suite — plateforme de pilotage de la performance ESG et développement durable pour suivre les données d'énergie, de carbone, d'eau et de déchets et produire les rapports réglementaires de durabilité.",
+   "value": "Automatise la collecte des données ESG sur les sites et dans les chaînes d'approvisionnement, réduit d'environ 70 % l'effort de reporting de durabilité et permet la conformité aux référentiels GRI, SASB, TCFD et CSRD.",
    "questions": [
-    "Avez-vous du mal à collecter et consolider les données ESG de vos sites et de votre chaîne d'approvisionnement ?",
-    "Devez-vous produire des rapports de durabilité pour des référentiels réglementaires comme la CSRD ou la TCFD ?",
-    "Cherchez-vous à suivre et réduire les émissions de carbone de vos activités ?",
-    "Avez-vous des objectifs de durabilité sans la visibilité sur les données nécessaire pour mesurer vos progrès ?"
+    "Avez-vous du mal à collecter et consolider les données ESG de vos sites et de votre chaîne d'approvisionnement ?",
+    "Devez-vous produire des rapports de durabilité pour des référentiels réglementaires comme la CSRD ou la TCFD ?",
+    "Cherchez-vous à suivre et réduire les émissions de carbone de vos activités ?",
+    "Avez-vous des objectifs de durabilité sans disposer des données nécessaires pour mesurer vos progrès ?"
    ],
    "differentiators": [
     "Intégration prête à l'emploi avec Maximo pour les données opérationnelles et d'actifs",
     "Référentiels de reporting réglementaire intégrés — GRI, SASB, TCFD, CSRD",
     "Qualité des données et détection d'anomalies assistées par l'IA",
-    "SaaS cloud-native avec une mise en valeur rapide"
+    "SaaS cloud-native avec un délai de rentabilisation court"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite — couvre la gestion des exigences (DOORS Next), la gestion des workflows d'ingénierie (EWM), la gestion des tests (ETM) et l'ingénierie basée sur les modèles (Rhapsody) pour les secteurs critiques en matière de sécurité et réglementés.",
+   "desc": "IBM Engineering Lifecycle Management Suite — couvre la gestion des exigences (DOORS Next), la gestion des workflows d'ingénierie (EWM), la gestion des tests (ETM) et l'ingénierie basée sur les modèles (Rhapsody) pour les secteurs réglementés et critiques pour la sécurité.",
    "value": "Assure une traçabilité d'ingénierie de bout en bout, des exigences à la conception, au développement et aux tests — en réduisant les reprises dans les programmes réglementés et en facilitant la conformité aux normes ISO 26262, DO-178C et IEC 61508.",
    "questions": [
-    "Avez-vous besoin d'une traçabilité complète des exigences jusqu'aux tests dans des programmes critiques pour la sécurité ?",
-    "Développez-vous des produits soumis aux réglementations de l'aéronautique, de l'automobile ou des dispositifs médicaux ?",
-    "Les demandes de modification d'ingénierie entraînent-elles des reprises et des dépassements de calendrier ?",
-    "Gérez-vous des exigences réparties entre plusieurs équipes ou organisations ?"
+    "Avez-vous besoin d'une traçabilité complète des exigences jusqu'aux tests dans des programmes critiques pour la sécurité ?",
+    "Développez-vous des produits soumis aux réglementations de l'aéronautique, de l'automobile ou des dispositifs médicaux ?",
+    "Les demandes de modification d'ingénierie entraînent-elles des reprises et des dépassements de calendrier ?",
+    "Gérez-vous des exigences réparties entre plusieurs équipes ou organisations ?"
    ],
    "differentiators": [
     "Suite ALM complète d'un seul éditeur — exigences, workflows, tests et modélisation",
@@ -710,10 +710,10 @@ window.I18N.fr = {
    "desc": "IBM App Connect — plateforme d'intégration low-code/no-code pour connecter des applications et automatiser des workflows grâce à plus de 200 connecteurs prêts à l'emploi, disponible en App Connect Professional et App Connect Enterprise.",
    "value": "Permet aux utilisateurs métier et aux développeurs de créer des intégrations en quelques heures au lieu de plusieurs semaines — en accélérant la transformation numérique sans expertise poussée en intégration.",
    "questions": [
-    "Vos équipes métier ont-elles besoin de connecter des applications SaaS sans écrire de code ?",
-    "Cherchez-vous à réduire votre dépendance aux développeurs spécialisés en intégration ?",
-    "Avez-vous besoin de livrer rapidement des intégrations entre applications cloud et sur site ?",
-    "Gérez-vous trop de connexions point à point entre systèmes ?"
+    "Vos équipes métier ont-elles besoin de connecter des applications SaaS sans écrire de code ?",
+    "Cherchez-vous à réduire votre dépendance aux développeurs spécialisés en intégration ?",
+    "Avez-vous besoin de livrer rapidement des intégrations entre applications cloud et sur site ?",
+    "Gérez-vous trop de connexions point à point entre systèmes ?"
    ],
    "differentiators": [
     "Plus de 200 connecteurs prêts à l'emploi pour applications SaaS, cloud et sur site",
@@ -726,26 +726,26 @@ window.I18N.fr = {
    "desc": "IBM Aspera — plateforme de transfert à haut débit de fichiers volumineux et de jeux de données, reposant sur le protocole breveté FASP, conçue pour déplacer des fichiers massifs sur de longues distances à une vitesse proche du débit de la ligne, quelles que soient les conditions réseau.",
    "value": "Transfère les fichiers jusqu'à 100 fois plus vite que TCP/FTP standard sur des réseaux à forte latence ou avec pertes — essentiel pour les médias, la génomique, les sciences de la vie et tout workflow impliquant le déplacement de fichiers de plusieurs gigaoctets.",
    "questions": [
-    "Vos transferts de fichiers volumineux sur le WAN prennent-ils des heures ou des jours alors qu'ils devraient prendre quelques minutes ?",
-    "Diffusez-vous des fichiers médias, génomiques ou de données volumineux à des partenaires ou des sites dans le monde entier ?",
-    "Des téléversements lents bloquent-ils vos pipelines d'ingestion ou de migration de données ?",
-    "Avez-vous besoin de transferts de fichiers volumineux sécurisés et auditables avec garantie de livraison ?"
+    "Vos transferts de fichiers volumineux sur le WAN prennent-ils des heures ou des jours alors qu'ils devraient prendre quelques minutes ?",
+    "Envoyez-vous des fichiers volumineux (médias, génomique, données) à des partenaires ou à des sites dans le monde entier ?",
+    "Des téléversements lents bloquent-ils vos pipelines d'ingestion ou de migration de données ?",
+    "Avez-vous besoin de transferts de fichiers volumineux sécurisés et auditables avec garantie de livraison ?"
    ],
    "differentiators": [
     "Le protocole breveté FASP assure des transferts proches du débit de la ligne, quelles que soient la latence réseau ou la perte de paquets",
     "Chiffrement AES-256 de bout en bout avec piste d'audit complète des transferts",
-    "Forte présence verticale dans les médias et le divertissement, les sciences de la vie et la génomique",
+    "Forte présence sectorielle dans les médias et le divertissement, les sciences de la vie et la génomique",
     "Intégration native IBM Cloud et déploiement hybride sur site/cloud"
    ]
   },
   "kubecost": {
    "desc": "IBM Kubecost — plateforme de suivi et d'optimisation des coûts Kubernetes qui offre une visibilité en temps réel sur les dépenses par namespace, déploiement, label et équipe dans les environnements multi-clusters.",
-   "value": "Donne aux équipes d'ingénierie et financières une allocation précise des coûts Kubernetes et des recommandations de redimensionnement — en réduisant le gaspillage cloud grâce à l'identification des charges de travail inactives ou surdimensionnées au niveau des conteneurs.",
+   "value": "Donne aux équipes d'ingénierie et aux équipes financières une allocation précise des coûts Kubernetes et des recommandations de redimensionnement — en réduisant le gaspillage cloud grâce à l'identification des charges de travail inactives ou surdimensionnées au niveau des conteneurs.",
    "questions": [
-    "Savez-vous précisément combien vous coûte chaque charge de travail ou équipe Kubernetes ?",
-    "Vos factures cloud augmentent-elles plus vite que votre empreinte Kubernetes ?",
-    "Pouvez-vous répartir précisément les coûts des conteneurs entre les entités métier pour la refacturation ?",
-    "Êtes-vous certain que vos charges de travail Kubernetes sont correctement dimensionnées ?"
+    "Savez-vous précisément combien vous coûte chaque charge de travail ou équipe Kubernetes ?",
+    "Vos factures cloud augmentent-elles plus vite que votre empreinte Kubernetes ?",
+    "Pouvez-vous répartir précisément les coûts des conteneurs entre les entités métier pour la refacturation ?",
+    "Êtes-vous certain que vos charges de travail Kubernetes sont correctement dimensionnées ?"
    ],
    "differentiators": [
     "Modèle de coûts natif Kubernetes avec une granularité par pod et par namespace",
@@ -758,10 +758,10 @@ window.I18N.fr = {
    "desc": "IBM NS1 Connect — plateforme de DNS intelligent, de gestion du trafic et de connectivité réseau, offrant un DNS faisant autorité avec routage avancé, orientation du trafic et infrastructure résiliente aux attaques DDoS.",
    "value": "Offre des temps de réponse DNS mondiaux inférieurs à 10 ms avec une orientation intelligente du trafic — en réduisant les indisponibilités applicatives, en améliorant les performances pour des utilisateurs répartis dans le monde et en constituant une première ligne de défense réseau résiliente.",
    "questions": [
-    "Des pannes DNS ou une résolution lente nuisent-elles à la disponibilité de vos applications ?",
-    "Avez-vous besoin d'orienter intelligemment vos utilisateurs entre plusieurs datacenters ou régions cloud ?",
-    "Craignez-vous des attaques DDoS ciblant votre infrastructure DNS ?",
-    "Avez-vous besoin d'un contrôle fin de la répartition mondiale du trafic ?"
+    "Des pannes DNS ou une résolution lente nuisent-elles à la disponibilité de vos applications ?",
+    "Avez-vous besoin d'orienter intelligemment vos utilisateurs entre plusieurs datacenters ou régions cloud ?",
+    "Craignez-vous des attaques DDoS ciblant votre infrastructure DNS ?",
+    "Avez-vous besoin d'un contrôle fin de la répartition mondiale du trafic ?"
    ],
    "differentiators": [
     "DNS programmable avec logique de routage par chaîne de filtres pour une orientation avancée du trafic",
@@ -774,10 +774,10 @@ window.I18N.fr = {
    "desc": "IBM Power Virtual Server (PowerVS) — infrastructure Power hébergée sur IBM Cloud, offrant les mêmes performances Power et la même compatibilité IBM i / AIX que les Power Systems sur site, fournie sous forme de service cloud entièrement géré.",
    "value": "Permet aux organisations d'étendre ou de migrer leurs charges de travail Power vers le cloud sans changement de plateforme — en préservant la compatibilité des applications AIX et IBM i tout en bénéficiant de l'élasticité du cloud et d'un modèle de paiement à l'usage.",
    "questions": [
-    "Cherchez-vous à réduire votre parc Power sur site sans changer de plateforme pour vos applications AIX ou IBM i ?",
-    "Avez-vous besoin d'une solution de reprise après sinistre dans le cloud pour votre parc Power Systems ?",
-    "Étudiez-vous des options de cloud hybride pour vos charges de travail IBM i ou AIX ?",
-    "Souhaitez-vous augmenter votre capacité Power à la demande sans investissement en capital ?"
+    "Cherchez-vous à réduire votre parc Power sur site sans changer de plateforme pour vos applications AIX ou IBM i ?",
+    "Avez-vous besoin d'une solution de reprise après sinistre dans le cloud pour votre parc Power Systems ?",
+    "Étudiez-vous des options de cloud hybride pour vos charges de travail IBM i ou AIX ?",
+    "Souhaitez-vous augmenter votre capacité Power à la demande sans dépenses d'investissement ?"
    ],
    "differentiators": [
     "Seul service cloud offrant des performances Power natives avec compatibilité AIX et IBM i",
@@ -790,15 +790,15 @@ window.I18N.fr = {
    "desc": "IBM Fusion HCI (infrastructure hyperconvergée) — plateforme software-defined de calcul, de stockage et de réseau qui exécute Red Hat OpenShift et les charges de travail IBM sur une pile matérielle convergée, simplifiant l'exploitation du datacenter pour l'IA et le cloud hybride.",
    "value": "Réduit la complexité du datacenter en regroupant calcul, stockage et réseau sur une plateforme gérée unique — en raccourcissant les délais de déploiement et en offrant un socle validé et supporté par IBM pour les charges de travail OpenShift et d'IA sur site.",
    "questions": [
-    "Cherchez-vous à simplifier votre infrastructure sur site pour vos charges de travail OpenShift ou d'IA ?",
-    "Avez-vous besoin d'une plateforme validée, d'un fournisseur unique, pour Red Hat OpenShift ?",
-    "La charge de gestion de l'infrastructure ralentit-elle vos déploiements applicatifs ?",
-    "Avez-vous besoin d'une plateforme d'infrastructure IA sur site évolutive ?"
+    "Cherchez-vous à simplifier votre infrastructure sur site pour vos charges de travail OpenShift ou d'IA ?",
+    "Avez-vous besoin d'une plateforme validée, auprès d'un fournisseur unique, pour Red Hat OpenShift ?",
+    "La charge de gestion de l'infrastructure ralentit-elle vos déploiements applicatifs ?",
+    "Avez-vous besoin d'une plateforme d'infrastructure IA sur site évolutive ?"
    ],
    "differentiators": [
     "Conçue et validée pour Red Hat OpenShift et les charges de travail IBM",
     "S'intègre à IBM Storage Fusion pour un stockage persistant natif pour conteneurs",
-    "IBM fournisseur unique pour le calcul, le stockage, la pile logicielle et le support",
+    "IBM, fournisseur unique pour le calcul, le stockage, la pile logicielle et le support",
     "Optimisée pour les déploiements d'infrastructure IA sur site"
    ]
   },
@@ -806,10 +806,10 @@ window.I18N.fr = {
    "desc": "IBM Db2 — système de gestion de bases de données relationnelles d'entreprise disponible sur site et dans le cloud, avec OLTP et analytique haute performance, capacités d'IA intégrées et compatibilité native avec IBM Z, Power Systems et IBM i.",
    "value": "Fournit un socle de données transactionnelles fiable et performant pour les applications d'entreprise — avec optimisation des requêtes par l'IA intégrée, intégration native avec watsonx.data et des décennies de fiabilité sur les plateformes IBM.",
    "questions": [
-    "Cherchez-vous à réduire vos coûts de licences Oracle ou SQL Server sans réarchitecturer vos applications ?",
-    "Avez-vous besoin d'une base de données aux performances éprouvées sur les plateformes IBM Power ou Z ?",
-    "Des exigences de résidence ou de souveraineté des données orientent-elles vos choix de plateforme de base de données ?",
-    "Avez-vous besoin d'une base de données transactionnelle qui s'intègre nativement à votre pile d'IA et d'analytique ?"
+    "Cherchez-vous à réduire vos coûts de licences Oracle ou SQL Server sans réarchitecturer vos applications ?",
+    "Avez-vous besoin d'une base de données aux performances éprouvées sur les plateformes IBM Power ou Z ?",
+    "Des exigences de résidence ou de souveraineté des données orientent-elles vos choix de plateforme de base de données ?",
+    "Avez-vous besoin d'une base de données transactionnelle qui s'intègre nativement à votre pile d'IA et d'analytique ?"
    ],
    "differentiators": [
     "Intégration native IBM Z et Power Systems avec les meilleures performances sur les plateformes IBM",
@@ -822,10 +822,10 @@ window.I18N.fr = {
    "desc": "IBM Cognos Analytics — plateforme de business intelligence et d'analytique pilotée par l'IA pour le reporting en libre-service, les tableaux de bord et l'exploration des données, avec gouvernance et sécurité des données d'entreprise intégrées.",
    "value": "Permet aux utilisateurs métier de créer des rapports et tableaux de bord exacts et gouvernés sans dépendre de l'IT — avec préparation des données assistée par l'IA, requêtes en langage naturel et gouvernance de niveau entreprise intégrée.",
    "questions": [
-    "Vos utilisateurs métier dépendent-ils de l'IT pour chaque rapport ou tableau de bord ?",
-    "Votre organisation produit-elle encore des rapports critiques à partir de tableurs ?",
-    "Avez-vous besoin d'une analytique en libre-service gouvernée qui préserve l'exactitude et la sécurité des données ?",
-    "Recherchez-vous un outil de BI fortement intégré aux sources de données IBM ?"
+    "Vos utilisateurs métier dépendent-ils de l'IT pour chaque rapport ou tableau de bord ?",
+    "Votre organisation produit-elle encore des rapports critiques à partir de tableurs ?",
+    "Avez-vous besoin d'une analytique en libre-service gouvernée qui préserve l'exactitude et la sécurité des données ?",
+    "Recherchez-vous un outil de BI fortement intégré aux sources de données IBM ?"
    ],
    "differentiators": [
     "Création de rapports assistée par l'IA et requêtes en langage naturel intégrées",
@@ -967,13 +967,13 @@ window.I18N.fr = {
   "ibm_tls>storage_scale": "IBM TLS accompagne les mises à niveau des systèmes Storage Scale et la planification de leur cycle de vie technologique",
   "ibm_tls>linux_power": "Technology Lifecycle Services couvre le support de l'OS Linux on Power et la gestion du cycle de vie de la plateforme",
   "ibm_tls>storage_control": "Technology Lifecycle Services prend en charge le matériel de stockage sous-jacent géré par Storage Control",
-  "ibm_tls>storage_virt": "IBM TLS assure la maintenance du matériel de stockage IBM sur lequel s'exécute Storage Virtualize : firmware, maintenance et transitions de cycle de vie",
+  "ibm_tls>storage_virt": "IBM TLS assure la maintenance du matériel de stockage IBM sur lequel s'exécute Storage Virtualize : firmware, maintenance et transitions de cycle de vie",
   "envizi>maximo": "Les données opérationnelles et d'actifs de Maximo alimentent Envizi pour le reporting ESG et carbone au niveau des sites",
   "envizi>ibm_sterling": "Les données de supply chain de Sterling alimentent Envizi pour le suivi des émissions de Scope 3 dans les réseaux de partenaires",
   "envizi>wxdata": "Les jeux de données ESG d'Envizi alimentent watsonx.data pour l'analytique de durabilité et la modélisation par l'IA",
   "envizi>ibm_pa": "Planning Analytics intègre les données de coût carbone d'Envizi pour la planification financière de la durabilité et la modélisation de scénarios",
   "envizi>wxai": "watsonx.ai analyse les données ESG d'Envizi pour générer des analyses prédictives de durabilité et détecter les anomalies",
-  "elm_suite>wca_ansible": "IBM Bob génère du code directement à partir des exigences ELM, bouclant la boucle de la spécification à l'implémentation",
+  "elm_suite>wca_ansible": "IBM Bob génère du code directement à partir des exigences ELM, assurant la continuité de la spécification à l'implémentation",
   "elm_suite>concert": "Concert offre une visibilité opérationnelle sur les déploiements d'applications gérés par ELM",
   "elm_suite>api_connect": "ELM expose les artefacts d'ingénierie et les données d'exigences via API Connect pour l'intégration de la chaîne d'outils",
   "elm_suite>webmethods": "webMethods intègre ELM aux systèmes d'entreprise pour automatiser de bout en bout les workflows d'ingénierie",
@@ -991,14 +991,14 @@ window.I18N.fr = {
   "ns1>verify": "Le routage intelligent de NS1 dirige les utilisateurs vers le point d'authentification le plus proche, améliorant les performances et la résilience du SSO Verify",
   "ns1>sevone": "Les données de performance réseau de SevOne éclairent les décisions d'orientation du trafic de NS1 pour un routage optimal",
   "ns1>concert": "Concert utilise les données de santé DNS de NS1 dans le cadre de la surveillance de la disponibilité des applications",
-  "powervs>power": "PowerVS est l'extension cloud de Power Systems — elle permet des déploiements Power hybrides couvrant le site et IBM Cloud",
+  "powervs>power": "PowerVS est l'extension cloud de Power Systems — elle permet des déploiements Power hybrides associant sur site et IBM Cloud",
   "powervs>aix": "Les charges de travail AIX s'exécutent nativement sur PowerVS, permettant une migration vers le cloud sans modification de l'OS ni des applications",
   "powervs>ibmi": "Les applications IBM i s'exécutent nativement sur PowerVS, offrant une voie vers le cloud aux parcs IBM i historiques",
   "powervs>ibm_tls": "IBM TLS accompagne la planification de la transition et la gestion du cycle de vie des migrations de Power sur site vers PowerVS",
   "powervs>wca_ansible": "IBM Bob accélère la modernisation des applications AIX et IBM i en cours de migration vers des environnements cloud PowerVS",
   "fusion_hci>storage_fusion": "IBM Fusion HCI utilise Storage Fusion pour fournir un stockage persistant natif pour conteneurs aux charges de travail OpenShift exécutées sur la plateforme convergée",
   "fusion_hci>power": "IBM Fusion HCI peut fonctionner aux côtés de Power Systems dans des environnements d'infrastructure hybride gérés par IBM",
-  "fusion_hci>linuxone": "Fusion HCI et LinuxONE offrent des options d'infrastructure sur site complémentaires pour les charges de travail d'entreprise sensibles en matière de sécurité",
+  "fusion_hci>linuxone": "Fusion HCI et LinuxONE offrent des options d'infrastructure sur site complémentaires pour les charges de travail d'entreprise à fortes exigences de sécurité",
   "fusion_hci>ibm_tls": "IBM TLS gère le cycle de vie matériel, le firmware et le support de Fusion HCI",
   "db2>wxdata": "Db2 est une source majeure de données transactionnelles fédérées dans watsonx.data pour l'analytique unifiée et l'entraînement des modèles d'IA",
   "db2>wxdint": "watsonx.data integration ingère et transforme les données Db2 pour les pipelines d'IA et d'analytique en aval",

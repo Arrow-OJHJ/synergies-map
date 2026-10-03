@@ -27,7 +27,7 @@ window.I18N.pt = {
   "valueProposition": "Proposta de valor",
   "competesWith": "Concorre com",
   "keyDifferentiators": "Principais diferenciadores",
-  "discoveryQuestions": "Perguntas de descoberta",
+  "discoveryQuestions": "Perguntas de diagnóstico",
   "emptyPrompt": {"one": "Selecione um produto para destacar as suas ligações de venda cruzada em {n} grupo de produtos.", "many": "Selecione um produto para destacar as suas ligações de venda cruzada nos {n} grupos de produtos.", "other": "Selecione um produto para destacar as suas ligações de venda cruzada nos {n} grupos de produtos."},
   "productsFound": {
    "one": "{n} produto encontrado",
@@ -161,7 +161,7 @@ window.I18N.pt = {
    ]
   },
   "ibm_mq": {
-   "desc": "Middleware empresarial orientado a mensagens para mensagens assíncronas fiáveis em ambientes híbridos. Garante a entrega de mensagens para aplicações críticas, incluindo sistemas mainframe, cloud e on-premises.",
+   "desc": "Middleware de mensagens empresarial para comunicação assíncrona fiável em ambientes híbridos. Garante a entrega de mensagens para aplicações críticas, incluindo sistemas mainframe, cloud e on-premises.",
    "value": "Garante 99,99% de fiabilidade na entrega de mensagens, reduz o acoplamento entre aplicações e permite a integração em tempo real entre plataformas, incluindo mainframe e cloud, com suporte transacional integrado.",
    "questions": [
     "Tem aplicações que precisam de mensagens garantidas e fiáveis?",
@@ -177,13 +177,13 @@ window.I18N.pt = {
    ]
   },
   "ibm_sterling": {
-   "desc": "Portefólio abrangente de cadeia de abastecimento e integração B2B para gerir o cumprimento de encomendas, a visibilidade da cadeia de abastecimento e a conectividade com parceiros. Combina gestão de encomendas, inteligência da cadeia de abastecimento, integração B2B e troca segura de dados em redes de parceiros comerciais.",
+   "desc": "Portefólio abrangente de cadeia de abastecimento e integração B2B para gerir o processamento de encomendas, a visibilidade da cadeia de abastecimento e a conectividade com parceiros. Combina gestão de encomendas, inteligência da cadeia de abastecimento, integração B2B e troca segura de dados em redes de parceiros comerciais.",
    "value": "Acelera a integração B2B em 70%, reduz o tempo do ciclo de encomendas em 40% e oferece visibilidade ponta a ponta da cadeia de abastecimento, com colaboração em tempo real com parceiros e previsão da procura com IA.",
    "questions": [
     "Precisa de se integrar com vários parceiros comerciais ou fornecedores B2B?",
     "Procura otimizar os processos order-to-cash ou procure-to-pay?",
     "Precisa de visibilidade em tempo real da cadeia de abastecimento junto dos parceiros?",
-    "Gere o cumprimento de encomendas complexas multicanal?"
+    "Gere o processamento de encomendas multicanal complexas?"
    ],
    "differentiators": [
     "Concebido para integração B2B e EDI, com mais de 50 000 ligações a parceiros",
@@ -417,8 +417,8 @@ window.I18N.pt = {
    ]
   },
   "wca_ansible": {
-   "desc": "Programador assistente com IA que acelera o desenvolvimento de software, a modernização de aplicações e a criação de scripts de automação em linguagens modernas e legadas, incluindo Java, Python, RPG, COBOL e PL/SQL — com capacidades agênticas que levam o código do design à produção.",
-   "value": "Reduz tarefas de desenvolvimento de semanas para horas, com Premium Packages que oferecem especialização profunda na modernização de IBM i, Z e Java — e deteção de segredos integrada para levar a segurança para o início do ciclo (shift left) desde o primeiro dia.",
+   "desc": "Assistente de programação com IA que acelera o desenvolvimento de software, a modernização de aplicações e a criação de scripts de automação em linguagens modernas e legadas, incluindo Java, Python, RPG, COBOL e PL/SQL — com capacidades agênticas que levam o código do design à produção.",
+   "value": "Reduz a duração das tarefas de desenvolvimento de semanas para horas, com Premium Packages que oferecem especialização profunda na modernização de IBM i, Z e Java — e deteção de segredos integrada para levar a segurança para o início do ciclo (shift left) desde o primeiro dia.",
    "questions": [
     "Os programadores passam demasiado tempo a escrever código repetitivo (boilerplate)?",
     "Procura acelerar o desenvolvimento de aplicações?",
@@ -429,7 +429,7 @@ window.I18N.pt = {
     "SDLC agêntico do design à produção",
     "Premium Packages para a modernização de IBM i, Z e Java",
     "Deteção de segredos integrada e programação segura desde o início",
-    "Profundidade em linguagens legadas, incluindo RPG, COBOL e PL/SQL"
+    "Domínio aprofundado de linguagens legadas, incluindo RPG, COBOL e PL/SQL"
    ]
   },
   "confluent": {
@@ -477,7 +477,7 @@ window.I18N.pt = {
    ],
    "differentiators": [
     "A mais elevada certificação de segurança",
-    "Rácio de consolidação massivo",
+    "Rácio de consolidação muito elevado",
     "Encriptação generalizada",
     "99,999% de disponibilidade"
    ]
@@ -723,7 +723,7 @@ window.I18N.pt = {
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera — plataforma de transferência a alta velocidade de ficheiros e conjuntos de dados de grande dimensão, com o protocolo patenteado FASP, concebida para mover ficheiros enormes a longas distâncias a uma velocidade próxima da capacidade da linha, independentemente das condições da rede.",
+   "desc": "IBM Aspera — plataforma de transferência a alta velocidade de ficheiros e conjuntos de dados de grande dimensão, com o protocolo patenteado FASP, concebida para mover ficheiros enormes a longas distâncias quase à velocidade máxima da linha, independentemente das condições da rede.",
    "value": "Transfere ficheiros até 100x mais depressa do que o TCP/FTP padrão em redes com latência elevada ou perdas — essencial para media, genómica, ciências da vida e qualquer fluxo de trabalho que envolva a movimentação de ficheiros de vários gigabytes.",
    "questions": [
     "As transferências de ficheiros grandes pela WAN demoram horas ou dias quando deviam demorar minutos?",
@@ -732,9 +732,9 @@ window.I18N.pt = {
     "Precisa de transferências de ficheiros grandes seguras e auditáveis, com garantias de entrega?"
    ],
    "differentiators": [
-    "O protocolo patenteado FASP permite transferências próximas da velocidade da linha, independentemente da latência ou da perda de pacotes",
+    "O protocolo patenteado FASP permite transferências quase à velocidade máxima da linha, independentemente da latência ou da perda de pacotes",
     "Encriptação AES-256 ponta a ponta com registo de auditoria completo das transferências",
-    "Forte presença vertical em media e entretenimento, ciências da vida e genómica",
+    "Forte presença nos setores de media e entretenimento, ciências da vida e genómica",
     "Integração nativa com IBM Cloud e implementação híbrida on-prem/cloud"
    ]
   },
@@ -838,7 +838,7 @@ window.I18N.pt = {
  "competitors": {
   "ARM-based servers": "Servidores baseados em ARM",
   "AWS EC2 with migration services": "AWS EC2 com serviços de migração",
-  "On-premises retention": "Manutenção on-premises",
+  "On-premises retention": "Permanência on-premises",
   "x86 Linux servers": "Servidores Linux x86",
   "x86 servers": "Servidores x86"
  },
@@ -966,8 +966,8 @@ window.I18N.pt = {
   "ibm_tls>flashsystem": "O IBM TLS gere a implementação do FlashSystem, as atualizações de firmware e as transições em fim de vida",
   "ibm_tls>storage_scale": "O IBM TLS apoia as atualizações de sistemas Storage Scale e o planeamento do ciclo de vida tecnológico",
   "ibm_tls>linux_power": "O Technology Lifecycle Services abrange o suporte ao sistema operativo Linux on Power e a gestão do ciclo de vida da plataforma",
-  "ibm_tls>storage_control": "O Technology Lifecycle Services suporta o hardware de armazenamento subjacente gerido pelo Storage Control",
-  "ibm_tls>storage_virt": "O IBM TLS presta serviços ao hardware de armazenamento IBM em que o Storage Virtualize é executado, abrangendo firmware, manutenção e transições do ciclo de vida",
+  "ibm_tls>storage_control": "O Technology Lifecycle Services presta suporte ao hardware de armazenamento subjacente gerido pelo Storage Control",
+  "ibm_tls>storage_virt": "O IBM TLS presta assistência técnica ao hardware de armazenamento IBM em que o Storage Virtualize é executado, abrangendo firmware, manutenção e transições do ciclo de vida",
   "envizi>maximo": "Os dados operacionais e de ativos do Maximo alimentam o Envizi para o reporte ESG e de carbono ao nível das instalações",
   "envizi>ibm_sterling": "Os dados da cadeia de abastecimento do Sterling alimentam o Envizi para o acompanhamento das emissões de Âmbito 3 nas redes de parceiros",
   "envizi>wxdata": "Os conjuntos de dados ESG do Envizi fluem para o watsonx.data para analítica de sustentabilidade e modelação com IA",
@@ -1003,7 +1003,7 @@ window.I18N.pt = {
   "db2>wxdata": "O Db2 é uma das principais fontes de dados transacionais federadas no watsonx.data para analítica unificada e treino de modelos de IA",
   "db2>wxdint": "O watsonx.data integration ingere e transforma dados do Db2 para pipelines de IA e analítica a jusante",
   "db2>guardium": "O Guardium monitoriza e audita toda a atividade de acesso a dados do Db2 para conformidade regulamentar e segurança dos dados",
-  "db2>ibmi": "O Db2 for IBM i é a base de dados integrada no núcleo da plataforma IBM i — uma relação nativa e incorporada",
+  "db2>ibmi": "O Db2 for IBM i é a base de dados integrada no núcleo da plataforma IBM i — uma ligação nativa, integrada de raiz",
   "db2>wca_ansible": "O IBM Bob ajuda na otimização de consultas Db2, na modernização de esquemas e na migração de PL/SQL para Db2",
   "cognos>wxdata": "O Cognos consulta o watsonx.data como fonte de dados unificada para relatórios empresariais governados em todo o data lakehouse",
   "cognos>ibm_pa": "O Cognos Analytics fornece relatórios operacionais e de gestão sobre os modelos financeiros do Planning Analytics",

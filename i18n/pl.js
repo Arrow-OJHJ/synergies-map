@@ -68,7 +68,7 @@ window.I18N.pl = {
  },
  "products": {
   "api_connect": {
-   "desc": "Korporacyjna platforma do zarządzania API, służąca do tworzenia, zabezpieczania i zarządzania interfejsami API w środowiskach chmury hybrydowej.",
+   "desc": "Korporacyjna platforma do zarządzania API, która pozwala tworzyć i zabezpieczać interfejsy API w środowiskach chmury hybrydowej oraz nimi zarządzać.",
    "value": "Umożliwia transformację cyfrową dzięki integracji opartej na API, skracając czas integracji o 50% i zwiększając produktywność programistów.",
    "questions": [
     "Czy mają Państwo wiele aplikacji, które muszą współdzielić dane?",
@@ -88,7 +88,7 @@ window.I18N.pl = {
    "value": "Ogranicza ręczne interwencje o 70%, umożliwia reagowanie na zdarzenia biznesowe w czasie rzeczywistym i zwiększa efektywność operacyjną.",
    "questions": [
     "Czy mają Państwo procesy biznesowe wymagające reakcji w czasie rzeczywistym?",
-    "Czy monitorują Państwo systemy pod kątem zdarzeń ręcznie?",
+    "Czy ręcznie monitorują Państwo zdarzenia w systemach?",
     "Czy potrzebują Państwo automatyzacji przepływów pracy obejmujących wiele systemów?",
     "Czy chcą Państwo obniżyć koszty operacyjne dzięki automatyzacji?"
    ],
@@ -116,13 +116,13 @@ window.I18N.pl = {
    ]
   },
   "terraform": {
-   "desc": "Narzędzie Infrastructure as Code do udostępniania infrastruktury chmurowej i zarządzania nią u wielu dostawców.",
+   "desc": "Narzędzie Infrastructure as Code do provisioningu infrastruktury chmurowej i zarządzania nią u wielu dostawców.",
    "value": "Skraca czas wdrażania infrastruktury o 80%, zapewnia spójność i umożliwia kontrolę wersji infrastruktury.",
    "questions": [
-    "Czy udostępniają Państwo infrastrukturę chmurową ręcznie?",
+    "Czy provisioning infrastruktury chmurowej odbywa się u Państwa ręcznie?",
     "Czy muszą Państwo zarządzać infrastrukturą u wielu dostawców chmury?",
     "Czy chcą Państwo ustandaryzować wdrożenia infrastruktury?",
-    "Czy potrzebują Państwo śledzenia zmian infrastruktury w czasie?"
+    "Czy muszą Państwo śledzić historię zmian infrastruktury?"
    ],
    "differentiators": [
     "Obsługa wielu chmur",
@@ -133,9 +133,9 @@ window.I18N.pl = {
   },
   "concert": {
    "desc": "Platforma zarządzania aplikacjami oparta na AI, zapewniająca jednolity wgląd i kontrolę w środowiskach chmury hybrydowej.",
-   "value": "Skraca MTTR o 40%, zapewnia pełny (360 stopni) wgląd w aplikacje i automatyzuje usuwanie typowych problemów.",
+   "value": "Skraca MTTR o 40%, zapewnia 360-stopniowy wgląd w aplikacje i automatyzuje usuwanie typowych problemów.",
    "questions": [
-    "Czy brakuje Państwu wglądu w cały krajobraz aplikacji?",
+    "Czy brakuje Państwu wglądu w całe środowisko aplikacyjne?",
     "Czy zarządzają Państwo aplikacjami w wielu chmurach?",
     "Czy muszą Państwo skrócić średni czas rozwiązywania problemów?",
     "Czy chcą Państwo zautomatyzować zadania związane z zarządzaniem aplikacjami?"
@@ -158,14 +158,14 @@ window.I18N.pl = {
    ],
    "differentiators": [
     "Konserwacja predykcyjna oparta na AI",
-    "Projekt mobile-first",
+    "Podejście mobile-first",
     "Integracja z IoT",
     "Szablony branżowe"
    ]
   },
   "ibm_mq": {
    "desc": "Korporacyjne oprogramowanie pośredniczące do niezawodnej, asynchronicznej wymiany komunikatów w środowiskach hybrydowych. Gwarantuje dostarczenie komunikatów dla aplikacji o znaczeniu krytycznym, w tym na mainframe, w chmurze i w systemach lokalnych.",
-   "value": "Zapewnia 99,99% niezawodności dostarczania komunikatów, zmniejsza powiązania między aplikacjami i umożliwia integrację w czasie rzeczywistym między platformami, w tym mainframe i chmurą, z wbudowaną obsługą transakcji.",
+   "value": "Zapewnia niezawodność dostarczania komunikatów na poziomie 99,99%, rozluźnia powiązania między aplikacjami i umożliwia integrację w czasie rzeczywistym między platformami, w tym mainframe i chmurą, z wbudowaną obsługą transakcji.",
    "questions": [
     "Czy mają Państwo aplikacje wymagające gwarantowanej, niezawodnej wymiany komunikatów?",
     "Czy integrują Państwo systemy między środowiskami mainframe i chmurowymi?",
@@ -181,7 +181,7 @@ window.I18N.pl = {
   },
   "ibm_sterling": {
    "desc": "Kompleksowe portfolio do integracji łańcucha dostaw i B2B, służące do zarządzania realizacją zamówień, wglądem w łańcuch dostaw i łącznością z partnerami. Łączy zarządzanie zamówieniami, analitykę łańcucha dostaw, integrację B2B i bezpieczną wymianę danych w sieciach partnerów handlowych.",
-   "value": "Przyspiesza integrację B2B o 70%, skraca cykl realizacji zamówień o 40% i zapewnia pełny wgląd w łańcuch dostaw ze współpracą z partnerami w czasie rzeczywistym oraz prognozowaniem popytu opartym na AI.",
+   "value": "Przyspiesza integrację B2B o 70%, skraca cykl realizacji zamówień o 40% i zapewnia pełny wgląd w łańcuch dostaw, współpracę z partnerami w czasie rzeczywistym oraz prognozowanie popytu oparte na AI.",
    "questions": [
     "Czy muszą Państwo integrować się z wieloma partnerami handlowymi B2B lub dostawcami?",
     "Czy chcą Państwo zoptymalizować procesy order-to-cash lub procure-to-pay?",
@@ -189,7 +189,7 @@ window.I18N.pl = {
     "Czy zarządzają Państwo złożoną, wielokanałową realizacją zamówień?"
    ],
    "differentiators": [
-    "Stworzone do integracji B2B i EDI, ponad 50 000 połączeń z partnerami",
+    "Stworzone z myślą o integracji B2B i EDI, ponad 50 000 połączeń z partnerami",
     "Analityka łańcucha dostaw i prognozowanie popytu oparte na AI",
     "Bezpieczne proxy do wymiany danych z partnerami z szyfrowaniem end-to-end",
     "Głęboka integracja z ekosystemem automatyzacji i danych IBM"
@@ -197,7 +197,7 @@ window.I18N.pl = {
   },
   "instana": {
    "desc": "Zautomatyzowane monitorowanie wydajności aplikacji z analizami opartymi na AI dla architektur cloud-native i mikrousług.",
-   "value": "Skraca MTTD o 90%, zapewnia automatyczne wykrywanie i monitorowanie oraz 1-sekundową szczegółowość danych przy rozwiązywaniu problemów.",
+   "value": "Skraca MTTD o 90%, zapewnia automatyczne wykrywanie i monitorowanie oraz szczegółowość danych na poziomie 1 sekundy przy rozwiązywaniu problemów.",
    "questions": [
     "Czy korzystają Państwo z mikrousług lub aplikacji konteneryzowanych?",
     "Czy mają Państwo trudności z identyfikacją wąskich gardeł wydajności?",
@@ -205,10 +205,10 @@ window.I18N.pl = {
     "Czy często występują u Państwa problemy z aplikacjami?"
    ],
    "differentiators": [
-    "Szczegółowość 1-sekundowa",
+    "Szczegółowość danych na poziomie 1 sekundy",
     "Automatyczne wykrywanie",
     "Bez ręcznej instrumentacji",
-    "Stworzone dla Kubernetes"
+    "Stworzony z myślą o Kubernetes"
    ]
   },
   "sevone": {
@@ -238,9 +238,9 @@ window.I18N.pl = {
    ],
    "differentiators": [
     "Automatyczne działania w czasie rzeczywistym",
-    "Decyzje uwzględniające aplikacje",
+    "Decyzje uwzględniające kontekst aplikacji",
     "Optymalizacja całego stosu",
-    "Udowodniony ROI w 30 dni"
+    "Potwierdzony ROI w ciągu 30 dni"
    ]
   },
   "apptio": {
@@ -277,10 +277,10 @@ window.I18N.pl = {
   },
   "guardium": {
    "desc": "Platforma bezpieczeństwa i ochrony danych do wykrywania, klasyfikowania i ochrony danych wrażliwych.",
-   "value": "Zapewnia zgodność z przepisami dotyczącymi danych, zapobiega naruszeniom danych i umożliwia pełne monitorowanie aktywności na danych.",
+   "value": "Zapewnia zgodność z przepisami dotyczącymi danych, zapobiega naruszeniom danych i umożliwia pełne monitorowanie operacji na danych.",
    "questions": [
     "Czy przechowują Państwo wrażliwe dane klientów lub dane finansowe?",
-    "Czy podlegają Państwo przepisom o ochronie prywatności danych (RODO, CCPA)?",
+    "Czy podlegają Państwo przepisom o ochronie danych osobowych (RODO, CCPA)?",
     "Czy doświadczyli Państwo incydentów bezpieczeństwa danych?",
     "Czy muszą Państwo monitorować dostęp do baz danych i aktywność w nich?"
    ],
@@ -293,7 +293,7 @@ window.I18N.pl = {
   },
   "verify": {
    "desc": "Platforma zarządzania tożsamością i dostępem do zabezpieczania uwierzytelniania i autoryzacji użytkowników.",
-   "value": "Ogranicza ryzyko bezpieczeństwa o 60%, poprawia doświadczenia użytkowników dzięki SSO i zapewnia zgodność z politykami dostępu.",
+   "value": "Ogranicza ryzyko bezpieczeństwa o 60%, poprawia komfort pracy użytkowników dzięki SSO i zapewnia zgodność z politykami dostępu.",
    "questions": [
     "Czy użytkownicy logują się do wielu aplikacji przy użyciu różnych haseł?",
     "Czy obawiają się Państwo nieautoryzowanego dostępu?",
@@ -319,7 +319,7 @@ window.I18N.pl = {
    "differentiators": [
     "Dynamiczne generowanie sekretów",
     "Automatyczna rotacja",
-    "Rejestrowanie audytowe",
+    "Logi audytowe",
     "Obsługa wielu chmur"
    ]
   },
@@ -329,14 +329,14 @@ window.I18N.pl = {
    "questions": [
     "Czy planują Państwo tworzenie aplikacji AI?",
     "Czy muszą Państwo trenować własne modele AI?",
-    "Czy niepokoją Państwa stronniczość i wyjaśnialność AI?",
+    "Czy kwestie stronniczości i wyjaśnialności AI budzą Państwa obawy?",
     "Czy chcą Państwo wykorzystać modele bazowe w swoich przypadkach użycia?"
    ],
    "differentiators": [
     "Korporacyjne modele bazowe",
     "Wbudowany nadzór nad AI",
     "Wdrożenie hybrydowe",
-    "Zgodność z open source"
+    "Kompatybilność z open source"
    ]
   },
   "wxdata": {
@@ -356,8 +356,8 @@ window.I18N.pl = {
    ]
   },
   "wxdi": {
-   "desc": "Oparty na AI katalog danych i platforma nadzoru nad danymi do wykrywania, rozumienia i zarządzania danymi przedsiębiorstwa.",
-   "value": "Skraca czas wyszukiwania danych o 80%, poprawia jakość danych i zapewnia zgodność oraz pochodzenie danych (lineage).",
+   "desc": "Oparty na AI katalog danych i platforma nadzoru nad danymi do wykrywania i rozumienia danych przedsiębiorstwa oraz zarządzania nimi.",
+   "value": "Skraca czas wyszukiwania danych o 80%, poprawia jakość danych i zapewnia zgodność i śledzenie pochodzenia danych (lineage).",
    "questions": [
     "Czy użytkownicy mają trudności ze znalezieniem potrzebnych danych?",
     "Czy jakość danych budzi Państwa obawy?",
@@ -382,14 +382,14 @@ window.I18N.pl = {
    ],
    "differentiators": [
     "Integracja w chmurze hybrydowej",
-    "Czas rzeczywisty i przetwarzanie wsadowe",
+    "Przetwarzanie w czasie rzeczywistym i wsadowe",
     "Wbudowana kontrola jakości danych",
     "Interfejs low-code"
    ]
   },
   "wxgov": {
    "desc": "Platforma nadzoru nad AI do zarządzania cyklem życia modeli AI, zapewniania zgodności i monitorowania wydajności modeli.",
-   "value": "Zapewnia zgodność i etykę AI, ogranicza ryzyka związane z AI i zapewnia pełną przejrzystość modeli AI.",
+   "value": "Zapewnia zgodność z przepisami i etyczne wykorzystanie AI, ogranicza ryzyko związane z AI i daje pełną przejrzystość modeli AI.",
    "questions": [
     "Czy wdrażają Państwo modele AI na produkcji?",
     "Czy muszą Państwo zapewnić sprawiedliwość i wyjaśnialność AI?",
@@ -421,7 +421,7 @@ window.I18N.pl = {
   },
   "wca_ansible": {
    "desc": "Asystent programisty oparty na AI, który przyspiesza tworzenie oprogramowania, modernizację aplikacji i pisanie skryptów automatyzacji w nowoczesnych i starszych językach, w tym Java, Python, RPG, COBOL i PL/SQL, z funkcjami agentowymi prowadzącymi kod od projektu do produkcji.",
-   "value": "Skraca zadania programistyczne z tygodni do godzin; pakiety Premium Packages zapewniają głęboką specjalizację w modernizacji IBM i, Z i Java, a wbudowane skanowanie sekretów przesuwa bezpieczeństwo w lewo od pierwszego dnia.",
+   "value": "Skraca zadania programistyczne z tygodni do godzin; Premium Packages zapewniają głęboką specjalizację w modernizacji IBM i, Z i Java, a wbudowane skanowanie sekretów realizuje podejście shift-left w bezpieczeństwie od pierwszego dnia.",
    "questions": [
     "Czy programiści poświęcają zbyt dużo czasu na pisanie powtarzalnego kodu?",
     "Czy chcą Państwo przyspieszyć tworzenie aplikacji?",
@@ -437,7 +437,7 @@ window.I18N.pl = {
   },
   "confluent": {
    "desc": "Platforma strumieniowa klasy korporacyjnej oparta na Kafka, dostępna jako Confluent Cloud lub w wersji samodzielnie zarządzanej, stanowiąca szkielet danych czasu rzeczywistego dla rozwiązań IBM z zakresu integracji hybrydowej, Data & AI i modernizacji mainframe.",
-   "value": "Pełni rolę uniwersalnego szkieletu strumieniowego łączącego platformy integracyjne, infrastrukturalne i AI IBM: łączy starszą wymianę komunikatów opartą na MQ ze strumieniami zdarzeń Kafka w czasie rzeczywistym, zasila potoki watsonx i umożliwia automatyzację sterowaną zdarzeniami w skali przedsiębiorstwa.",
+   "value": "Pełni rolę uniwersalnego szkieletu strumieniowego łączącego platformy IBM do integracji, infrastruktury i AI: łączy starszą wymianę komunikatów opartą na MQ ze strumieniami zdarzeń Kafka w czasie rzeczywistym, zasila potoki watsonx i umożliwia automatyzację sterowaną zdarzeniami w skali przedsiębiorstwa.",
    "questions": [
     "Czy muszą Państwo przetwarzać dane w czasie rzeczywistym?",
     "Czy budują Państwo architektury sterowane zdarzeniami?",
@@ -465,7 +465,7 @@ window.I18N.pl = {
    "differentiators": [
     "Silnik obliczeń w pamięci TM1 do natychmiastowego modelowania wielowymiarowego",
     "Prognozowanie i wykrywanie anomalii oparte na AI",
-    "Samoobsługa dla zespołów finansowych z budową modeli bez kodowania",
+    "Samoobsługowe tworzenie modeli bez kodowania dla zespołów finansowych",
     "Głęboka integracja z ekosystemem danych i analityki IBM watsonx"
    ]
   },
@@ -487,12 +487,12 @@ window.I18N.pl = {
   },
   "power": {
    "desc": "Korporacyjna platforma serwerowa zoptymalizowana pod kątem obciążeń intensywnie wykorzystujących dane, AI i chmury hybrydowej.",
-   "value": "Zapewnia 2-3x wyższą wydajność na rdzeń, obniża TCO o 40% i oferuje wbudowaną wirtualizację.",
+   "value": "Zapewnia 2-3 razy wyższą wydajność na rdzeń, obniża TCO o 40% i oferuje wbudowaną wirtualizację.",
    "questions": [
     "Czy korzystają Państwo z SAP, Oracle lub innych aplikacji korporacyjnych?",
     "Czy szukają Państwo wyższej wydajności dla obciążeń AI?",
     "Czy potrzebują Państwo wysokiej dostępności dla aplikacji krytycznych?",
-    "Czy niepokoją Państwa koszty licencji na x86?"
+    "Czy niepokoją Państwa koszty licencji oprogramowania na platformie x86?"
    ],
    "differentiators": [
     "Wyższa wydajność na rdzeń",
@@ -539,7 +539,7 @@ window.I18N.pl = {
    "questions": [
     "Czy korzystają Państwo z obciążeń Linux wymagających wyższej wydajności?",
     "Czy chcą Państwo skonsolidować infrastrukturę Linux?",
-    "Czy potrzebują Państwo wsparcia Linux klasy korporacyjnej?",
+    "Czy potrzebują Państwo wsparcia klasy korporacyjnej dla systemu Linux?",
     "Czy korzystają Państwo z obciążeń konteneryzowanych?"
    ],
    "differentiators": [
@@ -551,7 +551,7 @@ window.I18N.pl = {
   },
   "ibm_tls": {
    "desc": "Kompleksowa usługa utrzymania, wsparcia sprzętu i oprogramowania oraz migracji po zakończeniu cyklu życia. Obejmuje pełny cykl życia systemów IBM i innych producentów od wdrożenia do wycofania, w tym proaktywne wsparcie, zarządzanie poprawkami, aktualizacje i planowane przejścia technologiczne.",
-   "value": "Ogranicza nieplanowane przestoje o 95%, zapewnia przewidywalne koszty cyklu życia infrastruktury i płynne przejścia technologiczne bez zakłóceń operacyjnych, przy wsparciu wiodących w branży SLA i proaktywnej diagnostyki.",
+   "value": "Ogranicza nieplanowane przestoje o 95%, zapewnia przewidywalne koszty cyklu życia infrastruktury i płynne przejścia technologiczne bez zakłóceń operacyjnych, w oparciu o wiodące w branży SLA i proaktywną diagnostykę.",
    "questions": [
     "Czy niepokoi Państwa koniec wsparcia dla krytycznych systemów IBM?",
     "Czy potrzebują Państwo przewidywalnego zarządzania cyklem życia infrastruktury w stałej cenie?",
@@ -562,7 +562,7 @@ window.I18N.pl = {
     "Proaktywna diagnostyka i predykcyjne zapobieganie problemom",
     "Jeden punkt kontaktu dla środowisk IBM i innych producentów",
     "Płynne planowanie migracji po zakończeniu cyklu życia bez zakłóceń operacyjnych",
-    "Realizowane przez Arrow z lokalną wiedzą UKI i inżynierami z certyfikatami IBM"
+    "Realizowane przez Arrow, z lokalnymi kompetencjami w UKI i inżynierami z certyfikatami IBM"
    ]
   },
   "flashsystem": {
@@ -658,20 +658,20 @@ window.I18N.pl = {
     "Open source",
     "Brak uzależnienia od dostawcy",
     "Ujednolicona pamięć masowa",
-    "Samonaprawianie"
+    "Mechanizmy samonaprawcze"
    ]
   },
   "storage_scale": {
    "desc": "Wysokowydajny równoległy system plików dla obciążeń intensywnie wykorzystujących dane i aplikacji AI.",
-   "value": "Zapewnia 10x szybszy dostęp do danych, umożliwia globalne współdzielenie danych i obsługuje ogromną skalę.",
+   "value": "Zapewnia 10 razy szybszy dostęp do danych, umożliwia globalne współdzielenie danych i obsługuje ogromną skalę.",
    "questions": [
     "Czy mają Państwo obciążenia intensywnie wykorzystujące dane?",
-    "Czy prowadzą Państwo zadania trenowania AI/ML?",
+    "Czy trenują Państwo modele AI/ML?",
     "Czy muszą Państwo współdzielić dane między wieloma lokalizacjami?",
     "Czy występują u Państwa problemy z wydajnością systemu plików?"
    ],
    "differentiators": [
-    "Sprawdzony w skali eksa",
+    "Sprawdzony w skali eksabajtów",
     "Globalna przestrzeń nazw",
     "Aktywne zarządzanie plikami",
     "Zoptymalizowany pod AI"
@@ -690,7 +690,7 @@ window.I18N.pl = {
     "Gotowa integracja z Maximo w zakresie danych operacyjnych i o zasobach",
     "Wbudowane regulacyjne ramy raportowania: GRI, SASB, TCFD, CSRD",
     "Kontrola jakości danych i wykrywanie anomalii wspierane przez AI",
-    "Chmurowe rozwiązanie SaaS z szybkim osiągnięciem wartości"
+    "Chmurowe rozwiązanie SaaS, które szybko przynosi wartość"
    ]
   },
   "elm_suite": {
@@ -699,19 +699,19 @@ window.I18N.pl = {
    "questions": [
     "Czy potrzebują Państwo pełnej identyfikowalności od wymagań po testy w programach krytycznych dla bezpieczeństwa?",
     "Czy rozwijają Państwo produkty, które muszą spełniać regulacje lotnicze, motoryzacyjne lub dotyczące wyrobów medycznych?",
-    "Czy inżynierskie wnioski o zmiany powodują poprawki i opóźnienia harmonogramu?",
+    "Czy wnioski o zmiany inżynierskie powodują poprawki i opóźnienia w harmonogramie?",
     "Czy zarządzają Państwo wymaganiami w wielu zespołach lub organizacjach?"
    ],
    "differentiators": [
     "Pełny pakiet ALM od jednego dostawcy: wymagania, przepływ prac, testy i modelowanie",
     "Rozbudowane wsparcie zgodności z ISO 26262, DO-178C, IEC 61508 i FDA 21 CFR Part 11",
-    "Natywna integracja AI z IBM Bob do wymagań i generowania kodu wspieranych przez AI",
-    "Najdłużej rozwijana platforma inżynierska IBM z ponad 30 latami wdrożeń w branżach regulowanych"
+    "Natywna integracja z IBM Bob: tworzenie wymagań i generowanie kodu wspierane przez AI",
+    "Najdłużej rozwijana platforma inżynierska IBM z ponad 30-letnim doświadczeniem wdrożeniowym w branżach regulowanych"
    ]
   },
   "app_connect": {
    "desc": "IBM App Connect to platforma integracyjna low-code/no-code do łączenia aplikacji i automatyzacji przepływów pracy z użyciem ponad 200 gotowych konektorów, dostępna jako App Connect Professional i App Connect Enterprise.",
-   "value": "Pozwala użytkownikom biznesowym i programistom budować integracje w godziny zamiast tygodni, przyspieszając transformację cyfrową bez specjalistycznej wiedzy integracyjnej.",
+   "value": "Pozwala użytkownikom biznesowym i programistom budować integracje w ciągu godzin zamiast tygodni, przyspieszając transformację cyfrową bez specjalistycznej wiedzy integracyjnej.",
    "questions": [
     "Czy zespoły biznesowe muszą łączyć aplikacje SaaS bez pisania kodu?",
     "Czy chcą Państwo ograniczyć zależność od wyspecjalizowanych programistów integracji?",
@@ -761,7 +761,7 @@ window.I18N.pl = {
    "desc": "IBM NS1 Connect to platforma inteligentnego DNS, zarządzania ruchem i łączności sieciowej, zapewniająca autorytatywny DNS z zaawansowanym routingiem, sterowaniem ruchem i infrastrukturą odporną na ataki DDoS.",
    "value": "Zapewnia globalny czas odpowiedzi DNS poniżej 10 ms z inteligentnym sterowaniem ruchem, ograniczając przestoje aplikacji, poprawiając wydajność dla użytkowników rozproszonych globalnie i stanowiąc odporną pierwszą linię obrony sieci.",
    "questions": [
-    "Czy awarie DNS lub wolne rozwiązywanie nazw powodują problemy z dostępnością aplikacji?",
+    "Czy awarie DNS lub powolne rozwiązywanie nazw powodują problemy z dostępnością aplikacji?",
     "Czy muszą Państwo inteligentnie kierować użytkowników między wieloma centrami danych lub regionami chmury?",
     "Czy obawiają się Państwo ataków DDoS na infrastrukturę DNS?",
     "Czy potrzebują Państwo precyzyjnej kontroli nad globalną dystrybucją ruchu?"
@@ -790,7 +790,7 @@ window.I18N.pl = {
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (infrastruktura hiperkonwergentna) to programowo definiowana platforma obliczeniowa, pamięci masowej i sieciowa, która uruchamia Red Hat OpenShift i obciążenia IBM na konwergentnym stosie sprzętowym, upraszczając działanie centrum danych na potrzeby AI i chmury hybrydowej.",
+   "desc": "IBM Fusion HCI (infrastruktura hiperkonwergentna) to programowo definiowana platforma obliczeniowa, pamięci masowej i sieciowa, która uruchamia Red Hat OpenShift i obciążenia IBM na konwergentnym stosie sprzętowym, upraszczając eksploatację centrum danych na potrzeby AI i chmury hybrydowej.",
    "value": "Zmniejsza złożoność centrum danych przez połączenie mocy obliczeniowej, pamięci masowej i sieci w jedną zarządzaną platformę, skracając czas wdrożenia i zapewniając zweryfikowaną, wspieraną przez IBM podstawę dla OpenShift i obciążeń AI w środowisku lokalnym.",
    "questions": [
     "Czy chcą Państwo uprościć lokalną infrastrukturę dla OpenShift lub obciążeń AI?",
@@ -807,7 +807,7 @@ window.I18N.pl = {
   },
   "db2": {
    "desc": "IBM Db2 to korporacyjny system zarządzania relacyjnymi bazami danych, dostępny lokalnie i w chmurze, z wysokowydajnym OLTP i analityką, wbudowanymi funkcjami AI oraz natywną zgodnością z IBM Z, Power Systems i IBM i.",
-   "value": "Zapewnia zaufaną, wysokowydajną transakcyjną podstawę danych dla aplikacji korporacyjnych, z wbudowaną optymalizacją zapytań opartą na AI, natywną integracją z watsonx.data i dziesięcioleciami niezawodności na platformach IBM.",
+   "value": "Zapewnia zaufaną, wysokowydajną transakcyjną podstawę danych dla aplikacji korporacyjnych, z wbudowaną optymalizacją zapytań opartą na AI, natywną integracją z watsonx.data i niezawodnością potwierdzoną przez dziesięciolecia pracy na platformach IBM.",
    "questions": [
     "Czy chcą Państwo obniżyć koszty licencji Oracle lub SQL Server bez przebudowy architektury aplikacji?",
     "Czy potrzebują Państwo bazy danych o sprawdzonej wydajności na platformach IBM Power lub Z?",
@@ -825,7 +825,7 @@ window.I18N.pl = {
    "desc": "IBM Cognos Analytics to oparta na AI platforma business intelligence i analityki do samoobsługowego raportowania, pulpitów i eksploracji danych, z wbudowanym nadzorem i korporacyjnym bezpieczeństwem danych.",
    "value": "Pozwala użytkownikom biznesowym tworzyć dokładne, nadzorowane raporty i pulpity bez zależności od IT, z przygotowaniem danych wspieranym przez AI, zapytaniami w języku naturalnym i wbudowanym nadzorem klasy korporacyjnej.",
    "questions": [
-    "Czy użytkownicy biznesowi zależą od IT przy każdym potrzebnym raporcie lub pulpicie?",
+    "Czy użytkownicy biznesowi muszą zwracać się do IT o każdy potrzebny raport lub pulpit?",
     "Czy Państwa organizacja nadal tworzy krytyczne raporty w arkuszach kalkulacyjnych?",
     "Czy potrzebują Państwo nadzorowanej analityki samoobsługowej, która zachowuje dokładność i bezpieczeństwo danych?",
     "Czy szukają Państwo narzędzi BI z rozbudowaną integracją ze źródłami danych IBM?"
@@ -886,14 +886,14 @@ window.I18N.pl = {
   "power>aix": "AIX to korporacyjny system operacyjny Unix dla Power Systems",
   "power>ibmi": "IBM i działa natywnie na architekturze Power Systems",
   "power>linux_power": "Dystrybucje Linux zoptymalizowane pod kątem Power Systems",
-  "linuxone>linux_power": "LinuxONE i Power stosują wspólne strategie optymalizacji Linux",
+  "linuxone>linux_power": "LinuxONE i Power stosują wspólne strategie optymalizacji systemu Linux",
   "flashsystem>storage_control": "Storage Control zarządza macierzami FlashSystem",
   "flashsystem>storage_insights": "Storage Insights monitoruje wydajność macierzy FlashSystem",
   "flashsystem>storage_virt": "Storage Virtualize łączy FlashSystem w pule z innymi zasobami pamięci masowej",
   "storage_control>storage_insights": "Storage Control wykorzystuje Insights do analityki predykcyjnej",
   "storage_control>storage_virt": "Storage Control zarządza zwirtualizowanymi pulami pamięci masowej",
   "storage_insights>storage_virt": "Storage Insights monitoruje wydajność zwirtualizowanej pamięci masowej",
-  "storage_scale>storage_ceph": "Storage Scale i Ceph zapewniają uzupełniającą się pamięć plikową i obiektową",
+  "storage_scale>storage_ceph": "Storage Scale i Ceph uzupełniają się, zapewniając pamięć plikową i obiektową",
   "storage_scale>storage_fusion": "Storage Fusion wykorzystuje Storage Scale jako pamięć masową dla kontenerów",
   "storage_ceph>storage_fusion": "Storage Fusion wykorzystuje Ceph jako pamięć obiektową",
   "wxorch>api_connect": "Agenci Orchestrate wywołują API zarządzane przez API Connect",
@@ -901,9 +901,9 @@ window.I18N.pl = {
   "wxorch>webmethods": "Orchestrate integruje się z webMethods, zapewniając łączność z systemami przedsiębiorstwa",
   "wxai>maximo": "watsonx.ai umożliwia konserwację predykcyjną w Maximo",
   "wca_ansible>terraform": "IBM Bob generuje kod infrastruktury Terraform",
-  "wca_ansible>ibmi": "Pakiet Premium Package dla IBM i w IBM Bob modernizuje aplikacje RPG i starsze aplikacje IBM i",
-  "wca_ansible>linuxone": "Pakiet Premium Package dla Z w IBM Bob przyspiesza modernizację kodu mainframe na LinuxONE",
-  "wca_ansible>aix": "IBM Bob przyspiesza modernizację starszych aplikacji C i C++ działających w obciążeniach Unix na AIX",
+  "wca_ansible>ibmi": "Premium Package dla IBM i w IBM Bob modernizuje aplikacje RPG i starsze aplikacje IBM i",
+  "wca_ansible>linuxone": "Premium Package dla Z w IBM Bob przyspiesza modernizację kodu mainframe na LinuxONE",
+  "wca_ansible>aix": "IBM Bob przyspiesza modernizację starszych aplikacji uniksowych w C i C++ działających na AIX",
   "wca_ansible>wxgov": "Kod wygenerowany przez IBM Bob jest audytowany i nadzorowany w ramach watsonx.governance",
   "wca_ansible>vault": "IBM Bob skanuje bazy kodu w poszukiwaniu zapisanych na stałe sekretów i refaktoryzuje kod tak, by korzystał z Vault",
   "wca_ansible>verify": "IBM Bob generuje kod bezpiecznego uwierzytelniania, SSO i integracji MFA dla aplikacji chronionych przez Verify",
@@ -941,7 +941,7 @@ window.I18N.pl = {
   "wxdi>guardium": "Data intelligence integruje klasyfikacje bezpieczeństwa z Guardium",
   "confluent>guardium": "Guardium monitoruje i chroni dane wrażliwe przepływające przez strumienie Confluent Kafka, zapewniając zgodność i bezpieczeństwo danych",
   "wxai>power": "watsonx.ai wykorzystuje Power Systems do akceleracji AI",
-  "wxai>linuxone": "watsonx.ai działa na LinuxONE, zapewniając bezpieczne obciążenia AI",
+  "wxai>linuxone": "watsonx.ai działa na LinuxONE, zapewniając bezpieczne środowisko dla obciążeń AI",
   "wxdata>power": "watsonx.data wykorzystuje Power Systems do zapytań intensywnie przetwarzających dane",
   "wxdata>linuxone": "watsonx.data na LinuxONE zapewnia bezpieczny data lakehouse",
   "confluent>linuxone": "Confluent działa natywnie na LinuxONE, zapewniając korporacyjny streaming Kafka z gwarancjami bezpieczeństwa i zgodności LinuxONE",
@@ -970,7 +970,7 @@ window.I18N.pl = {
   "ibm_tls>storage_scale": "IBM TLS wspiera aktualizacje systemów Storage Scale i planowanie cyklu życia technologii",
   "ibm_tls>linux_power": "Technology Lifecycle Services obejmuje wsparcie systemu operacyjnego Linux on Power i zarządzanie cyklem życia platformy",
   "ibm_tls>storage_control": "Technology Lifecycle Services wspiera sprzęt pamięci masowej zarządzany przez Storage Control",
-  "ibm_tls>storage_virt": "IBM TLS serwisuje sprzęt pamięci masowej IBM, na którym działa Storage Virtualize, obejmując firmware, utrzymanie i przejścia w cyklu życia",
+  "ibm_tls>storage_virt": "IBM TLS zapewnia serwis sprzętu pamięci masowej IBM, na którym działa Storage Virtualize, obejmując firmware, utrzymanie i przejścia w cyklu życia",
   "envizi>maximo": "Dane operacyjne i o zasobach z Maximo zasilają Envizi na potrzeby raportowania ESG i emisji na poziomie obiektów",
   "envizi>ibm_sterling": "Dane łańcucha dostaw z platformy Sterling zasilają Envizi na potrzeby śledzenia emisji zakresu 3 w sieciach partnerów",
   "envizi>wxdata": "Zbiory danych ESG z Envizi trafiają do watsonx.data na potrzeby analityki zrównoważonego rozwoju i modelowania AI",
@@ -1001,7 +1001,7 @@ window.I18N.pl = {
   "powervs>wca_ansible": "IBM Bob przyspiesza modernizację aplikacji AIX i IBM i migrowanych do środowisk chmurowych PowerVS",
   "fusion_hci>storage_fusion": "IBM Fusion HCI wykorzystuje Storage Fusion, aby zapewnić natywną dla kontenerów trwałą pamięć masową dla obciążeń OpenShift działających na platformie konwergentnej",
   "fusion_hci>power": "IBM Fusion HCI może działać obok Power Systems w środowiskach infrastruktury hybrydowej zarządzanych przez IBM",
-  "fusion_hci>linuxone": "Fusion HCI i LinuxONE to uzupełniające się opcje infrastruktury lokalnej dla wrażliwych pod względem bezpieczeństwa obciążeń korporacyjnych",
+  "fusion_hci>linuxone": "Fusion HCI i LinuxONE to uzupełniające się opcje infrastruktury lokalnej dla obciążeń korporacyjnych o wysokich wymaganiach bezpieczeństwa",
   "fusion_hci>ibm_tls": "IBM TLS zarządza cyklem życia sprzętu IBM Fusion HCI, firmware i wsparciem",
   "db2>wxdata": "Db2 to podstawowe transakcyjne źródło danych federowane do watsonx.data na potrzeby jednolitej analityki i trenowania modeli AI",
   "db2>wxdint": "watsonx.data integration pozyskuje i przekształca dane z Db2 na potrzeby dalszych potoków AI i analitycznych",
@@ -1010,7 +1010,7 @@ window.I18N.pl = {
   "db2>wca_ansible": "IBM Bob wspiera optymalizację zapytań Db2, modernizację schematów i migrację PL/SQL do Db2",
   "cognos>wxdata": "Cognos wykonuje zapytania do watsonx.data jako jednolitego źródła danych na potrzeby nadzorowanego raportowania korporacyjnego w całym data lakehouse",
   "cognos>ibm_pa": "Cognos Analytics zapewnia raportowanie operacyjne i zarządcze na bazie modeli finansowych Planning Analytics",
-  "cognos>db2": "Cognos jest głównym odbiorcą BI danych transakcyjnych z Db2 dla korporacyjnych pulpitów i raportów",
+  "cognos>db2": "Cognos to główne narzędzie BI korzystające z danych transakcyjnych Db2 dla korporacyjnych pulpitów i raportów",
   "cognos>wxai": "watsonx.ai wzbogaca Cognos o analitykę predykcyjną i analizy generowane przez AI, prezentowane w pulpitach",
   "cognos>guardium": "Guardium egzekwuje polityki dostępu do danych wobec źródeł, z których korzysta Cognos, zapewniając zgodne raportowanie"
  }

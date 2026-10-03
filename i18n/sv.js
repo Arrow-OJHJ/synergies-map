@@ -63,7 +63,7 @@ window.I18N.sv = {
  "products": {
   "api_connect": {
    "desc": "Plattform för API-hantering i företagsklass för att skapa, säkra och hantera API:er i hybridmolnmiljöer.",
-   "value": "Möjliggör digital transformation genom API-ledd integration, minskar integrationstiden med 50 % och ökar utvecklarnas produktivitet.",
+   "value": "Möjliggör digital transformation genom API-baserad integration, minskar integrationstiden med 50 % och ökar utvecklarnas produktivitet.",
    "questions": [
     "Har du flera applikationer som behöver dela data?",
     "Bygger du mobil- eller webbappar som behöver backend-tjänster?",
@@ -79,7 +79,7 @@ window.I18N.sv = {
   },
   "event_auto": {
    "desc": "Händelsedriven automationsplattform för automatisering av affärsprocesser och beslut i realtid.",
-   "value": "Minskar manuella ingrepp med 70 %, möjliggör realtidsrespons på affärshändelser och förbättrar den operativa effektiviteten.",
+   "value": "Minskar manuella ingrepp med 70 %, gör det möjligt att reagera i realtid på affärshändelser och förbättrar den operativa effektiviteten.",
    "questions": [
     "Har du affärsprocesser som kräver svar i realtid?",
     "Övervakar du system manuellt för att fånga händelser?",
@@ -168,7 +168,7 @@ window.I18N.sv = {
    ],
    "differentiators": [
     "Garanterad leverans med fullt transaktionsstöd",
-    "Stordatornativ integration över IBM Z, Power och LinuxONE",
+    "Inbyggd stordatorintegration för IBM Z, Power och LinuxONE",
     "Över 40 års tillförlitlig meddelandehantering för företag",
     "Inbyggd brygga till Confluent Kafka via IBM MQ Kafka Connector"
    ]
@@ -185,7 +185,7 @@ window.I18N.sv = {
    "differentiators": [
     "Byggd för B2B-integration och EDI med över 50 000 partneranslutningar",
     "AI-drivna insikter om leveranskedjan och efterfrågeprognoser",
-    "Säker proxy för datautbyte med partner med kryptering från början till slut",
+    "Säker proxy för datautbyte med partner med end-to-end-kryptering",
     "Djup integration med IBM:s ekosystem för automation och data"
    ]
   },
@@ -223,7 +223,7 @@ window.I18N.sv = {
   },
   "turbonomic": {
    "desc": "Plattform för resurshantering av applikationer som kontinuerligt optimerar resursfördelningen i realtid.",
-   "value": "Sänker molnkostnaderna med 30-50 %, förbättrar applikationsprestandan med 30 % och automatiserar resursoptimeringen.",
+   "value": "Sänker molnkostnaderna med 30–50 %, förbättrar applikationsprestandan med 30 % och automatiserar resursoptimeringen.",
    "questions": [
     "Är dina molnkostnader högre än väntat?",
     "Har du prestandaproblem på grund av resursbrist?",
@@ -234,7 +234,7 @@ window.I18N.sv = {
     "Automatiserade åtgärder i realtid",
     "Applikationsmedvetna beslut",
     "Optimering av hela stacken",
-    "Bevisad ROI på 30 dagar"
+    "Bevisad ROI inom 30 dagar"
    ]
   },
   "apptio": {
@@ -355,7 +355,7 @@ window.I18N.sv = {
    "questions": [
     "Har användarna svårt att hitta de data de behöver?",
     "Är datakvaliteten ett problem?",
-    "Behöver du spåra datas ursprung och flöde?",
+    "Behöver du spåra var dina data kommer ifrån och hur de flödar?",
     "Omfattas du av regelverk för datastyrning?"
    ],
    "differentiators": [
@@ -415,7 +415,7 @@ window.I18N.sv = {
   },
   "wca_ansible": {
    "desc": "AI-parprogrammerare som snabbar upp mjukvaruutveckling, applikationsmodernisering och automationsskript i moderna och äldre språk som Java, Python, RPG, COBOL och PL/SQL – med agentiska funktioner som tar koden från design till produktion.",
-   "value": "Kortar utvecklingsuppgifter från veckor till timmar, där Premium Packages ger djup specialisering för modernisering av IBM i, Z och Java – med inbyggd skanning efter hemligheter som flyttar säkerheten tidigt i kedjan från dag ett.",
+   "value": "Kortar utvecklingsuppgifter från veckor till timmar, och Premium Packages ger djup specialisering för modernisering av IBM i, Z och Java – med inbyggd skanning efter hemligheter som flyttar in säkerheten tidigt i kedjan redan från dag ett.",
    "questions": [
     "Lägger utvecklarna för mycket tid på standardkod?",
     "Vill du snabba upp applikationsutvecklingen?",
@@ -451,7 +451,7 @@ window.I18N.sv = {
    "desc": "AI-driven plattform för finansiell planering och analys med självbetjäning för budgetering, prognoser och scenariomodellering. Gör det möjligt för ekonomiteam att konsolidera data, bygga dynamiska modeller och samarbeta kring finansiell planering i hela företaget med en minnesbaserad beräkningsmotor.",
    "value": "Kortar planeringscykeln med 60 %, förbättrar prognosprecisionen med 30 % och ger ekonomiteam analys med självbetjäning och AI-driven scenariomodellering – utan beroende av kalkylblad, i företagsskala.",
    "questions": [
-    "Är din budgetering och prognosprocess manuell eller baserad på kalkylblad?",
+    "Är din budget- och prognosprocess manuell eller baserad på kalkylblad?",
     "Behöver du bättre samarbete mellan ekonomi och affärsenheterna?",
     "Har du problem med prognosprecisionen eller hastigheten i scenarioplaneringen?",
     "Behöver du konsolidera finansiella data från flera källsystem?"
@@ -481,7 +481,7 @@ window.I18N.sv = {
   },
   "power": {
    "desc": "Serverplattform i företagsklass, optimerad för dataintensiva arbetslaster, AI och hybridmoln.",
-   "value": "Levererar 2-3 gånger bättre prestanda per kärna, sänker TCO med 40 % och erbjuder inbyggd virtualisering.",
+   "value": "Levererar 2–3 gånger bättre prestanda per kärna, sänker TCO med 40 % och erbjuder inbyggd virtualisering.",
    "questions": [
     "Kör du SAP, Oracle eller andra affärssystem?",
     "Söker du bättre prestanda för AI-arbetslaster?",
@@ -582,7 +582,7 @@ window.I18N.sv = {
     "Hanterar du flera lagringssystem?",
     "Lägger du för mycket tid på lagringsadministration?",
     "Behöver du bättre insyn i lagringsprestandan?",
-    "Har du problem relaterade till lagring?"
+    "Har du problem med lagringen?"
    ],
    "differentiators": [
     "Stöd för flera leverantörer",
@@ -614,7 +614,7 @@ window.I18N.sv = {
     "Har du lagring från flera leverantörer?",
     "Behöver du migrera data utan driftstopp?",
     "Vill du optimera lagringsutnyttjandet?",
-    "Behöver du nivåindela data över olika lagringstyper?"
+    "Behöver du nivåindela data mellan olika lagringstyper?"
    ],
    "differentiators": [
     "Stöd för flera leverantörer",
@@ -657,7 +657,7 @@ window.I18N.sv = {
   },
   "storage_scale": {
    "desc": "Parallellt filsystem med hög prestanda för dataintensiva arbetslaster och AI-applikationer.",
-   "value": "Ger 10 gånger snabbare dataåtkomst, möjliggör global datadelning och stöder massiv skala.",
+   "value": "Ger 10 gånger snabbare dataåtkomst, möjliggör global datadelning och klarar extremt stor skala.",
    "questions": [
     "Har du dataintensiva arbetslaster?",
     "Kör du träningsjobb för AI/ML?",
@@ -709,7 +709,7 @@ window.I18N.sv = {
    "questions": [
     "Behöver verksamheten koppla samman SaaS-applikationer utan att skriva kod?",
     "Vill du minska beroendet av specialiserade integrationsutvecklare?",
-    "Behöver du snabb integrationsleverans mellan moln- och lokala applikationer?",
+    "Behöver du snabbt få integrationer på plats mellan moln- och lokala applikationer?",
     "Hanterar du för många punkt-till-punkt-kopplingar mellan system?"
    ],
    "differentiators": [
@@ -779,7 +779,7 @@ window.I18N.sv = {
    "differentiators": [
     "Enda molntjänsten med inbyggd Power-prestanda och kompatibilitet med AIX och IBM i",
     "Anslutning med låg latens till IBM Cloud-tjänster och watsonx",
-    "IBM-hanterad infrastruktur med tillgänglighet garanterad i SLA",
+    "IBM-hanterad infrastruktur med SLA-garanterad tillgänglighet",
     "Inget plattformsbyte för applikationer – flytta Power-arbetslaster till molnet som de är"
    ]
   },
@@ -789,7 +789,7 @@ window.I18N.sv = {
    "questions": [
     "Vill du förenkla din lokala infrastruktur för OpenShift- eller AI-arbetslaster?",
     "Behöver du en validerad plattform från en enda leverantör för Red Hat OpenShift?",
-    "Bromsar arbetet med att förvalta infrastrukturen dina applikationsdriftsättningar?",
+    "Bromsar infrastrukturförvaltningen dina applikationsdriftsättningar?",
     "Behöver du en skalbar lokal plattform för AI-infrastruktur?"
    ],
    "differentiators": [
@@ -812,7 +812,7 @@ window.I18N.sv = {
     "Inbyggd integration med IBM Z och Power Systems med högsta prestanda på IBM:s plattformar",
     "Inbyggd AI-acceleration av frågor och autonom optimering",
     "Smidig federering till watsonx.data för hybridanalys",
-    "Starka verktyg för migrering från Oracle och SQL-kompatibilitet"
+    "Starka verktyg för migrering från Oracle samt SQL-kompatibilitet"
    ]
   },
   "cognos": {
@@ -821,7 +821,7 @@ window.I18N.sv = {
    "questions": [
     "Är verksamhetsanvändarna beroende av IT för varje rapport eller instrumentpanel?",
     "Tar din organisation fortfarande fram kritiska rapporter från kalkylblad?",
-    "Behöver du styrd analys med självbetjäning som bevarar datas korrekthet och säkerhet?",
+    "Behöver du styrd analys med självbetjäning som säkerställer att data förblir korrekta och säkra?",
     "Söker du BI-verktyg med stark integration mot IBM:s datakällor?"
    ],
    "differentiators": [
@@ -982,7 +982,7 @@ window.I18N.sv = {
   "aspera>ibm_sterling": "Aspera snabbar upp överföringar av stora filer och datamängder i partnernätverken för leveranskedjan i Sterling",
   "aspera>storage_scale": "Aspera överför stora filer direkt till parallella filsystem i Storage Scale för HPC- och AI-arbetslaster",
   "kubecost>cloudability": "Kubecost levererar kostnadsdata på Kubernetes-nivå till Cloudability för samlad FinOps-rapportering över flera moln",
-  "kubecost>turbonomic": "Turbonomic använder kostnadsdata från Kubecost tillsammans med prestandamått för att rätt dimensionera Kubernetes-arbetslaster",
+  "kubecost>turbonomic": "Turbonomic använder kostnadsdata från Kubecost tillsammans med prestandamått för att dimensionera Kubernetes-arbetslaster rätt",
   "kubecost>instana": "Instana ger kontext om applikationsprestanda som Kubecost använder för att koppla kostnader till faktisk resursförbrukning",
   "kubecost>apptio": "Kubernetes-kostnadsdata från Kubecost matar TBM-modellerna i Apptio för full transparens i IT-kostnaderna, även för containerarbetslaster",
   "ns1>verify": "Den intelligenta routningen i NS1 dirigerar användare till närmaste autentiseringsslutpunkt och förbättrar prestanda och motståndskraft för SSO i Verify",
@@ -1000,7 +1000,7 @@ window.I18N.sv = {
   "db2>wxdata": "Db2 är en primär transaktionell datakälla som federeras in i watsonx.data för samlad analys och träning av AI-modeller",
   "db2>wxdint": "watsonx.data integration matar in och transformerar data från Db2 för efterföljande AI- och analyspipelines",
   "db2>guardium": "Guardium övervakar och granskar all dataåtkomst i Db2 för regelefterlevnad och datasäkerhet",
-  "db2>ibmi": "Db2 for IBM i är den integrerade databasen i kärnan av plattformen IBM i – en inbyggd relation",
+  "db2>ibmi": "Db2 for IBM i är den integrerade databasen i kärnan av plattformen IBM i – inbyggd från grunden",
   "db2>wca_ansible": "IBM Bob hjälper till med frågeoptimering i Db2, schemamodernisering och migrering från PL/SQL till Db2",
   "cognos>wxdata": "Cognos ställer frågor mot watsonx.data som samlad datakälla för styrd företagsrapportering över hela data lakehouse",
   "cognos>ibm_pa": "Cognos Analytics ger drift- och ledningsrapportering ovanpå de finansiella modellerna i Planning Analytics",

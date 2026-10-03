@@ -10,7 +10,7 @@ window.I18N.hu = {
   "mobSearchPlaceholder": "Termékek keresése…",
   "searchAria": "Termékek keresése",
   "clearSearch": "Keresés törlése",
-  "playFilter": "Szűrés termékcsoportra",
+  "playFilter": "Termékcsoport-szűrő",
   "mapAria": "Keresztértékesítési térkép",
   "productDetail": "Termékadatok",
   "detail": "Részletek",
@@ -28,7 +28,7 @@ window.I18N.hu = {
   "competesWith": "Versenytársak",
   "keyDifferentiators": "Fő megkülönböztető előnyök",
   "discoveryQuestions": "Igényfelmérő kérdések",
-  "emptyPrompt": {"one": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} termékcsoportban.", "other": "Válasszon ki egy terméket, hogy kiemelje keresztértékesítési kapcsolatait {n} termékcsoportban."},
+  "emptyPrompt": {"one": "Egy termék kiválasztásával kiemelheti a keresztértékesítési kapcsolatait {n} termékcsoportban.", "other": "Egy termék kiválasztásával kiemelheti a keresztértékesítési kapcsolatait {n} termékcsoportban."},
   "productsFound": {
    "one": "{n} termék található",
    "other": "{n} termék található"
@@ -152,7 +152,7 @@ window.I18N.hu = {
    ],
    "differentiators": [
     "AI-alapú prediktív karbantartás",
-    "Elsősorban mobilra tervezett kialakítás",
+    "Mobile-first kialakítás",
     "IoT-integráció",
     "Iparág-specifikus sablonok"
    ]
@@ -223,7 +223,7 @@ window.I18N.hu = {
   },
   "turbonomic": {
    "desc": "Alkalmazás-erőforrás-kezelő platform, amely valós időben, folyamatosan optimalizálja az erőforrás-elosztást.",
-   "value": "30-50%-kal csökkenti a felhőköltségeket, 30%-kal javítja az alkalmazások teljesítményét, és automatizálja az erőforrás-optimalizálást.",
+   "value": "30–50%-kal csökkenti a felhőköltségeket, 30%-kal javítja az alkalmazások teljesítményét, és automatizálja az erőforrás-optimalizálást.",
    "questions": [
     "Magasabbak a felhőköltségeik a vártnál?",
     "Erőforráskorlátok miatt teljesítményproblémáik vannak?",
@@ -233,7 +233,7 @@ window.I18N.hu = {
    "differentiators": [
     "Valós idejű automatizált műveletek",
     "Alkalmazásszintű döntések",
-    "Teljes stack optimalizálása",
+    "Full-stack optimalizálás",
     "Bizonyított ROI 30 nap alatt"
    ]
   },
@@ -360,7 +360,7 @@ window.I18N.hu = {
    ],
    "differentiators": [
     "AI-alapú felderítés",
-    "Automatizált adatminőség",
+    "Automatizált adatminőség-kezelés",
     "Teljes körű származáskövetés",
     "Integrált adatirányítás"
    ]
@@ -377,7 +377,7 @@ window.I18N.hu = {
    "differentiators": [
     "Hibrid felhős integráció",
     "Valós idejű és kötegelt",
-    "Beépített adatminőség",
+    "Beépített adatminőség-kezelés",
     "Low-code felület"
    ]
   },
@@ -391,7 +391,7 @@ window.I18N.hu = {
     "Meg kell felelniük AI-szabályozásoknak?"
    ],
    "differentiators": [
-    "Teljes AI-életciklus",
+    "A teljes AI-életciklus lefedése",
     "Torzításészlelés",
     "Modellmonitorozás",
     "Szabályozási megfelelőség"
@@ -414,8 +414,8 @@ window.I18N.hu = {
    ]
   },
   "wca_ansible": {
-   "desc": "AI-alapú programozótárs, amely felgyorsítja a szoftverfejlesztést, az alkalmazásmodernizációt és az automatizálási szkriptek írását modern és örökölt nyelveken, köztük Java, Python, RPG, COBOL és PL/SQL nyelven — ágensalapú képességekkel, amelyek a kódot a tervezéstől az éles üzemig viszik.",
-   "value": "Hetekről órákra rövidíti a fejlesztési feladatokat; a Premium Packages mély szakosodást nyújt az IBM i, Z és Java modernizációhoz — beépített titokkereséssel, amely az első naptól a fejlesztés elejére hozza a biztonságot (shift left).",
+   "desc": "AI-alapú programozótárs, amely felgyorsítja a szoftverfejlesztést, az alkalmazásmodernizációt és az automatizálási szkriptek írását modern és örökölt nyelveken, köztük Java, Python, RPG, COBOL és PL/SQL nyelven – ágensalapú képességekkel, amelyek a kódot a tervezéstől az éles üzemig viszik.",
+   "value": "Hetekről órákra rövidíti a fejlesztési feladatokat; a Premium Packages mély szakosodást nyújt az IBM i, Z és Java modernizációhoz – beépített titokkereséssel, amely az első naptól a fejlesztés elejére hozza a biztonságot (shift left).",
    "questions": [
     "Túl sok időt töltenek a fejlesztőik sablonkód írásával?",
     "Szeretnék felgyorsítani az alkalmazásfejlesztést?",
@@ -431,7 +431,7 @@ window.I18N.hu = {
   },
   "confluent": {
    "desc": "Kafka technológiára épülő, vállalati szintű streamingplatform, amely Confluent Cloud szolgáltatásként vagy saját üzemeltetésben érhető el, és valós idejű adatgerincként szolgál az IBM hibrid integrációs, adat- és AI-, valamint mainframe-modernizációs megoldásaihoz.",
-   "value": "Univerzális streaminggerincként köti össze az IBM integrációs, infrastruktúra- és AI-platformjait — hidat képez az MQ technológiára épülő örökölt üzenetküldés és a valós idejű Kafka eseményfolyamok között, adatokkal látja el a watsonx adatfolyamatokat, és vállalati léptékű eseményvezérelt automatizálást tesz lehetővé.",
+   "value": "Univerzális streaminggerincként köti össze az IBM integrációs, infrastruktúra- és AI-platformjait – hidat képez az MQ technológiára épülő örökölt üzenetküldés és a valós idejű Kafka eseményfolyamok között, adatokkal látja el a watsonx adatfolyamatokat, és vállalati léptékű eseményvezérelt automatizálást tesz lehetővé.",
    "questions": [
     "Valós időben kell adatokat feldolgozniuk?",
     "Eseményvezérelt architektúrákat építenek?",
@@ -441,15 +441,15 @@ window.I18N.hu = {
     "IBM Z vagy mainframe rendszerekből kell adatokat streamelniük felhőnatív alkalmazásokba?"
    ],
    "differentiators": [
-    "Stratégiai IBM partnerség — tanúsítva hibrid felhőre és az IBM integrációs stackre",
-    "MQ híd — natívan köti össze az IBM MQ örökölt üzenetküldést a Kafka eseményfolyamokkal",
+    "Stratégiai IBM partnerség – tanúsítva hibrid felhőre és az IBM integrációs stackre",
+    "MQ híd – natívan köti össze az IBM MQ örökölt üzenetküldést a Kafka eseményfolyamokkal",
     "Valós idejű streamingadatokkal látja el a watsonx.ai és watsonx.data adatfolyamatokat",
     "Teljes Kafka ökoszisztéma vállalati támogatással, RBAC és Schema Registry funkciókkal"
    ]
   },
   "ibm_pa": {
    "desc": "AI-alapú pénzügyi tervezési és elemzési platform önkiszolgáló költségvetés-tervezéshez, előrejelzéshez és forgatókönyv-modellezéshez. Memóriában futó számítási motorjával lehetővé teszi, hogy a pénzügyi csapatok konszolidálják az adatokat, dinamikus modelleket építsenek, és az egész vállalaton belül együttműködjenek a pénzügyi tervezésben.",
-   "value": "60%-kal rövidíti a tervezési ciklust, 30%-kal javítja az előrejelzés pontosságát, és önkiszolgáló analitikával és AI-vezérelt forgatókönyv-modellezéssel támogatja a pénzügyi csapatokat — vállalati szinten megszüntetve a táblázatkezelőktől való függést.",
+   "value": "60%-kal rövidíti a tervezési ciklust, 30%-kal javítja az előrejelzés pontosságát, és önkiszolgáló analitikával és AI-vezérelt forgatókönyv-modellezéssel támogatja a pénzügyi csapatokat – vállalati szinten megszüntetve a táblázatkezelőktől való függést.",
    "questions": [
     "Költségvetés-tervezési és előrejelzési folyamataik munkaigényesek vagy táblázatkezelőre épülnek?",
     "Jobb együttműködésre van szükségük a pénzügy és az üzleti egységek csapatai között?",
@@ -481,7 +481,7 @@ window.I18N.hu = {
   },
   "power": {
    "desc": "Vállalati szerverplatform adatintenzív munkaterhelésekre, AI-ra és hibrid felhőre optimalizálva.",
-   "value": "Magonként 2-3-szor jobb teljesítményt nyújt, 40%-kal csökkenti a TCO-t, és beépített virtualizációt biztosít.",
+   "value": "Magonként 2–3-szor jobb teljesítményt nyújt, 40%-kal csökkenti a TCO-t, és beépített virtualizációt biztosít.",
    "questions": [
     "Futtatnak SAP, Oracle vagy más vállalati alkalmazásokat?",
     "Jobb teljesítményt keresnek AI-munkaterhelésekhez?",
@@ -544,8 +544,8 @@ window.I18N.hu = {
    ]
   },
   "ibm_tls": {
-   "desc": "Átfogó hardver- és szoftverkarbantartási, támogatási és életciklus-végi migrációs szolgáltatás. Az IBM és más gyártók rendszereinek teljes életciklusát kezeli a telepítéstől a kivezetésig — beleértve a proaktív támogatást, a javítócsomag-kezelést, a frissítéseket és a tervezett technológiaváltásokat.",
-   "value": "95%-kal csökkenti a nem tervezett leállásokat, kiszámítható infrastruktúra-életciklus-költségeket biztosít, és működési fennakadás nélküli, zökkenőmentes technológiaváltást tesz lehetővé — iparágvezető SLA-kkal és proaktív diagnosztikai képességekkel.",
+   "desc": "Átfogó hardver- és szoftverkarbantartási, támogatási és életciklus-végi migrációs szolgáltatás. Az IBM és más gyártók rendszereinek teljes életciklusát kezeli a telepítéstől a kivezetésig – beleértve a proaktív támogatást, a javítócsomag-kezelést, a frissítéseket és a tervezett technológiaváltásokat.",
+   "value": "95%-kal csökkenti a nem tervezett leállásokat, kiszámítható infrastruktúra-életciklus-költségeket biztosít, és működési fennakadás nélküli, zökkenőmentes technológiaváltást tesz lehetővé – iparágvezető SLA-kkal és proaktív diagnosztikai képességekkel.",
    "questions": [
     "Aggasztja Önöket a kritikus IBM rendszerek életciklus-végi támogatása?",
     "Kiszámítható, fix költségű életciklus-kezelésre van szükségük az infrastruktúrájukhoz?",
@@ -624,8 +624,8 @@ window.I18N.hu = {
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion — konténernatív, perzisztens tárolóréteg Red Hat OpenShift és Kubernetes környezetekhez. Megjegyzés: ez a tárolószoftver-termék, amely különbözik az IBM Fusion HCI megoldástól; az egy különálló hiperkonvergens infrastruktúra-platform, amely a Storage Fusion terméket használja tárolókomponensként.",
-   "value": "Leegyszerűsíti a konténerizált munkaterhelések perzisztens tárolását, adatmobilitást biztosít az OpenShift fürtök között, és natívan integrálódik az IBM Fusion HCI platformmal a teljes konvergens infrastruktúra-stack érdekében.",
+   "desc": "IBM Storage Fusion – konténernatív, perzisztens tárolóréteg Red Hat OpenShift és Kubernetes környezetekhez. Megjegyzés: ez a tárolószoftver-termék, amely különbözik az IBM Fusion HCI megoldástól; utóbbi egy különálló hiperkonvergens infrastruktúra-platform, amely a Storage Fusion terméket használja tárolókomponensként.",
+   "value": "Leegyszerűsíti a konténerizált munkaterhelések perzisztens tárolását, adatmobilitást biztosít az OpenShift fürtök között, és natívan integrálódik az IBM Fusion HCI platformmal, így teljes konvergens infrastruktúra-stacket alkot.",
    "questions": [
     "Futtatnak konténerizált alkalmazásokat?",
     "Perzisztens tárolásra van szükségük Kubernetes környezetben?",
@@ -657,7 +657,7 @@ window.I18N.hu = {
   },
   "storage_scale": {
    "desc": "Nagy teljesítményű párhuzamos fájlrendszer adatintenzív munkaterhelésekhez és AI-alkalmazásokhoz.",
-   "value": "10-szer gyorsabb adathozzáférést biztosít, lehetővé teszi a globális adatmegosztást, és hatalmas léptéket támogat.",
+   "value": "10-szer gyorsabb adathozzáférést biztosít, lehetővé teszi a globális adatmegosztást, és rendkívül nagy léptékig skálázható.",
    "questions": [
     "Vannak adatintenzív munkaterheléseik?",
     "Futtatnak AI/ML betanítási feladatokat?",
@@ -672,7 +672,7 @@ window.I18N.hu = {
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite — fenntarthatósági és ESG-teljesítménykezelő platform energia-, szén-dioxid-, víz- és hulladékadatok nyomon követéséhez és szabályozói fenntarthatósági jelentések készítéséhez.",
+   "desc": "IBM Envizi ESG Suite – fenntarthatósági és ESG-teljesítménykezelő platform energia-, szén-dioxid-, víz- és hulladékadatok nyomon követéséhez és szabályozói fenntarthatósági jelentések készítéséhez.",
    "value": "Automatizálja az ESG-adatgyűjtést a létesítményekben és az ellátási láncokban, ~70%-kal csökkenti a fenntarthatósági jelentéskészítés ráfordítását, és lehetővé teszi a GRI, SASB, TCFD és CSRD keretrendszereknek való megfelelést.",
    "questions": [
     "Nehézséget okoz az ESG-adatok gyűjtése és konszolidálása a telephelyeiken és az ellátási láncban?",
@@ -682,14 +682,14 @@ window.I18N.hu = {
    ],
    "differentiators": [
     "Előre elkészített integráció a Maximo megoldással az üzemeltetési és eszközadatokhoz",
-    "Beépített szabályozói jelentési keretrendszerek — GRI, SASB, TCFD, CSRD",
+    "Beépített szabályozói jelentési keretrendszerek – GRI, SASB, TCFD, CSRD",
     "AI-támogatott adatminőség és anomáliaészlelés",
     "Felhőnatív SaaS gyors értékteremtéssel"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite — lefedi a követelménykezelést (DOORS Next), a mérnöki munkafolyamat-kezelést (EWM), a tesztkezelést (ETM) és a modellalapú mérnöki tervezést (Rhapsody) a biztonságkritikus és szabályozott iparágak számára.",
-   "value": "Teljes mérnöki nyomonkövethetőséget biztosít a követelményektől a tervezésen és fejlesztésen át a tesztelésig — csökkenti az újramunkát a szabályozott programokban, és támogatja az ISO 26262, DO-178C és IEC 61508 szabványoknak való megfelelést.",
+   "desc": "IBM Engineering Lifecycle Management Suite – lefedi a követelménykezelést (DOORS Next), a mérnöki munkafolyamat-kezelést (EWM), a tesztkezelést (ETM) és a modellalapú mérnöki tervezést (Rhapsody) a biztonságkritikus és szabályozott iparágak számára.",
+   "value": "Teljes mérnöki nyomonkövethetőséget biztosít a követelményektől a tervezésen és fejlesztésen át a tesztelésig – csökkenti az újramunkát a szabályozott programokban, és támogatja az ISO 26262, DO-178C és IEC 61508 szabványoknak való megfelelést.",
    "questions": [
     "Teljes nyomonkövethetőségre van szükségük a követelményektől a tesztelésig a biztonságkritikus programokban?",
     "Olyan termékeket fejlesztenek, amelyeknek meg kell felelniük a repülőipari, autóipari vagy orvostechnikai előírásoknak?",
@@ -697,15 +697,15 @@ window.I18N.hu = {
     "Több csapat vagy szervezet között kezelnek követelményeket?"
    ],
    "differentiators": [
-    "Teljes ALM csomag egyetlen gyártótól — követelmények, munkafolyamatok, tesztelés és modellezés",
+    "Teljes ALM csomag egyetlen gyártótól – követelmények, munkafolyamatok, tesztelés és modellezés",
     "Mély megfelelőségi támogatás: ISO 26262, DO-178C, IEC 61508 és FDA 21 CFR Part 11",
     "Natív AI-integráció az IBM Bob eszközzel AI-támogatott követelménykezeléshez és kódgeneráláshoz",
     "Az IBM legrégebbi mérnöki platformja, 30+ év szabályozott iparági bevezetéssel"
    ]
   },
   "app_connect": {
-   "desc": "IBM App Connect — low-code/no-code integrációs platform alkalmazások összekapcsolásához és munkafolyamatok automatizálásához 200+ előre elkészített csatlakozóval; App Connect Professional és App Connect Enterprise kiadásban érhető el.",
-   "value": "Lehetővé teszi, hogy az üzleti felhasználók és a fejlesztők hetek helyett órák alatt építsenek integrációkat — mély integrációs szakértelem nélkül gyorsítva a digitális átalakulást.",
+   "desc": "IBM App Connect – low-code/no-code integrációs platform alkalmazások összekapcsolásához és munkafolyamatok automatizálásához 200+ előre elkészített csatlakozóval; App Connect Professional és App Connect Enterprise kiadásban érhető el.",
+   "value": "Lehetővé teszi, hogy az üzleti felhasználók és a fejlesztők hetek helyett órák alatt építsenek integrációkat – mély integrációs szakértelem nélkül gyorsítva a digitális átalakulást.",
    "questions": [
     "Kódírás nélkül kell az üzleti csapataiknak SaaS alkalmazásokat összekapcsolniuk?",
     "Szeretnék csökkenteni a speciális integrációs fejlesztőktől való függést?",
@@ -714,16 +714,16 @@ window.I18N.hu = {
    ],
    "differentiators": [
     "200+ előre elkészített csatlakozó SaaS, felhős és helyszíni alkalmazásokhoz",
-    "Low-code és full-code megközelítés egyaránt — App Connect Professional és Enterprise",
+    "Low-code és full-code megközelítés egyaránt – App Connect Professional és Enterprise",
     "Vállalati szintű biztonság, irányítás és auditnyomvonal",
     "Natív IBM Cloud és helyszíni telepítési lehetőségek"
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera — nagy sebességű platform nagy fájlok és adatkészletek átvitelére, amely a szabadalmaztatott FASP protokollt használja, és hatalmas fájlok nagy távolságra, közel vonalsebességgel történő mozgatására készült, a hálózati körülményektől függetlenül.",
-   "value": "Akár 100-szor gyorsabban továbbítja a fájlokat, mint a szabványos TCP/FTP nagy késleltetésű vagy veszteséges hálózatokon — ez kritikus a média, a genomika, az élettudományok és minden olyan munkafolyamat számára, amely több gigabájtos fájlok mozgatásával jár.",
+   "desc": "IBM Aspera – nagy sebességű platform nagy fájlok és adatkészletek átvitelére, amely a szabadalmaztatott FASP protokollt használja, és hatalmas fájlok nagy távolságra, közel vonalsebességgel történő mozgatására készült, a hálózati körülményektől függetlenül.",
+   "value": "Akár 100-szor gyorsabban továbbítja a fájlokat, mint a szabványos TCP/FTP nagy késleltetésű vagy veszteséges hálózatokon – ez kritikus a média, a genomika, az élettudományok és minden olyan munkafolyamat számára, amely több gigabájtos fájlok mozgatásával jár.",
    "questions": [
-    "Órákig vagy napokig tart a nagy fájlok WAN-on keresztüli átvitele, amikor perceknek kellene?",
+    "Percek helyett órákig vagy napokig tart a nagy fájlok átvitele WAN-on keresztül?",
     "Nagy média-, genomikai vagy adatfájlokat juttatnak el globális partnerekhez vagy telephelyekre?",
     "A lassú feltöltések akadályozzák az adatbetöltési vagy migrációs folyamataikat?",
     "Biztonságos, auditálható nagyfájl-átvitelre van szükségük kézbesítési garanciával?"
@@ -736,8 +736,8 @@ window.I18N.hu = {
    ]
   },
   "kubecost": {
-   "desc": "IBM Kubecost — Kubernetes költségmonitorozó és -optimalizáló platform, amely valós idejű rálátást ad a kiadásokra névterenként, telepítésenként, címkénként és csapatonként, többfürtös környezetekben.",
-   "value": "Pontos Kubernetes költségfelosztást és méretezési javaslatokat ad a mérnöki és pénzügyi csapatoknak — a tétlen és túlméretezett munkaterhelések konténerszintű azonosításával csökkenti a felhős pazarlást.",
+   "desc": "IBM Kubecost – Kubernetes költségmonitorozó és -optimalizáló platform, amely valós idejű rálátást ad a kiadásokra névterenként, telepítésenként, címkénként és csapatonként, többfürtös környezetekben.",
+   "value": "Pontos Kubernetes költségfelosztást és méretezési javaslatokat ad a mérnöki és pénzügyi csapatoknak – a tétlen és túlméretezett munkaterhelések konténerszintű azonosításával csökkenti a felhős pazarlást.",
    "questions": [
     "Pontosan látják, mennyibe kerül Önöknek az egyes Kubernetes munkaterhelések vagy csapatok működése?",
     "Gyorsabban nőnek a felhőszámláik, mint a Kubernetes környezetük?",
@@ -752,8 +752,8 @@ window.I18N.hu = {
    ]
   },
   "ns1": {
-   "desc": "IBM NS1 Connect — intelligens DNS-, forgalomkezelési és hálózati kapcsolódási platform, amely autoritatív DNS-t nyújt fejlett útválasztással, forgalomirányítással és DDoS-ellenálló infrastruktúrával.",
-   "value": "10 ms alatti globális DNS-válaszidőt biztosít intelligens forgalomirányítással — csökkenti az alkalmazások leállását, javítja a teljesítményt a világszerte elosztott felhasználók számára, és ellenálló első védelmi vonalat nyújt a hálózatnak.",
+   "desc": "IBM NS1 Connect – intelligens DNS-, forgalomkezelési és hálózati kapcsolódási platform, amely autoritatív DNS-t nyújt fejlett útválasztással, forgalomirányítással és DDoS-ellenálló infrastruktúrával.",
+   "value": "10 ms alatti globális DNS-válaszidőt biztosít intelligens forgalomirányítással – csökkenti az alkalmazások leállását, javítja a teljesítményt a világszerte elosztott felhasználók számára, és ellenálló első védelmi vonalat nyújt a hálózatnak.",
    "questions": [
     "DNS-hibák vagy lassú névfeloldás okoznak alkalmazás-elérhetőségi problémákat?",
     "Intelligensen kell irányítaniuk a felhasználókat több adatközpont vagy felhőrégió között?",
@@ -768,8 +768,8 @@ window.I18N.hu = {
    ]
   },
   "powervs": {
-   "desc": "IBM Power Virtual Server (PowerVS) — felhőben futó Power infrastruktúra az IBM Cloud szolgáltatásban, amely ugyanazt a Power teljesítményt és IBM i / AIX kompatibilitást nyújtja, mint a helyszíni Power Systems, teljes körűen menedzselt felhőszolgáltatásként.",
-   "value": "Lehetővé teszi a szervezetek számára, hogy platformváltás nélkül bővítsék vagy migrálják Power munkaterheléseiket a felhőbe — megőrizve az AIX és IBM i alkalmazások kompatibilitását, miközben felhős rugalmasságot és használatalapú díjazást kapnak.",
+   "desc": "IBM Power Virtual Server (PowerVS) – felhőben futó Power infrastruktúra az IBM Cloud szolgáltatásban, amely ugyanazt a Power teljesítményt és IBM i / AIX kompatibilitást nyújtja, mint a helyszíni Power Systems, teljes körűen menedzselt felhőszolgáltatásként.",
+   "value": "Lehetővé teszi a szervezetek számára, hogy platformváltás nélkül bővítsék vagy migrálják Power munkaterheléseiket a felhőbe – megőrizve az AIX és IBM i alkalmazások kompatibilitását, miközben felhős rugalmasságot és használatalapú díjazást kapnak.",
    "questions": [
     "Szeretnék csökkenteni a helyszíni Power kapacitásukat az AIX vagy IBM i alkalmazások platformváltása nélkül?",
     "Felhőalapú katasztrófa-helyreállítási megoldásra van szükségük a Power Systems környezetükhöz?",
@@ -780,12 +780,12 @@ window.I18N.hu = {
     "Az egyetlen felhőszolgáltatás natív Power teljesítménnyel, AIX és IBM i kompatibilitással",
     "Alacsony késleltetésű kapcsolat az IBM Cloud szolgáltatásokhoz és a watsonx platformhoz",
     "IBM által menedzselt infrastruktúra SLA-val garantált rendelkezésre állással",
-    "Nincs szükség az alkalmazások platformváltására — a Power munkaterhelések változatlanul (lift and shift) költöztethetők a felhőbe"
+    "Nincs szükség az alkalmazások platformváltására – a Power munkaterhelések változatlanul (lift and shift) költöztethetők a felhőbe"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (hiperkonvergens infrastruktúra) — szoftveresen definiált számítási, tárolási és hálózati platform, amely konvergens hardverstacken futtatja a Red Hat OpenShift és IBM munkaterheléseket, egyszerűsítve az adatközpont üzemeltetését AI és hibrid felhő számára.",
-   "value": "Csökkenti az adatközpont összetettségét azáltal, hogy a számítást, a tárolást és a hálózatot egyetlen menedzselt platformba vonja össze — lerövidíti a telepítési időt, és validált, IBM által támogatott alapot nyújt az OpenShift és AI munkaterhelésekhez a helyszínen.",
+   "desc": "IBM Fusion HCI (hiperkonvergens infrastruktúra) – szoftveresen definiált számítási, tárolási és hálózati platform, amely konvergens hardverstacken futtatja a Red Hat OpenShift és IBM munkaterheléseket, egyszerűsítve az adatközpont üzemeltetését AI és hibrid felhő számára.",
+   "value": "Csökkenti az adatközpont összetettségét azáltal, hogy a számítást, a tárolást és a hálózatot egyetlen menedzselt platformba vonja össze – lerövidíti a telepítési időt, és validált, IBM által támogatott alapot nyújt az OpenShift és AI munkaterhelésekhez a helyszínen.",
    "questions": [
     "Szeretnék egyszerűsíteni a helyszíni infrastruktúrájukat OpenShift vagy AI munkaterhelésekhez?",
     "Validált, egygyártós platformra van szükségük a Red Hat OpenShift számára?",
@@ -795,13 +795,13 @@ window.I18N.hu = {
    "differentiators": [
     "Kifejezetten Red Hat OpenShift és IBM munkaterhelésekhez tervezve és validálva",
     "Integráció az IBM Storage Fusion termékkel a konténernatív perzisztens tároláshoz",
-    "Egyetlen gyártó, az IBM a számításhoz, tároláshoz, szoftverstackhez és támogatáshoz",
+    "Egyetlen gyártó, az IBM felel a számításért, a tárolásért, a szoftverstackért és a támogatásért",
     "Helyszíni AI-infrastruktúra-telepítésekre optimalizálva"
    ]
   },
   "db2": {
-   "desc": "IBM Db2 — vállalati relációs adatbázis-kezelő rendszer helyszíni és felhős használatra, nagy teljesítményű OLTP- és analitikai képességekkel, beépített AI-funkciókkal, valamint natív kompatibilitással az IBM Z, Power Systems és IBM i platformokkal.",
-   "value": "Megbízható, nagy teljesítményű tranzakciós adatalapot nyújt a vállalati alkalmazásokhoz — beépített AI-alapú lekérdezés-optimalizálással, natív watsonx.data integrációval és évtizedes megbízhatósággal az IBM platformokon.",
+   "desc": "IBM Db2 – vállalati relációs adatbázis-kezelő rendszer helyszíni és felhős használatra, nagy teljesítményű OLTP- és analitikai képességekkel, beépített AI-funkciókkal, valamint natív kompatibilitással az IBM Z, Power Systems és IBM i platformokkal.",
+   "value": "Megbízható, nagy teljesítményű tranzakciós adatalapot nyújt a vállalati alkalmazásokhoz – beépített AI-alapú lekérdezés-optimalizálással, natív watsonx.data integrációval és évtizedek óta bizonyított megbízhatósággal az IBM platformokon.",
    "questions": [
     "Szeretnék csökkenteni az Oracle vagy SQL Server licencköltségeit az alkalmazások újratervezése nélkül?",
     "Olyan adatbázisra van szükségük, amely bizonyítottan jól teljesít IBM Power vagy Z platformon?",
@@ -816,8 +816,8 @@ window.I18N.hu = {
    ]
   },
   "cognos": {
-   "desc": "IBM Cognos Analytics — AI-alapú üzletiintelligencia- és analitikai platform önkiszolgáló jelentéskészítéshez, irányítópultokhoz és adatfeltáráshoz, beépített irányítással és vállalati adatbiztonsággal.",
-   "value": "Lehetővé teszi, hogy az üzleti felhasználók az IT-tól függetlenül készítsenek pontos, szabályozott jelentéseket és irányítópultokat — beépített AI-támogatott adatelőkészítéssel, természetes nyelvű lekérdezéssel és vállalati szintű irányítással.",
+   "desc": "IBM Cognos Analytics – AI-alapú üzletiintelligencia- és analitikai platform önkiszolgáló jelentéskészítéshez, irányítópultokhoz és adatfeltáráshoz, beépített irányítással és vállalati adatbiztonsággal.",
+   "value": "Lehetővé teszi, hogy az üzleti felhasználók az IT-tól függetlenül készítsenek pontos, szabályozott jelentéseket és irányítópultokat – beépített AI-támogatott adatelőkészítéssel, természetes nyelvű lekérdezéssel és vállalati szintű irányítással.",
    "questions": [
     "Az üzleti felhasználóik minden jelentéshez vagy irányítópulthoz az IT-ra támaszkodnak?",
     "A szervezetük még mindig táblázatkezelőből készíti a kritikus jelentéseket?",
@@ -828,7 +828,7 @@ window.I18N.hu = {
     "Beépített AI-támogatott jelentéskészítés és természetes nyelvű lekérdezés",
     "Vállalati irányítás szerepköralapú hozzáféréssel és adatszármazás-követéssel",
     "Mély IBM adatforrás-integráció, köztük Db2, Planning Analytics és watsonx.data",
-    "Erős jelenlét a szabályozott iparágakban — pénzügyi szolgáltatások, egészségügy, közszféra"
+    "Erős jelenlét a szabályozott iparágakban – pénzügyi szolgáltatások, egészségügy, közszféra"
    ]
   }
  },
@@ -975,7 +975,7 @@ window.I18N.hu = {
   "elm_suite>api_connect": "Az ELM az API Connect platformon keresztül teszi elérhetővé a mérnöki műtermékeket és követelményadatokat az eszközlánc-integrációhoz",
   "elm_suite>webmethods": "A webMethods összekapcsolja az ELM megoldást a vállalati rendszerekkel a mérnöki munkafolyamatok teljes körű automatizálásához",
   "app_connect>api_connect": "Az App Connect integrációkat épít, amelyeket az API Connect szabályozott, védett API-kként tesz elérhetővé",
-  "app_connect>webmethods": "Az App Connect a SaaS és felhős integrációkat kezeli, míg a webMethods az összetett B2B és helyszíni mintákat — egymást kiegészítő integrációs szintek",
+  "app_connect>webmethods": "Az App Connect a SaaS és felhős integrációkat kezeli, míg a webMethods az összetett B2B és helyszíni mintákat – egymást kiegészítő integrációs szintek",
   "app_connect>event_auto": "Az App Connect munkafolyamatai elindítják az Event Automation megoldást a valós idejű, eseményvezérelt feldolgozáshoz",
   "app_connect>wxorch": "A watsonx Orchestrate az App Connect segítségével kapcsolja össze az AI-ágenseket a vállalati SaaS alkalmazásokkal",
   "aspera>wxdata": "Az Aspera nagy sebességgel tölti be a nagy adatkészleteket a watsonx.data platformba az AI-betanítási adatfolyamatokhoz",
@@ -988,7 +988,7 @@ window.I18N.hu = {
   "ns1>verify": "Az NS1 intelligens útválasztása a legközelebbi hitelesítési végponthoz irányítja a felhasználókat, javítva a Verify SSO teljesítményét és ellenálló képességét",
   "ns1>sevone": "A SevOne hálózati teljesítményadatai alapozzák meg az NS1 forgalomirányítási döntéseit az optimális útválasztás érdekében",
   "ns1>concert": "A Concert az NS1 DNS-állapotadatait is felhasználja az alkalmazások elérhetőségének monitorozásához",
-  "powervs>power": "A PowerVS a Power Systems felhős kiterjesztése — a helyszíni környezetet és az IBM Cloud szolgáltatást átfogó hibrid Power telepítéseket tesz lehetővé",
+  "powervs>power": "A PowerVS a Power Systems felhős kiterjesztése – a helyszíni környezetet és az IBM Cloud szolgáltatást átfogó hibrid Power telepítéseket tesz lehetővé",
   "powervs>aix": "Az AIX munkaterhelések natívan futnak a PowerVS szolgáltatásban, így az operációs rendszer vagy az alkalmazások módosítása nélkül migrálhatók a felhőbe",
   "powervs>ibmi": "Az IBM i alkalmazások natívan futnak a PowerVS szolgáltatásban, felhős utat kínálva az örökölt IBM i környezeteknek",
   "powervs>ibm_tls": "Az IBM TLS támogatja az átállás tervezését és az életciklus-kezelést a helyszíni Power rendszerekről a PowerVS szolgáltatásba történő migrációk során",
@@ -1000,7 +1000,7 @@ window.I18N.hu = {
   "db2>wxdata": "A Db2 elsődleges tranzakciós adatforrás, amelyet a watsonx.data platformba föderálnak az egységes analitika és az AI-modellek betanítása érdekében",
   "db2>wxdint": "A watsonx.data integration betölti és átalakítja a Db2 adatait a további AI- és analitikai adatfolyamatokhoz",
   "db2>guardium": "A Guardium monitorozza és auditálja a Db2 összes adathozzáférési tevékenységét a szabályozói megfelelés és az adatbiztonság érdekében",
-  "db2>ibmi": "A Db2 for IBM i az IBM i platform magjában lévő integrált adatbázis — natív, beépített kapcsolat",
+  "db2>ibmi": "A Db2 for IBM i az IBM i platform magjában lévő integrált adatbázis – natív, beépített kapcsolat",
   "db2>wca_ansible": "Az IBM Bob segít a Db2 lekérdezések optimalizálásában, a sémák modernizálásában és a PL/SQL kód Db2 platformra történő migrálásában",
   "cognos>wxdata": "A Cognos egységes adatforrásként kérdezi le a watsonx.data platformot a teljes data lakehouse-ra kiterjedő, szabályozott vállalati jelentéskészítéshez",
   "cognos>ibm_pa": "A Cognos Analytics üzemeltetési és vezetői jelentéseket nyújt a Planning Analytics pénzügyi modelljeire építve",

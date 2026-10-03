@@ -10,7 +10,7 @@ window.I18N.da = {
   "mobSearchPlaceholder": "Søg i produkter…",
   "searchAria": "Søg i produkter",
   "clearSearch": "Ryd søgning",
-  "playFilter": "Filter for produktgruppe",
+  "playFilter": "Filtrér efter produktgruppe",
   "mapAria": "Krydssalgskort",
   "productDetail": "Produktdetaljer",
   "detail": "Detaljer",
@@ -26,7 +26,7 @@ window.I18N.da = {
   "description": "Beskrivelse",
   "valueProposition": "Værditilbud",
   "competesWith": "Konkurrerer med",
-  "keyDifferentiators": "Vigtigste differentiatorer",
+  "keyDifferentiators": "Vigtigste konkurrencefordele",
   "discoveryQuestions": "Afdækningsspørgsmål",
   "emptyPrompt": {"one": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af {n} produktgruppe.", "other": "Vælg et produkt for at fremhæve dets krydssalgsforbindelser på tværs af de {n} produktgrupper."},
   "productsFound": {
@@ -127,7 +127,7 @@ window.I18N.da = {
   },
   "concert": {
    "desc": "AI-drevet platform til applikationsstyring, der giver samlet overblik og kontrol på tværs af hybride cloudmiljøer.",
-   "value": "Reducerer MTTR med 40 %, giver 360 graders overblik over applikationerne og automatiserer afhjælpning af almindelige problemer.",
+   "value": "Reducerer MTTR med 40 %, giver 360-graders overblik over applikationerne og automatiserer afhjælpning af almindelige problemer.",
    "questions": [
     "Mangler du overblik over dit applikationslandskab?",
     "Administrerer du applikationer på tværs af flere clouds?",
@@ -136,7 +136,7 @@ window.I18N.da = {
    ],
    "differentiators": [
     "AI-drevet indsigt",
-    "Samlet visning af hybrid cloud",
+    "Samlet overblik over hybrid cloud",
     "Automatiseret afhjælpning",
     "Integration med IBM's observability-værktøjer"
    ]
@@ -175,7 +175,7 @@ window.I18N.da = {
   },
   "ibm_sterling": {
    "desc": "Omfattende portefølje til forsyningskæde og B2B-integration, der styrer ordreafvikling, overblik over forsyningskæden og forbindelser til partnere. Kombinerer ordrestyring, forsyningskædeintelligens, B2B-integration og sikker dataudveksling på tværs af netværk af handelspartnere.",
-   "value": "Accelererer B2B-integration med 70 %, reducerer ordrecyklustiden med 40 % og giver end-to-end-overblik over forsyningskæden med samarbejde med partnere i realtid og AI-drevne efterspørgselsprognoser.",
+   "value": "Accelererer B2B-integration med 70 %, reducerer ordrecyklustiden med 40 % og giver end-to-end-overblik over forsyningskæden, samarbejde med partnere i realtid og AI-drevne efterspørgselsprognoser.",
    "questions": [
     "Har du brug for at integrere med flere B2B-handelspartnere eller leverandører?",
     "Vil du optimere dine order-to-cash- eller procure-to-pay-processer?",
@@ -190,7 +190,7 @@ window.I18N.da = {
    ]
   },
   "instana": {
-   "desc": "Automatiseret overvågning af applikationsydeevne med AI-drevet indsigt til cloud-native arkitekturer og mikroservicearkitekturer.",
+   "desc": "Automatiseret overvågning af applikationsydeevne med AI-drevet indsigt til cloud-native- og mikroservicearkitekturer.",
    "value": "Reducerer MTTD med 90 %, giver automatisk opdagelse og overvågning og leverer granularitet på 1 sekund til fejlfinding.",
    "questions": [
     "Har du mikroservices eller containeriserede applikationer?",
@@ -234,7 +234,7 @@ window.I18N.da = {
     "Automatiserede handlinger i realtid",
     "Applikationsbevidste beslutninger",
     "Full-stack-optimering",
-    "Dokumenteret ROI på 30 dage"
+    "Dokumenteret ROI inden for 30 dage"
    ]
   },
   "apptio": {
@@ -291,8 +291,8 @@ window.I18N.da = {
    "questions": [
     "Tilgår brugerne flere applikationer med forskellige adgangskoder?",
     "Er du bekymret for uautoriseret adgang?",
-    "Har du brug for multifaktorgodkendelse?",
-    "Administrerer du brugeradgange manuelt?"
+    "Har du brug for multifaktorautentificering?",
+    "Administrerer du brugeradgang manuelt?"
    ],
    "differentiators": [
     "Risikobaseret autentificering",
@@ -387,7 +387,7 @@ window.I18N.da = {
    "questions": [
     "Udruller du AI-modeller i produktion?",
     "Har du brug for at sikre fairness og forklarlighed i AI?",
-    "Er du bekymret for drift i AI-modeller?",
+    "Er du bekymret for model drift i dine AI-modeller?",
     "Har du brug for at overholde AI-regulering?"
    ],
    "differentiators": [
@@ -415,7 +415,7 @@ window.I18N.da = {
   },
   "wca_ansible": {
    "desc": "AI-parprogrammør, der accelererer softwareudvikling, applikationsmodernisering og automatiseringsscripts på tværs af moderne og ældre sprog, herunder Java, Python, RPG, COBOL og PL/SQL – med agentiske funktioner, der bringer koden fra design til produktion.",
-   "value": "Komprimerer udviklingsopgaver fra uger til timer, med Premium Packages, der giver dyb specialisering i modernisering af IBM i, Z og Java – og indbygget scanning for hemmeligheder, der flytter sikkerheden til venstre fra dag ét.",
+   "value": "Forkorter udviklingsopgaver fra uger til timer, med Premium Packages, der giver dyb specialisering i modernisering af IBM i, Z og Java – og indbygget scanning for hemmeligheder, der giver shift-left-sikkerhed fra dag ét.",
    "questions": [
     "Bruger udviklerne for meget tid på at skrive boilerplate-kode?",
     "Vil du accelerere applikationsudviklingen?",
@@ -426,11 +426,11 @@ window.I18N.da = {
     "Agentisk SDLC fra design til produktion",
     "Premium Packages til modernisering af IBM i, Z og Java",
     "Indbygget scanning for hemmeligheder og shift-left-sikker kodning",
-    "Dybde i ældre sprog, herunder RPG, COBOL og PL/SQL"
+    "Dyb ekspertise i ældre sprog, herunder RPG, COBOL og PL/SQL"
    ]
   },
   "confluent": {
-   "desc": "Kafka-baseret streamingplatform i virksomhedsklassen, tilgængelig som Confluent Cloud eller selvadministreret, der fungerer som rygraden for realtidsdata i IBM's løsninger til hybrid integration, Data og AI samt mainframe-modernisering.",
+   "desc": "Kafka-baseret streamingplatform i virksomhedsklassen, tilgængelig som Confluent Cloud eller selvadministreret, der fungerer som rygraden for realtidsdata i IBM's løsninger til hybrid integration, data og AI samt mainframe-modernisering.",
    "value": "Fungerer som den universelle streamingrygrad, der forbinder IBM's integrations-, infrastruktur- og AI-platforme – bygger bro fra MQ-baseret legacy-messaging til Kafka-hændelsesstrømme i realtid, forsyner watsonx-pipelines og muliggør hændelsesdrevet automatisering i virksomhedsskala.",
    "questions": [
     "Har du brug for at behandle data i realtid?",
@@ -442,7 +442,7 @@ window.I18N.da = {
    ],
    "differentiators": [
     "Strategisk IBM-partnerskab – certificeret til hybrid cloud og IBM's integrationsstak",
-    "MQ-bro – forbinder IBM MQ legacy-messaging native med Kafka-hændelsesstrømme",
+    "MQ-bro – forbinder ældre messaging i IBM MQ native med Kafka-hændelsesstrømme",
     "Forsyner pipelines i watsonx.ai og watsonx.data med streamingdata i realtid",
     "Komplet Kafka-økosystem med enterprise-support, RBAC og Schema Registry"
    ]
@@ -614,7 +614,7 @@ window.I18N.da = {
     "Har du lager fra flere leverandører?",
     "Har du brug for at migrere data uden nedetid?",
     "Vil du optimere lagerudnyttelsen?",
-    "Har du brug for at fordele data i niveauer på tværs af forskellige lagertyper?"
+    "Har du brug for at tiere data på tværs af forskellige lagertyper?"
    ],
    "differentiators": [
     "Understøtter flere leverandører",
@@ -665,7 +665,7 @@ window.I18N.da = {
     "Oplever du problemer med filsystemets ydeevne?"
    ],
    "differentiators": [
-    "Dokumenteret i exascale",
+    "Gennemprøvet i exascale-skala",
     "Globalt navnerum",
     "Aktiv filstyring",
     "Optimeret til AI"
@@ -693,14 +693,14 @@ window.I18N.da = {
    "questions": [
     "Har du brug for fuld sporbarhed fra krav til test i sikkerhedskritiske programmer?",
     "Udvikler du produkter, der skal overholde regler for luftfart, bilindustri eller medicinsk udstyr?",
-    "Skaber tekniske ændringsanmodninger omarbejde og tidsplanoverskridelser?",
+    "Fører tekniske ændringsanmodninger til omarbejde og overskredne tidsplaner?",
     "Styrer du krav på tværs af flere teams eller organisationer?"
    ],
    "differentiators": [
     "Komplet ALM-suite fra én leverandør – krav, workflow, test og modellering",
     "Dyb compliance-understøttelse af ISO 26262, DO-178C, IEC 61508 og FDA 21 CFR Part 11",
     "Native AI-integration med IBM Bob til AI-understøttede krav og kodegenerering",
-    "IBM's ældste engineering-platform med over 30 års udrulninger i regulerede brancher"
+    "IBM's mest veletablerede engineering-platform med over 30 års udrulninger i regulerede brancher"
    ]
   },
   "app_connect": {
@@ -803,7 +803,7 @@ window.I18N.da = {
    "desc": "IBM Db2 – relationel databaseplatform i virksomhedsklassen, tilgængelig on-premises og i cloud, med OLTP og analyse med høj ydeevne, indbyggede AI-funktioner og native kompatibilitet med IBM Z, Power Systems og IBM i.",
    "value": "Giver et pålideligt transaktionelt datafundament med høj ydeevne til forretningsapplikationer – med indbygget AI-forespørgselsoptimering, native integration med watsonx.data og årtiers pålidelighed på IBM-platforme.",
    "questions": [
-    "Vil du reducere licensomkostningerne til Oracle eller SQL Server uden at omarkitekturere applikationerne?",
+    "Vil du reducere licensomkostningerne til Oracle eller SQL Server uden at skulle bygge applikationerne om?",
     "Har du brug for en database med dokumenteret ydeevne på IBM Power eller Z?",
     "Er krav til dataresidens eller datasuverænitet styrende for dine valg af databaseplatform?",
     "Har du brug for en transaktionel database, der integrerer native med din AI- og analysestak?"
@@ -828,7 +828,7 @@ window.I18N.da = {
     "Indbygget AI-understøttet rapportudarbejdelse og forespørgsler i naturligt sprog",
     "Enterprise-governance med rollebaseret adgang og data lineage",
     "Dyb integration med IBM-datakilder, herunder Db2, Planning Analytics og watsonx.data",
-    "Stærk tilstedeværelse i regulerede brancher – finansielle tjenester, sundhed, offentlig sektor"
+    "Stærk tilstedeværelse i regulerede brancher – finanssektoren, sundhedssektoren, offentlig sektor"
    ]
   }
  },
@@ -859,7 +859,7 @@ window.I18N.da = {
   "wxai>wxdi": "watsonx.ai bruger data intelligence til at finde træningsdata til modeller",
   "wxdi>wxdint": "Data intelligence katalogiserer aktiver fra dataintegrationspipelines",
   "wxdi>wxgov": "Data intelligence håndhæver governance-politikker på katalogiserede data",
-  "wxdint>confluent": "Dataintegration forbinder til Confluent for streamingdatapipelines",
+  "wxdint>confluent": "Dataintegration kobles til Confluent til streamingdatapipelines",
   "wxorch>wca_ansible": "Orchestrate bruger IBM Bob til automatiseret kodegenerering i workflows",
   "wxorch>wxgov": "Orchestrate håndhæver governance på AI-agenter og workflows",
   "confluent>event_auto": "Confluent streamer hændelser til Event Automation til behandling i realtid",
@@ -901,7 +901,7 @@ window.I18N.da = {
   "wca_ansible>wxgov": "Kode genereret af IBM Bob revideres og styres via watsonx.governance",
   "wca_ansible>vault": "IBM Bob scanner kodebaser for hardcodede hemmeligheder og refaktorerer koden til at bruge Vault",
   "wca_ansible>verify": "IBM Bob genererer sikker kode til autentificering, SSO og MFA-integration for applikationer, der er beskyttet af Verify",
-  "wca_ansible>instana": "IBM Bob forbinder til observability-værktøjer for at forespørge metrikker og logs direkte fra IDE'en",
+  "wca_ansible>instana": "IBM Bob kobler sig på observability-værktøjer for at forespørge metrikker og logs direkte fra IDE'en",
   "wca_ansible>maximo": "IBM Bob accelererer udviklingen af Maximo-applikationer og -integrationer med AI-understøttet kodning",
   "wca_ansible>concert": "IBM Bob genererer automatiseringsscripts og applikationskode, som Concert overvåger og styrer",
   "wca_ansible>confluent": "IBM Bob accelererer udviklingen af producers og consumers til Confluent samt applikationskode til Kafka-streaming",
@@ -918,7 +918,7 @@ window.I18N.da = {
   "ibm_sterling>api_connect": "API Connect eksponerer forsyningskædedata og partner-API'er fra Sterling via administrerede gateways",
   "ibm_sterling>maximo": "IBM Sterling integrerer med Maximo til indkøb og styring af aktiver i forsyningskæden",
   "ibm_sterling>wxdi": "watsonx.data intelligence katalogiserer forsyningskædens dataaktiver fra IBM Sterling",
-  "ibm_sterling>wxdint": "Dataintegration holder forsyningskædedata fra Sterling flydende ind i analyse- og AI-pipelines",
+  "ibm_sterling>wxdint": "Dataintegration sørger for, at forsyningskædedata fra Sterling løbende flyder ind i analyse- og AI-pipelines",
   "ibm_sterling>wxorch": "watsonx Orchestrate automatiserer beslutningsworkflows i forsyningskæden baseret på data fra Sterling",
   "ibm_pa>wxdata": "watsonx.data er data lakehouse-fundamentet for modellerne i Planning Analytics",
   "ibm_pa>wxdi": "watsonx.data intelligence katalogiserer finansielle datakilder til Planning Analytics",
@@ -965,12 +965,12 @@ window.I18N.da = {
   "ibm_tls>linux_power": "Technology Lifecycle Services dækker OS-support til Linux on Power og livscyklusstyring af platformen",
   "ibm_tls>storage_control": "Technology Lifecycle Services understøtter den underliggende lagerhardware, som Storage Control administrerer",
   "ibm_tls>storage_virt": "IBM TLS servicerer den IBM-lagerhardware, som Storage Virtualize kører på, herunder firmware, vedligeholdelse og livscyklusskift",
-  "envizi>maximo": "Drifts- og aktivdata fra Maximo forsyner Envizi til ESG- og CO2-rapportering på facilitetsniveau",
-  "envizi>ibm_sterling": "Forsyningskædedata fra Sterling forsyner Envizi til sporing af Scope 3-udledninger på tværs af partnernetværk",
+  "envizi>maximo": "Drifts- og aktivdata fra Maximo indgår i Envizi til ESG- og CO2-rapportering på facilitetsniveau",
+  "envizi>ibm_sterling": "Forsyningskædedata fra Sterling indgår i Envizi til sporing af Scope 3-udledninger på tværs af partnernetværk",
   "envizi>wxdata": "ESG-datasæt fra Envizi flyder ind i watsonx.data til bæredygtighedsanalyse og AI-modellering",
   "envizi>ibm_pa": "Planning Analytics integrerer data om CO2-omkostninger fra Envizi til finansiel planlægning og scenariemodellering for bæredygtighed",
   "envizi>wxai": "watsonx.ai analyserer ESG-data fra Envizi for at skabe prædiktiv bæredygtighedsindsigt og registrere anomalier",
-  "elm_suite>wca_ansible": "IBM Bob genererer kode direkte ud fra krav i ELM og lukker kredsløbet fra specifikation til implementering",
+  "elm_suite>wca_ansible": "IBM Bob genererer kode direkte ud fra krav i ELM og lukker loopet fra specifikation til implementering",
   "elm_suite>concert": "Concert giver driftsmæssigt overblik over applikationsudrulninger, der styres i ELM",
   "elm_suite>api_connect": "ELM eksponerer engineering-artefakter og kravdata via API Connect til integration i værktøjskæden",
   "elm_suite>webmethods": "webMethods integrerer ELM med virksomhedens systemer til end-to-end-automatisering af engineering-workflows",
@@ -1000,12 +1000,12 @@ window.I18N.da = {
   "db2>wxdata": "Db2 er en primær transaktionel datakilde, der fødereres ind i watsonx.data til samlet analyse og træning af AI-modeller",
   "db2>wxdint": "watsonx.data integration indlæser og transformerer Db2-data til efterfølgende AI- og analysepipelines",
   "db2>guardium": "Guardium overvåger og reviderer al adgang til Db2-data af hensyn til regulatorisk compliance og datasikkerhed",
-  "db2>ibmi": "Db2 for IBM i er den integrerede database i kernen af IBM i-platformen – en native, indbygget relation",
+  "db2>ibmi": "Db2 for IBM i er den integrerede database i kernen af IBM i-platformen – en native, indbygget sammenhæng",
   "db2>wca_ansible": "IBM Bob hjælper med optimering af Db2-forespørgsler, modernisering af skemaer og migrering af PL/SQL til Db2",
-  "cognos>wxdata": "Cognos forespørger watsonx.data som en samlet datakilde til styret virksomhedsrapportering på tværs af data lakehouse",
+  "cognos>wxdata": "Cognos forespørger watsonx.data som en samlet datakilde til styret virksomhedsrapportering på tværs af data lakehouset",
   "cognos>ibm_pa": "Cognos Analytics leverer drifts- og ledelsesrapportering oven på de finansielle modeller i Planning Analytics",
   "cognos>db2": "Cognos er en primær BI-forbruger af transaktionelle data fra Db2 til dashboards og rapporter i virksomheden",
   "cognos>wxai": "watsonx.ai styrker Cognos med prædiktiv analyse og AI-genereret indsigt, der vises direkte i dashboards",
-  "cognos>guardium": "Guardium håndhæver politikker for dataadgang på de datakilder, Cognos forespørger, og sikrer compliant rapportering"
+  "cognos>guardium": "Guardium håndhæver politikker for dataadgang på de datakilder, Cognos forespørger, og sikrer, at rapporteringen overholder reglerne"
  }
 };
