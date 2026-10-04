@@ -556,7 +556,7 @@ window.I18N.da = {
     "Proaktiv diagnosticering og prædiktiv forebyggelse af problemer",
     "Ét kontaktpunkt for multivendor-miljøer med IBM og tredjepart",
     "Problemfri planlægning af end-of-life-migrering uden driftsforstyrrelser",
-    "Leveret af Arrow med lokal UKI-ekspertise og IBM-certificerede ingeniører"
+    "Leveret af Arrow med lokal ekspertise og IBM-certificerede ingeniører"
    ]
   },
   "flashsystem": {

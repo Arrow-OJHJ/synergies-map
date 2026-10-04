@@ -556,7 +556,7 @@ window.I18N.hu = {
     "Proaktív diagnosztika és prediktív hibamegelőzés",
     "Egyetlen kapcsolattartó a többgyártós IBM és harmadik féltől származó környezetekhez",
     "Zökkenőmentes életciklus-végi migrációtervezés működési fennakadás nélkül",
-    "Az Arrow nyújtja helyi UKI szakértelemmel és IBM-tanúsított mérnökökkel"
+    "Az Arrow nyújtja helyi szakértelemmel és IBM-tanúsított mérnökökkel"
    ]
   },
   "flashsystem": {

@@ -556,7 +556,7 @@ window.I18N.de = {
     "Proaktive Diagnose und vorausschauende Problemvermeidung",
     "Ein Ansprechpartner für Multi-Vendor-Umgebungen mit IBM und Drittanbietern",
     "Nahtlose End-of-Life-Migrationsplanung ohne Betriebsunterbrechung",
-    "Erbracht von Arrow – mit lokaler UKI-Expertise und IBM-zertifizierten Technikern"
+    "Erbracht von Arrow – mit lokaler Expertise und IBM-zertifizierten Technikern"
    ]
   },
   "flashsystem": {

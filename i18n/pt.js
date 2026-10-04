@@ -559,7 +559,7 @@ window.I18N.pt = {
     "Diagnóstico proativo e prevenção preditiva de problemas",
     "Ponto de contacto único para ambientes multifornecedor IBM e de terceiros",
     "Planeamento simples da migração em fim de vida, sem perturbação operacional",
-    "Prestado pela Arrow, com experiência local no Reino Unido e Irlanda e engenheiros certificados pela IBM"
+    "Prestado pela Arrow, com experiência local e engenheiros certificados pela IBM"
    ]
   },
   "flashsystem": {

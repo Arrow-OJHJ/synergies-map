@@ -562,7 +562,7 @@ window.I18N.pl = {
     "Proaktywna diagnostyka i predykcyjne zapobieganie problemom",
     "Jeden punkt kontaktu dla środowisk IBM i innych producentów",
     "Płynne planowanie migracji po zakończeniu cyklu życia bez zakłóceń operacyjnych",
-    "Realizowane przez Arrow, z lokalnymi kompetencjami w UKI i inżynierami z certyfikatami IBM"
+    "Realizowane przez Arrow, z lokalnymi kompetencjami i inżynierami z certyfikatami IBM"
    ]
   },
   "flashsystem": {

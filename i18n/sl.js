@@ -562,7 +562,7 @@ window.I18N.sl = {
     "Proaktivna diagnostika in prediktivno preprečevanje težav",
     "Ena kontaktna točka za okolja IBM in tretjih proizvajalcev",
     "Brezhibno načrtovanje selitve ob koncu življenjske dobe brez motenj delovanja",
-    "Izvaja Arrow z lokalnim strokovnim znanjem za UKI in inženirji s certifikatom IBM"
+    "Izvaja Arrow z lokalnim strokovnim znanjem in inženirji s certifikatom IBM"
    ]
   },
   "flashsystem": {

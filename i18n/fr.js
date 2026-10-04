@@ -559,7 +559,7 @@ window.I18N.fr = {
     "Diagnostic proactif et prévention prédictive des incidents",
     "Interlocuteur unique pour les environnements multi-constructeurs IBM et tiers",
     "Planification fluide des migrations de fin de vie sans perturbation opérationnelle",
-    "Fourni par Arrow avec une expertise locale UKI et des ingénieurs certifiés IBM"
+    "Fourni par Arrow avec une expertise locale et des ingénieurs certifiés IBM"
    ]
   },
   "flashsystem": {

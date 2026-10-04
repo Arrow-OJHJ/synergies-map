@@ -559,7 +559,7 @@ window.I18N.hr = {
     "Proaktivna dijagnostika i prediktivno sprječavanje problema",
     "Jedna kontaktna točka za IBM okruženja i okruženja drugih proizvođača",
     "Besprijekorno planiranje migracije na kraju životnog vijeka bez prekida poslovanja",
-    "Isporučuje Arrow uz lokalnu stručnost za UKI i inženjere s IBM certifikatom"
+    "Isporučuje Arrow uz lokalnu stručnost i inženjere s IBM certifikatom"
    ]
   },
   "flashsystem": {

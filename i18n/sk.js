@@ -562,7 +562,7 @@ window.I18N.sk = {
     "Proaktívna diagnostika a prediktívna prevencia problémov",
     "Jedno kontaktné miesto pre prostredia IBM aj tretích strán",
     "Bezproblémové plánovanie migrácie po skončení životnosti bez prerušenia prevádzky",
-    "Dodáva Arrow s lokálnou expertízou pre UKI a inžiniermi s certifikáciou IBM"
+    "Dodáva Arrow s lokálnou expertízou a inžiniermi s certifikáciou IBM"
    ]
   },
   "flashsystem": {

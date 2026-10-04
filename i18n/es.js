@@ -559,7 +559,7 @@ window.I18N.es = {
     "Diagnóstico proactivo y prevención predictiva de incidencias",
     "Punto de contacto único para entornos multifabricante de IBM y de terceros",
     "Planificación fluida de migraciones al final de la vida útil sin interrupción operativa",
-    "Prestado por Arrow con experiencia local en UKI e ingenieros certificados por IBM"
+    "Prestado por Arrow con experiencia local e ingenieros certificados por IBM"
    ]
   },
   "flashsystem": {

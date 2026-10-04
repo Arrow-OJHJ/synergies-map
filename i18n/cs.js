@@ -562,7 +562,7 @@ window.I18N.cs = {
     "Proaktivní diagnostika a prediktivní prevence problémů",
     "Jediné kontaktní místo pro prostředí IBM i dalších výrobců",
     "Plynulé plánování migrace po skončení životnosti bez narušení provozu",
-    "Dodává Arrow s místní odborností UKI a inženýry certifikovanými IBM"
+    "Dodává Arrow s místní odborností a inženýry certifikovanými IBM"
    ]
   },
   "flashsystem": {
