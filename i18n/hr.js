@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.hr = {
  "meta": { "name": "Hrvatski", "htmlLang": "hr" },
  "ui": {
+  "brandName": "Arrow ECS Hrvatska",
   "title": "Karta sinergija IBM proizvoda",
   "language": "Jezik",
   "toggleTheme": "Promijeni temu",

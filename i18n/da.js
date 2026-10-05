@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.da = {
  "meta": { "name": "Dansk", "htmlLang": "da" },
  "ui": {
+  "brandName": "Arrow ECS Danmark",
   "title": "IBM-produktsynergikort",
   "language": "Sprog",
   "toggleTheme": "Skift tema",

@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.sv = {
  "meta": { "name": "Svenska", "htmlLang": "sv" },
  "ui": {
+  "brandName": "Arrow ECS Sverige",
   "title": "Karta över IBM-produktsynergier",
   "language": "Språk",
   "toggleTheme": "Byt tema",

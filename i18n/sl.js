@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.sl = {
  "meta": { "name": "Slovenščina", "htmlLang": "sl" },
  "ui": {
+  "brandName": "Arrow ECS Slovenija",
   "title": "Zemljevid sinergij izdelkov IBM",
   "language": "Jezik",
   "toggleTheme": "Preklopi temo",

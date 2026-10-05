@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.cs = {
  "meta": { "name": "Čeština", "htmlLang": "cs" },
  "ui": {
+  "brandName": "Arrow ECS Česká republika",
   "title": "Mapa synergií produktů IBM",
   "language": "Jazyk",
   "toggleTheme": "Přepnout motiv",

@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.uk = {
  "meta": { "name": "Українська", "htmlLang": "uk" },
  "ui": {
+  "brandName": "Arrow ECS Україна",
   "title": "Карта синергій продуктів IBM",
   "language": "Мова",
   "toggleTheme": "Змінити тему",

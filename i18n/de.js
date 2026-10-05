@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.de = {
  "meta": { "name": "Deutsch", "htmlLang": "de-DE" },
  "ui": {
+  "brandName": "Arrow ECS Deutschland",
   "title": "IBM Produktsynergien-Karte",
   "language": "Sprache",
   "toggleTheme": "Design wechseln",

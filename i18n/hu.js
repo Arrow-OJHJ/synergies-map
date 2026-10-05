@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.hu = {
  "meta": { "name": "Magyar", "htmlLang": "hu" },
  "ui": {
+  "brandName": "Arrow ECS Magyarország",
   "title": "IBM termékszinergia-térkép",
   "language": "Nyelv",
   "toggleTheme": "Téma váltása",

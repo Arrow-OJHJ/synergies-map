@@ -2,6 +2,7 @@ window.I18N = window.I18N || {};
 window.I18N.es = {
  "meta": { "name": "Español", "htmlLang": "es" },
  "ui": {
+  "brandName": "Arrow ECS España",
   "title": "Mapa de sinergias de productos IBM",
   "language": "Idioma",
   "toggleTheme": "Cambiar tema",
