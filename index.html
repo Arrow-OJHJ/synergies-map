@@ -851,6 +851,9 @@
     font-weight: 500;
   }
   #footer .footer-hint { color: var(--cds-text-helper); }
+  #brand-contact { margin-left: 10px; font-weight: 400; color: var(--cds-text-secondary); }
+  #brand-contact a { color: inherit; text-decoration: none; }
+  #brand-contact a:hover { text-decoration: underline; }
 
   /* SVG path animation - slower, smoother animation */
   @keyframes drawPath {
@@ -1340,7 +1343,7 @@
     <div class="footer-stats">
       <span class="footer-stat" id="stat-plays"></span>
       <span class="footer-stat" id="stat-products"></span>
-      <span class="footer-stat"><strong data-i18n="brandName">Arrow ECS UKI</strong></span>
+      <span class="footer-stat"><strong data-i18n="brandName">Arrow ECS UKI</strong><span id="brand-contact"></span></span>
     </div>
     <span class="footer-hint" data-i18n="footerHint">Search products · Click product to view details</span>
   </footer>
@@ -4346,6 +4349,13 @@ function applyLanguage() {
   const countHtml = (key, n) => esc(t(key, { n })).replace(String(n), `<strong>${n}</strong>`);
   document.getElementById('stat-plays').innerHTML = countHtml('playsCount', nPlays);
   document.getElementById('stat-products').innerHTML = countHtml('productsCount', nProducts);
+  const contacts = L && L.ui && L.ui['brandContacts'];
+  const contactEl = document.getElementById('brand-contact');
+  if (contacts && contacts.length) {
+    contactEl.innerHTML = contacts.map(e => `<a href="mailto:${esc(e)}">${esc(e)}</a>`).join(' · ');
+  } else {
+    contactEl.innerHTML = '';
+  }
   document.getElementById('mobile-footer').textContent =
     `${t('playsCount', { n: nPlays })} · ${t('productsCount', { n: nProducts })} · ${t('mobileFooterHint')}`;
 

@@ -3,6 +3,7 @@ window.I18N.fr = {
  "meta": { "name": "Français", "htmlLang": "fr" },
  "ui": {
   "brandName": "Arrow ECS France",
+  "brandContacts": ["ibmsoftware.ecs.fr@arrow.com", "ibmhardware.ecs.fr@arrow.com"],
   "title": "Carte des synergies produits IBM",
   "language": "Langue",
   "toggleTheme": "Changer de thème",
