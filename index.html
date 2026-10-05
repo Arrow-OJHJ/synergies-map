@@ -237,7 +237,7 @@
   /* Language picker in shell (the shell bar is dark in both themes) */
   .cds-shell__lang {
     height: 48px;
-    max-width: 160px;
+    max-width: 220px;
     padding: 0 32px 0 16px;
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23c6c6c6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;
     border: none;
@@ -1286,6 +1286,7 @@
   [dir="rtl"] #footer,
   [dir="rtl"] #mobile-view,
   [dir="rtl"] #mob-drawer { direction: rtl; }
+  [dir="rtl"] .conn-explanation { font-style: normal; }   /* Arabic has no italics */
   [dir="rtl"] .sb-value { border-left: none; border-right: 3px solid var(--cds-interactive); }
   [dir="rtl"] #brand-contact { margin-left: 0; margin-right: 10px; }
   [dir="rtl"] [data-i18n="brandName"] { direction: ltr; unicode-bidi: isolate; }

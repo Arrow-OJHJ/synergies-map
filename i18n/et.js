@@ -120,7 +120,7 @@ window.I18N.et = {
    ]
   },
   "terraform": {
-   "desc": "Infrastruktuur koodina (IaC) tööriist pilveinfrastruktuuri loomiseks ja haldamiseks mitme teenusepakkuja juures.",
+   "desc": "IaC-tööriist (infrastruktuur koodina) pilveinfrastruktuuri loomiseks ja haldamiseks mitme teenusepakkuja juures.",
    "value": "Lühendab infrastruktuuri juurutamise aega 80%, tagab keskkondade ühetaolisuse ja võimaldab infrastruktuuri versioonihaldust.",
    "questions": [
     "Kas loote pilveinfrastruktuuri käsitsi?",
@@ -425,7 +425,7 @@ window.I18N.et = {
   },
   "wca_ansible": {
    "desc": "AI-paarisprogrammeerija, mis kiirendab tarkvaraarendust, rakenduste moderniseerimist ja automatiseerimisskriptide kirjutamist nii kaasaegsetes kui ka pärandkeeltes, sh Java, Python, RPG, COBOL ja PL/SQL. Agentsed võimalused viivad koodi kavandamisest kuni tootmiskeskkonnani.",
-   "value": "Lühendab arendusülesandeid nädalatelt tundidele. Premium Packages toovad sügava eriteadmise IBM i, Z ja Java moderniseerimiseks ning sisseehitatud saladuste skannimine viib turvalisuse arendusprotsessi algusesse (shift left) juba esimesest päevast.",
+   "value": "Lühendab arendusülesannetele kuluvat aega nädalatelt tundidele. Premium Packages toovad sügava eriteadmise IBM i, Z ja Java moderniseerimiseks ning sisseehitatud saladuste skannimine viib turvalisuse arendusprotsessi algusesse (shift left) juba esimesest päevast.",
    "questions": [
     "Kas arendajatel kulub liiga palju aega korduva põhjakoodi (boilerplate) kirjutamisele?",
     "Kas soovite rakenduste arendust kiirendada?",

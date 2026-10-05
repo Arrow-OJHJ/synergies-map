@@ -201,7 +201,7 @@ window.I18N.nl = {
   },
   "instana": {
    "desc": "Geautomatiseerde application performance monitoring met AI-gestuurde inzichten voor cloud-native en microservicesarchitecturen.",
-   "value": "Verkort de MTTD met 90%, biedt automatische discovery en monitoring en biedt voor troubleshooting een granulariteit van 1 seconde.",
+   "value": "Verkort de MTTD met 90%, zorgt voor automatische discovery en monitoring en levert voor troubleshooting een granulariteit van 1 seconde.",
    "questions": [
     "Heeft u microservices of gecontaineriseerde applicaties?",
     "Heeft u moeite om prestatieknelpunten op te sporen?",
@@ -845,7 +845,7 @@ window.I18N.nl = {
  "competitors": {
   "ARM-based servers": "ARM-gebaseerde servers",
   "AWS EC2 with migration services": "AWS EC2 met migratiediensten",
-  "On-premises retention": "Behoud van on-premises",
+  "On-premises retention": "On-premises blijven",
   "x86 Linux servers": "Linux-servers op x86",
   "x86 servers": "x86-servers"
  },

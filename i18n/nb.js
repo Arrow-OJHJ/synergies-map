@@ -153,7 +153,7 @@ window.I18N.nb = {
    ],
    "differentiators": [
     "KI-drevet prediktivt vedlikehold",
-    "Utviklet med mobil først",
+    "Designet for mobil først",
     "IoT-integrasjon",
     "Bransjespesifikke maler"
    ]
@@ -865,7 +865,7 @@ window.I18N.nb = {
   "wxorch>wxgov": "watsonx Orchestrate håndhever styring av KI-agenter og arbeidsflyter",
   "confluent>event_auto": "Confluent strømmer hendelser til Event Automation for behandling i sanntid",
   "confluent>api_connect": "API Connect eksponerer strømmende data fra Confluent gjennom administrerte API-er",
-  "confluent>wxorch": "Kafka-emner i Confluent utløser agenter i watsonx Orchestrate for hendelsesdrevne KI-arbeidsflyter i sanntid",
+  "confluent>wxorch": "Kafka-topics i Confluent utløser agenter i watsonx Orchestrate for hendelsesdrevne KI-arbeidsflyter i sanntid",
   "confluent>webmethods": "webMethods bygger bro fra Kafka-strømmer i Confluent til hybride integrasjonsflyter som kobler sammen eldre og cloud-native systemer",
   "concert>instana": "Concert bruker Instana til overvåking av applikasjonsytelse",
   "concert>turbonomic": "Concert bruker Turbonomic til ressursoptimalisering",
