@@ -1,6 +1,6 @@
 window.I18N = window.I18N || {};
 window.I18N.fr = {
- "meta": { "name": "Français", "htmlLang": "fr" },
+ "meta": { "name": "Français (France)", "htmlLang": "fr" },
  "ui": {
   "brandName": "Arrow ECS France",
   "brandContacts": ["ibmsoftware.ecs.fr@arrow.com", "ibmhardware.ecs.fr@arrow.com"],

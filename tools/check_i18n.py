@@ -21,13 +21,21 @@ PLURALS = {
     'hr': ['one', 'few', 'other'], 'hu': ['one', 'other'], 'pl': ['one', 'few', 'many', 'other'],
     'pt': ['one', 'many', 'other'], 'sk': ['one', 'few', 'many', 'other'],
     'sl': ['one', 'two', 'few', 'other'], 'sv': ['one', 'other'],
-    'uk': ['one', 'few', 'many', 'other'],
+    'uk': ['one', 'few', 'many', 'other'], 'nl': ['one', 'other'], 'nb': ['one', 'other'],
+    'et': ['one', 'other'], 'fi': ['one', 'other'],
+    'ar-MA': ['zero', 'one', 'two', 'few', 'many', 'other'],
 }
+# A country variant (meta.base set) holds only what differs from its base language; it is
+# checked after being laid over the base, with the base's plural rules.
+
 
 
 # (path, name) pairs where the English text contains a product name as an ordinary phrase,
 # so the translation need not keep it: "native watsonx.data integration" means integrating
 # natively with watsonx.data, not the product called watsonx.data integration.
+# Entries a pack may have that the English does not: the country's contact addresses.
+PACK_ONLY = {'ui.brandContacts'}
+
 NAME_CHECK_EXCEPTIONS = {
     ('products.db2.value', 'watsonx.data integration'),
 }
@@ -57,10 +65,10 @@ def load_english():
 
 def load_lang(path):
     text = path.read_text(encoding='utf-8')
-    m = re.search(r'window\.I18N\.([a-z]+) = (\{.*\});\s*$', text, re.S)
+    m = re.search(r"window\.I18N(?:\.([a-z]+)|\['([a-z]+-[A-Z]+)'\]) = (\{.*\});\s*$", text, re.S)
     if not m:
-        raise ValueError('expected "window.I18N.<code> = { ... };"')
-    return m.group(1), json.loads(m.group(2))
+        raise ValueError("""expected "window.I18N.<code> = { ... };" or "window.I18N['xx-YY'] = { ... };\"""")
+    return m.group(1) or m.group(2), json.loads(m.group(3))
 
 
 def names_in(text, names):
@@ -99,7 +107,8 @@ def check(code, data, en, names):
             for k in e.keys() - t.keys():
                 errors.append(f'{path}.{k}: missing')
             for k in t.keys() - e.keys():
-                errors.append(f'{path}.{k}: not in English')
+                if f'{path}.{k}' not in PACK_ONLY:
+                    errors.append(f'{path}.{k}: not in English')
             for k in e.keys() & t.keys():
                 compare(f'{path}.{k}', e[k], t[k])
         elif isinstance(e, list):
@@ -168,7 +177,23 @@ def main():
         if code != f.stem:
             print(f'{f.name}: assigns window.I18N.{code}, expected {f.stem}')
             failed = True
-        errors, warnings = check(f.stem, data, en, names)
+        plural_code, pre = f.stem, []
+        base = data.get('meta', {}).get('base')
+        if base:
+            pre = [f'{s}.{k}: not in the English'
+                   for s, entries in data.items() if s != 'meta' and isinstance(entries, dict)
+                   for k in entries if k not in en.get(s, {}) and f'{s}.{k}' not in PACK_ONLY]
+            try:
+                _, base_data = load_lang(ROOT / 'i18n' / f'{base}.js')
+            except (OSError, ValueError, json.JSONDecodeError) as exc:
+                print(f'{f.name}: cannot load base {base}: {exc}')
+                failed = True
+                continue
+            data = {s: {**base_data.get(s, {}), **data.get(s, {})}
+                    for s in set(base_data) | set(data)}
+            plural_code = base
+        errors, warnings = check(plural_code, data, en, names)
+        errors = pre + errors
         status = 'FAIL' if errors else 'ok'
         print(f'{f.name}: {status} ({len(errors)} errors, {len(warnings)} warnings)')
         for e in errors:

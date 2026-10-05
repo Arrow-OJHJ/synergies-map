@@ -35,10 +35,12 @@ No build step — edit `index.html` and push. GitHub Pages redeploys in about a 
 
 ## Languages
 
-The language menu in the header offers English plus Bulgarian, Czech, Danish, German, Spanish,
-French, Croatian, Hungarian, Polish, Portuguese (Portugal), Slovak, Slovenian, Swedish and
-Ukrainian. The choice is remembered per browser, and a link can open the map in a language
-directly: `https://arrow-ojhj.github.io/synergies-map/?lang=pl`.
+The language menu in the header offers English plus Arabic (Morocco), Bulgarian, Czech, Danish,
+German, Estonian, Spanish, French (France, Belgium, Morocco), Croatian, Hungarian, Dutch
+(Netherlands, Belgium), Norwegian, Polish, Portuguese (Portugal), Slovak, Slovenian, Finnish,
+Swedish and Ukrainian. Each entry names its own Arrow ECS country in the header and footer. The
+choice is remembered per browser, and a link can open the map in a language directly:
+`https://arrow-ojhj.github.io/synergies-map/?lang=pl` or `?lang=fr-BE`.
 
 - **English in `index.html` is the master.** Each `i18n/<code>.js` mirrors its structure:
   interface labels, play and lane names, each product's description, value proposition,
@@ -51,6 +53,18 @@ directly: `https://arrow-ojhj.github.io/synergies-map/?lang=pl`.
 - To add a language: create `i18n/<code>.js` in the same format, add the code to `LANGS` in
   `index.html` and to `PLURALS` in `tools/check_i18n.py`, and check the font subsets cover its
   alphabet.
+- **Country variants** (`fr-BE`, `fr-MA`, `nl-BE`) are a second country for a language that is
+  already there. The file names its base in `meta.base` and holds only what differs: the
+  `brandName`, `brandContacts` and any local wording. It is laid over the base when loaded, so a
+  content change made to `fr.js` reaches the French variants without being copied. A product a
+  variant overrides (`guardium` in `fr-MA`, to name Morocco's loi 09-08, and in `nl-BE`, to say GDPR
+  rather than AVG) is a whole copy, so
+  a change to that product must be made in the variant too. Register it as
+  `window.I18N['fr-BE']` and add it to `LANGS`; the checker checks it merged with its base.
+- `brandContacts` (optional) lists that country's contact addresses for the footer.
+- **Right to left:** codes in `RTL_LANGS` (Arabic) set `dir="rtl"`. The page keeps its layout and
+  the map is drawn as in every other language; the text in the header, panel, footer and mobile
+  view runs right to left. IBM Plex Sans Arabic is self-hosted in `fonts/` for it.
 
 The translations were machine-produced (October 2026). They have not yet been reviewed by
 native speakers; have a colleague check a language before relying on it with customers.
