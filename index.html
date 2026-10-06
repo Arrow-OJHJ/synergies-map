@@ -236,7 +236,14 @@
 
   /* Language picker in shell (the shell bar is dark in both themes) */
   .cds-shell__lang {
+    position: relative;
     height: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .cds-shell__lang-btn {
+    height: 48px;
+    min-width: 120px;
     max-width: 220px;
     padding: 0 32px 0 16px;
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23c6c6c6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;
@@ -245,14 +252,38 @@
     font-family: var(--font-sans);
     font-size: 13px;
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
+    text-align: left;
     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     transition: background-color 0.11s, color 0.11s;
   }
-  .cds-shell__lang:hover { background-color: #353535; color: #ffffff; }
-  .cds-shell__lang:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
-  .cds-shell__lang option { background: #262626; color: #f4f4f4; }
+  .cds-shell__lang-btn:hover { background-color: #353535; color: #ffffff; }
+  .cds-shell__lang-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
+  .cds-shell__lang-list {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background: #262626;
+    border: 1px solid #525252;
+    min-width: 100%;
+    z-index: 9999;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+  }
+  .cds-shell__lang-list.open { display: block; }
+  .cds-shell__lang-list li {
+    padding: 8px 16px;
+    color: #f4f4f4;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .cds-shell__lang-list li:hover,
+  .cds-shell__lang-list li[aria-selected="true"] { background: #353535; color: #ffffff; }
   .cds-shell__brand { min-width: 0; }
   .cds-shell__wordmark { white-space: nowrap; flex-shrink: 0; }
   .cds-shell__product { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -974,7 +1005,7 @@
       font-size: 12px;
     }
     .cds-shell__meta-text { display: none; }
-    .cds-shell__lang { max-width: 112px; padding: 0 28px 0 10px; background-position: right 10px center; }
+    .cds-shell__lang-btn { min-width: 80px; max-width: 112px; padding: 0 28px 0 10px; background-position: right 10px center; }
 
     /* ── Mobile layout wrapper ── */
     #mobile-view {
@@ -1314,7 +1345,10 @@
       </div>
       <div class="cds-shell__meta">
         <span class="cds-shell__meta-text"><strong>2026</strong></span>
-        <select id="lang-select" class="cds-shell__lang" aria-label="Language" data-i18n-aria="language" data-i18n-title="language" title="Language"></select>
+        <div id="lang-select" class="cds-shell__lang" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+          <button type="button" id="lang-btn" class="cds-shell__lang-btn" aria-label="Language" data-i18n-aria="language" data-i18n-title="language" title="Language">English</button>
+          <ul id="lang-list" class="cds-shell__lang-list" role="listbox" aria-label="Language"></ul>
+        </div>
         <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme" data-i18n-title="toggleThemeTitle" data-i18n-aria="toggleTheme">
           <span id="themeText" class="visually-hidden" data-i18n="toggleTheme">Toggle theme</span>
           <span class="icon-glyph" aria-hidden="true">◐</span>
@@ -2212,7 +2246,7 @@ const PRODUCTS = [
    2
   ],
   "desc": "AI-powered automation platform for building and deploying intelligent workflows and digital assistants.",
-  "value": "Automates repetitive tasks by 80%, improves employee productivity, and provides conversational AI interfaces.",
+  "value": "Improves employee productivity and provides conversational AI interfaces.",
   "questions": [
    "Do employees spend time on repetitive tasks?",
    "Are you looking to build chatbots or virtual assistants?",
@@ -4109,7 +4143,12 @@ function activateLang(code) {
   pluralRules = new Intl.PluralRules(code);
   document.documentElement.lang = L?.meta?.htmlLang || code;
   document.documentElement.dir = RTL_LANGS.includes(code) ? 'rtl' : 'ltr';
-  langSelect.value = code;
+  // Update custom dropdown: button label + selected state on list items
+  const selected = LANGS.find(([c]) => c === code);
+  if (selected && langBtn) langBtn.textContent = selected[1];
+  langList && langList.querySelectorAll('li').forEach(li => {
+    li.setAttribute('aria-selected', li.dataset.value === code ? 'true' : 'false');
+  });
 }
 
 async function setLanguage(code) {
@@ -4130,15 +4169,37 @@ async function setLanguage(code) {
   applyLanguage();
 }
 
-const langSelect = document.getElementById('lang-select');
+const langBtn = document.getElementById('lang-btn');
+const langList = document.getElementById('lang-list');
+const langCombo = document.getElementById('lang-select');
+
 LANGS.forEach(([code, name]) => {
-  const opt = document.createElement('option');
-  opt.value = code;
-  opt.textContent = name;
-  opt.lang = code;
-  langSelect.appendChild(opt);
+  const li = document.createElement('li');
+  li.role = 'option';
+  li.dataset.value = code;
+  li.lang = code;
+  li.textContent = name;
+  li.addEventListener('click', () => {
+    closeLangList();
+    setLanguage(code);
+  });
+  langList.appendChild(li);
 });
-langSelect.addEventListener('change', () => setLanguage(langSelect.value));
+
+function openLangList() {
+  langList.classList.add('open');
+  langCombo.setAttribute('aria-expanded', 'true');
+}
+function closeLangList() {
+  langList.classList.remove('open');
+  langCombo.setAttribute('aria-expanded', 'false');
+}
+langBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  langList.classList.contains('open') ? closeLangList() : openLangList();
+});
+document.addEventListener('click', closeLangList);
+langList.addEventListener('click', (e) => e.stopPropagation());
 
 /* ════════════════════════════════════════════════════════
    Layout config
