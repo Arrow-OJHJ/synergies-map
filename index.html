@@ -983,12 +983,12 @@
     color: #161616;
   }
   /* ═══════════════════════════════════════════════════════
-     MOBILE STYLES  (≤ 768px)
+     MOBILE STYLES  (≤ 1024px)
      All rules below are additive — zero impact on desktop.
      ═══════════════════════════════════════════════════════ */
 
   /* ── On mobile: hide the desktop chrome ── */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     body { overflow: auto; }
 
     /* Hide desktop-only elements */
@@ -1325,7 +1325,7 @@
   [dir="rtl"] #mob-drawer button { text-align: right; }
 
   /* ── On desktop: ensure mobile view is hidden ── */
-  @media (min-width: 769px) {
+  @media (min-width: 1025px) {
     #mobile-view,
     #mob-drawer,
     #mob-drawer-overlay { display: none !important; }
@@ -5138,7 +5138,7 @@ loadLang(startLang)
    ════════════════════════════════════════════════════════ */
 
 function isMobile() {
-  return window.matchMedia('(max-width: 768px)').matches;
+  return window.matchMedia('(max-width: 1024px)').matches;
 }
 
 /* ── State ── */
