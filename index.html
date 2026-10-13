@@ -234,6 +234,86 @@
     transform: rotate(180deg);
   }
 
+  /* View toggle button (bar2, desktop only) */
+  .view-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    height: 32px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid var(--cds-border-subtle-01);
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.11s, border-color 0.11s, color 0.11s;
+    align-self: center;
+  }
+  .view-toggle-btn:hover {
+    background: var(--cds-background-hover);
+    color: var(--cds-text-primary);
+    border-color: var(--cds-border-strong-01);
+  }
+  .view-toggle-btn:focus-visible {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+  }
+  .view-toggle-btn.is-active {
+    background: var(--cds-background-inverse);
+    color: var(--cds-text-inverse);
+    border-color: var(--cds-background-inverse);
+  }
+  .view-toggle-btn.is-active:hover {
+    background: var(--cds-background-inverse-hover);
+    border-color: var(--cds-background-inverse-hover);
+  }
+  .view-toggle-icon {
+    font-size: 14px;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  [data-view="radial"] .view-toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Suppress swimlane decorations in radial view */
+  [data-view="radial"] .lane-strip,
+  [data-view="radial"] .lane-divider,
+  [data-view="radial"] .lane-label {
+    display: none !important;
+  }
+
+  /* Ring guides and labels for radial view */
+  .ring-guide {
+    fill: none;
+    stroke: var(--cds-border-subtle-01);
+    stroke-width: 1;
+    opacity: 0.35;
+    stroke-dasharray: 4 4;
+    pointer-events: none;
+  }
+  .ring-label {
+    position: absolute;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cds-text-secondary);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 2;
+    background: var(--cds-background);
+    padding: 2px 5px;
+    border: 1px solid var(--cds-border-subtle-01);
+  }
+
   /* Language picker in shell (the shell bar is dark in both themes) */
   .cds-shell__lang {
     position: relative;
@@ -1333,7 +1413,7 @@
 </style>
 </head>
 <body>
-<div id="app" data-theme="light" data-node-style="tag" data-conn-style="curved">
+<div id="app" data-theme="light" data-node-style="tag" data-conn-style="curved" data-view="map">
 
   <!-- ── Carbon UI Shell ── -->
   <header class="cds-shell">
@@ -1378,6 +1458,10 @@
       </div>
       <span id="search-results" class="search-results-count"></span>
       <nav id="play-legend" aria-label="Product group filter" data-i18n-aria="playFilter"></nav>
+      <button type="button" id="view-toggle-btn" class="view-toggle-btn" aria-label="Switch to radial view" data-i18n-aria="viewRadial" title="Switch to radial view">
+        <span class="view-toggle-icon" aria-hidden="true">⊙</span>
+        <span id="view-toggle-label" data-i18n="viewRadial">Radial view</span>
+      </button>
     </div>
   </header>
 
@@ -1558,7 +1642,9 @@ const UI_EN = {
  "connections": { "one": "{n} connection", "other": "{n} connections" },
  "links": { "one": "{n} link", "other": "{n} links" },
  "playsCount": {"one": "{n} product group", "other": "{n} product groups"},
- "productsCount": { "one": "{n} product", "other": "{n} products" }
+ "productsCount": { "one": "{n} product", "other": "{n} products" },
+ "viewMap": "Map view",
+ "viewRadial": "Radial view"
 };
 /* Generic competitor entries that are descriptions, not brand
    names, so they are translated. All other competitors are names. */
@@ -4271,6 +4357,7 @@ if (!validateData()) {
 let selectedId = null;
 let activePlayFilter = null;
 let searchQuery = '';
+let viewMode = 'map'; // 'map' | 'radial'
 const nodeEls = {};
 
 /* ════════════════════════════════════════════════════════
@@ -4399,6 +4486,8 @@ function drawConnectionsForSearch(involvedProducts, matchedProducts) {
     
     svgEl.appendChild(path);
   });
+
+  if (viewMode === 'radial') drawRingGuides();
 }
 
 searchInput.addEventListener('input', (e) => {
@@ -4644,6 +4733,135 @@ function computeLayout() {
 }
 
 /* ════════════════════════════════════════════════════════
+   Radial Layout
+   Products arranged in concentric rings, one ring per category.
+   Reuses the same _px / _py / style.left / style.top pattern
+   as computeLayout() so drawConnections() works unchanged.
+   ════════════════════════════════════════════════════════ */
+// Cached radial geometry so drawRingGuides() can redraw them without
+// a full layout recompute (called after drawConnections wipes the SVG).
+let _radialCache = null;
+
+function computeRadialLayout() {
+  const rect = mapArea.getBoundingClientRect();
+  const W = rect.width;
+  const H = rect.height;
+  const cx = W / 2;
+  const cy = H / 2;
+
+  // Remove lane decorations and old ring labels — created fresh below.
+  mapArea.querySelectorAll('.lane-strip, .lane-label, .lane-divider, .ring-label').forEach(el => el.remove());
+
+  const numRings = CATEGORIES.length;
+  const minDim = Math.min(W, H);
+  const innerR = minDim * 0.10;
+  const outerR = minDim * 0.44;
+  const ringStep = numRings > 1 ? (outerR - innerR) / (numRings - 1) : 0;
+
+  // Cache geometry for drawRingGuides()
+  _radialCache = { cx, cy, innerR, outerR, ringStep };
+
+  CATEGORIES.forEach((cat, ringIdx) => {
+    const r = innerR + ringIdx * ringStep;
+
+    // Place a category label at the top of the ring (12 o'clock, nudged right
+    // slightly to avoid clashing with lines coming from exactly the top).
+    const labelAngle = -Math.PI / 2 + 0.18;
+    const labelX = cx + r * Math.cos(labelAngle);
+    const labelY = cy + r * Math.sin(labelAngle);
+    const label = document.createElement('div');
+    label.className = 'ring-label';
+    label.textContent = categoryLabel(cat.id);
+    label.style.left = labelX + 'px';
+    label.style.top  = labelY + 'px';
+    mapArea.insertBefore(label, svgEl);
+
+    // Distribute products evenly around this ring
+    const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
+    const n = productsInCat.length;
+    if (n === 0) return;
+
+    // Reset any inline font/padding overrides from the swimlane layout
+    productsInCat.forEach(p => {
+      nodeEls[p.id].style.fontSize = '';
+      nodeEls[p.id].style.padding  = '';
+    });
+
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2;
+
+    productsInCat.forEach((p, i) => {
+      const angle = startAngle + i * angleStep;
+      const px = cx + r * Math.cos(angle);
+      const py = cy + r * Math.sin(angle);
+      p._px = px;
+      p._py = py;
+      nodeEls[p.id].style.left = px + 'px';
+      nodeEls[p.id].style.top  = py + 'px';
+    });
+  });
+}
+
+// Inject ring guide circles into the SVG (called at the END of drawConnections
+// so they sit behind connection paths — drawConnections resets svgEl.innerHTML).
+function drawRingGuides() {
+  if (!_radialCache) return;
+  const { cx, cy, innerR, ringStep } = _radialCache;
+  const defs = svgEl.querySelector('#svg-defs');
+  CATEGORIES.forEach((cat, ringIdx) => {
+    const r = innerR + ringIdx * ringStep;
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', cx);
+    circle.setAttribute('cy', cy);
+    circle.setAttribute('r', r);
+    circle.classList.add('ring-guide');
+    // Insert after defs but before paths
+    if (defs && defs.nextSibling) svgEl.insertBefore(circle, defs.nextSibling);
+    else svgEl.appendChild(circle);
+  });
+}
+
+/* ════════════════════════════════════════════════════════
+   Layout dispatcher — calls the right layout function
+   based on the current viewMode.
+   ════════════════════════════════════════════════════════ */
+function runLayout() {
+  if (viewMode === 'radial') computeRadialLayout();
+  else computeLayout();
+}
+
+/* ════════════════════════════════════════════════════════
+   View mode toggle
+   ════════════════════════════════════════════════════════ */
+const viewToggleBtn = document.getElementById('view-toggle-btn');
+const viewToggleLabel = document.getElementById('view-toggle-label');
+
+function setViewMode(mode) {
+  viewMode = mode;
+  const appEl = document.getElementById('app');
+  appEl.dataset.view = mode;
+
+  // Clean up radial-only DOM when switching back to map view
+  if (mode === 'map') {
+    _radialCache = null;
+    mapArea.querySelectorAll('.ring-label').forEach(el => el.remove());
+  }
+
+  const isRadial = mode === 'radial';
+  viewToggleBtn.classList.toggle('is-active', isRadial);
+  viewToggleLabel.dataset.i18n = isRadial ? 'viewMap' : 'viewRadial';
+  viewToggleLabel.textContent = t(viewToggleLabel.dataset.i18n);
+  viewToggleBtn.setAttribute('aria-label', t(isRadial ? 'viewMap' : 'viewRadial'));
+  viewToggleBtn.title = t(isRadial ? 'viewMap' : 'viewRadial');
+
+  scheduleLayoutUpdate();
+}
+
+viewToggleBtn.addEventListener('click', () => {
+  setViewMode(viewMode === 'radial' ? 'map' : 'radial');
+});
+
+/* ════════════════════════════════════════════════════════
    Connection color rule
    - Same lane: that lane's play color
    - Cross-lane: lower-on-screen (larger index) lane's color
@@ -4827,6 +5045,10 @@ function drawConnections(activeId = null) {
 
     svgEl.appendChild(path);
   });
+
+  // In radial view, overlay the ring guide circles on top of the
+  // neutral mesh but beneath active paths (they were inserted first).
+  if (viewMode === 'radial') drawRingGuides();
 }
 
 /* ════════════════════════════════════════════════════════
@@ -5043,7 +5265,7 @@ function applyTweaks() {
   });
   // Lane fill change requires recompute - cancel any pending resize
   clearTimeout(resizeTimer);
-  computeLayout();
+  runLayout();
   if (selectedId) drawConnections(selectedId);
   else if (activePlayFilter) drawConnections();
   else drawConnections();
@@ -5111,7 +5333,7 @@ function scheduleLayoutUpdate() {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
     fitLegend();
-    computeLayout();
+    runLayout();
     if (selectedId) drawConnections(selectedId);
     else if (activePlayFilter) drawConnections();
     else drawConnections();
