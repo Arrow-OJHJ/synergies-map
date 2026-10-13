@@ -4939,21 +4939,36 @@ mapArea.addEventListener('mousedown', function _onMapMouseDown(e) {
   document.addEventListener('mouseup', onDocUp);
 });
 
-// Ring guides — redrawn after drawConnections clears the SVG
+// Sector arc guides — one subtle circle per category sector boundary,
+// redrawn after drawConnections clears the SVG.
 function drawRingGuides() {
   if (!_radialCache) return;
-  const { cx, cy, innerR, ringStep } = _radialCache;
+  const { cx, cy, outerR } = _radialCache;
+  const numCats = CATEGORIES.length;
+  const sectorAngle = (2 * Math.PI) / numCats;
   const defs = svgEl.querySelector('#svg-defs');
-  CATEGORIES.forEach((cat, ringIdx) => {
-    const r = innerR + ringIdx * ringStep;
-    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    circle.setAttribute('cx', cx);
-    circle.setAttribute('cy', cy);
-    circle.setAttribute('r', r);
-    circle.classList.add('ring-guide');
-    if (defs && defs.nextSibling) svgEl.insertBefore(circle, defs.nextSibling);
-    else svgEl.appendChild(circle);
-  });
+
+  // Draw one thin outer boundary circle to frame the graph
+  const outerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  outerCircle.setAttribute('cx', cx);
+  outerCircle.setAttribute('cy', cy);
+  outerCircle.setAttribute('r', outerR * 1.05);
+  outerCircle.classList.add('ring-guide');
+  if (defs && defs.nextSibling) svgEl.insertBefore(outerCircle, defs.nextSibling);
+  else svgEl.appendChild(outerCircle);
+
+  // Draw sector divider lines from centre outward
+  for (let i = 0; i < numCats; i++) {
+    const angle = -Math.PI / 2 + i * sectorAngle;
+    const x2 = cx + outerR * 1.05 * Math.cos(angle);
+    const y2 = cy + outerR * 1.05 * Math.sin(angle);
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', cx); line.setAttribute('y1', cy);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.classList.add('ring-guide');
+    if (defs && defs.nextSibling) svgEl.insertBefore(line, defs.nextSibling);
+    else svgEl.appendChild(line);
+  }
 }
 
 /* ════════════════════════════════════════════════════════
