@@ -4549,11 +4549,30 @@ function computeLayout() {
 
   });
 
-  // Position products — with minimum-gap enforcement.
-  // If a lane's nodes are too wide to fit with MIN_GAP between them, shrink
-  // the font-size inline (in steps) until they fit, with a floor of MIN_FONT.
-  const MIN_GAP = 8;   // px between nodes
-  const MIN_FONT = 9;  // px — smallest readable size, never go below this
+  // Position products.
+  // Strategy:
+  //   1. Try to fit all products in a single row with at least MIN_GAP between them.
+  //   2. If they don't fit at default size, try shrinking font down to MIN_FONT.
+  //   3. If they still don't fit, split into two rows (top and bottom thirds of the
+  //      lane), distributing products as evenly as possible across the two rows.
+  //      The connection anchor point (_px/_py) is the node centre in whichever row
+  //      it lands in, so connections still route correctly.
+  const MIN_GAP  = 8;  // minimum px gap between nodes in a row
+  const MIN_FONT = 9;  // smallest font-size we'll shrink to (px)
+
+  const placeRow = (products, y, widths) => {
+    const total = widths.reduce((s, w) => s + w, 0);
+    const gap = Math.max(0, (usableW - total) / (products.length + 1));
+    let x = LEFT + gap;
+    products.forEach((p, i) => {
+      const cx = x + widths[i] / 2;
+      p._px = cx; p._py = y;
+      const el = nodeEls[p.id];
+      el.style.left = cx + 'px';
+      el.style.top  = y  + 'px';
+      x += widths[i] + gap;
+    });
+  };
 
   CATEGORIES.forEach((cat, catIdx) => {
     const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
@@ -4562,49 +4581,60 @@ function computeLayout() {
     const yTop = TOP + catIdx * laneH;
     const yCen = yTop + laneH / 2;
 
-    // Reset any previously-applied inline font shrink so we measure fresh
+    // Reset any previously-applied inline overrides so we measure at CSS defaults
     productsInCat.forEach(p => {
       nodeEls[p.id].style.fontSize = '';
-      nodeEls[p.id].style.padding = '';
+      nodeEls[p.id].style.padding  = '';
     });
 
-    // Measure at default size, then shrink if needed
-    let fontSize = 11; // matches the CSS default (px)
-    let padH = 8;       // horizontal padding each side (px) — matches CSS 4px 8px
+    let fontSize = 11;
+    let padH     = 8;
 
     const measure = () => productsInCat.map(p => nodeEls[p.id].offsetWidth || 0);
 
     let widths = measure();
     let totalW = widths.reduce((s, w) => s + w, 0);
-    let gap = (usableW - totalW) / (productsInCat.length + 1);
+    let gap    = (usableW - totalW) / (productsInCat.length + 1);
 
-    // Shrink by 1px steps until the gap is acceptable or we hit the floor
+    // Step 1 — try shrinking font to make a single row fit
     while (gap < MIN_GAP && fontSize > MIN_FONT) {
       fontSize -= 1;
       padH = Math.max(4, padH - 1);
       productsInCat.forEach(p => {
         nodeEls[p.id].style.fontSize = fontSize + 'px';
-        nodeEls[p.id].style.padding = `4px ${padH}px`;
+        nodeEls[p.id].style.padding  = `4px ${padH}px`;
       });
       widths = measure();
       totalW = widths.reduce((s, w) => s + w, 0);
-      gap = (usableW - totalW) / (productsInCat.length + 1);
+      gap    = (usableW - totalW) / (productsInCat.length + 1);
     }
 
-    // If still overlapping at the floor size, clamp gap to 0 (nodes touch but don't overlap)
-    if (gap < 0) gap = 0;
+    if (gap >= MIN_GAP) {
+      // Fits in one row — place normally
+      placeRow(productsInCat, yCen, widths);
+    } else {
+      // Step 2 — still doesn't fit: split into two rows.
+      // Restore default size for the two-row layout (more room per row).
+      productsInCat.forEach(p => {
+        nodeEls[p.id].style.fontSize = '';
+        nodeEls[p.id].style.padding  = '';
+      });
+      widths = measure();
 
-    let currentX = LEFT + gap;
-    productsInCat.forEach((p, idx) => {
-      const width = widths[idx];
-      const x = currentX + width / 2;
-      const y = yCen;
-      p._px = x; p._py = y;
-      const el = nodeEls[p.id];
-      el.style.left = x + 'px';
-      el.style.top = y + 'px';
-      currentX += width + gap;
-    });
+      // Split as evenly as possible: first half on top row, second on bottom.
+      const half   = Math.ceil(productsInCat.length / 2);
+      const rowA   = productsInCat.slice(0, half);
+      const rowB   = productsInCat.slice(half);
+      const wA     = widths.slice(0, half);
+      const wB     = widths.slice(half);
+
+      // Row positions: 30% and 70% down the lane height
+      const yA = yTop + laneH * 0.30;
+      const yB = yTop + laneH * 0.70;
+
+      placeRow(rowA, yA, wA);
+      placeRow(rowB, yB, wB);
+    }
   });
 }
 
