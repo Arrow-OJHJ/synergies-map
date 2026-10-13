@@ -446,12 +446,12 @@
   .pnode {
     position: absolute;
     transform: translate(-50%, -50%);
-    padding: 6px 10px 6px 10px;
+    padding: 4px 8px 4px 8px;
     background: var(--cds-background);
     border: 1px solid var(--cds-border-subtle-02);
     border-left: 3px solid var(--node-color, var(--cds-border-strong-01));
     font-family: var(--font-sans);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--cds-text-primary);
     cursor: pointer;
@@ -4549,7 +4549,12 @@ function computeLayout() {
 
   });
 
-  // Position products
+  // Position products — with minimum-gap enforcement.
+  // If a lane's nodes are too wide to fit with MIN_GAP between them, shrink
+  // the font-size inline (in steps) until they fit, with a floor of MIN_FONT.
+  const MIN_GAP = 8;   // px between nodes
+  const MIN_FONT = 9;  // px — smallest readable size, never go below this
+
   CATEGORIES.forEach((cat, catIdx) => {
     const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
     if (productsInCat.length === 0) return;
@@ -4557,12 +4562,39 @@ function computeLayout() {
     const yTop = TOP + catIdx * laneH;
     const yCen = yTop + laneH / 2;
 
-    const widths = productsInCat.map(p => nodeEls[p.id].offsetWidth || 0);
-    const totalProductWidth = widths.reduce((sum, w) => sum + w, 0);
-    const availableSpace = usableW - totalProductWidth;
-    const gapSize = availableSpace / (productsInCat.length + 1);
+    // Reset any previously-applied inline font shrink so we measure fresh
+    productsInCat.forEach(p => {
+      nodeEls[p.id].style.fontSize = '';
+      nodeEls[p.id].style.padding = '';
+    });
 
-    let currentX = LEFT + gapSize;
+    // Measure at default size, then shrink if needed
+    let fontSize = 11; // matches the CSS default (px)
+    let padH = 8;       // horizontal padding each side (px) — matches CSS 4px 8px
+
+    const measure = () => productsInCat.map(p => nodeEls[p.id].offsetWidth || 0);
+
+    let widths = measure();
+    let totalW = widths.reduce((s, w) => s + w, 0);
+    let gap = (usableW - totalW) / (productsInCat.length + 1);
+
+    // Shrink by 1px steps until the gap is acceptable or we hit the floor
+    while (gap < MIN_GAP && fontSize > MIN_FONT) {
+      fontSize -= 1;
+      padH = Math.max(4, padH - 1);
+      productsInCat.forEach(p => {
+        nodeEls[p.id].style.fontSize = fontSize + 'px';
+        nodeEls[p.id].style.padding = `4px ${padH}px`;
+      });
+      widths = measure();
+      totalW = widths.reduce((s, w) => s + w, 0);
+      gap = (usableW - totalW) / (productsInCat.length + 1);
+    }
+
+    // If still overlapping at the floor size, clamp gap to 0 (nodes touch but don't overlap)
+    if (gap < 0) gap = 0;
+
+    let currentX = LEFT + gap;
     productsInCat.forEach((p, idx) => {
       const width = widths[idx];
       const x = currentX + width / 2;
@@ -4571,7 +4603,7 @@ function computeLayout() {
       const el = nodeEls[p.id];
       el.style.left = x + 'px';
       el.style.top = y + 'px';
-      currentX += width + gapSize;
+      currentX += width + gap;
     });
   });
 }
