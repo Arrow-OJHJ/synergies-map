@@ -3,9 +3,6 @@
 An interactive map of IBM product cross-sell opportunities across six product groups. Available at
 **https://arrow-ojhj.github.io/synergies-map/** (GitHub Pages, deployed from `main`).
 
-The old address, arrow-synergies-map.com, now shows only a notice pointing to the new one and will
-be retired.
-
 ## Repo contents
 
 | Path | Purpose |
@@ -14,8 +11,6 @@ be retired.
 | `i18n/` | One file per translation (`fr.js`, `pl.js`, ...), loaded only when that language is picked. |
 | `tools/check_i18n.py` | Checks every translation against the English in `index.html`. |
 | `fonts/` | Self-hosted IBM Plex Sans and Mono (OFL): latin, plus latin-ext and cyrillic subsets that load only when a page shows those characters — no external font requests. |
-| `moved/` | The "this map has moved" notice served on the old domain, with its Cloudflare security headers. |
-| `wrangler.jsonc` | Cloudflare Workers config for the old domain — serves `moved/` for every path. |
 
 ## Updating content
 
