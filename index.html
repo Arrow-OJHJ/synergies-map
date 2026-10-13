@@ -988,7 +988,7 @@
      ═══════════════════════════════════════════════════════ */
 
   /* ── On mobile: hide the desktop chrome ── */
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px), (max-height: 600px) {
     body { overflow: auto; }
 
     /* Hide desktop-only elements */
@@ -1325,7 +1325,7 @@
   [dir="rtl"] #mob-drawer button { text-align: right; }
 
   /* ── On desktop: ensure mobile view is hidden ── */
-  @media (min-width: 1025px) {
+  @media (min-width: 1025px) and (min-height: 601px) {
     #mobile-view,
     #mob-drawer,
     #mob-drawer-overlay { display: none !important; }
@@ -5138,7 +5138,7 @@ loadLang(startLang)
    ════════════════════════════════════════════════════════ */
 
 function isMobile() {
-  return window.matchMedia('(max-width: 1024px)').matches;
+  return window.matchMedia('(max-width: 1024px), (max-height: 600px)').matches;
 }
 
 /* ── State ── */
