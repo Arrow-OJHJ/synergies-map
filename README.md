@@ -3,7 +3,7 @@
 An interactive map of IBM product cross-sell opportunities across six product groups. Available at
 **https://arrow-ojhj.github.io/synergies-map/** (GitHub Pages, deployed from `main`).
 
-This project was built with [IBM Bob](https://www.ibm.com/products/watsonx-code-assistant).
+This project was built with [IBM Bob](https://bob.ibm.com/).
 
 ## Repo contents
 
