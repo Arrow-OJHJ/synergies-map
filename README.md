@@ -3,6 +3,8 @@
 An interactive map of IBM product cross-sell opportunities across six product groups. Available at
 **https://arrow-ojhj.github.io/synergies-map/** (GitHub Pages, deployed from `main`).
 
+This project was built with [IBM Bob](https://www.ibm.com/products/watsonx-code-assistant).
+
 ## Repo contents
 
 | Path | Purpose |
@@ -61,8 +63,14 @@ choice is remembered per browser, and a link can open the map in a language dire
   the map is drawn as in every other language; the text in the header, panel, footer and mobile
   view runs right to left. IBM Plex Sans Arabic is self-hosted in `fonts/` for it.
 
-The translations were machine-produced (October 2026). They have not yet been reviewed by
+The translations were produced by IBM Bob in October 2026. They have not yet been reviewed by
 native speakers; have a colleague check a language before relying on it with customers.
+
+## CI
+
+On every push and pull request, GitHub Actions runs `tools/check_i18n.py` automatically to verify
+all translation files are in sync with the English master. The workflow is defined in
+`.github/workflows/check-i18n.yml`.
 
 ## License
 
