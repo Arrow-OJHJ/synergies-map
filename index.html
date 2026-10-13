@@ -4724,7 +4724,6 @@ let _radialCache = null;
 let _forceNodes  = null;
 let _forceRAF    = null;
 let _dragNode    = null;
-let _hoverNode   = null;
 
 function computeRadialLayout() {
   stopForceSimulation();
@@ -4735,18 +4734,25 @@ function computeRadialLayout() {
 
   mapArea.querySelectorAll('.lane-strip, .lane-label, .lane-divider, .ring-label').forEach(el => el.remove());
 
-  const minDim  = Math.min(W, H);
-  const innerR  = minDim * 0.13;   // innermost ring radius
-  const outerR  = minDim * 0.48;   // outermost ring radius — wider spread
-  const numCats = CATEGORIES.length;
-  const sectorAngle = (2 * Math.PI) / numCats;  // 60° per category
+  // Each category sits on one of 6 evenly-spaced rings.
+  // All products for that category arc around their ring within a 50° arc
+  // (tight enough to look clearly grouped, wide enough to avoid overlap).
+  const numCats     = CATEGORIES.length;
+  const sectorAngle = (2 * Math.PI) / numCats;        // 60° per category
+  const arcHalf     = sectorAngle * 0.40;              // ±24° around sector centre
+  const nodeSpacing = 68;                              // desired px gap between nodes
+  // Ring radii — spaced by enough to clearly separate the six groups
+  const minDim   = Math.min(W, H);
+  const baseR    = minDim * 0.20;   // innermost category ring
+  const ringGap  = minDim * 0.075; // gap between successive rings
+  const outerR   = baseR + (numCats - 1) * ringGap;
 
-  _radialCache = { cx, cy, innerR, outerR, W, H };
+  _radialCache = { cx, cy, outerR, W, H };
   _forceNodes  = [];
 
   CATEGORIES.forEach((cat, catIdx) => {
-    // Centre angle for this category's sector, starting at 12 o'clock
     const sectorMid = -Math.PI / 2 + catIdx * sectorAngle;
+    const r = baseR + catIdx * ringGap;
 
     const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
     const n = productsInCat.length;
@@ -4757,41 +4763,32 @@ function computeRadialLayout() {
       nodeEls[p.id].style.padding  = '';
     });
 
-    // Distribute products across radii and angles within the sector.
-    // Use a grid: rows × cols where rows span radii, cols span angles.
-    const cols      = Math.ceil(Math.sqrt(n * 1.4)); // slight wide bias
+    // Spread products evenly along the arc. If they'd be too close together
+    // due to arc length, reduce the effective arc to keep spacing tight.
+    const arcLen    = 2 * arcHalf * r;
+    const maxNodes  = Math.max(1, Math.floor(arcLen / nodeSpacing) + 1);
+    // How many columns (arc positions) and rows (radial layers)
+    const cols      = Math.min(n, maxNodes);
     const rows      = Math.ceil(n / cols);
-    const radStep   = rows > 1 ? (outerR - innerR) / (rows - 1) : 0;
-    // Leave a small gap at sector edges so clusters don't overlap neighbours
-    const arcHalf   = sectorAngle * 0.42;
+    const rowGap    = 52; // px between radial rows within the cluster
 
     productsInCat.forEach((p, i) => {
       const row = Math.floor(i / cols);
       const col = i % cols;
-      // Cols in the last row may be fewer — centre them within their row
-      const colsInRow = (row === rows - 1) ? (n - row * cols) : cols;
-      const colOffset = (cols - colsInRow) / 2;
-
-      const r     = innerR + row * radStep;
-      const angle = (colsInRow > 1)
-        ? sectorMid - arcHalf + (col + colOffset) * (2 * arcHalf / (colsInRow - 1))
+      const colsInRow  = (row === rows - 1) ? (n - row * cols) : cols;
+      const colOffset  = (cols - colsInRow) / 2;
+      const rowR       = r + (row - (rows - 1) / 2) * rowGap;
+      const angle      = (colsInRow > 1)
+        ? sectorMid - arcHalf + (col + colOffset) / (cols - 1) * (2 * arcHalf)
         : sectorMid;
 
-      const px = cx + r * Math.cos(angle);
-      const py = cy + r * Math.sin(angle);
+      const px = cx + rowR * Math.cos(angle);
+      const py = cy + rowR * Math.sin(angle);
       p._px = px; p._py = py;
       nodeEls[p.id].style.left = px + 'px';
       nodeEls[p.id].style.top  = py + 'px';
 
-      _forceNodes.push({
-        p,
-        targetX: px,   // force target = initial position
-        targetY: py,
-        x: px, y: py,
-        vx: (Math.random() - 0.5) * 0.5,  // tiny random kick to break symmetry
-        vy: (Math.random() - 0.5) * 0.5,
-        pinned: false
-      });
+      _forceNodes.push({ p, targetX: px, targetY: py, x: px, y: py, vx: 0, vy: 0, pinned: false });
     });
   });
 
@@ -4799,49 +4796,34 @@ function computeRadialLayout() {
 }
 
 /* ── Physics tick ─────────────────────────────── */
+// Lightweight sim: only runs on entry (to settle initial layout) and during/after drag.
+// No hover physics — hover is visual only so nodes stay still and are easy to click.
 function forceSimTick() {
   if (!_forceNodes || !_radialCache) return;
-  const N         = _forceNodes.length;
-  const REPEL_R   = 85;    // repulsion radius (px)
-  const REPEL_STR = 4000;
-  const HOME_K    = 0.045; // spring toward home position
-  const HOVER_R   = 130;   // hover ripple radius
-  const HOVER_STR = 6000;
-  const DAMP      = 0.70;
+  const N        = _forceNodes.length;
+  const REPEL_R  = 72;    // only push apart nodes that are really close
+  const REPEL_K  = 1200;
+  const HOME_K   = 0.18;  // strong spring back to home — settles fast
+  const DAMP     = 0.82;  // high damping — no wobble
 
   for (let i = 0; i < N; i++) {
     const n = _forceNodes[i];
     if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
 
-    let fx = 0, fy = 0;
+    let fx = (n.targetX - n.x) * HOME_K;
+    let fy = (n.targetY - n.y) * HOME_K;
 
-    // Home-position spring — keeps cluster shape after disturbance
-    fx += (n.targetX - n.x) * HOME_K;
-    fy += (n.targetY - n.y) * HOME_K;
-
-    // Node-node repulsion
+    // Repulsion only for very close neighbours (prevents initial overlap only)
     for (let j = 0; j < N; j++) {
       if (i === j) continue;
       const m  = _forceNodes[j];
       const ex = n.x - m.x, ey = n.y - m.y;
       const d2 = ex * ex + ey * ey + 1;
-      const d  = Math.sqrt(d2);
-      if (d < REPEL_R) {
-        const f = REPEL_STR / d2;
+      if (d2 < REPEL_R * REPEL_R) {
+        const d = Math.sqrt(d2);
+        const f = REPEL_K / d2;
         fx += (ex / d) * f;
         fy += (ey / d) * f;
-      }
-    }
-
-    // Hover repulsion — mouse proximity pushes nearby nodes away
-    if (_hoverMx !== null) {
-      const hx = n.x - _hoverMx, hy = n.y - _hoverMy;
-      const hd2 = hx * hx + hy * hy + 1;
-      const hd  = Math.sqrt(hd2);
-      if (hd < HOVER_R) {
-        const f = HOVER_STR / hd2;
-        fx += (hx / hd) * f;
-        fy += (hy / hd) * f;
       }
     }
 
@@ -4851,7 +4833,6 @@ function forceSimTick() {
     n.y += n.vy;
   }
 
-  // Apply positions + measure max velocity to decide if we can sleep
   let maxV2 = 0;
   for (const n of _forceNodes) {
     n.p._px = n.x; n.p._py = n.y;
@@ -4861,13 +4842,12 @@ function forceSimTick() {
     if (v2 > maxV2) maxV2 = v2;
   }
 
-  // Redraw connections each tick
   if (selectedId) drawConnections(selectedId);
   else if (activePlayFilter) drawConnections();
   else drawConnections();
 
-  const active = maxV2 > 0.02 || _hoverMx !== null || _dragNode;
-  _forceRAF = active ? requestAnimationFrame(forceSimTick) : null;
+  // Stop cleanly once everything has settled — no continuous wobble
+  _forceRAF = (maxV2 > 0.004 || _dragNode) ? requestAnimationFrame(forceSimTick) : null;
 }
 
 function startForceSimulation() {
@@ -4879,21 +4859,10 @@ function stopForceSimulation() {
   if (_forceRAF) { cancelAnimationFrame(_forceRAF); _forceRAF = null; }
 }
 
-/* ── Interaction: hover + drag ────────────────── */
-// Mouse position for hover-ripple effect (null when outside map area)
-let _hoverMx = null, _hoverMy = null;
+/* ── Interaction: drag ────────────────────────── */
 let _dragDidMove = false;
 
-mapArea.addEventListener('mousemove', function _onMapMouseMove(e) {
-  if (viewMode !== 'radial' || !_forceNodes) return;
-  const rect = mapArea.getBoundingClientRect();
-  _hoverMx = e.clientX - rect.left;
-  _hoverMy = e.clientY - rect.top;
-  if (!_forceRAF) startForceSimulation();
-});
-
 mapArea.addEventListener('mouseleave', function _onMapMouseLeave() {
-  _hoverMx = null; _hoverMy = null;
   if (_dragNode) { _dragNode.pinned = false; _dragNode = null; }
 });
 
@@ -4993,9 +4962,6 @@ function setViewMode(mode) {
     _radialCache = null;
     _forceNodes  = null;
     _dragNode    = null;
-    _hoverNode   = null;
-    _hoverMx     = null;
-    _hoverMy     = null;
     mapArea.querySelectorAll('.ring-label').forEach(el => el.remove());
   }
 
