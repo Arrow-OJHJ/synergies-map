@@ -1,35 +1,35 @@
-﻿window.I18N = window.I18N || {};
+window.I18N = window.I18N || {};
 window.I18N.sv = {
  "meta": { "name": "Svenska", "htmlLang": "sv" },
  "ui": {
   "brandName": "Arrow ECS Sverige",
-  "title": "Karta Ã¶ver IBM-produktsynergier",
-  "language": "SprÃ¥k",
+  "title": "Karta över IBM-produktsynergier",
+  "language": "Språk",
   "toggleTheme": "Byt tema",
-  "toggleThemeTitle": "VÃ¤xla mellan ljust och mÃ¶rkt tema",
-  "searchPlaceholder": "SÃ¶k produkter, beskrivningar, frÃ¥gor...",
-  "mobSearchPlaceholder": "SÃ¶k produkterâ€¦",
-  "searchAria": "SÃ¶k produkter",
-  "clearSearch": "Rensa sÃ¶kning",
+  "toggleThemeTitle": "Växla mellan ljust och mörkt tema",
+  "searchPlaceholder": "Sök produkter, beskrivningar, frågor...",
+  "mobSearchPlaceholder": "Sök produkter…",
+  "searchAria": "Sök produkter",
+  "clearSearch": "Rensa sökning",
   "playFilter": "Filtrera produktgrupp",
-  "mapAria": "Karta fÃ¶r korsfÃ¶rsÃ¤ljning",
+  "mapAria": "Karta för korsförsäljning",
   "productDetail": "Produktdetaljer",
   "detail": "Detaljer",
   "clearSelection": "Rensa val",
-  "loading": "Laddarâ€¦",
-  "footerHint": "SÃ¶k produkter Â· Klicka pÃ¥ en produkt fÃ¶r detaljer",
-  "mobileFooterHint": "Tryck pÃ¥ en produkt fÃ¶r att utforska kopplingar",
-  "close": "StÃ¤ng",
-  "closeDrawer": "StÃ¤ng panelen",
+  "loading": "Laddar…",
+  "footerHint": "Sök produkter · Klicka på en produkt för detaljer",
+  "mobileFooterHint": "Tryck på en produkt för att utforska kopplingar",
+  "close": "Stäng",
+  "closeDrawer": "Stäng panelen",
   "noSelection": "Inget valt",
   "product": "Produkt",
   "featuredInPlays": "Produktgrupper",
   "description": "Beskrivning",
-  "valueProposition": "VÃ¤rdeerbjudande",
+  "valueProposition": "Värdeerbjudande",
   "competesWith": "Konkurrerar med",
-  "keyDifferentiators": "Viktiga sÃ¤rdrag",
-  "discoveryQuestions": "BehovsfrÃ¥gor",
-  "emptyPrompt": {"one": "VÃ¤lj en produkt fÃ¶r att markera dess korsfÃ¶rsÃ¤ljningskopplingar inom {n} produktgrupp.", "other": "VÃ¤lj en produkt fÃ¶r att markera dess korsfÃ¶rsÃ¤ljningskopplingar Ã¶ver de {n} produktgrupperna."},
+  "keyDifferentiators": "Viktiga särdrag",
+  "discoveryQuestions": "Behovsfrågor",
+  "emptyPrompt": {"one": "Välj en produkt för att markera dess korsförsäljningskopplingar inom {n} produktgrupp.", "other": "Välj en produkt för att markera dess korsförsäljningskopplingar över de {n} produktgrupperna."},
   "productsFound": {
    "one": "{n} produkt hittades",
    "other": "{n} produkter hittades"
@@ -43,972 +43,970 @@ window.I18N.sv = {
   "productsCount": {
    "one": "{n} produkt",
    "other": "{n} produkter"
-  },
- "viewMap": "Map view",
- "viewRadial": "Radial view"
+  }
  },
  "plays": {
   "1": { "name": "Automation & integration", "short": "Automation" },
   "3": { "name": "Observerbarhet & FinOps", "short": "Observerbarhet" },
-  "4": { "name": "SÃ¤kerhet & styrning", "short": "SÃ¤kerhet" },
+  "4": { "name": "Säkerhet & styrning", "short": "Säkerhet" },
   "2": { "name": "Data- & AI-plattform", "short": "Data & AI" },
   "5": { "name": "Infrastruktur & system", "short": "Infrastruktur" },
-  "6": { "name": "LagringslÃ¶sningar", "short": "Lagring" }
+  "6": { "name": "Lagringslösningar", "short": "Lagring" }
  },
  "categories": {
   "automation": "Automation & integration",
   "observability": "Observerbarhet & FinOps",
-  "security": "SÃ¤kerhet & styrning",
+  "security": "Säkerhet & styrning",
   "data_ai": "Data- & AI-plattform",
   "infrastructure": "Infrastruktur & system",
-  "storage": "LagringslÃ¶sningar"
+  "storage": "Lagringslösningar"
  },
  "products": {
   "api_connect": {
-   "desc": "Plattform fÃ¶r API-hantering i fÃ¶retagsklass fÃ¶r att skapa, sÃ¤kra och hantera API:er i hybridmolnmiljÃ¶er.",
-   "value": "MÃ¶jliggÃ¶r digital transformation genom API-baserad integration, minskar integrationstiden med 50 % och Ã¶kar utvecklarnas produktivitet.",
+   "desc": "Plattform för API-hantering i företagsklass för att skapa, säkra och hantera API:er i hybridmolnmiljöer.",
+   "value": "Möjliggör digital transformation genom API-baserad integration, minskar integrationstiden med 50 % och ökar utvecklarnas produktivitet.",
    "questions": [
-    "Har du flera applikationer som behÃ¶ver dela data?",
-    "Bygger du mobil- eller webbappar som behÃ¶ver backend-tjÃ¤nster?",
-    "BehÃ¶ver du tjÃ¤na pengar pÃ¥ dina data eller tjÃ¤nster via API:er?",
+    "Har du flera applikationer som behöver dela data?",
+    "Bygger du mobil- eller webbappar som behöver backend-tjänster?",
+    "Behöver du tjäna pengar på dina data eller tjänster via API:er?",
     "Har du problem med punkt-till-punkt-integrationer?"
    ],
    "differentiators": [
-    "Inbyggd DataPower-sÃ¤kerhet",
-    "Flexibel driftsÃ¤ttning i hybridmoln",
-    "Inbyggt stÃ¶d fÃ¶r Kubernetes",
+    "Inbyggd DataPower-säkerhet",
+    "Flexibel driftsättning i hybridmoln",
+    "Inbyggt stöd för Kubernetes",
     "Integrerad med IBM Cloud Pak"
    ]
   },
   "event_auto": {
-   "desc": "HÃ¤ndelsedriven automationsplattform fÃ¶r automatisering av affÃ¤rsprocesser och beslut i realtid.",
-   "value": "Minskar manuella ingrepp med 70 %, gÃ¶r det mÃ¶jligt att reagera i realtid pÃ¥ affÃ¤rshÃ¤ndelser och fÃ¶rbÃ¤ttrar den operativa effektiviteten.",
+   "desc": "Händelsedriven automationsplattform för automatisering av affärsprocesser och beslut i realtid.",
+   "value": "Minskar manuella ingrepp med 70 %, gör det möjligt att reagera i realtid på affärshändelser och förbättrar den operativa effektiviteten.",
    "questions": [
-    "Har du affÃ¤rsprocesser som krÃ¤ver svar i realtid?",
-    "Ã–vervakar du system manuellt fÃ¶r att fÃ¥nga hÃ¤ndelser?",
-    "BehÃ¶ver du automatisera arbetsflÃ¶den Ã¶ver flera system?",
-    "Vill du sÃ¤nka driftkostnaderna genom automatisering?"
+    "Har du affärsprocesser som kräver svar i realtid?",
+    "Övervakar du system manuellt för att fånga händelser?",
+    "Behöver du automatisera arbetsflöden över flera system?",
+    "Vill du sänka driftkostnaderna genom automatisering?"
    ],
    "differentiators": [
-    "Inbyggd regelmotor fÃ¶r affÃ¤rsregler",
-    "LÃ¥gkodsverktyg fÃ¶r arbetsflÃ¶den",
-    "Styrning i fÃ¶retagsklass",
+    "Inbyggd regelmotor för affärsregler",
+    "Lågkodsverktyg för arbetsflöden",
+    "Styrning i företagsklass",
     "Integrerad med IBM:s automationssvit"
    ]
   },
   "webmethods": {
-   "desc": "HeltÃ¤ckande integrationsplattform som kopplar samman applikationer, data och enheter i hybridmiljÃ¶er.",
-   "value": "Snabbar upp integrationsprojekt med 60 %, sÃ¤nker underhÃ¥llskostnaderna och ger en samlad Ã¶verblick Ã¶ver alla integrationer.",
+   "desc": "Heltäckande integrationsplattform som kopplar samman applikationer, data och enheter i hybridmiljöer.",
+   "value": "Snabbar upp integrationsprojekt med 60 %, sänker underhållskostnaderna och ger en samlad överblick över alla integrationer.",
    "questions": [
-    "Har du Ã¤ldre system som mÃ¥ste integreras med moderna applikationer?",
+    "Har du äldre system som måste integreras med moderna applikationer?",
     "Hanterar du flera olika integrationsverktyg?",
-    "BehÃ¶ver du funktioner fÃ¶r B2B-integration?",
+    "Behöver du funktioner för B2B-integration?",
     "Har du problem med datasynkronisering mellan system?"
    ],
    "differentiators": [
-    "Ã–ver 30 Ã¥rs integrationserfarenhet",
+    "Över 30 års integrationserfarenhet",
     "Starka B2B/EDI-funktioner",
     "Hybrid integrationsplattform",
-    "FÃ¤rdiga kopplingar fÃ¶r Ã¶ver 300 applikationer"
+    "Färdiga kopplingar för över 300 applikationer"
    ]
   },
   "terraform": {
-   "desc": "Verktyg fÃ¶r Infrastructure as Code som provisionerar och hanterar molninfrastruktur hos flera leverantÃ¶rer.",
-   "value": "Minskar tiden fÃ¶r infrastrukturdriftsÃ¤ttning med 80 %, sÃ¤kerstÃ¤ller konsekvens och mÃ¶jliggÃ¶r versionshantering av infrastruktur.",
+   "desc": "Verktyg för Infrastructure as Code som provisionerar och hanterar molninfrastruktur hos flera leverantörer.",
+   "value": "Minskar tiden för infrastrukturdriftsättning med 80 %, säkerställer konsekvens och möjliggör versionshantering av infrastruktur.",
    "questions": [
     "Provisionerar du molninfrastruktur manuellt?",
-    "BehÃ¶ver du hantera infrastruktur hos flera molnleverantÃ¶rer?",
-    "Vill du standardisera dina infrastrukturdriftsÃ¤ttningar?",
-    "BehÃ¶ver du spÃ¥ra infrastrukturfÃ¶rÃ¤ndringar Ã¶ver tid?"
+    "Behöver du hantera infrastruktur hos flera molnleverantörer?",
+    "Vill du standardisera dina infrastrukturdriftsättningar?",
+    "Behöver du spåra infrastrukturförändringar över tid?"
    ],
    "differentiators": [
-    "StÃ¶d fÃ¶r multimoln",
+    "Stöd för multimoln",
     "Deklarativ syntax",
     "Stort ekosystem av providers",
-    "Funktioner fÃ¶r state-hantering"
+    "Funktioner för state-hantering"
    ]
   },
   "concert": {
-   "desc": "AI-driven plattform fÃ¶r applikationshantering som ger samlad Ã¶verblick och kontroll i hybridmolnmiljÃ¶er.",
-   "value": "Minskar MTTR med 40 %, ger 360-graders Ã¶verblick Ã¶ver applikationer och automatiserar Ã¥tgÃ¤rder fÃ¶r vanliga problem.",
+   "desc": "AI-driven plattform för applikationshantering som ger samlad överblick och kontroll i hybridmolnmiljöer.",
+   "value": "Minskar MTTR med 40 %, ger 360-graders överblick över applikationer och automatiserar åtgärder för vanliga problem.",
    "questions": [
-    "Saknar du Ã¶verblick Ã¶ver ditt applikationslandskap?",
+    "Saknar du överblick över ditt applikationslandskap?",
     "Hanterar du applikationer i flera moln?",
-    "BehÃ¶ver du korta den genomsnittliga tiden till lÃ¶sning?",
+    "Behöver du korta den genomsnittliga tiden till lösning?",
     "Vill du automatisera uppgifter inom applikationshantering?"
    ],
    "differentiators": [
     "AI-drivna insikter",
-    "Samlad vy Ã¶ver hybridmolnet",
-    "Automatiserad felavhjÃ¤lpning",
-    "Integration med IBM:s verktyg fÃ¶r observerbarhet"
+    "Samlad vy över hybridmolnet",
+    "Automatiserad felavhjälpning",
+    "Integration med IBM:s verktyg för observerbarhet"
    ]
   },
   "maximo": {
-   "desc": "Plattform fÃ¶r Enterprise Asset Management som hanterar fysiska tillgÃ¥ngar, underhÃ¥ll och drift.",
-   "value": "Ã–kar tillgÃ¥ngarnas drifttid med 20 %, sÃ¤nker underhÃ¥llskostnaderna med 25 % och fÃ¶rlÃ¤nger tillgÃ¥ngarnas livscykel.",
+   "desc": "Plattform för Enterprise Asset Management som hanterar fysiska tillgångar, underhåll och drift.",
+   "value": "Ökar tillgångarnas drifttid med 20 %, sänker underhållskostnaderna med 25 % och förlänger tillgångarnas livscykel.",
    "questions": [
-    "FÃ¶rvaltar du fysiska tillgÃ¥ngar eller fastigheter?",
-    "FÃ¶ljer du upp underhÃ¥ll manuellt?",
-    "BehÃ¶ver du optimera tillgÃ¥ngarnas prestanda?",
-    "Vill du infÃ¶ra prediktivt underhÃ¥ll?"
+    "Förvaltar du fysiska tillgångar eller fastigheter?",
+    "Följer du upp underhåll manuellt?",
+    "Behöver du optimera tillgångarnas prestanda?",
+    "Vill du införa prediktivt underhåll?"
    ],
    "differentiators": [
-    "AI-drivet prediktivt underhÃ¥ll",
+    "AI-drivet prediktivt underhåll",
     "Mobile first-design",
     "IoT-integration",
     "Branschspecifika mallar"
    ]
   },
   "ibm_mq": {
-   "desc": "Meddelandeorienterad mellanprogramvara i fÃ¶retagsklass fÃ¶r tillfÃ¶rlitlig, asynkron meddelandehantering i hybridmiljÃ¶er. Garanterar meddelandeleverans fÃ¶r verksamhetskritiska applikationer i stordator-, moln- och lokala system.",
-   "value": "SÃ¤kerstÃ¤ller 99,99 % tillfÃ¶rlitlighet i meddelandeleveransen, minskar beroenden mellan applikationer och mÃ¶jliggÃ¶r realtidsintegration Ã¶ver plattformar som stordator och moln, med inbyggt transaktionsstÃ¶d.",
+   "desc": "Meddelandeorienterad mellanprogramvara i företagsklass för tillförlitlig, asynkron meddelandehantering i hybridmiljöer. Garanterar meddelandeleverans för verksamhetskritiska applikationer i stordator-, moln- och lokala system.",
+   "value": "Säkerställer 99,99 % tillförlitlighet i meddelandeleveransen, minskar beroenden mellan applikationer och möjliggör realtidsintegration över plattformar som stordator och moln, med inbyggt transaktionsstöd.",
    "questions": [
-    "Har du applikationer som behÃ¶ver garanterad, tillfÃ¶rlitlig meddelandehantering?",
-    "Integrerar du system mellan stordator- och molnmiljÃ¶er?",
-    "BehÃ¶ver du transaktionell meddelandehantering med leveransgarantier?",
-    "Bygger du hÃ¤ndelsedrivna arkitekturer som krÃ¤ver tillfÃ¶rlitlighet?"
+    "Har du applikationer som behöver garanterad, tillförlitlig meddelandehantering?",
+    "Integrerar du system mellan stordator- och molnmiljöer?",
+    "Behöver du transaktionell meddelandehantering med leveransgarantier?",
+    "Bygger du händelsedrivna arkitekturer som kräver tillförlitlighet?"
    ],
    "differentiators": [
-    "Garanterad leverans med fullt transaktionsstÃ¶d",
-    "Inbyggd stordatorintegration fÃ¶r IBM Z, Power och LinuxONE",
-    "Ã–ver 40 Ã¥rs tillfÃ¶rlitlig meddelandehantering fÃ¶r fÃ¶retag",
+    "Garanterad leverans med fullt transaktionsstöd",
+    "Inbyggd stordatorintegration för IBM Z, Power och LinuxONE",
+    "Över 40 års tillförlitlig meddelandehantering för företag",
     "Inbyggd brygga till Confluent Kafka via IBM MQ Kafka Connector"
    ]
   },
   "ibm_sterling": {
-   "desc": "HeltÃ¤ckande portfÃ¶lj fÃ¶r leveranskedja och B2B-integration som hanterar orderleverans, Ã¶verblick Ã¶ver leveranskedjan och partneranslutningar. Kombinerar orderhantering, insikter om leveranskedjan, B2B-integration och sÃ¤kert datautbyte i nÃ¤tverk av handelspartner.",
-   "value": "Snabbar upp B2B-integrationen med 70 %, minskar ordercykeltiden med 40 % och ger heltÃ¤ckande Ã¶verblick Ã¶ver leveranskedjan med realtidssamarbete med partner och AI-driven efterfrÃ¥geprognos.",
+   "desc": "Heltäckande portfölj för leveranskedja och B2B-integration som hanterar orderleverans, överblick över leveranskedjan och partneranslutningar. Kombinerar orderhantering, insikter om leveranskedjan, B2B-integration och säkert datautbyte i nätverk av handelspartner.",
+   "value": "Snabbar upp B2B-integrationen med 70 %, minskar ordercykeltiden med 40 % och ger heltäckande överblick över leveranskedjan med realtidssamarbete med partner och AI-driven efterfrågeprognos.",
    "questions": [
-    "BehÃ¶ver du integrera med flera B2B-handelspartner eller leverantÃ¶rer?",
+    "Behöver du integrera med flera B2B-handelspartner eller leverantörer?",
     "Vill du optimera processerna order-to-cash eller procure-to-pay?",
-    "BehÃ¶ver du Ã¶verblick i realtid Ã¶ver leveranskedjan hos dina partner?",
+    "Behöver du överblick i realtid över leveranskedjan hos dina partner?",
     "Hanterar du komplex orderleverans i flera kanaler?"
    ],
    "differentiators": [
-    "Byggd fÃ¶r B2B-integration och EDI med Ã¶ver 50 000 partneranslutningar",
-    "AI-drivna insikter om leveranskedjan och efterfrÃ¥geprognoser",
-    "SÃ¤ker proxy fÃ¶r datautbyte med partner med end-to-end-kryptering",
-    "Djup integration med IBM:s ekosystem fÃ¶r automation och data"
+    "Byggd för B2B-integration och EDI med över 50 000 partneranslutningar",
+    "AI-drivna insikter om leveranskedjan och efterfrågeprognoser",
+    "Säker proxy för datautbyte med partner med end-to-end-kryptering",
+    "Djup integration med IBM:s ekosystem för automation och data"
    ]
   },
   "instana": {
-   "desc": "Automatiserad Ã¶vervakning av applikationsprestanda med AI-drivna insikter fÃ¶r molnbaserade arkitekturer och mikrotjÃ¤nster.",
-   "value": "Minskar MTTD med 90 %, ger automatisk identifiering och Ã¶vervakning och levererar en sekunds upplÃ¶sning fÃ¶r felsÃ¶kning.",
+   "desc": "Automatiserad övervakning av applikationsprestanda med AI-drivna insikter för molnbaserade arkitekturer och mikrotjänster.",
+   "value": "Minskar MTTD med 90 %, ger automatisk identifiering och övervakning och levererar en sekunds upplösning för felsökning.",
    "questions": [
-    "Har du mikrotjÃ¤nster eller containerbaserade applikationer?",
-    "Har du svÃ¥rt att hitta prestandaflaskhalsar?",
-    "BehÃ¶ver du applikationsÃ¶vervakning i realtid?",
+    "Har du mikrotjänster eller containerbaserade applikationer?",
+    "Har du svårt att hitta prestandaflaskhalsar?",
+    "Behöver du applikationsövervakning i realtid?",
     "Har du ofta problem med dina applikationer?"
    ],
    "differentiators": [
-    "En sekunds upplÃ¶sning",
+    "En sekunds upplösning",
     "Automatisk identifiering",
     "Ingen manuell instrumentering",
-    "Byggd fÃ¶r Kubernetes"
+    "Byggd för Kubernetes"
    ]
   },
   "sevone": {
-   "desc": "Plattform fÃ¶r Ã¶vervakning och analys av nÃ¤tverksprestanda som hanterar komplexa nÃ¤tverksinfrastrukturer.",
-   "value": "FÃ¶rbÃ¤ttrar Ã¶verblicken Ã¶ver nÃ¤tverket med 95 %, minskar nÃ¤tverksincidenter med 40 % och mÃ¶jliggÃ¶r proaktiv kapacitetsplanering.",
+   "desc": "Plattform för övervakning och analys av nätverksprestanda som hanterar komplexa nätverksinfrastrukturer.",
+   "value": "Förbättrar överblicken över nätverket med 95 %, minskar nätverksincidenter med 40 % och möjliggör proaktiv kapacitetsplanering.",
    "questions": [
-    "Hanterar du en komplex nÃ¤tverksinfrastruktur?",
-    "Har du problem med nÃ¤tverksprestandan?",
-    "BehÃ¶ver du bÃ¤ttre insyn i nÃ¤tverkstrafiken?",
-    "Planerar du kapacitetsuppgraderingar i nÃ¤tverket?"
+    "Hanterar du en komplex nätverksinfrastruktur?",
+    "Har du problem med nätverksprestandan?",
+    "Behöver du bättre insyn i nätverkstrafiken?",
+    "Planerar du kapacitetsuppgraderingar i nätverket?"
    ],
    "differentiators": [
-    "Skalar till miljontals mÃ¤tvÃ¤rden",
+    "Skalar till miljontals mätvärden",
     "Analys i realtid",
-    "StÃ¶d fÃ¶r flera leverantÃ¶rer",
+    "Stöd för flera leverantörer",
     "Prediktiv kapacitetsplanering"
    ]
   },
   "turbonomic": {
-   "desc": "Plattform fÃ¶r resurshantering av applikationer som kontinuerligt optimerar resursfÃ¶rdelningen i realtid.",
-   "value": "SÃ¤nker molnkostnaderna med 30â€“50 %, fÃ¶rbÃ¤ttrar applikationsprestandan med 30 % och automatiserar resursoptimeringen.",
+   "desc": "Plattform för resurshantering av applikationer som kontinuerligt optimerar resursfördelningen i realtid.",
+   "value": "Sänker molnkostnaderna med 30–50 %, förbättrar applikationsprestandan med 30 % och automatiserar resursoptimeringen.",
    "questions": [
-    "Ã„r dina molnkostnader hÃ¶gre Ã¤n vÃ¤ntat?",
-    "Har du prestandaproblem pÃ¥ grund av resursbrist?",
+    "Är dina molnkostnader högre än väntat?",
+    "Har du prestandaproblem på grund av resursbrist?",
     "Dimensionerar du virtuella maskiner eller containrar manuellt?",
-    "BehÃ¶ver du optimera resursutnyttjandet?"
+    "Behöver du optimera resursutnyttjandet?"
    ],
    "differentiators": [
-    "Automatiserade Ã¥tgÃ¤rder i realtid",
+    "Automatiserade åtgärder i realtid",
     "Applikationsmedvetna beslut",
     "Optimering av hela stacken",
     "Bevisad ROI inom 30 dagar"
    ]
   },
   "apptio": {
-   "desc": "Plattform fÃ¶r Technology Business Management som styr och optimerar IT-utgifter och IT-investeringar.",
-   "value": "Ger full transparens i IT-kostnaderna, mÃ¶jliggÃ¶r datadrivna beslut och optimerar investeringarna i IT-portfÃ¶ljen.",
+   "desc": "Plattform för Technology Business Management som styr och optimerar IT-utgifter och IT-investeringar.",
+   "value": "Ger full transparens i IT-kostnaderna, möjliggör datadrivna beslut och optimerar investeringarna i IT-portföljen.",
    "questions": [
-    "KÃ¤nner du till dina verkliga IT-kostnader per tjÃ¤nst eller applikation?",
-    "Har du svÃ¥rt att motivera IT-utgifterna fÃ¶r verksamheten?",
-    "BehÃ¶ver du optimera din IT-budget?",
-    "Planerar du IT-investeringar utan tydlig Ã¶verblick Ã¶ver ROI?"
+    "Känner du till dina verkliga IT-kostnader per tjänst eller applikation?",
+    "Har du svårt att motivera IT-utgifterna för verksamheten?",
+    "Behöver du optimera din IT-budget?",
+    "Planerar du IT-investeringar utan tydlig överblick över ROI?"
    ],
    "differentiators": [
     "Branschledande TBM-plattform",
-    "FÃ¤rdiga kostnadsmodeller",
-    "Instrumentpaneler fÃ¶r ledningen",
-    "BeprÃ¶vad metodik"
+    "Färdiga kostnadsmodeller",
+    "Instrumentpaneler för ledningen",
+    "Beprövad metodik"
    ]
   },
   "cloudability": {
-   "desc": "Plattform fÃ¶r hantering och optimering av molnkostnader i multimolnmiljÃ¶er.",
-   "value": "Minskar slÃ¶seri i molnet med 30 %, mÃ¶jliggÃ¶r kostnadsfÃ¶rdelning och internfakturering samt prognoser fÃ¶r molnkostnader.",
+   "desc": "Plattform för hantering och optimering av molnkostnader i multimolnmiljöer.",
+   "value": "Minskar slöseri i molnet med 30 %, möjliggör kostnadsfördelning och internfakturering samt prognoser för molnkostnader.",
    "questions": [
-    "Ã–kar dina molnfakturor ovÃ¤ntat?",
-    "BehÃ¶ver du fÃ¶rdela molnkostnader pÃ¥ affÃ¤rsenheter?",
-    "AnvÃ¤nder du flera molnleverantÃ¶rer?",
-    "Har du oanvÃ¤nda eller underutnyttjade molnresurser?"
+    "Ökar dina molnfakturor oväntat?",
+    "Behöver du fördela molnkostnader på affärsenheter?",
+    "Använder du flera molnleverantörer?",
+    "Har du oanvända eller underutnyttjade molnresurser?"
    ],
    "differentiators": [
-    "StÃ¶d fÃ¶r multimoln",
+    "Stöd för multimoln",
     "Automatiserade rekommendationer",
-    "Funktioner fÃ¶r internfakturering",
+    "Funktioner för internfakturering",
     "Integration med Apptio TBM"
    ]
   },
   "guardium": {
-   "desc": "Plattform fÃ¶r datasÃ¤kerhet och dataskydd som identifierar, klassificerar och skyddar kÃ¤nsliga data.",
-   "value": "SÃ¤kerstÃ¤ller efterlevnad av dataregelverk, fÃ¶rhindrar dataintrÃ¥ng och ger fullstÃ¤ndig Ã¶vervakning av all dataaktivitet.",
+   "desc": "Plattform för datasäkerhet och dataskydd som identifierar, klassificerar och skyddar känsliga data.",
+   "value": "Säkerställer efterlevnad av dataregelverk, förhindrar dataintrång och ger fullständig övervakning av all dataaktivitet.",
    "questions": [
-    "Lagrar du kÃ¤nsliga kund- eller finansiella data?",
+    "Lagrar du känsliga kund- eller finansiella data?",
     "Omfattas du av dataskyddsregler (GDPR, CCPA)?",
-    "Har du drabbats av sÃ¤kerhetsincidenter som rÃ¶r data?",
-    "BehÃ¶ver du Ã¶vervaka Ã¥tkomst och aktivitet i databaser?"
+    "Har du drabbats av säkerhetsincidenter som rör data?",
+    "Behöver du övervaka åtkomst och aktivitet i databaser?"
    ],
    "differentiators": [
-    "Ã–vervakning i realtid",
+    "Övervakning i realtid",
     "Automatiserad efterlevnadsrapportering",
     "Identifiering och klassificering av data",
-    "StÃ¶d fÃ¶r Ã¶ver 25 databastyper"
+    "Stöd för över 25 databastyper"
    ]
   },
   "verify": {
-   "desc": "Plattform fÃ¶r identitets- och Ã¥tkomsthantering som sÃ¤krar autentisering och behÃ¶righet fÃ¶r anvÃ¤ndare.",
-   "value": "Minskar sÃ¤kerhetsriskerna med 60 %, fÃ¶rbÃ¤ttrar anvÃ¤ndarupplevelsen med SSO och sÃ¤kerstÃ¤ller efterlevnad av Ã¥tkomstpolicyer.",
+   "desc": "Plattform för identitets- och åtkomsthantering som säkrar autentisering och behörighet för användare.",
+   "value": "Minskar säkerhetsriskerna med 60 %, förbättrar användarupplevelsen med SSO och säkerställer efterlevnad av åtkomstpolicyer.",
    "questions": [
-    "Loggar anvÃ¤ndarna in i flera applikationer med olika lÃ¶senord?",
-    "Ã„r du orolig fÃ¶r obehÃ¶rig Ã¥tkomst?",
-    "BehÃ¶ver du flerfaktorsautentisering?",
-    "Hanterar du anvÃ¤ndarbehÃ¶righeter manuellt?"
+    "Loggar användarna in i flera applikationer med olika lösenord?",
+    "Är du orolig för obehörig åtkomst?",
+    "Behöver du flerfaktorsautentisering?",
+    "Hanterar du användarbehörigheter manuellt?"
    ],
    "differentiators": [
     "Riskbaserad autentisering",
-    "Adaptiv Ã¥tkomstkontroll",
-    "StÃ¶d fÃ¶r hybridmoln",
+    "Adaptiv åtkomstkontroll",
+    "Stöd för hybridmoln",
     "FIDO2-certifiering"
    ]
   },
   "vault": {
-   "desc": "Plattform fÃ¶r hemlighetshantering som sÃ¤krar, lagrar och styr Ã¥tkomsten till tokens, lÃ¶senord och certifikat.",
-   "value": "Eliminerar hÃ¥rdkodade hemligheter, ger centraliserad hemlighetshantering och mÃ¶jliggÃ¶r automatisk rotation av hemligheter.",
+   "desc": "Plattform för hemlighetshantering som säkrar, lagrar och styr åtkomsten till tokens, lösenord och certifikat.",
+   "value": "Eliminerar hårdkodade hemligheter, ger centraliserad hemlighetshantering och möjliggör automatisk rotation av hemligheter.",
    "questions": [
     "Lagras inloggningsuppgifter i kod eller konfigurationsfiler?",
-    "BehÃ¶ver du hantera API-nycklar och certifikat?",
-    "Ã„r du orolig fÃ¶r att hemligheter sprids okontrollerat?",
-    "BehÃ¶ver du rotera hemligheter regelbundet?"
+    "Behöver du hantera API-nycklar och certifikat?",
+    "Är du orolig för att hemligheter sprids okontrollerat?",
+    "Behöver du rotera hemligheter regelbundet?"
    ],
    "differentiators": [
     "Dynamisk generering av hemligheter",
     "Automatisk rotation",
     "Granskningsloggar",
-    "StÃ¶d fÃ¶r multimoln"
+    "Stöd för multimoln"
    ]
   },
   "wxai": {
-   "desc": "AI-studio i fÃ¶retagsklass fÃ¶r att trÃ¤na, validera och driftsÃ¤tta grundmodeller och maskininlÃ¤rningsmodeller.",
-   "value": "Snabbar upp AI-utvecklingen med 70 %, sÃ¤nker kostnaderna fÃ¶r modelltrÃ¤ning och mÃ¶jliggÃ¶r ansvarsfull AI-styrning.",
+   "desc": "AI-studio i företagsklass för att träna, validera och driftsätta grundmodeller och maskininlärningsmodeller.",
+   "value": "Snabbar upp AI-utvecklingen med 70 %, sänker kostnaderna för modellträning och möjliggör ansvarsfull AI-styrning.",
    "questions": [
     "Vill du bygga AI-applikationer?",
-    "BehÃ¶ver du trÃ¤na egna AI-modeller?",
-    "Ã„r du orolig fÃ¶r partiskhet och fÃ¶rklarbarhet i AI?",
-    "Vill du anvÃ¤nda grundmodeller i dina anvÃ¤ndningsfall?"
+    "Behöver du träna egna AI-modeller?",
+    "Är du orolig för partiskhet och förklarbarhet i AI?",
+    "Vill du använda grundmodeller i dina användningsfall?"
    ],
    "differentiators": [
-    "Grundmodeller fÃ¶r fÃ¶retag",
+    "Grundmodeller för företag",
     "Inbyggd AI-styrning",
-    "Hybrid driftsÃ¤ttning",
-    "Kompatibel med Ã¶ppen kÃ¤llkod"
+    "Hybrid driftsättning",
+    "Kompatibel med öppen källkod"
    ]
   },
   "wxdata": {
-   "desc": "Ã–ppen lakehouse-plattform fÃ¶r Ã¥tkomst till och delning av data i hybridmolnmiljÃ¶er.",
-   "value": "SÃ¤nker kostnaderna fÃ¶r datalager med 50 %, mÃ¶jliggÃ¶r frÃ¥gor mot flera datakÃ¤llor och ger en Ã¶ppen dataarkitektur.",
+   "desc": "Öppen lakehouse-plattform för åtkomst till och delning av data i hybridmolnmiljöer.",
+   "value": "Sänker kostnaderna för datalager med 50 %, möjliggör frågor mot flera datakällor och ger en öppen dataarkitektur.",
    "questions": [
     "Hanterar du data i flera silor?",
-    "Ã„r kostnaderna fÃ¶r ditt datalager fÃ¶r hÃ¶ga?",
-    "BehÃ¶ver du stÃ¤lla frÃ¥gor mot data i olika lagringssystem?",
+    "Är kostnaderna för ditt datalager för höga?",
+    "Behöver du ställa frågor mot data i olika lagringssystem?",
     "Vill du modernisera din dataarkitektur?"
    ],
    "differentiators": [
-    "Ã–ppen lakehouse-arkitektur",
-    "FrÃ¥gor mot flera kÃ¤llor",
-    "StÃ¶d fÃ¶r hybridmoln",
+    "Öppen lakehouse-arkitektur",
+    "Frågor mot flera källor",
+    "Stöd för hybridmoln",
     "Kostnadseffektiv lagring"
    ]
   },
   "wxdi": {
-   "desc": "AI-driven plattform fÃ¶r datakatalog och datastyrning som hjÃ¤lper dig att hitta, fÃ¶rstÃ¥ och hantera fÃ¶retagets data.",
-   "value": "Minskar tiden fÃ¶r att hitta data med 80 %, fÃ¶rbÃ¤ttrar datakvaliteten och sÃ¤kerstÃ¤ller regelefterlevnad och dataspÃ¥rbarhet.",
+   "desc": "AI-driven plattform för datakatalog och datastyrning som hjälper dig att hitta, förstå och hantera företagets data.",
+   "value": "Minskar tiden för att hitta data med 80 %, förbättrar datakvaliteten och säkerställer regelefterlevnad och dataspårbarhet.",
    "questions": [
-    "Har anvÃ¤ndarna svÃ¥rt att hitta de data de behÃ¶ver?",
-    "Ã„r datakvaliteten ett problem?",
-    "BehÃ¶ver du spÃ¥ra var dina data kommer ifrÃ¥n och hur de flÃ¶dar?",
-    "Omfattas du av regelverk fÃ¶r datastyrning?"
+    "Har användarna svårt att hitta de data de behöver?",
+    "Är datakvaliteten ett problem?",
+    "Behöver du spåra var dina data kommer ifrån och hur de flödar?",
+    "Omfattas du av regelverk för datastyrning?"
    ],
    "differentiators": [
     "AI-driven identifiering",
     "Automatiserad datakvalitet",
-    "SpÃ¥rbarhet hela vÃ¤gen",
+    "Spårbarhet hela vägen",
     "Integrerad styrning"
    ]
   },
   "wxdint": {
-   "desc": "Plattform fÃ¶r dataintegration som flyttar och transformerar data i hybridmolnmiljÃ¶er.",
-   "value": "Snabbar upp dataintegrationen med 60 %, stÃ¶der bearbetning i realtid och i batch och erbjuder funktioner fÃ¶r datakvalitet.",
+   "desc": "Plattform för dataintegration som flyttar och transformerar data i hybridmolnmiljöer.",
+   "value": "Snabbar upp dataintegrationen med 60 %, stöder bearbetning i realtid och i batch och erbjuder funktioner för datakvalitet.",
    "questions": [
-    "BehÃ¶ver du regelbundet flytta data mellan system?",
+    "Behöver du regelbundet flytta data mellan system?",
     "Transformerar du data manuellt?",
-    "BehÃ¶ver du dataintegration i realtid?",
-    "PÃ¥verkar problem med datakvaliteten din verksamhet?"
+    "Behöver du dataintegration i realtid?",
+    "Påverkar problem med datakvaliteten din verksamhet?"
    ],
    "differentiators": [
     "Integration i hybridmoln",
     "Realtid och batch",
     "Inbyggd datakvalitet",
-    "LÃ¥gkodsgrÃ¤nssnitt"
+    "Lågkodsgränssnitt"
    ]
   },
   "wxgov": {
-   "desc": "Plattform fÃ¶r AI-styrning som hanterar AI-modellers livscykel, sÃ¤kerstÃ¤ller regelefterlevnad och Ã¶vervakar modellernas prestanda.",
-   "value": "SÃ¤kerstÃ¤ller AI-efterlevnad och etik, minskar AI-risker och ger full transparens i AI-modellerna.",
+   "desc": "Plattform för AI-styrning som hanterar AI-modellers livscykel, säkerställer regelefterlevnad och övervakar modellernas prestanda.",
+   "value": "Säkerställer AI-efterlevnad och etik, minskar AI-risker och ger full transparens i AI-modellerna.",
    "questions": [
-    "DriftsÃ¤tter du AI-modeller i produktion?",
-    "BehÃ¶ver du sÃ¤kerstÃ¤lla rÃ¤ttvisa och fÃ¶rklarbarhet i AI?",
-    "Ã„r du orolig fÃ¶r modelldrift i dina AI-modeller?",
-    "BehÃ¶ver du fÃ¶lja AI-regelverk?"
+    "Driftsätter du AI-modeller i produktion?",
+    "Behöver du säkerställa rättvisa och förklarbarhet i AI?",
+    "Är du orolig för modelldrift i dina AI-modeller?",
+    "Behöver du följa AI-regelverk?"
    ],
    "differentiators": [
     "Hela AI-livscykeln",
-    "UpptÃ¤ckt av partiskhet",
-    "ModellÃ¶vervakning",
+    "Upptäckt av partiskhet",
+    "Modellövervakning",
     "Regelefterlevnad"
    ]
   },
   "wxorch": {
-   "desc": "AI-driven automationsplattform fÃ¶r att bygga och driftsÃ¤tta intelligenta arbetsflÃ¶den och digitala assistenter.",
-   "value": "Automatiserar repetitiva uppgifter med 80 %, Ã¶kar medarbetarnas produktivitet och erbjuder konversationsbaserade AI-grÃ¤nssnitt.",
+   "desc": "AI-driven automationsplattform för att bygga och driftsätta intelligenta arbetsflöden och digitala assistenter.",
+   "value": "Automatiserar repetitiva uppgifter med 80 %, ökar medarbetarnas produktivitet och erbjuder konversationsbaserade AI-gränssnitt.",
    "questions": [
-    "LÃ¤gger medarbetarna tid pÃ¥ repetitiva uppgifter?",
+    "Lägger medarbetarna tid på repetitiva uppgifter?",
     "Vill du bygga chattbottar eller virtuella assistenter?",
-    "BehÃ¶ver du automatisera affÃ¤rsprocesser med AI?",
-    "Vill du Ã¶ka medarbetarnas produktivitet?"
+    "Behöver du automatisera affärsprocesser med AI?",
+    "Vill du öka medarbetarnas produktivitet?"
    ],
    "differentiators": [
     "AI-driven automation",
-    "GrÃ¤nssnitt med naturligt sprÃ¥k",
-    "FÃ¤rdiga skills",
-    "Integration i fÃ¶retagsmiljÃ¶n"
+    "Gränssnitt med naturligt språk",
+    "Färdiga skills",
+    "Integration i företagsmiljön"
    ]
   },
   "ibm_bob": {
-   "desc": "AI-parprogrammerare som snabbar upp mjukvaruutveckling, applikationsmodernisering och automationsskript i moderna och Ã¤ldre sprÃ¥k som Java, Python, RPG, COBOL och PL/SQL â€“ med agentiska funktioner som tar koden frÃ¥n design till produktion.",
-   "value": "Kortar utvecklingsuppgifter frÃ¥n veckor till timmar, och Premium Packages ger djup specialisering fÃ¶r modernisering av IBM i, Z och Java â€“ med inbyggd skanning efter hemligheter som flyttar in sÃ¤kerheten tidigt i kedjan redan frÃ¥n dag ett.",
+   "desc": "AI-parprogrammerare som snabbar upp mjukvaruutveckling, applikationsmodernisering och automationsskript i moderna och äldre språk som Java, Python, RPG, COBOL och PL/SQL – med agentiska funktioner som tar koden från design till produktion.",
+   "value": "Kortar utvecklingsuppgifter från veckor till timmar, och Premium Packages ger djup specialisering för modernisering av IBM i, Z och Java – med inbyggd skanning efter hemligheter som flyttar in säkerheten tidigt i kedjan redan från dag ett.",
    "questions": [
-    "LÃ¤gger utvecklarna fÃ¶r mycket tid pÃ¥ standardkod?",
+    "Lägger utvecklarna för mycket tid på standardkod?",
     "Vill du snabba upp applikationsutvecklingen?",
-    "KÃ¶r du Ã¤ldre RPG-, COBOL- eller PL/SQL-applikationer som behÃ¶ver moderniseras?",
-    "BehÃ¶ver du snabba upp utvecklingen av agenter och verktyg fÃ¶r watsonx Orchestrate?"
+    "Kör du äldre RPG-, COBOL- eller PL/SQL-applikationer som behöver moderniseras?",
+    "Behöver du snabba upp utvecklingen av agenter och verktyg för watsonx Orchestrate?"
    ],
    "differentiators": [
-    "Agentisk SDLC frÃ¥n design till produktion",
-    "Premium Packages fÃ¶r modernisering av IBM i, Z och Java",
-    "Inbyggd skanning efter hemligheter och sÃ¤ker kodning tidigt i kedjan",
-    "Djup kunskap om Ã¤ldre sprÃ¥k som RPG, COBOL och PL/SQL"
+    "Agentisk SDLC från design till produktion",
+    "Premium Packages för modernisering av IBM i, Z och Java",
+    "Inbyggd skanning efter hemligheter och säker kodning tidigt i kedjan",
+    "Djup kunskap om äldre språk som RPG, COBOL och PL/SQL"
    ]
   },
   "confluent": {
-   "desc": "Kafka-baserad streamingplattform i fÃ¶retagsklass, tillgÃ¤nglig som Confluent Cloud eller sjÃ¤lvhanterad, som fungerar som realtidsryggrad fÃ¶r data i IBM:s lÃ¶sningar fÃ¶r hybridintegration, data och AI samt stordatormodernisering.",
-   "value": "Fungerar som den universella streamingryggraden som kopplar samman IBM:s plattformar fÃ¶r integration, infrastruktur och AI â€“ den Ã¶verbryggar MQ-baserad Ã¤ldre meddelandehantering till Kafka-hÃ¤ndelsestrÃ¶mmar i realtid, matar watsonx-pipelines och mÃ¶jliggÃ¶r hÃ¤ndelsedriven automation i fÃ¶retagsskala.",
+   "desc": "Kafka-baserad streamingplattform i företagsklass, tillgänglig som Confluent Cloud eller självhanterad, som fungerar som realtidsryggrad för data i IBM:s lösningar för hybridintegration, data och AI samt stordatormodernisering.",
+   "value": "Fungerar som den universella streamingryggraden som kopplar samman IBM:s plattformar för integration, infrastruktur och AI – den överbryggar MQ-baserad äldre meddelandehantering till Kafka-händelseströmmar i realtid, matar watsonx-pipelines och möjliggör händelsedriven automation i företagsskala.",
    "questions": [
-    "BehÃ¶ver du bearbeta data i realtid?",
-    "Bygger du hÃ¤ndelsedrivna arkitekturer?",
-    "Har du flera system som kontinuerligt behÃ¶ver dela data?",
+    "Behöver du bearbeta data i realtid?",
+    "Bygger du händelsedrivna arkitekturer?",
+    "Har du flera system som kontinuerligt behöver dela data?",
     "Har du flaskhalsar i dina datapipelines?",
-    "KÃ¶r du IBM MQ och vill ta steget till streamingarkitekturer i realtid?",
-    "BehÃ¶ver du strÃ¶mma data frÃ¥n IBM Z eller stordatorsystem till molnbaserade applikationer?"
+    "Kör du IBM MQ och vill ta steget till streamingarkitekturer i realtid?",
+    "Behöver du strömma data från IBM Z eller stordatorsystem till molnbaserade applikationer?"
    ],
    "differentiators": [
-    "Strategiskt IBM-partnerskap â€“ certifierat fÃ¶r hybridmoln och IBM:s integrationsstack",
-    "MQ-brygga â€“ kopplar IBM MQ:s Ã¤ldre meddelandehantering direkt till Kafka-hÃ¤ndelsestrÃ¶mmar",
-    "Matar pipelines fÃ¶r watsonx.ai och watsonx.data med strÃ¶mmande data i realtid",
-    "Hela Kafka-ekosystemet med fÃ¶retagssupport, RBAC och Schema Registry"
+    "Strategiskt IBM-partnerskap – certifierat för hybridmoln och IBM:s integrationsstack",
+    "MQ-brygga – kopplar IBM MQ:s äldre meddelandehantering direkt till Kafka-händelseströmmar",
+    "Matar pipelines för watsonx.ai och watsonx.data med strömmande data i realtid",
+    "Hela Kafka-ekosystemet med företagssupport, RBAC och Schema Registry"
    ]
   },
   "ibm_pa": {
-   "desc": "AI-driven plattform fÃ¶r finansiell planering och analys med sjÃ¤lvbetjÃ¤ning fÃ¶r budgetering, prognoser och scenariomodellering. GÃ¶r det mÃ¶jligt fÃ¶r ekonomiteam att konsolidera data, bygga dynamiska modeller och samarbeta kring finansiell planering i hela fÃ¶retaget med en minnesbaserad berÃ¤kningsmotor.",
-   "value": "Kortar planeringscykeln med 60 %, fÃ¶rbÃ¤ttrar prognosprecisionen med 30 % och ger ekonomiteam analys med sjÃ¤lvbetjÃ¤ning och AI-driven scenariomodellering â€“ utan beroende av kalkylblad, i fÃ¶retagsskala.",
+   "desc": "AI-driven plattform för finansiell planering och analys med självbetjäning för budgetering, prognoser och scenariomodellering. Gör det möjligt för ekonomiteam att konsolidera data, bygga dynamiska modeller och samarbeta kring finansiell planering i hela företaget med en minnesbaserad beräkningsmotor.",
+   "value": "Kortar planeringscykeln med 60 %, förbättrar prognosprecisionen med 30 % och ger ekonomiteam analys med självbetjäning och AI-driven scenariomodellering – utan beroende av kalkylblad, i företagsskala.",
    "questions": [
-    "Ã„r din budget- och prognosprocess manuell eller baserad pÃ¥ kalkylblad?",
-    "BehÃ¶ver du bÃ¤ttre samarbete mellan ekonomi och affÃ¤rsenheterna?",
+    "Är din budget- och prognosprocess manuell eller baserad på kalkylblad?",
+    "Behöver du bättre samarbete mellan ekonomi och affärsenheterna?",
     "Har du problem med prognosprecisionen eller hastigheten i scenarioplaneringen?",
-    "BehÃ¶ver du konsolidera finansiella data frÃ¥n flera kÃ¤llsystem?"
+    "Behöver du konsolidera finansiella data från flera källsystem?"
    ],
    "differentiators": [
-    "Minnesbaserad berÃ¤kningsmotor TM1 fÃ¶r omedelbar flerdimensionell modellering",
+    "Minnesbaserad beräkningsmotor TM1 för omedelbar flerdimensionell modellering",
     "AI-drivna prognoser och avvikelsedetektering",
-    "SjÃ¤lvbetjÃ¤ning fÃ¶r ekonomiteam med modellbygge utan kod",
-    "Djup integration med IBM:s ekosystem fÃ¶r watsonx-data och analys"
+    "Självbetjäning för ekonomiteam med modellbygge utan kod",
+    "Djup integration med IBM:s ekosystem för watsonx-data och analys"
    ]
   },
   "linuxone": {
-   "desc": "Linux-serverplattform i fÃ¶retagsklass som levererar sÃ¤kerhet, skalbarhet och tillfÃ¶rlitlighet fÃ¶r verksamhetskritiska arbetslaster.",
-   "value": "Minskar infrastrukturens fotavtryck med 75 %, ger 99,999 % tillgÃ¤nglighet och levererar branschledande sÃ¤kerhet.",
+   "desc": "Linux-serverplattform i företagsklass som levererar säkerhet, skalbarhet och tillförlitlighet för verksamhetskritiska arbetslaster.",
+   "value": "Minskar infrastrukturens fotavtryck med 75 %, ger 99,999 % tillgänglighet och levererar branschledande säkerhet.",
    "questions": [
     "Har du verksamhetskritiska Linux-arbetslaster?",
-    "Ã„r du orolig fÃ¶r sÃ¤kerhet och regelefterlevnad?",
-    "BehÃ¶ver du konsolidera Linux-servrar?",
+    "Är du orolig för säkerhet och regelefterlevnad?",
+    "Behöver du konsolidera Linux-servrar?",
     "Vill du minska fotavtrycket i datacentret?"
    ],
    "differentiators": [
-    "HÃ¶gsta sÃ¤kerhetscertifiering",
-    "Mycket hÃ¶g konsolideringsgrad",
-    "GenomgÃ¥ende kryptering",
-    "99,999 % tillgÃ¤nglighet"
+    "Högsta säkerhetscertifiering",
+    "Mycket hög konsolideringsgrad",
+    "Genomgående kryptering",
+    "99,999 % tillgänglighet"
    ]
   },
   "power": {
-   "desc": "Serverplattform i fÃ¶retagsklass, optimerad fÃ¶r dataintensiva arbetslaster, AI och hybridmoln.",
-   "value": "Levererar 2â€“3 gÃ¥nger bÃ¤ttre prestanda per kÃ¤rna, sÃ¤nker TCO med 40 % och erbjuder inbyggd virtualisering.",
+   "desc": "Serverplattform i företagsklass, optimerad för dataintensiva arbetslaster, AI och hybridmoln.",
+   "value": "Levererar 2–3 gånger bättre prestanda per kärna, sänker TCO med 40 % och erbjuder inbyggd virtualisering.",
    "questions": [
-    "KÃ¶r du SAP, Oracle eller andra affÃ¤rssystem?",
-    "SÃ¶ker du bÃ¤ttre prestanda fÃ¶r AI-arbetslaster?",
-    "BehÃ¶ver du hÃ¶g tillgÃ¤nglighet fÃ¶r kritiska applikationer?",
-    "Ã„r du orolig fÃ¶r licenskostnaderna pÃ¥ x86?"
+    "Kör du SAP, Oracle eller andra affärssystem?",
+    "Söker du bättre prestanda för AI-arbetslaster?",
+    "Behöver du hög tillgänglighet för kritiska applikationer?",
+    "Är du orolig för licenskostnaderna på x86?"
    ],
    "differentiators": [
-    "Ã–verlÃ¤gsen prestanda per kÃ¤rna",
+    "Överlägsen prestanda per kärna",
     "Inbyggd AI-acceleration",
     "Live Partition Mobility",
-    "LÃ¤gre kostnader fÃ¶r programvarulicenser"
+    "Lägre kostnader för programvarulicenser"
    ]
   },
   "aix": {
-   "desc": "Unix-operativsystem i fÃ¶retagsklass fÃ¶r Power Systems med avancerade funktioner fÃ¶r virtualisering och sÃ¤kerhet.",
-   "value": "Ger 99,999 % drifttid, mÃ¶jliggÃ¶r Live Partition Mobility och levererar Ã¶verlÃ¤gsen hantering av arbetslaster.",
+   "desc": "Unix-operativsystem i företagsklass för Power Systems med avancerade funktioner för virtualisering och säkerhet.",
+   "value": "Ger 99,999 % drifttid, möjliggör Live Partition Mobility och levererar överlägsen hantering av arbetslaster.",
    "questions": [
-    "KÃ¶r du Unix-arbetslaster?",
-    "BehÃ¶ver du avancerade virtualiseringsfunktioner?",
-    "SÃ¶ker du ett stabilt och sÃ¤kert operativsystem fÃ¶r kritiska arbetslaster?",
-    "BehÃ¶ver du minimera planerade driftstopp?"
+    "Kör du Unix-arbetslaster?",
+    "Behöver du avancerade virtualiseringsfunktioner?",
+    "Söker du ett stabilt och säkert operativsystem för kritiska arbetslaster?",
+    "Behöver du minimera planerade driftstopp?"
    ],
    "differentiators": [
-    "Ã–ver 40 Ã¥rs stabilitet",
+    "Över 40 års stabilitet",
     "Live Partition Mobility",
     "Arbetslastpartitioner",
-    "BinÃ¤rkompatibilitet"
+    "Binärkompatibilitet"
    ]
   },
   "ibmi": {
-   "desc": "Integrerat operativsystem fÃ¶r Power Systems med inbyggd databas och sÃ¤kerhet fÃ¶r affÃ¤rsapplikationer.",
-   "value": "Minskar den administrativa bÃ¶rdan med 60 %, ger integrerad sÃ¤kerhet och sÃ¤kerstÃ¤ller kontinuitet i verksamheten.",
+   "desc": "Integrerat operativsystem för Power Systems med inbyggd databas och säkerhet för affärsapplikationer.",
+   "value": "Minskar den administrativa bördan med 60 %, ger integrerad säkerhet och säkerställer kontinuitet i verksamheten.",
    "questions": [
-    "KÃ¶r du affÃ¤rskritiska applikationer?",
-    "Vill du modernisera Ã¤ldre applikationer?",
-    "BehÃ¶ver du integrerade databasfunktioner?",
-    "Ã„r du orolig fÃ¶r sÃ¤kerhet och regelefterlevnad?"
+    "Kör du affärskritiska applikationer?",
+    "Vill du modernisera äldre applikationer?",
+    "Behöver du integrerade databasfunktioner?",
+    "Är du orolig för säkerhet och regelefterlevnad?"
    ],
    "differentiators": [
     "Integrerad databas",
     "Objektbaserad arkitektur",
-    "Automatisk sÃ¤kerhet",
+    "Automatisk säkerhet",
     "Uppgraderingar utan driftstopp"
    ]
   },
   "linux_power": {
-   "desc": "Linux-distributioner i fÃ¶retagsklass, optimerade fÃ¶r arkitekturen i Power Systems.",
-   "value": "Levererar Ã¶verlÃ¤gsen prestanda fÃ¶r Linux-arbetslaster, mÃ¶jliggÃ¶r smidig molnintegration och ger support i fÃ¶retagsklass.",
+   "desc": "Linux-distributioner i företagsklass, optimerade för arkitekturen i Power Systems.",
+   "value": "Levererar överlägsen prestanda för Linux-arbetslaster, möjliggör smidig molnintegration och ger support i företagsklass.",
    "questions": [
-    "KÃ¶r du Linux-arbetslaster som behÃ¶ver bÃ¤ttre prestanda?",
+    "Kör du Linux-arbetslaster som behöver bättre prestanda?",
     "Vill du konsolidera din Linux-infrastruktur?",
-    "BehÃ¶ver du Linux-support i fÃ¶retagsklass?",
-    "KÃ¶r du containerbaserade arbetslaster?"
+    "Behöver du Linux-support i företagsklass?",
+    "Kör du containerbaserade arbetslaster?"
    ],
    "differentiators": [
-    "Ã–verlÃ¤gsen prestanda",
-    "BÃ¤ttre konsolidering",
-    "Support i fÃ¶retagsklass",
-    "Optimerad fÃ¶r containrar"
+    "Överlägsen prestanda",
+    "Bättre konsolidering",
+    "Support i företagsklass",
+    "Optimerad för containrar"
    ]
   },
   "ibm_tls": {
-   "desc": "HeltÃ¤ckande tjÃ¤nst fÃ¶r underhÃ¥ll och support av hÃ¥rd- och mjukvara samt migrering vid end-of-life. Hanterar hela livscykeln fÃ¶r IBM-system och system frÃ¥n flera leverantÃ¶rer, frÃ¥n driftsÃ¤ttning till avveckling â€“ inklusive proaktiv support, patchhantering, uppgraderingar och planerade teknikskiften.",
-   "value": "Minskar oplanerade driftstopp med 95 %, ger fÃ¶rutsÃ¤gbara livscykelkostnader fÃ¶r infrastrukturen och sÃ¤kerstÃ¤ller smidiga teknikskiften utan driftavbrott â€“ med branschledande SLA:er och proaktiva diagnosfunktioner.",
+   "desc": "Heltäckande tjänst för underhåll och support av hård- och mjukvara samt migrering vid end-of-life. Hanterar hela livscykeln för IBM-system och system från flera leverantörer, från driftsättning till avveckling – inklusive proaktiv support, patchhantering, uppgraderingar och planerade teknikskiften.",
+   "value": "Minskar oplanerade driftstopp med 95 %, ger förutsägbara livscykelkostnader för infrastrukturen och säkerställer smidiga teknikskiften utan driftavbrott – med branschledande SLA:er och proaktiva diagnosfunktioner.",
    "questions": [
-    "Ã„r du orolig fÃ¶r supporten nÃ¤r kritiska IBM-system nÃ¥r end-of-life?",
-    "BehÃ¶ver du fÃ¶rutsÃ¤gbar livscykelhantering till fast kostnad fÃ¶r din infrastruktur?",
-    "Planerar du uppgraderingar av hÃ¥rd- eller mjukvara och behÃ¶ver stÃ¶d vid migreringen?",
-    "Hanterar du miljÃ¶er med flera leverantÃ¶rer som behÃ¶ver en enda supportleverantÃ¶r?"
+    "Är du orolig för supporten när kritiska IBM-system når end-of-life?",
+    "Behöver du förutsägbar livscykelhantering till fast kostnad för din infrastruktur?",
+    "Planerar du uppgraderingar av hård- eller mjukvara och behöver stöd vid migreringen?",
+    "Hanterar du miljöer med flera leverantörer som behöver en enda supportleverantör?"
    ],
    "differentiators": [
-    "Proaktiv diagnostik och prediktivt fÃ¶rebyggande av problem",
-    "En kontaktpunkt fÃ¶r miljÃ¶er med IBM och tredjepartsleverantÃ¶rer",
+    "Proaktiv diagnostik och prediktivt förebyggande av problem",
+    "En kontaktpunkt för miljöer med IBM och tredjepartsleverantörer",
     "Smidig planering av migrering vid end-of-life utan driftavbrott",
     "Levereras av Arrow med lokal expertis och IBM-certifierade tekniker"
    ]
   },
   "flashsystem": {
-   "desc": "All-flash-lagringssystem som levererar hÃ¶g prestanda, tillfÃ¶rlitlighet och effektivitet fÃ¶r arbetslaster i fÃ¶retagsklass.",
-   "value": "Levererar latens under en millisekund, minskar lagringens fotavtryck med 80 % och ger 99,9999 % tillgÃ¤nglighet.",
+   "desc": "All-flash-lagringssystem som levererar hög prestanda, tillförlitlighet och effektivitet för arbetslaster i företagsklass.",
+   "value": "Levererar latens under en millisekund, minskar lagringens fotavtryck med 80 % och ger 99,9999 % tillgänglighet.",
    "questions": [
-    "Har du prestandakÃ¤nsliga applikationer?",
-    "HÃ¥ller lagringskapaciteten pÃ¥ att ta slut?",
-    "BehÃ¶ver du sÃ¤nka lagringskostnaderna?",
-    "Ã„r du orolig fÃ¶r lagringens tillfÃ¶rlitlighet?"
+    "Har du prestandakänsliga applikationer?",
+    "Håller lagringskapaciteten på att ta slut?",
+    "Behöver du sänka lagringskostnaderna?",
+    "Är du orolig för lagringens tillförlitlighet?"
    ],
    "differentiators": [
     "Latens under en millisekund",
-    "99,9999 % tillgÃ¤nglighet",
-    "Garanti fÃ¶r datareduktion",
+    "99,9999 % tillgänglighet",
+    "Garanti för datareduktion",
     "Cyberresiliens"
    ]
   },
   "storage_control": {
-   "desc": "Programvara fÃ¶r lagringshantering som Ã¶vervakar, hanterar och optimerar lagringsinfrastrukturen.",
-   "value": "Ger samlad lagringshantering, minskar administrationstiden fÃ¶r lagring med 50 % och mÃ¶jliggÃ¶r proaktiv problemlÃ¶sning.",
+   "desc": "Programvara för lagringshantering som övervakar, hanterar och optimerar lagringsinfrastrukturen.",
+   "value": "Ger samlad lagringshantering, minskar administrationstiden för lagring med 50 % och möjliggör proaktiv problemlösning.",
    "questions": [
     "Hanterar du flera lagringssystem?",
-    "LÃ¤gger du fÃ¶r mycket tid pÃ¥ lagringsadministration?",
-    "BehÃ¶ver du bÃ¤ttre insyn i lagringsprestandan?",
+    "Lägger du för mycket tid på lagringsadministration?",
+    "Behöver du bättre insyn i lagringsprestandan?",
     "Har du problem med lagringen?"
    ],
    "differentiators": [
-    "StÃ¶d fÃ¶r flera leverantÃ¶rer",
+    "Stöd för flera leverantörer",
     "Samlad hantering",
-    "Proaktiv Ã¶vervakning",
+    "Proaktiv övervakning",
     "Automatiserad provisionering"
    ]
   },
   "storage_insights": {
-   "desc": "Molnbaserad plattform fÃ¶r Ã¶vervakning och analys av lagring som optimerar lagringsinfrastrukturen.",
-   "value": "Ger prediktiv analys, minskar lagringsincidenter med 40 % och mÃ¶jliggÃ¶r kapacitetsplanering.",
+   "desc": "Molnbaserad plattform för övervakning och analys av lagring som optimerar lagringsinfrastrukturen.",
+   "value": "Ger prediktiv analys, minskar lagringsincidenter med 40 % och möjliggör kapacitetsplanering.",
    "questions": [
-    "BehÃ¶ver du bÃ¤ttre insikt i lagringsutnyttjandet?",
+    "Behöver du bättre insikt i lagringsutnyttjandet?",
     "Planerar du kapacitetsuppgraderingar av lagringen?",
-    "Vill du fÃ¶rutse lagringsproblem innan de uppstÃ¥r?",
-    "Hanterar du lagring pÃ¥ flera platser?"
+    "Vill du förutse lagringsproblem innan de uppstår?",
+    "Hanterar du lagring på flera platser?"
    ],
    "differentiators": [
     "Prediktiv analys",
     "Molnbaserad SaaS",
-    "Ã–verblick Ã¶ver flera platser",
+    "Överblick över flera platser",
     "Kapacitetsprognoser"
    ]
   },
   "storage_virt": {
-   "desc": "Programvara fÃ¶r lagringsvirtualisering som samlar och hanterar heterogena lagringsresurser.",
-   "value": "SÃ¤nker lagringskostnaderna med 30 %, mÃ¶jliggÃ¶r datamigrering utan avbrott och ger samlad hantering.",
+   "desc": "Programvara för lagringsvirtualisering som samlar och hanterar heterogena lagringsresurser.",
+   "value": "Sänker lagringskostnaderna med 30 %, möjliggör datamigrering utan avbrott och ger samlad hantering.",
    "questions": [
-    "Har du lagring frÃ¥n flera leverantÃ¶rer?",
-    "BehÃ¶ver du migrera data utan driftstopp?",
+    "Har du lagring från flera leverantörer?",
+    "Behöver du migrera data utan driftstopp?",
     "Vill du optimera lagringsutnyttjandet?",
-    "BehÃ¶ver du nivÃ¥indela data mellan olika lagringstyper?"
+    "Behöver du nivåindela data mellan olika lagringstyper?"
    ],
    "differentiators": [
-    "StÃ¶d fÃ¶r flera leverantÃ¶rer",
+    "Stöd för flera leverantörer",
     "Migrering utan avbrott",
-    "Automatisk nivÃ¥indelning",
-    "StÃ¶d fÃ¶r block och fil"
+    "Automatisk nivåindelning",
+    "Stöd för block och fil"
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion â€“ containernativt bestÃ¤ndigt lagringslager fÃ¶r Red Hat OpenShift och Kubernetes-miljÃ¶er. Obs: detta Ã¤r lagringsprogramvaran, skild frÃ¥n IBM Fusion HCI, som Ã¤r den separata hyperkonvergerade infrastrukturplattformen som anvÃ¤nder Storage Fusion som lagringskomponent.",
-   "value": "FÃ¶renklar bestÃ¤ndig lagring fÃ¶r containerbaserade arbetslaster, ger datamobilitet mellan OpenShift-kluster och integreras direkt med IBM Fusion HCI till en komplett konvergerad infrastrukturstack.",
+   "desc": "IBM Storage Fusion – containernativt beständigt lagringslager för Red Hat OpenShift och Kubernetes-miljöer. Obs: detta är lagringsprogramvaran, skild från IBM Fusion HCI, som är den separata hyperkonvergerade infrastrukturplattformen som använder Storage Fusion som lagringskomponent.",
+   "value": "Förenklar beständig lagring för containerbaserade arbetslaster, ger datamobilitet mellan OpenShift-kluster och integreras direkt med IBM Fusion HCI till en komplett konvergerad infrastrukturstack.",
    "questions": [
-    "KÃ¶r du containerbaserade applikationer?",
-    "BehÃ¶ver du bestÃ¤ndig lagring fÃ¶r Kubernetes?",
-    "AnvÃ¤nder du Red Hat OpenShift?",
-    "BehÃ¶ver du flytta data mellan containermiljÃ¶er?"
+    "Kör du containerbaserade applikationer?",
+    "Behöver du beständig lagring för Kubernetes?",
+    "Använder du Red Hat OpenShift?",
+    "Behöver du flytta data mellan containermiljöer?"
    ],
    "differentiators": [
     "OpenShift-nativ",
     "Datamobilitet",
-    "FÃ¶renklad hantering",
-    "Support i fÃ¶retagsklass"
+    "Förenklad hantering",
+    "Support i företagsklass"
    ]
   },
   "storage_ceph": {
-   "desc": "Mjukvarudefinierad lagringsplattform med Ã¶ppen kÃ¤llkod fÃ¶r objekt-, block- och fillagring.",
-   "value": "SÃ¤nker lagringskostnaderna med 50 %, ger skalbar lagring och eliminerar leverantÃ¶rsinlÃ¥sning.",
+   "desc": "Mjukvarudefinierad lagringsplattform med öppen källkod för objekt-, block- och fillagring.",
+   "value": "Sänker lagringskostnaderna med 50 %, ger skalbar lagring och eliminerar leverantörsinlåsning.",
    "questions": [
-    "SÃ¶ker du kostnadseffektiv lagring?",
-    "BehÃ¶ver du funktioner fÃ¶r objektlagring?",
+    "Söker du kostnadseffektiv lagring?",
+    "Behöver du funktioner för objektlagring?",
     "Bygger du ett privat moln?",
-    "Vill du undvika leverantÃ¶rsinlÃ¥sning?"
+    "Vill du undvika leverantörsinlåsning?"
    ],
    "differentiators": [
-    "Ã–ppen kÃ¤llkod",
-    "Ingen leverantÃ¶rsinlÃ¥sning",
+    "Öppen källkod",
+    "Ingen leverantörsinlåsning",
     "Samlad lagring",
-    "SjÃ¤lvlÃ¤kande"
+    "Självläkande"
    ]
   },
   "storage_scale": {
-   "desc": "Parallellt filsystem med hÃ¶g prestanda fÃ¶r dataintensiva arbetslaster och AI-applikationer.",
-   "value": "Ger 10 gÃ¥nger snabbare dataÃ¥tkomst, mÃ¶jliggÃ¶r global datadelning och klarar extremt stor skala.",
+   "desc": "Parallellt filsystem med hög prestanda för dataintensiva arbetslaster och AI-applikationer.",
+   "value": "Ger 10 gånger snabbare dataåtkomst, möjliggör global datadelning och klarar extremt stor skala.",
    "questions": [
     "Har du dataintensiva arbetslaster?",
-    "KÃ¶r du trÃ¤ningsjobb fÃ¶r AI/ML?",
-    "BehÃ¶ver du dela data mellan flera platser?",
+    "Kör du träningsjobb för AI/ML?",
+    "Behöver du dela data mellan flera platser?",
     "Har du prestandaproblem i filsystemet?"
    ],
    "differentiators": [
-    "BeprÃ¶vad i exaskala",
+    "Beprövad i exaskala",
     "Global namnrymd",
     "Active File Management",
-    "Optimerad fÃ¶r AI"
+    "Optimerad för AI"
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite â€“ plattform fÃ¶r hÃ¥llbarhets- och ESG-styrning som fÃ¶ljer upp data om energi, koldioxid, vatten och avfall och tar fram hÃ¥llbarhetsrapporter enligt regelverk.",
-   "value": "Automatiserar insamlingen av ESG-data frÃ¥n anlÃ¤ggningar och leveranskedjor, minskar arbetet med hÃ¥llbarhetsrapportering med ~70 % och mÃ¶jliggÃ¶r efterlevnad av ramverken GRI, SASB, TCFD och CSRD.",
+   "desc": "IBM Envizi ESG Suite – plattform för hållbarhets- och ESG-styrning som följer upp data om energi, koldioxid, vatten och avfall och tar fram hållbarhetsrapporter enligt regelverk.",
+   "value": "Automatiserar insamlingen av ESG-data från anläggningar och leveranskedjor, minskar arbetet med hållbarhetsrapportering med ~70 % och möjliggör efterlevnad av ramverken GRI, SASB, TCFD och CSRD.",
    "questions": [
-    "Har du svÃ¥rt att samla in och konsolidera ESG-data frÃ¥n dina anlÃ¤ggningar och din leveranskedja?",
-    "BehÃ¶ver du ta fram hÃ¥llbarhetsrapporter enligt regelverk som CSRD eller TCFD?",
-    "FÃ¶rsÃ¶ker du fÃ¶lja upp och minska koldioxidutslÃ¤ppen i din verksamhet?",
-    "Har du hÃ¥llbarhetsmÃ¥l men saknar den datainsyn som krÃ¤vs fÃ¶r att mÃ¤ta framstegen?"
+    "Har du svårt att samla in och konsolidera ESG-data från dina anläggningar och din leveranskedja?",
+    "Behöver du ta fram hållbarhetsrapporter enligt regelverk som CSRD eller TCFD?",
+    "Försöker du följa upp och minska koldioxidutsläppen i din verksamhet?",
+    "Har du hållbarhetsmål men saknar den datainsyn som krävs för att mäta framstegen?"
    ],
    "differentiators": [
-    "FÃ¤rdig integration med Maximo fÃ¶r drift- och tillgÃ¥ngsdata",
-    "Inbyggda ramverk fÃ¶r regulatorisk rapportering â€“ GRI, SASB, TCFD, CSRD",
-    "AI-stÃ¶dd datakvalitet och avvikelsedetektering",
+    "Färdig integration med Maximo för drift- och tillgångsdata",
+    "Inbyggda ramverk för regulatorisk rapportering – GRI, SASB, TCFD, CSRD",
+    "AI-stödd datakvalitet och avvikelsedetektering",
     "Molnbaserad SaaS med snabb nytta"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite â€“ omfattar kravhantering (DOORS Next), hantering av utvecklingsflÃ¶den (EWM), testhantering (ETM) och modellbaserad utveckling (Rhapsody) fÃ¶r sÃ¤kerhetskritiska och reglerade branscher.",
-   "value": "Ger spÃ¥rbarhet hela vÃ¤gen frÃ¥n krav via design och utveckling till test â€“ minskar omarbete i reglerade program och stÃ¶der efterlevnad av ISO 26262, DO-178C och IEC 61508.",
+   "desc": "IBM Engineering Lifecycle Management Suite – omfattar kravhantering (DOORS Next), hantering av utvecklingsflöden (EWM), testhantering (ETM) och modellbaserad utveckling (Rhapsody) för säkerhetskritiska och reglerade branscher.",
+   "value": "Ger spårbarhet hela vägen från krav via design och utveckling till test – minskar omarbete i reglerade program och stöder efterlevnad av ISO 26262, DO-178C och IEC 61508.",
    "questions": [
-    "BehÃ¶ver du full spÃ¥rbarhet frÃ¥n krav till test i sÃ¤kerhetskritiska program?",
-    "Utvecklar du produkter som mÃ¥ste uppfylla regelverk fÃ¶r flyg, fordon eller medicintekniska produkter?",
-    "Orsakar tekniska Ã¤ndringsbegÃ¤randen omarbete och fÃ¶rseningar?",
-    "Hanterar du krav Ã¶ver flera team eller organisationer?"
+    "Behöver du full spårbarhet från krav till test i säkerhetskritiska program?",
+    "Utvecklar du produkter som måste uppfylla regelverk för flyg, fordon eller medicintekniska produkter?",
+    "Orsakar tekniska ändringsbegäranden omarbete och förseningar?",
+    "Hanterar du krav över flera team eller organisationer?"
    ],
    "differentiators": [
-    "Komplett ALM-svit frÃ¥n en leverantÃ¶r â€“ krav, arbetsflÃ¶den, test och modellering",
-    "Djupt stÃ¶d fÃ¶r efterlevnad av ISO 26262, DO-178C, IEC 61508 och FDA 21 CFR Part 11",
-    "Inbyggd AI-integration med IBM Bob fÃ¶r AI-stÃ¶dda krav och kodgenerering",
-    "IBM:s mest etablerade utvecklingsplattform med Ã¶ver 30 Ã¥r i reglerade branscher"
+    "Komplett ALM-svit från en leverantör – krav, arbetsflöden, test och modellering",
+    "Djupt stöd för efterlevnad av ISO 26262, DO-178C, IEC 61508 och FDA 21 CFR Part 11",
+    "Inbyggd AI-integration med IBM Bob för AI-stödda krav och kodgenerering",
+    "IBM:s mest etablerade utvecklingsplattform med över 30 år i reglerade branscher"
    ]
   },
   "app_connect": {
-   "desc": "IBM App Connect â€“ integrationsplattform med lÃ¥g kod/ingen kod som kopplar samman applikationer och automatiserar arbetsflÃ¶den med Ã¶ver 200 fÃ¤rdiga kopplingar, tillgÃ¤nglig som App Connect Professional och App Connect Enterprise.",
-   "value": "GÃ¶r det mÃ¶jligt fÃ¶r verksamhetsanvÃ¤ndare och utvecklare att bygga integrationer pÃ¥ timmar i stÃ¤llet fÃ¶r veckor â€“ och snabbar upp den digitala transformationen utan djup integrationsexpertis.",
+   "desc": "IBM App Connect – integrationsplattform med låg kod/ingen kod som kopplar samman applikationer och automatiserar arbetsflöden med över 200 färdiga kopplingar, tillgänglig som App Connect Professional och App Connect Enterprise.",
+   "value": "Gör det möjligt för verksamhetsanvändare och utvecklare att bygga integrationer på timmar i stället för veckor – och snabbar upp den digitala transformationen utan djup integrationsexpertis.",
    "questions": [
-    "BehÃ¶ver verksamheten koppla samman SaaS-applikationer utan att skriva kod?",
+    "Behöver verksamheten koppla samman SaaS-applikationer utan att skriva kod?",
     "Vill du minska beroendet av specialiserade integrationsutvecklare?",
-    "BehÃ¶ver du snabbt fÃ¥ integrationer pÃ¥ plats mellan moln- och lokala applikationer?",
-    "Hanterar du fÃ¶r mÃ¥nga punkt-till-punkt-kopplingar mellan system?"
+    "Behöver du snabbt få integrationer på plats mellan moln- och lokala applikationer?",
+    "Hanterar du för många punkt-till-punkt-kopplingar mellan system?"
    ],
    "differentiators": [
-    "Ã–ver 200 fÃ¤rdiga kopplingar fÃ¶r SaaS-, moln- och lokala applikationer",
-    "BÃ¥de lÃ¥g kod och full kod â€“ App Connect Professional och Enterprise",
-    "SÃ¤kerhet, styrning och granskningsspÃ¥r i fÃ¶retagsklass",
-    "DriftsÃ¤ttning direkt i IBM Cloud eller lokalt"
+    "Över 200 färdiga kopplingar för SaaS-, moln- och lokala applikationer",
+    "Både låg kod och full kod – App Connect Professional och Enterprise",
+    "Säkerhet, styrning och granskningsspår i företagsklass",
+    "Driftsättning direkt i IBM Cloud eller lokalt"
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera â€“ plattform fÃ¶r hÃ¶ghastighetsÃ¶verfÃ¶ring av stora filer och datamÃ¤ngder med det patenterade protokollet FASP, utformad fÃ¶r att flytta mycket stora filer Ã¶ver lÃ¥nga avstÃ¥nd i nÃ¤ra linjehastighet oavsett nÃ¤tverksfÃ¶rhÃ¥llanden.",
-   "value": "Ã–verfÃ¶r filer upp till 100 gÃ¥nger snabbare Ã¤n vanlig TCP/FTP Ã¶ver nÃ¤tverk med hÃ¶g latens eller paketfÃ¶rlust â€“ avgÃ¶rande fÃ¶r media, genomik, life science och alla flÃ¶den med filer pÃ¥ flera gigabyte.",
+   "desc": "IBM Aspera – plattform för höghastighetsöverföring av stora filer och datamängder med det patenterade protokollet FASP, utformad för att flytta mycket stora filer över långa avstånd i nära linjehastighet oavsett nätverksförhållanden.",
+   "value": "Överför filer upp till 100 gånger snabbare än vanlig TCP/FTP över nätverk med hög latens eller paketförlust – avgörande för media, genomik, life science och alla flöden med filer på flera gigabyte.",
    "questions": [
-    "Tar stora filÃ¶verfÃ¶ringar Ã¶ver WAN timmar eller dagar nÃ¤r de borde ta minuter?",
-    "Distribuerar du stora media-, genom- eller datafiler till partner eller platser runt om i vÃ¤rlden?",
-    "Bromsar lÃ¥ngsamma uppladdningar dina pipelines fÃ¶r datainmatning eller migrering?",
-    "BehÃ¶ver du sÃ¤kra, spÃ¥rbara Ã¶verfÃ¶ringar av stora filer med leveransgarantier?"
+    "Tar stora filöverföringar över WAN timmar eller dagar när de borde ta minuter?",
+    "Distribuerar du stora media-, genom- eller datafiler till partner eller platser runt om i världen?",
+    "Bromsar långsamma uppladdningar dina pipelines för datainmatning eller migrering?",
+    "Behöver du säkra, spårbara överföringar av stora filer med leveransgarantier?"
    ],
    "differentiators": [
-    "Patenterat FASP-protokoll ger Ã¶verfÃ¶ringar i nÃ¤ra linjehastighet oavsett latens eller paketfÃ¶rlust",
-    "AES-256-kryptering hela vÃ¤gen med fullstÃ¤ndigt granskningsspÃ¥r fÃ¶r Ã¶verfÃ¶ringar",
-    "Stark nÃ¤rvaro inom media och underhÃ¥llning, life science och genomik",
-    "Inbyggd integration med IBM Cloud och hybrid driftsÃ¤ttning lokalt/i molnet"
+    "Patenterat FASP-protokoll ger överföringar i nära linjehastighet oavsett latens eller paketförlust",
+    "AES-256-kryptering hela vägen med fullständigt granskningsspår för överföringar",
+    "Stark närvaro inom media och underhållning, life science och genomik",
+    "Inbyggd integration med IBM Cloud och hybrid driftsättning lokalt/i molnet"
    ]
   },
   "kubecost": {
-   "desc": "IBM Kubecost â€“ plattform fÃ¶r Ã¶vervakning och optimering av Kubernetes-kostnader som ger realtidsinsyn i utgifter per namnrymd, driftsÃ¤ttning, etikett och team i miljÃ¶er med flera kluster.",
-   "value": "Ger utvecklings- och ekonomiteam exakt kostnadsfÃ¶rdelning fÃ¶r Kubernetes och rekommendationer fÃ¶r rÃ¤tt dimensionering â€“ och minskar slÃ¶seriet i molnet genom att hitta inaktiva och Ã¶verdimensionerade arbetslaster pÃ¥ containernivÃ¥.",
+   "desc": "IBM Kubecost – plattform för övervakning och optimering av Kubernetes-kostnader som ger realtidsinsyn i utgifter per namnrymd, driftsättning, etikett och team i miljöer med flera kluster.",
+   "value": "Ger utvecklings- och ekonomiteam exakt kostnadsfördelning för Kubernetes och rekommendationer för rätt dimensionering – och minskar slöseriet i molnet genom att hitta inaktiva och överdimensionerade arbetslaster på containernivå.",
    "questions": [
     "Vet du exakt vad varje Kubernetes-arbetslast eller team kostar dig?",
-    "VÃ¤xer dina molnfakturor snabbare Ã¤n ditt Kubernetes-fotavtryck?",
-    "Kan du fÃ¶rdela containerkostnader korrekt pÃ¥ affÃ¤rsenheter fÃ¶r internfakturering?",
-    "Ã„r du sÃ¤ker pÃ¥ att dina Kubernetes-arbetslaster Ã¤r rÃ¤tt dimensionerade?"
+    "Växer dina molnfakturor snabbare än ditt Kubernetes-fotavtryck?",
+    "Kan du fördela containerkostnader korrekt på affärsenheter för internfakturering?",
+    "Är du säker på att dina Kubernetes-arbetslaster är rätt dimensionerade?"
    ],
    "differentiators": [
-    "Inbyggd kostnadsmodell fÃ¶r Kubernetes med upplÃ¶sning per pod och namnrymd",
-    "Grund i Ã¶ppen kÃ¤llkod med IBM:s fÃ¶retagssupport",
-    "Integreras med Prometheus fÃ¶r kostnadsdata kopplade till prestanda",
-    "FÃ¶rvÃ¤rvad av IBM och helt integrerad i IBM:s portfÃ¶lj fÃ¶r observerbarhet"
+    "Inbyggd kostnadsmodell för Kubernetes med upplösning per pod och namnrymd",
+    "Grund i öppen källkod med IBM:s företagssupport",
+    "Integreras med Prometheus för kostnadsdata kopplade till prestanda",
+    "Förvärvad av IBM och helt integrerad i IBM:s portfölj för observerbarhet"
    ]
   },
   "ns1": {
-   "desc": "IBM NS1 Connect â€“ plattform fÃ¶r intelligent DNS, trafikstyrning och nÃ¤tverksanslutning med auktoritativ DNS, avancerad routning, trafikstyrning och DDoS-tÃ¥lig infrastruktur.",
-   "value": "Ger globala DNS-svarstider under 10 ms med intelligent trafikstyrning â€“ minskar applikationsavbrott, fÃ¶rbÃ¤ttrar prestandan fÃ¶r anvÃ¤ndare Ã¶ver hela vÃ¤rlden och utgÃ¶r ett motstÃ¥ndskraftigt fÃ¶rsta fÃ¶rsvar i nÃ¤tverket.",
+   "desc": "IBM NS1 Connect – plattform för intelligent DNS, trafikstyrning och nätverksanslutning med auktoritativ DNS, avancerad routning, trafikstyrning och DDoS-tålig infrastruktur.",
+   "value": "Ger globala DNS-svarstider under 10 ms med intelligent trafikstyrning – minskar applikationsavbrott, förbättrar prestandan för användare över hela världen och utgör ett motståndskraftigt första försvar i nätverket.",
    "questions": [
-    "Orsakar DNS-fel eller lÃ¥ngsam namnupplÃ¶sning problem med applikationernas tillgÃ¤nglighet?",
-    "BehÃ¶ver du dirigera anvÃ¤ndare intelligent mellan flera datacenter eller molnregioner?",
-    "Ã„r du orolig fÃ¶r DDoS-attacker mot din DNS-infrastruktur?",
-    "BehÃ¶ver du detaljerad kontroll Ã¶ver hur trafiken fÃ¶rdelas globalt?"
+    "Orsakar DNS-fel eller långsam namnupplösning problem med applikationernas tillgänglighet?",
+    "Behöver du dirigera användare intelligent mellan flera datacenter eller molnregioner?",
+    "Är du orolig för DDoS-attacker mot din DNS-infrastruktur?",
+    "Behöver du detaljerad kontroll över hur trafiken fördelas globalt?"
    ],
    "differentiators": [
-    "Programmerbar DNS med filterkedjor fÃ¶r avancerad trafikstyrning",
+    "Programmerbar DNS med filterkedjor för avancerad trafikstyrning",
     "Trafikstyrning efter latens, geografi och ASN",
-    "Inbyggt DDoS-skydd och anycast-nÃ¤tverk",
-    "FÃ¶rvÃ¤rvad av IBM, med fÃ¶retagssupport och integration i hybridmoln"
+    "Inbyggt DDoS-skydd och anycast-nätverk",
+    "Förvärvad av IBM, med företagssupport och integration i hybridmoln"
    ]
   },
   "powervs": {
-   "desc": "IBM Power Virtual Server (PowerVS) â€“ molnbaserad Power-infrastruktur i IBM Cloud med samma Power-prestanda och IBM i / AIX-kompatibilitet som lokala Power Systems, levererad som en helt hanterad molntjÃ¤nst.",
-   "value": "GÃ¶r det mÃ¶jligt att utÃ¶ka eller migrera Power-arbetslaster till molnet utan att byta plattform â€“ med bibehÃ¥llen kompatibilitet fÃ¶r AIX- och IBM i-applikationer, samtidigt som du fÃ¥r molnets elasticitet och betalning efter anvÃ¤ndning.",
+   "desc": "IBM Power Virtual Server (PowerVS) – molnbaserad Power-infrastruktur i IBM Cloud med samma Power-prestanda och IBM i / AIX-kompatibilitet som lokala Power Systems, levererad som en helt hanterad molntjänst.",
+   "value": "Gör det möjligt att utöka eller migrera Power-arbetslaster till molnet utan att byta plattform – med bibehållen kompatibilitet för AIX- och IBM i-applikationer, samtidigt som du får molnets elasticitet och betalning efter användning.",
    "questions": [
     "Vill du minska ditt lokala Power-fotavtryck utan att flytta dina AIX- eller IBM i-applikationer till en ny plattform?",
-    "BehÃ¶ver du en molnbaserad lÃ¶sning fÃ¶r katastrofÃ¥terstÃ¤llning fÃ¶r din Power Systems-miljÃ¶?",
-    "Utforskar du hybridmolnsalternativ fÃ¶r dina IBM i- eller AIX-arbetslaster?",
+    "Behöver du en molnbaserad lösning för katastrofåterställning för din Power Systems-miljö?",
+    "Utforskar du hybridmolnsalternativ för dina IBM i- eller AIX-arbetslaster?",
     "Vill du skala Power-kapacitet vid behov utan kapitalinvesteringar?"
    ],
    "differentiators": [
-    "Enda molntjÃ¤nsten med inbyggd Power-prestanda och kompatibilitet med AIX och IBM i",
-    "Anslutning med lÃ¥g latens till IBM Cloud-tjÃ¤nster och watsonx",
-    "IBM-hanterad infrastruktur med SLA-garanterad tillgÃ¤nglighet",
-    "Inget plattformsbyte fÃ¶r applikationer â€“ flytta Power-arbetslaster till molnet som de Ã¤r"
+    "Enda molntjänsten med inbyggd Power-prestanda och kompatibilitet med AIX och IBM i",
+    "Anslutning med låg latens till IBM Cloud-tjänster och watsonx",
+    "IBM-hanterad infrastruktur med SLA-garanterad tillgänglighet",
+    "Inget plattformsbyte för applikationer – flytta Power-arbetslaster till molnet som de är"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (hyperkonvergerad infrastruktur) â€“ mjukvarudefinierad plattform fÃ¶r berÃ¤kning, lagring och nÃ¤tverk som kÃ¶r Red Hat OpenShift och IBM-arbetslaster pÃ¥ en konvergerad hÃ¥rdvarustack och fÃ¶renklar driften av datacentret fÃ¶r AI och hybridmoln.",
-   "value": "Minskar komplexiteten i datacentret genom att samla berÃ¤kning, lagring och nÃ¤tverk i en enda hanterad plattform â€“ kortar driftsÃ¤ttningstiden och ger en validerad grund med IBM-support fÃ¶r OpenShift- och AI-arbetslaster lokalt.",
+   "desc": "IBM Fusion HCI (hyperkonvergerad infrastruktur) – mjukvarudefinierad plattform för beräkning, lagring och nätverk som kör Red Hat OpenShift och IBM-arbetslaster på en konvergerad hårdvarustack och förenklar driften av datacentret för AI och hybridmoln.",
+   "value": "Minskar komplexiteten i datacentret genom att samla beräkning, lagring och nätverk i en enda hanterad plattform – kortar driftsättningstiden och ger en validerad grund med IBM-support för OpenShift- och AI-arbetslaster lokalt.",
    "questions": [
-    "Vill du fÃ¶renkla din lokala infrastruktur fÃ¶r OpenShift- eller AI-arbetslaster?",
-    "BehÃ¶ver du en validerad plattform frÃ¥n en enda leverantÃ¶r fÃ¶r Red Hat OpenShift?",
-    "Bromsar infrastrukturfÃ¶rvaltningen dina applikationsdriftsÃ¤ttningar?",
-    "BehÃ¶ver du en skalbar lokal plattform fÃ¶r AI-infrastruktur?"
+    "Vill du förenkla din lokala infrastruktur för OpenShift- eller AI-arbetslaster?",
+    "Behöver du en validerad plattform från en enda leverantör för Red Hat OpenShift?",
+    "Bromsar infrastrukturförvaltningen dina applikationsdriftsättningar?",
+    "Behöver du en skalbar lokal plattform för AI-infrastruktur?"
    ],
    "differentiators": [
-    "Byggd och validerad fÃ¶r Red Hat OpenShift och IBM-arbetslaster",
-    "Integreras med IBM Storage Fusion fÃ¶r containernativ bestÃ¤ndig lagring",
-    "IBM som enda leverantÃ¶r fÃ¶r berÃ¤kning, lagring, mjukvarustack och support",
-    "Optimerad fÃ¶r driftsÃ¤ttning av AI-infrastruktur lokalt"
+    "Byggd och validerad för Red Hat OpenShift och IBM-arbetslaster",
+    "Integreras med IBM Storage Fusion för containernativ beständig lagring",
+    "IBM som enda leverantör för beräkning, lagring, mjukvarustack och support",
+    "Optimerad för driftsättning av AI-infrastruktur lokalt"
    ]
   },
   "db2": {
-   "desc": "IBM Db2 â€“ relationsdatabashanterare i fÃ¶retagsklass, lokalt och i molnet, med hÃ¶gpresterande OLTP och analys, inbyggda AI-funktioner och direkt kompatibilitet med IBM Z, Power Systems och IBM i.",
-   "value": "Ger en pÃ¥litlig, hÃ¶gpresterande transaktionell datagrund fÃ¶r affÃ¤rsapplikationer â€“ med inbyggd AI-optimering av frÃ¥gor, direkt integration med watsonx.data och decennier av tillfÃ¶rlitlighet pÃ¥ IBM:s plattformar.",
+   "desc": "IBM Db2 – relationsdatabashanterare i företagsklass, lokalt och i molnet, med högpresterande OLTP och analys, inbyggda AI-funktioner och direkt kompatibilitet med IBM Z, Power Systems och IBM i.",
+   "value": "Ger en pålitlig, högpresterande transaktionell datagrund för affärsapplikationer – med inbyggd AI-optimering av frågor, direkt integration med watsonx.data och decennier av tillförlitlighet på IBM:s plattformar.",
    "questions": [
-    "Vill du sÃ¤nka licenskostnaderna fÃ¶r Oracle eller SQL Server utan att bygga om applikationerna?",
-    "BehÃ¶ver du en databas med bevisad prestanda pÃ¥ IBM Power- eller Z-plattformar?",
-    "Styr krav pÃ¥ datalokalisering eller datasuverÃ¤nitet ditt val av databasplattform?",
-    "BehÃ¶ver du en transaktionsdatabas som integreras direkt med din AI- och analysstack?"
+    "Vill du sänka licenskostnaderna för Oracle eller SQL Server utan att bygga om applikationerna?",
+    "Behöver du en databas med bevisad prestanda på IBM Power- eller Z-plattformar?",
+    "Styr krav på datalokalisering eller datasuveränitet ditt val av databasplattform?",
+    "Behöver du en transaktionsdatabas som integreras direkt med din AI- och analysstack?"
    ],
    "differentiators": [
-    "Inbyggd integration med IBM Z och Power Systems med hÃ¶gsta prestanda pÃ¥ IBM:s plattformar",
-    "Inbyggd AI-acceleration av frÃ¥gor och autonom optimering",
-    "Smidig federering till watsonx.data fÃ¶r hybridanalys",
-    "Starka verktyg fÃ¶r migrering frÃ¥n Oracle samt SQL-kompatibilitet"
+    "Inbyggd integration med IBM Z och Power Systems med högsta prestanda på IBM:s plattformar",
+    "Inbyggd AI-acceleration av frågor och autonom optimering",
+    "Smidig federering till watsonx.data för hybridanalys",
+    "Starka verktyg för migrering från Oracle samt SQL-kompatibilitet"
    ]
   },
   "cognos": {
-   "desc": "IBM Cognos Analytics â€“ AI-driven plattform fÃ¶r business intelligence och analys med sjÃ¤lvbetjÃ¤ning fÃ¶r rapporter, instrumentpaneler och datautforskning, med inbyggd styrning och datasÃ¤kerhet i fÃ¶retagsklass.",
-   "value": "Ger verksamhetsanvÃ¤ndare mÃ¶jlighet att skapa korrekta, styrda rapporter och instrumentpaneler utan att vara beroende av IT â€“ med AI-stÃ¶dd datafÃ¶rberedelse, frÃ¥gor pÃ¥ naturligt sprÃ¥k och inbyggd styrning i fÃ¶retagsklass.",
+   "desc": "IBM Cognos Analytics – AI-driven plattform för business intelligence och analys med självbetjäning för rapporter, instrumentpaneler och datautforskning, med inbyggd styrning och datasäkerhet i företagsklass.",
+   "value": "Ger verksamhetsanvändare möjlighet att skapa korrekta, styrda rapporter och instrumentpaneler utan att vara beroende av IT – med AI-stödd dataförberedelse, frågor på naturligt språk och inbyggd styrning i företagsklass.",
    "questions": [
-    "Ã„r verksamhetsanvÃ¤ndarna beroende av IT fÃ¶r varje rapport eller instrumentpanel?",
-    "Tar din organisation fortfarande fram kritiska rapporter frÃ¥n kalkylblad?",
-    "BehÃ¶ver du styrd analys med sjÃ¤lvbetjÃ¤ning som sÃ¤kerstÃ¤ller att data fÃ¶rblir korrekta och sÃ¤kra?",
-    "SÃ¶ker du BI-verktyg med stark integration mot IBM:s datakÃ¤llor?"
+    "Är verksamhetsanvändarna beroende av IT för varje rapport eller instrumentpanel?",
+    "Tar din organisation fortfarande fram kritiska rapporter från kalkylblad?",
+    "Behöver du styrd analys med självbetjäning som säkerställer att data förblir korrekta och säkra?",
+    "Söker du BI-verktyg med stark integration mot IBM:s datakällor?"
    ],
    "differentiators": [
-    "Inbyggt AI-stÃ¶d fÃ¶r rapportskapande och frÃ¥gor pÃ¥ naturligt sprÃ¥k",
-    "Styrning i fÃ¶retagsklass med rollbaserad Ã¥tkomst och dataspÃ¥rbarhet",
-    "Djup integration med IBM:s datakÃ¤llor som Db2, Planning Analytics och watsonx.data",
-    "Stark nÃ¤rvaro i reglerade branscher â€“ finans, vÃ¥rd och offentlig sektor"
+    "Inbyggt AI-stöd för rapportskapande och frågor på naturligt språk",
+    "Styrning i företagsklass med rollbaserad åtkomst och dataspårbarhet",
+    "Djup integration med IBM:s datakällor som Db2, Planning Analytics och watsonx.data",
+    "Stark närvaro i reglerade branscher – finans, vård och offentlig sektor"
    ]
   }
  },
  "competitors": {
   "ARM-based servers": "ARM-baserade servrar",
-  "AWS EC2 with migration services": "AWS EC2 med migreringstjÃ¤nster",
-  "On-premises retention": "BehÃ¥lla lokal drift",
+  "AWS EC2 with migration services": "AWS EC2 med migreringstjänster",
+  "On-premises retention": "Behålla lokal drift",
   "x86 Linux servers": "x86-servrar med Linux",
   "x86 servers": "x86-servrar"
  },
  "connections": {
-  "concert>api_connect": "Concert orkestrerar API-hanteringen fÃ¶r en samlad Ã¶verblick Ã¶ver applikationerna",
-  "concert>event_auto": "Concert automatiserar hÃ¤ndelsedrivna arbetsflÃ¶den mellan applikationer",
-  "concert>webmethods": "Concert integreras med webMethods fÃ¶r hantering av hybridintegration",
-  "concert>maximo": "Concert Ã¶vervakar och hanterar tillgÃ¥ngsfÃ¶rvaltningen i Maximo",
-  "api_connect>event_auto": "API Connect exponerar funktioner fÃ¶r hÃ¤ndelseautomation som hanterade API:er",
-  "api_connect>webmethods": "API Connect och webMethods erbjuder kompletterande integrationsmÃ¶nster",
-  "webmethods>event_auto": "webMethods utlÃ¶ser hÃ¤ndelseautomation fÃ¶r integration i realtid",
-  "maximo>event_auto": "Maximo anvÃ¤nder hÃ¤ndelseautomation fÃ¶r underhÃ¥llsflÃ¶den",
-  "maximo>api_connect": "Maximo exponerar tillgÃ¥ngsdata via API Connect",
-  "wxdata>wxai": "watsonx.data ger datagrunden fÃ¶r modellerna i watsonx.ai",
-  "wxdata>wxdi": "watsonx.data integreras med Data Intelligence fÃ¶r katalogisering",
-  "wxdata>wxdint": "watsonx.data anvÃ¤nder dataintegration fÃ¶r inmatningspipelines",
-  "wxdata>wxgov": "watsonx.data tillÃ¤mpar styrningspolicyer pÃ¥ datatillgÃ¥ngar",
-  "wxdata>confluent": "watsonx.data tar emot strÃ¶mmande data i realtid frÃ¥n Confluent",
+  "concert>api_connect": "Concert orkestrerar API-hanteringen för en samlad överblick över applikationerna",
+  "concert>event_auto": "Concert automatiserar händelsedrivna arbetsflöden mellan applikationer",
+  "concert>webmethods": "Concert integreras med webMethods för hantering av hybridintegration",
+  "concert>maximo": "Concert övervakar och hanterar tillgångsförvaltningen i Maximo",
+  "api_connect>event_auto": "API Connect exponerar funktioner för händelseautomation som hanterade API:er",
+  "api_connect>webmethods": "API Connect och webMethods erbjuder kompletterande integrationsmönster",
+  "webmethods>event_auto": "webMethods utlöser händelseautomation för integration i realtid",
+  "maximo>event_auto": "Maximo använder händelseautomation för underhållsflöden",
+  "maximo>api_connect": "Maximo exponerar tillgångsdata via API Connect",
+  "wxdata>wxai": "watsonx.data ger datagrunden för modellerna i watsonx.ai",
+  "wxdata>wxdi": "watsonx.data integreras med Data Intelligence för katalogisering",
+  "wxdata>wxdint": "watsonx.data använder dataintegration för inmatningspipelines",
+  "wxdata>wxgov": "watsonx.data tillämpar styrningspolicyer på datatillgångar",
+  "wxdata>confluent": "watsonx.data tar emot strömmande data i realtid från Confluent",
   "wxai>wxorch": "watsonx.ai driver intelligenta agenter i watsonx Orchestrate",
   "wxai>wxgov": "Modeller i watsonx.ai styrs via watsonx.governance",
-  "wxai>wxdi": "watsonx.ai anvÃ¤nder Data Intelligence fÃ¶r att hitta trÃ¤ningsdata till modeller",
-  "wxdi>wxdint": "Data Intelligence katalogiserar tillgÃ¥ngar frÃ¥n dataintegrationspipelines",
-  "wxdi>wxgov": "Data Intelligence tillÃ¤mpar styrningspolicyer pÃ¥ katalogiserade data",
-  "wxdint>confluent": "Dataintegrationen ansluter till Confluent fÃ¶r strÃ¶mmande datapipelines",
-  "wxorch>ibm_bob": "Orchestrate anvÃ¤nder IBM Bob fÃ¶r automatisk kodgenerering i arbetsflÃ¶den",
-  "wxorch>wxgov": "Orchestrate tillÃ¤mpar styrning pÃ¥ AI-agenter och arbetsflÃ¶den",
-  "confluent>event_auto": "Confluent strÃ¶mmar hÃ¤ndelser till Event Automation fÃ¶r bearbetning i realtid",
-  "confluent>api_connect": "API Connect exponerar strÃ¶mmande data frÃ¥n Confluent via hanterade API:er",
-  "confluent>wxorch": "Topics i Confluent Kafka utlÃ¶ser agenter i watsonx Orchestrate fÃ¶r hÃ¤ndelsedrivna AI-flÃ¶den i realtid",
-  "confluent>webmethods": "webMethods fÃ¶r in strÃ¶mmar frÃ¥n Confluent Kafka i hybrida integrationsflÃ¶den som kopplar samman Ã¤ldre och molnbaserade system",
-  "concert>instana": "Concert anvÃ¤nder Instana fÃ¶r Ã¶vervakning av applikationsprestanda",
-  "concert>turbonomic": "Concert anvÃ¤nder Turbonomic fÃ¶r resursoptimering",
-  "concert>apptio": "Concert levererar kostnadsdata till Apptio fÃ¶r ekonomistyrning",
-  "concert>sevone": "Concert integreras med SevOne fÃ¶r Ã¶vervakning av nÃ¤tverksprestanda",
-  "instana>turbonomic": "MÃ¤tvÃ¤rden frÃ¥n Instana styr optimeringsbesluten i Turbonomic",
-  "turbonomic>apptio": "Optimeringsdata frÃ¥n Turbonomic matar kostnadsanalysen i Apptio",
-  "turbonomic>cloudability": "Ã…tgÃ¤rder i Turbonomic ligger till grund fÃ¶r kostnadsrekommendationerna i Cloudability",
-  "apptio>cloudability": "Apptio och Cloudability ger en samlad FinOps-Ã¶verblick",
-  "guardium>verify": "Guardium skyddar data som nÃ¥s via identitetshanteringen i Verify",
-  "guardium>vault": "Guardium Ã¶vervakar hemligheter som hanteras av Vault",
-  "verify>vault": "Verify autentiserar Ã¥tkomsten till hemligheter i Vault",
-  "power>aix": "AIX Ã¤r Unix-operativsystemet i fÃ¶retagsklass fÃ¶r Power Systems",
-  "power>ibmi": "IBM i kÃ¶rs direkt pÃ¥ arkitekturen i Power Systems",
-  "power>linux_power": "Linux-distributioner optimerade fÃ¶r Power Systems",
-  "linuxone>linux_power": "LinuxONE och Power delar strategier fÃ¶r Linux-optimering",
+  "wxai>wxdi": "watsonx.ai använder Data Intelligence för att hitta träningsdata till modeller",
+  "wxdi>wxdint": "Data Intelligence katalogiserar tillgångar från dataintegrationspipelines",
+  "wxdi>wxgov": "Data Intelligence tillämpar styrningspolicyer på katalogiserade data",
+  "wxdint>confluent": "Dataintegrationen ansluter till Confluent för strömmande datapipelines",
+  "wxorch>ibm_bob": "Orchestrate använder IBM Bob för automatisk kodgenerering i arbetsflöden",
+  "wxorch>wxgov": "Orchestrate tillämpar styrning på AI-agenter och arbetsflöden",
+  "confluent>event_auto": "Confluent strömmar händelser till Event Automation för bearbetning i realtid",
+  "confluent>api_connect": "API Connect exponerar strömmande data från Confluent via hanterade API:er",
+  "confluent>wxorch": "Topics i Confluent Kafka utlöser agenter i watsonx Orchestrate för händelsedrivna AI-flöden i realtid",
+  "confluent>webmethods": "webMethods för in strömmar från Confluent Kafka i hybrida integrationsflöden som kopplar samman äldre och molnbaserade system",
+  "concert>instana": "Concert använder Instana för övervakning av applikationsprestanda",
+  "concert>turbonomic": "Concert använder Turbonomic för resursoptimering",
+  "concert>apptio": "Concert levererar kostnadsdata till Apptio för ekonomistyrning",
+  "concert>sevone": "Concert integreras med SevOne för övervakning av nätverksprestanda",
+  "instana>turbonomic": "Mätvärden från Instana styr optimeringsbesluten i Turbonomic",
+  "turbonomic>apptio": "Optimeringsdata från Turbonomic matar kostnadsanalysen i Apptio",
+  "turbonomic>cloudability": "Åtgärder i Turbonomic ligger till grund för kostnadsrekommendationerna i Cloudability",
+  "apptio>cloudability": "Apptio och Cloudability ger en samlad FinOps-överblick",
+  "guardium>verify": "Guardium skyddar data som nås via identitetshanteringen i Verify",
+  "guardium>vault": "Guardium övervakar hemligheter som hanteras av Vault",
+  "verify>vault": "Verify autentiserar åtkomsten till hemligheter i Vault",
+  "power>aix": "AIX är Unix-operativsystemet i företagsklass för Power Systems",
+  "power>ibmi": "IBM i körs direkt på arkitekturen i Power Systems",
+  "power>linux_power": "Linux-distributioner optimerade för Power Systems",
+  "linuxone>linux_power": "LinuxONE och Power delar strategier för Linux-optimering",
   "flashsystem>storage_control": "Storage Control hanterar FlashSystem-lagring",
-  "flashsystem>storage_insights": "Storage Insights Ã¶vervakar prestandan i FlashSystem",
+  "flashsystem>storage_insights": "Storage Insights övervakar prestandan i FlashSystem",
   "flashsystem>storage_virt": "Storage Virtualize samlar FlashSystem med annan lagring i gemensamma pooler",
-  "storage_control>storage_insights": "Storage Control anvÃ¤nder Insights fÃ¶r prediktiv analys",
+  "storage_control>storage_insights": "Storage Control använder Insights för prediktiv analys",
   "storage_control>storage_virt": "Storage Control hanterar virtualiserade lagringspooler",
-  "storage_insights>storage_virt": "Storage Insights Ã¶vervakar prestandan i virtualiserad lagring",
+  "storage_insights>storage_virt": "Storage Insights övervakar prestandan i virtualiserad lagring",
   "storage_scale>storage_ceph": "Storage Scale och Ceph ger kompletterande fil- och objektlagring",
-  "storage_scale>storage_fusion": "Storage Fusion anvÃ¤nder Storage Scale fÃ¶r containerlagring",
-  "storage_ceph>storage_fusion": "Storage Fusion anvÃ¤nder Ceph fÃ¶r objektlagring",
+  "storage_scale>storage_fusion": "Storage Fusion använder Storage Scale för containerlagring",
+  "storage_ceph>storage_fusion": "Storage Fusion använder Ceph för objektlagring",
   "wxorch>api_connect": "Agenter i Orchestrate anropar API:er som hanteras av API Connect",
-  "wxorch>event_auto": "Orchestrate utlÃ¶ser arbetsflÃ¶den fÃ¶r hÃ¤ndelseautomation",
-  "wxorch>webmethods": "Orchestrate integreras med webMethods fÃ¶r anslutning till fÃ¶retagets system",
-  "wxai>maximo": "watsonx.ai mÃ¶jliggÃ¶r prediktivt underhÃ¥ll i Maximo",
-  "ibm_bob>terraform": "IBM Bob genererar infrastrukturkod fÃ¶r Terraform",
-  "ibm_bob>ibmi": "IBM Bob Premium Package fÃ¶r IBM i moderniserar RPG och Ã¤ldre IBM i-applikationer",
-  "ibm_bob>linuxone": "IBM Bob Premium Package fÃ¶r Z snabbar upp moderniseringen av stordatorkod pÃ¥ LinuxONE",
-  "ibm_bob>aix": "IBM Bob snabbar upp moderniseringen av Ã¤ldre C- och C++-applikationer i Unix-arbetslaster pÃ¥ AIX",
+  "wxorch>event_auto": "Orchestrate utlöser arbetsflöden för händelseautomation",
+  "wxorch>webmethods": "Orchestrate integreras med webMethods för anslutning till företagets system",
+  "wxai>maximo": "watsonx.ai möjliggör prediktivt underhåll i Maximo",
+  "ibm_bob>terraform": "IBM Bob genererar infrastrukturkod för Terraform",
+  "ibm_bob>ibmi": "IBM Bob Premium Package för IBM i moderniserar RPG och äldre IBM i-applikationer",
+  "ibm_bob>linuxone": "IBM Bob Premium Package för Z snabbar upp moderniseringen av stordatorkod på LinuxONE",
+  "ibm_bob>aix": "IBM Bob snabbar upp moderniseringen av äldre C- och C++-applikationer i Unix-arbetslaster på AIX",
   "ibm_bob>wxgov": "Kod som genereras av IBM Bob granskas och styrs via watsonx.governance",
-  "ibm_bob>vault": "IBM Bob skannar kodbaser efter hÃ¥rdkodade hemligheter och skriver om koden sÃ¥ att den anvÃ¤nder Vault",
-  "ibm_bob>verify": "IBM Bob genererar sÃ¤ker integrationskod fÃ¶r autentisering, SSO och MFA i applikationer som skyddas av Verify",
-  "ibm_bob>instana": "IBM Bob ansluter till verktyg fÃ¶r observerbarhet fÃ¶r att hÃ¤mta mÃ¤tvÃ¤rden och loggar direkt i IDE:n",
-  "ibm_bob>maximo": "IBM Bob snabbar upp applikations- och integrationsutvecklingen fÃ¶r Maximo med AI-stÃ¶dd kodning",
-  "ibm_bob>concert": "IBM Bob genererar automationsskript och applikationskod som Concert Ã¶vervakar och hanterar",
-  "ibm_bob>confluent": "IBM Bob snabbar upp utvecklingen av producenter och konsumenter fÃ¶r Confluent och applikationskod fÃ¶r Kafka-strÃ¶mning",
-  "ibm_mq>event_auto": "IBM MQ ger tillfÃ¶rlitlig meddelandetransport fÃ¶r arbetsflÃ¶den i Event Automation",
+  "ibm_bob>vault": "IBM Bob skannar kodbaser efter hårdkodade hemligheter och skriver om koden så att den använder Vault",
+  "ibm_bob>verify": "IBM Bob genererar säker integrationskod för autentisering, SSO och MFA i applikationer som skyddas av Verify",
+  "ibm_bob>instana": "IBM Bob ansluter till verktyg för observerbarhet för att hämta mätvärden och loggar direkt i IDE:n",
+  "ibm_bob>maximo": "IBM Bob snabbar upp applikations- och integrationsutvecklingen för Maximo med AI-stödd kodning",
+  "ibm_bob>concert": "IBM Bob genererar automationsskript och applikationskod som Concert övervakar och hanterar",
+  "ibm_bob>confluent": "IBM Bob snabbar upp utvecklingen av producenter och konsumenter för Confluent och applikationskod för Kafka-strömning",
+  "ibm_mq>event_auto": "IBM MQ ger tillförlitlig meddelandetransport för arbetsflöden i Event Automation",
   "ibm_mq>api_connect": "API Connect exponerar meddelandeslutpunkter i IBM MQ via hanterade API:er",
-  "ibm_mq>webmethods": "IBM MQ och webMethods ger kompletterande mÃ¶nster fÃ¶r transaktionell meddelandehantering och B2B",
-  "ibm_mq>confluent": "IBM MQ Ã¶verbryggar Ã¤ldre transaktionell meddelandehantering till hÃ¤ndelsestrÃ¶mmar i Confluent Kafka",
-  "ibm_mq>wxorch": "IBM MQ levererar tillfÃ¶rlitlig asynkron meddelandehantering fÃ¶r arbetsflÃ¶den i watsonx Orchestrate",
-  "ibm_mq>linuxone": "IBM MQ kÃ¶rs pÃ¥ LinuxONE fÃ¶r sÃ¤ker meddelandehantering med stora volymer",
-  "ibm_mq>power": "IBM MQ pÃ¥ Power Systems ger meddelandehantering med hÃ¶g genomstrÃ¶mning fÃ¶r affÃ¤rsapplikationer",
-  "ibm_mq>ibmi": "IBM MQ Ã¤r en central meddelanderyggrad fÃ¶r IBM i-applikationer, med inbyggt MQ-stÃ¶d i plattformen IBM i",
-  "ibm_sterling>webmethods": "IBM Sterling och webMethods ger kompletterande B2B-anslutning och fÃ¶retagsintegration",
-  "ibm_sterling>event_auto": "IBM Sterling utlÃ¶ser Event Automation fÃ¶r att kÃ¶ra flÃ¶den i leveranskedjan i realtid",
-  "ibm_sterling>api_connect": "API Connect exponerar data om leveranskedjan och partner-API:er frÃ¥n Sterling via hanterade gateways",
-  "ibm_sterling>maximo": "IBM Sterling integreras med Maximo fÃ¶r inkÃ¶p och fÃ¶rvaltning av tillgÃ¥ngar i leveranskedjan",
-  "ibm_sterling>wxdi": "watsonx.data intelligence katalogiserar datatillgÃ¥ngar om leveranskedjan frÃ¥n IBM Sterling",
-  "ibm_sterling>wxdint": "Dataintegrationen ser till att data om leveranskedjan frÃ¥n Sterling flÃ¶dar in i analys- och AI-pipelines",
-  "ibm_sterling>wxorch": "watsonx Orchestrate automatiserar beslutsflÃ¶den i leveranskedjan baserat pÃ¥ data frÃ¥n Sterling",
-  "ibm_pa>wxdata": "watsonx.data ger lakehouse-grunden fÃ¶r modellerna i Planning Analytics",
-  "ibm_pa>wxdi": "watsonx.data intelligence katalogiserar finansiella datakÃ¤llor fÃ¶r Planning Analytics",
-  "ibm_pa>wxdint": "Dataintegrationen hÃ¥ller modellerna i Planning Analytics uppdaterade med finansiella data i realtid",
-  "ibm_pa>wxai": "watsonx.ai fÃ¶rstÃ¤rker Planning Analytics med prediktiva prognoser och AI-drivna insikter",
-  "ibm_pa>apptio": "Planning Analytics levererar finansiella modeller till Apptio fÃ¶r Technology Business Management och kostnadsfÃ¶rdelning",
-  "ibm_pa>turbonomic": "Resursoptimeringsdata frÃ¥n Turbonomic ligger till grund fÃ¶r IT-kostnadsprognoser i Planning Analytics",
-  "ibm_pa>cloudability": "Planning Analytics integrerar molnkostnadsdata frÃ¥n Cloudability fÃ¶r finansiell scenariomodellering",
-  "ibm_pa>ibm_bob": "IBM Bob snabbar upp utvecklingen av integrationer och egna modellskript fÃ¶r Planning Analytics",
-  "maximo>instana": "Instana Ã¶vervakar applikationsprestandan i Maximo",
-  "terraform>turbonomic": "Turbonomic rekommenderar infrastrukturÃ¤ndringar via Terraform",
-  "wxai>instana": "Instana Ã¶vervakar inferensprestandan fÃ¶r modeller i watsonx.ai",
-  "wxgov>guardium": "watsonx.governance anvÃ¤nder Guardium fÃ¶r dataskyddspolicyer",
-  "wxdi>guardium": "Data Intelligence integrerar sÃ¤kerhetsklassificeringar frÃ¥n Guardium",
-  "confluent>guardium": "Guardium Ã¶vervakar och skyddar kÃ¤nsliga data som flÃ¶dar genom strÃ¶mmar i Confluent Kafka fÃ¶r regelefterlevnad och datasÃ¤kerhet",
-  "wxai>power": "watsonx.ai anvÃ¤nder Power Systems fÃ¶r AI-acceleration",
-  "wxai>linuxone": "watsonx.ai kÃ¶rs pÃ¥ LinuxONE fÃ¶r sÃ¤kra AI-arbetslaster",
-  "wxdata>power": "watsonx.data anvÃ¤nder Power Systems fÃ¶r dataintensiva frÃ¥gor",
-  "wxdata>linuxone": "watsonx.data pÃ¥ LinuxONE ger ett sÃ¤kert data lakehouse",
-  "confluent>linuxone": "Confluent kÃ¶rs direkt pÃ¥ LinuxONE och ger Kafka-strÃ¶mning i fÃ¶retagsklass med sÃ¤kerhets- och efterlevnadsgarantierna i LinuxONE",
-  "power>flashsystem": "Power Systems anvÃ¤nder FlashSystem fÃ¶r hÃ¶gpresterande lagring",
-  "power>storage_scale": "Power Systems anvÃ¤nder Storage Scale fÃ¶r parallell filÃ¥tkomst",
-  "linuxone>flashsystem": "LinuxONE anvÃ¤nder FlashSystem fÃ¶r lagring i fÃ¶retagsklass",
-  "linuxone>storage_scale": "LinuxONE anvÃ¤nder Storage Scale fÃ¶r skalbar fillagring",
-  "linuxone>storage_ceph": "LinuxONE anvÃ¤nder Storage Ceph fÃ¶r molnbaserad objektlagring",
-  "aix>flashsystem": "AIX-system anvÃ¤nder FlashSystem fÃ¶r lagring i fÃ¶retagsklass",
-  "ibmi>flashsystem": "IBM i-system anvÃ¤nder FlashSystem fÃ¶r affÃ¤rskritiska data",
-  "wxdata>storage_scale": "watsonx.data anvÃ¤nder Storage Scale fÃ¶r trÃ¤ningsdata till AI",
-  "wxdata>storage_ceph": "watsonx.data anvÃ¤nder Storage Ceph fÃ¶r objektlagring",
-  "wxdata>storage_fusion": "watsonx.data anvÃ¤nder Storage Fusion fÃ¶r containernativ lagring",
-  "instana>power": "Instana Ã¶vervakar applikationer pÃ¥ Power Systems",
-  "instana>linuxone": "Instana Ã¶vervakar applikationer pÃ¥ LinuxONE",
-  "turbonomic>power": "Turbonomic optimerar resursfÃ¶rdelningen i Power Systems",
+  "ibm_mq>webmethods": "IBM MQ och webMethods ger kompletterande mönster för transaktionell meddelandehantering och B2B",
+  "ibm_mq>confluent": "IBM MQ överbryggar äldre transaktionell meddelandehantering till händelseströmmar i Confluent Kafka",
+  "ibm_mq>wxorch": "IBM MQ levererar tillförlitlig asynkron meddelandehantering för arbetsflöden i watsonx Orchestrate",
+  "ibm_mq>linuxone": "IBM MQ körs på LinuxONE för säker meddelandehantering med stora volymer",
+  "ibm_mq>power": "IBM MQ på Power Systems ger meddelandehantering med hög genomströmning för affärsapplikationer",
+  "ibm_mq>ibmi": "IBM MQ är en central meddelanderyggrad för IBM i-applikationer, med inbyggt MQ-stöd i plattformen IBM i",
+  "ibm_sterling>webmethods": "IBM Sterling och webMethods ger kompletterande B2B-anslutning och företagsintegration",
+  "ibm_sterling>event_auto": "IBM Sterling utlöser Event Automation för att köra flöden i leveranskedjan i realtid",
+  "ibm_sterling>api_connect": "API Connect exponerar data om leveranskedjan och partner-API:er från Sterling via hanterade gateways",
+  "ibm_sterling>maximo": "IBM Sterling integreras med Maximo för inköp och förvaltning av tillgångar i leveranskedjan",
+  "ibm_sterling>wxdi": "watsonx.data intelligence katalogiserar datatillgångar om leveranskedjan från IBM Sterling",
+  "ibm_sterling>wxdint": "Dataintegrationen ser till att data om leveranskedjan från Sterling flödar in i analys- och AI-pipelines",
+  "ibm_sterling>wxorch": "watsonx Orchestrate automatiserar beslutsflöden i leveranskedjan baserat på data från Sterling",
+  "ibm_pa>wxdata": "watsonx.data ger lakehouse-grunden för modellerna i Planning Analytics",
+  "ibm_pa>wxdi": "watsonx.data intelligence katalogiserar finansiella datakällor för Planning Analytics",
+  "ibm_pa>wxdint": "Dataintegrationen håller modellerna i Planning Analytics uppdaterade med finansiella data i realtid",
+  "ibm_pa>wxai": "watsonx.ai förstärker Planning Analytics med prediktiva prognoser och AI-drivna insikter",
+  "ibm_pa>apptio": "Planning Analytics levererar finansiella modeller till Apptio för Technology Business Management och kostnadsfördelning",
+  "ibm_pa>turbonomic": "Resursoptimeringsdata från Turbonomic ligger till grund för IT-kostnadsprognoser i Planning Analytics",
+  "ibm_pa>cloudability": "Planning Analytics integrerar molnkostnadsdata från Cloudability för finansiell scenariomodellering",
+  "ibm_pa>ibm_bob": "IBM Bob snabbar upp utvecklingen av integrationer och egna modellskript för Planning Analytics",
+  "maximo>instana": "Instana övervakar applikationsprestandan i Maximo",
+  "terraform>turbonomic": "Turbonomic rekommenderar infrastrukturändringar via Terraform",
+  "wxai>instana": "Instana övervakar inferensprestandan för modeller i watsonx.ai",
+  "wxgov>guardium": "watsonx.governance använder Guardium för dataskyddspolicyer",
+  "wxdi>guardium": "Data Intelligence integrerar säkerhetsklassificeringar från Guardium",
+  "confluent>guardium": "Guardium övervakar och skyddar känsliga data som flödar genom strömmar i Confluent Kafka för regelefterlevnad och datasäkerhet",
+  "wxai>power": "watsonx.ai använder Power Systems för AI-acceleration",
+  "wxai>linuxone": "watsonx.ai körs på LinuxONE för säkra AI-arbetslaster",
+  "wxdata>power": "watsonx.data använder Power Systems för dataintensiva frågor",
+  "wxdata>linuxone": "watsonx.data på LinuxONE ger ett säkert data lakehouse",
+  "confluent>linuxone": "Confluent körs direkt på LinuxONE och ger Kafka-strömning i företagsklass med säkerhets- och efterlevnadsgarantierna i LinuxONE",
+  "power>flashsystem": "Power Systems använder FlashSystem för högpresterande lagring",
+  "power>storage_scale": "Power Systems använder Storage Scale för parallell filåtkomst",
+  "linuxone>flashsystem": "LinuxONE använder FlashSystem för lagring i företagsklass",
+  "linuxone>storage_scale": "LinuxONE använder Storage Scale för skalbar fillagring",
+  "linuxone>storage_ceph": "LinuxONE använder Storage Ceph för molnbaserad objektlagring",
+  "aix>flashsystem": "AIX-system använder FlashSystem för lagring i företagsklass",
+  "ibmi>flashsystem": "IBM i-system använder FlashSystem för affärskritiska data",
+  "wxdata>storage_scale": "watsonx.data använder Storage Scale för träningsdata till AI",
+  "wxdata>storage_ceph": "watsonx.data använder Storage Ceph för objektlagring",
+  "wxdata>storage_fusion": "watsonx.data använder Storage Fusion för containernativ lagring",
+  "instana>power": "Instana övervakar applikationer på Power Systems",
+  "instana>linuxone": "Instana övervakar applikationer på LinuxONE",
+  "turbonomic>power": "Turbonomic optimerar resursfördelningen i Power Systems",
   "turbonomic>linuxone": "Turbonomic optimerar resursutnyttjandet i LinuxONE",
-  "turbonomic>aix": "Turbonomic optimerar resursfÃ¶rdelningen fÃ¶r arbetslaster i AIX",
+  "turbonomic>aix": "Turbonomic optimerar resursfördelningen för arbetslaster i AIX",
   "turbonomic>ibmi": "Turbonomic optimerar resursutnyttjandet i IBM i",
-  "turbonomic>linux_power": "Turbonomic optimerar resursfÃ¶rdelningen fÃ¶r Linux on Power",
-  "ibm_tls>power": "IBM TLS hanterar allt underhÃ¥ll och hela livscykeln fÃ¶r infrastrukturen i Power Systems",
-  "ibm_tls>linuxone": "IBM TLS ger proaktiv support och livscykelhantering fÃ¶r LinuxONE-system",
-  "ibm_tls>aix": "IBM TLS skÃ¶ter underhÃ¥ll, patchning och teknikskiften fÃ¶r AIX-system",
-  "ibm_tls>ibmi": "IBM TLS hanterar underhÃ¥llet av IBM i-system och stÃ¶der planerade teknikskiften",
-  "ibm_tls>flashsystem": "IBM TLS hanterar driftsÃ¤ttning, firmwareuppgraderingar och end-of-life-Ã¶vergÃ¥ngar fÃ¶r FlashSystem",
-  "ibm_tls>storage_scale": "IBM TLS stÃ¶der systemuppgraderingar och livscykelplanering fÃ¶r Storage Scale",
-  "ibm_tls>linux_power": "Technology Lifecycle Services omfattar OS-support fÃ¶r Linux on Power och livscykelhantering av plattformen",
-  "ibm_tls>storage_control": "Technology Lifecycle Services stÃ¶der den underliggande lagringshÃ¥rdvaran som hanteras av Storage Control",
-  "ibm_tls>storage_virt": "IBM TLS servar IBM:s lagringshÃ¥rdvara som Storage Virtualize kÃ¶rs pÃ¥, inklusive firmware, underhÃ¥ll och livscykelÃ¶vergÃ¥ngar",
-  "envizi>maximo": "Drift- och tillgÃ¥ngsdata frÃ¥n Maximo matar Envizi fÃ¶r ESG- och koldioxidrapportering per anlÃ¤ggning",
-  "envizi>ibm_sterling": "Data om leveranskedjan frÃ¥n Sterling matar Envizi fÃ¶r uppfÃ¶ljning av Scope 3-utslÃ¤pp i partnernÃ¤tverk",
-  "envizi>wxdata": "ESG-datamÃ¤ngder frÃ¥n Envizi flÃ¶dar in i watsonx.data fÃ¶r hÃ¥llbarhetsanalys och AI-modellering",
-  "envizi>ibm_pa": "Planning Analytics integrerar data om koldioxidkostnader frÃ¥n Envizi fÃ¶r finansiell hÃ¥llbarhetsplanering och scenariomodellering",
-  "envizi>wxai": "watsonx.ai analyserar ESG-data frÃ¥n Envizi fÃ¶r att ta fram prediktiva hÃ¥llbarhetsinsikter och upptÃ¤cka avvikelser",
-  "elm_suite>ibm_bob": "IBM Bob genererar kod direkt frÃ¥n krav i ELM och sluter cirkeln frÃ¥n specifikation till implementation",
-  "elm_suite>concert": "Concert ger operativ Ã¶verblick Ã¶ver applikationsdriftsÃ¤ttningar som hanteras i ELM",
-  "elm_suite>api_connect": "ELM exponerar utvecklingsartefakter och kravdata via API Connect fÃ¶r integration i verktygskedjan",
-  "elm_suite>webmethods": "webMethods integrerar ELM med fÃ¶retagets system fÃ¶r automatiserade utvecklingsflÃ¶den hela vÃ¤gen",
-  "app_connect>api_connect": "App Connect bygger integrationer som API Connect sedan exponerar som styrda, sÃ¤krade API:er",
-  "app_connect>webmethods": "App Connect hanterar SaaS- och molnintegrationer medan webMethods hanterar komplexa B2B- och lokala mÃ¶nster â€“ kompletterande integrationsnivÃ¥er",
-  "app_connect>event_auto": "ArbetsflÃ¶den i App Connect utlÃ¶ser Event Automation fÃ¶r hÃ¤ndelsedriven bearbetning i realtid",
-  "app_connect>wxorch": "watsonx Orchestrate anvÃ¤nder App Connect fÃ¶r att koppla AI-agenter till fÃ¶retagets SaaS-applikationer",
-  "aspera>wxdata": "Aspera ger snabb inmatning av stora datamÃ¤ngder i watsonx.data fÃ¶r AI-trÃ¤ningspipelines",
-  "aspera>ibm_sterling": "Aspera snabbar upp Ã¶verfÃ¶ringar av stora filer och datamÃ¤ngder i partnernÃ¤tverken fÃ¶r leveranskedjan i Sterling",
-  "aspera>storage_scale": "Aspera Ã¶verfÃ¶r stora filer direkt till parallella filsystem i Storage Scale fÃ¶r HPC- och AI-arbetslaster",
-  "kubecost>cloudability": "Kubecost levererar kostnadsdata pÃ¥ Kubernetes-nivÃ¥ till Cloudability fÃ¶r samlad FinOps-rapportering Ã¶ver flera moln",
-  "kubecost>turbonomic": "Turbonomic anvÃ¤nder kostnadsdata frÃ¥n Kubecost tillsammans med prestandamÃ¥tt fÃ¶r att dimensionera Kubernetes-arbetslaster rÃ¤tt",
-  "kubecost>instana": "Instana ger kontext om applikationsprestanda som Kubecost anvÃ¤nder fÃ¶r att koppla kostnader till faktisk resursfÃ¶rbrukning",
-  "kubecost>apptio": "Kubernetes-kostnadsdata frÃ¥n Kubecost matar TBM-modellerna i Apptio fÃ¶r full transparens i IT-kostnaderna, Ã¤ven fÃ¶r containerarbetslaster",
-  "ns1>verify": "Den intelligenta routningen i NS1 dirigerar anvÃ¤ndare till nÃ¤rmaste autentiseringsslutpunkt och fÃ¶rbÃ¤ttrar prestanda och motstÃ¥ndskraft fÃ¶r SSO i Verify",
-  "ns1>sevone": "Data om nÃ¤tverksprestanda frÃ¥n SevOne ligger till grund fÃ¶r trafikstyrningen i NS1 fÃ¶r optimal routning",
-  "ns1>concert": "Concert anvÃ¤nder hÃ¤lsodata fÃ¶r DNS frÃ¥n NS1 som en del av Ã¶vervakningen av applikationernas tillgÃ¤nglighet",
-  "powervs>power": "PowerVS Ã¤r molnfÃ¶rlÃ¤ngningen av Power Systems â€“ fÃ¶r hybrida Power-miljÃ¶er som spÃ¤nner Ã¶ver lokal drift och IBM Cloud",
-  "powervs>aix": "AIX-arbetslaster kÃ¶rs direkt pÃ¥ PowerVS, vilket mÃ¶jliggÃ¶r molnmigrering utan Ã¤ndringar i operativsystem eller applikationer",
-  "powervs>ibmi": "IBM i-applikationer kÃ¶rs direkt pÃ¥ PowerVS och ger Ã¤ldre IBM i-miljÃ¶er en vÃ¤g till molnet",
-  "powervs>ibm_tls": "IBM TLS stÃ¶der Ã¶vergÃ¥ngsplanering och livscykelhantering vid migrering frÃ¥n lokal Power till PowerVS",
-  "powervs>ibm_bob": "IBM Bob snabbar upp moderniseringen av AIX- och IBM i-applikationer som migreras till molnmiljÃ¶er i PowerVS",
-  "fusion_hci>storage_fusion": "IBM Fusion HCI anvÃ¤nder Storage Fusion fÃ¶r containernativ bestÃ¤ndig lagring fÃ¶r OpenShift-arbetslaster pÃ¥ den konvergerade plattformen",
-  "fusion_hci>power": "IBM Fusion HCI kan kÃ¶ras sida vid sida med Power Systems i IBM-hanterade hybrida infrastrukturmiljÃ¶er",
-  "fusion_hci>linuxone": "Fusion HCI och LinuxONE ger kompletterande lokala infrastrukturalternativ fÃ¶r sÃ¤kerhetskÃ¤nsliga arbetslaster i fÃ¶retagsklass",
-  "fusion_hci>ibm_tls": "IBM TLS hanterar hÃ¥rdvarans livscykel, firmware och support fÃ¶r Fusion HCI",
-  "db2>wxdata": "Db2 Ã¤r en primÃ¤r transaktionell datakÃ¤lla som federeras in i watsonx.data fÃ¶r samlad analys och trÃ¤ning av AI-modeller",
-  "db2>wxdint": "watsonx.data integration matar in och transformerar data frÃ¥n Db2 fÃ¶r efterfÃ¶ljande AI- och analyspipelines",
-  "db2>guardium": "Guardium Ã¶vervakar och granskar all dataÃ¥tkomst i Db2 fÃ¶r regelefterlevnad och datasÃ¤kerhet",
-  "db2>ibmi": "Db2 for IBM i Ã¤r den integrerade databasen i kÃ¤rnan av plattformen IBM i â€“ inbyggd frÃ¥n grunden",
-  "db2>ibm_bob": "IBM Bob hjÃ¤lper till med frÃ¥geoptimering i Db2, schemamodernisering och migrering frÃ¥n PL/SQL till Db2",
-  "cognos>wxdata": "Cognos stÃ¤ller frÃ¥gor mot watsonx.data som samlad datakÃ¤lla fÃ¶r styrd fÃ¶retagsrapportering Ã¶ver hela data lakehouse",
-  "cognos>ibm_pa": "Cognos Analytics ger drift- och ledningsrapportering ovanpÃ¥ de finansiella modellerna i Planning Analytics",
-  "cognos>db2": "Cognos Ã¤r en central BI-konsument av transaktionsdata frÃ¥n Db2 fÃ¶r fÃ¶retagets instrumentpaneler och rapporter",
-  "cognos>wxai": "watsonx.ai fÃ¶rstÃ¤rker Cognos med prediktiv analys och AI-genererade insikter direkt i instrumentpanelerna",
-  "cognos>guardium": "Guardium tillÃ¤mpar policyer fÃ¶r dataÃ¥tkomst pÃ¥ de datakÃ¤llor som Cognos frÃ¥gar mot och sÃ¤kerstÃ¤ller regelefterlevande rapportering"
+  "turbonomic>linux_power": "Turbonomic optimerar resursfördelningen för Linux on Power",
+  "ibm_tls>power": "IBM TLS hanterar allt underhåll och hela livscykeln för infrastrukturen i Power Systems",
+  "ibm_tls>linuxone": "IBM TLS ger proaktiv support och livscykelhantering för LinuxONE-system",
+  "ibm_tls>aix": "IBM TLS sköter underhåll, patchning och teknikskiften för AIX-system",
+  "ibm_tls>ibmi": "IBM TLS hanterar underhållet av IBM i-system och stöder planerade teknikskiften",
+  "ibm_tls>flashsystem": "IBM TLS hanterar driftsättning, firmwareuppgraderingar och end-of-life-övergångar för FlashSystem",
+  "ibm_tls>storage_scale": "IBM TLS stöder systemuppgraderingar och livscykelplanering för Storage Scale",
+  "ibm_tls>linux_power": "Technology Lifecycle Services omfattar OS-support för Linux on Power och livscykelhantering av plattformen",
+  "ibm_tls>storage_control": "Technology Lifecycle Services stöder den underliggande lagringshårdvaran som hanteras av Storage Control",
+  "ibm_tls>storage_virt": "IBM TLS servar IBM:s lagringshårdvara som Storage Virtualize körs på, inklusive firmware, underhåll och livscykelövergångar",
+  "envizi>maximo": "Drift- och tillgångsdata från Maximo matar Envizi för ESG- och koldioxidrapportering per anläggning",
+  "envizi>ibm_sterling": "Data om leveranskedjan från Sterling matar Envizi för uppföljning av Scope 3-utsläpp i partnernätverk",
+  "envizi>wxdata": "ESG-datamängder från Envizi flödar in i watsonx.data för hållbarhetsanalys och AI-modellering",
+  "envizi>ibm_pa": "Planning Analytics integrerar data om koldioxidkostnader från Envizi för finansiell hållbarhetsplanering och scenariomodellering",
+  "envizi>wxai": "watsonx.ai analyserar ESG-data från Envizi för att ta fram prediktiva hållbarhetsinsikter och upptäcka avvikelser",
+  "elm_suite>ibm_bob": "IBM Bob genererar kod direkt från krav i ELM och sluter cirkeln från specifikation till implementation",
+  "elm_suite>concert": "Concert ger operativ överblick över applikationsdriftsättningar som hanteras i ELM",
+  "elm_suite>api_connect": "ELM exponerar utvecklingsartefakter och kravdata via API Connect för integration i verktygskedjan",
+  "elm_suite>webmethods": "webMethods integrerar ELM med företagets system för automatiserade utvecklingsflöden hela vägen",
+  "app_connect>api_connect": "App Connect bygger integrationer som API Connect sedan exponerar som styrda, säkrade API:er",
+  "app_connect>webmethods": "App Connect hanterar SaaS- och molnintegrationer medan webMethods hanterar komplexa B2B- och lokala mönster – kompletterande integrationsnivåer",
+  "app_connect>event_auto": "Arbetsflöden i App Connect utlöser Event Automation för händelsedriven bearbetning i realtid",
+  "app_connect>wxorch": "watsonx Orchestrate använder App Connect för att koppla AI-agenter till företagets SaaS-applikationer",
+  "aspera>wxdata": "Aspera ger snabb inmatning av stora datamängder i watsonx.data för AI-träningspipelines",
+  "aspera>ibm_sterling": "Aspera snabbar upp överföringar av stora filer och datamängder i partnernätverken för leveranskedjan i Sterling",
+  "aspera>storage_scale": "Aspera överför stora filer direkt till parallella filsystem i Storage Scale för HPC- och AI-arbetslaster",
+  "kubecost>cloudability": "Kubecost levererar kostnadsdata på Kubernetes-nivå till Cloudability för samlad FinOps-rapportering över flera moln",
+  "kubecost>turbonomic": "Turbonomic använder kostnadsdata från Kubecost tillsammans med prestandamått för att dimensionera Kubernetes-arbetslaster rätt",
+  "kubecost>instana": "Instana ger kontext om applikationsprestanda som Kubecost använder för att koppla kostnader till faktisk resursförbrukning",
+  "kubecost>apptio": "Kubernetes-kostnadsdata från Kubecost matar TBM-modellerna i Apptio för full transparens i IT-kostnaderna, även för containerarbetslaster",
+  "ns1>verify": "Den intelligenta routningen i NS1 dirigerar användare till närmaste autentiseringsslutpunkt och förbättrar prestanda och motståndskraft för SSO i Verify",
+  "ns1>sevone": "Data om nätverksprestanda från SevOne ligger till grund för trafikstyrningen i NS1 för optimal routning",
+  "ns1>concert": "Concert använder hälsodata för DNS från NS1 som en del av övervakningen av applikationernas tillgänglighet",
+  "powervs>power": "PowerVS är molnförlängningen av Power Systems – för hybrida Power-miljöer som spänner över lokal drift och IBM Cloud",
+  "powervs>aix": "AIX-arbetslaster körs direkt på PowerVS, vilket möjliggör molnmigrering utan ändringar i operativsystem eller applikationer",
+  "powervs>ibmi": "IBM i-applikationer körs direkt på PowerVS och ger äldre IBM i-miljöer en väg till molnet",
+  "powervs>ibm_tls": "IBM TLS stöder övergångsplanering och livscykelhantering vid migrering från lokal Power till PowerVS",
+  "powervs>ibm_bob": "IBM Bob snabbar upp moderniseringen av AIX- och IBM i-applikationer som migreras till molnmiljöer i PowerVS",
+  "fusion_hci>storage_fusion": "IBM Fusion HCI använder Storage Fusion för containernativ beständig lagring för OpenShift-arbetslaster på den konvergerade plattformen",
+  "fusion_hci>power": "IBM Fusion HCI kan köras sida vid sida med Power Systems i IBM-hanterade hybrida infrastrukturmiljöer",
+  "fusion_hci>linuxone": "Fusion HCI och LinuxONE ger kompletterande lokala infrastrukturalternativ för säkerhetskänsliga arbetslaster i företagsklass",
+  "fusion_hci>ibm_tls": "IBM TLS hanterar hårdvarans livscykel, firmware och support för Fusion HCI",
+  "db2>wxdata": "Db2 är en primär transaktionell datakälla som federeras in i watsonx.data för samlad analys och träning av AI-modeller",
+  "db2>wxdint": "watsonx.data integration matar in och transformerar data från Db2 för efterföljande AI- och analyspipelines",
+  "db2>guardium": "Guardium övervakar och granskar all dataåtkomst i Db2 för regelefterlevnad och datasäkerhet",
+  "db2>ibmi": "Db2 for IBM i är den integrerade databasen i kärnan av plattformen IBM i – inbyggd från grunden",
+  "db2>ibm_bob": "IBM Bob hjälper till med frågeoptimering i Db2, schemamodernisering och migrering från PL/SQL till Db2",
+  "cognos>wxdata": "Cognos ställer frågor mot watsonx.data som samlad datakälla för styrd företagsrapportering över hela data lakehouse",
+  "cognos>ibm_pa": "Cognos Analytics ger drift- och ledningsrapportering ovanpå de finansiella modellerna i Planning Analytics",
+  "cognos>db2": "Cognos är en central BI-konsument av transaktionsdata från Db2 för företagets instrumentpaneler och rapporter",
+  "cognos>wxai": "watsonx.ai förstärker Cognos med prediktiv analys och AI-genererade insikter direkt i instrumentpanelerna",
+  "cognos>guardium": "Guardium tillämpar policyer för dataåtkomst på de datakällor som Cognos frågar mot och säkerställer regelefterlevande rapportering"
  }
 };

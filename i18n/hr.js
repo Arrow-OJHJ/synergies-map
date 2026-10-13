@@ -1,4 +1,4 @@
-﻿window.I18N = window.I18N || {};
+window.I18N = window.I18N || {};
 window.I18N.hr = {
  "meta": { "name": "Hrvatski", "htmlLang": "hr" },
  "ui": {
@@ -6,34 +6,34 @@ window.I18N.hr = {
   "title": "Karta sinergija IBM proizvoda",
   "language": "Jezik",
   "toggleTheme": "Promijeni temu",
-  "toggleThemeTitle": "Prebacivanje izmeÄ‘u svijetle i tamne teme",
-  "searchPlaceholder": "PretraÅ¾ite proizvode, opise, pitanjaâ€¦",
-  "mobSearchPlaceholder": "PretraÅ¾ite proizvodeâ€¦",
-  "searchAria": "PretraÅ¾ivanje proizvoda",
-  "clearSearch": "OÄisti pretraÅ¾ivanje",
+  "toggleThemeTitle": "Prebacivanje između svijetle i tamne teme",
+  "searchPlaceholder": "Pretražite proizvode, opise, pitanja…",
+  "mobSearchPlaceholder": "Pretražite proizvode…",
+  "searchAria": "Pretraživanje proizvoda",
+  "clearSearch": "Očisti pretraživanje",
   "playFilter": "Filtar grupa proizvoda",
   "mapAria": "Karta unakrsne prodaje",
   "productDetail": "Detalji proizvoda",
   "detail": "Detalji",
-  "clearSelection": "PoniÅ¡ti odabir",
-  "loading": "UÄitavanjeâ€¦",
-  "footerHint": "PretraÅ¾ite proizvode Â· Kliknite proizvod za prikaz detalja",
-  "mobileFooterHint": "Dodirnite proizvod za istraÅ¾ivanje veza",
+  "clearSelection": "Poništi odabir",
+  "loading": "Učitavanje…",
+  "footerHint": "Pretražite proizvode · Kliknite proizvod za prikaz detalja",
+  "mobileFooterHint": "Dodirnite proizvod za istraživanje veza",
   "close": "Zatvori",
-  "closeDrawer": "Zatvori ploÄu",
-  "noSelection": "NiÅ¡ta nije odabrano",
+  "closeDrawer": "Zatvori ploču",
+  "noSelection": "Ništa nije odabrano",
   "product": "Proizvod",
   "featuredInPlays": "Grupe proizvoda",
   "description": "Opis",
   "valueProposition": "Vrijednosna ponuda",
   "competesWith": "Konkurenti",
-  "keyDifferentiators": "KljuÄne prednosti",
+  "keyDifferentiators": "Ključne prednosti",
   "discoveryQuestions": "Pitanja za otkrivanje potreba",
   "emptyPrompt": {"one": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupu proizvoda.", "few": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupe proizvoda.", "other": "Odaberite proizvod kako biste istaknuli njegove veze unakrsne prodaje kroz {n} grupa proizvoda."},
   "productsFound": {
-   "one": "PronaÄ‘en {n} proizvod",
-   "few": "PronaÄ‘ena {n} proizvoda",
-   "other": "PronaÄ‘eno {n} proizvoda"
+   "one": "Pronađen {n} proizvod",
+   "few": "Pronađena {n} proizvoda",
+   "other": "Pronađeno {n} proizvoda"
   },
   "connections": {
    "one": "{n} veza",
@@ -46,9 +46,7 @@ window.I18N.hr = {
    "one": "{n} proizvod",
    "few": "{n} proizvoda",
    "other": "{n} proizvoda"
-  },
- "viewMap": "Map view",
- "viewRadial": "Radial view"
+  }
  },
  "plays": {
   "1": { "name": "Automatizacija i integracija", "short": "Automatizacija" },
@@ -56,7 +54,7 @@ window.I18N.hr = {
   "4": { "name": "Sigurnost i upravljanje", "short": "Sigurnost" },
   "2": { "name": "Platforma za podatke i AI", "short": "Podaci i AI" },
   "5": { "name": "Infrastruktura i sustavi", "short": "Infrastruktura" },
-  "6": { "name": "RjeÅ¡enja za pohranu", "short": "Pohrana" }
+  "6": { "name": "Rješenja za pohranu", "short": "Pohrana" }
  },
  "categories": {
   "automation": "Automatizacija i integracija",
@@ -64,81 +62,81 @@ window.I18N.hr = {
   "security": "Sigurnost i upravljanje",
   "data_ai": "Platforma za podatke i AI",
   "infrastructure": "Infrastruktura i sustavi",
-  "storage": "RjeÅ¡enja za pohranu"
+  "storage": "Rješenja za pohranu"
  },
  "products": {
   "api_connect": {
-   "desc": "Platforma za upravljanje API-jima na razini poduzeÄ‡a za izradu, zaÅ¡titu i upravljanje API-jima u hibridnim oblaÄnim okruÅ¾enjima.",
-   "value": "OmoguÄ‡uje digitalnu transformaciju kroz integraciju voÄ‘enu API-jima, skraÄ‡uje vrijeme integracije za 50% i poveÄ‡ava produktivnost developera.",
+   "desc": "Platforma za upravljanje API-jima na razini poduzeća za izradu, zaštitu i upravljanje API-jima u hibridnim oblačnim okruženjima.",
+   "value": "Omogućuje digitalnu transformaciju kroz integraciju vođenu API-jima, skraćuje vrijeme integracije za 50% i povećava produktivnost developera.",
    "questions": [
-    "Imate li viÅ¡e aplikacija koje trebaju dijeliti podatke?",
+    "Imate li više aplikacija koje trebaju dijeliti podatke?",
     "Razvijate li mobilne ili web aplikacije kojima su potrebne pozadinske usluge?",
     "Trebate li monetizirati svoje podatke ili usluge putem API-ja?",
-    "Imate li poteÅ¡koÄ‡a s integracijama toÄka-toÄka?"
+    "Imate li poteškoća s integracijama točka-točka?"
    ],
    "differentiators": [
-    "UgraÄ‘ena sigurnost DataPower",
+    "Ugrađena sigurnost DataPower",
     "Fleksibilna implementacija u hibridnom oblaku",
-    "Izvorna podrÅ¡ka za Kubernetes",
+    "Izvorna podrška za Kubernetes",
     "Integracija s IBM Cloud Pak"
    ]
   },
   "event_auto": {
-   "desc": "Platforma za automatizaciju voÄ‘enu dogaÄ‘ajima za automatizaciju poslovnih procesa i donoÅ¡enje odluka u stvarnom vremenu.",
-   "value": "Smanjuje ruÄne intervencije za 70%, omoguÄ‡uje reakciju na poslovne dogaÄ‘aje u stvarnom vremenu i poveÄ‡ava operativnu uÄinkovitost.",
+   "desc": "Platforma za automatizaciju vođenu događajima za automatizaciju poslovnih procesa i donošenje odluka u stvarnom vremenu.",
+   "value": "Smanjuje ručne intervencije za 70%, omogućuje reakciju na poslovne događaje u stvarnom vremenu i povećava operativnu učinkovitost.",
    "questions": [
     "Imate li poslovne procese koji zahtijevaju odgovor u stvarnom vremenu?",
-    "Nadzirete li sustave ruÄno kako biste uoÄili dogaÄ‘aje?",
-    "Trebate li automatizirati tijekove rada u viÅ¡e sustava?",
-    "Å½elite li smanjiti operativne troÅ¡kove automatizacijom?"
+    "Nadzirete li sustave ručno kako biste uočili događaje?",
+    "Trebate li automatizirati tijekove rada u više sustava?",
+    "Želite li smanjiti operativne troškove automatizacijom?"
    ],
    "differentiators": [
-    "UgraÄ‘eni mehanizam poslovnih pravila",
+    "Ugrađeni mehanizam poslovnih pravila",
     "Low-code dizajner tijekova rada",
-    "Upravljanje na razini poduzeÄ‡a",
+    "Upravljanje na razini poduzeća",
     "Integracija s IBM paketom za automatizaciju"
    ]
   },
   "webmethods": {
-   "desc": "Sveobuhvatna integracijska platforma za povezivanje aplikacija, podataka i ureÄ‘aja u hibridnim okruÅ¾enjima.",
-   "value": "Ubrzava integracijske projekte za 60%, smanjuje troÅ¡kove odrÅ¾avanja i pruÅ¾a jedinstven uvid u sve integracije.",
+   "desc": "Sveobuhvatna integracijska platforma za povezivanje aplikacija, podataka i uređaja u hibridnim okruženjima.",
+   "value": "Ubrzava integracijske projekte za 60%, smanjuje troškove održavanja i pruža jedinstven uvid u sve integracije.",
    "questions": [
-    "Imate li naslijeÄ‘ene sustave koje treba integrirati s modernim aplikacijama?",
-    "Upravljate li s viÅ¡e integracijskih alata?",
-    "Trebate li moguÄ‡nosti B2B integracije?",
-    "Imate li poteÅ¡koÄ‡a sa sinkronizacijom podataka meÄ‘u sustavima?"
+    "Imate li naslijeđene sustave koje treba integrirati s modernim aplikacijama?",
+    "Upravljate li s više integracijskih alata?",
+    "Trebate li mogućnosti B2B integracije?",
+    "Imate li poteškoća sa sinkronizacijom podataka među sustavima?"
    ],
    "differentiators": [
-    "30+ godina struÄnosti u integraciji",
-    "SnaÅ¾ne B2B/EDI moguÄ‡nosti",
+    "30+ godina stručnosti u integraciji",
+    "Snažne B2B/EDI mogućnosti",
     "Hibridna integracijska platforma",
     "Gotovi konektori za 300+ aplikacija"
    ]
   },
   "terraform": {
-   "desc": "Alat za infrastrukturu kao kod za pripremu i upravljanje oblaÄnom infrastrukturom kod viÅ¡e pruÅ¾atelja usluga.",
-   "value": "SkraÄ‡uje vrijeme implementacije infrastrukture za 80%, osigurava dosljednost i omoguÄ‡uje kontrolu verzija infrastrukture.",
+   "desc": "Alat za infrastrukturu kao kod za pripremu i upravljanje oblačnom infrastrukturom kod više pružatelja usluga.",
+   "value": "Skraćuje vrijeme implementacije infrastrukture za 80%, osigurava dosljednost i omogućuje kontrolu verzija infrastrukture.",
    "questions": [
-    "Pripremate li oblaÄnu infrastrukturu ruÄno?",
-    "Trebate li upravljati infrastrukturom kod viÅ¡e pruÅ¾atelja oblaÄnih usluga?",
-    "Å½elite li standardizirati implementacije infrastrukture?",
+    "Pripremate li oblačnu infrastrukturu ručno?",
+    "Trebate li upravljati infrastrukturom kod više pružatelja oblačnih usluga?",
+    "Želite li standardizirati implementacije infrastrukture?",
     "Trebate li pratiti promjene infrastrukture tijekom vremena?"
    ],
    "differentiators": [
-    "PodrÅ¡ka za viÅ¡e oblaka",
+    "Podrška za više oblaka",
     "Deklarativna sintaksa",
-    "Velik ekosustav pruÅ¾atelja",
-    "MoguÄ‡nosti upravljanja stanjem"
+    "Velik ekosustav pružatelja",
+    "Mogućnosti upravljanja stanjem"
    ]
   },
   "concert": {
-   "desc": "Platforma za upravljanje aplikacijama temeljena na AI-ju koja pruÅ¾a jedinstven uvid i kontrolu u hibridnim oblaÄnim okruÅ¾enjima.",
-   "value": "Smanjuje MTTR za 40%, pruÅ¾a uvid od 360 stupnjeva u aplikacije i automatizira otklanjanje uobiÄajenih problema.",
+   "desc": "Platforma za upravljanje aplikacijama temeljena na AI-ju koja pruža jedinstven uvid i kontrolu u hibridnim oblačnim okruženjima.",
+   "value": "Smanjuje MTTR za 40%, pruža uvid od 360 stupnjeva u aplikacije i automatizira otklanjanje uobičajenih problema.",
    "questions": [
-    "Imate li poteÅ¡koÄ‡a s preglednoÅ¡Ä‡u cijelog aplikacijskog okruÅ¾enja?",
-    "Upravljate li aplikacijama u viÅ¡e oblaka?",
-    "Trebate li skratiti prosjeÄno vrijeme rjeÅ¡avanja problema?",
-    "Å½elite li automatizirati zadatke upravljanja aplikacijama?"
+    "Imate li poteškoća s preglednošću cijelog aplikacijskog okruženja?",
+    "Upravljate li aplikacijama u više oblaka?",
+    "Trebate li skratiti prosječno vrijeme rješavanja problema?",
+    "Želite li automatizirati zadatke upravljanja aplikacijama?"
    ],
    "differentiators": [
     "Uvidi temeljeni na AI-ju",
@@ -148,93 +146,93 @@ window.I18N.hr = {
    ]
   },
   "maximo": {
-   "desc": "Platforma za upravljanje imovinom poduzeÄ‡a za upravljanje fiziÄkom imovinom, odrÅ¾avanjem i operacijama.",
-   "value": "PoveÄ‡ava raspoloÅ¾ivost imovine za 20%, smanjuje troÅ¡kove odrÅ¾avanja za 25% i produljuje Å¾ivotni vijek imovine.",
+   "desc": "Platforma za upravljanje imovinom poduzeća za upravljanje fizičkom imovinom, održavanjem i operacijama.",
+   "value": "Povećava raspoloživost imovine za 20%, smanjuje troškove održavanja za 25% i produljuje životni vijek imovine.",
    "questions": [
-    "Upravljate li fiziÄkom imovinom ili objektima?",
-    "Pratite li odrÅ¾avanje ruÄno?",
-    "Trebate li optimizirati uÄinkovitost imovine?",
-    "Å½elite li uvesti prediktivno odrÅ¾avanje?"
+    "Upravljate li fizičkom imovinom ili objektima?",
+    "Pratite li održavanje ručno?",
+    "Trebate li optimizirati učinkovitost imovine?",
+    "Želite li uvesti prediktivno održavanje?"
    ],
    "differentiators": [
-    "Prediktivno odrÅ¾avanje temeljeno na AI-ju",
-    "Dizajn prvenstveno za mobilne ureÄ‘aje",
+    "Prediktivno održavanje temeljeno na AI-ju",
+    "Dizajn prvenstveno za mobilne uređaje",
     "IoT integracija",
-    "PredloÅ¡ci za pojedine industrije"
+    "Predlošci za pojedine industrije"
    ]
   },
   "ibm_mq": {
-   "desc": "Middleware za razmjenu poruka na razini poduzeÄ‡a za pouzdanu, asinkronu razmjenu poruka u hibridnim okruÅ¾enjima. JamÄi isporuku poruka za kljuÄne aplikacije, ukljuÄujuÄ‡i mainframe, oblaÄne i lokalne sustave.",
-   "value": "Osigurava 99,99% pouzdanosti isporuke poruka, smanjuje meÄ‘usobnu ovisnost aplikacija i omoguÄ‡uje integraciju u stvarnom vremenu meÄ‘u platformama, ukljuÄujuÄ‡i mainframe i oblak, uz ugraÄ‘enu podrÅ¡ku za transakcije.",
+   "desc": "Middleware za razmjenu poruka na razini poduzeća za pouzdanu, asinkronu razmjenu poruka u hibridnim okruženjima. Jamči isporuku poruka za ključne aplikacije, uključujući mainframe, oblačne i lokalne sustave.",
+   "value": "Osigurava 99,99% pouzdanosti isporuke poruka, smanjuje međusobnu ovisnost aplikacija i omogućuje integraciju u stvarnom vremenu među platformama, uključujući mainframe i oblak, uz ugrađenu podršku za transakcije.",
    "questions": [
-    "Imate li aplikacije kojima je potrebna zajamÄena, pouzdana razmjena poruka?",
-    "Integrirate li mainframe sustave s oblaÄnim okruÅ¾enjima?",
-    "Trebate li transakcijsku razmjenu poruka sa zajamÄenom isporukom?",
-    "Gradite li arhitekture voÄ‘ene dogaÄ‘ajima koje zahtijevaju pouzdanost?"
+    "Imate li aplikacije kojima je potrebna zajamčena, pouzdana razmjena poruka?",
+    "Integrirate li mainframe sustave s oblačnim okruženjima?",
+    "Trebate li transakcijsku razmjenu poruka sa zajamčenom isporukom?",
+    "Gradite li arhitekture vođene događajima koje zahtijevaju pouzdanost?"
    ],
    "differentiators": [
-    "ZajamÄena isporuka uz potpunu podrÅ¡ku za transakcije",
+    "Zajamčena isporuka uz potpunu podršku za transakcije",
     "Izvorna mainframe integracija na platformama IBM Z, Power i LinuxONE",
     "40+ godina pouzdanosti u poslovnoj razmjeni poruka",
     "Izvorni most prema Confluent Kafka putem IBM MQ Kafka Connector"
    ]
   },
   "ibm_sterling": {
-   "desc": "Sveobuhvatan portfelj za opskrbni lanac i B2B integraciju za upravljanje ispunjenjem narudÅ¾bi, preglednoÅ¡Ä‡u opskrbnog lanca i povezivanjem s partnerima. Objedinjuje upravljanje narudÅ¾bama, inteligenciju opskrbnog lanca, B2B integraciju i sigurnu razmjenu podataka u mreÅ¾ama trgovinskih partnera.",
-   "value": "Ubrzava B2B integraciju za 70%, skraÄ‡uje ciklus narudÅ¾be za 40% i pruÅ¾a potpuni uvid u opskrbni lanac uz suradnju s partnerima u stvarnom vremenu i predviÄ‘anje potraÅ¾nje temeljeno na AI-ju.",
+   "desc": "Sveobuhvatan portfelj za opskrbni lanac i B2B integraciju za upravljanje ispunjenjem narudžbi, preglednošću opskrbnog lanca i povezivanjem s partnerima. Objedinjuje upravljanje narudžbama, inteligenciju opskrbnog lanca, B2B integraciju i sigurnu razmjenu podataka u mrežama trgovinskih partnera.",
+   "value": "Ubrzava B2B integraciju za 70%, skraćuje ciklus narudžbe za 40% i pruža potpuni uvid u opskrbni lanac uz suradnju s partnerima u stvarnom vremenu i predviđanje potražnje temeljeno na AI-ju.",
    "questions": [
-    "Trebate li se integrirati s viÅ¡e B2B trgovinskih partnera ili dobavljaÄa?",
-    "Å½elite li optimizirati procese order-to-cash ili procure-to-pay?",
+    "Trebate li se integrirati s više B2B trgovinskih partnera ili dobavljača?",
+    "Želite li optimizirati procese order-to-cash ili procure-to-pay?",
     "Trebate li uvid u opskrbni lanac u stvarnom vremenu kod svih partnera?",
-    "Upravljate li sloÅ¾enim viÅ¡ekanalnim ispunjenjem narudÅ¾bi?"
+    "Upravljate li složenim višekanalnim ispunjenjem narudžbi?"
    ],
    "differentiators": [
-    "Namjenski izgraÄ‘en za B2B integraciju i EDI s 50.000+ partnerskih veza",
-    "Inteligencija opskrbnog lanca i predviÄ‘anje potraÅ¾nje temeljeni na AI-ju",
-    "Sigurni proxy za razmjenu podataka s partnerima uz potpuno Å¡ifriranje",
+    "Namjenski izgrađen za B2B integraciju i EDI s 50.000+ partnerskih veza",
+    "Inteligencija opskrbnog lanca i predviđanje potražnje temeljeni na AI-ju",
+    "Sigurni proxy za razmjenu podataka s partnerima uz potpuno šifriranje",
     "Duboka integracija s IBM ekosustavom za automatizaciju i podatke"
    ]
   },
   "instana": {
    "desc": "Automatizirani nadzor performansi aplikacija s uvidima temeljenima na AI-ju za cloud-native i mikroservisne arhitekture.",
-   "value": "SkraÄ‡uje MTTD za 90%, pruÅ¾a automatsko otkrivanje i nadzor te granularnost od 1 sekunde za rjeÅ¡avanje problema.",
+   "value": "Skraćuje MTTD za 90%, pruža automatsko otkrivanje i nadzor te granularnost od 1 sekunde za rješavanje problema.",
    "questions": [
     "Imate li mikroservise ili aplikacije u kontejnerima?",
-    "Imate li poteÅ¡koÄ‡a s otkrivanjem uskih grla u performansama?",
+    "Imate li poteškoća s otkrivanjem uskih grla u performansama?",
     "Trebate li nadzor aplikacija u stvarnom vremenu?",
-    "SuoÄavate li se s Äestim problemima u aplikacijama?"
+    "Suočavate li se s čestim problemima u aplikacijama?"
    ],
    "differentiators": [
     "Granularnost od 1 sekunde",
     "Automatsko otkrivanje",
-    "Bez ruÄne instrumentacije",
-    "IzgraÄ‘en za Kubernetes"
+    "Bez ručne instrumentacije",
+    "Izgrađen za Kubernetes"
    ]
   },
   "sevone": {
-   "desc": "Platforma za nadzor i analitiku mreÅ¾nih performansi za upravljanje sloÅ¾enim mreÅ¾nim infrastrukturama.",
-   "value": "PoboljÅ¡ava preglednost mreÅ¾e za 95%, smanjuje mreÅ¾ne incidente za 40% i omoguÄ‡uje proaktivno planiranje kapaciteta.",
+   "desc": "Platforma za nadzor i analitiku mrežnih performansi za upravljanje složenim mrežnim infrastrukturama.",
+   "value": "Poboljšava preglednost mreže za 95%, smanjuje mrežne incidente za 40% i omogućuje proaktivno planiranje kapaciteta.",
    "questions": [
-    "Upravljate li sloÅ¾enom mreÅ¾nom infrastrukturom?",
-    "Imate li problema s performansama mreÅ¾e?",
-    "Trebate li bolji uvid u mreÅ¾ni promet?",
-    "Planirate li nadogradnju mreÅ¾nih kapaciteta?"
+    "Upravljate li složenom mrežnom infrastrukturom?",
+    "Imate li problema s performansama mreže?",
+    "Trebate li bolji uvid u mrežni promet?",
+    "Planirate li nadogradnju mrežnih kapaciteta?"
    ],
    "differentiators": [
     "Skalabilnost do milijuna metrika",
     "Analitika u stvarnom vremenu",
-    "PodrÅ¡ka za viÅ¡e proizvoÄ‘aÄa",
+    "Podrška za više proizvođača",
     "Prediktivno planiranje kapaciteta"
    ]
   },
   "turbonomic": {
    "desc": "Platforma za upravljanje aplikacijskim resursima koja kontinuirano optimizira raspodjelu resursa u stvarnom vremenu.",
-   "value": "Smanjuje troÅ¡kove oblaka za 30-50%, poboljÅ¡ava performanse aplikacija za 30% i automatizira optimizaciju resursa.",
+   "value": "Smanjuje troškove oblaka za 30-50%, poboljšava performanse aplikacija za 30% i automatizira optimizaciju resursa.",
    "questions": [
-    "Jesu li vaÅ¡i troÅ¡kovi oblaka veÄ‡i od oÄekivanih?",
-    "Imate li probleme s performansama zbog ograniÄenih resursa?",
-    "OdreÄ‘ujete li veliÄinu virtualnih strojeva ili kontejnera ruÄno?",
-    "Trebate li optimizirati iskoriÅ¡tenost resursa?"
+    "Jesu li vaši troškovi oblaka veći od očekivanih?",
+    "Imate li probleme s performansama zbog ograničenih resursa?",
+    "Određujete li veličinu virtualnih strojeva ili kontejnera ručno?",
+    "Trebate li optimizirati iskorištenost resursa?"
    ],
    "differentiators": [
     "Automatizirane radnje u stvarnom vremenu",
@@ -244,287 +242,287 @@ window.I18N.hr = {
    ]
   },
   "apptio": {
-   "desc": "Platforma za upravljanje poslovanjem tehnologije (TBM) za upravljanje i optimizaciju IT troÅ¡kova i ulaganja.",
-   "value": "PruÅ¾a potpunu transparentnost IT troÅ¡kova, omoguÄ‡uje odluke temeljene na podacima i optimizira ulaganja u IT portfelj.",
+   "desc": "Platforma za upravljanje poslovanjem tehnologije (TBM) za upravljanje i optimizaciju IT troškova i ulaganja.",
+   "value": "Pruža potpunu transparentnost IT troškova, omogućuje odluke temeljene na podacima i optimizira ulaganja u IT portfelj.",
    "questions": [
-    "Znate li stvarne IT troÅ¡kove po usluzi ili aplikaciji?",
-    "Imate li poteÅ¡koÄ‡a s opravdavanjem IT troÅ¡kova poslovnom dijelu tvrtke?",
-    "Trebate li optimizirati svoj IT proraÄun?",
+    "Znate li stvarne IT troškove po usluzi ili aplikaciji?",
+    "Imate li poteškoća s opravdavanjem IT troškova poslovnom dijelu tvrtke?",
+    "Trebate li optimizirati svoj IT proračun?",
     "Planirate li IT ulaganja bez jasnog uvida u ROI?"
    ],
    "differentiators": [
-    "VodeÄ‡a TBM platforma u industriji",
-    "Gotovi modeli troÅ¡kova",
-    "Nadzorne ploÄe za upravu",
+    "Vodeća TBM platforma u industriji",
+    "Gotovi modeli troškova",
+    "Nadzorne ploče za upravu",
     "Dokazana metodologija"
    ]
   },
   "cloudability": {
-   "desc": "Platforma za upravljanje i optimizaciju troÅ¡kova oblaka za okruÅ¾enja s viÅ¡e oblaka.",
-   "value": "Smanjuje rasipanje u oblaku za 30%, omoguÄ‡uje raspodjelu troÅ¡kova i chargeback te predviÄ‘anje troÅ¡kova oblaka.",
+   "desc": "Platforma za upravljanje i optimizaciju troškova oblaka za okruženja s više oblaka.",
+   "value": "Smanjuje rasipanje u oblaku za 30%, omogućuje raspodjelu troškova i chargeback te predviđanje troškova oblaka.",
    "questions": [
-    "Rastu li vaÅ¡i raÄuni za oblak neoÄekivano?",
-    "Trebate li raspodijeliti troÅ¡kove oblaka po poslovnim jedinicama?",
-    "Koristite li viÅ¡e pruÅ¾atelja oblaÄnih usluga?",
-    "Imate li neiskoriÅ¡tene ili nedovoljno iskoriÅ¡tene oblaÄne resurse?"
+    "Rastu li vaši računi za oblak neočekivano?",
+    "Trebate li raspodijeliti troškove oblaka po poslovnim jedinicama?",
+    "Koristite li više pružatelja oblačnih usluga?",
+    "Imate li neiskorištene ili nedovoljno iskorištene oblačne resurse?"
    ],
    "differentiators": [
-    "PodrÅ¡ka za viÅ¡e oblaka",
+    "Podrška za više oblaka",
     "Automatizirane preporuke",
-    "MoguÄ‡nosti chargebacka",
+    "Mogućnosti chargebacka",
     "Integracija s Apptio TBM"
    ]
   },
   "guardium": {
-   "desc": "Platforma za sigurnost i zaÅ¡titu podataka za otkrivanje, klasifikaciju i zaÅ¡titu osjetljivih podataka.",
-   "value": "Osigurava usklaÄ‘enost s propisima o podacima, sprjeÄava povrede podataka i pruÅ¾a potpuni nadzor aktivnosti nad podacima.",
+   "desc": "Platforma za sigurnost i zaštitu podataka za otkrivanje, klasifikaciju i zaštitu osjetljivih podataka.",
+   "value": "Osigurava usklađenost s propisima o podacima, sprječava povrede podataka i pruža potpuni nadzor aktivnosti nad podacima.",
    "questions": [
     "Pohranjujete li osjetljive podatke o klijentima ili financijske podatke?",
-    "PodlijeÅ¾ete li propisima o privatnosti podataka (GDPR, CCPA)?",
+    "Podliježete li propisima o privatnosti podataka (GDPR, CCPA)?",
     "Jeste li imali sigurnosnih incidenata povezanih s podacima?",
     "Trebate li nadzirati pristup bazama podataka i aktivnosti u njima?"
    ],
    "differentiators": [
     "Nadzor u stvarnom vremenu",
-    "Automatizirano izvjeÅ¡Ä‡ivanje o usklaÄ‘enosti",
+    "Automatizirano izvješćivanje o usklađenosti",
     "Otkrivanje i klasifikacija podataka",
-    "PodrÅ¡ka za 25+ vrsta baza podataka"
+    "Podrška za 25+ vrsta baza podataka"
    ]
   },
   "verify": {
    "desc": "Platforma za upravljanje identitetima i pristupom za sigurnu autentifikaciju i autorizaciju korisnika.",
-   "value": "Smanjuje sigurnosne rizike za 60%, poboljÅ¡ava korisniÄko iskustvo uz SSO i osigurava usklaÄ‘enost s pravilima pristupa.",
+   "value": "Smanjuje sigurnosne rizike za 60%, poboljšava korisničko iskustvo uz SSO i osigurava usklađenost s pravilima pristupa.",
    "questions": [
-    "Pristupaju li korisnici veÄ‡em broju aplikacija s razliÄitim lozinkama?",
-    "Brine li vas neovlaÅ¡teni pristup?",
-    "Trebate li viÅ¡efaktorsku autentifikaciju?",
-    "Upravljate li korisniÄkim pristupom ruÄno?"
+    "Pristupaju li korisnici većem broju aplikacija s različitim lozinkama?",
+    "Brine li vas neovlašteni pristup?",
+    "Trebate li višefaktorsku autentifikaciju?",
+    "Upravljate li korisničkim pristupom ručno?"
    ],
    "differentiators": [
     "Autentifikacija temeljena na riziku",
     "Prilagodljiva kontrola pristupa",
-    "PodrÅ¡ka za hibridni oblak",
+    "Podrška za hibridni oblak",
     "FIDO2 certifikacija"
    ]
   },
   "vault": {
-   "desc": "Platforma za upravljanje tajnama za zaÅ¡titu, pohranu i kontrolu pristupa tokenima, lozinkama i certifikatima.",
-   "value": "Uklanja tajne zapisane u kodu, pruÅ¾a centralizirano upravljanje tajnama i omoguÄ‡uje automatiziranu rotaciju tajni.",
+   "desc": "Platforma za upravljanje tajnama za zaštitu, pohranu i kontrolu pristupa tokenima, lozinkama i certifikatima.",
+   "value": "Uklanja tajne zapisane u kodu, pruža centralizirano upravljanje tajnama i omogućuje automatiziranu rotaciju tajni.",
    "questions": [
     "Jesu li vjerodajnice pohranjene u kodu ili konfiguracijskim datotekama?",
-    "Trebate li upravljati API kljuÄevima i certifikatima?",
-    "Brine li vas nekontrolirano Å¡irenje tajni?",
+    "Trebate li upravljati API ključevima i certifikatima?",
+    "Brine li vas nekontrolirano širenje tajni?",
     "Trebate li redovito rotirati tajne?"
    ],
    "differentiators": [
-    "DinamiÄko generiranje tajni",
+    "Dinamičko generiranje tajni",
     "Automatizirana rotacija",
     "Revizijski zapisi",
-    "PodrÅ¡ka za viÅ¡e oblaka"
+    "Podrška za više oblaka"
    ]
   },
   "wxai": {
-   "desc": "AI studio za poduzeÄ‡a za treniranje, validaciju i implementaciju temeljnih modela i modela strojnog uÄenja.",
-   "value": "Ubrzava razvoj AI-ja za 70%, smanjuje troÅ¡kove treniranja modela i omoguÄ‡uje odgovorno upravljanje AI-jem.",
+   "desc": "AI studio za poduzeća za treniranje, validaciju i implementaciju temeljnih modela i modela strojnog učenja.",
+   "value": "Ubrzava razvoj AI-ja za 70%, smanjuje troškove treniranja modela i omogućuje odgovorno upravljanje AI-jem.",
    "questions": [
-    "Å½elite li razvijati AI aplikacije?",
+    "Želite li razvijati AI aplikacije?",
     "Trebate li trenirati vlastite AI modele?",
-    "Brinu li vas pristranost i objaÅ¡njivost AI-ja?",
-    "Å½elite li iskoristiti temeljne modele za svoje sluÄajeve uporabe?"
+    "Brinu li vas pristranost i objašnjivost AI-ja?",
+    "Želite li iskoristiti temeljne modele za svoje slučajeve uporabe?"
    ],
    "differentiators": [
-    "Temeljni modeli za poduzeÄ‡a",
-    "UgraÄ‘eno upravljanje AI-jem",
+    "Temeljni modeli za poduzeća",
+    "Ugrađeno upravljanje AI-jem",
     "Hibridna implementacija",
     "Kompatibilnost s otvorenim kodom"
    ]
   },
   "wxdata": {
-   "desc": "Otvorena lakehouse platforma za pristup podacima i njihovo dijeljenje u hibridnim oblaÄnim okruÅ¾enjima.",
-   "value": "Smanjuje troÅ¡kove skladiÅ¡ta podataka za 50%, omoguÄ‡uje upite nad viÅ¡e izvora podataka i pruÅ¾a otvorenu podatkovnu arhitekturu.",
+   "desc": "Otvorena lakehouse platforma za pristup podacima i njihovo dijeljenje u hibridnim oblačnim okruženjima.",
+   "value": "Smanjuje troškove skladišta podataka za 50%, omogućuje upite nad više izvora podataka i pruža otvorenu podatkovnu arhitekturu.",
    "questions": [
-    "Upravljate li podacima u viÅ¡e izoliranih silosa?",
-    "Jesu li troÅ¡kovi skladiÅ¡ta podataka previsoki?",
-    "Trebate li izvrÅ¡avati upite nad podacima u razliÄitim sustavima za pohranu?",
-    "Å½elite li modernizirati svoju podatkovnu arhitekturu?"
+    "Upravljate li podacima u više izoliranih silosa?",
+    "Jesu li troškovi skladišta podataka previsoki?",
+    "Trebate li izvršavati upite nad podacima u različitim sustavima za pohranu?",
+    "Želite li modernizirati svoju podatkovnu arhitekturu?"
    ],
    "differentiators": [
     "Otvorena lakehouse arhitektura",
-    "Upiti nad viÅ¡e izvora",
-    "PodrÅ¡ka za hibridni oblak",
+    "Upiti nad više izvora",
+    "Podrška za hibridni oblak",
     "Isplativa pohrana"
    ]
   },
   "wxdi": {
-   "desc": "Katalog podataka i platforma za upravljanje podacima temeljeni na AI-ju za otkrivanje, razumijevanje i upravljanje podacima poduzeÄ‡a.",
-   "value": "SkraÄ‡uje vrijeme pronalaÅ¾enja podataka za 80%, poboljÅ¡ava kvalitetu podataka i osigurava usklaÄ‘enost i praÄ‡enje podrijetla podataka.",
+   "desc": "Katalog podataka i platforma za upravljanje podacima temeljeni na AI-ju za otkrivanje, razumijevanje i upravljanje podacima poduzeća.",
+   "value": "Skraćuje vrijeme pronalaženja podataka za 80%, poboljšava kvalitetu podataka i osigurava usklađenost i praćenje podrijetla podataka.",
    "questions": [
-    "Imaju li korisnici poteÅ¡koÄ‡a s pronalaÅ¾enjem potrebnih podataka?",
+    "Imaju li korisnici poteškoća s pronalaženjem potrebnih podataka?",
     "Je li kvaliteta podataka problem?",
     "Trebate li pratiti podrijetlo podataka?",
-    "PodlijeÅ¾ete li propisima o upravljanju podacima?"
+    "Podliježete li propisima o upravljanju podacima?"
    ],
    "differentiators": [
     "Otkrivanje temeljeno na AI-ju",
     "Automatizirana kvaliteta podataka",
-    "Potpuno praÄ‡enje podrijetla",
+    "Potpuno praćenje podrijetla",
     "Integrirano upravljanje"
    ]
   },
   "wxdint": {
-   "desc": "Platforma za integraciju podataka za premjeÅ¡tanje i transformaciju podataka u hibridnim oblaÄnim okruÅ¾enjima.",
-   "value": "Ubrzava integraciju podataka za 60%, podrÅ¾ava obradu u stvarnom vremenu i skupnu obradu te pruÅ¾a moguÄ‡nosti za kvalitetu podataka.",
+   "desc": "Platforma za integraciju podataka za premještanje i transformaciju podataka u hibridnim oblačnim okruženjima.",
+   "value": "Ubrzava integraciju podataka za 60%, podržava obradu u stvarnom vremenu i skupnu obradu te pruža mogućnosti za kvalitetu podataka.",
    "questions": [
-    "Trebate li redovito premjeÅ¡tati podatke izmeÄ‘u sustava?",
-    "Transformirate li podatke ruÄno?",
+    "Trebate li redovito premještati podatke između sustava?",
+    "Transformirate li podatke ručno?",
     "Trebate li integraciju podataka u stvarnom vremenu?",
-    "UtjeÄu li problemi s kvalitetom podataka na vaÅ¡e poslovanje?"
+    "Utječu li problemi s kvalitetom podataka na vaše poslovanje?"
    ],
    "differentiators": [
     "Integracija u hibridnom oblaku",
     "Stvarno vrijeme i skupna obrada",
-    "UgraÄ‘ena kvaliteta podataka",
-    "Low-code suÄelje"
+    "Ugrađena kvaliteta podataka",
+    "Low-code sučelje"
    ]
   },
   "wxgov": {
-   "desc": "Platforma za upravljanje AI-jem za upravljanje Å¾ivotnim ciklusom AI modela, osiguravanje usklaÄ‘enosti i nadzor performansi modela.",
-   "value": "Osigurava usklaÄ‘enost i etiÄnost AI-ja, smanjuje rizike AI-ja i pruÅ¾a potpunu transparentnost AI modela.",
+   "desc": "Platforma za upravljanje AI-jem za upravljanje životnim ciklusom AI modela, osiguravanje usklađenosti i nadzor performansi modela.",
+   "value": "Osigurava usklađenost i etičnost AI-ja, smanjuje rizike AI-ja i pruža potpunu transparentnost AI modela.",
    "questions": [
     "Implementirate li AI modele u produkciju?",
-    "Trebate li osigurati pravednost i objaÅ¡njivost AI-ja?",
+    "Trebate li osigurati pravednost i objašnjivost AI-ja?",
     "Brine li vas odstupanje (drift) AI modela?",
     "Trebate li se uskladiti s propisima o AI-ju?"
    ],
    "differentiators": [
-    "Cijeli Å¾ivotni ciklus AI-ja",
+    "Cijeli životni ciklus AI-ja",
     "Otkrivanje pristranosti",
     "Nadzor modela",
-    "Regulatorna usklaÄ‘enost"
+    "Regulatorna usklađenost"
    ]
   },
   "wxorch": {
    "desc": "Platforma za automatizaciju temeljena na AI-ju za izradu i implementaciju inteligentnih tijekova rada i digitalnih asistenata.",
-   "value": "Automatizira ponavljajuÄ‡e zadatke za 80%, poveÄ‡ava produktivnost zaposlenika i pruÅ¾a konverzacijska AI suÄelja.",
+   "value": "Automatizira ponavljajuće zadatke za 80%, povećava produktivnost zaposlenika i pruža konverzacijska AI sučelja.",
    "questions": [
-    "TroÅ¡e li zaposlenici vrijeme na ponavljajuÄ‡e zadatke?",
-    "Å½elite li izraditi chatbotove ili virtualne asistente?",
-    "Trebate li automatizirati poslovne procese pomoÄ‡u AI-ja?",
-    "Å½elite li poveÄ‡ati produktivnost zaposlenika?"
+    "Troše li zaposlenici vrijeme na ponavljajuće zadatke?",
+    "Želite li izraditi chatbotove ili virtualne asistente?",
+    "Trebate li automatizirati poslovne procese pomoću AI-ja?",
+    "Želite li povećati produktivnost zaposlenika?"
    ],
    "differentiators": [
     "Automatizacija temeljena na AI-ju",
-    "SuÄelje na prirodnom jeziku",
-    "Gotove vjeÅ¡tine",
+    "Sučelje na prirodnom jeziku",
+    "Gotove vještine",
     "Integracija s poslovnim sustavima"
    ]
   },
   "ibm_bob": {
-   "desc": "AI programerski partner koji ubrzava razvoj softvera, modernizaciju aplikacija i pisanje automatizacijskih skripti u modernim i naslijeÄ‘enim jezicima, ukljuÄujuÄ‡i Java, Python, RPG, COBOL i PL/SQL â€“ s agentskim moguÄ‡nostima koje vode kod od dizajna do produkcije.",
-   "value": "SkraÄ‡uje razvojne zadatke s tjedana na sate, a Premium Packages donose duboku specijalizaciju za modernizaciju okruÅ¾enja IBM i, Z i Java â€“ uz ugraÄ‘eno skeniranje tajni koje sigurnost pomiÄe na sam poÄetak razvoja od prvog dana.",
+   "desc": "AI programerski partner koji ubrzava razvoj softvera, modernizaciju aplikacija i pisanje automatizacijskih skripti u modernim i naslijeđenim jezicima, uključujući Java, Python, RPG, COBOL i PL/SQL – s agentskim mogućnostima koje vode kod od dizajna do produkcije.",
+   "value": "Skraćuje razvojne zadatke s tjedana na sate, a Premium Packages donose duboku specijalizaciju za modernizaciju okruženja IBM i, Z i Java – uz ugrađeno skeniranje tajni koje sigurnost pomiče na sam početak razvoja od prvog dana.",
    "questions": [
-    "TroÅ¡e li developeri previÅ¡e vremena na pisanje ponavljajuÄ‡eg (boilerplate) koda?",
-    "Å½elite li ubrzati razvoj aplikacija?",
-    "Koristite li naslijeÄ‘ene RPG, COBOL ili PL/SQL aplikacije koje treba modernizirati?",
+    "Troše li developeri previše vremena na pisanje ponavljajućeg (boilerplate) koda?",
+    "Želite li ubrzati razvoj aplikacija?",
+    "Koristite li naslijeđene RPG, COBOL ili PL/SQL aplikacije koje treba modernizirati?",
     "Trebate li ubrzati razvoj agenata i alata za watsonx Orchestrate?"
    ],
    "differentiators": [
     "Agentski SDLC od dizajna do produkcije",
-    "Premium Packages za modernizaciju okruÅ¾enja IBM i, Z i Java",
-    "UgraÄ‘eno skeniranje tajni i sigurnost od samog poÄetka kodiranja",
-    "Dubinsko poznavanje naslijeÄ‘enih jezika, ukljuÄujuÄ‡i RPG, COBOL i PL/SQL"
+    "Premium Packages za modernizaciju okruženja IBM i, Z i Java",
+    "Ugrađeno skeniranje tajni i sigurnost od samog početka kodiranja",
+    "Dubinsko poznavanje naslijeđenih jezika, uključujući RPG, COBOL i PL/SQL"
    ]
   },
   "confluent": {
-   "desc": "Streaming platforma na razini poduzeÄ‡a temeljena na tehnologiji Kafka, dostupna kao Confluent Cloud ili u samostalno upravljanoj izvedbi, koja sluÅ¾i kao podatkovna okosnica u stvarnom vremenu za IBM rjeÅ¡enja za hibridnu integraciju, podatke i AI te modernizaciju mainframea.",
-   "value": "Djeluje kao univerzalna streaming okosnica koja povezuje IBM platforme za integraciju, infrastrukturu i AI â€“ spaja naslijeÄ‘enu razmjenu poruka temeljenu na MQ s Kafka tokovima dogaÄ‘aja u stvarnom vremenu, napaja watsonx cjevovode i omoguÄ‡uje automatizaciju voÄ‘enu dogaÄ‘ajima na razini poduzeÄ‡a.",
+   "desc": "Streaming platforma na razini poduzeća temeljena na tehnologiji Kafka, dostupna kao Confluent Cloud ili u samostalno upravljanoj izvedbi, koja služi kao podatkovna okosnica u stvarnom vremenu za IBM rješenja za hibridnu integraciju, podatke i AI te modernizaciju mainframea.",
+   "value": "Djeluje kao univerzalna streaming okosnica koja povezuje IBM platforme za integraciju, infrastrukturu i AI – spaja naslijeđenu razmjenu poruka temeljenu na MQ s Kafka tokovima događaja u stvarnom vremenu, napaja watsonx cjevovode i omogućuje automatizaciju vođenu događajima na razini poduzeća.",
    "questions": [
-    "Trebate li obraÄ‘ivati podatke u stvarnom vremenu?",
-    "Gradite li arhitekture voÄ‘ene dogaÄ‘ajima?",
-    "Imate li viÅ¡e sustava koji moraju kontinuirano dijeliti podatke?",
+    "Trebate li obrađivati podatke u stvarnom vremenu?",
+    "Gradite li arhitekture vođene događajima?",
+    "Imate li više sustava koji moraju kontinuirano dijeliti podatke?",
     "Imate li uska grla u podatkovnim cjevovodima?",
-    "Koristite li IBM MQ i Å¾elite li ga povezati s arhitekturama za streaming u stvarnom vremenu?",
+    "Koristite li IBM MQ i želite li ga povezati s arhitekturama za streaming u stvarnom vremenu?",
     "Trebate li prenositi podatke s IBM Z ili mainframe sustava u cloud-native aplikacije?"
    ],
    "differentiators": [
-    "StrateÅ¡ko partnerstvo s IBM-om â€“ certificirano za hibridni oblak i IBM integracijski stog",
-    "MQ most â€“ izvorno povezuje naslijeÄ‘enu razmjenu poruka IBM MQ s Kafka tokovima dogaÄ‘aja",
+    "Strateško partnerstvo s IBM-om – certificirano za hibridni oblak i IBM integracijski stog",
+    "MQ most – izvorno povezuje naslijeđenu razmjenu poruka IBM MQ s Kafka tokovima događaja",
     "Napaja cjevovode watsonx.ai i watsonx.data streaming podacima u stvarnom vremenu",
-    "Potpuni Kafka ekosustav s podrÅ¡kom za poduzeÄ‡a te komponentama RBAC i Schema Registry"
+    "Potpuni Kafka ekosustav s podrškom za poduzeća te komponentama RBAC i Schema Registry"
    ]
   },
   "ibm_pa": {
-   "desc": "Platforma za financijsko planiranje i analizu temeljena na AI-ju za samousluÅ¾no budÅ¾etiranje, predviÄ‘anje i modeliranje scenarija. OmoguÄ‡uje financijskim timovima konsolidaciju podataka, izradu dinamiÄkih modela i suradnju na financijskom planiranju u cijelom poduzeÄ‡u pomoÄ‡u mehanizma za izraÄune u memoriji.",
-   "value": "SkraÄ‡uje ciklus planiranja za 60%, poboljÅ¡ava toÄnost predviÄ‘anja za 30% i osnaÅ¾uje financijske timove samousluÅ¾nom analitikom i modeliranjem scenarija pomoÄ‡u AI-ja â€“ uz uklanjanje ovisnosti o proraÄunskim tablicama na razini poduzeÄ‡a.",
+   "desc": "Platforma za financijsko planiranje i analizu temeljena na AI-ju za samouslužno budžetiranje, predviđanje i modeliranje scenarija. Omogućuje financijskim timovima konsolidaciju podataka, izradu dinamičkih modela i suradnju na financijskom planiranju u cijelom poduzeću pomoću mehanizma za izračune u memoriji.",
+   "value": "Skraćuje ciklus planiranja za 60%, poboljšava točnost predviđanja za 30% i osnažuje financijske timove samouslužnom analitikom i modeliranjem scenarija pomoću AI-ja – uz uklanjanje ovisnosti o proračunskim tablicama na razini poduzeća.",
    "questions": [
-    "Zahtijevaju li vaÅ¡i procesi budÅ¾etiranja i predviÄ‘anja mnogo ruÄnog rada ili se temelje na proraÄunskim tablicama?",
-    "Trebate li bolju suradnju izmeÄ‘u financijskog odjela i poslovnih jedinica?",
-    "Imate li poteÅ¡koÄ‡a s toÄnoÅ¡Ä‡u predviÄ‘anja ili brzinom planiranja scenarija?",
-    "Trebate li konsolidirati financijske podatke iz viÅ¡e izvornih sustava?"
+    "Zahtijevaju li vaši procesi budžetiranja i predviđanja mnogo ručnog rada ili se temelje na proračunskim tablicama?",
+    "Trebate li bolju suradnju između financijskog odjela i poslovnih jedinica?",
+    "Imate li poteškoća s točnošću predviđanja ili brzinom planiranja scenarija?",
+    "Trebate li konsolidirati financijske podatke iz više izvornih sustava?"
    ],
    "differentiators": [
-    "TM1 mehanizam za izraÄune u memoriji za trenutaÄno viÅ¡edimenzionalno modeliranje",
-    "PredviÄ‘anje i otkrivanje anomalija temeljeni na AI-ju",
-    "SamoposluÅ¾ivanje za financijske timove uz izradu modela bez kodiranja",
+    "TM1 mehanizam za izračune u memoriji za trenutačno višedimenzionalno modeliranje",
+    "Predviđanje i otkrivanje anomalija temeljeni na AI-ju",
+    "Samoposluživanje za financijske timove uz izradu modela bez kodiranja",
     "Duboka integracija s IBM watsonx ekosustavom za podatke i analitiku"
    ]
   },
   "linuxone": {
-   "desc": "Linux posluÅ¾iteljska platforma za poduzeÄ‡a koja pruÅ¾a sigurnost, skalabilnost i pouzdanost za kljuÄna radna optereÄ‡enja.",
-   "value": "Smanjuje infrastrukturni otisak za 75%, pruÅ¾a raspoloÅ¾ivost od 99,999% i vodeÄ‡u sigurnost u industriji.",
+   "desc": "Linux poslužiteljska platforma za poduzeća koja pruža sigurnost, skalabilnost i pouzdanost za ključna radna opterećenja.",
+   "value": "Smanjuje infrastrukturni otisak za 75%, pruža raspoloživost od 99,999% i vodeću sigurnost u industriji.",
    "questions": [
-    "Imate li kljuÄna Linux radna optereÄ‡enja?",
-    "Brinu li vas sigurnost i usklaÄ‘enost?",
-    "Trebate li konsolidirati Linux posluÅ¾itelje?",
-    "Å½elite li smanjiti otisak podatkovnog centra?"
+    "Imate li ključna Linux radna opterećenja?",
+    "Brinu li vas sigurnost i usklađenost?",
+    "Trebate li konsolidirati Linux poslužitelje?",
+    "Želite li smanjiti otisak podatkovnog centra?"
    ],
    "differentiators": [
-    "NajviÅ¡a sigurnosna certifikacija",
+    "Najviša sigurnosna certifikacija",
     "Iznimno visok omjer konsolidacije",
-    "Sveobuhvatno Å¡ifriranje",
-    "RaspoloÅ¾ivost od 99,999%"
+    "Sveobuhvatno šifriranje",
+    "Raspoloživost od 99,999%"
    ]
   },
   "power": {
-   "desc": "PosluÅ¾iteljska platforma za poduzeÄ‡a optimizirana za podatkovno intenzivna radna optereÄ‡enja, AI i hibridni oblak.",
-   "value": "PruÅ¾a 2-3 puta bolje performanse po jezgri, smanjuje TCO za 40% i nudi ugraÄ‘enu virtualizaciju.",
+   "desc": "Poslužiteljska platforma za poduzeća optimizirana za podatkovno intenzivna radna opterećenja, AI i hibridni oblak.",
+   "value": "Pruža 2-3 puta bolje performanse po jezgri, smanjuje TCO za 40% i nudi ugrađenu virtualizaciju.",
    "questions": [
     "Koristite li SAP, Oracle ili druge poslovne aplikacije?",
-    "TraÅ¾ite li bolje performanse za AI radna optereÄ‡enja?",
-    "Trebate li visoku dostupnost za kljuÄne aplikacije?",
-    "Brinu li vas troÅ¡kovi licenciranja na x86?"
+    "Tražite li bolje performanse za AI radna opterećenja?",
+    "Trebate li visoku dostupnost za ključne aplikacije?",
+    "Brinu li vas troškovi licenciranja na x86?"
    ],
    "differentiators": [
     "Vrhunske performanse po jezgri",
-    "UgraÄ‘eno AI ubrzanje",
+    "Ugrađeno AI ubrzanje",
     "Migracija particija bez prekida rada (Live Partition Mobility)",
-    "NiÅ¾i troÅ¡kovi licenciranja softvera"
+    "Niži troškovi licenciranja softvera"
    ]
   },
   "aix": {
-   "desc": "Unix operativni sustav za poduzeÄ‡a za platformu Power Systems s naprednim znaÄajkama virtualizacije i sigurnosti.",
-   "value": "PruÅ¾a 99,999% vremena rada, omoguÄ‡uje migraciju particija bez prekida rada i osigurava vrhunsko upravljanje radnim optereÄ‡enjima.",
+   "desc": "Unix operativni sustav za poduzeća za platformu Power Systems s naprednim značajkama virtualizacije i sigurnosti.",
+   "value": "Pruža 99,999% vremena rada, omogućuje migraciju particija bez prekida rada i osigurava vrhunsko upravljanje radnim opterećenjima.",
    "questions": [
-    "Koristite li Unix radna optereÄ‡enja?",
-    "Trebate li napredne moguÄ‡nosti virtualizacije?",
-    "TraÅ¾ite li stabilan, siguran OS za kljuÄna radna optereÄ‡enja?",
+    "Koristite li Unix radna opterećenja?",
+    "Trebate li napredne mogućnosti virtualizacije?",
+    "Tražite li stabilan, siguran OS za ključna radna opterećenja?",
     "Trebate li smanjiti planirane prekide rada?"
    ],
    "differentiators": [
     "40+ godina stabilnosti",
     "Migracija particija bez prekida rada (Live Partition Mobility)",
-    "Particije radnih optereÄ‡enja (WPAR)",
+    "Particije radnih opterećenja (WPAR)",
     "Binarna kompatibilnost"
    ]
   },
   "ibmi": {
-   "desc": "Integrirani operativni sustav za platformu Power Systems s ugraÄ‘enom bazom podataka i sigurnoÅ¡Ä‡u za poslovne aplikacije.",
-   "value": "Smanjuje administrativno optereÄ‡enje za 60%, pruÅ¾a integriranu sigurnost i osigurava kontinuitet poslovanja.",
+   "desc": "Integrirani operativni sustav za platformu Power Systems s ugrađenom bazom podataka i sigurnošću za poslovne aplikacije.",
+   "value": "Smanjuje administrativno opterećenje za 60%, pruža integriranu sigurnost i osigurava kontinuitet poslovanja.",
    "questions": [
-    "Koristite li poslovno kljuÄne aplikacije?",
-    "Å½elite li modernizirati naslijeÄ‘ene aplikacije?",
-    "Trebate li integrirane moguÄ‡nosti baze podataka?",
-    "Brinu li vas sigurnost i usklaÄ‘enost?"
+    "Koristite li poslovno ključne aplikacije?",
+    "Želite li modernizirati naslijeđene aplikacije?",
+    "Trebate li integrirane mogućnosti baze podataka?",
+    "Brinu li vas sigurnost i usklađenost?"
    ],
    "differentiators": [
     "Integrirana baza podataka",
@@ -534,141 +532,141 @@ window.I18N.hr = {
    ]
   },
   "linux_power": {
-   "desc": "Linux distribucije za poduzeÄ‡a optimizirane za arhitekturu Power Systems.",
-   "value": "PruÅ¾a vrhunske performanse za Linux radna optereÄ‡enja, omoguÄ‡uje besprijekornu integraciju s oblakom i nudi podrÅ¡ku za poduzeÄ‡a.",
+   "desc": "Linux distribucije za poduzeća optimizirane za arhitekturu Power Systems.",
+   "value": "Pruža vrhunske performanse za Linux radna opterećenja, omogućuje besprijekornu integraciju s oblakom i nudi podršku za poduzeća.",
    "questions": [
-    "Koristite li Linux radna optereÄ‡enja kojima su potrebne bolje performanse?",
-    "Å½elite li konsolidirati Linux infrastrukturu?",
-    "Trebate li Linux podrÅ¡ku na razini poduzeÄ‡a?",
-    "Koristite li radna optereÄ‡enja u kontejnerima?"
+    "Koristite li Linux radna opterećenja kojima su potrebne bolje performanse?",
+    "Želite li konsolidirati Linux infrastrukturu?",
+    "Trebate li Linux podršku na razini poduzeća?",
+    "Koristite li radna opterećenja u kontejnerima?"
    ],
    "differentiators": [
     "Vrhunske performanse",
     "Bolja konsolidacija",
-    "PodrÅ¡ka za poduzeÄ‡a",
+    "Podrška za poduzeća",
     "Optimizirano za kontejnere"
    ]
   },
   "ibm_tls": {
-   "desc": "Sveobuhvatna usluga odrÅ¾avanja, podrÅ¡ke i migracije na kraju Å¾ivotnog vijeka za hardver i softver. Upravlja cijelim Å¾ivotnim ciklusom IBM sustava i sustava drugih proizvoÄ‘aÄa od uvoÄ‘enja do povlaÄenja â€“ ukljuÄujuÄ‡i proaktivnu podrÅ¡ku, upravljanje zakrpama, nadogradnje i planirane tehnoloÅ¡ke prijelaze.",
-   "value": "Smanjuje neplanirane prekide rada za 95%, osigurava predvidljive troÅ¡kove Å¾ivotnog ciklusa infrastrukture i glatke tehnoloÅ¡ke prijelaze bez ikakvog prekida poslovanja â€“ uz vodeÄ‡e SLA-ove u industriji i proaktivne dijagnostiÄke moguÄ‡nosti.",
+   "desc": "Sveobuhvatna usluga održavanja, podrške i migracije na kraju životnog vijeka za hardver i softver. Upravlja cijelim životnim ciklusom IBM sustava i sustava drugih proizvođača od uvođenja do povlačenja – uključujući proaktivnu podršku, upravljanje zakrpama, nadogradnje i planirane tehnološke prijelaze.",
+   "value": "Smanjuje neplanirane prekide rada za 95%, osigurava predvidljive troškove životnog ciklusa infrastrukture i glatke tehnološke prijelaze bez ikakvog prekida poslovanja – uz vodeće SLA-ove u industriji i proaktivne dijagnostičke mogućnosti.",
    "questions": [
-    "Brine li vas podrÅ¡ka za kljuÄne IBM sustave na kraju Å¾ivotnog vijeka?",
-    "Trebate li predvidljivo upravljanje Å¾ivotnim ciklusom infrastrukture po fiksnoj cijeni?",
-    "Planirate li nadogradnje hardvera ili softvera i trebate li podrÅ¡ku pri migraciji?",
-    "Upravljate li okruÅ¾enjima s viÅ¡e proizvoÄ‘aÄa kojima je potreban jedan pruÅ¾atelj podrÅ¡ke?"
+    "Brine li vas podrška za ključne IBM sustave na kraju životnog vijeka?",
+    "Trebate li predvidljivo upravljanje životnim ciklusom infrastrukture po fiksnoj cijeni?",
+    "Planirate li nadogradnje hardvera ili softvera i trebate li podršku pri migraciji?",
+    "Upravljate li okruženjima s više proizvođača kojima je potreban jedan pružatelj podrške?"
    ],
    "differentiators": [
-    "Proaktivna dijagnostika i prediktivno sprjeÄavanje problema",
-    "Jedna kontaktna toÄka za IBM okruÅ¾enja i okruÅ¾enja drugih proizvoÄ‘aÄa",
-    "Besprijekorno planiranje migracije na kraju Å¾ivotnog vijeka bez prekida poslovanja",
-    "IsporuÄuje Arrow uz lokalnu struÄnost i inÅ¾enjere s IBM certifikatom"
+    "Proaktivna dijagnostika i prediktivno sprječavanje problema",
+    "Jedna kontaktna točka za IBM okruženja i okruženja drugih proizvođača",
+    "Besprijekorno planiranje migracije na kraju životnog vijeka bez prekida poslovanja",
+    "Isporučuje Arrow uz lokalnu stručnost i inženjere s IBM certifikatom"
    ]
   },
   "flashsystem": {
-   "desc": "All-flash sustav za pohranu koji pruÅ¾a visoke performanse, pouzdanost i uÄinkovitost za poslovna radna optereÄ‡enja.",
-   "value": "PruÅ¾a latenciju ispod milisekunde, smanjuje otisak pohrane za 80% i osigurava raspoloÅ¾ivost od 99,9999%.",
+   "desc": "All-flash sustav za pohranu koji pruža visoke performanse, pouzdanost i učinkovitost za poslovna radna opterećenja.",
+   "value": "Pruža latenciju ispod milisekunde, smanjuje otisak pohrane za 80% i osigurava raspoloživost od 99,9999%.",
    "questions": [
     "Imate li aplikacije osjetljive na performanse?",
     "Ponestaje li vam kapaciteta za pohranu?",
-    "Trebate li smanjiti troÅ¡kove pohrane?",
+    "Trebate li smanjiti troškove pohrane?",
     "Brine li vas pouzdanost pohrane?"
    ],
    "differentiators": [
     "Latencija ispod milisekunde",
-    "RaspoloÅ¾ivost od 99,9999%",
+    "Raspoloživost od 99,9999%",
     "Jamstvo redukcije podataka",
-    "KibernetiÄka otpornost"
+    "Kibernetička otpornost"
    ]
   },
   "storage_control": {
    "desc": "Softver za upravljanje pohranom za nadzor, upravljanje i optimizaciju infrastrukture za pohranu.",
-   "value": "PruÅ¾a objedinjeno upravljanje pohranom, smanjuje vrijeme administracije pohrane za 50% i omoguÄ‡uje proaktivno rjeÅ¡avanje problema.",
+   "value": "Pruža objedinjeno upravljanje pohranom, smanjuje vrijeme administracije pohrane za 50% i omogućuje proaktivno rješavanje problema.",
    "questions": [
-    "Upravljate li s viÅ¡e sustava za pohranu?",
-    "TroÅ¡ite li previÅ¡e vremena na administraciju pohrane?",
+    "Upravljate li s više sustava za pohranu?",
+    "Trošite li previše vremena na administraciju pohrane?",
     "Trebate li bolji uvid u performanse pohrane?",
     "Imate li problema povezanih s pohranom?"
    ],
    "differentiators": [
-    "PodrÅ¡ka za viÅ¡e proizvoÄ‘aÄa",
+    "Podrška za više proizvođača",
     "Objedinjeno upravljanje",
     "Proaktivni nadzor",
     "Automatizirana dodjela resursa"
    ]
   },
   "storage_insights": {
-   "desc": "OblaÄna platforma za nadzor i analitiku pohrane za optimizaciju infrastrukture za pohranu.",
-   "value": "PruÅ¾a prediktivnu analitiku, smanjuje incidente povezane s pohranom za 40% i omoguÄ‡uje planiranje kapaciteta.",
+   "desc": "Oblačna platforma za nadzor i analitiku pohrane za optimizaciju infrastrukture za pohranu.",
+   "value": "Pruža prediktivnu analitiku, smanjuje incidente povezane s pohranom za 40% i omogućuje planiranje kapaciteta.",
    "questions": [
-    "Trebate li bolji uvid u iskoriÅ¡tenost pohrane?",
+    "Trebate li bolji uvid u iskorištenost pohrane?",
     "Planirate li nadogradnju kapaciteta pohrane?",
-    "Å½elite li predvidjeti probleme s pohranom prije nego Å¡to nastanu?",
-    "Upravljate li pohranom na viÅ¡e lokacija?"
+    "Želite li predvidjeti probleme s pohranom prije nego što nastanu?",
+    "Upravljate li pohranom na više lokacija?"
    ],
    "differentiators": [
     "Prediktivna analitika",
-    "OblaÄni SaaS",
-    "Uvid u viÅ¡e lokacija",
-    "PredviÄ‘anje kapaciteta"
+    "Oblačni SaaS",
+    "Uvid u više lokacija",
+    "Predviđanje kapaciteta"
    ]
   },
   "storage_virt": {
    "desc": "Softver za virtualizaciju pohrane za objedinjavanje i upravljanje heterogenim resursima za pohranu.",
-   "value": "Smanjuje troÅ¡kove pohrane za 30%, omoguÄ‡uje migraciju podataka bez prekida rada i pruÅ¾a objedinjeno upravljanje.",
+   "value": "Smanjuje troškove pohrane za 30%, omogućuje migraciju podataka bez prekida rada i pruža objedinjeno upravljanje.",
    "questions": [
-    "Koristite li pohranu viÅ¡e proizvoÄ‘aÄa?",
+    "Koristite li pohranu više proizvođača?",
     "Trebate li migrirati podatke bez prekida rada?",
-    "Å½elite li optimizirati iskoriÅ¡tenost pohrane?",
-    "Trebate li rasporeÄ‘ivati podatke po razinama na razliÄitim vrstama pohrane?"
+    "Želite li optimizirati iskorištenost pohrane?",
+    "Trebate li raspoređivati podatke po razinama na različitim vrstama pohrane?"
    ],
    "differentiators": [
-    "PodrÅ¡ka za viÅ¡e proizvoÄ‘aÄa",
+    "Podrška za više proizvođača",
     "Migracija bez prekida rada",
-    "Automatizirano rasporeÄ‘ivanje po razinama",
-    "PodrÅ¡ka za blokovnu i datoteÄnu pohranu"
+    "Automatizirano raspoređivanje po razinama",
+    "Podrška za blokovnu i datotečnu pohranu"
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion â€“ sloj trajne pohrane izvorno izgraÄ‘en za kontejnere, za okruÅ¾enja Red Hat OpenShift i Kubernetes. Napomena: ovo je softverski proizvod za pohranu, razliÄit od proizvoda IBM Fusion HCI, zasebne hiperkonvergirane infrastrukturne platforme koja koristi Storage Fusion kao svoju komponentu za pohranu.",
-   "value": "Pojednostavnjuje trajnu pohranu za radna optereÄ‡enja u kontejnerima, omoguÄ‡uje mobilnost podataka meÄ‘u OpenShift klasterima i izvorno se integrira s platformom IBM Fusion HCI za potpun konvergirani infrastrukturni stog.",
+   "desc": "IBM Storage Fusion – sloj trajne pohrane izvorno izgrađen za kontejnere, za okruženja Red Hat OpenShift i Kubernetes. Napomena: ovo je softverski proizvod za pohranu, različit od proizvoda IBM Fusion HCI, zasebne hiperkonvergirane infrastrukturne platforme koja koristi Storage Fusion kao svoju komponentu za pohranu.",
+   "value": "Pojednostavnjuje trajnu pohranu za radna opterećenja u kontejnerima, omogućuje mobilnost podataka među OpenShift klasterima i izvorno se integrira s platformom IBM Fusion HCI za potpun konvergirani infrastrukturni stog.",
    "questions": [
     "Koristite li aplikacije u kontejnerima?",
     "Trebate li trajnu pohranu za Kubernetes?",
     "Koristite li Red Hat OpenShift?",
-    "Trebate li premjeÅ¡tati podatke izmeÄ‘u kontejnerskih okruÅ¾enja?"
+    "Trebate li premještati podatke između kontejnerskih okruženja?"
    ],
    "differentiators": [
     "Izvorno za OpenShift",
     "Mobilnost podataka",
     "Pojednostavnjeno upravljanje",
-    "PodrÅ¡ka za poduzeÄ‡a"
+    "Podrška za poduzeća"
    ]
   },
   "storage_ceph": {
-   "desc": "Softverski definirana platforma za pohranu otvorenog koda za objektnu, blokovnu i datoteÄnu pohranu.",
-   "value": "Smanjuje troÅ¡kove pohrane za 50%, pruÅ¾a skalabilnu pohranu i uklanja vezanost uz dobavljaÄa.",
+   "desc": "Softverski definirana platforma za pohranu otvorenog koda za objektnu, blokovnu i datotečnu pohranu.",
+   "value": "Smanjuje troškove pohrane za 50%, pruža skalabilnu pohranu i uklanja vezanost uz dobavljača.",
    "questions": [
-    "TraÅ¾ite li isplativu pohranu?",
-    "Trebate li moguÄ‡nosti objektne pohrane?",
+    "Tražite li isplativu pohranu?",
+    "Trebate li mogućnosti objektne pohrane?",
     "Gradite li privatni oblak?",
-    "Å½elite li izbjeÄ‡i vezanost uz dobavljaÄa?"
+    "Želite li izbjeći vezanost uz dobavljača?"
    ],
    "differentiators": [
     "Otvoreni kod",
-    "Bez vezanosti uz dobavljaÄa",
+    "Bez vezanosti uz dobavljača",
     "Objedinjena pohrana",
     "Samooporavak"
    ]
   },
   "storage_scale": {
-   "desc": "Paralelni datoteÄni sustav visokih performansi za podatkovno intenzivna radna optereÄ‡enja i AI aplikacije.",
-   "value": "PruÅ¾a 10 puta brÅ¾i pristup podacima, omoguÄ‡uje globalno dijeljenje podataka i podrÅ¾ava rad u golemim razmjerima.",
+   "desc": "Paralelni datotečni sustav visokih performansi za podatkovno intenzivna radna opterećenja i AI aplikacije.",
+   "value": "Pruža 10 puta brži pristup podacima, omogućuje globalno dijeljenje podataka i podržava rad u golemim razmjerima.",
    "questions": [
-    "Imate li podatkovno intenzivna radna optereÄ‡enja?",
-    "PokreÄ‡ete li poslove treniranja AI/ML modela?",
-    "Trebate li dijeliti podatke izmeÄ‘u viÅ¡e lokacija?",
-    "Imate li problema s performansama datoteÄnog sustava?"
+    "Imate li podatkovno intenzivna radna opterećenja?",
+    "Pokrećete li poslove treniranja AI/ML modela?",
+    "Trebate li dijeliti podatke između više lokacija?",
+    "Imate li problema s performansama datotečnog sustava?"
    ],
    "differentiators": [
     "Dokazano na eksaskali",
@@ -678,212 +676,212 @@ window.I18N.hr = {
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite â€“ platforma za upravljanje odrÅ¾ivoÅ¡Ä‡u i ESG uÄinkom za praÄ‡enje podataka o energiji, ugljiku, vodi i otpadu te izradu regulatornih izvjeÅ¡Ä‡a o odrÅ¾ivosti.",
-   "value": "Automatizira prikupljanje ESG podataka u objektima i opskrbnim lancima, smanjuje napor potreban za izvjeÅ¡Ä‡ivanje o odrÅ¾ivosti za ~70% i omoguÄ‡uje usklaÄ‘enost s okvirima GRI, SASB, TCFD i CSRD.",
+   "desc": "IBM Envizi ESG Suite – platforma za upravljanje održivošću i ESG učinkom za praćenje podataka o energiji, ugljiku, vodi i otpadu te izradu regulatornih izvješća o održivosti.",
+   "value": "Automatizira prikupljanje ESG podataka u objektima i opskrbnim lancima, smanjuje napor potreban za izvješćivanje o održivosti za ~70% i omogućuje usklađenost s okvirima GRI, SASB, TCFD i CSRD.",
    "questions": [
-    "Imate li poteÅ¡koÄ‡a s prikupljanjem i konsolidacijom ESG podataka na svojim lokacijama i u opskrbnom lancu?",
-    "Trebate li izraÄ‘ivati izvjeÅ¡Ä‡a o odrÅ¾ivosti za regulatorne okvire poput CSRD ili TCFD?",
-    "PokuÅ¡avate li pratiti i smanjiti emisije ugljika u svom poslovanju?",
-    "Imate li ciljeve odrÅ¾ivosti, ali vam nedostaje uvid u podatke za mjerenje napretka?"
+    "Imate li poteškoća s prikupljanjem i konsolidacijom ESG podataka na svojim lokacijama i u opskrbnom lancu?",
+    "Trebate li izrađivati izvješća o održivosti za regulatorne okvire poput CSRD ili TCFD?",
+    "Pokušavate li pratiti i smanjiti emisije ugljika u svom poslovanju?",
+    "Imate li ciljeve održivosti, ali vam nedostaje uvid u podatke za mjerenje napretka?"
    ],
    "differentiators": [
-    "Gotova integracija s rjeÅ¡enjem Maximo za operativne podatke i podatke o imovini",
-    "UgraÄ‘eni okviri za regulatorno izvjeÅ¡Ä‡ivanje â€“ GRI, SASB, TCFD, CSRD",
-    "Kvaliteta podataka i otkrivanje anomalija uz pomoÄ‡ AI-ja",
+    "Gotova integracija s rješenjem Maximo za operativne podatke i podatke o imovini",
+    "Ugrađeni okviri za regulatorno izvješćivanje – GRI, SASB, TCFD, CSRD",
+    "Kvaliteta podataka i otkrivanje anomalija uz pomoć AI-ja",
     "Cloud-native SaaS s brzim ostvarenjem vrijednosti"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite â€“ obuhvaÄ‡a upravljanje zahtjevima (DOORS Next), upravljanje inÅ¾enjerskim tijekovima rada (EWM), upravljanje testiranjem (ETM) i inÅ¾enjerstvo temeljeno na modelima (Rhapsody) za sigurnosno kritiÄne i regulirane industrije.",
-   "value": "PruÅ¾a potpunu inÅ¾enjersku sljedivost od zahtjeva preko dizajna i razvoja do testiranja â€“ smanjuje dorade u reguliranim programima i podrÅ¾ava usklaÄ‘enost s normama ISO 26262, DO-178C i IEC 61508.",
+   "desc": "IBM Engineering Lifecycle Management Suite – obuhvaća upravljanje zahtjevima (DOORS Next), upravljanje inženjerskim tijekovima rada (EWM), upravljanje testiranjem (ETM) i inženjerstvo temeljeno na modelima (Rhapsody) za sigurnosno kritične i regulirane industrije.",
+   "value": "Pruža potpunu inženjersku sljedivost od zahtjeva preko dizajna i razvoja do testiranja – smanjuje dorade u reguliranim programima i podržava usklađenost s normama ISO 26262, DO-178C i IEC 61508.",
    "questions": [
-    "Trebate li potpunu sljedivost od zahtjeva do testiranja u sigurnosno kritiÄnim programima?",
-    "Razvijate li proizvode koji moraju biti usklaÄ‘eni s propisima za zrakoplovnu ili automobilsku industriju ili medicinske ureÄ‘aje?",
-    "Uzrokuju li zahtjevi za inÅ¾enjerske promjene dorade i prekoraÄenje rokova?",
-    "Upravljate li zahtjevima u viÅ¡e timova ili organizacija?"
+    "Trebate li potpunu sljedivost od zahtjeva do testiranja u sigurnosno kritičnim programima?",
+    "Razvijate li proizvode koji moraju biti usklađeni s propisima za zrakoplovnu ili automobilsku industriju ili medicinske uređaje?",
+    "Uzrokuju li zahtjevi za inženjerske promjene dorade i prekoračenje rokova?",
+    "Upravljate li zahtjevima u više timova ili organizacija?"
    ],
    "differentiators": [
-    "Potpun ALM paket od jednog dobavljaÄa â€“ zahtjevi, tijekovi rada, testiranje i modeliranje",
-    "Dubinska podrÅ¡ka za usklaÄ‘enost s ISO 26262, DO-178C, IEC 61508 i FDA 21 CFR Part 11",
-    "Izvorna AI integracija s alatom IBM Bob za upravljanje zahtjevima i generiranje koda uz pomoÄ‡ AI-ja",
-    "NajdugovjeÄnija IBM inÅ¾enjerska platforma s 30+ godina primjene u reguliranim industrijama"
+    "Potpun ALM paket od jednog dobavljača – zahtjevi, tijekovi rada, testiranje i modeliranje",
+    "Dubinska podrška za usklađenost s ISO 26262, DO-178C, IEC 61508 i FDA 21 CFR Part 11",
+    "Izvorna AI integracija s alatom IBM Bob za upravljanje zahtjevima i generiranje koda uz pomoć AI-ja",
+    "Najdugovječnija IBM inženjerska platforma s 30+ godina primjene u reguliranim industrijama"
    ]
   },
   "app_connect": {
-   "desc": "IBM App Connect â€“ low-code/no-code integracijska platforma za povezivanje aplikacija i automatizaciju tijekova rada pomoÄ‡u 200+ gotovih konektora, dostupna kao App Connect Professional i App Connect Enterprise.",
-   "value": "OmoguÄ‡uje poslovnim korisnicima i developerima izradu integracija za nekoliko sati umjesto tjedana â€“ ubrzava digitalnu transformaciju bez potrebe za dubinskom struÄnoÅ¡Ä‡u u integraciji.",
+   "desc": "IBM App Connect – low-code/no-code integracijska platforma za povezivanje aplikacija i automatizaciju tijekova rada pomoću 200+ gotovih konektora, dostupna kao App Connect Professional i App Connect Enterprise.",
+   "value": "Omogućuje poslovnim korisnicima i developerima izradu integracija za nekoliko sati umjesto tjedana – ubrzava digitalnu transformaciju bez potrebe za dubinskom stručnošću u integraciji.",
    "questions": [
     "Trebaju li poslovni timovi povezivati SaaS aplikacije bez pisanja koda?",
-    "Å½elite li smanjiti ovisnost o specijaliziranim integracijskim developerima?",
-    "Trebate li brzu isporuku integracija za oblaÄne i lokalne aplikacije?",
-    "Upravljate li prevelikim brojem veza toÄka-toÄka izmeÄ‘u sustava?"
+    "Želite li smanjiti ovisnost o specijaliziranim integracijskim developerima?",
+    "Trebate li brzu isporuku integracija za oblačne i lokalne aplikacije?",
+    "Upravljate li prevelikim brojem veza točka-točka između sustava?"
    ],
    "differentiators": [
-    "200+ gotovih konektora za SaaS, oblaÄne i lokalne aplikacije",
-    "Low-code i full-code pristup â€“ App Connect Professional i Enterprise",
-    "Sigurnost, upravljanje i revizijski trag na razini poduzeÄ‡a",
+    "200+ gotovih konektora za SaaS, oblačne i lokalne aplikacije",
+    "Low-code i full-code pristup – App Connect Professional i Enterprise",
+    "Sigurnost, upravljanje i revizijski trag na razini poduzeća",
     "Izvorna implementacija na platformi IBM Cloud i lokalno"
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera â€“ platforma za brzi prijenos velikih datoteka i skupova podataka pomoÄ‡u patentiranog protokola FASP, osmiÅ¡ljena za prijenos golemih datoteka na velike udaljenosti brzinom bliskom kapacitetu linije, bez obzira na mreÅ¾ne uvjete.",
-   "value": "Prenosi datoteke do 100 puta brÅ¾e od standardnog TCP/FTP prijenosa preko mreÅ¾a s visokom latencijom ili gubicima â€“ kljuÄno za medije, genomiku, znanosti o Å¾ivotu i svaki tijek rada koji ukljuÄuje premjeÅ¡tanje datoteka od viÅ¡e gigabajta.",
+   "desc": "IBM Aspera – platforma za brzi prijenos velikih datoteka i skupova podataka pomoću patentiranog protokola FASP, osmišljena za prijenos golemih datoteka na velike udaljenosti brzinom bliskom kapacitetu linije, bez obzira na mrežne uvjete.",
+   "value": "Prenosi datoteke do 100 puta brže od standardnog TCP/FTP prijenosa preko mreža s visokom latencijom ili gubicima – ključno za medije, genomiku, znanosti o životu i svaki tijek rada koji uključuje premještanje datoteka od više gigabajta.",
    "questions": [
     "Traju li prijenosi velikih datoteka preko WAN-a satima ili danima, a trebali bi trajati minutama?",
     "Distribuirate li velike medijske, genomske ili podatkovne datoteke globalnim partnerima ili lokacijama?",
-    "Blokiraju li spori prijenosi vaÅ¡e cjevovode za unos podataka ili migraciju?",
-    "Trebate li siguran prijenos velikih datoteka uz moguÄ‡nost revizije i zajamÄenu isporuku?"
+    "Blokiraju li spori prijenosi vaše cjevovode za unos podataka ili migraciju?",
+    "Trebate li siguran prijenos velikih datoteka uz mogućnost revizije i zajamčenu isporuku?"
    ],
    "differentiators": [
-    "Patentirani protokol FASP omoguÄ‡uje prijenos brzinom bliskom kapacitetu linije bez obzira na latenciju mreÅ¾e ili gubitak paketa",
-    "Potpuno AES-256 Å¡ifriranje uz cjelovit revizijski trag prijenosa",
-    "SnaÅ¾na prisutnost u sektorima medija i zabave, znanosti o Å¾ivotu i genomike",
+    "Patentirani protokol FASP omogućuje prijenos brzinom bliskom kapacitetu linije bez obzira na latenciju mreže ili gubitak paketa",
+    "Potpuno AES-256 šifriranje uz cjelovit revizijski trag prijenosa",
+    "Snažna prisutnost u sektorima medija i zabave, znanosti o životu i genomike",
     "Izvorna integracija s IBM Cloud i hibridna implementacija lokalno/u oblaku"
    ]
   },
   "kubecost": {
-   "desc": "IBM Kubecost â€“ platforma za nadzor i optimizaciju troÅ¡kova okruÅ¾enja Kubernetes koja pruÅ¾a uvid u potroÅ¡nju u stvarnom vremenu po imenskom prostoru, implementaciji, oznaci i timu u okruÅ¾enjima s viÅ¡e klastera.",
-   "value": "Daje inÅ¾enjerskim i financijskim timovima preciznu raspodjelu troÅ¡kova za Kubernetes i preporuke za optimizaciju veliÄine â€“ smanjuje rasipanje u oblaku prepoznavanjem neaktivnih i predimenzioniranih radnih optereÄ‡enja na razini kontejnera.",
+   "desc": "IBM Kubecost – platforma za nadzor i optimizaciju troškova okruženja Kubernetes koja pruža uvid u potrošnju u stvarnom vremenu po imenskom prostoru, implementaciji, oznaci i timu u okruženjima s više klastera.",
+   "value": "Daje inženjerskim i financijskim timovima preciznu raspodjelu troškova za Kubernetes i preporuke za optimizaciju veličine – smanjuje rasipanje u oblaku prepoznavanjem neaktivnih i predimenzioniranih radnih opterećenja na razini kontejnera.",
    "questions": [
-    "Imate li uvid u to koliko vas toÄno koÅ¡ta svako Kubernetes radno optereÄ‡enje ili tim?",
-    "Rastu li vaÅ¡i raÄuni za oblak brÅ¾e od vaÅ¡eg Kubernetes okruÅ¾enja?",
-    "MoÅ¾ete li toÄno raspodijeliti troÅ¡kove kontejnera po poslovnim jedinicama za chargeback?",
-    "Jeste li sigurni da su vaÅ¡a Kubernetes radna optereÄ‡enja ispravno dimenzionirana?"
+    "Imate li uvid u to koliko vas točno košta svako Kubernetes radno opterećenje ili tim?",
+    "Rastu li vaši računi za oblak brže od vašeg Kubernetes okruženja?",
+    "Možete li točno raspodijeliti troškove kontejnera po poslovnim jedinicama za chargeback?",
+    "Jeste li sigurni da su vaša Kubernetes radna opterećenja ispravno dimenzionirana?"
    ],
    "differentiators": [
-    "Izvorni model troÅ¡kova za Kubernetes s granularnoÅ¡Ä‡u na razini poda i imenskog prostora",
-    "Temelji se na otvorenom kodu uz IBM podrÅ¡ku za poduzeÄ‡a",
-    "Integracija s alatom Prometheus za podatke o troÅ¡kovima povezane s performansama",
+    "Izvorni model troškova za Kubernetes s granularnošću na razini poda i imenskog prostora",
+    "Temelji se na otvorenom kodu uz IBM podršku za poduzeća",
+    "Integracija s alatom Prometheus za podatke o troškovima povezane s performansama",
     "Preuzet od IBM-a i potpuno integriran u IBM portfelj za opservabilnost"
    ]
   },
   "ns1": {
-   "desc": "IBM NS1 Connect â€“ platforma za inteligentni DNS, upravljanje prometom i mreÅ¾nu povezanost koja pruÅ¾a autoritativni DNS s naprednim usmjeravanjem, upravljanjem prometom i infrastrukturom otpornom na DDoS napade.",
-   "value": "PruÅ¾a globalno vrijeme DNS odziva ispod 10 ms uz inteligentno usmjeravanje prometa â€“ smanjuje prekide rada aplikacija, poboljÅ¡ava performanse za globalno rasporeÄ‘ene korisnike i pruÅ¾a otpornu prvu liniju mreÅ¾ne obrane.",
+   "desc": "IBM NS1 Connect – platforma za inteligentni DNS, upravljanje prometom i mrežnu povezanost koja pruža autoritativni DNS s naprednim usmjeravanjem, upravljanjem prometom i infrastrukturom otpornom na DDoS napade.",
+   "value": "Pruža globalno vrijeme DNS odziva ispod 10 ms uz inteligentno usmjeravanje prometa – smanjuje prekide rada aplikacija, poboljšava performanse za globalno raspoređene korisnike i pruža otpornu prvu liniju mrežne obrane.",
    "questions": [
-    "Uzrokuju li kvarovi DNS-a ili sporo razrjeÅ¡avanje probleme s dostupnoÅ¡Ä‡u aplikacija?",
-    "Trebate li inteligentno usmjeravati korisnike izmeÄ‘u viÅ¡e podatkovnih centara ili oblaÄnih regija?",
-    "Brinu li vas DDoS napadi na vaÅ¡u DNS infrastrukturu?",
+    "Uzrokuju li kvarovi DNS-a ili sporo razrješavanje probleme s dostupnošću aplikacija?",
+    "Trebate li inteligentno usmjeravati korisnike između više podatkovnih centara ili oblačnih regija?",
+    "Brinu li vas DDoS napadi na vašu DNS infrastrukturu?",
     "Trebate li preciznu kontrolu nad globalnom raspodjelom prometa?"
    ],
    "differentiators": [
-    "Programabilni DNS s logikom usmjeravanja pomoÄ‡u lanca filtara za napredno upravljanje prometom",
+    "Programabilni DNS s logikom usmjeravanja pomoću lanca filtara za napredno upravljanje prometom",
     "Usmjeravanje prometa prema latenciji, geografiji i ASN-u",
-    "UgraÄ‘eno ublaÅ¾avanje DDoS napada i anycast mreÅ¾a",
-    "Preuzet od IBM-a, uz podrÅ¡ku za poduzeÄ‡a i integraciju s hibridnim oblakom"
+    "Ugrađeno ublažavanje DDoS napada i anycast mreža",
+    "Preuzet od IBM-a, uz podršku za poduzeća i integraciju s hibridnim oblakom"
    ]
   },
   "powervs": {
-   "desc": "IBM Power Virtual Server (PowerVS) â€“ Power infrastruktura smjeÅ¡tena u oblaku IBM Cloud, koja pruÅ¾a iste Power performanse i kompatibilnost s IBM i / AIX kao lokalni Power Systems, isporuÄena kao potpuno upravljana oblaÄna usluga.",
-   "value": "OmoguÄ‡uje organizacijama proÅ¡irenje ili migraciju Power radnih optereÄ‡enja u oblak bez promjene platforme â€“ uz oÄuvanje kompatibilnosti AIX i IBM i aplikacija te elastiÄnost oblaka i model plaÄ‡anja prema potroÅ¡nji.",
+   "desc": "IBM Power Virtual Server (PowerVS) – Power infrastruktura smještena u oblaku IBM Cloud, koja pruža iste Power performanse i kompatibilnost s IBM i / AIX kao lokalni Power Systems, isporučena kao potpuno upravljana oblačna usluga.",
+   "value": "Omogućuje organizacijama proširenje ili migraciju Power radnih opterećenja u oblak bez promjene platforme – uz očuvanje kompatibilnosti AIX i IBM i aplikacija te elastičnost oblaka i model plaćanja prema potrošnji.",
    "questions": [
-    "Å½elite li smanjiti lokalni Power otisak bez promjene platforme za svoje AIX ili IBM i aplikacije?",
-    "Trebate li oblaÄno rjeÅ¡enje za oporavak od katastrofe za svoje Power Systems okruÅ¾enje?",
-    "IstraÅ¾ujete li moguÄ‡nosti hibridnog oblaka za svoja IBM i ili AIX radna optereÄ‡enja?",
-    "Å½elite li skalirati Power kapacitet na zahtjev bez kapitalnih ulaganja?"
+    "Želite li smanjiti lokalni Power otisak bez promjene platforme za svoje AIX ili IBM i aplikacije?",
+    "Trebate li oblačno rješenje za oporavak od katastrofe za svoje Power Systems okruženje?",
+    "Istražujete li mogućnosti hibridnog oblaka za svoja IBM i ili AIX radna opterećenja?",
+    "Želite li skalirati Power kapacitet na zahtjev bez kapitalnih ulaganja?"
    ],
    "differentiators": [
-    "Jedina oblaÄna usluga koja nudi izvorne Power performanse uz kompatibilnost s AIX i IBM i",
+    "Jedina oblačna usluga koja nudi izvorne Power performanse uz kompatibilnost s AIX i IBM i",
     "Veza niske latencije prema IBM Cloud uslugama i watsonx",
-    "Infrastruktura kojom upravlja IBM, uz raspoloÅ¾ivost zajamÄenu SLA-om",
-    "Bez promjene platforme aplikacija â€“ Power radna optereÄ‡enja premjeÅ¡taju se u oblak metodom lift and shift"
+    "Infrastruktura kojom upravlja IBM, uz raspoloživost zajamčenu SLA-om",
+    "Bez promjene platforme aplikacija – Power radna opterećenja premještaju se u oblak metodom lift and shift"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (hiperkonvergirana infrastruktura) â€“ softverski definirana platforma za raÄunalne resurse, pohranu i umreÅ¾avanje koja pokreÄ‡e Red Hat OpenShift i IBM radna optereÄ‡enja na konvergiranom hardverskom stogu, pojednostavnjujuÄ‡i rad podatkovnog centra za AI i hibridni oblak.",
-   "value": "Smanjuje sloÅ¾enost podatkovnog centra objedinjavanjem raÄunalnih resursa, pohrane i umreÅ¾avanja u jednu upravljanu platformu â€“ skraÄ‡uje vrijeme implementacije i pruÅ¾a provjeren temelj s podrÅ¡kom IBM-a za OpenShift i AI radna optereÄ‡enja u lokalnom okruÅ¾enju.",
+   "desc": "IBM Fusion HCI (hiperkonvergirana infrastruktura) – softverski definirana platforma za računalne resurse, pohranu i umrežavanje koja pokreće Red Hat OpenShift i IBM radna opterećenja na konvergiranom hardverskom stogu, pojednostavnjujući rad podatkovnog centra za AI i hibridni oblak.",
+   "value": "Smanjuje složenost podatkovnog centra objedinjavanjem računalnih resursa, pohrane i umrežavanja u jednu upravljanu platformu – skraćuje vrijeme implementacije i pruža provjeren temelj s podrškom IBM-a za OpenShift i AI radna opterećenja u lokalnom okruženju.",
    "questions": [
-    "Å½elite li pojednostavniti lokalnu infrastrukturu za OpenShift ili AI radna optereÄ‡enja?",
-    "Trebate li provjerenu platformu jednog dobavljaÄa za Red Hat OpenShift?",
-    "Usporava li optereÄ‡enje upravljanja infrastrukturom implementaciju vaÅ¡ih aplikacija?",
+    "Želite li pojednostavniti lokalnu infrastrukturu za OpenShift ili AI radna opterećenja?",
+    "Trebate li provjerenu platformu jednog dobavljača za Red Hat OpenShift?",
+    "Usporava li opterećenje upravljanja infrastrukturom implementaciju vaših aplikacija?",
     "Trebate li skalabilnu lokalnu platformu za AI infrastrukturu?"
    ],
    "differentiators": [
-    "Namjenski izgraÄ‘en i provjeren za Red Hat OpenShift i IBM radna optereÄ‡enja",
-    "Integracija s IBM Storage Fusion za trajnu pohranu izvorno izgraÄ‘enu za kontejnere",
-    "IBM kao jedini dobavljaÄ za raÄunalne resurse, pohranu, softverski stog i podrÅ¡ku",
+    "Namjenski izgrađen i provjeren za Red Hat OpenShift i IBM radna opterećenja",
+    "Integracija s IBM Storage Fusion za trajnu pohranu izvorno izgrađenu za kontejnere",
+    "IBM kao jedini dobavljač za računalne resurse, pohranu, softverski stog i podršku",
     "Optimizirano za lokalne implementacije AI infrastrukture"
    ]
   },
   "db2": {
-   "desc": "IBM Db2 â€“ sustav za upravljanje relacijskim bazama podataka za poduzeÄ‡a, dostupan lokalno i u oblaku, s OLTP-om i analitikom visokih performansi, ugraÄ‘enim AI moguÄ‡nostima i izvornom kompatibilnoÅ¡Ä‡u s IBM Z, Power Systems i IBM i.",
-   "value": "PruÅ¾a pouzdan transakcijski podatkovni temelj visokih performansi za poslovne aplikacije â€“ uz ugraÄ‘enu AI optimizaciju upita, izvornu integraciju s watsonx.data i desetljeÄ‡a pouzdanosti na IBM platformama.",
+   "desc": "IBM Db2 – sustav za upravljanje relacijskim bazama podataka za poduzeća, dostupan lokalno i u oblaku, s OLTP-om i analitikom visokih performansi, ugrađenim AI mogućnostima i izvornom kompatibilnošću s IBM Z, Power Systems i IBM i.",
+   "value": "Pruža pouzdan transakcijski podatkovni temelj visokih performansi za poslovne aplikacije – uz ugrađenu AI optimizaciju upita, izvornu integraciju s watsonx.data i desetljeća pouzdanosti na IBM platformama.",
    "questions": [
-    "Å½elite li smanjiti troÅ¡kove licenciranja za Oracle ili SQL Server bez promjene arhitekture aplikacija?",
+    "Želite li smanjiti troškove licenciranja za Oracle ili SQL Server bez promjene arhitekture aplikacija?",
     "Trebate li bazu podataka s dokazanim performansama na platformama IBM Power ili Z?",
-    "UtjeÄu li zahtjevi za rezidentnost ili suverenost podataka na vaÅ¡e odluke o platformi baze podataka?",
-    "Trebate li transakcijsku bazu podataka koja se izvorno integrira s vaÅ¡im AI i analitiÄkim stogom?"
+    "Utječu li zahtjevi za rezidentnost ili suverenost podataka na vaše odluke o platformi baze podataka?",
+    "Trebate li transakcijsku bazu podataka koja se izvorno integrira s vašim AI i analitičkim stogom?"
    ],
    "differentiators": [
-    "Izvorna integracija s IBM Z i Power Systems uz najviÅ¡e performanse na IBM platformama",
-    "UgraÄ‘eno AI ubrzanje upita i autonomna optimizacija",
+    "Izvorna integracija s IBM Z i Power Systems uz najviše performanse na IBM platformama",
+    "Ugrađeno AI ubrzanje upita i autonomna optimizacija",
     "Besprijekorna federacija u watsonx.data za hibridnu analitiku",
-    "SnaÅ¾ni alati za migraciju s platforme Oracle i SQL kompatibilnost"
+    "Snažni alati za migraciju s platforme Oracle i SQL kompatibilnost"
    ]
   },
   "cognos": {
-   "desc": "IBM Cognos Analytics â€“ platforma za poslovnu inteligenciju i analitiku temeljena na AI-ju za samousluÅ¾no izvjeÅ¡Ä‡ivanje, nadzorne ploÄe i istraÅ¾ivanje podataka, s ugraÄ‘enim upravljanjem i sigurnoÅ¡Ä‡u podataka na razini poduzeÄ‡a.",
-   "value": "OsnaÅ¾uje poslovne korisnike da bez ovisnosti o IT-u izraÄ‘uju toÄna, upravljana izvjeÅ¡Ä‡a i nadzorne ploÄe â€“ uz ugraÄ‘enu pripremu podataka uz pomoÄ‡ AI-ja, upite na prirodnom jeziku i upravljanje na razini poduzeÄ‡a.",
+   "desc": "IBM Cognos Analytics – platforma za poslovnu inteligenciju i analitiku temeljena na AI-ju za samouslužno izvješćivanje, nadzorne ploče i istraživanje podataka, s ugrađenim upravljanjem i sigurnošću podataka na razini poduzeća.",
+   "value": "Osnažuje poslovne korisnike da bez ovisnosti o IT-u izrađuju točna, upravljana izvješća i nadzorne ploče – uz ugrađenu pripremu podataka uz pomoć AI-ja, upite na prirodnom jeziku i upravljanje na razini poduzeća.",
    "questions": [
-    "Oslanjaju li se poslovni korisnici na IT za svako izvjeÅ¡Ä‡e ili nadzornu ploÄu koja im treba?",
-    "IzraÄ‘uje li vaÅ¡a organizacija joÅ¡ uvijek kljuÄna izvjeÅ¡Ä‡a iz proraÄunskih tablica?",
-    "Trebate li upravljanu samousluÅ¾nu analitiku koja Äuva toÄnost i sigurnost podataka?",
-    "TraÅ¾ite li BI alate sa snaÅ¾nom integracijom IBM izvora podataka?"
+    "Oslanjaju li se poslovni korisnici na IT za svako izvješće ili nadzornu ploču koja im treba?",
+    "Izrađuje li vaša organizacija još uvijek ključna izvješća iz proračunskih tablica?",
+    "Trebate li upravljanu samouslužnu analitiku koja čuva točnost i sigurnost podataka?",
+    "Tražite li BI alate sa snažnom integracijom IBM izvora podataka?"
    ],
    "differentiators": [
-    "UgraÄ‘ena izrada izvjeÅ¡Ä‡a uz pomoÄ‡ AI-ja i upiti na prirodnom jeziku",
-    "Upravljanje na razini poduzeÄ‡a s pristupom temeljenim na ulogama i praÄ‡enjem podrijetla podataka",
-    "Duboka integracija IBM izvora podataka, ukljuÄujuÄ‡i Db2, Planning Analytics i watsonx.data",
-    "SnaÅ¾na prisutnost u reguliranim industrijama â€“ financijske usluge, zdravstvo, javni sektor"
+    "Ugrađena izrada izvješća uz pomoć AI-ja i upiti na prirodnom jeziku",
+    "Upravljanje na razini poduzeća s pristupom temeljenim na ulogama i praćenjem podrijetla podataka",
+    "Duboka integracija IBM izvora podataka, uključujući Db2, Planning Analytics i watsonx.data",
+    "Snažna prisutnost u reguliranim industrijama – financijske usluge, zdravstvo, javni sektor"
    ]
   }
  },
  "competitors": {
-  "ARM-based servers": "PosluÅ¾itelji temeljeni na ARM arhitekturi",
+  "ARM-based servers": "Poslužitelji temeljeni na ARM arhitekturi",
   "AWS EC2 with migration services": "AWS EC2 s uslugama migracije",
-  "On-premises retention": "ZadrÅ¾avanje lokalne infrastrukture",
-  "x86 Linux servers": "x86 Linux posluÅ¾itelji",
-  "x86 servers": "x86 posluÅ¾itelji"
+  "On-premises retention": "Zadržavanje lokalne infrastrukture",
+  "x86 Linux servers": "x86 Linux poslužitelji",
+  "x86 servers": "x86 poslužitelji"
  },
  "connections": {
   "concert>api_connect": "Concert orkestrira upravljanje API-jima za jedinstven uvid u aplikacije",
-  "concert>event_auto": "Concert automatizira tijekove rada voÄ‘ene dogaÄ‘ajima u svim aplikacijama",
+  "concert>event_auto": "Concert automatizira tijekove rada vođene događajima u svim aplikacijama",
   "concert>webmethods": "Concert se integrira s platformom webMethods za upravljanje hibridnom integracijom",
-  "concert>maximo": "Concert nadzire operacije upravljanja imovinom u rjeÅ¡enju Maximo i upravlja njima",
-  "api_connect>event_auto": "API Connect izlaÅ¾e moguÄ‡nosti automatizacije dogaÄ‘aja kao upravljane API-je",
-  "api_connect>webmethods": "API Connect i webMethods pruÅ¾aju komplementarne obrasce integracije",
-  "webmethods>event_auto": "webMethods pokreÄ‡e automatizaciju dogaÄ‘aja za integraciju u stvarnom vremenu",
-  "maximo>event_auto": "Maximo koristi automatizaciju dogaÄ‘aja za tijekove rada odrÅ¾avanja imovine",
-  "maximo>api_connect": "Maximo izlaÅ¾e podatke o imovini putem platforme API Connect",
-  "wxdata>wxai": "watsonx.data pruÅ¾a podatkovni temelj za modele platforme watsonx.ai",
+  "concert>maximo": "Concert nadzire operacije upravljanja imovinom u rješenju Maximo i upravlja njima",
+  "api_connect>event_auto": "API Connect izlaže mogućnosti automatizacije događaja kao upravljane API-je",
+  "api_connect>webmethods": "API Connect i webMethods pružaju komplementarne obrasce integracije",
+  "webmethods>event_auto": "webMethods pokreće automatizaciju događaja za integraciju u stvarnom vremenu",
+  "maximo>event_auto": "Maximo koristi automatizaciju događaja za tijekove rada održavanja imovine",
+  "maximo>api_connect": "Maximo izlaže podatke o imovini putem platforme API Connect",
+  "wxdata>wxai": "watsonx.data pruža podatkovni temelj za modele platforme watsonx.ai",
   "wxdata>wxdi": "watsonx.data se integrira s podatkovnom inteligencijom za katalogizaciju",
   "wxdata>wxdint": "watsonx.data koristi integraciju podataka za cjevovode unosa podataka",
   "wxdata>wxgov": "watsonx.data provodi pravila upravljanja nad podatkovnom imovinom",
   "wxdata>confluent": "watsonx.data prima streaming podatke u stvarnom vremenu iz platforme Confluent",
-  "wxai>wxorch": "watsonx.ai pokreÄ‡e inteligentne agente u rjeÅ¡enju watsonx Orchestrate",
-  "wxai>wxgov": "Modelima platforme watsonx.ai upravlja se pomoÄ‡u rjeÅ¡enja watsonx.governance",
+  "wxai>wxorch": "watsonx.ai pokreće inteligentne agente u rješenju watsonx Orchestrate",
+  "wxai>wxgov": "Modelima platforme watsonx.ai upravlja se pomoću rješenja watsonx.governance",
   "wxai>wxdi": "watsonx.ai koristi podatkovnu inteligenciju za otkrivanje podataka za treniranje modela",
   "wxdi>wxdint": "Podatkovna inteligencija katalogizira imovinu iz cjevovoda za integraciju podataka",
   "wxdi>wxgov": "Podatkovna inteligencija provodi pravila upravljanja nad katalogiziranim podacima",
   "wxdint>confluent": "Integracija podataka povezuje se s platformom Confluent za streaming podatkovne cjevovode",
   "wxorch>ibm_bob": "Orchestrate koristi alat IBM Bob za automatizirano generiranje koda u tijekovima rada",
   "wxorch>wxgov": "Orchestrate provodi upravljanje nad AI agentima i tijekovima rada",
-  "confluent>event_auto": "Confluent prenosi dogaÄ‘aje u rjeÅ¡enje Event Automation radi obrade u stvarnom vremenu",
-  "confluent>api_connect": "API Connect izlaÅ¾e streaming podatke iz platforme Confluent putem upravljanih API-ja",
-  "confluent>wxorch": "Teme Confluent Kafka pokreÄ‡u agente rjeÅ¡enja watsonx Orchestrate za AI tijekove rada voÄ‘ene dogaÄ‘ajima u stvarnom vremenu",
-  "confluent>webmethods": "webMethods povezuje tokove Confluent Kafka s hibridnim integracijskim tijekovima rada koji spajaju naslijeÄ‘ene i cloud-native sustave",
-  "concert>instana": "Concert koristi rjeÅ¡enje Instana za nadzor performansi aplikacija",
-  "concert>turbonomic": "Concert koristi rjeÅ¡enje Turbonomic za optimizaciju resursa",
-  "concert>apptio": "Concert isporuÄuje podatke o troÅ¡kovima platformi Apptio za financijsko upravljanje",
-  "concert>sevone": "Concert se integrira s rjeÅ¡enjem SevOne za nadzor performansi mreÅ¾e",
-  "instana>turbonomic": "Metrike iz rjeÅ¡enja Instana usmjeravaju odluke o optimizaciji u rjeÅ¡enju Turbonomic",
-  "turbonomic>apptio": "Podaci o optimizaciji iz rjeÅ¡enja Turbonomic napajaju analizu troÅ¡kova u platformi Apptio",
-  "turbonomic>cloudability": "Radnje rjeÅ¡enja Turbonomic oblikuju preporuke o troÅ¡kovima u rjeÅ¡enju Cloudability",
-  "apptio>cloudability": "Apptio i Cloudability pruÅ¾aju objedinjen FinOps uvid",
-  "guardium>verify": "Guardium Å¡titi podatke kojima se pristupa putem upravljanja identitetima u rjeÅ¡enju Verify",
+  "confluent>event_auto": "Confluent prenosi događaje u rješenje Event Automation radi obrade u stvarnom vremenu",
+  "confluent>api_connect": "API Connect izlaže streaming podatke iz platforme Confluent putem upravljanih API-ja",
+  "confluent>wxorch": "Teme Confluent Kafka pokreću agente rješenja watsonx Orchestrate za AI tijekove rada vođene događajima u stvarnom vremenu",
+  "confluent>webmethods": "webMethods povezuje tokove Confluent Kafka s hibridnim integracijskim tijekovima rada koji spajaju naslijeđene i cloud-native sustave",
+  "concert>instana": "Concert koristi rješenje Instana za nadzor performansi aplikacija",
+  "concert>turbonomic": "Concert koristi rješenje Turbonomic za optimizaciju resursa",
+  "concert>apptio": "Concert isporučuje podatke o troškovima platformi Apptio za financijsko upravljanje",
+  "concert>sevone": "Concert se integrira s rješenjem SevOne za nadzor performansi mreže",
+  "instana>turbonomic": "Metrike iz rješenja Instana usmjeravaju odluke o optimizaciji u rješenju Turbonomic",
+  "turbonomic>apptio": "Podaci o optimizaciji iz rješenja Turbonomic napajaju analizu troškova u platformi Apptio",
+  "turbonomic>cloudability": "Radnje rješenja Turbonomic oblikuju preporuke o troškovima u rješenju Cloudability",
+  "apptio>cloudability": "Apptio i Cloudability pružaju objedinjen FinOps uvid",
+  "guardium>verify": "Guardium štiti podatke kojima se pristupa putem upravljanja identitetima u rješenju Verify",
   "guardium>vault": "Guardium nadzire tajne kojima upravlja Vault",
-  "verify>vault": "Verify autentificira pristup tajnama u rjeÅ¡enju Vault",
-  "power>aix": "AIX je Unix OS za poduzeÄ‡a za platformu Power Systems",
+  "verify>vault": "Verify autentificira pristup tajnama u rješenju Vault",
+  "power>aix": "AIX je Unix OS za poduzeća za platformu Power Systems",
   "power>ibmi": "IBM i izvorno se izvodi na arhitekturi Power Systems",
   "power>linux_power": "Linux distribucije optimizirane za platformu Power Systems",
   "linuxone>linux_power": "LinuxONE i Power dijele strategije optimizacije za Linux",
@@ -893,125 +891,125 @@ window.I18N.hr = {
   "storage_control>storage_insights": "Storage Control koristi Insights za prediktivnu analitiku",
   "storage_control>storage_virt": "Storage Control upravlja virtualiziranim skupovima pohrane",
   "storage_insights>storage_virt": "Storage Insights nadzire performanse virtualizirane pohrane",
-  "storage_scale>storage_ceph": "Storage Scale i Ceph pruÅ¾aju komplementarnu datoteÄnu/objektnu pohranu",
+  "storage_scale>storage_ceph": "Storage Scale i Ceph pružaju komplementarnu datotečnu/objektnu pohranu",
   "storage_scale>storage_fusion": "Storage Fusion koristi Storage Scale za pohranu kontejnera",
   "storage_ceph>storage_fusion": "Storage Fusion koristi Ceph za objektnu pohranu",
-  "wxorch>api_connect": "Agenti rjeÅ¡enja Orchestrate pozivaju API-je kojima upravlja API Connect",
-  "wxorch>event_auto": "Orchestrate pokreÄ‡e tijekove rada automatizacije dogaÄ‘aja",
+  "wxorch>api_connect": "Agenti rješenja Orchestrate pozivaju API-je kojima upravlja API Connect",
+  "wxorch>event_auto": "Orchestrate pokreće tijekove rada automatizacije događaja",
   "wxorch>webmethods": "Orchestrate se integrira s platformom webMethods za povezivanje poslovnih sustava",
-  "wxai>maximo": "watsonx.ai omoguÄ‡uje prediktivno odrÅ¾avanje u rjeÅ¡enju Maximo",
+  "wxai>maximo": "watsonx.ai omogućuje prediktivno održavanje u rješenju Maximo",
   "ibm_bob>terraform": "IBM Bob generira infrastrukturni kod za Terraform",
-  "ibm_bob>ibmi": "Paket IBM Bob Premium Package for IBM i modernizira RPG i naslijeÄ‘ene aplikacije za IBM i",
+  "ibm_bob>ibmi": "Paket IBM Bob Premium Package for IBM i modernizira RPG i naslijeđene aplikacije za IBM i",
   "ibm_bob>linuxone": "Paket IBM Bob Premium Package for Z ubrzava modernizaciju mainframe koda na platformi LinuxONE",
-  "ibm_bob>aix": "IBM Bob ubrzava modernizaciju naslijeÄ‘enih C i C++ aplikacija koje se izvode kao Unix radna optereÄ‡enja na sustavu AIX",
-  "ibm_bob>wxgov": "Kod koji generira IBM Bob revidira se i njime se upravlja pomoÄ‡u rjeÅ¡enja watsonx.governance",
-  "ibm_bob>vault": "IBM Bob skenira baze koda u potrazi za tajnama zapisanima u kodu i refaktorira kod za koriÅ¡tenje rjeÅ¡enja Vault",
-  "ibm_bob>verify": "IBM Bob generira kod za sigurnu autentifikaciju te SSO i MFA integraciju za aplikacije zaÅ¡tiÄ‡ene rjeÅ¡enjem Verify",
-  "ibm_bob>instana": "IBM Bob povezuje se s alatima za opservabilnost kako bi izravno iz IDE-a dohvaÄ‡ao metrike i zapise",
-  "ibm_bob>maximo": "IBM Bob ubrzava razvoj aplikacija i integracija za Maximo kodiranjem uz pomoÄ‡ AI-ja",
+  "ibm_bob>aix": "IBM Bob ubrzava modernizaciju naslijeđenih C i C++ aplikacija koje se izvode kao Unix radna opterećenja na sustavu AIX",
+  "ibm_bob>wxgov": "Kod koji generira IBM Bob revidira se i njime se upravlja pomoću rješenja watsonx.governance",
+  "ibm_bob>vault": "IBM Bob skenira baze koda u potrazi za tajnama zapisanima u kodu i refaktorira kod za korištenje rješenja Vault",
+  "ibm_bob>verify": "IBM Bob generira kod za sigurnu autentifikaciju te SSO i MFA integraciju za aplikacije zaštićene rješenjem Verify",
+  "ibm_bob>instana": "IBM Bob povezuje se s alatima za opservabilnost kako bi izravno iz IDE-a dohvaćao metrike i zapise",
+  "ibm_bob>maximo": "IBM Bob ubrzava razvoj aplikacija i integracija za Maximo kodiranjem uz pomoć AI-ja",
   "ibm_bob>concert": "IBM Bob generira automatizacijske skripte i aplikacijski kod koje Concert nadzire i kojima upravlja",
   "ibm_bob>confluent": "IBM Bob ubrzava razvoj Confluent producera i consumera te koda Kafka streaming aplikacija",
-  "ibm_mq>event_auto": "IBM MQ pruÅ¾a pouzdan prijenos poruka za tijekove rada rjeÅ¡enja Event Automation",
-  "ibm_mq>api_connect": "API Connect izlaÅ¾e krajnje toÄke za razmjenu poruka IBM MQ putem upravljanih API-ja",
-  "ibm_mq>webmethods": "IBM MQ i webMethods pruÅ¾aju komplementarne obrasce transakcijske i B2B razmjene poruka",
-  "ibm_mq>confluent": "IBM MQ povezuje naslijeÄ‘enu transakcijsku razmjenu poruka s tokovima dogaÄ‘aja Confluent Kafka",
-  "ibm_mq>wxorch": "IBM MQ pruÅ¾a pouzdanu asinkronu razmjenu poruka za tijekove rada rjeÅ¡enja watsonx Orchestrate",
+  "ibm_mq>event_auto": "IBM MQ pruža pouzdan prijenos poruka za tijekove rada rješenja Event Automation",
+  "ibm_mq>api_connect": "API Connect izlaže krajnje točke za razmjenu poruka IBM MQ putem upravljanih API-ja",
+  "ibm_mq>webmethods": "IBM MQ i webMethods pružaju komplementarne obrasce transakcijske i B2B razmjene poruka",
+  "ibm_mq>confluent": "IBM MQ povezuje naslijeđenu transakcijsku razmjenu poruka s tokovima događaja Confluent Kafka",
+  "ibm_mq>wxorch": "IBM MQ pruža pouzdanu asinkronu razmjenu poruka za tijekove rada rješenja watsonx Orchestrate",
   "ibm_mq>linuxone": "IBM MQ izvodi se na platformi LinuxONE za sigurnu poslovnu razmjenu poruka velikog obujma",
-  "ibm_mq>power": "IBM MQ na platformi Power Systems pruÅ¾a razmjenu poruka visoke propusnosti za poslovne aplikacije",
-  "ibm_mq>ibmi": "IBM MQ je temeljna okosnica razmjene poruka za aplikacije na sustavu IBM i, s izvornom podrÅ¡kom za MQ ugraÄ‘enom u platformu IBM i",
-  "ibm_sterling>webmethods": "IBM Sterling i webMethods pruÅ¾aju komplementarnu B2B povezanost i integraciju poslovnih sustava",
-  "ibm_sterling>event_auto": "IBM Sterling pokreÄ‡e Event Automation za izvrÅ¡avanje tijekova rada opskrbnog lanca u stvarnom vremenu",
-  "ibm_sterling>api_connect": "API Connect izlaÅ¾e podatke opskrbnog lanca iz rjeÅ¡enja Sterling i partnerske API-je putem upravljanih pristupnika",
-  "ibm_sterling>maximo": "IBM Sterling se integrira s rjeÅ¡enjem Maximo za nabavu i upravljanje imovinom u opskrbnom lancu",
-  "ibm_sterling>wxdi": "watsonx.data intelligence katalogizira podatkovnu imovinu opskrbnog lanca iz rjeÅ¡enja IBM Sterling",
-  "ibm_sterling>wxdint": "Integracija podataka osigurava kontinuirani protok podataka opskrbnog lanca iz rjeÅ¡enja Sterling u analitiÄke i AI cjevovode",
-  "ibm_sterling>wxorch": "watsonx Orchestrate automatizira tijekove odluÄivanja u opskrbnom lancu temeljene na podacima iz rjeÅ¡enja Sterling",
-  "ibm_pa>wxdata": "watsonx.data pruÅ¾a temelj podatkovnog lakehousea za modele u rjeÅ¡enju Planning Analytics",
+  "ibm_mq>power": "IBM MQ na platformi Power Systems pruža razmjenu poruka visoke propusnosti za poslovne aplikacije",
+  "ibm_mq>ibmi": "IBM MQ je temeljna okosnica razmjene poruka za aplikacije na sustavu IBM i, s izvornom podrškom za MQ ugrađenom u platformu IBM i",
+  "ibm_sterling>webmethods": "IBM Sterling i webMethods pružaju komplementarnu B2B povezanost i integraciju poslovnih sustava",
+  "ibm_sterling>event_auto": "IBM Sterling pokreće Event Automation za izvršavanje tijekova rada opskrbnog lanca u stvarnom vremenu",
+  "ibm_sterling>api_connect": "API Connect izlaže podatke opskrbnog lanca iz rješenja Sterling i partnerske API-je putem upravljanih pristupnika",
+  "ibm_sterling>maximo": "IBM Sterling se integrira s rješenjem Maximo za nabavu i upravljanje imovinom u opskrbnom lancu",
+  "ibm_sterling>wxdi": "watsonx.data intelligence katalogizira podatkovnu imovinu opskrbnog lanca iz rješenja IBM Sterling",
+  "ibm_sterling>wxdint": "Integracija podataka osigurava kontinuirani protok podataka opskrbnog lanca iz rješenja Sterling u analitičke i AI cjevovode",
+  "ibm_sterling>wxorch": "watsonx Orchestrate automatizira tijekove odlučivanja u opskrbnom lancu temeljene na podacima iz rješenja Sterling",
+  "ibm_pa>wxdata": "watsonx.data pruža temelj podatkovnog lakehousea za modele u rješenju Planning Analytics",
   "ibm_pa>wxdi": "watsonx.data intelligence katalogizira izvore financijskih podataka za Planning Analytics",
-  "ibm_pa>wxdint": "Integracija podataka osvjeÅ¾ava modele u rjeÅ¡enju Planning Analytics financijskim podacima u stvarnom vremenu",
-  "ibm_pa>wxai": "watsonx.ai nadograÄ‘uje Planning Analytics prediktivnim predviÄ‘anjem i uvidima temeljenima na AI-ju",
-  "ibm_pa>apptio": "Planning Analytics isporuÄuje financijske modele platformi Apptio za upravljanje poslovanjem tehnologije i raspodjelu troÅ¡kova",
-  "ibm_pa>turbonomic": "Podaci o optimizaciji resursa iz rjeÅ¡enja Turbonomic oblikuju projekcije IT troÅ¡kova u rjeÅ¡enju Planning Analytics",
-  "ibm_pa>cloudability": "Planning Analytics integrira podatke o troÅ¡kovima oblaka iz rjeÅ¡enja Cloudability za financijsko modeliranje scenarija",
-  "ibm_pa>ibm_bob": "IBM Bob ubrzava razvoj integracija i prilagoÄ‘enih skripti modela za Planning Analytics",
+  "ibm_pa>wxdint": "Integracija podataka osvježava modele u rješenju Planning Analytics financijskim podacima u stvarnom vremenu",
+  "ibm_pa>wxai": "watsonx.ai nadograđuje Planning Analytics prediktivnim predviđanjem i uvidima temeljenima na AI-ju",
+  "ibm_pa>apptio": "Planning Analytics isporučuje financijske modele platformi Apptio za upravljanje poslovanjem tehnologije i raspodjelu troškova",
+  "ibm_pa>turbonomic": "Podaci o optimizaciji resursa iz rješenja Turbonomic oblikuju projekcije IT troškova u rješenju Planning Analytics",
+  "ibm_pa>cloudability": "Planning Analytics integrira podatke o troškovima oblaka iz rješenja Cloudability za financijsko modeliranje scenarija",
+  "ibm_pa>ibm_bob": "IBM Bob ubrzava razvoj integracija i prilagođenih skripti modela za Planning Analytics",
   "maximo>instana": "Instana nadzire performanse aplikacije Maximo",
-  "terraform>turbonomic": "Turbonomic preporuÄuje promjene infrastrukture putem alata Terraform",
+  "terraform>turbonomic": "Turbonomic preporučuje promjene infrastrukture putem alata Terraform",
   "wxai>instana": "Instana nadzire performanse inferencije modela na platformi watsonx.ai",
-  "wxgov>guardium": "watsonx.governance koristi Guardium za pravila zaÅ¡tite podataka",
-  "wxdi>guardium": "Podatkovna inteligencija integrira sigurnosne klasifikacije iz rjeÅ¡enja Guardium",
-  "confluent>guardium": "Guardium nadzire i Å¡titi osjetljive podatke koji teku kroz tokove Confluent Kafka radi usklaÄ‘enosti i sigurnosti podataka",
+  "wxgov>guardium": "watsonx.governance koristi Guardium za pravila zaštite podataka",
+  "wxdi>guardium": "Podatkovna inteligencija integrira sigurnosne klasifikacije iz rješenja Guardium",
+  "confluent>guardium": "Guardium nadzire i štiti osjetljive podatke koji teku kroz tokove Confluent Kafka radi usklađenosti i sigurnosti podataka",
   "wxai>power": "watsonx.ai koristi Power Systems za ubrzanje AI-ja",
-  "wxai>linuxone": "watsonx.ai izvodi se na platformi LinuxONE za sigurna AI radna optereÄ‡enja",
+  "wxai>linuxone": "watsonx.ai izvodi se na platformi LinuxONE za sigurna AI radna opterećenja",
   "wxdata>power": "watsonx.data koristi Power Systems za podatkovno intenzivne upite",
-  "wxdata>linuxone": "watsonx.data na platformi LinuxONE pruÅ¾a siguran podatkovni lakehouse",
-  "confluent>linuxone": "Confluent se izvorno izvodi na platformi LinuxONE i pruÅ¾a Kafka streaming na razini poduzeÄ‡a uz jamstva sigurnosti i usklaÄ‘enosti platforme LinuxONE",
+  "wxdata>linuxone": "watsonx.data na platformi LinuxONE pruža siguran podatkovni lakehouse",
+  "confluent>linuxone": "Confluent se izvorno izvodi na platformi LinuxONE i pruža Kafka streaming na razini poduzeća uz jamstva sigurnosti i usklađenosti platforme LinuxONE",
   "power>flashsystem": "Power Systems koriste FlashSystem za pohranu visokih performansi",
   "power>storage_scale": "Power Systems koriste Storage Scale za paralelni pristup datotekama",
-  "linuxone>flashsystem": "LinuxONE koristi FlashSystem za pohranu na razini poduzeÄ‡a",
-  "linuxone>storage_scale": "LinuxONE koristi Storage Scale za skalabilnu datoteÄnu pohranu",
+  "linuxone>flashsystem": "LinuxONE koristi FlashSystem za pohranu na razini poduzeća",
+  "linuxone>storage_scale": "LinuxONE koristi Storage Scale za skalabilnu datotečnu pohranu",
   "linuxone>storage_ceph": "LinuxONE koristi Storage Ceph za cloud-native objektnu pohranu",
-  "aix>flashsystem": "Sustavi AIX koriste FlashSystem za pohranu na razini poduzeÄ‡a",
-  "ibmi>flashsystem": "Sustavi IBM i koriste FlashSystem za poslovno kljuÄne podatke",
+  "aix>flashsystem": "Sustavi AIX koriste FlashSystem za pohranu na razini poduzeća",
+  "ibmi>flashsystem": "Sustavi IBM i koriste FlashSystem za poslovno ključne podatke",
   "wxdata>storage_scale": "watsonx.data koristi Storage Scale za podatke za treniranje AI-ja",
   "wxdata>storage_ceph": "watsonx.data koristi Storage Ceph za objektnu pohranu",
-  "wxdata>storage_fusion": "watsonx.data koristi Storage Fusion za pohranu izvorno izgraÄ‘enu za kontejnere",
+  "wxdata>storage_fusion": "watsonx.data koristi Storage Fusion za pohranu izvorno izgrađenu za kontejnere",
   "instana>power": "Instana nadzire aplikacije na platformi Power Systems",
   "instana>linuxone": "Instana nadzire aplikacije na platformi LinuxONE",
   "turbonomic>power": "Turbonomic optimizira raspodjelu resursa na platformi Power Systems",
-  "turbonomic>linuxone": "Turbonomic optimizira iskoriÅ¡tenost resursa na platformi LinuxONE",
-  "turbonomic>aix": "Turbonomic optimizira raspodjelu resursa za radna optereÄ‡enja na sustavu AIX",
-  "turbonomic>ibmi": "Turbonomic optimizira iskoriÅ¡tenost resursa na sustavu IBM i",
+  "turbonomic>linuxone": "Turbonomic optimizira iskorištenost resursa na platformi LinuxONE",
+  "turbonomic>aix": "Turbonomic optimizira raspodjelu resursa za radna opterećenja na sustavu AIX",
+  "turbonomic>ibmi": "Turbonomic optimizira iskorištenost resursa na sustavu IBM i",
   "turbonomic>linux_power": "Turbonomic optimizira raspodjelu resursa za Linux on Power",
-  "ibm_tls>power": "IBM TLS upravlja cjelokupnim odrÅ¾avanjem i Å¾ivotnim ciklusom infrastrukture Power Systems",
-  "ibm_tls>linuxone": "IBM TLS pruÅ¾a proaktivnu podrÅ¡ku i upravljanje Å¾ivotnim ciklusom za sustave LinuxONE",
-  "ibm_tls>aix": "IBM TLS brine o odrÅ¾avanju sustava AIX, zakrpama i prijelazima u tehnoloÅ¡kom Å¾ivotnom ciklusu",
-  "ibm_tls>ibmi": "IBM TLS upravlja odrÅ¾avanjem sustava IBM i i podrÅ¡kom za planirane tehnoloÅ¡ke prijelaze",
-  "ibm_tls>flashsystem": "IBM TLS upravlja implementacijom sustava FlashSystem, nadogradnjama firmwarea i prijelazima na kraju Å¾ivotnog vijeka",
-  "ibm_tls>storage_scale": "IBM TLS podrÅ¾ava nadogradnje sustava Storage Scale i planiranje tehnoloÅ¡kog Å¾ivotnog ciklusa",
-  "ibm_tls>linux_power": "Technology Lifecycle Services obuhvaÄ‡a podrÅ¡ku za OS Linux on Power i upravljanje Å¾ivotnim ciklusom platforme",
-  "ibm_tls>storage_control": "Technology Lifecycle Services podrÅ¾ava hardver za pohranu kojim upravlja Storage Control",
-  "ibm_tls>storage_virt": "IBM TLS servisira IBM hardver za pohranu na kojem se izvodi Storage Virtualize, ukljuÄujuÄ‡i firmware, odrÅ¾avanje i prijelaze u Å¾ivotnom ciklusu",
-  "envizi>maximo": "Operativni podaci i podaci o imovini iz rjeÅ¡enja Maximo napajaju Envizi za ESG izvjeÅ¡Ä‡ivanje i izvjeÅ¡Ä‡ivanje o ugljiku na razini objekata",
-  "envizi>ibm_sterling": "Podaci opskrbnog lanca iz rjeÅ¡enja Sterling napajaju Envizi za praÄ‡enje emisija opsega 3 (Scope 3) u partnerskim mreÅ¾ama",
-  "envizi>wxdata": "ESG skupovi podataka iz rjeÅ¡enja Envizi prenose se u watsonx.data za analitiku odrÅ¾ivosti i AI modeliranje",
-  "envizi>ibm_pa": "Planning Analytics integrira podatke o troÅ¡kovima ugljika iz rjeÅ¡enja Envizi za financijsko planiranje odrÅ¾ivosti i modeliranje scenarija",
-  "envizi>wxai": "watsonx.ai analizira ESG podatke iz rjeÅ¡enja Envizi kako bi generirao prediktivne uvide o odrÅ¾ivosti i otkrivao anomalije",
-  "elm_suite>ibm_bob": "IBM Bob generira kod izravno iz zahtjeva u paketu ELM, zatvarajuÄ‡i krug od specifikacije do implementacije",
-  "elm_suite>concert": "Concert pruÅ¾a operativni uvid u implementacije aplikacija kojima se upravlja u paketu ELM",
-  "elm_suite>api_connect": "ELM izlaÅ¾e inÅ¾enjerske artefakte i podatke o zahtjevima putem platforme API Connect za integraciju lanca alata",
-  "elm_suite>webmethods": "webMethods integrira ELM s poslovnim sustavima za potpunu automatizaciju inÅ¾enjerskih tijekova rada",
-  "app_connect>api_connect": "App Connect izraÄ‘uje integracije koje API Connect zatim izlaÅ¾e kao upravljane, zaÅ¡tiÄ‡ene API-je",
-  "app_connect>webmethods": "App Connect obraÄ‘uje SaaS i oblaÄne integracije, a webMethods sloÅ¾ene B2B i lokalne obrasce â€“ komplementarne razine integracije",
-  "app_connect>event_auto": "Tijekovi rada u rjeÅ¡enju App Connect pokreÄ‡u Event Automation za obradu voÄ‘enu dogaÄ‘ajima u stvarnom vremenu",
+  "ibm_tls>power": "IBM TLS upravlja cjelokupnim održavanjem i životnim ciklusom infrastrukture Power Systems",
+  "ibm_tls>linuxone": "IBM TLS pruža proaktivnu podršku i upravljanje životnim ciklusom za sustave LinuxONE",
+  "ibm_tls>aix": "IBM TLS brine o održavanju sustava AIX, zakrpama i prijelazima u tehnološkom životnom ciklusu",
+  "ibm_tls>ibmi": "IBM TLS upravlja održavanjem sustava IBM i i podrškom za planirane tehnološke prijelaze",
+  "ibm_tls>flashsystem": "IBM TLS upravlja implementacijom sustava FlashSystem, nadogradnjama firmwarea i prijelazima na kraju životnog vijeka",
+  "ibm_tls>storage_scale": "IBM TLS podržava nadogradnje sustava Storage Scale i planiranje tehnološkog životnog ciklusa",
+  "ibm_tls>linux_power": "Technology Lifecycle Services obuhvaća podršku za OS Linux on Power i upravljanje životnim ciklusom platforme",
+  "ibm_tls>storage_control": "Technology Lifecycle Services podržava hardver za pohranu kojim upravlja Storage Control",
+  "ibm_tls>storage_virt": "IBM TLS servisira IBM hardver za pohranu na kojem se izvodi Storage Virtualize, uključujući firmware, održavanje i prijelaze u životnom ciklusu",
+  "envizi>maximo": "Operativni podaci i podaci o imovini iz rješenja Maximo napajaju Envizi za ESG izvješćivanje i izvješćivanje o ugljiku na razini objekata",
+  "envizi>ibm_sterling": "Podaci opskrbnog lanca iz rješenja Sterling napajaju Envizi za praćenje emisija opsega 3 (Scope 3) u partnerskim mrežama",
+  "envizi>wxdata": "ESG skupovi podataka iz rješenja Envizi prenose se u watsonx.data za analitiku održivosti i AI modeliranje",
+  "envizi>ibm_pa": "Planning Analytics integrira podatke o troškovima ugljika iz rješenja Envizi za financijsko planiranje održivosti i modeliranje scenarija",
+  "envizi>wxai": "watsonx.ai analizira ESG podatke iz rješenja Envizi kako bi generirao prediktivne uvide o održivosti i otkrivao anomalije",
+  "elm_suite>ibm_bob": "IBM Bob generira kod izravno iz zahtjeva u paketu ELM, zatvarajući krug od specifikacije do implementacije",
+  "elm_suite>concert": "Concert pruža operativni uvid u implementacije aplikacija kojima se upravlja u paketu ELM",
+  "elm_suite>api_connect": "ELM izlaže inženjerske artefakte i podatke o zahtjevima putem platforme API Connect za integraciju lanca alata",
+  "elm_suite>webmethods": "webMethods integrira ELM s poslovnim sustavima za potpunu automatizaciju inženjerskih tijekova rada",
+  "app_connect>api_connect": "App Connect izrađuje integracije koje API Connect zatim izlaže kao upravljane, zaštićene API-je",
+  "app_connect>webmethods": "App Connect obrađuje SaaS i oblačne integracije, a webMethods složene B2B i lokalne obrasce – komplementarne razine integracije",
+  "app_connect>event_auto": "Tijekovi rada u rješenju App Connect pokreću Event Automation za obradu vođenu događajima u stvarnom vremenu",
   "app_connect>wxorch": "watsonx Orchestrate koristi App Connect za povezivanje AI agenata s poslovnim SaaS aplikacijama",
-  "aspera>wxdata": "Aspera omoguÄ‡uje brzi unos velikih skupova podataka u watsonx.data za cjevovode treniranja AI-ja",
-  "aspera>ibm_sterling": "Aspera ubrzava prijenos velikih datoteka i skupova podataka unutar partnerskih mreÅ¾a opskrbnog lanca u rjeÅ¡enju Sterling",
-  "aspera>storage_scale": "Aspera prenosi velike datoteke izravno u paralelne datoteÄne sustave Storage Scale za HPC i AI radna optereÄ‡enja",
-  "kubecost>cloudability": "Kubecost pruÅ¾a podatke o troÅ¡kovima na razini okruÅ¾enja Kubernetes koji se prenose u Cloudability za objedinjeno FinOps izvjeÅ¡Ä‡ivanje o viÅ¡e oblaka",
-  "kubecost>turbonomic": "Turbonomic koristi podatke o troÅ¡kovima iz rjeÅ¡enja Kubecost zajedno s metrikama performansi za optimizaciju veliÄine Kubernetes radnih optereÄ‡enja",
-  "kubecost>instana": "Instana pruÅ¾a kontekst performansi aplikacija koji Kubecost koristi za povezivanje troÅ¡kova sa stvarnom potroÅ¡njom resursa",
-  "kubecost>apptio": "Podaci o troÅ¡kovima za Kubernetes iz rjeÅ¡enja Kubecost napajaju TBM modele u platformi Apptio za potpunu transparentnost IT troÅ¡kova, ukljuÄujuÄ‡i radna optereÄ‡enja u kontejnerima",
-  "ns1>verify": "Inteligentno usmjeravanje rjeÅ¡enja NS1 upuÄ‡uje korisnike na najbliÅ¾u krajnju toÄku za autentifikaciju, poboljÅ¡avajuÄ‡i performanse i otpornost SSO-a u rjeÅ¡enju Verify",
-  "ns1>sevone": "Podaci o performansama mreÅ¾e iz rjeÅ¡enja SevOne oblikuju odluke rjeÅ¡enja NS1 o usmjeravanju prometa radi optimalnog usmjeravanja",
-  "ns1>concert": "Concert koristi podatke o stanju DNS-a iz rjeÅ¡enja NS1 u sklopu nadzora dostupnosti aplikacija",
-  "powervs>power": "PowerVS je oblaÄno proÅ¡irenje platforme Power Systems â€“ omoguÄ‡uje hibridne Power implementacije koje obuhvaÄ‡aju lokalno okruÅ¾enje i IBM Cloud",
-  "powervs>aix": "Radna optereÄ‡enja AIX izvode se izvorno na usluzi PowerVS, Å¡to omoguÄ‡uje migraciju u oblak bez promjena OS-a ili aplikacija",
-  "powervs>ibmi": "Aplikacije za IBM i izvode se izvorno na usluzi PowerVS i pruÅ¾aju put u oblak za naslijeÄ‘ena IBM i okruÅ¾enja",
-  "powervs>ibm_tls": "IBM TLS podrÅ¾ava planiranje prijelaza i upravljanje Å¾ivotnim ciklusom pri migracijama s lokalne platforme Power na PowerVS",
-  "powervs>ibm_bob": "IBM Bob ubrzava modernizaciju AIX i IBM i aplikacija koje se migriraju u oblaÄna okruÅ¾enja PowerVS",
-  "fusion_hci>storage_fusion": "IBM Fusion HCI koristi Storage Fusion za trajnu pohranu izvorno izgraÄ‘enu za kontejnere za OpenShift radna optereÄ‡enja na konvergiranoj platformi",
-  "fusion_hci>power": "IBM Fusion HCI moÅ¾e raditi uz Power Systems u hibridnim infrastrukturnim okruÅ¾enjima kojima upravlja IBM",
-  "fusion_hci>linuxone": "Fusion HCI i LinuxONE pruÅ¾aju komplementarne moguÄ‡nosti lokalne infrastrukture za poslovna radna optereÄ‡enja osjetljiva na sigurnost",
-  "fusion_hci>ibm_tls": "IBM TLS upravlja Å¾ivotnim ciklusom hardvera, firmwareom i podrÅ¡kom za Fusion HCI",
+  "aspera>wxdata": "Aspera omogućuje brzi unos velikih skupova podataka u watsonx.data za cjevovode treniranja AI-ja",
+  "aspera>ibm_sterling": "Aspera ubrzava prijenos velikih datoteka i skupova podataka unutar partnerskih mreža opskrbnog lanca u rješenju Sterling",
+  "aspera>storage_scale": "Aspera prenosi velike datoteke izravno u paralelne datotečne sustave Storage Scale za HPC i AI radna opterećenja",
+  "kubecost>cloudability": "Kubecost pruža podatke o troškovima na razini okruženja Kubernetes koji se prenose u Cloudability za objedinjeno FinOps izvješćivanje o više oblaka",
+  "kubecost>turbonomic": "Turbonomic koristi podatke o troškovima iz rješenja Kubecost zajedno s metrikama performansi za optimizaciju veličine Kubernetes radnih opterećenja",
+  "kubecost>instana": "Instana pruža kontekst performansi aplikacija koji Kubecost koristi za povezivanje troškova sa stvarnom potrošnjom resursa",
+  "kubecost>apptio": "Podaci o troškovima za Kubernetes iz rješenja Kubecost napajaju TBM modele u platformi Apptio za potpunu transparentnost IT troškova, uključujući radna opterećenja u kontejnerima",
+  "ns1>verify": "Inteligentno usmjeravanje rješenja NS1 upućuje korisnike na najbližu krajnju točku za autentifikaciju, poboljšavajući performanse i otpornost SSO-a u rješenju Verify",
+  "ns1>sevone": "Podaci o performansama mreže iz rješenja SevOne oblikuju odluke rješenja NS1 o usmjeravanju prometa radi optimalnog usmjeravanja",
+  "ns1>concert": "Concert koristi podatke o stanju DNS-a iz rješenja NS1 u sklopu nadzora dostupnosti aplikacija",
+  "powervs>power": "PowerVS je oblačno proširenje platforme Power Systems – omogućuje hibridne Power implementacije koje obuhvaćaju lokalno okruženje i IBM Cloud",
+  "powervs>aix": "Radna opterećenja AIX izvode se izvorno na usluzi PowerVS, što omogućuje migraciju u oblak bez promjena OS-a ili aplikacija",
+  "powervs>ibmi": "Aplikacije za IBM i izvode se izvorno na usluzi PowerVS i pružaju put u oblak za naslijeđena IBM i okruženja",
+  "powervs>ibm_tls": "IBM TLS podržava planiranje prijelaza i upravljanje životnim ciklusom pri migracijama s lokalne platforme Power na PowerVS",
+  "powervs>ibm_bob": "IBM Bob ubrzava modernizaciju AIX i IBM i aplikacija koje se migriraju u oblačna okruženja PowerVS",
+  "fusion_hci>storage_fusion": "IBM Fusion HCI koristi Storage Fusion za trajnu pohranu izvorno izgrađenu za kontejnere za OpenShift radna opterećenja na konvergiranoj platformi",
+  "fusion_hci>power": "IBM Fusion HCI može raditi uz Power Systems u hibridnim infrastrukturnim okruženjima kojima upravlja IBM",
+  "fusion_hci>linuxone": "Fusion HCI i LinuxONE pružaju komplementarne mogućnosti lokalne infrastrukture za poslovna radna opterećenja osjetljiva na sigurnost",
+  "fusion_hci>ibm_tls": "IBM TLS upravlja životnim ciklusom hardvera, firmwareom i podrškom za Fusion HCI",
   "db2>wxdata": "Db2 je primarni izvor transakcijskih podataka koji se federira u watsonx.data za objedinjenu analitiku i treniranje AI modela",
-  "db2>wxdint": "watsonx.data integration unosi i transformira podatke iz baze Db2 za daljnje AI i analitiÄke cjevovode",
-  "db2>guardium": "Guardium nadzire i revidira sve aktivnosti pristupa podacima u bazi Db2 radi regulatorne usklaÄ‘enosti i sigurnosti podataka",
-  "db2>ibmi": "Db2 for IBM i integrirana je baza podataka u srÅ¾i platforme IBM i â€“ izvorna, ugraÄ‘ena veza",
-  "db2>ibm_bob": "IBM Bob pomaÅ¾e u optimizaciji upita u bazi Db2, modernizaciji shema i migraciji PL/SQL koda na Db2",
-  "cognos>wxdata": "Cognos postavlja upite nad watsonx.data kao objedinjenim izvorom podataka za upravljano izvjeÅ¡Ä‡ivanje na razini poduzeÄ‡a u cijelom podatkovnom lakehouseu",
-  "cognos>ibm_pa": "Cognos Analytics pruÅ¾a operativno i upravljaÄko izvjeÅ¡Ä‡ivanje nad financijskim modelima rjeÅ¡enja Planning Analytics",
-  "cognos>db2": "Cognos je primarni BI potroÅ¡aÄ transakcijskih podataka iz baze Db2 za nadzorne ploÄe i izvjeÅ¡Ä‡a na razini poduzeÄ‡a",
-  "cognos>wxai": "watsonx.ai nadograÄ‘uje Cognos prediktivnom analitikom i uvidima koje generira AI, prikazanima na nadzornim ploÄama",
-  "cognos>guardium": "Guardium provodi pravila pristupa podacima nad izvorima podataka koje Cognos pretraÅ¾uje, osiguravajuÄ‡i usklaÄ‘eno izvjeÅ¡Ä‡ivanje"
+  "db2>wxdint": "watsonx.data integration unosi i transformira podatke iz baze Db2 za daljnje AI i analitičke cjevovode",
+  "db2>guardium": "Guardium nadzire i revidira sve aktivnosti pristupa podacima u bazi Db2 radi regulatorne usklađenosti i sigurnosti podataka",
+  "db2>ibmi": "Db2 for IBM i integrirana je baza podataka u srži platforme IBM i – izvorna, ugrađena veza",
+  "db2>ibm_bob": "IBM Bob pomaže u optimizaciji upita u bazi Db2, modernizaciji shema i migraciji PL/SQL koda na Db2",
+  "cognos>wxdata": "Cognos postavlja upite nad watsonx.data kao objedinjenim izvorom podataka za upravljano izvješćivanje na razini poduzeća u cijelom podatkovnom lakehouseu",
+  "cognos>ibm_pa": "Cognos Analytics pruža operativno i upravljačko izvješćivanje nad financijskim modelima rješenja Planning Analytics",
+  "cognos>db2": "Cognos je primarni BI potrošač transakcijskih podataka iz baze Db2 za nadzorne ploče i izvješća na razini poduzeća",
+  "cognos>wxai": "watsonx.ai nadograđuje Cognos prediktivnom analitikom i uvidima koje generira AI, prikazanima na nadzornim pločama",
+  "cognos>guardium": "Guardium provodi pravila pristupa podacima nad izvorima podataka koje Cognos pretražuje, osiguravajući usklađeno izvješćivanje"
  }
 };

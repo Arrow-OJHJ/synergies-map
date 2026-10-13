@@ -1,4 +1,4 @@
-﻿window.I18N = window.I18N || {};
+window.I18N = window.I18N || {};
 window.I18N.nl = {
  "meta": { "name": "Nederlands (Nederland)", "htmlLang": "nl" },
  "ui": {
@@ -7,8 +7,8 @@ window.I18N.nl = {
   "language": "Taal",
   "toggleTheme": "Thema wisselen",
   "toggleThemeTitle": "Schakelen tussen lichte en donkere modus",
-  "searchPlaceholder": "Zoek in producten, beschrijvingen en vragenâ€¦",
-  "mobSearchPlaceholder": "Zoek productenâ€¦",
+  "searchPlaceholder": "Zoek in producten, beschrijvingen en vragen…",
+  "mobSearchPlaceholder": "Zoek producten…",
   "searchAria": "Producten zoeken",
   "clearSearch": "Zoekopdracht wissen",
   "playFilter": "Filter op productgroep",
@@ -16,8 +16,8 @@ window.I18N.nl = {
   "productDetail": "Productdetails",
   "detail": "Details",
   "clearSelection": "Selectie wissen",
-  "loading": "Ladenâ€¦",
-  "footerHint": "Zoek producten Â· Klik op een product voor details",
+  "loading": "Laden…",
+  "footerHint": "Zoek producten · Klik op een product voor details",
   "mobileFooterHint": "Tik op een product om de verbindingen te bekijken",
   "close": "Sluiten",
   "closeDrawer": "Paneel sluiten",
@@ -52,9 +52,7 @@ window.I18N.nl = {
   "productsCount": {
    "one": "{n} product",
    "other": "{n} producten"
-  },
- "viewMap": "Map view",
- "viewRadial": "Radial view"
+  }
  },
  "plays": {
   "1": { "name": "Automatisering & integratie", "short": "Automatisering" },
@@ -86,12 +84,12 @@ window.I18N.nl = {
     "Ingebouwde DataPower-beveiliging",
     "Flexibele implementatie in de hybride cloud",
     "Native ondersteuning voor Kubernetes",
-    "GeÃ¯ntegreerd met IBM Cloud Pak"
+    "Geïntegreerd met IBM Cloud Pak"
    ]
   },
   "event_auto": {
    "desc": "Platform voor event-driven automatisering van bedrijfsprocessen en besluitvorming in realtime.",
-   "value": "Vermindert handmatige tussenkomst met 70%, maakt realtime reageren op bedrijfsgebeurtenissen mogelijk en verhoogt de operationele efficiÃ«ntie.",
+   "value": "Vermindert handmatige tussenkomst met 70%, maakt realtime reageren op bedrijfsgebeurtenissen mogelijk en verhoogt de operationele efficiëntie.",
    "questions": [
     "Heeft u bedrijfsprocessen die een realtime reactie vereisen?",
     "Bewaakt u systemen handmatig op events?",
@@ -102,7 +100,7 @@ window.I18N.nl = {
     "Ingebouwde business rules engine",
     "Low-code workflowdesigner",
     "Governance op enterpriseniveau",
-    "GeÃ¯ntegreerd met de IBM-automatiseringssuite"
+    "Geïntegreerd met de IBM-automatiseringssuite"
    ]
   },
   "webmethods": {
@@ -148,7 +146,7 @@ window.I18N.nl = {
    ],
    "differentiators": [
     "AI-gestuurde inzichten",
-    "EÃ©n overzicht van de hybride cloud",
+    "Eén overzicht van de hybride cloud",
     "Geautomatiseerd herstel",
     "Integratie met de observabilitytools van IBM"
    ]
@@ -285,7 +283,7 @@ window.I18N.nl = {
    "desc": "Platform voor databeveiliging waarmee u gevoelige gegevens opspoort, classificeert en beschermt.",
    "value": "Waarborgt naleving van wet- en regelgeving rond data, voorkomt datalekken en biedt volledige monitoring van data-activiteit.",
    "questions": [
-    "Slaat u gevoelige klantgegevens of financiÃ«le gegevens op?",
+    "Slaat u gevoelige klantgegevens of financiële gegevens op?",
     "Valt u onder privacywetgeving zoals de AVG of de CCPA?",
     "Heeft u te maken gehad met beveiligingsincidenten rond data?",
     "Moet u de toegang tot en activiteit in databases monitoren?"
@@ -358,7 +356,7 @@ window.I18N.nl = {
     "Open lakehousearchitectuur",
     "Query's over meerdere bronnen",
     "Ondersteuning voor hybride cloud",
-    "KostenefficiÃ«nte opslag"
+    "Kostenefficiënte opslag"
    ]
   },
   "wxdi": {
@@ -374,7 +372,7 @@ window.I18N.nl = {
     "AI-gestuurde discovery",
     "Geautomatiseerde datakwaliteit",
     "End-to-end lineage",
-    "GeÃ¯ntegreerde governance"
+    "Geïntegreerde governance"
    ]
   },
   "wxdint": {
@@ -426,8 +424,8 @@ window.I18N.nl = {
    ]
   },
   "ibm_bob": {
-   "desc": "AI-pair-programmer die softwareontwikkeling, applicatiemodernisering en het schrijven van automatiseringsscripts versnelt, in moderne en legacytalen zoals Java, Python, RPG, COBOL en PL/SQL â€“ met agentische mogelijkheden die code van ontwerp tot productie brengen.",
-   "value": "Brengt ontwikkeltaken terug van weken naar uren, met Premium Packages die diepgaande specialisatie bieden voor de modernisering van IBM i, Z en Java â€“ en ingebouwde secret scanning voor shift-left security vanaf dag Ã©Ã©n.",
+   "desc": "AI-pair-programmer die softwareontwikkeling, applicatiemodernisering en het schrijven van automatiseringsscripts versnelt, in moderne en legacytalen zoals Java, Python, RPG, COBOL en PL/SQL – met agentische mogelijkheden die code van ontwerp tot productie brengen.",
+   "value": "Brengt ontwikkeltaken terug van weken naar uren, met Premium Packages die diepgaande specialisatie bieden voor de modernisering van IBM i, Z en Java – en ingebouwde secret scanning voor shift-left security vanaf dag één.",
    "questions": [
     "Besteden ontwikkelaars te veel tijd aan het schrijven van boilerplatecode?",
     "Wilt u de ontwikkeling van applicaties versnellen?",
@@ -443,7 +441,7 @@ window.I18N.nl = {
   },
   "confluent": {
    "desc": "Kafka-gebaseerd streamingplatform van enterpriseniveau, beschikbaar als Confluent Cloud of self-managed, dat fungeert als realtime databackbone voor de oplossingen van IBM voor hybride integratie, Data & AI en mainframemodernisering.",
-   "value": "Fungeert als universele streamingbackbone die de integratie-, infrastructuur- en AI-platformen van IBM met elkaar verbindt â€“ slaat een brug van MQ-gebaseerde legacy messaging naar realtime Kafka-eventstreams, voedt watsonx-pipelines en maakt event-driven automatisering op enterpriseschaal mogelijk.",
+   "value": "Fungeert als universele streamingbackbone die de integratie-, infrastructuur- en AI-platformen van IBM met elkaar verbindt – slaat een brug van MQ-gebaseerde legacy messaging naar realtime Kafka-eventstreams, voedt watsonx-pipelines en maakt event-driven automatisering op enterpriseschaal mogelijk.",
    "questions": [
     "Moet u data in realtime verwerken?",
     "Bouwt u event-driven architecturen?",
@@ -453,20 +451,20 @@ window.I18N.nl = {
     "Moet u data van IBM Z- of mainframesystemen streamen naar cloud-native applicaties?"
    ],
    "differentiators": [
-    "Strategisch partnerschap met IBM â€“ gecertificeerd voor hybride cloud en de integratiestack van IBM",
-    "MQ-brug â€“ verbindt legacy messaging op IBM MQ native met Kafka-eventstreams",
+    "Strategisch partnerschap met IBM – gecertificeerd voor hybride cloud en de integratiestack van IBM",
+    "MQ-brug – verbindt legacy messaging op IBM MQ native met Kafka-eventstreams",
     "Voedt pipelines van watsonx.ai en watsonx.data met realtime streamingdata",
     "Volledig Kafka-ecosysteem met enterprise support, RBAC en Schema Registry"
    ]
   },
   "ibm_pa": {
-   "desc": "AI-gestuurd platform voor financiÃ«le planning en analyse waarmee u in selfservice budgetteert, forecasts maakt en scenario's modelleert. Stelt financeteams in staat data te consolideren, dynamische modellen te bouwen en organisatiebreed samen te werken aan de financiÃ«le planning, met een in-memory rekenengine.",
-   "value": "Verkort de planningscyclus met 60%, verbetert de nauwkeurigheid van forecasts met 30% en geeft financeteams selfservice-analytics en AI-gestuurde scenariomodellering â€“ en maakt zo organisatiebreed een einde aan de afhankelijkheid van spreadsheets.",
+   "desc": "AI-gestuurd platform voor financiële planning en analyse waarmee u in selfservice budgetteert, forecasts maakt en scenario's modelleert. Stelt financeteams in staat data te consolideren, dynamische modellen te bouwen en organisatiebreed samen te werken aan de financiële planning, met een in-memory rekenengine.",
+   "value": "Verkort de planningscyclus met 60%, verbetert de nauwkeurigheid van forecasts met 30% en geeft financeteams selfservice-analytics en AI-gestuurde scenariomodellering – en maakt zo organisatiebreed een einde aan de afhankelijkheid van spreadsheets.",
    "questions": [
     "Zijn uw budgetterings- en forecastprocessen arbeidsintensief of afhankelijk van spreadsheets?",
     "Heeft u betere samenwerking nodig tussen finance en de businessunits?",
     "Heeft u moeite met de nauwkeurigheid van forecasts of de snelheid van scenarioplanning?",
-    "Moet u financiÃ«le data uit meerdere bronsystemen consolideren?"
+    "Moet u financiële data uit meerdere bronsystemen consolideren?"
    ],
    "differentiators": [
     "In-memory TM1-rekenengine voor directe multidimensionale modellering",
@@ -524,16 +522,16 @@ window.I18N.nl = {
    ]
   },
   "ibmi": {
-   "desc": "GeÃ¯ntegreerd besturingssysteem voor Power Systems met ingebouwde database en beveiliging voor bedrijfsapplicaties.",
-   "value": "Vermindert de beheerlast met 60%, biedt geÃ¯ntegreerde beveiliging en waarborgt de bedrijfscontinuÃ¯teit.",
+   "desc": "Geïntegreerd besturingssysteem voor Power Systems met ingebouwde database en beveiliging voor bedrijfsapplicaties.",
+   "value": "Vermindert de beheerlast met 60%, biedt geïntegreerde beveiliging en waarborgt de bedrijfscontinuïteit.",
    "questions": [
     "Draait u bedrijfskritische applicaties?",
     "Wilt u legacyapplicaties moderniseren?",
-    "Heeft u geÃ¯ntegreerde databasefunctionaliteit nodig?",
+    "Heeft u geïntegreerde databasefunctionaliteit nodig?",
     "Maakt u zich zorgen over beveiliging en compliance?"
    ],
    "differentiators": [
-    "GeÃ¯ntegreerde database",
+    "Geïntegreerde database",
     "Objectgebaseerde architectuur",
     "Automatische beveiliging",
     "Upgrades zonder downtime"
@@ -556,23 +554,23 @@ window.I18N.nl = {
    ]
   },
   "ibm_tls": {
-   "desc": "Uitgebreide service voor onderhoud en support van hardware en software en voor end-of-life-migraties. Beheert de volledige levenscyclus van systemen van IBM en andere leveranciers, van implementatie tot uitfasering â€“ inclusief proactieve support, patchbeheer, upgrades en geplande technologietransities.",
-   "value": "Vermindert ongeplande downtime met 95%, zorgt voor voorspelbare kosten over de levenscyclus van uw infrastructuur en waarborgt soepele technologietransities zonder operationele verstoring â€“ ondersteund door toonaangevende SLA's en proactieve diagnosemogelijkheden.",
+   "desc": "Uitgebreide service voor onderhoud en support van hardware en software en voor end-of-life-migraties. Beheert de volledige levenscyclus van systemen van IBM en andere leveranciers, van implementatie tot uitfasering – inclusief proactieve support, patchbeheer, upgrades en geplande technologietransities.",
+   "value": "Vermindert ongeplande downtime met 95%, zorgt voor voorspelbare kosten over de levenscyclus van uw infrastructuur en waarborgt soepele technologietransities zonder operationele verstoring – ondersteund door toonaangevende SLA's en proactieve diagnosemogelijkheden.",
    "questions": [
     "Maakt u zich zorgen over end-of-life-support voor kritieke IBM-systemen?",
     "Heeft u voorspelbaar lifecyclebeheer tegen vaste kosten nodig voor uw infrastructuur?",
     "Plant u hardware- of software-upgrades en heeft u ondersteuning bij de migratie nodig?",
-    "Beheert u multivendoromgevingen waarvoor u Ã©Ã©n supportpartij nodig heeft?"
+    "Beheert u multivendoromgevingen waarvoor u één supportpartij nodig heeft?"
    ],
    "differentiators": [
     "Proactieve diagnostiek en voorspellende preventie van problemen",
-    "EÃ©n aanspreekpunt voor multivendoromgevingen met IBM en derde partijen",
+    "Eén aanspreekpunt voor multivendoromgevingen met IBM en derde partijen",
     "Naadloze migratieplanning bij end-of-life zonder operationele verstoring",
     "Geleverd door Arrow, met lokale expertise en IBM-gecertificeerde engineers"
    ]
   },
   "flashsystem": {
-   "desc": "All-flash-opslagsysteem met hoge prestaties, betrouwbaarheid en efficiÃ«ntie voor bedrijfsworkloads.",
+   "desc": "All-flash-opslagsysteem met hoge prestaties, betrouwbaarheid en efficiëntie voor bedrijfsworkloads.",
    "value": "Levert een latency van minder dan een milliseconde, verkleint de opslagfootprint met 80% en biedt 99,9999% beschikbaarheid.",
    "questions": [
     "Heeft u prestatiegevoelige applicaties?",
@@ -636,7 +634,7 @@ window.I18N.nl = {
    ]
   },
   "storage_fusion": {
-   "desc": "IBM Storage Fusion â€“ container-native laag voor persistente opslag in Red Hat OpenShift- en Kubernetes-omgevingen. Let op: dit is het softwareproduct voor opslag, niet te verwarren met IBM Fusion HCI, het afzonderlijke platform voor hyperconverged infrastructuur dat Storage Fusion als opslagcomponent gebruikt.",
+   "desc": "IBM Storage Fusion – container-native laag voor persistente opslag in Red Hat OpenShift- en Kubernetes-omgevingen. Let op: dit is het softwareproduct voor opslag, niet te verwarren met IBM Fusion HCI, het afzonderlijke platform voor hyperconverged infrastructuur dat Storage Fusion als opslagcomponent gebruikt.",
    "value": "Vereenvoudigt persistente opslag voor gecontaineriseerde workloads, biedt datamobiliteit tussen OpenShift-clusters en integreert native met IBM Fusion HCI voor een complete geconvergeerde infrastructuurstack.",
    "questions": [
     "Draait u gecontaineriseerde applicaties?",
@@ -655,7 +653,7 @@ window.I18N.nl = {
    "desc": "Open-source, softwaregedefinieerd opslagplatform voor object-, block- en fileopslag.",
    "value": "Verlaagt de opslagkosten met 50%, biedt schaalbare opslag en maakt een einde aan vendor lock-in.",
    "questions": [
-    "Zoekt u kostenefficiÃ«nte opslag?",
+    "Zoekt u kostenefficiënte opslag?",
     "Heeft u objectopslag nodig?",
     "Bouwt u een private cloud?",
     "Wilt u vendor lock-in vermijden?"
@@ -684,7 +682,7 @@ window.I18N.nl = {
    ]
   },
   "envizi": {
-   "desc": "IBM Envizi ESG Suite â€“ platform voor het beheer van duurzaamheids- en ESG-prestaties, waarmee u data over energie, CO2-uitstoot, water en afval bijhoudt en duurzaamheidsrapportages opstelt in het kader van wet- en regelgeving.",
+   "desc": "IBM Envizi ESG Suite – platform voor het beheer van duurzaamheids- en ESG-prestaties, waarmee u data over energie, CO2-uitstoot, water en afval bijhoudt en duurzaamheidsrapportages opstelt in het kader van wet- en regelgeving.",
    "value": "Automatiseert het verzamelen van ESG-data over locaties en supply chains heen, vermindert de inspanning voor duurzaamheidsrapportage met circa 70% en maakt naleving van de raamwerken GRI, SASB, TCFD en CSRD mogelijk.",
    "questions": [
     "Heeft u moeite om ESG-data van al uw locaties en uit uw supply chain te verzamelen en te consolideren?",
@@ -694,14 +692,14 @@ window.I18N.nl = {
    ],
    "differentiators": [
     "Kant-en-klare integratie met Maximo voor operationele data en assetdata",
-    "Ingebouwde raamwerken voor wettelijke rapportage â€“ GRI, SASB, TCFD, CSRD",
+    "Ingebouwde raamwerken voor wettelijke rapportage – GRI, SASB, TCFD, CSRD",
     "AI-ondersteunde datakwaliteit en anomaliedetectie",
     "Cloud-native SaaS met snelle time-to-value"
    ]
   },
   "elm_suite": {
-   "desc": "IBM Engineering Lifecycle Management Suite â€“ omvat requirementsmanagement (DOORS Next), engineering workflow management (EWM), testmanagement (ETM) en model-based engineering (Rhapsody) voor veiligheidskritische en gereguleerde sectoren.",
-   "value": "Biedt end-to-end traceerbaarheid in engineering, van requirements via ontwerp en ontwikkeling tot test â€“ vermindert herstelwerk in gereguleerde programma's en ondersteunt compliance met ISO 26262, DO-178C en IEC 61508.",
+   "desc": "IBM Engineering Lifecycle Management Suite – omvat requirementsmanagement (DOORS Next), engineering workflow management (EWM), testmanagement (ETM) en model-based engineering (Rhapsody) voor veiligheidskritische en gereguleerde sectoren.",
+   "value": "Biedt end-to-end traceerbaarheid in engineering, van requirements via ontwerp en ontwikkeling tot test – vermindert herstelwerk in gereguleerde programma's en ondersteunt compliance met ISO 26262, DO-178C en IEC 61508.",
    "questions": [
     "Heeft u in veiligheidskritische programma's volledige traceerbaarheid nodig, van requirements tot en met test?",
     "Ontwikkelt u producten die moeten voldoen aan regelgeving voor lucht- en ruimtevaart, automotive of medische hulpmiddelen?",
@@ -709,15 +707,15 @@ window.I18N.nl = {
     "Beheert u requirements over meerdere teams of organisaties heen?"
    ],
    "differentiators": [
-    "Complete ALM-suite van Ã©Ã©n leverancier â€“ requirements, workflow, test en modellering",
+    "Complete ALM-suite van één leverancier – requirements, workflow, test en modellering",
     "Diepgaande compliance-ondersteuning voor ISO 26262, DO-178C, IEC 61508 en FDA 21 CFR Part 11",
     "Native AI-integratie met IBM Bob voor AI-ondersteunde requirements en codegeneratie",
     "Het langstbestaande engineeringplatform van IBM, met meer dan 30 jaar implementaties in gereguleerde sectoren"
    ]
   },
   "app_connect": {
-   "desc": "IBM App Connect â€“ low-code/no-code-integratieplatform om applicaties te koppelen en workflows te automatiseren met meer dan 200 kant-en-klare connectors, beschikbaar als App Connect Professional en App Connect Enterprise.",
-   "value": "Stelt zakelijke gebruikers en ontwikkelaars in staat integraties in uren in plaats van weken te bouwen â€“ en versnelt zo de digitale transformatie zonder diepgaande integratie-expertise.",
+   "desc": "IBM App Connect – low-code/no-code-integratieplatform om applicaties te koppelen en workflows te automatiseren met meer dan 200 kant-en-klare connectors, beschikbaar als App Connect Professional en App Connect Enterprise.",
+   "value": "Stelt zakelijke gebruikers en ontwikkelaars in staat integraties in uren in plaats van weken te bouwen – en versnelt zo de digitale transformatie zonder diepgaande integratie-expertise.",
    "questions": [
     "Moeten businessteams SaaS-applicaties kunnen koppelen zonder code te schrijven?",
     "Wilt u minder afhankelijk zijn van gespecialiseerde integratieontwikkelaars?",
@@ -726,14 +724,14 @@ window.I18N.nl = {
    ],
    "differentiators": [
     "Meer dan 200 kant-en-klare connectors voor SaaS-, cloud- en on-prem-applicaties",
-    "Zowel low-code als full-code â€“ App Connect Professional en Enterprise",
+    "Zowel low-code als full-code – App Connect Professional en Enterprise",
     "Beveiliging, governance en audittrail van enterpriseniveau",
     "Native implementatieopties op IBM Cloud en on-premises"
    ]
   },
   "aspera": {
-   "desc": "IBM Aspera â€“ platform voor high-speed overdracht van grote bestanden en datasets via het gepatenteerde FASP-protocol, ontworpen om enorme bestanden over grote afstanden te verplaatsen met bijna de volle lijnsnelheid, ongeacht de netwerkomstandigheden.",
-   "value": "Draagt bestanden tot 100 keer sneller over dan standaard TCP/FTP via netwerken met hoge latency of pakketverlies â€“ cruciaal voor media, genomics, life sciences en elke workflow waarin bestanden van meerdere gigabytes worden verplaatst.",
+   "desc": "IBM Aspera – platform voor high-speed overdracht van grote bestanden en datasets via het gepatenteerde FASP-protocol, ontworpen om enorme bestanden over grote afstanden te verplaatsen met bijna de volle lijnsnelheid, ongeacht de netwerkomstandigheden.",
+   "value": "Draagt bestanden tot 100 keer sneller over dan standaard TCP/FTP via netwerken met hoge latency of pakketverlies – cruciaal voor media, genomics, life sciences en elke workflow waarin bestanden van meerdere gigabytes worden verplaatst.",
    "questions": [
     "Duurt de overdracht van grote bestanden via het WAN uren of dagen, terwijl het minuten zou moeten kosten?",
     "Distribueert u grote media-, genomics- of databestanden naar partners of locaties wereldwijd?",
@@ -748,8 +746,8 @@ window.I18N.nl = {
    ]
   },
   "kubecost": {
-   "desc": "IBM Kubecost â€“ platform voor monitoring en optimalisatie van Kubernetes-kosten dat realtime inzicht geeft in de uitgaven per namespace, deployment, label en team in multiclusteromgevingen.",
-   "value": "Biedt engineering- en financeteams nauwkeurige kostentoerekening voor Kubernetes en aanbevelingen voor rightsizing â€“ en vermindert verspilling in de cloud door inactieve en overgedimensioneerde workloads op containerniveau op te sporen.",
+   "desc": "IBM Kubecost – platform voor monitoring en optimalisatie van Kubernetes-kosten dat realtime inzicht geeft in de uitgaven per namespace, deployment, label en team in multiclusteromgevingen.",
+   "value": "Biedt engineering- en financeteams nauwkeurige kostentoerekening voor Kubernetes en aanbevelingen voor rightsizing – en vermindert verspilling in de cloud door inactieve en overgedimensioneerde workloads op containerniveau op te sporen.",
    "questions": [
     "Heeft u precies inzicht in wat elke Kubernetes-workload of elk team u kost?",
     "Groeien uw cloudrekeningen sneller dan uw Kubernetes-footprint?",
@@ -760,12 +758,12 @@ window.I18N.nl = {
     "Native Kubernetes-kostenmodel met granulariteit per pod en per namespace",
     "Open-sourcebasis met enterprise support van IBM",
     "Integreert met Prometheus voor kostendata gekoppeld aan prestaties",
-    "Overgenomen door IBM en volledig geÃ¯ntegreerd in het IBM Observability-portfolio"
+    "Overgenomen door IBM en volledig geïntegreerd in het IBM Observability-portfolio"
    ]
   },
   "ns1": {
-   "desc": "IBM NS1 Connect â€“ platform voor intelligente DNS, verkeersbeheer en netwerkconnectiviteit, met authoritative DNS, geavanceerde routering, traffic steering en DDoS-bestendige infrastructuur.",
-   "value": "Levert wereldwijd DNS-responstijden onder de 10 ms met intelligente traffic steering â€“ vermindert downtime van applicaties, verbetert de prestaties voor gebruikers over de hele wereld en vormt een veerkrachtige eerste verdedigingslinie voor uw netwerk.",
+   "desc": "IBM NS1 Connect – platform voor intelligente DNS, verkeersbeheer en netwerkconnectiviteit, met authoritative DNS, geavanceerde routering, traffic steering en DDoS-bestendige infrastructuur.",
+   "value": "Levert wereldwijd DNS-responstijden onder de 10 ms met intelligente traffic steering – vermindert downtime van applicaties, verbetert de prestaties voor gebruikers over de hele wereld en vormt een veerkrachtige eerste verdedigingslinie voor uw netwerk.",
    "questions": [
     "Veroorzaken DNS-storingen of trage resolutie problemen met de beschikbaarheid van applicaties?",
     "Moet u gebruikers intelligent routeren over meerdere datacenters of cloudregio's?",
@@ -780,8 +778,8 @@ window.I18N.nl = {
    ]
   },
   "powervs": {
-   "desc": "IBM Power Virtual Server (PowerVS) â€“ Power-infrastructuur in IBM Cloud, met dezelfde Power-prestaties en dezelfde compatibiliteit met IBM i en AIX als on-premises Power Systems, geleverd als volledig beheerde clouddienst.",
-   "value": "Stelt organisaties in staat Power-workloads naar de cloud uit te breiden of te migreren zonder replatforming â€“ met behoud van de compatibiliteit van AIX- en IBM i-applicaties en met de elasticiteit en het pay-as-you-go-model van de cloud.",
+   "desc": "IBM Power Virtual Server (PowerVS) – Power-infrastructuur in IBM Cloud, met dezelfde Power-prestaties en dezelfde compatibiliteit met IBM i en AIX als on-premises Power Systems, geleverd als volledig beheerde clouddienst.",
+   "value": "Stelt organisaties in staat Power-workloads naar de cloud uit te breiden of te migreren zonder replatforming – met behoud van de compatibiliteit van AIX- en IBM i-applicaties en met de elasticiteit en het pay-as-you-go-model van de cloud.",
    "questions": [
     "Wilt u uw on-premises Power-footprint verkleinen zonder uw AIX- of IBM i-applicaties te replatformen?",
     "Heeft u een cloudgebaseerde disaster-recoveryoplossing nodig voor uw Power Systems-omgeving?",
@@ -792,28 +790,28 @@ window.I18N.nl = {
     "De enige clouddienst met native Power-prestaties en compatibiliteit met AIX en IBM i",
     "Verbinding met lage latency naar IBM Cloud-diensten en watsonx",
     "Door IBM beheerde infrastructuur met door SLA's gegarandeerde beschikbaarheid",
-    "Geen replatforming van applicaties nodig â€“ lift-and-shift van Power-workloads naar de cloud"
+    "Geen replatforming van applicaties nodig – lift-and-shift van Power-workloads naar de cloud"
    ]
   },
   "fusion_hci": {
-   "desc": "IBM Fusion HCI (hyperconverged infrastructure) â€“ softwaregedefinieerd platform voor compute, opslag en netwerken dat Red Hat OpenShift en IBM-workloads draait op een geconvergeerde hardwarestack en zo het datacenterbeheer voor AI en hybride cloud vereenvoudigt.",
-   "value": "Vermindert de complexiteit van het datacenter door compute, opslag en netwerken samen te brengen in Ã©Ã©n beheerd platform â€“ verkort de implementatietijd en biedt een gevalideerde, door IBM ondersteunde basis voor OpenShift- en AI-workloads on-premises.",
+   "desc": "IBM Fusion HCI (hyperconverged infrastructure) – softwaregedefinieerd platform voor compute, opslag en netwerken dat Red Hat OpenShift en IBM-workloads draait op een geconvergeerde hardwarestack en zo het datacenterbeheer voor AI en hybride cloud vereenvoudigt.",
+   "value": "Vermindert de complexiteit van het datacenter door compute, opslag en netwerken samen te brengen in één beheerd platform – verkort de implementatietijd en biedt een gevalideerde, door IBM ondersteunde basis voor OpenShift- en AI-workloads on-premises.",
    "questions": [
     "Wilt u uw on-premises infrastructuur voor OpenShift- of AI-workloads vereenvoudigen?",
-    "Heeft u een gevalideerd platform van Ã©Ã©n leverancier nodig voor Red Hat OpenShift?",
+    "Heeft u een gevalideerd platform van één leverancier nodig voor Red Hat OpenShift?",
     "Vertraagt de beheerlast van uw infrastructuur de uitrol van applicaties?",
     "Heeft u een schaalbaar on-premises platform voor AI-infrastructuur nodig?"
    ],
    "differentiators": [
     "Speciaal ontwikkeld en gevalideerd voor Red Hat OpenShift en IBM-workloads",
     "Integreert met IBM Storage Fusion voor container-native persistente opslag",
-    "EÃ©n leverancier, IBM, voor compute, opslag, softwarestack en support",
+    "Eén leverancier, IBM, voor compute, opslag, softwarestack en support",
     "Geoptimaliseerd voor on-premises AI-infrastructuur"
    ]
   },
   "db2": {
-   "desc": "IBM Db2 â€“ relationeel databasemanagementsysteem voor ondernemingen, beschikbaar on-premises en in de cloud, met krachtige OLTP en analytics, ingebouwde AI-functionaliteit en native compatibiliteit met IBM Z, Power Systems en IBM i.",
-   "value": "Biedt bedrijfsapplicaties een betrouwbare, krachtige basis voor transactionele data â€“ met ingebouwde AI-queryoptimalisatie, native integratie met watsonx.data en tientallen jaren betrouwbaarheid op IBM-platformen.",
+   "desc": "IBM Db2 – relationeel databasemanagementsysteem voor ondernemingen, beschikbaar on-premises en in de cloud, met krachtige OLTP en analytics, ingebouwde AI-functionaliteit en native compatibiliteit met IBM Z, Power Systems en IBM i.",
+   "value": "Biedt bedrijfsapplicaties een betrouwbare, krachtige basis voor transactionele data – met ingebouwde AI-queryoptimalisatie, native integratie met watsonx.data en tientallen jaren betrouwbaarheid op IBM-platformen.",
    "questions": [
     "Wilt u de licentiekosten van Oracle of SQL Server verlagen zonder uw applicaties te herontwerpen?",
     "Heeft u een database nodig met bewezen prestaties op IBM Power of Z?",
@@ -828,8 +826,8 @@ window.I18N.nl = {
    ]
   },
   "cognos": {
-   "desc": "IBM Cognos Analytics â€“ AI-gestuurd platform voor business intelligence en analytics, voor selfservicerapportage, dashboards en data-exploratie, met ingebouwde governance en databeveiliging van enterpriseniveau.",
-   "value": "Stelt zakelijke gebruikers in staat zonder tussenkomst van IT nauwkeurige, gecontroleerde rapporten en dashboards te maken â€“ met AI-ondersteunde datavoorbereiding, vragen in natuurlijke taal en ingebouwde governance van enterpriseniveau.",
+   "desc": "IBM Cognos Analytics – AI-gestuurd platform voor business intelligence en analytics, voor selfservicerapportage, dashboards en data-exploratie, met ingebouwde governance en databeveiliging van enterpriseniveau.",
+   "value": "Stelt zakelijke gebruikers in staat zonder tussenkomst van IT nauwkeurige, gecontroleerde rapporten en dashboards te maken – met AI-ondersteunde datavoorbereiding, vragen in natuurlijke taal en ingebouwde governance van enterpriseniveau.",
    "questions": [
     "Zijn zakelijke gebruikers voor elk rapport of dashboard afhankelijk van IT?",
     "Maakt uw organisatie kritieke rapportages nog in spreadsheets?",
@@ -840,7 +838,7 @@ window.I18N.nl = {
     "Ingebouwde AI-ondersteuning bij het opstellen van rapporten en vragen in natuurlijke taal",
     "Governance van enterpriseniveau met rolgebaseerde toegang en data lineage",
     "Diepgaande integratie met IBM-databronnen, waaronder Db2, Planning Analytics en watsonx.data",
-    "Sterke positie in gereguleerde sectoren â€“ financiÃ«le dienstverlening, zorg, publieke sector"
+    "Sterke positie in gereguleerde sectoren – financiële dienstverlening, zorg, publieke sector"
    ]
   }
  },
@@ -885,17 +883,17 @@ window.I18N.nl = {
   "instana>turbonomic": "Metrics uit Instana sturen de optimalisatiebeslissingen van Turbonomic",
   "turbonomic>apptio": "Optimalisatiedata uit Turbonomic voedt de kostenanalyse in Apptio",
   "turbonomic>cloudability": "Acties van Turbonomic onderbouwen de kostenaanbevelingen van Cloudability",
-  "apptio>cloudability": "Apptio en Cloudability bieden samen Ã©Ã©n overzicht voor FinOps",
+  "apptio>cloudability": "Apptio en Cloudability bieden samen één overzicht voor FinOps",
   "guardium>verify": "Guardium beschermt data die wordt benaderd via het identiteitsbeheer van Verify",
   "guardium>vault": "Guardium monitort secrets die in Vault worden beheerd",
   "verify>vault": "Verify authenticeert de toegang tot secrets in Vault",
   "power>aix": "AIX is het Unix-besturingssysteem voor ondernemingen op Power Systems",
   "power>ibmi": "IBM i draait native op de architectuur van Power Systems",
   "power>linux_power": "Linux-distributies, geoptimaliseerd voor Power Systems",
-  "linuxone>linux_power": "LinuxONE en Power delen strategieÃ«n voor Linux-optimalisatie",
+  "linuxone>linux_power": "LinuxONE en Power delen strategieën voor Linux-optimalisatie",
   "flashsystem>storage_control": "Storage Control beheert FlashSystem-arrays",
   "flashsystem>storage_insights": "Storage Insights monitort de prestaties van FlashSystem",
-  "flashsystem>storage_virt": "Storage Virtualize bundelt FlashSystem met andere opslag in Ã©Ã©n pool",
+  "flashsystem>storage_virt": "Storage Virtualize bundelt FlashSystem met andere opslag in één pool",
   "storage_control>storage_insights": "Storage Control gebruikt Insights voor voorspellende analyses",
   "storage_control>storage_virt": "Storage Control beheert gevirtualiseerde opslagpools",
   "storage_insights>storage_virt": "Storage Insights monitort de prestaties van gevirtualiseerde opslag",
@@ -933,12 +931,12 @@ window.I18N.nl = {
   "ibm_sterling>wxdint": "Data-integratie zorgt dat supply chain-data uit Sterling blijft doorstromen naar analytics- en AI-pipelines",
   "ibm_sterling>wxorch": "watsonx Orchestrate automatiseert beslissingsworkflows in de supply chain op basis van data uit Sterling",
   "ibm_pa>wxdata": "watsonx.data vormt als data lakehouse de basis voor modellen in Planning Analytics",
-  "ibm_pa>wxdi": "watsonx.data intelligence catalogiseert financiÃ«le databronnen voor Planning Analytics",
-  "ibm_pa>wxdint": "Data-integratie houdt modellen in Planning Analytics actueel met realtime financiÃ«le data",
+  "ibm_pa>wxdi": "watsonx.data intelligence catalogiseert financiële databronnen voor Planning Analytics",
+  "ibm_pa>wxdint": "Data-integratie houdt modellen in Planning Analytics actueel met realtime financiële data",
   "ibm_pa>wxai": "watsonx.ai verrijkt Planning Analytics met voorspellende forecasting en AI-gestuurde inzichten",
-  "ibm_pa>apptio": "Planning Analytics levert financiÃ«le modellen aan Apptio voor technology business management en kostentoerekening",
+  "ibm_pa>apptio": "Planning Analytics levert financiële modellen aan Apptio voor technology business management en kostentoerekening",
   "ibm_pa>turbonomic": "Optimalisatiedata uit Turbonomic onderbouwt de IT-kostenprognoses in Planning Analytics",
-  "ibm_pa>cloudability": "Planning Analytics integreert cloudkostendata uit Cloudability voor financiÃ«le scenariomodellering",
+  "ibm_pa>cloudability": "Planning Analytics integreert cloudkostendata uit Cloudability voor financiële scenariomodellering",
   "ibm_pa>ibm_bob": "IBM Bob versnelt de ontwikkeling van integraties en eigen modelscripts voor Planning Analytics",
   "maximo>instana": "Instana monitort de applicatieprestaties van Maximo",
   "terraform>turbonomic": "Turbonomic beveelt infrastructuurwijzigingen aan via Terraform",
@@ -980,14 +978,14 @@ window.I18N.nl = {
   "envizi>maximo": "Operationele data en assetdata uit Maximo voeden Envizi voor ESG- en CO2-rapportage per locatie",
   "envizi>ibm_sterling": "Supply chain-data uit Sterling voedt Envizi voor het bijhouden van scope 3-emissies in partnernetwerken",
   "envizi>wxdata": "ESG-datasets uit Envizi stromen naar watsonx.data voor duurzaamheidsanalyses en AI-modellering",
-  "envizi>ibm_pa": "Planning Analytics integreert CO2-kostendata uit Envizi voor financiÃ«le duurzaamheidsplanning en scenariomodellering",
+  "envizi>ibm_pa": "Planning Analytics integreert CO2-kostendata uit Envizi voor financiële duurzaamheidsplanning en scenariomodellering",
   "envizi>wxai": "watsonx.ai analyseert ESG-data uit Envizi voor voorspellende duurzaamheidsinzichten en anomaliedetectie",
   "elm_suite>ibm_bob": "IBM Bob genereert code rechtstreeks vanuit ELM-requirements en maakt zo de cirkel rond van specificatie tot implementatie",
   "elm_suite>concert": "Concert biedt operationeel inzicht in applicatie-implementaties die met ELM worden beheerd",
   "elm_suite>api_connect": "ELM stelt engineeringartefacten en requirementsdata beschikbaar via API Connect voor integratie in de toolchain",
   "elm_suite>webmethods": "webMethods integreert ELM met bedrijfssystemen voor end-to-end automatisering van engineeringworkflows",
   "app_connect>api_connect": "App Connect bouwt integraties die API Connect vervolgens beschikbaar stelt als gecontroleerde, beveiligde API's",
-  "app_connect>webmethods": "App Connect neemt SaaS- en cloudintegraties voor zijn rekening, webMethods complexe B2B- en on-prem-patronen â€“ integratielagen die elkaar aanvullen",
+  "app_connect>webmethods": "App Connect neemt SaaS- en cloudintegraties voor zijn rekening, webMethods complexe B2B- en on-prem-patronen – integratielagen die elkaar aanvullen",
   "app_connect>event_auto": "Workflows in App Connect triggeren Event Automation voor realtime, event-driven verwerking",
   "app_connect>wxorch": "watsonx Orchestrate gebruikt App Connect om AI-agents te koppelen aan zakelijke SaaS-applicaties",
   "aspera>wxdata": "Aspera zorgt voor high-speed ingest van grote datasets in watsonx.data voor AI-trainingspipelines",
@@ -1000,7 +998,7 @@ window.I18N.nl = {
   "ns1>verify": "De intelligente routering van NS1 leidt gebruikers naar het dichtstbijzijnde authenticatie-endpoint en verbetert zo de prestaties en veerkracht van SSO met Verify",
   "ns1>sevone": "Netwerkprestatiedata uit SevOne onderbouwt de traffic-steeringbeslissingen van NS1 voor optimale routering",
   "ns1>concert": "Concert gebruikt DNS-statusdata van NS1 bij het monitoren van de beschikbaarheid van applicaties",
-  "powervs>power": "PowerVS is de cloudextensie van Power Systems â€“ voor hybride Power-omgevingen die zowel on-prem als IBM Cloud omvatten",
+  "powervs>power": "PowerVS is de cloudextensie van Power Systems – voor hybride Power-omgevingen die zowel on-prem als IBM Cloud omvatten",
   "powervs>aix": "AIX-workloads draaien native op PowerVS, waardoor migratie naar de cloud mogelijk is zonder wijzigingen aan OS of applicaties",
   "powervs>ibmi": "IBM i-applicaties draaien native op PowerVS en bieden zo een route naar de cloud voor legacy IBM i-omgevingen",
   "powervs>ibm_tls": "IBM TLS ondersteunt de transitieplanning en het lifecyclebeheer bij migraties van on-prem Power naar PowerVS",
@@ -1012,10 +1010,10 @@ window.I18N.nl = {
   "db2>wxdata": "Db2 is een primaire transactionele databron die in watsonx.data wordt gefedereerd voor uniforme analytics en het trainen van AI-modellen",
   "db2>wxdint": "watsonx.data integration neemt Db2-data op en transformeert die voor verdere AI- en analyticspipelines",
   "db2>guardium": "Guardium monitort en auditeert alle toegang tot Db2-data voor naleving van regelgeving en databeveiliging",
-  "db2>ibmi": "Db2 for IBM i is de geÃ¯ntegreerde database in de kern van het IBM i-platform â€“ een native, ingebouwde relatie",
+  "db2>ibmi": "Db2 for IBM i is de geïntegreerde database in de kern van het IBM i-platform – een native, ingebouwde relatie",
   "db2>ibm_bob": "IBM Bob helpt bij queryoptimalisatie in Db2, schemamodernisering en de migratie van PL/SQL naar Db2",
   "cognos>wxdata": "Cognos bevraagt watsonx.data als uniforme databron voor gecontroleerde bedrijfsrapportage over het hele data lakehouse",
-  "cognos>ibm_pa": "Cognos Analytics levert operationele en managementrapportages op basis van de financiÃ«le modellen in Planning Analytics",
+  "cognos>ibm_pa": "Cognos Analytics levert operationele en managementrapportages op basis van de financiële modellen in Planning Analytics",
   "cognos>db2": "Cognos is een primaire BI-afnemer van transactionele Db2-data voor dashboards en rapportages in de hele organisatie",
   "cognos>wxai": "watsonx.ai verrijkt Cognos met voorspellende analyses en AI-gegenereerde inzichten, direct zichtbaar in dashboards",
   "cognos>guardium": "Guardium handhaaft beleid voor datatoegang op de databronnen die Cognos bevraagt, zodat rapportages compliant zijn"
