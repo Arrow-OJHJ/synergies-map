@@ -234,27 +234,52 @@
     transform: rotate(180deg);
   }
 
-  /* View toggle button — lives in bar1 next to lang/theme, matches their style */
+  /* View toggle button (bar2, desktop only) */
   .view-toggle-btn {
-    width: 48px;
-    height: 48px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    color: #c6c6c6;
-    cursor: pointer;
-    transition: background-color 0.11s, color 0.11s;
+    gap: 6px;
     flex-shrink: 0;
-    position: relative;
+    height: 32px;
+    padding: 0 12px;
+    background: transparent;
+    border: 1px solid var(--cds-border-subtle-01);
+    color: var(--cds-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.11s, border-color 0.11s, color 0.11s;
+    align-self: center;
   }
-  .view-toggle-btn:hover { background: #353535; color: #ffffff; }
-  .view-toggle-btn:focus-visible { outline: 2px solid #ffffff; outline-offset: -2px; }
-  /* Active (radial mode on): subtle highlight so user can see the mode is on */
-  .view-toggle-btn.is-active { color: #78a9ff; }
-  .view-toggle-btn.is-active:hover { background: #353535; color: #a6c8ff; }
-  #view-toggle-icon { display: block; transition: opacity 0.15s; }
+  .view-toggle-btn:hover {
+    background: var(--cds-background-hover);
+    color: var(--cds-text-primary);
+    border-color: var(--cds-border-strong-01);
+  }
+  .view-toggle-btn:focus-visible {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+  }
+  .view-toggle-btn.is-active {
+    background: var(--cds-background-inverse);
+    color: var(--cds-text-inverse);
+    border-color: var(--cds-background-inverse);
+  }
+  .view-toggle-btn.is-active:hover {
+    background: var(--cds-background-inverse-hover);
+    border-color: var(--cds-background-inverse-hover);
+  }
+  .view-toggle-icon {
+    font-size: 14px;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  [data-view="radial"] .view-toggle-icon {
+    transform: rotate(45deg);
+  }
 
   /* Suppress swimlane decorations in radial view */
   [data-view="radial"] .lane-strip,
@@ -263,18 +288,30 @@
     display: none !important;
   }
 
-  /* Draggable nodes in radial view */
-  [data-view="radial"] .pnode { cursor: grab; }
-  [data-view="radial"] .pnode:active { cursor: grabbing; }
-
-  /* Ring guides */
+  /* Ring guides and labels for radial view */
   .ring-guide {
     fill: none;
     stroke: var(--cds-border-subtle-01);
     stroke-width: 1;
-    opacity: 0.3;
-    stroke-dasharray: 5 5;
+    opacity: 0.35;
+    stroke-dasharray: 4 4;
     pointer-events: none;
+  }
+  .ring-label {
+    position: absolute;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cds-text-secondary);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 2;
+    background: var(--cds-background);
+    padding: 2px 5px;
+    border: 1px solid var(--cds-border-subtle-01);
   }
 
   /* Language picker in shell (the shell bar is dark in both themes) */
@@ -1392,24 +1429,6 @@
           <button type="button" id="lang-btn" class="cds-shell__lang-btn" aria-label="Language" data-i18n-aria="language" data-i18n-title="language" title="Language">English</button>
           <ul id="lang-list" class="cds-shell__lang-list" role="listbox" aria-label="Language"></ul>
         </div>
-        <button type="button" id="view-toggle-btn" class="view-toggle-btn" aria-label="Switch to radial view" title="Switch to radial view">
-          <svg id="view-toggle-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <!-- Map icon (grid of dots) shown when in map mode; radial icon shown when in radial mode -->
-            <g class="icon-map">
-              <rect x="2" y="2" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-              <rect x="11" y="2" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-              <rect x="2" y="8" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-              <rect x="11" y="8" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-              <rect x="2" y="14" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-              <rect x="11" y="14" width="7" height="4" rx="0.5" stroke="currentColor" stroke-width="1.4"/>
-            </g>
-            <g class="icon-radial" style="display:none">
-              <circle cx="10" cy="10" r="2" fill="currentColor"/>
-              <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="1.4"/>
-              <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.4"/>
-            </g>
-          </svg>
-        </button>
         <button class="cds-shell__theme-btn" id="themeBtn" type="button" title="Toggle between light and dark theme" aria-label="Toggle theme" data-i18n-title="toggleThemeTitle" data-i18n-aria="toggleTheme">
           <span id="themeText" class="visually-hidden" data-i18n="toggleTheme">Toggle theme</span>
           <span class="icon-glyph" aria-hidden="true">◐</span>
@@ -1439,6 +1458,10 @@
       </div>
       <span id="search-results" class="search-results-count"></span>
       <nav id="play-legend" aria-label="Product group filter" data-i18n-aria="playFilter"></nav>
+      <button type="button" id="view-toggle-btn" class="view-toggle-btn" aria-label="Switch to radial view" data-i18n-aria="viewRadial" title="Switch to radial view">
+        <span class="view-toggle-icon" aria-hidden="true">⊙</span>
+        <span id="view-toggle-label" data-i18n="viewRadial">Radial view</span>
+      </button>
     </div>
   </header>
 
@@ -4710,238 +4733,97 @@ function computeLayout() {
 }
 
 /* ════════════════════════════════════════════════════════
-   Radial / Force-directed layout
-   Layout strategy: pie-sector grouping.
-   Each category occupies an equal arc-sector of the circle.
-   Products within a category spread across radii (inner→outer)
-   within their sector, so same-group nodes stay clustered.
-   A force simulation then runs to resolve overlaps while
-   keeping nodes pulled toward their sector's target position.
-   Hover repulsion and full drag are supported.
+   Radial Layout
+   Products arranged in concentric rings, one ring per category.
+   Reuses the same _px / _py / style.left / style.top pattern
+   as computeLayout() so drawConnections() works unchanged.
    ════════════════════════════════════════════════════════ */
-
+// Cached radial geometry so drawRingGuides() can redraw them without
+// a full layout recompute (called after drawConnections wipes the SVG).
 let _radialCache = null;
-let _forceNodes  = null;
-let _forceRAF    = null;
-let _dragNode    = null;
 
 function computeRadialLayout() {
-  stopForceSimulation();
-
   const rect = mapArea.getBoundingClientRect();
-  const W = rect.width, H = rect.height;
-  const cx = W / 2, cy = H / 2;
+  const W = rect.width;
+  const H = rect.height;
+  const cx = W / 2;
+  const cy = H / 2;
 
+  // Remove lane decorations and old ring labels — created fresh below.
   mapArea.querySelectorAll('.lane-strip, .lane-label, .lane-divider, .ring-label').forEach(el => el.remove());
 
-  // Each category sits on one of 6 evenly-spaced rings.
-  // All products for that category arc around their ring within a 50° arc
-  // (tight enough to look clearly grouped, wide enough to avoid overlap).
-  const numCats     = CATEGORIES.length;
-  const sectorAngle = (2 * Math.PI) / numCats;        // 60° per category
-  const arcHalf     = sectorAngle * 0.40;              // ±24° around sector centre
-  const nodeSpacing = 68;                              // desired px gap between nodes
-  // Ring radii — spaced by enough to clearly separate the six groups
-  const minDim   = Math.min(W, H);
-  const baseR    = minDim * 0.20;   // innermost category ring
-  const ringGap  = minDim * 0.075; // gap between successive rings
-  const outerR   = baseR + (numCats - 1) * ringGap;
+  const numRings = CATEGORIES.length;
+  const minDim = Math.min(W, H);
+  const innerR = minDim * 0.10;
+  const outerR = minDim * 0.44;
+  const ringStep = numRings > 1 ? (outerR - innerR) / (numRings - 1) : 0;
 
-  _radialCache = { cx, cy, outerR, W, H };
-  _forceNodes  = [];
+  // Cache geometry for drawRingGuides()
+  _radialCache = { cx, cy, innerR, outerR, ringStep };
 
-  CATEGORIES.forEach((cat, catIdx) => {
-    const sectorMid = -Math.PI / 2 + catIdx * sectorAngle;
-    const r = baseR + catIdx * ringGap;
+  CATEGORIES.forEach((cat, ringIdx) => {
+    const r = innerR + ringIdx * ringStep;
 
+    // Place a category label at the top of the ring (12 o'clock, nudged right
+    // slightly to avoid clashing with lines coming from exactly the top).
+    const labelAngle = -Math.PI / 2 + 0.18;
+    const labelX = cx + r * Math.cos(labelAngle);
+    const labelY = cy + r * Math.sin(labelAngle);
+    const label = document.createElement('div');
+    label.className = 'ring-label';
+    label.textContent = categoryLabel(cat.id);
+    label.style.left = labelX + 'px';
+    label.style.top  = labelY + 'px';
+    mapArea.insertBefore(label, svgEl);
+
+    // Distribute products evenly around this ring
     const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
     const n = productsInCat.length;
     if (n === 0) return;
 
+    // Reset any inline font/padding overrides from the swimlane layout
     productsInCat.forEach(p => {
       nodeEls[p.id].style.fontSize = '';
       nodeEls[p.id].style.padding  = '';
     });
 
-    // Spread products evenly along the arc. If they'd be too close together
-    // due to arc length, reduce the effective arc to keep spacing tight.
-    const arcLen    = 2 * arcHalf * r;
-    const maxNodes  = Math.max(1, Math.floor(arcLen / nodeSpacing) + 1);
-    // How many columns (arc positions) and rows (radial layers)
-    const cols      = Math.min(n, maxNodes);
-    const rows      = Math.ceil(n / cols);
-    const rowGap    = 52; // px between radial rows within the cluster
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2;
 
     productsInCat.forEach((p, i) => {
-      const row = Math.floor(i / cols);
-      const col = i % cols;
-      const colsInRow  = (row === rows - 1) ? (n - row * cols) : cols;
-      const colOffset  = (cols - colsInRow) / 2;
-      const rowR       = r + (row - (rows - 1) / 2) * rowGap;
-      const angle      = (colsInRow > 1)
-        ? sectorMid - arcHalf + (col + colOffset) / (cols - 1) * (2 * arcHalf)
-        : sectorMid;
-
-      const px = cx + rowR * Math.cos(angle);
-      const py = cy + rowR * Math.sin(angle);
-      p._px = px; p._py = py;
+      const angle = startAngle + i * angleStep;
+      const px = cx + r * Math.cos(angle);
+      const py = cy + r * Math.sin(angle);
+      p._px = px;
+      p._py = py;
       nodeEls[p.id].style.left = px + 'px';
       nodeEls[p.id].style.top  = py + 'px';
-
-      _forceNodes.push({ p, targetX: px, targetY: py, x: px, y: py, vx: 0, vy: 0, pinned: false });
     });
   });
-
-  startForceSimulation();
 }
 
-/* ── Physics tick ─────────────────────────────── */
-// Lightweight sim: only runs on entry (to settle initial layout) and during/after drag.
-// No hover physics — hover is visual only so nodes stay still and are easy to click.
-function forceSimTick() {
-  if (!_forceNodes || !_radialCache) return;
-  const N        = _forceNodes.length;
-  const REPEL_R  = 72;    // only push apart nodes that are really close
-  const REPEL_K  = 1200;
-  const HOME_K   = 0.18;  // strong spring back to home — settles fast
-  const DAMP     = 0.82;  // high damping — no wobble
-
-  for (let i = 0; i < N; i++) {
-    const n = _forceNodes[i];
-    if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
-
-    let fx = (n.targetX - n.x) * HOME_K;
-    let fy = (n.targetY - n.y) * HOME_K;
-
-    // Repulsion only for very close neighbours (prevents initial overlap only)
-    for (let j = 0; j < N; j++) {
-      if (i === j) continue;
-      const m  = _forceNodes[j];
-      const ex = n.x - m.x, ey = n.y - m.y;
-      const d2 = ex * ex + ey * ey + 1;
-      if (d2 < REPEL_R * REPEL_R) {
-        const d = Math.sqrt(d2);
-        const f = REPEL_K / d2;
-        fx += (ex / d) * f;
-        fy += (ey / d) * f;
-      }
-    }
-
-    n.vx = (n.vx + fx) * DAMP;
-    n.vy = (n.vy + fy) * DAMP;
-    n.x += n.vx;
-    n.y += n.vy;
-  }
-
-  let maxV2 = 0;
-  for (const n of _forceNodes) {
-    n.p._px = n.x; n.p._py = n.y;
-    nodeEls[n.p.id].style.left = n.x + 'px';
-    nodeEls[n.p.id].style.top  = n.y + 'px';
-    const v2 = n.vx * n.vx + n.vy * n.vy;
-    if (v2 > maxV2) maxV2 = v2;
-  }
-
-  if (selectedId) drawConnections(selectedId);
-  else if (activePlayFilter) drawConnections();
-  else drawConnections();
-
-  // Stop cleanly once everything has settled — no continuous wobble
-  _forceRAF = (maxV2 > 0.004 || _dragNode) ? requestAnimationFrame(forceSimTick) : null;
-}
-
-function startForceSimulation() {
-  if (_forceRAF) return;
-  _forceRAF = requestAnimationFrame(forceSimTick);
-}
-
-function stopForceSimulation() {
-  if (_forceRAF) { cancelAnimationFrame(_forceRAF); _forceRAF = null; }
-}
-
-/* ── Interaction: drag ────────────────────────── */
-let _dragDidMove = false;
-
-mapArea.addEventListener('mouseleave', function _onMapMouseLeave() {
-  if (_dragNode) { _dragNode.pinned = false; _dragNode = null; }
-});
-
-mapArea.addEventListener('mousedown', function _onMapMouseDown(e) {
-  if (viewMode !== 'radial' || !_forceNodes) return;
-  const target = e.target.closest('.pnode');
-  if (!target) return;
-  const id = target.dataset.id;
-  const fn = _forceNodes.find(n => n.p.id === id);
-  if (!fn) return;
-
-  const startX = e.clientX, startY = e.clientY;
-  _dragDidMove = false;
-  fn.pinned = true;
-  _dragNode = fn;
-  if (!_forceRAF) startForceSimulation();
-
-  function onDocMove(ev) {
-    const rect = mapArea.getBoundingClientRect();
-    const mx = ev.clientX - rect.left;
-    const my = ev.clientY - rect.top;
-    if (Math.hypot(ev.clientX - startX, ev.clientY - startY) > 5) {
-      _dragDidMove = true;
-    }
-    fn.x = mx; fn.y = my;
-    fn.p._px = mx; fn.p._py = my;
-    fn.vx = 0; fn.vy = 0;
-    if (!_forceRAF) startForceSimulation();
-  }
-
-  function onDocUp(ev) {
-    fn.pinned = false;
-    _dragNode = null;
-    document.removeEventListener('mousemove', onDocMove);
-    document.removeEventListener('mouseup', onDocUp);
-    if (_dragDidMove) {
-      target.addEventListener('click', e2 => e2.stopPropagation(), { once: true, capture: true });
-    }
-    if (!_forceRAF) startForceSimulation();
-  }
-
-  document.addEventListener('mousemove', onDocMove);
-  document.addEventListener('mouseup', onDocUp);
-});
-
-// Sector arc guides — one subtle circle per category sector boundary,
-// redrawn after drawConnections clears the SVG.
+// Inject ring guide circles into the SVG (called at the END of drawConnections
+// so they sit behind connection paths — drawConnections resets svgEl.innerHTML).
 function drawRingGuides() {
   if (!_radialCache) return;
-  const { cx, cy, outerR } = _radialCache;
-  const numCats = CATEGORIES.length;
-  const sectorAngle = (2 * Math.PI) / numCats;
+  const { cx, cy, innerR, ringStep } = _radialCache;
   const defs = svgEl.querySelector('#svg-defs');
-
-  // Draw one thin outer boundary circle to frame the graph
-  const outerCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  outerCircle.setAttribute('cx', cx);
-  outerCircle.setAttribute('cy', cy);
-  outerCircle.setAttribute('r', outerR * 1.05);
-  outerCircle.classList.add('ring-guide');
-  if (defs && defs.nextSibling) svgEl.insertBefore(outerCircle, defs.nextSibling);
-  else svgEl.appendChild(outerCircle);
-
-  // Draw sector divider lines from centre outward
-  for (let i = 0; i < numCats; i++) {
-    const angle = -Math.PI / 2 + i * sectorAngle;
-    const x2 = cx + outerR * 1.05 * Math.cos(angle);
-    const y2 = cy + outerR * 1.05 * Math.sin(angle);
-    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    line.setAttribute('x1', cx); line.setAttribute('y1', cy);
-    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
-    line.classList.add('ring-guide');
-    if (defs && defs.nextSibling) svgEl.insertBefore(line, defs.nextSibling);
-    else svgEl.appendChild(line);
-  }
+  CATEGORIES.forEach((cat, ringIdx) => {
+    const r = innerR + ringIdx * ringStep;
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', cx);
+    circle.setAttribute('cy', cy);
+    circle.setAttribute('r', r);
+    circle.classList.add('ring-guide');
+    // Insert after defs but before paths
+    if (defs && defs.nextSibling) svgEl.insertBefore(circle, defs.nextSibling);
+    else svgEl.appendChild(circle);
+  });
 }
 
 /* ════════════════════════════════════════════════════════
-   Layout dispatcher
+   Layout dispatcher — calls the right layout function
+   based on the current viewMode.
    ════════════════════════════════════════════════════════ */
 function runLayout() {
   if (viewMode === 'radial') computeRadialLayout();
@@ -4952,29 +4834,25 @@ function runLayout() {
    View mode toggle
    ════════════════════════════════════════════════════════ */
 const viewToggleBtn = document.getElementById('view-toggle-btn');
+const viewToggleLabel = document.getElementById('view-toggle-label');
 
 function setViewMode(mode) {
   viewMode = mode;
-  document.getElementById('app').dataset.view = mode;
+  const appEl = document.getElementById('app');
+  appEl.dataset.view = mode;
 
+  // Clean up radial-only DOM when switching back to map view
   if (mode === 'map') {
-    stopForceSimulation();
     _radialCache = null;
-    _forceNodes  = null;
-    _dragNode    = null;
     mapArea.querySelectorAll('.ring-label').forEach(el => el.remove());
   }
 
   const isRadial = mode === 'radial';
   viewToggleBtn.classList.toggle('is-active', isRadial);
+  viewToggleLabel.dataset.i18n = isRadial ? 'viewMap' : 'viewRadial';
+  viewToggleLabel.textContent = t(viewToggleLabel.dataset.i18n);
   viewToggleBtn.setAttribute('aria-label', t(isRadial ? 'viewMap' : 'viewRadial'));
   viewToggleBtn.title = t(isRadial ? 'viewMap' : 'viewRadial');
-
-  // Swap the SVG icon: show grid when in radial (to switch back), show rings when in map
-  const iconMap    = viewToggleBtn.querySelector('.icon-map');
-  const iconRadial = viewToggleBtn.querySelector('.icon-radial');
-  if (iconMap)    iconMap.style.display    = isRadial ? 'none'  : '';
-  if (iconRadial) iconRadial.style.display = isRadial ? ''      : 'none';
 
   scheduleLayoutUpdate();
 }
