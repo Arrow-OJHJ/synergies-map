@@ -272,7 +272,22 @@
     list-style: none;
     margin: 0;
     padding: 4px 0;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    /* Hide scrollbar when the list fits; visible only when clipped */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
   }
+  .cds-shell__lang-list:hover {
+    scrollbar-color: #525252 transparent;
+  }
+  .cds-shell__lang-list::-webkit-scrollbar { width: 4px; }
+  .cds-shell__lang-list::-webkit-scrollbar-track { background: transparent; }
+  .cds-shell__lang-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 2px;
+  }
+  .cds-shell__lang-list:hover::-webkit-scrollbar-thumb { background: #525252; }
   .cds-shell__lang-list.open { display: block; }
   .cds-shell__lang-list li {
     padding: 8px 16px;
