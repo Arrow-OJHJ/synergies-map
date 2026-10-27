@@ -3010,7 +3010,7 @@ const PRODUCTS = [
   "plays": [
    4
   ],
-  "markets": ["fr-BE", "nl-BE"],
+  "markets": ["fr-BE", "nl-BE", "de-BE"],
   "desc": "Lightwell is a joint IBM–Red Hat offering that helps organisations identify and address vulnerabilities in third-party open-source software dependencies, providing validated remediation support for vulnerable packages.",
   "value": "Reduces risk from open-source supply-chain vulnerabilities by delivering validated remediation packages that allow organisations to patch affected dependencies without requiring disruptive version upgrades.",
   "questions": [
@@ -3039,7 +3039,7 @@ const PRODUCTS = [
   "plays": [
    1
   ],
-  "markets": ["fr-BE", "nl-BE"],
+  "markets": ["fr-BE", "nl-BE", "de-BE"],
   "desc": "Red Hat Ansible Automation Platform is an enterprise automation platform for consistently automating IT infrastructure, cloud, network, security, and application operations using human-readable playbooks.",
   "value": "Enables organisations to scale governed, repeatable automation across IT operations — reducing manual effort, enforcing consistent configurations, and accelerating remediation across heterogeneous environments.",
   "questions": [
@@ -3069,7 +3069,7 @@ const PRODUCTS = [
   "plays": [
    5
   ],
-  "markets": ["fr-BE", "nl-BE"],
+  "markets": ["fr-BE", "nl-BE", "de-BE"],
   "desc": "Red Hat OpenShift is an enterprise Kubernetes platform for building, deploying, and operating containerised applications consistently across on-premises, hybrid cloud, and multi-cloud environments.",
   "value": "Provides a consistent, secure application platform across hybrid environments — reducing operational overhead and enabling developer self-service for containerised workloads regardless of underlying infrastructure.",
   "questions": [
@@ -3099,7 +3099,7 @@ const PRODUCTS = [
   "plays": [
    2
   ],
-  "markets": ["fr-BE", "nl-BE"],
+  "markets": ["fr-BE", "nl-BE", "de-BE"],
   "desc": "Red Hat OpenShift AI is a flexible, scalable AI and machine learning platform built on Red Hat OpenShift that enables enterprises to build and deliver AI-enabled applications across hybrid cloud environments.",
   "value": "Provides a unified, enterprise-grade environment for data acquisition, model training, fine-tuning, serving, and monitoring — enabling AI application development at scale across on-premises and cloud infrastructure.",
   "questions": [
@@ -4152,91 +4152,91 @@ const CONNECTIONS = [
   "lightwell",
   4,
   "IBM Concert identifies and prioritises application and software supply-chain risk; Lightwell provides validated remediation support for vulnerable third-party open-source dependencies.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "concert",
   "rh_ansible",
   4,
   "IBM Concert identifies and prioritises application risk; Red Hat Ansible Automation Platform automates the consistent deployment of remediations and security configurations across managed environments.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "lightwell",
   "rh_ansible",
   4,
   "Lightwell provides validated remediation packages for vulnerable open-source dependencies; Red Hat Ansible Automation Platform automates their consistent deployment across the environment.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "terraform",
   "rh_ansible",
   1,
   "Terraform provisions infrastructure as code; Red Hat Ansible Automation Platform configures systems and automates operational tasks after or alongside provisioning — complementary technologies for infrastructure and operations.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "fusion_hci",
   "rh_openshift",
   5,
   "IBM Fusion HCI provides an integrated on-premises converged infrastructure foundation for Red Hat OpenShift containerised applications, including compute, storage and lifecycle management.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "ibm_bob",
   "rh_ansible",
   2,
   "IBM Bob assists developers with creating code and automation content; Red Hat Ansible Automation Platform executes and governs that automation at enterprise scale across the IT environment.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "ibm_bob",
   "rh_openshift",
   5,
   "IBM Bob accelerates application development and modernisation; Red Hat OpenShift provides the enterprise container platform on which those applications are built, deployed and operated.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxai",
   2,
   "Red Hat OpenShift AI provides the enterprise MLOps platform for model training, fine-tuning and serving; watsonx.ai provides IBM's foundation model and AI model development capabilities — together forming a comprehensive hybrid AI development and deployment environment.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxdata",
   2,
   "Red Hat OpenShift AI consumes governed data from the watsonx.data lakehouse for model training and inference, enabling AI workloads to access hybrid data assets across on-premises and cloud environments.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxdi",
   2,
   "watsonx.data intelligence provides data discovery, metadata management, lineage and quality capabilities that help ensure the data feeding Red Hat OpenShift AI model training and inference pipelines is well-understood and trusted.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxdint",
   2,
   "watsonx.data integration delivers the data movement and transformation pipelines that supply Red Hat OpenShift AI with prepared, AI-ready data from across the enterprise for training, fine-tuning and inference.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxgov",
   2,
   "watsonx.governance provides AI model risk management, lifecycle governance and compliance monitoring across AI workloads deployed on Red Hat OpenShift AI, supporting responsible AI at enterprise scale.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ],
  [
   "rh_openshift_ai",
   "wxorch",
   2,
   "Red Hat OpenShift AI provides the model serving infrastructure on which watsonx Orchestrate AI agents and workflows depend, enabling enterprise AI automation at scale across hybrid environments.",
-  ["fr-BE", "nl-BE"]
+  ["fr-BE", "nl-BE", "de-BE"]
  ]
 ];
 /*DATA-END*/
@@ -4276,16 +4276,17 @@ const LANGS = [
   ['bg', 'Български'],
   ['cs', 'Čeština'],
   ['da', 'Dansk'],
-  ['de', 'Deutsch'],
+  ['de-BE', 'Deutsch (BeLux)'],
+  ['de', 'Deutsch (Deutschland)'],
   ['et', 'Eesti'],
   ['es', 'Español'],
   ['fr', 'Français (France)'],
-  ['fr-BE', 'Français (Belgique)'],
+  ['fr-BE', 'Français (BeLux)'],
   ['fr-MA', 'Français (Maroc)'],
   ['hr', 'Hrvatski'],
   ['hu', 'Magyar'],
   ['nl', 'Nederlands (Nederland)'],
-  ['nl-BE', 'Nederlands (België)'],
+  ['nl-BE', 'Nederlands (BeLux)'],
   ['nb', 'Norsk'],
   ['pl', 'Polski'],
   ['pt', 'Português'],

@@ -1,8 +1,8 @@
 window.I18N = window.I18N || {};
 window.I18N['fr-BE'] = {
- "meta": { "name": "Français (Belgique)", "htmlLang": "fr-BE", "base": "fr" },
+ "meta": { "name": "Français (BeLux)", "htmlLang": "fr-BE", "base": "fr" },
  "ui": {
-  "brandName": "Arrow ECS Belgique",
+  "brandName": "Arrow ECS BeLux",
   "brandContacts": []
  },
  "products": {

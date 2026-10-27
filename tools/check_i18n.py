@@ -182,7 +182,7 @@ def check(code, data, en, names, market_gated_products=None, market_gated_connec
 
 
 # Belgian market language codes: market-gated keys are REQUIRED in these packs.
-BELGIAN_CODES = {'fr-BE', 'nl-BE'}
+BELGIAN_CODES = {'fr-BE', 'nl-BE', 'de-BE'}
 
 
 def main():
