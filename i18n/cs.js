@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.cs = {
  "meta": { "name": "Čeština", "htmlLang": "cs" },
  "ui": {
@@ -1013,6 +1013,9 @@ window.I18N.cs = {
   "cognos>ibm_pa": "Cognos Analytics poskytuje provozní a manažerský reporting nad finančními modely Planning Analytics",
   "cognos>db2": "Cognos je hlavním BI konzumentem transakčních dat z Db2 pro podnikové dashboardy a reporty",
   "cognos>wxai": "watsonx.ai rozšiřuje Cognos o prediktivní analytiku a poznatky generované AI, zobrazované přímo v dashboardech",
-  "cognos>guardium": "Guardium vynucuje zásady přístupu k datům u zdrojů, na které se Cognos dotazuje, a zajišťuje tak reporting v souladu s předpisy"
+  "cognos>guardium": "Guardium vynucuje zásady přístupu k datům u zdrojů, na které se Cognos dotazuje, a zajišťuje tak reporting v souladu s předpisy",
+  "fusion_hci>ibm_bob": "IBM Bob zrychluje vývoj a nasazení aplikací umělé inteligence na IBM Fusion HCI, včetně automatizovaného nasazení kompletních zásobníků AI aplikací",
+  "fusion_hci>wxorch": "IBM Fusion HCI poskytuje on-premises platformu pro watsonx Orchestrate a podporuje lokální nasazení AI agentů, pracovních postupů, koncových bodů modelů a řízených podnikových datových služeb",
+  "fusion_hci>maximo": "IBM Fusion HCI poskytuje on-premises infrastrukturní základ pro Maximo Application Suite s integrovaným úložištěm, správou životního cyklu, zálohováním a obnovou po havárii"
  }
 };

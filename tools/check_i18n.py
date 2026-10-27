@@ -52,6 +52,16 @@ def load_english():
     src = (ROOT / 'index.html').read_text(encoding='utf-8')
     plays = const(src, 'PLAYS')
     products = const(src, 'PRODUCTS')
+    connections = const(src, 'CONNECTIONS')
+    # Collect market-gated product IDs and connection keys (from>to).
+    # A product is market-gated when it has a non-empty "markets" list.
+    # A connection is market-gated when it has a non-empty fifth element.
+    market_gated_products = {
+        p['id'] for p in products if p.get('markets')
+    }
+    market_gated_connections = {
+        f'{c[0]}>{c[1]}' for c in connections if len(c) > 4 and c[4]
+    }
     return {
         'ui': const(src, 'UI_EN'),
         'plays': {k: {'name': v['name'], 'short': v['short']} for k, v in plays.items()},
@@ -59,8 +69,8 @@ def load_english():
         'products': {p['id']: {k: p[k] for k in ('desc', 'value', 'questions', 'differentiators')}
                      for p in products},
         'competitors': {g: g for g in const(src, 'GENERIC_COMPETITORS')},
-        'connections': {f'{a}>{b}': t for a, b, _, t in const(src, 'CONNECTIONS')},
-    }, products
+        'connections': {f'{a}>{b}': t for a, b, _, t, *_ in connections},
+    }, products, market_gated_products, market_gated_connections
 
 
 def load_lang(path):
@@ -75,11 +85,22 @@ def names_in(text, names):
     return [n for n in names if re.search(r'(?<![\w.])' + re.escape(n) + r'(?![\w])', text)]
 
 
-def check(code, data, en, names):
+def check(code, data, en, names, market_gated_products=None, market_gated_connections=None,
+          is_belgian=False):
+    """Check a merged language pack against the English master.
+
+    market_gated_products: set of product IDs that carry a markets restriction.
+    market_gated_connections: set of connection keys ("from>to") that carry a markets restriction.
+    is_belgian: True for fr-BE and nl-BE packs; market-gated keys ARE required there.
+    For all other packs, absence of a market-gated key is silently skipped.
+    """
     errors, warnings = [], []
     cats = PLURALS.get(code)
     if cats is None:
         return [f'unknown language code {code!r}; add it to PLURALS'], []
+
+    market_gated_products = market_gated_products or set()
+    market_gated_connections = market_gated_connections or set()
 
     meta = data.get('meta', {})
     if not meta.get('name') or not meta.get('htmlLang'):
@@ -105,6 +126,11 @@ def check(code, data, en, names):
                 errors.append(f'{path}: expected object')
                 return
             for k in e.keys() - t.keys():
+                # For market-gated keys, only require them in Belgian packs.
+                if path == 'products' and k in market_gated_products and not is_belgian:
+                    continue
+                if path == 'connections' and k in market_gated_connections and not is_belgian:
+                    continue
                 errors.append(f'{path}.{k}: missing')
             for k in t.keys() - e.keys():
                 if f'{path}.{k}' not in PACK_ONLY:
@@ -155,10 +181,17 @@ def check(code, data, en, names):
     return errors, warnings
 
 
+# Belgian market language codes: market-gated keys are REQUIRED in these packs.
+BELGIAN_CODES = {'fr-BE', 'nl-BE'}
+
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
-    en, products = load_english()
+    en, products, market_gated_products, market_gated_connections = load_english()
     # Names that must survive translation untouched: product labels and brand competitors.
+    # Use only non-market-gated product labels for name-check purposes on non-Belgian packs;
+    # the full set is used for Belgian packs. For simplicity we include all labels always —
+    # name-check warnings on Belgian packs are expected and desirable.
     names = {p['label'] for p in products}
     names |= {c for p in products for c in p['competitors']} - set(en['competitors'])
     names = sorted(names, key=len, reverse=True)
@@ -192,7 +225,11 @@ def main():
             data = {s: {**base_data.get(s, {}), **data.get(s, {})}
                     for s in set(base_data) | set(data)}
             plural_code = base
-        errors, warnings = check(plural_code, data, en, names)
+        # Determine if this is a Belgian pack (market-gated keys are required there)
+        is_belgian = f.stem in BELGIAN_CODES
+        errors, warnings = check(plural_code, data, en, names,
+                                 market_gated_products, market_gated_connections,
+                                 is_belgian=is_belgian)
         errors = pre + errors
         status = 'FAIL' if errors else 'ok'
         print(f'{f.name}: {status} ({len(errors)} errors, {len(warnings)} warnings)')

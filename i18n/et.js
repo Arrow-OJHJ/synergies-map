@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.et = {
  "meta": { "name": "Eesti", "htmlLang": "et" },
  "ui": {
@@ -1016,6 +1016,9 @@ window.I18N.et = {
   "cognos>ibm_pa": "Cognos Analytics pakub Planning Analytics finantsmudelite põhjal operatiiv- ja juhtimisaruandlust",
   "cognos>db2": "Cognos on Db2 tehinguandmete peamine BI-tarbija ettevõtte töölaudade ja aruannete jaoks",
   "cognos>wxai": "watsonx.ai lisab Cognos platvormile ennustava analüütika ja AI-põhise analüüsi, mille tulemused kuvatakse otse töölaudadel",
-  "cognos>guardium": "Guardium rakendab andmetele juurdepääsu poliitikaid andmeallikatele, mida Cognos päringutes kasutab, tagades nõuetele vastava aruandluse"
+  "cognos>guardium": "Guardium rakendab andmetele juurdepääsu poliitikaid andmeallikatele, mida Cognos päringutes kasutab, tagades nõuetele vastava aruandluse",
+  "fusion_hci>ibm_bob": "IBM Bob kiirendab tehisintellekti rakenduste arendamist ja juurutamist IBM Fusion HCI platvormil, sealhulgas täielike tehisintellekti rakenduste pakkide automatiseeritud kasutuselevõttu",
+  "fusion_hci>wxorch": "IBM Fusion HCI pakub asutusesisest platvormi watsonx Orchestrate'ile, toetades tehisintellekti agentide, töövoogude, mudelilõpp-punktide ja hallatud ettevõtte andmeteenuste kohapealset juurutamist",
+  "fusion_hci>maximo": "IBM Fusion HCI pakub Maximo Application Suite'ile asutusesisest infrastruktuuri alust integreeritud salvestuse, elutsükli halduse, varukoopiate ning katastroofile reageerimisega"
  }
 };

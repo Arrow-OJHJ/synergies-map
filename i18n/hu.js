@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.hu = {
  "meta": { "name": "Magyar", "htmlLang": "hu" },
  "ui": {
@@ -1007,6 +1007,9 @@ window.I18N.hu = {
   "cognos>ibm_pa": "A Cognos Analytics üzemeltetési és vezetői jelentéseket nyújt a Planning Analytics pénzügyi modelljeire építve",
   "cognos>db2": "A Cognos a Db2 tranzakciós adatainak elsődleges BI-felhasználója a vállalati irányítópultokhoz és jelentésekhez",
   "cognos>wxai": "A watsonx.ai prediktív analitikával és AI által generált, irányítópultokon megjelenő elemzésekkel bővíti a Cognos képességeit",
-  "cognos>guardium": "A Guardium adathozzáférési szabályzatokat érvényesít a Cognos által lekérdezett adatforrásokon, biztosítva a megfelelő jelentéskészítést"
+  "cognos>guardium": "A Guardium adathozzáférési szabályzatokat érvényesít a Cognos által lekérdezett adatforrásokon, biztosítva a megfelelő jelentéskészítést",
+  "fusion_hci>ibm_bob": "Az IBM Bob felgyorsítja az AI-alkalmazások fejlesztését és üzembe helyezését az IBM Fusion HCI platformon, beleértve a teljes AI-alkalmazáscsomagok automatizált telepítését is",
+  "fusion_hci>wxorch": "Az IBM Fusion HCI helyszíni platformot biztosít a watsonx Orchestrate számára, támogatva az AI-ügynökök, munkafolyamatok, modellvégpontok és felügyelt vállalati adatszolgáltatások helyi üzembe helyezését",
+  "fusion_hci>maximo": "Az IBM Fusion HCI helyszíni infrastrukturális alapot biztosít a Maximo Application Suite számára integrált tárolással, életciklus-kezeléssel, biztonsági mentéssel és katasztrófa utáni helyreállítással"
  }
 };

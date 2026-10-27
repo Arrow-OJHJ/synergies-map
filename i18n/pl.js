@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.pl = {
  "meta": { "name": "Polski", "htmlLang": "pl" },
  "ui": {
@@ -1013,6 +1013,9 @@ window.I18N.pl = {
   "cognos>ibm_pa": "Cognos Analytics zapewnia raportowanie operacyjne i zarządcze na bazie modeli finansowych Planning Analytics",
   "cognos>db2": "Cognos to główne narzędzie BI korzystające z danych transakcyjnych Db2 dla korporacyjnych pulpitów i raportów",
   "cognos>wxai": "watsonx.ai wzbogaca Cognos o analitykę predykcyjną i analizy generowane przez AI, prezentowane w pulpitach",
-  "cognos>guardium": "Guardium egzekwuje polityki dostępu do danych wobec źródeł, z których korzysta Cognos, zapewniając zgodne raportowanie"
+  "cognos>guardium": "Guardium egzekwuje polityki dostępu do danych wobec źródeł, z których korzysta Cognos, zapewniając zgodne raportowanie",
+  "fusion_hci>ibm_bob": "IBM Bob przyspiesza tworzenie i wdrażanie aplikacji AI na IBM Fusion HCI, w tym zautomatyzowane wdrażanie kompletnych stosów aplikacji AI",
+  "fusion_hci>wxorch": "IBM Fusion HCI zapewnia platformę on-premises dla watsonx Orchestrate, wspierając lokalne wdrożenia agentów AI, przepływów pracy, punktów końcowych modeli i zarządzanych usług danych dla przedsiębiorstw",
+  "fusion_hci>maximo": "IBM Fusion HCI stanowi infrastrukturalną podstawę on-premises dla Maximo Application Suite ze zintegrowanym przechowywaniem danych, zarządzaniem cyklem życia, kopiami zapasowymi i odtwarzaniem po awarii"
  }
 };

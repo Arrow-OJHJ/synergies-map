@@ -1647,6 +1647,10 @@ const CATEGORIES = [
   "playId": 6
  }
 ];
+// Each product object has: { id, label, cat, plays, desc, value, questions, competitors, differentiators }
+// Optional field: "markets" — array of language codes (e.g. ["fr-BE", "nl-BE"]).
+//   When present, the product is only shown when the active language is in the array.
+//   When absent (the default), the product is shown in every edition.
 const PRODUCTS = [
  {
   "id": "api_connect",
@@ -2998,8 +3002,130 @@ const PRODUCTS = [
    "Deep IBM data source integration including Db2, Planning Analytics, and watsonx.data",
    "Strong regulated industry presence — financial services, healthcare, public sector"
   ]
+ },
+ {
+  "id": "lightwell",
+  "label": "Lightwell",
+  "cat": "security",
+  "plays": [
+   4
+  ],
+  "markets": ["fr-BE", "nl-BE"],
+  "desc": "Lightwell is a joint IBM–Red Hat offering that helps organisations identify and address vulnerabilities in third-party open-source software dependencies, providing validated remediation support for vulnerable packages.",
+  "value": "Reduces risk from open-source supply-chain vulnerabilities by delivering validated remediation packages that allow organisations to patch affected dependencies without requiring disruptive version upgrades.",
+  "questions": [
+   "Do you have visibility into the open-source components and transitive dependencies used across your application portfolio?",
+   "Are there known vulnerabilities in your software supply chain that you cannot address immediately through a version upgrade?",
+   "How do you currently validate that remediation patches for open-source components do not introduce regressions?",
+   "Are you under regulatory or contractual pressure to demonstrate timely remediation of software supply-chain risks?"
+  ],
+  "competitors": [
+   "Snyk",
+   "Mend (formerly WhiteSource)",
+   "Black Duck (Synopsys)",
+   "JFrog Xray"
+  ],
+  "differentiators": [
+   "Joint IBM–Red Hat validated remediation support for open-source packages",
+   "Addresses vulnerabilities without requiring immediate disruptive version upgrades",
+   "Integrates with IBM Concert for end-to-end supply-chain risk identification and remediation",
+   "Backed by Red Hat and IBM enterprise support"
+  ]
+ },
+ {
+  "id": "rh_ansible",
+  "label": "Red Hat Ansible Automation Platform",
+  "cat": "automation",
+  "plays": [
+   1
+  ],
+  "markets": ["fr-BE", "nl-BE"],
+  "desc": "Red Hat Ansible Automation Platform is an enterprise automation platform for consistently automating IT infrastructure, cloud, network, security, and application operations using human-readable playbooks.",
+  "value": "Enables organisations to scale governed, repeatable automation across IT operations — reducing manual effort, enforcing consistent configurations, and accelerating remediation across heterogeneous environments.",
+  "questions": [
+   "How are you currently managing configuration and operational tasks across your server, network, and cloud estate?",
+   "Do you need to enforce consistent security configurations and remediations at scale across your environment?",
+   "Are you looking to standardise and govern automation across teams and business units?",
+   "How do you coordinate infrastructure provisioning with post-provisioning configuration and ongoing operations?"
+  ],
+  "competitors": [
+   "Puppet",
+   "Chef",
+   "SaltStack",
+   "Microsoft Azure Automation",
+   "Terraform"
+  ],
+  "differentiators": [
+   "Agentless architecture — no agents required on managed nodes",
+   "Human-readable YAML playbooks reduce barrier to automation adoption",
+   "Centralised automation governance with role-based access control via Automation Controller",
+   "Complementary to Terraform: Ansible configures and operates after Terraform provisions"
+  ]
+ },
+ {
+  "id": "rh_openshift",
+  "label": "Red Hat OpenShift",
+  "cat": "infrastructure",
+  "plays": [
+   5
+  ],
+  "markets": ["fr-BE", "nl-BE"],
+  "desc": "Red Hat OpenShift is an enterprise Kubernetes platform for building, deploying, and operating containerised applications consistently across on-premises, hybrid cloud, and multi-cloud environments.",
+  "value": "Provides a consistent, secure application platform across hybrid environments — reducing operational overhead and enabling developer self-service for containerised workloads regardless of underlying infrastructure.",
+  "questions": [
+   "Are you looking to standardise your container and Kubernetes platform across on-premises and cloud environments?",
+   "Do your development teams need a self-service platform to deploy and manage containerised applications?",
+   "How are you managing security, patching, and lifecycle operations across your Kubernetes clusters?",
+   "Are you planning to modernise legacy applications by migrating them to a container-based platform?"
+  ],
+  "competitors": [
+   "VMware Tanzu",
+   "Google Anthos",
+   "Amazon EKS",
+   "Azure AKS",
+   "Rancher (SUSE)"
+  ],
+  "differentiators": [
+   "Enterprise-hardened Kubernetes distribution with integrated security, CI/CD, and developer tooling",
+   "Consistent platform across on-premises, IBM Cloud, AWS, Azure, and GCP",
+   "Kubernetes Operators simplify deployment and lifecycle management of complex workloads",
+   "Validated integration with IBM Fusion HCI and IBM Cloud Paks"
+  ]
+ },
+ {
+  "id": "rh_openshift_ai",
+  "label": "Red Hat OpenShift AI",
+  "cat": "data_ai",
+  "plays": [
+   2
+  ],
+  "markets": ["fr-BE", "nl-BE"],
+  "desc": "Red Hat OpenShift AI is a flexible, scalable AI and machine learning platform built on Red Hat OpenShift that enables enterprises to build and deliver AI-enabled applications across hybrid cloud environments.",
+  "value": "Provides a unified, enterprise-grade environment for data acquisition, model training, fine-tuning, serving, and monitoring — enabling AI application development at scale across on-premises and cloud infrastructure.",
+  "questions": [
+   "Do your data science and MLOps teams have a consistent environment for model development, training, and deployment across your hybrid infrastructure?",
+   "How are you managing the end-to-end lifecycle of AI models — from experimentation through production serving and monitoring?",
+   "Are you looking to accelerate AI application delivery while maintaining governance and security controls?",
+   "Do you need hardware acceleration support for model training and inference workloads on-premises or in the cloud?"
+  ],
+  "competitors": [
+   "Google Vertex AI",
+   "Azure Machine Learning",
+   "Amazon SageMaker",
+   "Kubeflow (open source)"
+  ],
+  "differentiators": [
+   "Runs on Red Hat OpenShift — consistent AI platform across on-premises and hybrid cloud",
+   "Supports data acquisition, model training, fine-tuning, serving, and monitoring in one platform",
+   "Hardware acceleration support for GPU workloads",
+   "Integrates natively with watsonx.ai, watsonx.data, and watsonx.governance for end-to-end AI lifecycle governance"
+  ]
  }
 ];
+// Each connection tuple: [fromId, toId, playId, description, markets?]
+// Optional fifth element "markets" — array of language codes (e.g. ["fr-BE", "nl-BE"]).
+//   When present, the connection is only shown when the active language is in the array.
+//   When absent (the default), the connection is shown in every edition.
 const CONNECTIONS = [
  [
   "concert",
@@ -3944,6 +4070,24 @@ const CONNECTIONS = [
   "IBM TLS manages Fusion HCI hardware lifecycle, firmware, and support"
  ],
  [
+  "fusion_hci",
+  "ibm_bob",
+  5,
+  "IBM Bob accelerates the development and deployment of AI applications on IBM Fusion HCI, including automated deployment of complete AI application stacks."
+ ],
+ [
+  "fusion_hci",
+  "wxorch",
+  5,
+  "IBM Fusion HCI provides an on-premises platform for watsonx Orchestrate, supporting local deployment of AI agents, workflows, model endpoints and governed enterprise data services."
+ ],
+ [
+  "fusion_hci",
+  "maximo",
+  5,
+  "IBM Fusion HCI provides an on-premises infrastructure foundation for Maximo Application Suite, with integrated storage, lifecycle management, backup and disaster recovery."
+ ],
+ [
   "db2",
   "wxdata",
   2,
@@ -4002,6 +4146,97 @@ const CONNECTIONS = [
   "guardium",
   4,
   "Guardium enforces data access policies on the data sources Cognos queries, ensuring compliant reporting"
+ ],
+ [
+  "concert",
+  "lightwell",
+  4,
+  "IBM Concert identifies and prioritises application and software supply-chain risk; Lightwell provides validated remediation support for vulnerable third-party open-source dependencies.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "concert",
+  "rh_ansible",
+  4,
+  "IBM Concert identifies and prioritises application risk; Red Hat Ansible Automation Platform automates the consistent deployment of remediations and security configurations across managed environments.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "lightwell",
+  "rh_ansible",
+  4,
+  "Lightwell provides validated remediation packages for vulnerable open-source dependencies; Red Hat Ansible Automation Platform automates their consistent deployment across the environment.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "terraform",
+  "rh_ansible",
+  1,
+  "Terraform provisions infrastructure as code; Red Hat Ansible Automation Platform configures systems and automates operational tasks after or alongside provisioning — complementary technologies for infrastructure and operations.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "fusion_hci",
+  "rh_openshift",
+  5,
+  "IBM Fusion HCI provides an integrated on-premises converged infrastructure foundation for Red Hat OpenShift containerised applications, including compute, storage and lifecycle management.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "ibm_bob",
+  "rh_ansible",
+  2,
+  "IBM Bob assists developers with creating code and automation content; Red Hat Ansible Automation Platform executes and governs that automation at enterprise scale across the IT environment.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "ibm_bob",
+  "rh_openshift",
+  5,
+  "IBM Bob accelerates application development and modernisation; Red Hat OpenShift provides the enterprise container platform on which those applications are built, deployed and operated.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxai",
+  2,
+  "Red Hat OpenShift AI provides the enterprise MLOps platform for model training, fine-tuning and serving; watsonx.ai provides IBM's foundation model and AI model development capabilities — together forming a comprehensive hybrid AI development and deployment environment.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxdata",
+  2,
+  "Red Hat OpenShift AI consumes governed data from the watsonx.data lakehouse for model training and inference, enabling AI workloads to access hybrid data assets across on-premises and cloud environments.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxdi",
+  2,
+  "watsonx.data intelligence provides data discovery, metadata management, lineage and quality capabilities that help ensure the data feeding Red Hat OpenShift AI model training and inference pipelines is well-understood and trusted.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxdint",
+  2,
+  "watsonx.data integration delivers the data movement and transformation pipelines that supply Red Hat OpenShift AI with prepared, AI-ready data from across the enterprise for training, fine-tuning and inference.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxgov",
+  2,
+  "watsonx.governance provides AI model risk management, lifecycle governance and compliance monitoring across AI workloads deployed on Red Hat OpenShift AI, supporting responsible AI at enterprise scale.",
+  ["fr-BE", "nl-BE"]
+ ],
+ [
+  "rh_openshift_ai",
+  "wxorch",
+  2,
+  "Red Hat OpenShift AI provides the model serving infrastructure on which watsonx Orchestrate AI agents and workflows depend, enabling enterprise AI automation at scale across hybrid environments.",
+  ["fr-BE", "nl-BE"]
  ]
 ];
 /*DATA-END*/
@@ -4148,6 +4383,8 @@ function activateLang(code) {
   langList && langList.querySelectorAll('li').forEach(li => {
     li.setAttribute('aria-selected', li.dataset.value === code ? 'true' : 'false');
   });
+  // Rebuild adjacency and uniqueEdges filtered to this language/market
+  rebuildAdjacency();
 }
 
 async function setLanguage(code) {
@@ -4215,14 +4452,46 @@ const CONFIG = {
 const productMap = {};
 PRODUCTS.forEach(p => { productMap[p.id] = p; });
 
+// Returns products visible in the current language/market.
+// Products with no "markets" field are always included.
+// Products with a "markets" field are included only if lang is in that array.
+function visibleProducts() {
+  return PRODUCTS.filter(p => !p.markets || p.markets.includes(lang));
+}
+
+// Returns connections visible in the current language/market.
+// Connections with no fifth (markets) element are always included.
+// Connections with a markets element are included only if lang is in that array.
+function visibleConnections() {
+  return CONNECTIONS.filter(([,,,, markets]) => !markets || markets.includes(lang));
+}
+
 const adjacency = {};
-PRODUCTS.forEach(p => { adjacency[p.id] = []; });
-// key identifies the connection in language packs ("from>to" as written in CONNECTIONS)
-CONNECTIONS.forEach(([from, to, play, explanation]) => {
-  const key = `${from}>${to}`;
-  adjacency[from].push({ from, to, play, explanation, key });
-  adjacency[to].push({ from: to, to: from, play, explanation, key });
-});
+/* uniqueEdges — deduped by from↔to pair; rebuilt by rebuildAdjacency() on every language switch.
+   Each edge tracks the set of strategic plays it appears in, used for filtering. */
+let uniqueEdges = [];
+function rebuildAdjacency() {
+  // Reset adjacency for all products (not just visible ones — keeps lookup safe)
+  PRODUCTS.forEach(p => { adjacency[p.id] = []; });
+  // key identifies the connection in language packs ("from>to" as written in CONNECTIONS)
+  visibleConnections().forEach(([from, to, play, explanation]) => {
+    const key = `${from}>${to}`;
+    adjacency[from].push({ from, to, play, explanation, key });
+    adjacency[to].push({ from: to, to: from, play, explanation, key });
+  });
+  // Rebuild uniqueEdges for the current market
+  uniqueEdges = (() => {
+    const map = new Map();
+    visibleConnections().forEach(([from, to, play, explanation]) => {
+      const [a, b] = [from, to].sort();
+      const key = `${a}|${b}`;
+      if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set(), explanations: {} });
+      map.get(key).plays.add(play);
+      map.get(key).explanations[`${from}→${to}`] = explanation;
+    });
+    return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays], explanations: e.explanations }));
+  })();
+}
 
 // Data validation
 function validateData() {
@@ -4298,7 +4567,7 @@ function performSearch(query) {
   
   // Search across product names, descriptions, value props, and questions
   const matches = new Set();
-  PRODUCTS.forEach(p => {
+  visibleProducts().forEach(p => {
     const searchableText = [
       p.label,
       pDesc(p),
@@ -4313,7 +4582,7 @@ function performSearch(query) {
   
   // Also include products connected to matches
   const involved = new Set(matches);
-  CONNECTIONS.forEach(([a, b, play, explanation]) => {
+  visibleConnections().forEach(([a, b, play, explanation]) => {
     if (matches.has(a)) involved.add(b);
     if (matches.has(b)) involved.add(a);
   });
@@ -4423,7 +4692,8 @@ searchClear.addEventListener('click', () => {
    Data-driven counts (footer stats, mobile footer, empty-state copy)
    ════════════════════════════════════════════════════════ */
 const nPlays = Object.keys(PLAYS).length;
-const nProducts = PRODUCTS.length;
+// nProducts is market-aware: computed at render time from visibleProducts()
+function nProducts() { return visibleProducts().length; }
 
 /* ════════════════════════════════════════════════════════
    Build legend
@@ -4466,7 +4736,7 @@ function applyLanguage() {
   // Footer counts: the plural-aware phrase with its number in bold
   const countHtml = (key, n) => esc(t(key, { n })).replace(String(n), `<strong>${n}</strong>`);
   document.getElementById('stat-plays').innerHTML = countHtml('playsCount', nPlays);
-  document.getElementById('stat-products').innerHTML = countHtml('productsCount', nProducts);
+  document.getElementById('stat-products').innerHTML = countHtml('productsCount', nProducts());
   const contacts = L && L.ui && L.ui['brandContacts'];
   const contactEl = document.getElementById('brand-contact');
   if (contacts && contacts.length) {
@@ -4475,9 +4745,20 @@ function applyLanguage() {
     contactEl.innerHTML = '';
   }
   document.getElementById('mobile-footer').textContent =
-    `${t('playsCount', { n: nPlays })} · ${t('productsCount', { n: nProducts })} · ${t('mobileFooterHint')}`;
+    `${t('playsCount', { n: nPlays })} · ${t('productsCount', { n: nProducts() })} · ${t('mobileFooterHint')}`;
 
   buildLegend();
+
+  // Show/hide product nodes based on current market: nodes for market-gated
+  // products are hidden when the active language is not in their markets array.
+  const visibleSet = new Set(visibleProducts().map(p => p.id));
+  PRODUCTS.forEach(p => {
+    if (nodeEls[p.id]) nodeEls[p.id].hidden = !visibleSet.has(p.id);
+  });
+
+  // If the selected product is no longer visible in this market, deselect it
+  if (selectedId && !visibleSet.has(selectedId)) resetSelection(false);
+
   if (selectedId) renderSidebar(productMap[selectedId]);
   else renderSidebarEmpty();
   if (searchQuery) performSearch(searchInput.value);
@@ -4486,6 +4767,10 @@ function applyLanguage() {
     mobBuildLegend();
     mobBuildAccordion();
     mobApplyFilters();
+    if (mobSelectedId && !visibleSet.has(mobSelectedId)) {
+      mobSelectedId = null;
+      mobCloseDrawer();
+    }
     if (mobSelectedId) mobDrawerBody.innerHTML = mobRenderProductDetail(productMap[mobSelectedId]);
   }
   // Legend chips change width with the language, which can change the map's size
@@ -4604,7 +4889,7 @@ function computeLayout() {
   };
 
   CATEGORIES.forEach((cat, catIdx) => {
-    const productsInCat = PRODUCTS.filter(p => p.cat === cat.id);
+    const productsInCat = visibleProducts().filter(p => p.cat === cat.id);
     if (productsInCat.length === 0) return;
 
     const yTop = TOP + catIdx * laneH;
@@ -4658,20 +4943,6 @@ function connectionPlayId(fromId, toId) {
   return CATEGORIES[lowerIdx].playId;
 }
 
-/* Build unique edge list (deduped by from↔to pair). Each edge tracks
-   the set of strategic plays it appears in, used for filtering. */
-const uniqueEdges = (() => {
-  const map = new Map();
-  CONNECTIONS.forEach(([from, to, play, explanation]) => {
-    const [a, b] = [from, to].sort();
-    const key = `${a}|${b}`;
-    if (!map.has(key)) map.set(key, { from: a, to: b, plays: new Set(), explanations: {} });
-    map.get(key).plays.add(play);
-    map.get(key).explanations[`${from}→${to}`] = explanation;
-  });
-  return [...map.values()].map(e => ({ from: e.from, to: e.to, plays: [...e.plays], explanations: e.explanations }));
-})();
-
 /* ════════════════════════════════════════════════════════
    Draw connections
    ════════════════════════════════════════════════════════ */
@@ -4685,10 +4956,10 @@ function drawConnections(activeId = null) {
     const playCategory = CATEGORIES.find(cat => cat.playId === activePlayFilter);
     if (playCategory) {
       categoryProducts = new Set(
-        PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id)
+        visibleProducts().filter(p => p.cat === playCategory.id).map(p => p.id)
       );
       involvedProducts = new Set(categoryProducts);
-      CONNECTIONS.forEach(([a, b, p, explanation]) => {
+      visibleConnections().forEach(([a, b, p, explanation]) => {
         if (categoryProducts.has(a)) involvedProducts.add(b);
         if (categoryProducts.has(b)) involvedProducts.add(a);
       });
@@ -5246,7 +5517,7 @@ function mobBuildAccordion() {
 
   CATEGORIES.forEach((cat, catIdx) => {
     const play        = PLAYS[cat.playId];
-    const products    = PRODUCTS.filter(p => p.cat === cat.id);
+    const products    = visibleProducts().filter(p => p.cat === cat.id);
     const connCount   = id => adjacency[id].length;
 
     const lane = document.createElement('div');
@@ -5388,13 +5659,13 @@ function mobApplyFilters() {
 
   if (mobSearchQuery) {
     const matches = new Set();
-    PRODUCTS.forEach(p => {
+    visibleProducts().forEach(p => {
       const text = [p.label, pDesc(p) || '', pValue(p) || '', ...(pQuestions(p) || [])].join(' ').toLowerCase();
       if (text.includes(mobSearchQuery)) matches.add(p.id);
     });
     // Also include connected products
     involvedIds = new Set(matches);
-    CONNECTIONS.forEach(([a, b]) => {
+    visibleConnections().forEach(([a, b]) => {
       if (matches.has(a)) involvedIds.add(b);
       if (matches.has(b)) involvedIds.add(a);
     });
@@ -5403,9 +5674,9 @@ function mobApplyFilters() {
   } else if (mobActivePlayFilter) {
     const playCategory = CATEGORIES.find(cat => cat.playId === mobActivePlayFilter);
     if (playCategory) {
-      const catProducts = new Set(PRODUCTS.filter(p => p.cat === playCategory.id).map(p => p.id));
+      const catProducts = new Set(visibleProducts().filter(p => p.cat === playCategory.id).map(p => p.id));
       involvedIds = new Set(catProducts);
-      CONNECTIONS.forEach(([a, b]) => {
+      visibleConnections().forEach(([a, b]) => {
         if (catProducts.has(a)) involvedIds.add(b);
         if (catProducts.has(b)) involvedIds.add(a);
       });

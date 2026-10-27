@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.nb = {
  "meta": { "name": "Norsk", "htmlLang": "nb" },
  "ui": {
@@ -1007,6 +1007,9 @@ window.I18N.nb = {
   "cognos>ibm_pa": "Cognos Analytics gir drifts- og ledelsesrapportering basert på de økonomiske modellene i Planning Analytics",
   "cognos>db2": "Cognos er en sentral BI-bruker av transaksjonsdata fra Db2 til dashbord og rapporter for virksomheten",
   "cognos>wxai": "watsonx.ai beriker Cognos med prediktiv analyse og KI-generert innsikt som vises direkte i dashbordene",
-  "cognos>guardium": "Guardium håndhever tilgangspolicyer på datakildene Cognos henter data fra, slik at rapporteringen etterlever regelverket"
+  "cognos>guardium": "Guardium håndhever tilgangspolicyer på datakildene Cognos henter data fra, slik at rapporteringen etterlever regelverket",
+  "fusion_hci>ibm_bob": "IBM Bob akselererer utvikling og utrulling av AI-applikasjoner på IBM Fusion HCI, inkludert automatisert utrulling av komplette AI-applikasjonsstakker",
+  "fusion_hci>wxorch": "IBM Fusion HCI tilbyr en on-premises plattform for watsonx Orchestrate, med støtte for lokal utrulling av AI-agenter, arbeidsflyter, modellendepunkter og styrte virksomhetsdatatjenester",
+  "fusion_hci>maximo": "IBM Fusion HCI leverer et on-premises infrastrukturgrunnlag for Maximo Application Suite med integrert lagring, livssyklusstyring, sikkerhetskopiering og katastrofegjenoppretting"
  }
 };

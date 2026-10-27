@@ -1,4 +1,4 @@
-window.I18N = window.I18N || {};
+﻿window.I18N = window.I18N || {};
 window.I18N.hr = {
  "meta": { "name": "Hrvatski", "htmlLang": "hr" },
  "ui": {
@@ -1010,6 +1010,9 @@ window.I18N.hr = {
   "cognos>ibm_pa": "Cognos Analytics pruža operativno i upravljačko izvješćivanje nad financijskim modelima rješenja Planning Analytics",
   "cognos>db2": "Cognos je primarni BI potrošač transakcijskih podataka iz baze Db2 za nadzorne ploče i izvješća na razini poduzeća",
   "cognos>wxai": "watsonx.ai nadograđuje Cognos prediktivnom analitikom i uvidima koje generira AI, prikazanima na nadzornim pločama",
-  "cognos>guardium": "Guardium provodi pravila pristupa podacima nad izvorima podataka koje Cognos pretražuje, osiguravajući usklađeno izvješćivanje"
+  "cognos>guardium": "Guardium provodi pravila pristupa podacima nad izvorima podataka koje Cognos pretražuje, osiguravajući usklađeno izvješćivanje",
+  "fusion_hci>ibm_bob": "IBM Bob ubrzava razvoj i implementaciju AI aplikacija na IBM Fusion HCI, uključujući automatiziranu implementaciju potpunih stackova AI aplikacija",
+  "fusion_hci>wxorch": "IBM Fusion HCI pruža lokalnu platformu za watsonx Orchestrate, podržavajući lokalno postavljanje AI agenata, tijekova rada, krajnjih točaka modela i upravljanih usluga podataka za tvrtke",
+  "fusion_hci>maximo": "IBM Fusion HCI pruža lokalni infrastrukturni temelj za Maximo Application Suite s integriranom pohranom, upravljanjem životnim ciklusom, sigurnosnim kopiranjem i oporavkom od katastrofe"
  }
 };
