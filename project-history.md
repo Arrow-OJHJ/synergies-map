@@ -46,7 +46,27 @@ Michel Van der Poorten confirmed that Belgium and Luxembourg currently operate a
 - `BELGIAN_CODES` extended from `{'fr-BE', 'nl-BE'}` to **`{'fr-BE', 'nl-BE', 'de-BE'}`**.
 - The CI check now enforces that `de-BE` contains complete translations for all BeLux-gated products and connections.
 
-### Deferred decisions
+---
+
+## 2025 — Language Dropdown Scrolling
+
+The language selector dropdown was clipped on screens where the list of 24 languages exceeded the
+viewport height.
+
+### Changes made
+
+#### Language dropdown (`index.html`)
+- Added `max-height: calc(100dvh - 64px)` and `overflow-y: auto` to the dropdown list so it
+  scrolls when the list is taller than the viewport.
+- Scrollbar is hidden at rest (`scrollbar-color: transparent transparent`); a thin 4px rail in
+  `#525252` appears on hover only. On screens where the full list fits, no scrollbar is visible.
+- Mouse wheel, trackpad and keyboard navigation all work regardless of scrollbar visibility.
+- On Windows with system-level "always show scrollbars" enabled, the OS overrides the CSS and
+  shows its native scrollbar, which is the correct accessible behaviour.
+
+---
+
+## 2025 — BeLux Branding: Deferred decisions
 
 - **Luxembourgish variant**: Not added. Further guidance is pending from Ivano.
 - **"BeNeLux" rename**: Not applied. Michel confirmed the current entity is "BeLux". A possible future change to "BeNeLux" (to include the Netherlands) remains unconfirmed.

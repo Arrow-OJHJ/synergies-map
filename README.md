@@ -9,10 +9,10 @@ This project was built with [IBM Bob](https://bob.ibm.com/).
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The entire application — HTML, CSS, JS, and the English content (the master copy). |
+| `index.html` | The entire application: HTML, CSS, JS, and the English content (the master copy). |
 | `i18n/` | One file per translation (`fr.js`, `pl.js`, ...), loaded only when that language is picked. |
 | `tools/check_i18n.py` | Checks every translation against the English in `index.html`. |
-| `fonts/` | Self-hosted IBM Plex Sans and Mono (OFL): latin, plus latin-ext and cyrillic subsets that load only when a page shows those characters — no external font requests. |
+| `fonts/` | Self-hosted IBM Plex Sans and Mono (OFL): latin, plus latin-ext and cyrillic subsets that load only when a page shows those characters. No external font requests. |
 
 ## Updating content
 
@@ -25,20 +25,24 @@ section of `index.html`.
 | `const UI_EN` | Every interface label (buttons, headings, counts) |
 | `const PLAYS` | Product group names, short names, and display order (called plays in the code) |
 | `const CATEGORIES` | Horizontal lane labels and their associated play |
-| `const PRODUCTS` | All 52 products — descriptions, questions, competitors, differentiators |
+| `const PRODUCTS` | All 52 products: descriptions, questions, competitors, differentiators |
 | `const CONNECTIONS` | Cross-sell connection relationships between products |
 
-No build step — edit `index.html` and push. GitHub Pages redeploys in about a minute.
+No build step: edit `index.html` and push. GitHub Pages redeploys in about a minute.
 
 ## Languages
 
 The language menu in the header offers English plus Arabic (Morocco), Bulgarian, Czech, Danish,
 German (BeLux), German (Deutschland), Estonian, Spanish, French (France, BeLux, Morocco), Croatian,
 Hungarian, Dutch (Netherlands, BeLux), Norwegian, Polish, Portuguese (Portugal), Slovak, Slovenian,
-Finnish, Swedish and Ukrainian. The three BeLux variants — `de-BE`, `fr-BE`, `nl-BE` — all display
+Finnish, Swedish and Ukrainian. The three BeLux variants (`de-BE`, `fr-BE`, `nl-BE`) all display
 **Arrow ECS BeLux** and show the BeLux-only Red Hat product content. Each non-BeLux entry names its
 own Arrow ECS country. The choice is remembered per browser, and a link can open the map in a
 language directly: `https://arrow-ojhj.github.io/synergies-map/?lang=pl` or `?lang=de-BE`.
+
+The language dropdown scrolls when the list is taller than the viewport. The scrollbar is hidden
+at rest and appears as a thin rail on hover, so on screens where the full list fits there is
+nothing extra visible.
 
 - **English in `index.html` is the master.** Each `i18n/<code>.js` mirrors its structure:
   interface labels, play and lane names, each product's description, value proposition,
@@ -59,10 +63,10 @@ language directly: `https://arrow-ojhj.github.io/synergies-map/?lang=pl` or `?la
   rather than AVG) is a whole copy, so a change to that product must be made in the variant too.
   Register it as `window.I18N['de-BE']` and add it to `LANGS`; the checker checks it merged with
   its base.
-- **BeLux market-gated content** — products and connections with `"markets": ["fr-BE", "nl-BE",
+- **BeLux market-gated content:** products and connections with `"markets": ["fr-BE", "nl-BE",
   "de-BE"]` are only shown when one of those three variants is active. The checker enforces that
-  `fr-BE`, `nl-BE` and `de-BE` all contain complete translations for market-gated keys. Add
-  `de-BE` to `BELGIAN_CODES` in `tools/check_i18n.py` to register a new BeLux variant.
+  `fr-BE`, `nl-BE` and `de-BE` all contain complete translations for market-gated keys. Add the
+  new code to `BELGIAN_CODES` in `tools/check_i18n.py` to register a new BeLux variant.
 - `brandContacts` (optional) lists that country's contact addresses for the footer.
 - **Right to left:** codes in `RTL_LANGS` (Arabic) set `dir="rtl"`. The page keeps its layout and
   the map is drawn as in every other language; the text in the header, panel, footer and mobile
