@@ -831,6 +831,70 @@ window.I18N.de = {
     "Tiefe Integration von IBM Datenquellen wie Db2, Planning Analytics und watsonx.data",
     "Starke Präsenz in regulierten Branchen – Finanzdienstleistungen, Gesundheitswesen, öffentlicher Sektor"
    ]
+  },
+  "lightwell": {
+   "desc": "Lightwell ist ein gemeinsames Angebot von IBM und Red Hat, das Organisationen dabei hilft, Schwachstellen in Open-Source-Softwareabhängigkeiten von Drittanbietern zu identifizieren und zu beheben – mit validierter Behebungsunterstützung für verwundbare Pakete.",
+   "value": "Reduziert das Risiko durch Open-Source-Supply-Chain-Schwachstellen, indem validierte Behebungspakete bereitgestellt werden, die es Organisationen ermöglichen, betroffene Abhängigkeiten zu patchen, ohne störende Versionsupgrades durchführen zu müssen.",
+   "questions": [
+    "Haben Sie einen Überblick über die in Ihrem Anwendungsportfolio genutzten Open-Source-Komponenten und transitiven Abhängigkeiten?",
+    "Gibt es bekannte Schwachstellen in Ihrer Software-Lieferkette, die Sie nicht sofort durch ein Versionsupgrade beheben können?",
+    "Wie stellen Sie derzeit sicher, dass Behebungspatches für Open-Source-Komponenten keine Regressionen einführen?",
+    "Unterliegen Sie regulatorischen oder vertraglichen Anforderungen, die eine rechtzeitige Behebung von Software-Lieferketten-Risiken nachweisen müssen?"
+   ],
+   "differentiators": [
+    "Gemeinsam von IBM und Red Hat validierte Behebungsunterstützung für Open-Source-Pakete",
+    "Behebt Schwachstellen ohne unmittelbare störende Versionsupgrades zu erfordern",
+    "Integration mit IBM Concert für eine lückenlose Identifizierung und Behebung von Supply-Chain-Risiken",
+    "Unterstützt durch den Enterprise-Support von Red Hat und IBM"
+   ]
+  },
+  "rh_ansible": {
+   "desc": "Red Hat Ansible Automation Platform ist eine Enterprise-Automatisierungsplattform zur konsistenten Automatisierung von IT-Infrastruktur, Cloud, Netzwerk, Sicherheit und Anwendungsbetrieb mithilfe von menschenlesbaren Playbooks.",
+   "value": "Ermöglicht Organisationen, verwaltete, wiederholbare Automatisierung im IT-Betrieb zu skalieren – reduziert manuellen Aufwand, erzwingt konsistente Konfigurationen und beschleunigt die Behebung in heterogenen Umgebungen.",
+   "questions": [
+    "Wie verwalten Sie derzeit Konfiguration und Betriebsaufgaben über Ihre Server-, Netzwerk- und Cloud-Umgebungen hinweg?",
+    "Müssen Sie konsistente Sicherheitskonfigurationen und Behebungen in großem Maßstab in Ihrer Umgebung durchsetzen?",
+    "Möchten Sie Automatisierung über Teams und Geschäftsbereiche hinweg standardisieren und steuern?",
+    "Wie koordinieren Sie Infrastructure-Provisioning mit der Konfiguration nach dem Provisioning und dem laufenden Betrieb?"
+   ],
+   "differentiators": [
+    "Agentenlose Architektur – auf verwalteten Knoten sind keine Agenten erforderlich",
+    "Menschenlesbare YAML-Playbooks senken die Einstiegshürde für Automatisierung",
+    "Zentralisierte Automatisierungs-Governance mit rollenbasierter Zugriffskontrolle über den Automation Controller",
+    "Ergänzt Terraform: Ansible konfiguriert und betreibt Systeme nach dem Provisioning durch Terraform"
+   ]
+  },
+  "rh_openshift": {
+   "desc": "Red Hat OpenShift ist eine Enterprise-Kubernetes-Plattform zum konsistenten Erstellen, Bereitstellen und Betreiben containerisierter Anwendungen in On-Premises-, Hybrid-Cloud- und Multi-Cloud-Umgebungen.",
+   "value": "Bietet eine konsistente, sichere Anwendungsplattform in Hybridumgebungen – reduziert den Betriebsaufwand und ermöglicht Self-Service für Entwickler bei containerisierten Workloads unabhängig von der zugrunde liegenden Infrastruktur.",
+   "questions": [
+    "Möchten Sie Ihre Container- und Kubernetes-Plattform über On-Premises- und Cloud-Umgebungen hinweg standardisieren?",
+    "Benötigen Ihre Entwicklungsteams eine Self-Service-Plattform zum Bereitstellen und Verwalten containerisierter Anwendungen?",
+    "Wie verwalten Sie Sicherheit, Patching und Lifecycle-Operationen über Ihre Kubernetes-Cluster hinweg?",
+    "Planen Sie die Modernisierung von Legacy-Anwendungen durch Migration auf eine containerbasierte Plattform?"
+   ],
+   "differentiators": [
+    "Enterprise-gehärtete Kubernetes-Distribution mit integrierter Sicherheit, CI/CD und Entwickler-Tooling",
+    "Konsistente Plattform über On-Premises, IBM Cloud, AWS, Azure und GCP",
+    "Kubernetes Operators vereinfachen Deployment und Lifecycle-Management komplexer Workloads",
+    "Validierte Integration mit IBM Fusion HCI und IBM Cloud Paks"
+   ]
+  },
+  "rh_openshift_ai": {
+   "desc": "Red Hat OpenShift AI ist eine flexible und skalierbare KI- und Machine-Learning-Plattform, die auf Red Hat OpenShift aufgebaut ist und Unternehmen ermöglicht, KI-fähige Anwendungen in Hybrid-Cloud-Umgebungen zu erstellen und bereitzustellen.",
+   "value": "Bietet eine einheitliche Umgebung auf Enterprise-Niveau für Datenerfassung, Modelltraining, Feinabstimmung, Serving und Monitoring – und ermöglicht die Entwicklung von KI-Anwendungen in großem Maßstab in On-Premises- und Cloud-Infrastruktur.",
+   "questions": [
+    "Verfügen Ihre Data-Science- und MLOps-Teams über eine konsistente Umgebung für Modellentwicklung, -training und -deployment in Ihrer Hybridinfrastruktur?",
+    "Wie verwalten Sie den vollständigen Lifecycle Ihrer KI-Modelle – von der Experimentierphase bis zum Produktions-Serving und Monitoring?",
+    "Möchten Sie die Bereitstellung von KI-Anwendungen beschleunigen und dabei Governance- und Sicherheitskontrollen aufrechterhalten?",
+    "Benötigen Sie Hardware-Beschleunigungsunterstützung für Modelltraining- und Inferenz-Workloads On-Premises oder in der Cloud?"
+   ],
+   "differentiators": [
+    "Läuft auf Red Hat OpenShift – konsistente KI-Plattform über On-Premises und Hybrid-Cloud",
+    "Unterstützt Datenerfassung, Modelltraining, Feinabstimmung, Serving und Monitoring auf einer einzigen Plattform",
+    "Hardware-Beschleunigungsunterstützung für GPU-Workloads",
+    "Native Integration mit watsonx.ai, watsonx.data und watsonx.governance für vollständiges KI-Lifecycle-Governance"
+   ]
   }
  },
  "competitors": {
@@ -1010,6 +1074,19 @@ window.I18N.de = {
   "cognos>guardium": "Guardium setzt Datenzugriffsrichtlinien für die von Cognos abgefragten Datenquellen durch und sichert so konformes Reporting",
   "fusion_hci>ibm_bob": "IBM Bob beschleunigt Entwicklung und Deployment von KI-Anwendungen auf IBM Fusion HCI, einschließlich der automatisierten Bereitstellung vollständiger KI-Anwendungs-Stacks",
   "fusion_hci>wxorch": "IBM Fusion HCI stellt eine On-Premises-Plattform für watsonx Orchestrate bereit und unterstützt die lokale Bereitstellung von KI-Agenten, Workflows, Modell-Endpunkten und governed Enterprise-Datendiensten",
-  "fusion_hci>maximo": "IBM Fusion HCI bildet das On-Premises-Infrastrukturfundament für die Maximo Application Suite mit integriertem Storage, Lifecycle-Management, Backup und Disaster Recovery"
+  "fusion_hci>maximo": "IBM Fusion HCI bildet das On-Premises-Infrastrukturfundament für die Maximo Application Suite mit integriertem Storage, Lifecycle-Management, Backup und Disaster Recovery",
+  "concert>lightwell": "IBM Concert identifiziert und priorisiert Anwendungs- und Software-Supply-Chain-Risiken; Lightwell stellt validierte Behebungsunterstützung für verwundbare Open-Source-Abhängigkeiten von Drittanbietern bereit.",
+  "concert>rh_ansible": "IBM Concert identifiziert und priorisiert Anwendungsrisiken; Red Hat Ansible Automation Platform automatisiert die konsistente Bereitstellung von Behebungen und Sicherheitskonfigurationen in verwalteten Umgebungen.",
+  "lightwell>rh_ansible": "Lightwell stellt validierte Behebungspakete für verwundbare Open-Source-Abhängigkeiten bereit; Red Hat Ansible Automation Platform automatisiert deren konsistente Bereitstellung in der gesamten Umgebung.",
+  "terraform>rh_ansible": "Terraform stellt Infrastruktur als Code bereit; Red Hat Ansible Automation Platform konfiguriert Systeme und automatisiert Betriebsaufgaben nach oder parallel zum Provisioning – komplementäre Technologien für Infrastruktur und Betrieb.",
+  "fusion_hci>rh_openshift": "IBM Fusion HCI stellt eine integrierte On-Premises-konvergierte Infrastrukturbasis für containerisierte Red Hat OpenShift-Anwendungen bereit, einschließlich Compute, Storage und Lifecycle-Management.",
+  "ibm_bob>rh_ansible": "IBM Bob unterstützt Entwickler bei der Erstellung von Code und Automatisierungsinhalten; Red Hat Ansible Automation Platform führt diese Automatisierung in Enterprise-Größe in der gesamten IT-Umgebung aus und steuert sie.",
+  "ibm_bob>rh_openshift": "IBM Bob beschleunigt die Anwendungsentwicklung und -modernisierung; Red Hat OpenShift stellt die Enterprise-Container-Plattform bereit, auf der diese Anwendungen erstellt, bereitgestellt und betrieben werden.",
+  "rh_openshift_ai>wxai": "Red Hat OpenShift AI stellt die Enterprise-MLOps-Plattform für Modelltraining, Feinabstimmung und Serving bereit; watsonx.ai bietet IBMs Foundation-Model- und KI-Modellentwicklungsfähigkeiten – zusammen bilden sie eine umfassende Hybrid-KI-Entwicklungs- und Bereitstellungsumgebung.",
+  "rh_openshift_ai>wxdata": "Red Hat OpenShift AI nutzt verwaltete Daten aus dem watsonx.data-Lakehouse für Modelltraining und Inferenz und ermöglicht KI-Workloads den Zugriff auf hybride Daten-Assets in On-Premises- und Cloud-Umgebungen.",
+  "rh_openshift_ai>wxdi": "watsonx.data intelligence bietet Datenerkennung, Metadaten-Management, Datenherkunft und Qualitätsfähigkeiten, die sicherstellen, dass die Daten für die Trainings- und Inferenz-Pipelines von Red Hat OpenShift AI gut verstanden und vertrauenswürdig sind.",
+  "rh_openshift_ai>wxdint": "watsonx.data integration liefert Datenbewegungs- und Transformations-Pipelines, die Red Hat OpenShift AI mit aufbereiteten, KI-fähigen Daten aus dem gesamten Unternehmen für Training, Feinabstimmung und Inferenz versorgen.",
+  "rh_openshift_ai>wxgov": "watsonx.governance bietet KI-Modellrisikomanagement, Lifecycle-Governance und Compliance-Monitoring für KI-Workloads, die auf Red Hat OpenShift AI bereitgestellt werden – und unterstützt verantwortungsvolle KI im Enterprise-Maßstab.",
+  "rh_openshift_ai>wxorch": "Red Hat OpenShift AI stellt die Modell-Serving-Infrastruktur bereit, auf die KI-Agenten und Workflows von watsonx Orchestrate angewiesen sind – und ermöglicht Enterprise-KI-Automatisierung in großem Maßstab in Hybridumgebungen."
  }
 };
