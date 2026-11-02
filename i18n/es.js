@@ -834,6 +834,70 @@ window.I18N.es = {
     "Integración profunda con fuentes de datos de IBM como Db2, Planning Analytics y watsonx.data",
     "Fuerte presencia en sectores regulados: servicios financieros, sanidad, sector público"
    ]
+  },
+  "lightwell": {
+   "desc": "Lightwell es una oferta conjunta de IBM y Red Hat que ayuda a las organizaciones a identificar y abordar vulnerabilidades en dependencias de software de código abierto de terceros, proporcionando soporte de remediación validado para paquetes vulnerables.",
+   "value": "Reduce el riesgo derivado de vulnerabilidades en la cadena de suministro de código abierto entregando paquetes de remediación validados que permiten a las organizaciones parchear dependencias afectadas sin necesidad de actualizaciones de versión disruptivas.",
+   "questions": [
+    "¿Tiene visibilidad sobre los componentes de código abierto y las dependencias transitivas utilizadas en su cartera de aplicaciones?",
+    "¿Existen vulnerabilidades conocidas en su cadena de suministro de software que no pueda abordar de inmediato mediante una actualización de versión?",
+    "¿Cómo valida actualmente que los parches de remediación para componentes de código abierto no introducen regresiones?",
+    "¿Está sujeto a requisitos regulatorios o contractuales para demostrar la remediación oportuna de los riesgos de la cadena de suministro de software?"
+   ],
+   "differentiators": [
+    "Soporte de remediación validado conjuntamente por IBM y Red Hat para paquetes de código abierto",
+    "Aborda vulnerabilidades sin requerir actualizaciones de versión disruptivas inmediatas",
+    "Se integra con IBM Concert para la identificación y remediación integral de riesgos en la cadena de suministro",
+    "Respaldado por el soporte empresarial de Red Hat e IBM"
+   ]
+  },
+  "rh_ansible": {
+   "desc": "Red Hat Ansible Automation Platform es una plataforma de automatización empresarial para automatizar de forma consistente las operaciones de infraestructura de TI, nube, redes, seguridad y aplicaciones mediante playbooks legibles por humanos.",
+   "value": "Permite a las organizaciones escalar la automatización gobernada y repetible en las operaciones de TI — reduciendo el esfuerzo manual, imponiendo configuraciones consistentes y acelerando la remediación en entornos heterogéneos.",
+   "questions": [
+    "¿Cómo gestiona actualmente la configuración y las tareas operativas en su parque de servidores, redes y entornos cloud?",
+    "¿Necesita imponer configuraciones de seguridad consistentes y remediaciones a gran escala en su entorno?",
+    "¿Desea estandarizar y gobernar la automatización entre equipos y unidades de negocio?",
+    "¿Cómo coordina el aprovisionamiento de infraestructura con la configuración posterior al aprovisionamiento y las operaciones continuas?"
+   ],
+   "differentiators": [
+    "Arquitectura sin agentes — no se requieren agentes en los nodos gestionados",
+    "Los playbooks YAML legibles por humanos reducen la barrera de adopción de la automatización",
+    "Gobernanza centralizada de la automatización con control de acceso basado en roles mediante Automation Controller",
+    "Complementario a Terraform: Ansible configura y opera tras el aprovisionamiento realizado por Terraform"
+   ]
+  },
+  "rh_openshift": {
+   "desc": "Red Hat OpenShift es una plataforma Kubernetes empresarial para crear, desplegar y operar aplicaciones en contenedores de forma consistente en entornos on-premises, nube híbrida y multi-nube.",
+   "value": "Proporciona una plataforma de aplicaciones consistente y segura en entornos híbridos — reduciendo la carga operativa y habilitando el autoservicio de los desarrolladores para cargas de trabajo en contenedores independientemente de la infraestructura subyacente.",
+   "questions": [
+    "¿Desea estandarizar su plataforma de contenedores y Kubernetes entre entornos on-premises y cloud?",
+    "¿Sus equipos de desarrollo necesitan una plataforma de autoservicio para desplegar y gestionar aplicaciones en contenedores?",
+    "¿Cómo gestiona la seguridad, los parches y las operaciones del ciclo de vida en sus clústeres de Kubernetes?",
+    "¿Está planeando modernizar aplicaciones legacy migrándolas a una plataforma basada en contenedores?"
+   ],
+   "differentiators": [
+    "Distribución Kubernetes reforzada para empresas con seguridad integrada, CI/CD y herramientas para desarrolladores",
+    "Plataforma consistente en on-premises, IBM Cloud, AWS, Azure y GCP",
+    "Los Kubernetes Operators simplifican el despliegue y la gestión del ciclo de vida de cargas de trabajo complejas",
+    "Integración validada con IBM Fusion HCI e IBM Cloud Paks"
+   ]
+  },
+  "rh_openshift_ai": {
+   "desc": "Red Hat OpenShift AI es una plataforma de IA y aprendizaje automático flexible y escalable construida sobre Red Hat OpenShift que permite a las empresas crear y entregar aplicaciones con IA en entornos de nube híbrida.",
+   "value": "Proporciona un entorno empresarial unificado para la adquisición de datos, el entrenamiento de modelos, el ajuste fino, el servicio y la monitorización — permitiendo el desarrollo de aplicaciones de IA a gran escala en infraestructura on-premises y en la nube.",
+   "questions": [
+    "¿Los equipos de ciencia de datos y MLOps tienen un entorno consistente para el desarrollo, entrenamiento e implementación de modelos en su infraestructura híbrida?",
+    "¿Cómo gestiona el ciclo de vida completo de los modelos de IA — desde la experimentación hasta el servicio en producción y la monitorización?",
+    "¿Desea acelerar la entrega de aplicaciones de IA manteniendo los controles de gobernanza y seguridad?",
+    "¿Necesita soporte de aceleración de hardware para cargas de trabajo de entrenamiento de modelos e inferencia on-premises o en la nube?"
+   ],
+   "differentiators": [
+    "Se ejecuta en Red Hat OpenShift — plataforma de IA consistente en on-premises y nube híbrida",
+    "Soporta adquisición de datos, entrenamiento de modelos, ajuste fino, servicio y monitorización en una sola plataforma",
+    "Soporte de aceleración de hardware para cargas de trabajo GPU",
+    "Integración nativa con watsonx.ai, watsonx.data y watsonx.governance para la gobernanza completa del ciclo de vida de la IA"
+   ]
   }
  },
  "competitors": {
@@ -1013,6 +1077,19 @@ window.I18N.es = {
   "cognos>guardium": "Guardium aplica políticas de acceso a los datos en las fuentes que consulta Cognos para garantizar informes conformes a la normativa",
   "fusion_hci>ibm_bob": "IBM Bob acelera el desarrollo y el despliegue de aplicaciones de IA sobre IBM Fusion HCI, incluida la implementación automatizada de stacks completos de aplicaciones de IA",
   "fusion_hci>wxorch": "IBM Fusion HCI proporciona una plataforma on-premises para watsonx Orchestrate, con soporte para el despliegue local de agentes de IA, flujos de trabajo, endpoints de modelos y servicios de datos empresariales gobernados",
-  "fusion_hci>maximo": "IBM Fusion HCI proporciona la base de infraestructura on-premises para Maximo Application Suite, con almacenamiento integrado, gestión del ciclo de vida, backup y recuperación ante desastres"
+  "fusion_hci>maximo": "IBM Fusion HCI proporciona la base de infraestructura on-premises para Maximo Application Suite, con almacenamiento integrado, gestión del ciclo de vida, backup y recuperación ante desastres",
+  "concert>lightwell": "IBM Concert identifica y prioriza los riesgos de las aplicaciones y de la cadena de suministro de software; Lightwell proporciona soporte de remediación validado para dependencias vulnerables de código abierto de terceros.",
+  "concert>rh_ansible": "IBM Concert identifica y prioriza los riesgos de las aplicaciones; Red Hat Ansible Automation Platform automatiza el despliegue consistente de remediaciones y configuraciones de seguridad en los entornos gestionados.",
+  "lightwell>rh_ansible": "Lightwell proporciona paquetes de remediación validados para dependencias de código abierto vulnerables; Red Hat Ansible Automation Platform automatiza su despliegue consistente en todo el entorno.",
+  "terraform>rh_ansible": "Terraform aprovisiona infraestructura como código; Red Hat Ansible Automation Platform configura los sistemas y automatiza las tareas operativas después o en paralelo al aprovisionamiento — tecnologías complementarias para infraestructura y operaciones.",
+  "fusion_hci>rh_openshift": "IBM Fusion HCI proporciona una base de infraestructura convergida integrada on-premises para aplicaciones en contenedores de Red Hat OpenShift, incluyendo cómputo, almacenamiento y gestión del ciclo de vida.",
+  "ibm_bob>rh_ansible": "IBM Bob asiste a los desarrolladores en la creación de código y contenido de automatización; Red Hat Ansible Automation Platform ejecuta y gobierna esa automatización a escala empresarial en todo el entorno de TI.",
+  "ibm_bob>rh_openshift": "IBM Bob acelera el desarrollo y la modernización de aplicaciones; Red Hat OpenShift proporciona la plataforma de contenedores empresarial sobre la que esas aplicaciones se construyen, despliegan y operan.",
+  "rh_openshift_ai>wxai": "Red Hat OpenShift AI proporciona la plataforma MLOps empresarial para el entrenamiento, ajuste fino y servicio de modelos; watsonx.ai proporciona las capacidades de modelos fundacionales y desarrollo de modelos de IA de IBM — juntos forman un entorno completo de desarrollo e implementación de IA híbrida.",
+  "rh_openshift_ai>wxdata": "Red Hat OpenShift AI consume datos gobernados del lakehouse de watsonx.data para el entrenamiento de modelos e inferencia, permitiendo que las cargas de trabajo de IA accedan a activos de datos híbridos en entornos on-premises y cloud.",
+  "rh_openshift_ai>wxdi": "watsonx.data intelligence proporciona capacidades de descubrimiento de datos, gestión de metadatos, linaje y calidad que ayudan a garantizar que los datos que alimentan los pipelines de entrenamiento e inferencia de Red Hat OpenShift AI sean bien comprendidos y confiables.",
+  "rh_openshift_ai>wxdint": "watsonx.data integration entrega los pipelines de movimiento y transformación de datos que suministran a Red Hat OpenShift AI datos preparados y listos para IA de toda la empresa para entrenamiento, ajuste fino e inferencia.",
+  "rh_openshift_ai>wxgov": "watsonx.governance proporciona gestión de riesgos de modelos de IA, gobernanza del ciclo de vida y monitorización del cumplimiento en las cargas de trabajo de IA desplegadas en Red Hat OpenShift AI, apoyando una IA responsable a escala empresarial.",
+  "rh_openshift_ai>wxorch": "Red Hat OpenShift AI proporciona la infraestructura de servicio de modelos de la que dependen los agentes de IA y los flujos de trabajo de watsonx Orchestrate, permitiendo la automatización de IA empresarial a gran escala en entornos híbridos."
  }
 };

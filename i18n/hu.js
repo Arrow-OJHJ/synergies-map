@@ -831,6 +831,70 @@ window.I18N.hu = {
     "Mély IBM adatforrás-integráció, köztük Db2, Planning Analytics és watsonx.data",
     "Erős jelenlét a szabályozott iparágakban – pénzügyi szolgáltatások, egészségügy, közszféra"
    ]
+  },
+  "lightwell": {
+   "desc": "A Lightwell az IBM és a Red Hat közös ajánlata, amely segít a szervezeteknek azonosítani és kezelni a harmadik féltől származó nyílt forráskódú szoftver-függőségek sérülékenységeit validált korrekciós támogatással a sebezhető csomagokhoz.",
+   "value": "Csökkenti a nyílt forráskódú ellátási lánc sérülékenységeiből eredő kockázatokat azáltal, hogy validált javítócsomagokat biztosít, amelyek lehetővé teszik a szervezetek számára, hogy a zavaró verziófrissítések nélkül foltozják a sebezhető függőségeket.",
+   "questions": [
+    "Van-e rálátása az alkalmazásportfólióban használt nyílt forráskódú összetevőkre és tranzitív függőségekre?",
+    "Vannak-e ismert sérülékenységek a szoftverellátási láncában, amelyeket nem tud azonnal verziófrissítéssel kezelni?",
+    "Hogyan ellenőrzi jelenleg, hogy a nyílt forráskódú összetevők javítói nem okoznak-e regressziót?",
+    "Vonatkoznak-e önre szabályozói vagy szerződéses követelmények a szoftverellátási lánc kockázatainak időben történő orvoslásának igazolására?"
+   ],
+   "differentiators": [
+    "Az IBM és a Red Hat közösen validált korrekciós támogatása nyílt forráskódú csomagokhoz",
+    "Sérülékenységeket kezel azonnali zavaró verziófrissítések nélkül",
+    "Integrálódik az IBM Concerttel a teljes körű ellátási lánc kockázatazonosításhoz és -orvosláshoz",
+    "Red Hat és IBM vállalati támogatással alátámasztva"
+   ]
+  },
+  "rh_ansible": {
+   "desc": "A Red Hat Ansible Automation Platform egy vállalati automatizálási platform az IT-infrastruktúra, felhő, hálózat, biztonság és alkalmazásműveletek következetes automatizálásához ember által olvasható playbookok segítségével.",
+   "value": "Lehetővé teszi a szervezetek számára, hogy skálázható, irányított és megismételhető automatizálást valósítsanak meg az IT-műveletekben – csökkentve a manuális erőfeszítést, kikényszerítve a konzisztens konfigurációkat és felgyorsítva a korrekciókat heterogén környezetekben.",
+   "questions": [
+    "Hogyan kezeli jelenleg a konfigurációt és az operatív feladatokat a szerver-, hálózati és felhőkörnyezetek között?",
+    "Szükséges-e következetes biztonsági konfigurációkat és korrekciókat érvényesíteni nagy léptékben a környezetében?",
+    "Szeretné szabványosítani és irányítani az automatizálást a csapatok és az üzleti egységek között?",
+    "Hogyan koordinálja az infrastruktúra-kiosztást a kiosztás utáni konfigurációval és a folyamatos műveletekkel?"
+   ],
+   "differentiators": [
+    "Ügynök nélküli architektúra – az ügynökök nem szükségesek a kezelt csomópontokon",
+    "Ember által olvasható YAML-playbookok csökkentik az automatizálás bevezetési akadályát",
+    "Centralizált automatizálási irányítás szerepkör alapú hozzáférés-vezérléssel az Automation Controlleren keresztül",
+    "Kiegészíti a Terraformot: az Ansible konfigurálja és üzemelteti a Terraform által kiosztott infrastruktúrát"
+   ]
+  },
+  "rh_openshift": {
+   "desc": "A Red Hat OpenShift egy vállalati Kubernetes-platform konténeres alkalmazások következetes létrehozásához, üzembe helyezéséhez és üzemeltetéséhez helyszíni, hibrid felhő és több felhős környezetekben.",
+   "value": "Konzisztens, biztonságos alkalmazásplatformot biztosít hibrid környezetekben – csökkenti az üzemeltetési terhelést és lehetővé teszi a fejlesztők önkiszolgálását a konténeres munkaterhelésekhez az alapul szolgáló infrastruktúrtól függetlenül.",
+   "questions": [
+    "Szabványosítani szeretné a konténer- és Kubernetes-platformját a helyszíni és felhőkörnyezetek között?",
+    "Szükségük van-e a fejlesztőcsapatoknak önkiszolgáló platformra a konténeres alkalmazások üzembe helyezéséhez és kezeléséhez?",
+    "Hogyan kezeli a biztonságot, a javítást és az életciklus-műveleteket a Kubernetes-klaszterek között?",
+    "Tervezi örökölt alkalmazások modernizálását azok konténer alapú platformra való migrálásával?"
+   ],
+   "differentiators": [
+    "Vállalati szintű Kubernetes-disztribúció integrált biztonsággal, CI/CD-vel és fejlesztői eszközökkel",
+    "Konzisztens platform helyszíni, IBM Cloud, AWS, Azure és GCP környezetekben",
+    "A Kubernetes Operatorok egyszerűsítik az összetett munkaterhelések üzembe helyezését és életciklus-kezelését",
+    "Validált integráció az IBM Fusion HCI-val és az IBM Cloud Paksokkal"
+   ]
+  },
+  "rh_openshift_ai": {
+   "desc": "A Red Hat OpenShift AI egy rugalmas és skálázható AI- és gépi tanulási platform, amely a Red Hat OpenShiftre épül, és lehetővé teszi a vállalatok számára, hogy AI-kompatibilis alkalmazásokat építsenek és szállítsanak hibrid felhőkörnyezetekben.",
+   "value": "Egységes, vállalati szintű környezetet biztosít adatgyűjtéshez, modelltanításhoz, finomhangoláshoz, kiszolgáláshoz és monitorozáshoz – lehetővé téve az AI-alkalmazások fejlesztését nagy léptékben helyszíni és felhő-infrastruktúrában.",
+   "questions": [
+    "Van-e az adattudomány és MLOps csapatainak konzisztens környezete a modellek fejlesztéséhez, tanításához és üzembe helyezéséhez a hibrid infrastruktúrában?",
+    "Hogyan kezeli az AI-modellek teljes életciklusát – a kísérletezéstől a termelési kiszolgálásig és monitorozásig?",
+    "Szeretné felgyorsítani az AI-alkalmazások szállítását az irányítási és biztonsági vezérlők fenntartása mellett?",
+    "Szükséges-e hardvergyorsítás támogatása modell-tanítási és következtetési munkaterhelésekhez helyszínen vagy felhőben?"
+   ],
+   "differentiators": [
+    "Red Hat OpenShiften fut – konzisztens AI-platform helyszíni és hibrid felhő környezetekben",
+    "Támogatja az adatgyűjtést, modell-tanítást, finomhangolást, kiszolgálást és monitorozást egyetlen platformon",
+    "Hardvergyorsítás támogatása GPU-munkaterhelésekhez",
+    "Natív integráció a watsonx.ai-val, watsonx.data-val és watsonx.governance-szal a teljes életciklus irányításhoz"
+   ]
   }
  },
  "competitors": {
@@ -1010,6 +1074,19 @@ window.I18N.hu = {
   "cognos>guardium": "A Guardium adathozzáférési szabályzatokat érvényesít a Cognos által lekérdezett adatforrásokon, biztosítva a megfelelő jelentéskészítést",
   "fusion_hci>ibm_bob": "Az IBM Bob felgyorsítja az AI-alkalmazások fejlesztését és üzembe helyezését az IBM Fusion HCI platformon, beleértve a teljes AI-alkalmazáscsomagok automatizált telepítését is",
   "fusion_hci>wxorch": "Az IBM Fusion HCI helyszíni platformot biztosít a watsonx Orchestrate számára, támogatva az AI-ügynökök, munkafolyamatok, modellvégpontok és felügyelt vállalati adatszolgáltatások helyi üzembe helyezését",
-  "fusion_hci>maximo": "Az IBM Fusion HCI helyszíni infrastrukturális alapot biztosít a Maximo Application Suite számára integrált tárolással, életciklus-kezeléssel, biztonsági mentéssel és katasztrófa utáni helyreállítással"
+  "fusion_hci>maximo": "Az IBM Fusion HCI helyszíni infrastrukturális alapot biztosít a Maximo Application Suite számára integrált tárolással, életciklus-kezeléssel, biztonsági mentéssel és katasztrófa utáni helyreállítással",
+  "concert>lightwell": "Az IBM Concert azonosítja és priorizálja az alkalmazás- és szoftverellátási lánc kockázatait; a Lightwell validált korrekciós támogatást biztosít a sebezhető harmadik féltől származó nyílt forráskódú függőségekhez.",
+  "concert>rh_ansible": "Az IBM Concert azonosítja és priorizálja az alkalmazáskockázatokat; a Red Hat Ansible Automation Platform automatizálja a korrekciók és biztonsági konfigurációk következetes üzembe helyezését a kezelt környezetekben.",
+  "lightwell>rh_ansible": "A Lightwell validált javítócsomagokat biztosít a sebezhető nyílt forráskódú függőségekhez; a Red Hat Ansible Automation Platform automatizálja azok következetes üzembe helyezését a teljes környezetben.",
+  "terraform>rh_ansible": "A Terraform kódként kezeli az infrastruktúrát; a Red Hat Ansible Automation Platform konfigurálja a rendszereket és automatizálja az operatív feladatokat a kiosztás után vagy azzal párhuzamosan – kiegészítő technológiák az infrastruktúrához és a műveletekhez.",
+  "fusion_hci>rh_openshift": "Az IBM Fusion HCI integrált helyszíni konvergált infrastruktúra-alapot biztosít a Red Hat OpenShift konténeres alkalmazásokhoz, beleértve a számítást, tárolást és életciklus-kezelést.",
+  "ibm_bob>rh_ansible": "Az IBM Bob segíti a fejlesztőket kód és automatizálási tartalom létrehozásában; a Red Hat Ansible Automation Platform vállalati léptékben hajtja végre és irányítja ezt az automatizálást az IT-környezetben.",
+  "ibm_bob>rh_openshift": "Az IBM Bob felgyorsítja az alkalmazásfejlesztést és modernizálást; a Red Hat OpenShift biztosítja a vállalati konténerplatformot, amelyen ezek az alkalmazások épülnek, üzembe helyeznek és üzemeltetnek.",
+  "rh_openshift_ai>wxai": "A Red Hat OpenShift AI biztosítja a vállalati MLOps-platformot a modelltanításhoz, finomhangoláshoz és kiszolgáláshoz; a watsonx.ai biztosítja az IBM alapmodelljeit és AI-modell-fejlesztési képességeit – együtt átfogó hibrid AI-fejlesztési és üzembe helyezési környezetet alkotva.",
+  "rh_openshift_ai>wxdata": "A Red Hat OpenShift AI irányított adatokat fogyaszt a watsonx.data lakehouseból modell-tanításhoz és következtetéshez, lehetővé téve az AI-munkaterhelések hozzáférését hibrid adatvagyonhoz helyszíni és felhőkörnyezetekben.",
+  "rh_openshift_ai>wxdi": "A watsonx.data intelligence adatfelfedezési, metaadat-kezelési, adatleszármaztatási és minőségi képességeket biztosít, amelyek garantálják, hogy a Red Hat OpenShift AI tanítási és következtetési folyamatait tápláló adatok jól érthetők és megbízhatók.",
+  "rh_openshift_ai>wxdint": "A watsonx.data integration adatmozgatási és -transzformációs folyamatokat biztosít, amelyek AI-kész adatokkal látják el a Red Hat OpenShift AI-t a vállalat egészéből tanításhoz, finomhangoláshoz és következtetéshez.",
+  "rh_openshift_ai>wxgov": "A watsonx.governance AI-modell kockázatkezelést, életciklus-irányítást és megfelelőség-monitorozást biztosít a Red Hat OpenShift AI-n üzembe helyezett AI-munkaterhelések számára – támogatva a felelős AI-t vállalati léptékben.",
+  "rh_openshift_ai>wxorch": "A Red Hat OpenShift AI biztosítja a modellkiszolgáló infrastruktúrát, amelytől a watsonx Orchestrate AI-ügynökök és munkafolyamatok függenek – lehetővé téve a vállalati AI-automatizálást nagy léptékben hibrid környezetekben."
  }
 };

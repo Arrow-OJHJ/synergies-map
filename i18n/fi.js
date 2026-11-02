@@ -831,6 +831,70 @@ window.I18N.fi = {
     "Syvä integraatio IBM:n tietolähteisiin, kuten Db2:een, Planning Analyticsiin ja watsonx.dataan",
     "Vahva asema säännellyillä toimialoilla – rahoituspalvelut, terveydenhuolto, julkinen sektori"
    ]
+  },
+  "lightwell": {
+   "desc": "Lightwell on IBM:n ja Red Hatin yhteinen tarjous, joka auttaa organisaatioita tunnistamaan ja korjaamaan kolmansien osapuolten avoimen lähdekoodin ohjelmistoriippuvuuksien haavoittuvuudet tarjoamalla validoitua korjaustukea haavoittuville paketeille.",
+   "value": "Vähentää avoimen lähdekoodin toimitusketjun haavoittuvuuksista aiheutuvaa riskiä toimittamalla validoituja korjauspaketteja, joiden avulla organisaatiot voivat korjata haavoittuvat riippuvuudet ilman häiritseviä versiopäivityksiä.",
+   "questions": [
+    "Onko sinulla näkyvyys sovellussalkussasi käytettyihin avoimen lähdekoodin komponentteihin ja transitiivisiin riippuvuuksiin?",
+    "Onko ohjelmistotoimitusketjussasi tunnettuja haavoittuvuuksia, joita et voi korjata välittömästi versiopäivityksellä?",
+    "Miten tällä hetkellä varmistat, että avoimen lähdekoodin komponenttien korjauspaketit eivät aiheuta regressioita?",
+    "Onko sinulla säädösvaatimuksia tai sopimusvelvoitteita, jotka edellyttävät ohjelmistotoimitusketjun riskien oikea-aikaista korjaamista?"
+   ],
+   "differentiators": [
+    "IBM:n ja Red Hatin yhteisesti validoima korjaustuki avoimen lähdekoodin paketeille",
+    "Korjaa haavoittuvuudet ilman välittömiä häiritseviä versiopäivityksiä",
+    "Integroituu IBM Concertiin toimitusketjun riskien päästä päähän -tunnistamista ja korjaamista varten",
+    "Red Hatin ja IBM:n yritystuen tukema"
+   ]
+  },
+  "rh_ansible": {
+   "desc": "Red Hat Ansible Automation Platform on yritysten automatisointialusta IT-infrastruktuurin, pilven, verkon, tietoturvan ja sovellusoperaatioiden johdonmukaiseen automatisointiin ihmisluettavien playbook-tiedostojen avulla.",
+   "value": "Antaa organisaatioille mahdollisuuden skaalata hallittua, toistettavaa automaatiota IT-operaatioissa – vähentää manuaalista työtä, varmistaa johdonmukaisen konfiguraation ja nopeuttaa korjaamista heterogeenisissä ympäristöissä.",
+   "questions": [
+    "Miten tällä hetkellä hallitset konfigurointia ja operatiivisia tehtäviä palvelimien, verkon ja pilviympäristöjen välillä?",
+    "Tarvitsetko johdonmukaisten tietoturvakonfiguraatioiden ja korjausten täytäntöönpanoa laajassa mittakaavassa?",
+    "Haluatko standardisoida ja hallita automaatiota tiimien ja liiketoimintayksiköiden välillä?",
+    "Miten koordinoit infrastruktuurin valmistelun ja jälkivalmistelun konfiguraation sekä jatkuvat operaatiot?"
+   ],
+   "differentiators": [
+    "Agenteista vapaa arkkitehtuuri – hallituissa solmuissa ei tarvita agentteja",
+    "Ihmisluettavat YAML-playbookit madaltavat automaation käyttöönottoa",
+    "Keskitetty automaation hallinta roolipohjaisen pääsynhallinnan avulla Automation Controllerin kautta",
+    "Täydentää Terraformia: Ansible konfiguroi ja operoi Terraformin valmistelun jälkeen"
+   ]
+  },
+  "rh_openshift": {
+   "desc": "Red Hat OpenShift on yritysten Kubernetes-alusta konttipohjaisten sovellusten rakentamiseen, käyttöönottoon ja operointiin johdonmukaisesti on-premises-, hybridipilvi- ja monipilviympäristöissä.",
+   "value": "Tarjoaa johdonmukaisen, turvallisen sovellusplatformin hybridympäristöissä – vähentää operatiivista kuormitusta ja mahdollistaa kehittäjien itsepalvelun konttityökuormille riippumatta taustalla olevasta infrastruktuurista.",
+   "questions": [
+    "Haluatko standardisoida kontti- ja Kubernetes-alustasi on-premises- ja pilviympäristöjen välillä?",
+    "Tarvitsevatko kehitystiimisi itsepalvelualustan konttipohjaisten sovellusten käyttöönottoon ja hallintaan?",
+    "Miten hallitset tietoturvaa, korjauspäivityksiä ja elinkaarioperaatioita Kubernetes-klustereiden välillä?",
+    "Suunnitteletko vanhojen sovellusten modernisointia siirtämällä ne konttipohjaisen alustan??"
+   ],
+   "differentiators": [
+    "Yrityksille vahvistettu Kubernetes-jakelu integroidulla tietoturvalla, CI/CD:llä ja kehittäjätyökaluilla",
+    "Johdonmukainen alusta on-premisessä, IBM Cloudissa, AWSssa, Azuressa ja GCP:ssä",
+    "Kubernetes Operators yksinkertaistaa monimutkaisten työkuormien käyttöönottoa ja elinkaaren hallintaa",
+    "Validoitu integraatio IBM Fusion HCI:n ja IBM Cloud Paksien kanssa"
+   ]
+  },
+  "rh_openshift_ai": {
+   "desc": "Red Hat OpenShift AI on joustava ja skaalautuva tekoäly- ja koneoppimisalusta, joka on rakennettu Red Hat OpenShiftin päälle ja jonka avulla yritykset voivat rakentaa ja toimittaa tekoälypohjaisia sovelluksia hybridipilviympäristöissä.",
+   "value": "Tarjoaa yhtenäisen yritystasoisen ympäristön tiedonhankintaan, mallien koulutukseen, hienosäätöön, tarjoiluun ja seurantaan – mahdollistaen tekoälysovellusten kehittämisen laajassa mittakaavassa on-premises- ja pilvi-infrastruktuurissa.",
+   "questions": [
+    "Onko data science- ja MLOps-tiimeillä johdonmukainen ympäristö mallien kehittämiseen, koulutukseen ja käyttöönottoon hybriidi-infrastruktuurissa?",
+    "Miten hallitset tekoälymallien koko elinkaarta – kokeilemisesta tuotantotarjoiluun ja seurantaan?",
+    "Haluatko nopeuttaa tekoälysovellusten toimittamista samalla ylläpitäen hallinta- ja tietoturvakontrolleja?",
+    "Tarvitsetko laitteistokiihdytystuen mallin koulutus- ja pääteltyökuormille on-premisessä tai pilvessä?"
+   ],
+   "differentiators": [
+    "Toimii Red Hat OpenShiftin päällä – johdonmukainen tekoälyalusta on-premisessä ja hybridipilvessä",
+    "Tukee tiedonhankintaa, mallien koulutusta, hienosäätöä, tarjoilua ja seurantaa yhdessä alustassa",
+    "Laitteistokiihdytystuki GPU-työkuormille",
+    "Natiivi integraatio watsonx.ain, watsonx.datan ja watsonx.governancen kanssa täydellistä elinkaaren hallintaa varten"
+   ]
   }
  },
  "competitors": {
@@ -1010,6 +1074,19 @@ window.I18N.fi = {
   "cognos>guardium": "Guardium valvoo datan käyttöoikeuskäytäntöjen noudattamista tietolähteissä, joihin Cognos tekee kyselyjä, ja varmistaa näin vaatimustenmukaisen raportoinnin",
   "fusion_hci>ibm_bob": "IBM Bob nopeuttaa tekoälysovellusten kehittämistä ja käyttöönottoa IBM Fusion HCI -alustalla, mukaan lukien täydellisten tekoälysovelluspinotekerrosten automatisoitu käyttöönotto",
   "fusion_hci>wxorch": "IBM Fusion HCI tarjoaa paikallisen alustan watsonx Orchestratelle ja tukee tekoälyagenttien, työnkulkujen, mallipäätepisteiden sekä hallittujen yritystietopalvelujen paikallista käyttöönottoa",
-  "fusion_hci>maximo": "IBM Fusion HCI tarjoaa Maximo Application Suitelle paikallisen infrastruktuuripohjan integroidun tallennuksen, elinkaarihallinnan, varmuuskopioinnin ja tietopalautuksen kera"
+  "fusion_hci>maximo": "IBM Fusion HCI tarjoaa Maximo Application Suitelle paikallisen infrastruktuuripohjan integroidun tallennuksen, elinkaarihallinnan, varmuuskopioinnin ja tietopalautuksen kera",
+  "concert>lightwell": "IBM Concert tunnistaa ja priorisoi sovellus- ja ohjelmistotoimitusketjun riskit; Lightwell tarjoaa validoitua korjaustukea haavoittuville kolmansien osapuolten avoimen lähdekoodin riippuvuuksille.",
+  "concert>rh_ansible": "IBM Concert tunnistaa ja priorisoi sovellusriskit; Red Hat Ansible Automation Platform automatisoi korjaustoimenpiteiden ja tietoturvakonfiguraatioiden johdonmukaisen käyttöönoton hallituissa ympäristöissä.",
+  "lightwell>rh_ansible": "Lightwell tarjoaa validoituja korjauspaketteja haavoittuville avoimen lähdekoodin riippuvuuksille; Red Hat Ansible Automation Platform automatisoi niiden johdonmukaisen käyttöönoton koko ympäristössä.",
+  "terraform>rh_ansible": "Terraform valmistelee infrastruktuurin koodina; Red Hat Ansible Automation Platform konfiguroi järjestelmät ja automatisoi operatiiviset tehtävät valmistelun jälkeen tai rinnakkain – toisiaan täydentävät teknologiat infrastruktuurille ja operaatioille.",
+  "fusion_hci>rh_openshift": "IBM Fusion HCI tarjoaa integroidun on-premises-konvergoidun infrastruktuuripohjan Red Hat OpenShift -konttisovelluksille, mukaan lukien laskenta, tallennus ja elinkaaren hallinta.",
+  "ibm_bob>rh_ansible": "IBM Bob auttaa kehittäjiä luomaan koodia ja automaatiosisältöä; Red Hat Ansible Automation Platform suorittaa ja hallitsee tätä automaatiota yritystasolla koko IT-ympäristössä.",
+  "ibm_bob>rh_openshift": "IBM Bob nopeuttaa sovellusten kehittämistä ja modernisointia; Red Hat OpenShift tarjoaa yritystason konttialustan, jolla näitä sovelluksia rakennetaan, otetaan käyttöön ja operoidaan.",
+  "rh_openshift_ai>wxai": "Red Hat OpenShift AI tarjoaa yritystason MLOps-alustan mallien koulutukseen, hienosäätöön ja tarjoiluun; watsonx.ai tarjoaa IBM:n perusmalli- ja tekoälymallien kehittämisominaisuudet – yhdessä muodostaen kattavan hybriditekoälyn kehitys- ja käyttöönottoympäristön.",
+  "rh_openshift_ai>wxdata": "Red Hat OpenShift AI kuluttaa hallittuja tietoja watsonx.data-lakehousesta mallien koulutukseen ja päättelyyn, mahdollistaen tekoälytyökuormien pääsyn hybriditietovaroihin on-premises- ja pilviympäristöissä.",
+  "rh_openshift_ai>wxdi": "watsonx.data intelligence tarjoaa tiedon löytämisen, metatietojen hallinnan, datan alkuperän ja laadun ominaisuudet, jotka varmistavat, että Red Hat OpenShift AI:n koulutus- ja päättelyputkia syöttävät tiedot ovat hyvin ymmärrettyjä ja luotettavia.",
+  "rh_openshift_ai>wxdint": "watsonx.data integration toimittaa tiedonsiirto- ja muunnosputket, jotka toimittavat Red Hat OpenShift AI:lle valmisteltuja tekoälyvalmista dataa koko yrityksestä koulutukseen, hienosäätöön ja päättelyyn.",
+  "rh_openshift_ai>wxgov": "watsonx.governance tarjoaa tekoälymallien riskienhallinnan, elinkaaren hallinnan ja vaatimustenmukaisuuden seurannan Red Hat OpenShift AI:ssa käyttöönotetuille tekoälytyökuormille – tukien vastuullista tekoälyä yritystasolla.",
+  "rh_openshift_ai>wxorch": "Red Hat OpenShift AI tarjoaa mallien tarjoiluinfrastruktuurin, josta watsonx Orchestrate -tekoälyagentit ja -työnkulut riippuvat – mahdollistaen yritystason tekoälyautomaation laajassa mittakaavassa hybridympäristöissä."
  }
 };

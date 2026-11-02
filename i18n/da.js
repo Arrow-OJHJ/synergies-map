@@ -831,6 +831,70 @@ window.I18N.da = {
     "Dyb integration med IBM-datakilder, herunder Db2, Planning Analytics og watsonx.data",
     "Stærk tilstedeværelse i regulerede brancher – finanssektoren, sundhedssektoren, offentlig sektor"
    ]
+  },
+  "lightwell": {
+   "desc": "Lightwell er et fælles IBM–Red Hat tilbud, der hjælper organisationer med at identificere og håndtere sårbarheder i tredjeparters open source-softwareafhængigheder med valideret remedieringsstøtte for sårbare pakker.",
+   "value": "Reducerer risikoen fra open source supply chain-sårbarheder ved at levere validerede remediationspakker, der giver organisationer mulighed for at patche berørte afhængigheder uden forstyrrende versionopgraderinger.",
+   "questions": [
+    "Har du overblik over open source-komponenter og transitive afhængigheder i din applikationsportefølje?",
+    "Er der kendte sårbarheder i din software supply chain, som du ikke kan adressere med det samme via en versionopgradering?",
+    "Hvordan validerer du i dag, at remediationsopdateringer til open source-komponenter ikke introducerer regressioner?",
+    "Er du underlagt lovgivningsmæssige eller kontraktuelle krav om at dokumentere rettidig håndtering af software supply chain-risici?"
+   ],
+   "differentiators": [
+    "Fælles IBM–Red Hat valideret remedieringsstøtte til open source-pakker",
+    "Håndterer sårbarheder uden krav om umiddelbare forstyrrende versionopgraderinger",
+    "Integrerer med IBM Concert til end-to-end identifikation og håndtering af supply chain-risici",
+    "Understøttet af Red Hat og IBM enterprise support"
+   ]
+  },
+  "rh_ansible": {
+   "desc": "Red Hat Ansible Automation Platform er en enterprise-automatiseringsplatform til konsistent automatisering af IT-infrastruktur, cloud, netværk, sikkerhed og applikationsdrift ved hjælp af menneskelig læsbare playbooks.",
+   "value": "Giver organisationer mulighed for at skalere styret, gentagelig automatisering på tværs af IT-driften – reducerer manuelle opgaver, håndhæver konsistente konfigurationer og accelererer håndtering i heterogene miljøer.",
+   "questions": [
+    "Hvordan håndterer du i dag konfiguration og driftsopgaver på tværs af dine servere, netværk og cloudmiljøer?",
+    "Har du brug for at håndhæve konsistente sikkerhedskonfigurationer og remediering i stor skala?",
+    "Ønsker du at standardisere og styre automatisering på tværs af teams og forretningsenheder?",
+    "Hvordan koordinerer du infrastrukturprovisionering med post-provisionering, konfiguration og løbende drift?"
+   ],
+   "differentiators": [
+    "Agentfri arkitektur – ingen agenter kræves på administrerede noder",
+    "Menneskelig læsbare YAML-playbooks reducerer barrieren for automatiseringsadoption",
+    "Centraliseret automatiseringsstyring med rollebaseret adgangskontrol via Automation Controller",
+    "Komplementær til Terraform: Ansible konfigurerer og drifter efter Terraform har provisioneret"
+   ]
+  },
+  "rh_openshift": {
+   "desc": "Red Hat OpenShift er en enterprise Kubernetes-platform til at bygge, deploye og drive containeriserede applikationer konsistent på tværs af on-premises-, hybrid cloud- og multi-cloud-miljøer.",
+   "value": "Giver en konsistent, sikker applikationsplatform på tværs af hybridmiljøer – reducerer driftsbyrden og muliggør selvbetjening for udviklere til containeriserede workloads uanset den underliggende infrastruktur.",
+   "questions": [
+    "Ønsker du at standardisere din container- og Kubernetes-platform på tværs af on-premises- og cloudmiljøer?",
+    "Har dine udviklingsteams brug for en selvbetjeningsplatform til at deploye og administrere containeriserede applikationer?",
+    "Hvordan håndterer du sikkerhed, patching og livscyklusdrift på tværs af dine Kubernetes-klynger?",
+    "Planlægger du at modernisere legacy-applikationer ved at migrere dem til en containerbaseret platform?"
+   ],
+   "differentiators": [
+    "Enterprise-hærdet Kubernetes-distribution med integreret sikkerhed, CI/CD og udviklingsværktøjer",
+    "Konsistent platform på tværs af on-premises, IBM Cloud, AWS, Azure og GCP",
+    "Kubernetes Operators forenkler deployment og livscyklusstyring af komplekse workloads",
+    "Valideret integration med IBM Fusion HCI og IBM Cloud Paks"
+   ]
+  },
+  "rh_openshift_ai": {
+   "desc": "Red Hat OpenShift AI er en fleksibel og skalerbar AI- og maskinlæringsplatform bygget på Red Hat OpenShift, der giver virksomheder mulighed for at bygge og levere AI-aktiverede applikationer på tværs af hybridmiljøer.",
+   "value": "Leverer et samlet enterprise-miljø til dataindsamling, modeltræning, finjustering, servering og overvågning – og muliggør AI-applikationsudvikling i stor skala på tværs af on-premises og cloudinfrastruktur.",
+   "questions": [
+    "Har dine data science- og MLOps-teams et konsistent miljø til modeludvikling, træning og deployment på tværs af din hybridinfrastruktur?",
+    "Hvordan administrerer du AI-modellernes fulde livscyklus – fra eksperimentering til produktionssservering og overvågning?",
+    "Ønsker du at accelerere levering af AI-applikationer og samtidig opretholde governance- og sikkerhedskontroller?",
+    "Har du brug for hardwareacceleration til model-træning og inferens-workloads on-premises eller i cloud?"
+   ],
+   "differentiators": [
+    "Kører på Red Hat OpenShift – konsistent AI-platform på tværs af on-premises og hybrid cloud",
+    "Understøtter dataindsamling, modeltræning, finjustering, servering og overvågning i én platform",
+    "Understøttelse af hardwareacceleration til GPU-workloads",
+    "Native integration med watsonx.ai, watsonx.data og watsonx.governance til komplet livscyklusstyringsgovernance"
+   ]
   }
  },
  "competitors": {
@@ -1010,6 +1074,19 @@ window.I18N.da = {
   "cognos>guardium": "Guardium håndhæver politikker for dataadgang på de datakilder, Cognos forespørger, og sikrer, at rapporteringen overholder reglerne",
   "fusion_hci>ibm_bob": "IBM Bob accelererer udvikling og udrulning af AI-applikationer på IBM Fusion HCI, herunder automatiseret udrulning af komplette AI-applikationsstakke",
   "fusion_hci>wxorch": "IBM Fusion HCI leverer en on-premises platform til watsonx Orchestrate med understøttelse af lokal udrulning af AI-agenter, arbejdsforløb, modelendepunkter og styrede virksomhedsdatatjenester",
-  "fusion_hci>maximo": "IBM Fusion HCI leverer et on-premises infrastrukturgrundlag til Maximo Application Suite med integreret storage, livscyklusstyring, backup og disaster recovery"
+  "fusion_hci>maximo": "IBM Fusion HCI leverer et on-premises infrastrukturgrundlag til Maximo Application Suite med integreret storage, livscyklusstyring, backup og disaster recovery",
+  "concert>lightwell": "IBM Concert identificerer og prioriterer applikations- og software supply chain-risici; Lightwell leverer valideret remedieringsstøtte til sårbare tredjeparters open source-afhængigheder.",
+  "concert>rh_ansible": "IBM Concert identificerer og prioriterer applikationsrisici; Red Hat Ansible Automation Platform automatiserer den konsistente deployment af håndteringer og sikkerhedskonfigurationer på tværs af administrerede miljøer.",
+  "lightwell>rh_ansible": "Lightwell leverer validerede remediationspakker til sårbare open source-afhængigheder; Red Hat Ansible Automation Platform automatiserer deres konsistente deployment på tværs af miljøet.",
+  "terraform>rh_ansible": "Terraform provisionerer infrastruktur som kode; Red Hat Ansible Automation Platform konfigurerer systemer og automatiserer driftsopgaver efter eller sideløbende med provisionering – komplementære teknologier til infrastruktur og drift.",
+  "fusion_hci>rh_openshift": "IBM Fusion HCI leverer et integreret on-premises konvergeret infrastrukturgrundlag til Red Hat OpenShift-containerapplikationer, inkl. compute, storage og livscyklusstyring.",
+  "ibm_bob>rh_ansible": "IBM Bob hjælper udviklere med at skabe kode og automatiseringsindhold; Red Hat Ansible Automation Platform udfører og styrer denne automatisering i enterprise-skala på tværs af IT-miljøet.",
+  "ibm_bob>rh_openshift": "IBM Bob accelererer applikationsudvikling og modernisering; Red Hat OpenShift leverer enterprise-containerplatformen, som disse applikationer bygges, deployes og driftes på.",
+  "rh_openshift_ai>wxai": "Red Hat OpenShift AI leverer enterprise MLOps-platformen til modeltræning, finjustering og servering; watsonx.ai leverer IBMs foundation model og AI-modeludviklingskapabiliteter – samlet et komplet hybrid AI-udviklings- og deploymentmiljø.",
+  "rh_openshift_ai>wxdata": "Red Hat OpenShift AI forbruger styrede data fra watsonx.data-lakehouset til modeltræning og inferens, så AI-workloads kan tilgå hybride dataaktiver på tværs af on-premises og cloudmiljøer.",
+  "rh_openshift_ai>wxdi": "watsonx.data intelligence leverer dataregistrering, metadatastyring, afstamning og kvalitetskapabiliteter, der sikrer, at de data der fodrer Red Hat OpenShift AI-trænings- og inferenspipelines er veldefinerede og pålidelige.",
+  "rh_openshift_ai>wxdint": "watsonx.data integration leverer dataflytnings- og transformationspipelines, der forsyner Red Hat OpenShift AI med forberedte AI-klare data fra hele virksomheden til træning, finjustering og inferens.",
+  "rh_openshift_ai>wxgov": "watsonx.governance leverer AI-modellens risikostyring, livscyklusgovernance og overvågning af overholdelse på tværs af AI-workloads deployed på Red Hat OpenShift AI – og understøtter ansvarlig AI i enterprise-skala.",
+  "rh_openshift_ai>wxorch": "Red Hat OpenShift AI leverer modelserveringsinfrastrukturen, som watsonx Orchestrate AI-agenter og workflows afhænger af – og muliggør enterprise AI-automatisering i stor skala på tværs af hybridmiljøer."
  }
 };
